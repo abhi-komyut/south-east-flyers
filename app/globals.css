@@ -3,6 +3,8 @@
 @theme inline {
   --color-navy: #1B3A6B;
   --color-navy-light: #244d8a;
+  --color-cta: #E97B1F;
+  --color-cta-hover: #D16A12;
   --color-black: #0A0A0A;
   --color-white: #FFFFFF;
   --color-gray-50: #f9fafb;
