@@ -30,13 +30,13 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/contact"
-                  className="inline-block bg-white text-navy font-semibold px-6 py-3 rounded text-center hover:bg-gray-100 transition-colors"
+                  className="inline-block bg-white text-navy font-semibold px-6 py-3 rounded text-center transition-all duration-200 hover:opacity-90 hover:scale-[1.02]"
                 >
                   Get a Free Quote
                 </Link>
                 <Link
                   href="/portfolio"
-                  className="inline-block border border-white text-white font-semibold px-6 py-3 rounded text-center hover:bg-white/10 transition-colors"
+                  className="inline-block border border-white text-white font-semibold px-6 py-3 rounded text-center transition-all duration-200 hover:opacity-90 hover:scale-[1.02]"
                 >
                   Our Clients
                 </Link>
@@ -177,7 +177,7 @@ export default function Home() {
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-white text-navy font-semibold px-8 py-3 rounded hover:bg-gray-100 transition-colors"
+            className="inline-block bg-white text-navy font-semibold px-8 py-3 rounded transition-all duration-200 hover:opacity-90 hover:scale-[1.02]"
           >
             Get a Free Quote
           </Link>

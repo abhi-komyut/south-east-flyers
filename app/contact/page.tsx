@@ -108,7 +108,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={state.submitting}
-                className="w-full bg-navy text-white font-semibold py-3 rounded hover:bg-navy-light transition-colors disabled:opacity-50"
+                className="w-full bg-navy text-white font-semibold py-3 rounded transition-all duration-200 hover:opacity-90 hover:scale-[1.02] disabled:opacity-50"
               >
                 {state.submitting ? "Sending..." : "Send Message"}
               </button>

@@ -124,7 +124,7 @@ export default function Portfolio() {
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-navy text-white font-semibold px-8 py-3 rounded hover:bg-navy-light transition-colors"
+            className="inline-block bg-navy text-white font-semibold px-8 py-3 rounded transition-all duration-200 hover:opacity-90 hover:scale-[1.02]"
           >
             Get a Free Quote
           </Link>
