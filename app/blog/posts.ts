@@ -67,7 +67,7 @@ export const posts: BlogPost[] = [
 
 <h2>How GPS Tracking Works in Flyer Distribution</h2>
 
-<p>Modern GPS-tracked flyer distribution equips every walker with a GPS device that records their exact route in real time. Every street walked, every letterbox visited — it's all captured and mapped. After your campaign, you receive a detailed GPS report showing precisely where your flyers were distributed.</p>
+<p>Modern GPS-tracked flyer distribution equips every walker with the Strava app, which records their exact route in real time. Every street walked, every letterbox visited — it's all captured and mapped. After your campaign, you receive a detailed GPS report showing precisely where your flyers were distributed.</p>
 
 <p>This technology provides an irrefutable record of delivery. You can see the exact streets covered, the time spent in each area, and confirm that your target suburbs received complete coverage. It's the difference between hoping your flyers were delivered and knowing they were.</p>
 

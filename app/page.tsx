@@ -177,7 +177,7 @@ export default function Home() {
             <ServiceCard
               number="02"
               title="GPS Tracked Drops"
-              description="Every letterbox drop is GPS tracked with full reporting so you know exactly where your flyers and pamphlets were delivered."
+              description="Every letterbox drop is tracked via the Strava app with full reporting so you know exactly where your flyers and pamphlets were delivered."
               image="/service-gps.avif"
               imageAlt="GPS route tracking map"
             />

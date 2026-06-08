@@ -11,12 +11,12 @@ const faqs = [
   {
     question: "What is the minimum order for a letterbox drop?",
     answer:
-      "There is no strict minimum order. Whether you need 1,000 flyers for a local campaign or 50,000+ for a metro-wide push, we can tailor a distribution plan that fits your budget.",
+      "Our minimum order is 1,000 flyers per campaign. From there, we can scale up to 50,000+ for a metro-wide push and tailor a distribution plan that fits your budget.",
   },
   {
     question: "How does GPS tracking work?",
     answer:
-      "Every distributor carries a GPS device that logs their exact route in real time. After your campaign, you receive a detailed report showing the streets covered, number of letterboxes delivered to, and a map of the distribution route.",
+      "Every distributor tracks their route via the Strava app in real time. After your campaign, you receive a detailed report showing the streets covered, number of letterboxes delivered to, and a map of the distribution route.",
   },
   {
     question: "What does 'no junk mail compliant' mean?",
