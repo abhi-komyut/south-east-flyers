@@ -6,8 +6,16 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-navy text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+      <section className="relative min-h-[600px] flex items-center bg-[#1B3A6B] text-white">
+        <Image
+          src="/letterbox-hero.png"
+          alt="Hand dropping a flyer into a letterbox"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-[#1B3A6B] opacity-60" />
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-sm uppercase tracking-widest text-gray-400 mb-4">
@@ -45,10 +53,14 @@ export default function Home() {
                   <p className="text-sm text-gray-300 mt-1">Happy clients</p>
                 </div>
               </div>
-              <div className="mt-6">
+              <div className="space-y-3 mt-6">
                 <div className="bg-white/10 rounded-lg p-5 text-center">
                   <p className="text-3xl font-bold">100%</p>
                   <p className="text-sm text-gray-300 mt-1">GPS tracked</p>
+                </div>
+                <div className="bg-white/10 rounded-lg p-5 text-center">
+                  <p className="text-3xl font-bold">10+</p>
+                  <p className="text-sm text-gray-300 mt-1">Years experience</p>
                 </div>
               </div>
             </div>
@@ -159,7 +171,7 @@ export default function Home() {
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Our Services</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-gray-200 rounded-lg overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-gray-200 rounded-lg overflow-hidden">
             <ServiceCard
               number="01"
               title="Targeted Distribution"
@@ -167,11 +179,6 @@ export default function Home() {
             />
             <ServiceCard
               number="02"
-              title="Print & Design"
-              description="End-to-end flyer design and printing coordination so your campaign is ready to drop."
-            />
-            <ServiceCard
-              number="03"
               title="GPS Tracked Drops"
               description="Every delivery is GPS tracked with full reporting so you know exactly where your flyers went."
             />

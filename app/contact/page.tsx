@@ -30,7 +30,7 @@ export default function Contact() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                  Name
+                  Name <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
@@ -45,7 +45,7 @@ export default function Contact() {
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                  Email
+                  Email <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="email"
@@ -59,18 +59,32 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="suburb" className="block text-sm font-medium text-gray-700 mb-1">
-                  Suburb
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                  Phone Number <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-navy focus:border-transparent"
+                  placeholder="04XX XXX XXX"
+                />
+                <ValidationError prefix="Phone" field="phone" errors={state.errors} className="text-red-600 text-sm mt-1" />
+              </div>
+
+              <div>
+                <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
+                  Company Name
                 </label>
                 <input
                   type="text"
-                  id="suburb"
-                  name="suburb"
-                  required
+                  id="company"
+                  name="company"
                   className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-navy focus:border-transparent"
-                  placeholder="e.g. Dandenong, Parramatta"
+                  placeholder="Your company name"
                 />
-                <ValidationError prefix="Suburb" field="suburb" errors={state.errors} className="text-red-600 text-sm mt-1" />
+                <ValidationError prefix="Company" field="company" errors={state.errors} className="text-red-600 text-sm mt-1" />
               </div>
 
               <div>
@@ -81,7 +95,6 @@ export default function Contact() {
                   id="message"
                   name="message"
                   rows={5}
-                  required
                   className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-navy focus:border-transparent resize-y"
                   placeholder="Tell us about your campaign requirements..."
                 />
