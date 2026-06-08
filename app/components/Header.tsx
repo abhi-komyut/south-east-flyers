@@ -19,7 +19,7 @@ export default function Header() {
               Home
             </Link>
             <Link href="/portfolio" className="text-gray-700 hover:text-navy transition-colors">
-              Portfolio
+              Our Clients
             </Link>
             <Link href="/contact" className="text-gray-700 hover:text-navy transition-colors">
               Contact
@@ -47,7 +47,7 @@ export default function Header() {
               Home
             </Link>
             <Link href="/portfolio" className="text-gray-700 hover:text-navy" onClick={() => setMobileOpen(false)}>
-              Portfolio
+              Our Clients
             </Link>
             <Link href="/contact" className="text-gray-700 hover:text-navy" onClick={() => setMobileOpen(false)}>
               Contact
