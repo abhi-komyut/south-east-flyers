@@ -127,16 +127,20 @@ export default function Home() {
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Our Services</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-gray-200 rounded-lg overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ServiceCard
               number="01"
               title="Targeted Distribution"
               description="Suburb-level targeting using demographic data to reach the right households for your business."
+              image="/service-targeted.png"
+              imageAlt="Melbourne suburb targeting map"
             />
             <ServiceCard
               number="02"
               title="GPS Tracked Drops"
               description="Every delivery is GPS tracked with full reporting so you know exactly where your flyers went."
+              image="/service-gps.avif"
+              imageAlt="GPS route tracking map"
             />
           </div>
         </div>
@@ -227,12 +231,19 @@ function TrustBarItem({ icon, label }: { icon: string; label: string }) {
   );
 }
 
-function ServiceCard({ number, title, description }: { number: string; title: string; description: string }) {
+function ServiceCard({ number, title, description, image, imageAlt }: { number: string; title: string; description: string; image?: string; imageAlt?: string }) {
   return (
-    <div className="p-8 border-r border-gray-200 last:border-r-0 md:[&:not(:last-child)]:border-r">
-      <p className="text-sm text-gray-400 font-mono mb-3">{number}</p>
-      <h3 className="text-lg font-semibold text-black mb-2">{title}</h3>
-      <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
+    <div className="border border-gray-200 rounded-lg overflow-hidden">
+      {image && (
+        <div className="relative aspect-[16/9]">
+          <Image src={image} alt={imageAlt || title} fill className="object-cover" />
+        </div>
+      )}
+      <div className="p-8">
+        <p className="text-sm text-gray-400 font-mono mb-3">{number}</p>
+        <h3 className="text-lg font-semibold text-black mb-2">{title}</h3>
+        <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
+      </div>
     </div>
   );
 }
