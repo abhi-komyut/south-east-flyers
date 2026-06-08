@@ -17,7 +17,7 @@ const logos = [
 
 export default function LogoSlider() {
   return (
-    <section className="bg-white border-t border-gray-100 flex flex-col" style={{ paddingTop: "5rem", paddingBottom: "5rem" }}>
+    <section className="bg-white border-t border-gray-100" style={{ paddingTop: "5rem", paddingBottom: "5rem" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="text-sm uppercase tracking-widest text-gray-400 mb-3">
