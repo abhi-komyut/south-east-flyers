@@ -10,7 +10,6 @@ const logos = [
   { src: "/logos/barry-plant.png", alt: "Barry Plant" },
   { src: "/logos/buxton.png", alt: "Buxton Real Estate" },
   { src: "/logos/harcourts-group.png", alt: "Harcourts Real Estate Group" },
-  { src: "/logos/harcourts-international.svg", alt: "Harcourts International" },
   { src: "/logos/harcourts.svg", alt: "Harcourts" },
   { src: "/logos/high-dental.webp", alt: "High Dental" },
   { src: "/logos/storm-shield-roofing.webp", alt: "Storm Shield Roofing" },
@@ -27,14 +26,11 @@ export default function LogoSlider() {
           <h2 className="text-3xl md:text-4xl font-bold text-black mb-4" style={{ fontFamily: "Georgia, serif" }}>
             Trusted by leading brands across Australia
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-            From healthcare to trades to real estate — we help local businesses reach the right letterboxes.
-          </p>
         </div>
       </div>
 
       {/* Logo Marquee */}
-      <div className="overflow-hidden mb-16">
+      <div className="overflow-hidden mb-12">
         <div className="relative">
           <div className="flex animate-scroll w-max">
             {[...logos, ...logos].map((logo, i) => (
@@ -63,7 +59,7 @@ export default function LogoSlider() {
               src="/client-dentist.png"
               alt="Healthcare professionals using letterbox marketing"
               fill
-              className="object-cover group-hover:scale-[1.04] transition-transform duration-300"
+              className="object-cover object-top group-hover:scale-[1.04] transition-transform duration-300"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             <p className="absolute bottom-4 left-4 text-white font-semibold">Healthcare</p>
@@ -73,7 +69,7 @@ export default function LogoSlider() {
               src="/client-roofer.png"
               alt="Trades and home services using letterbox marketing"
               fill
-              className="object-cover group-hover:scale-[1.04] transition-transform duration-300"
+              className="object-cover object-top group-hover:scale-[1.04] transition-transform duration-300"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             <p className="absolute bottom-4 left-4 text-white font-semibold">Trades & Services</p>
@@ -83,7 +79,7 @@ export default function LogoSlider() {
               src="/client-realestate.png"
               alt="Real estate agents using letterbox marketing"
               fill
-              className="object-cover group-hover:scale-[1.04] transition-transform duration-300"
+              className="object-cover object-top group-hover:scale-[1.04] transition-transform duration-300"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             <p className="absolute bottom-4 left-4 text-white font-semibold">Real Estate</p>
