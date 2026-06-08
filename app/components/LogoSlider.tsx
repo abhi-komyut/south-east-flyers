@@ -30,7 +30,7 @@ export default function LogoSlider() {
       </div>
 
       {/* Logo Marquee */}
-      <div className="overflow-hidden" style={{ marginTop: "4rem", marginBottom: "4rem" }}>
+      <div className="overflow-hidden" style={{ marginTop: "6rem", marginBottom: "6rem" }}>
         <div className="relative">
           <div className="flex animate-scroll w-max">
             {[...logos, ...logos].map((logo, i) => (
