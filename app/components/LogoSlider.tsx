@@ -43,7 +43,7 @@ export default function LogoSlider() {
             {[...logos, ...logos].map((logo, i) => (
               <div
                 key={i}
-                className="flex-shrink-0 mx-10 sm:mx-14 flex items-center justify-center h-14 w-36 sm:w-44 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                className="flex-shrink-0 mx-10 sm:mx-14 flex items-center justify-center h-14 w-36 sm:w-44 opacity-70 hover:opacity-100 transition-opacity duration-300"
               >
                 <Image
                   src={logo.src}
