@@ -18,16 +18,16 @@ const logos = [
 
 export default function LogoSlider() {
   return (
-    <section className="pt-16 pb-8 bg-white border-t border-gray-100">
+    <section className="py-20 bg-white border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
-          <p className="text-sm uppercase tracking-widest text-gray-400 mb-4">
+          <p className="text-sm uppercase tracking-widest text-gray-400 mb-3">
             Who we work with
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-black mb-4" style={{ fontFamily: "Georgia, serif" }}>
             Trusted by leading brands across Australia
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto mb-12">
             From healthcare to trades to real estate — we help local businesses reach the right letterboxes.
           </p>
         </div>
