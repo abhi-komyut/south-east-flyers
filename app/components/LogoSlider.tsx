@@ -17,20 +17,20 @@ const logos = [
 
 export default function LogoSlider() {
   return (
-    <section className="py-20 bg-white border-t border-gray-100">
+    <section className="bg-white border-t border-gray-100 flex flex-col" style={{ paddingTop: "5rem", paddingBottom: "5rem" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
+        <div className="text-center">
           <p className="text-sm uppercase tracking-widest text-gray-400 mb-3">
             Who we work with
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4" style={{ fontFamily: "Georgia, serif" }}>
+          <h2 className="text-3xl md:text-4xl font-bold text-black" style={{ fontFamily: "Georgia, serif" }}>
             Trusted by leading brands across Australia
           </h2>
         </div>
       </div>
 
       {/* Logo Marquee */}
-      <div className="overflow-hidden mb-12 mt-10">
+      <div className="overflow-hidden" style={{ marginTop: "4rem", marginBottom: "4rem" }}>
         <div className="relative">
           <div className="flex animate-scroll w-max">
             {[...logos, ...logos].map((logo, i) => (
@@ -53,7 +53,7 @@ export default function LogoSlider() {
 
       {/* Industry Cards */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="relative rounded-lg overflow-hidden aspect-[4/3] group">
             <Image
               src="/client-dentist.png"
