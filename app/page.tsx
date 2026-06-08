@@ -14,7 +14,7 @@ export default function Home() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-[#1B3A6B] opacity-60" />
+        <div className="absolute inset-0 bg-[#1B3A6B] opacity-70" />
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -44,21 +44,21 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-2 gap-3">
               <div className="space-y-3">
-                <div className="bg-white/10 rounded-lg p-5 text-center">
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-5 text-center">
                   <p className="text-3xl font-bold">20K+</p>
                   <p className="text-sm text-gray-300 mt-1">Flyers dropped daily</p>
                 </div>
-                <div className="bg-white/10 rounded-lg p-5 text-center">
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-5 text-center">
                   <p className="text-3xl font-bold">200+</p>
                   <p className="text-sm text-gray-300 mt-1">Happy clients</p>
                 </div>
               </div>
               <div className="space-y-3 mt-6">
-                <div className="bg-white/10 rounded-lg p-5 text-center">
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-5 text-center">
                   <p className="text-3xl font-bold">100%</p>
                   <p className="text-sm text-gray-300 mt-1">GPS tracked</p>
                 </div>
-                <div className="bg-white/10 rounded-lg p-5 text-center">
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-5 text-center">
                   <p className="text-3xl font-bold">10+</p>
                   <p className="text-sm text-gray-300 mt-1">Years experience</p>
                 </div>
@@ -68,7 +68,7 @@ export default function Home() {
         </div>
 
         {/* Trust Bar */}
-        <div className="bg-black">
+        <div className="relative z-10 bg-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-sm">
               <TrustBarItem icon="pin" label="GPS Tracked" />
