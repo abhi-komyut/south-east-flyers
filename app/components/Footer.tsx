@@ -12,7 +12,7 @@ export default function Footer() {
               alt="South East Flyers and Marketing Solutions"
               width={200}
               height={53}
-              className="h-12 w-auto mb-3"
+              className="h-12 w-auto mb-3 invert"
             />
             <p className="text-gray-300 text-sm">
               Professional letterbox distribution services across Melbourne and Sydney.

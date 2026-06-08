@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import LogoSlider from "./components/LogoSlider";
+import CountUp from "./components/CountUp";
 
 export default function Home() {
   return (
@@ -45,21 +46,21 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-3">
               <div className="space-y-3">
                 <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-5 text-center">
-                  <p className="text-3xl font-bold">20K+</p>
+                  <p className="text-3xl font-bold"><CountUp end={20} suffix="K+" /></p>
                   <p className="text-sm text-gray-300 mt-1">Flyers dropped daily</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-5 text-center">
-                  <p className="text-3xl font-bold">200+</p>
+                  <p className="text-3xl font-bold"><CountUp end={200} suffix="+" /></p>
                   <p className="text-sm text-gray-300 mt-1">Happy clients</p>
                 </div>
               </div>
               <div className="space-y-3 mt-6">
                 <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-5 text-center">
-                  <p className="text-3xl font-bold">100%</p>
+                  <p className="text-3xl font-bold"><CountUp end={100} suffix="%" /></p>
                   <p className="text-sm text-gray-300 mt-1">GPS tracked</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-5 text-center">
-                  <p className="text-3xl font-bold">10+</p>
+                  <p className="text-3xl font-bold"><CountUp end={10} suffix="+" /></p>
                   <p className="text-sm text-gray-300 mt-1">Years experience</p>
                 </div>
               </div>
