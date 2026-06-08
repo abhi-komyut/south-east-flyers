@@ -17,7 +17,7 @@ export default function Header() {
               alt="South East Flyers and Marketing Solutions"
               width={540}
               height={144}
-              className="h-30 w-auto invert"
+              className="h-30 w-auto"
               priority
             />
           </Link>
