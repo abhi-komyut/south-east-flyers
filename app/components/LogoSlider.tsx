@@ -30,7 +30,7 @@ export default function LogoSlider() {
       </div>
 
       {/* Logo Marquee */}
-      <div className="overflow-hidden mb-12">
+      <div className="overflow-hidden mb-12 mt-20">
         <div className="relative">
           <div className="flex animate-scroll w-max">
             {[...logos, ...logos].map((logo, i) => (
@@ -53,7 +53,7 @@ export default function LogoSlider() {
 
       {/* Industry Cards */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20">
           <div className="relative rounded-lg overflow-hidden aspect-[4/3] group">
             <Image
               src="/client-dentist.png"
