@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -6,7 +7,13 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="font-bold text-lg mb-3">South East Flyers & Marketing Solutions</h3>
+            <Image
+              src="/logo.png"
+              alt="South East Flyers and Marketing Solutions"
+              width={200}
+              height={53}
+              className="h-12 w-auto mb-3"
+            />
             <p className="text-gray-300 text-sm">
               Professional letterbox distribution services across Melbourne and Sydney.
             </p>
