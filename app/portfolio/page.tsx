@@ -31,7 +31,7 @@ const commitments = [
     description:
       "We distribute nearly 20,000 flyers every day across Melbourne and Sydney, ensuring your campaign reaches a wide audience on schedule.",
     icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
       </svg>
     ),
@@ -41,7 +41,7 @@ const commitments = [
     description:
       "We respect every \"No Junk Mail\" sign. Our walkers are trained to check each letterbox, keeping your brand compliant and reputable.",
     icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
       </svg>
     ),
@@ -51,7 +51,7 @@ const commitments = [
     description:
       "Your flyer is never bundled with competing ads. We enforce strict limits on the number of materials delivered together, so your message stands out — not gets buried.",
     icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
       </svg>
     ),
@@ -62,10 +62,10 @@ export default function Portfolio() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-navy text-white py-16">
+      <section className="bg-navy text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">Our Clients</h1>
-          <p className="text-gray-300 max-w-2xl mx-auto">
+          <p className="text-gray-300 max-w-2xl mx-auto text-lg">
             We&apos;re proud to work with some of Australia&apos;s most recognised brands,
             delivering nearly 20,000 flyers every day across Melbourne and Sydney.
           </p>
@@ -75,19 +75,25 @@ export default function Portfolio() {
       {/* Client Logos Grid */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div className="text-center mb-12">
+            <p className="text-sm uppercase tracking-widest text-gray-400">
+              Trusted by 200+ businesses
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
             {clients.map((client, index) => (
               <div
                 key={index}
-                className="bg-white border border-gray-200 rounded-lg p-6 flex items-center justify-center h-28 hover:shadow-md transition-shadow"
+                className="bg-white border border-gray-200 rounded-lg p-6 flex flex-col items-center justify-center gap-3 h-36 hover:shadow-md hover:border-gray-300 transition-all duration-200"
               >
                 <Image
                   src={client.src}
                   alt={client.name}
                   width={160}
                   height={80}
-                  className="object-contain max-h-16"
+                  className="object-contain max-h-14"
                 />
+                <p className="text-xs text-gray-400 font-medium text-center">{client.name}</p>
               </div>
             ))}
           </div>
@@ -127,7 +133,7 @@ export default function Portfolio() {
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-navy text-white font-semibold px-8 py-3 rounded transition-all duration-200 hover:opacity-90 hover:scale-[1.02]"
+            className="inline-block bg-cta text-white font-semibold px-8 py-3 rounded transition-all duration-200 hover:bg-cta-hover hover:scale-[1.02]"
           >
             Get a Free Quote
           </Link>

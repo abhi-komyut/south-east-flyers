@@ -117,29 +117,44 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="relative rounded-lg overflow-hidden aspect-[4/3] group">
+            <div className="relative rounded-xl overflow-hidden aspect-[4/3] group">
               <Image
                 src="/walker-1.png"
                 alt="E-bike flyer distribution"
                 fill
-                className="object-cover group-hover:scale-[1.04] transition-transform duration-300"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <p className="text-white font-semibold text-sm">E-Bike Distribution</p>
+                <p className="text-white/70 text-xs">Fast, eco-friendly suburb coverage</p>
+              </div>
             </div>
-            <div className="relative rounded-lg overflow-hidden aspect-[4/3] group">
+            <div className="relative rounded-xl overflow-hidden aspect-[4/3] group">
               <Image
                 src="/walker-2.png"
                 alt="Flyer distributor on foot"
                 fill
-                className="object-cover group-hover:scale-[1.04] transition-transform duration-300"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <p className="text-white font-semibold text-sm">On-Foot Walkers</p>
+                <p className="text-white/70 text-xs">Thorough, street-by-street delivery</p>
+              </div>
             </div>
-            <div className="relative rounded-lg overflow-hidden aspect-[4/3] group">
+            <div className="relative rounded-xl overflow-hidden aspect-[4/3] group">
               <Image
                 src="/walker-3.png"
                 alt="Flyer distribution team"
                 fill
-                className="object-cover group-hover:scale-[1.04] transition-transform duration-300"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <p className="text-white font-semibold text-sm">Team Operations</p>
+                <p className="text-white/70 text-xs">Coordinated daily campaigns</p>
+              </div>
             </div>
           </div>
         </div>
