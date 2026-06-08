@@ -29,6 +29,9 @@ export default function Header() {
             <Link href="/portfolio" className="font-bold text-gray-700 border border-gray-300 rounded px-4 py-2 hover:bg-navy hover:text-white hover:border-navy transition-all duration-200 hover:scale-[1.02]">
               Our Clients
             </Link>
+            <Link href="/blog" className="font-bold text-gray-700 border border-gray-300 rounded px-4 py-2 hover:bg-navy hover:text-white hover:border-navy transition-all duration-200 hover:scale-[1.02]">
+              Blog
+            </Link>
             <Link href="/contact" className="font-bold text-gray-700 border border-gray-300 rounded px-4 py-2 hover:bg-navy hover:text-white hover:border-navy transition-all duration-200 hover:scale-[1.02]">
               Contact
             </Link>
@@ -56,6 +59,9 @@ export default function Header() {
             </Link>
             <Link href="/portfolio" className="font-bold text-gray-700 border border-gray-300 rounded px-4 py-2 hover:bg-navy hover:text-white hover:border-navy transition-all duration-200" onClick={() => setMobileOpen(false)}>
               Our Clients
+            </Link>
+            <Link href="/blog" className="font-bold text-gray-700 border border-gray-300 rounded px-4 py-2 hover:bg-navy hover:text-white hover:border-navy transition-all duration-200" onClick={() => setMobileOpen(false)}>
+              Blog
             </Link>
             <Link href="/contact" className="font-bold text-gray-700 border border-gray-300 rounded px-4 py-2 hover:bg-navy hover:text-white hover:border-navy transition-all duration-200" onClick={() => setMobileOpen(false)}>
               Contact
