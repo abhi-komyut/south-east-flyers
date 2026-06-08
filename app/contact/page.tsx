@@ -1,15 +1,9 @@
 "use client";
 
-import { useState } from "react";
-import type { FormEvent } from "react";
+import { useForm, ValidationError } from "@formspree/react";
 
 export default function Contact() {
-  const [submitted, setSubmitted] = useState(false);
-
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setSubmitted(true);
-  }
+  const [state, handleSubmit] = useForm("xzdqreda");
 
   return (
     <section className="py-20">
@@ -22,7 +16,7 @@ export default function Contact() {
             </p>
           </div>
 
-          {submitted ? (
+          {state.succeeded ? (
             <div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
               <svg className="w-12 h-12 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -46,6 +40,7 @@ export default function Contact() {
                   className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-navy focus:border-transparent"
                   placeholder="Your full name"
                 />
+                <ValidationError prefix="Name" field="name" errors={state.errors} className="text-red-600 text-sm mt-1" />
               </div>
 
               <div>
@@ -60,6 +55,7 @@ export default function Contact() {
                   className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-navy focus:border-transparent"
                   placeholder="you@example.com"
                 />
+                <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-600 text-sm mt-1" />
               </div>
 
               <div>
@@ -74,6 +70,7 @@ export default function Contact() {
                   className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-navy focus:border-transparent"
                   placeholder="e.g. Dandenong, Parramatta"
                 />
+                <ValidationError prefix="Suburb" field="suburb" errors={state.errors} className="text-red-600 text-sm mt-1" />
               </div>
 
               <div>
@@ -88,13 +85,19 @@ export default function Contact() {
                   className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-navy focus:border-transparent resize-y"
                   placeholder="Tell us about your campaign requirements..."
                 />
+                <ValidationError prefix="Message" field="message" errors={state.errors} className="text-red-600 text-sm mt-1" />
               </div>
+
+              {state.errors && (
+                <ValidationError errors={state.errors} className="text-red-600 text-sm" />
+              )}
 
               <button
                 type="submit"
-                className="w-full bg-navy text-white font-semibold py-3 rounded hover:bg-navy-light transition-colors"
+                disabled={state.submitting}
+                className="w-full bg-navy text-white font-semibold py-3 rounded hover:bg-navy-light transition-colors disabled:opacity-50"
               >
-                Send Message
+                {state.submitting ? "Sending..." : "Send Message"}
               </button>
             </form>
           )}

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import LogoSlider from "./components/LogoSlider";
 
 export default function Home() {
   return (
@@ -31,6 +32,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Client Logos */}
+      <LogoSlider />
 
       {/* Services Overview */}
       <section className="py-20">
