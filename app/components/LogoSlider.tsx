@@ -20,7 +20,7 @@ export default function LogoSlider() {
   return (
     <section className="pt-16 pb-8 bg-white border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8">
+        <div className="text-center mb-14">
           <p className="text-sm uppercase tracking-widest text-gray-400 mb-4">
             Who we work with
           </p>
@@ -34,7 +34,7 @@ export default function LogoSlider() {
       </div>
 
       {/* Logo Marquee */}
-      <div className="overflow-hidden mb-10">
+      <div className="overflow-hidden mb-16">
         <div className="relative">
           <div className="flex animate-scroll w-max">
             {[...logos, ...logos].map((logo, i) => (
