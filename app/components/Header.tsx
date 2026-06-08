@@ -23,13 +23,13 @@ export default function Header() {
           </Link>
 
           <nav className="hidden md:flex items-center gap-4">
-            <Link href="/" className="font-bold italic text-gray-700 border border-gray-300 rounded px-4 py-2 hover:bg-navy hover:text-white hover:border-navy transition-all duration-200 hover:scale-[1.02]">
+            <Link href="/" className="font-bold text-gray-700 border border-gray-300 rounded px-4 py-2 hover:bg-navy hover:text-white hover:border-navy transition-all duration-200 hover:scale-[1.02]">
               Home
             </Link>
-            <Link href="/portfolio" className="font-bold italic text-gray-700 border border-gray-300 rounded px-4 py-2 hover:bg-navy hover:text-white hover:border-navy transition-all duration-200 hover:scale-[1.02]">
+            <Link href="/portfolio" className="font-bold text-gray-700 border border-gray-300 rounded px-4 py-2 hover:bg-navy hover:text-white hover:border-navy transition-all duration-200 hover:scale-[1.02]">
               Our Clients
             </Link>
-            <Link href="/contact" className="font-bold italic text-gray-700 border border-gray-300 rounded px-4 py-2 hover:bg-navy hover:text-white hover:border-navy transition-all duration-200 hover:scale-[1.02]">
+            <Link href="/contact" className="font-bold text-gray-700 border border-gray-300 rounded px-4 py-2 hover:bg-navy hover:text-white hover:border-navy transition-all duration-200 hover:scale-[1.02]">
               Contact
             </Link>
           </nav>
@@ -51,13 +51,13 @@ export default function Header() {
 
         {mobileOpen && (
           <nav className="md:hidden pb-4 flex flex-col gap-3">
-            <Link href="/" className="font-bold italic text-gray-700 border border-gray-300 rounded px-4 py-2 hover:bg-navy hover:text-white hover:border-navy transition-all duration-200" onClick={() => setMobileOpen(false)}>
+            <Link href="/" className="font-bold text-gray-700 border border-gray-300 rounded px-4 py-2 hover:bg-navy hover:text-white hover:border-navy transition-all duration-200" onClick={() => setMobileOpen(false)}>
               Home
             </Link>
-            <Link href="/portfolio" className="font-bold italic text-gray-700 border border-gray-300 rounded px-4 py-2 hover:bg-navy hover:text-white hover:border-navy transition-all duration-200" onClick={() => setMobileOpen(false)}>
+            <Link href="/portfolio" className="font-bold text-gray-700 border border-gray-300 rounded px-4 py-2 hover:bg-navy hover:text-white hover:border-navy transition-all duration-200" onClick={() => setMobileOpen(false)}>
               Our Clients
             </Link>
-            <Link href="/contact" className="font-bold italic text-gray-700 border border-gray-300 rounded px-4 py-2 hover:bg-navy hover:text-white hover:border-navy transition-all duration-200" onClick={() => setMobileOpen(false)}>
+            <Link href="/contact" className="font-bold text-gray-700 border border-gray-300 rounded px-4 py-2 hover:bg-navy hover:text-white hover:border-navy transition-all duration-200" onClick={() => setMobileOpen(false)}>
               Contact
             </Link>
           </nav>

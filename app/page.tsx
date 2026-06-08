@@ -196,7 +196,6 @@ function ServiceCard({ number, title, description, image, imageAlt }: { number: 
         </div>
       )}
       <div className="p-8">
-        <p className="text-sm text-gray-400 font-mono mb-3">{number}</p>
         <h3 className="text-lg font-semibold text-black mb-2">{title}</h3>
         <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
       </div>
