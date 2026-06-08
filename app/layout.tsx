@@ -50,6 +50,14 @@ export const metadata: Metadata = {
     siteName: "South East Flyers & Marketing Solutions",
     locale: "en_AU",
     type: "website",
+    images: [
+      {
+        url: "/og-logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "South East Flyers & Marketing Solutions",
+      },
+    ],
   },
   robots: {
     index: true,
