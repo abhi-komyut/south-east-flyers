@@ -67,18 +67,19 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Trust Bar */}
-        <div className="relative z-10 bg-black">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-sm">
-              <TrustBarItem icon="pin" label="GPS Tracked" />
-              <TrustBarItem icon="shield" label="No Junk Mail Compliant" />
-              <TrustBarItem icon="clock" label="48hr Turnaround" />
-              <TrustBarItem icon="chart" label="Campaign Reporting" />
-            </div>
+      </section>
+
+      {/* Trust Bar */}
+      <div className="bg-black text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-sm">
+            <TrustBarItem icon="pin" label="GPS Tracked" />
+            <TrustBarItem icon="shield" label="No Junk Mail Compliant" />
+            <TrustBarItem icon="clock" label="48hr Turnaround" />
+            <TrustBarItem icon="chart" label="Campaign Reporting" />
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Who We Work With — logos + industry cards */}
       <LogoSlider />
