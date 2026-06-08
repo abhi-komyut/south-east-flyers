@@ -3,7 +3,7 @@
 const testimonials = [
   {
     name: "Sarah M.",
-    role: "Marketing Manager",
+    role: "Real Estate Agent",
     quote:
       "South East Flyers consistently delivers on time and the GPS tracking gives us full confidence that every flyer reaches the right letterboxes. Our open home attendance has noticeably improved.",
     stars: 5,
