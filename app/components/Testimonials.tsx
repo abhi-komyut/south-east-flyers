@@ -3,21 +3,21 @@
 const testimonials = [
   {
     name: "Sarah M.",
-    role: "Marketing Manager, Ray White",
+    role: "Marketing Manager",
     quote:
       "South East Flyers consistently delivers on time and the GPS tracking gives us full confidence that every flyer reaches the right letterboxes. Our open home attendance has noticeably improved.",
     stars: 5,
   },
   {
     name: "James T.",
-    role: "Owner, Storm Shield Roofing",
+    role: "Business Owner",
     quote:
       "We've tried other distribution companies before but the reporting was never this detailed. Knowing exactly which streets were covered makes a huge difference for planning our next campaign.",
     stars: 5,
   },
   {
     name: "Priya K.",
-    role: "Practice Manager, High Dental",
+    role: "Practice Manager",
     quote:
       "Professional, reliable, and great communication. They respect no junk mail signs which is important for our brand reputation. We've been using them for over two years now.",
     stars: 5,
