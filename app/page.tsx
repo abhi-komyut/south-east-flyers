@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import LogoSlider from "./components/LogoSlider";
 
 export default function Home() {
@@ -6,28 +7,62 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="bg-navy text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-              Letterbox Marketing That Delivers Results
-            </h1>
-            <p className="text-lg md:text-xl text-gray-300 mb-8">
-              Melbourne and Sydney&apos;s trusted letterbox drop agency. We help businesses reach
-              their target audience with precision distribution across Australian suburbs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/contact"
-                className="inline-block bg-white text-navy font-semibold px-6 py-3 rounded text-center hover:bg-gray-100 transition-colors"
-              >
-                Get a Free Quote
-              </Link>
-              <Link
-                href="/portfolio"
-                className="inline-block border border-white text-white font-semibold px-6 py-3 rounded text-center hover:bg-white/10 transition-colors"
-              >
-                View Our Work
-              </Link>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-sm uppercase tracking-widest text-gray-400 mb-4">
+                Melbourne &amp; Sydney
+              </p>
+              <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ fontFamily: "Georgia, serif" }}>
+                Letterbox marketing that actually gets read.
+              </h1>
+              <p className="text-lg text-gray-300 mb-8">
+                We deliver nearly 20,000 flyers every day for Australia&apos;s leading brands — with GPS tracking, no junk mail compliance, and zero bundling.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-block bg-white text-navy font-semibold px-6 py-3 rounded text-center hover:bg-gray-100 transition-colors"
+                >
+                  Get a Free Quote
+                </Link>
+                <Link
+                  href="/portfolio"
+                  className="inline-block border border-white text-white font-semibold px-6 py-3 rounded text-center hover:bg-white/10 transition-colors"
+                >
+                  Our Clients
+                </Link>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              <div className="space-y-3">
+                <div className="bg-white/10 rounded-lg p-5 text-center">
+                  <p className="text-3xl font-bold">20K+</p>
+                  <p className="text-sm text-gray-300 mt-1">Flyers dropped daily</p>
+                </div>
+                <div className="bg-white/10 rounded-lg p-5 text-center">
+                  <p className="text-3xl font-bold">200+</p>
+                  <p className="text-sm text-gray-300 mt-1">Happy clients</p>
+                </div>
+              </div>
+              <div className="mt-6">
+                <div className="bg-white/10 rounded-lg p-5 text-center">
+                  <p className="text-3xl font-bold">100%</p>
+                  <p className="text-sm text-gray-300 mt-1">GPS tracked</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Trust Bar */}
+        <div className="bg-black">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-sm">
+              <TrustBarItem icon="pin" label="GPS Tracked" />
+              <TrustBarItem icon="shield" label="No Junk Mail Compliant" />
+              <TrustBarItem icon="clock" label="48hr Turnaround" />
+              <TrustBarItem icon="chart" label="Campaign Reporting" />
             </div>
           </div>
         </div>
@@ -36,76 +71,159 @@ export default function Home() {
       {/* Client Logos */}
       <LogoSlider />
 
-      {/* Services Overview */}
+      {/* Who We Work With */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Our Services</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Who We Work With</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              End-to-end letterbox marketing solutions tailored for the Australian market.
+              From healthcare to trades to real estate — we help local businesses reach the right letterboxes.
             </p>
           </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="relative rounded-lg overflow-hidden aspect-[4/3] group">
+              <Image
+                src="/client-dentist.png"
+                alt="Healthcare professionals using letterbox marketing"
+                fill
+                className="object-cover group-hover:scale-[1.04] transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <p className="absolute bottom-4 left-4 text-white font-semibold">Healthcare</p>
+            </div>
+            <div className="relative rounded-lg overflow-hidden aspect-[4/3] group">
+              <Image
+                src="/client-roofer.png"
+                alt="Trades and home services using letterbox marketing"
+                fill
+                className="object-cover group-hover:scale-[1.04] transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <p className="absolute bottom-4 left-4 text-white font-semibold">Trades & Services</p>
+            </div>
+            <div className="relative rounded-lg overflow-hidden aspect-[4/3] group">
+              <Image
+                src="/client-realestate.png"
+                alt="Real estate agents using letterbox marketing"
+                fill
+                className="object-cover group-hover:scale-[1.04] transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <p className="absolute bottom-4 left-4 text-white font-semibold">Real Estate</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* Our Distributors */}
+      <section className="border-t border-gray-200 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Our Team on the Ground</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Professional walkers and e-bike distributors covering Melbourne and Sydney suburbs every day.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="relative rounded-lg overflow-hidden aspect-[4/3] group">
+              <Image
+                src="/walker-1.png"
+                alt="E-bike flyer distribution"
+                fill
+                className="object-cover group-hover:scale-[1.04] transition-transform duration-300"
+              />
+            </div>
+            <div className="relative rounded-lg overflow-hidden aspect-[4/3] group">
+              <Image
+                src="/walker-2.png"
+                alt="Flyer distributor on foot"
+                fill
+                className="object-cover group-hover:scale-[1.04] transition-transform duration-300"
+              />
+            </div>
+            <div className="relative rounded-lg overflow-hidden aspect-[4/3] group">
+              <Image
+                src="/walker-3.png"
+                alt="Flyer distribution team"
+                fill
+                className="object-cover group-hover:scale-[1.04] transition-transform duration-300"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="border-t border-gray-200 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Our Services</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-gray-200 rounded-lg overflow-hidden">
             <ServiceCard
-              title="Letterbox Drops"
-              description="Reliable door-to-door flyer and brochure delivery across Melbourne and Sydney metropolitan areas. We ensure your materials reach every letterbox."
-              icon={
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              }
+              number="01"
+              title="Targeted Distribution"
+              description="Suburb-level targeting using demographic data to reach the right households for your business."
             />
             <ServiceCard
-              title="Distribution Services"
-              description="From small runs to large-scale campaigns, we handle printing coordination, sorting, and timely distribution with full GPS tracking and reporting."
-              icon={
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l5.447 2.724A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                </svg>
-              }
+              number="02"
+              title="Print & Design"
+              description="End-to-end flyer design and printing coordination so your campaign is ready to drop."
             />
             <ServiceCard
-              title="Targeted Campaigns"
-              description="Demographic and geographic targeting to maximise your ROI. We use Australia Post data and local insights to reach the right households."
-              icon={
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              }
+              number="03"
+              title="GPS Tracked Drops"
+              description="Every delivery is GPS tracked with full reporting so you know exactly where your flyers went."
             />
           </div>
         </div>
       </section>
 
-      {/* Trust Section */}
+      {/* Why Choose Us */}
       <section className="bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Why Choose Us</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <TrustItem label="Melbourne & Sydney Coverage" />
-            <TrustItem label="GPS-Tracked Delivery" />
-            <TrustItem label="No Junk Mail Compliance" />
-            <TrustItem label="Flexible Campaign Sizes" />
+            <WhyCard
+              icon="pin"
+              title="GPS-Tracked Every Drop"
+              description="Real-time tracking on every delivery run with detailed route reporting."
+            />
+            <WhyCard
+              icon="shield"
+              title="No Junk Mail Compliant"
+              description="We respect every 'No Junk Mail' sign — keeping your brand reputable."
+            />
+            <WhyCard
+              icon="clock"
+              title="48hr Turnaround Available"
+              description="Fast campaign deployment when you need to move quickly."
+            />
+            <WhyCard
+              icon="chart"
+              title="Campaign Reporting"
+              description="Detailed reports on drops completed, areas covered, and delivery proof."
+            />
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20">
+      {/* CTA Banner */}
+      <section className="bg-navy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Reach More Customers?</h2>
-          <p className="text-gray-600 mb-8 max-w-xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" style={{ fontFamily: "Georgia, serif" }}>
+            Ready to reach more customers?
+          </h2>
+          <p className="text-gray-300 mb-8 max-w-xl mx-auto">
             Get in touch for a no-obligation quote on your next letterbox campaign.
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-navy text-white font-semibold px-8 py-3 rounded hover:bg-navy-light transition-colors"
+            className="inline-block bg-white text-navy font-semibold px-8 py-3 rounded hover:bg-gray-100 transition-colors"
           >
-            Contact Us Today
+            Get a Free Quote
           </Link>
         </div>
       </section>
@@ -113,33 +231,79 @@ export default function Home() {
   );
 }
 
-function ServiceCard({
-  title,
-  description,
-  icon,
-}: {
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-}) {
+function TrustBarItem({ icon, label }: { icon: string; label: string }) {
+  const icons: Record<string, React.ReactNode> = {
+    pin: (
+      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+    ),
+    shield: (
+      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+    ),
+    clock: (
+      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+    chart: (
+      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+      </svg>
+    ),
+  };
+
   return (
-    <div className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-md transition-shadow">
-      <div className="text-navy mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold mb-3 text-black">{title}</h3>
+    <div className="flex items-center justify-center gap-2 text-white/80">
+      {icons[icon]}
+      <span>{label}</span>
+    </div>
+  );
+}
+
+function ServiceCard({ number, title, description }: { number: string; title: string; description: string }) {
+  return (
+    <div className="p-8 border-r border-gray-200 last:border-r-0 md:[&:not(:last-child)]:border-r">
+      <p className="text-sm text-gray-400 font-mono mb-3">{number}</p>
+      <h3 className="text-lg font-semibold text-black mb-2">{title}</h3>
       <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
     </div>
   );
 }
 
-function TrustItem({ label }: { label: string }) {
+function WhyCard({ icon, title, description }: { icon: string; title: string; description: string }) {
+  const icons: Record<string, React.ReactNode> = {
+    pin: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+    ),
+    shield: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+    ),
+    clock: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+    chart: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+      </svg>
+    ),
+  };
+
   return (
     <div className="bg-white border border-gray-200 rounded-lg p-6 text-center">
-      <div className="text-navy mb-2">
-        <svg className="w-6 h-6 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-        </svg>
-      </div>
-      <p className="text-sm font-medium text-gray-700">{label}</p>
+      <div className="text-navy mb-3 flex justify-center">{icons[icon]}</div>
+      <h3 className="text-sm font-semibold text-black mb-2">{title}</h3>
+      <p className="text-gray-500 text-xs leading-relaxed">{description}</p>
     </div>
   );
 }
