@@ -3,9 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Our Clients | South East Flyers & Marketing Solutions",
+  title: "Our Clients | Flyer Distribution Melbourne & Sydney",
   description:
-    "Trusted by leading Australian brands. We deliver nearly 20,000 flyers a day with no junk mail compliance and strict anti-bundling policies.",
+    "Trusted by Ray White, McGrath, Belle Property & more. Professional letterbox distribution and flyer drops across Melbourne & Sydney. 20,000+ flyers delivered daily with GPS tracking.",
+  alternates: {
+    canonical: "https://southeastflyers.com.au/portfolio",
+  },
 };
 
 const clients = [

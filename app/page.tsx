@@ -3,9 +3,40 @@ import Image from "next/image";
 import LogoSlider from "./components/LogoSlider";
 import CountUp from "./components/CountUp";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "South East Flyers & Marketing Solutions",
+  description:
+    "Professional flyer distribution and letterbox drops across Melbourne and Sydney. GPS-tracked delivery, no junk mail compliant.",
+  url: "https://southeastflyers.com.au",
+  areaServed: [
+    { "@type": "City", name: "Melbourne", addressCountry: "AU" },
+    { "@type": "City", name: "Sydney", addressCountry: "AU" },
+  ],
+  serviceType: [
+    "Flyer Distribution",
+    "Letterbox Drops",
+    "Leaflet Distribution",
+    "Pamphlet Distribution",
+    "Letterbox Advertising",
+    "Catalogue Distribution",
+  ],
+  knowsAbout: [
+    "GPS tracked flyer distribution",
+    "No junk mail compliant delivery",
+    "Targeted letterbox distribution",
+    "Real estate flyer distribution",
+  ],
+};
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero Section */}
       <section className="relative min-h-[600px] flex items-center bg-[#1B3A6B] text-white">
         <Image
@@ -23,10 +54,10 @@ export default function Home() {
                 Melbourne &amp; Sydney
               </p>
               <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ fontFamily: "Georgia, serif" }}>
-                Letterbox marketing that actually gets read.
+                Flyer distribution that actually gets read.
               </h1>
               <p className="text-lg text-gray-300 mb-8">
-                We deliver nearly 20,000 flyers every day for Australia&apos;s leading brands — with GPS tracking, no junk mail compliance, and zero bundling.
+                Professional letterbox drops across Melbourne &amp; Sydney — nearly 20,000 flyers delivered daily with GPS tracking, no junk mail compliance, and zero bundling.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -115,20 +146,20 @@ export default function Home() {
       <section className="border-t border-gray-200 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Our Services</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Letterbox Distribution Services</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ServiceCard
               number="01"
-              title="Targeted Distribution"
-              description="Suburb-level targeting using demographic data to reach the right households for your business."
+              title="Targeted Flyer Distribution"
+              description="Suburb-level leaflet distribution using demographic data to reach the right households across Melbourne and Sydney."
               image="/service-targeted.png"
               imageAlt="Melbourne suburb targeting map"
             />
             <ServiceCard
               number="02"
               title="GPS Tracked Drops"
-              description="Every delivery is GPS tracked with full reporting so you know exactly where your flyers went."
+              description="Every letterbox drop is GPS tracked with full reporting so you know exactly where your flyers and pamphlets were delivered."
               image="/service-gps.avif"
               imageAlt="GPS route tracking map"
             />
@@ -171,10 +202,10 @@ export default function Home() {
       <section className="bg-navy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" style={{ fontFamily: "Georgia, serif" }}>
-            Ready to reach more customers?
+            Ready to start your letterbox campaign?
           </h2>
           <p className="text-gray-300 mb-8 max-w-xl mx-auto">
-            Get in touch for a no-obligation quote on your next letterbox campaign.
+            Get a free quote for flyer distribution across Melbourne and Sydney — no obligation.
           </p>
           <Link
             href="/contact"
