@@ -35,15 +35,15 @@ export default function LogoSlider() {
       {/* Logo Marquee */}
       <div className="relative mb-20">
         {/* Fade edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 md:w-40 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 md:w-40 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
         <div className="overflow-hidden">
           <div className="flex animate-scroll w-max">
             {[...logos, ...logos].map((logo, i) => (
               <div
                 key={i}
-                className="flex-shrink-0 mx-10 sm:mx-14 flex items-center justify-center h-14 w-36 sm:w-44 opacity-70 hover:opacity-100 transition-opacity duration-300"
+                className="flex-shrink-0 mx-6 sm:mx-10 md:mx-14 flex items-center justify-center h-12 sm:h-14 w-28 sm:w-36 md:w-44 opacity-70 hover:opacity-100 transition-opacity duration-300"
               >
                 <Image
                   src={logo.src}
@@ -96,7 +96,7 @@ function IndustryCard({ src, alt, label }: { src: string; alt: string; label: st
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 p-5">
-        <p className="text-white font-semibold text-lg">{label}</p>
+        <p className="text-white font-semibold text-base sm:text-lg">{label}</p>
       </div>
     </div>
   );

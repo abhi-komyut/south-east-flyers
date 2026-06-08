@@ -59,7 +59,7 @@ export default function FAQ() {
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-gray-50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-inset"
+                  className="w-full flex items-center justify-between px-4 sm:px-6 py-3.5 sm:py-4 text-left hover:bg-gray-50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-inset"
                   aria-expanded={isOpen}
                 >
                   <span className="font-medium text-black text-sm pr-4">
@@ -76,7 +76,7 @@ export default function FAQ() {
                   </svg>
                 </button>
                 {isOpen && (
-                  <div className="px-6 pb-4">
+                  <div className="px-4 sm:px-6 pb-4">
                     <p className="text-gray-600 text-sm leading-relaxed">
                       {faq.answer}
                     </p>

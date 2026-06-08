@@ -40,3 +40,9 @@ body {
 .animate-scroll:hover {
   animation-play-state: paused;
 }
+
+@media (max-width: 640px) {
+  .animate-scroll {
+    animation-duration: 20s;
+  }
+}

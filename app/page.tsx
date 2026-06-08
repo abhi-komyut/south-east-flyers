@@ -41,7 +41,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       {/* Hero Section */}
-      <section className="relative min-h-[600px] flex items-center bg-[#1B3A6B] text-white">
+      <section className="relative min-h-[480px] sm:min-h-[600px] flex items-center bg-[#1B3A6B] text-white">
         <Image
           src="/letterbox-hero.png"
           alt="Hand dropping a flyer into a letterbox"
@@ -56,10 +56,10 @@ export default function Home() {
               <p className="text-sm uppercase tracking-widest text-gray-400 mb-4">
                 Melbourne &amp; Sydney
               </p>
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ fontFamily: "Georgia, serif" }}>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ fontFamily: "Georgia, serif" }}>
                 Flyer distribution that actually gets read.
               </h1>
-              <p className="text-lg text-gray-300 mb-8">
+              <p className="text-base sm:text-lg text-gray-300 mb-8">
                 Professional letterbox drops across Melbourne &amp; Sydney — nearly 20,000 flyers delivered daily with GPS tracking, no junk mail compliance, and zero bundling.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -77,25 +77,25 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-3">
-              <div className="space-y-3">
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-5 text-center">
-                  <p className="text-3xl font-bold"><CountUp end={20} suffix="K+" /></p>
-                  <p className="text-sm text-gray-300 mt-1">Flyers dropped daily</p>
+            <div className="grid grid-cols-2 gap-2 sm:gap-3">
+              <div className="space-y-2 sm:space-y-3">
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-3 sm:p-5 text-center">
+                  <p className="text-2xl sm:text-3xl font-bold"><CountUp end={20} suffix="K+" /></p>
+                  <p className="text-xs sm:text-sm text-gray-300 mt-1">Flyers dropped daily</p>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-5 text-center">
-                  <p className="text-3xl font-bold"><CountUp end={200} suffix="+" /></p>
-                  <p className="text-sm text-gray-300 mt-1">Happy clients</p>
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-3 sm:p-5 text-center">
+                  <p className="text-2xl sm:text-3xl font-bold"><CountUp end={200} suffix="+" /></p>
+                  <p className="text-xs sm:text-sm text-gray-300 mt-1">Happy clients</p>
                 </div>
               </div>
-              <div className="space-y-3 mt-6">
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-5 text-center">
-                  <p className="text-3xl font-bold"><CountUp end={100} suffix="%" /></p>
-                  <p className="text-sm text-gray-300 mt-1">GPS tracked</p>
+              <div className="space-y-2 sm:space-y-3 mt-4 sm:mt-6">
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-3 sm:p-5 text-center">
+                  <p className="text-2xl sm:text-3xl font-bold"><CountUp end={100} suffix="%" /></p>
+                  <p className="text-xs sm:text-sm text-gray-300 mt-1">GPS tracked</p>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-5 text-center">
-                  <p className="text-3xl font-bold"><CountUp end={10} suffix="+" /></p>
-                  <p className="text-sm text-gray-300 mt-1">Years experience</p>
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-3 sm:p-5 text-center">
+                  <p className="text-2xl sm:text-3xl font-bold"><CountUp end={10} suffix="+" /></p>
+                  <p className="text-xs sm:text-sm text-gray-300 mt-1">Years experience</p>
                 </div>
               </div>
             </div>
@@ -166,7 +166,7 @@ export default function Home() {
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Letterbox Distribution Services</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8">
             <ServiceCard
               number="01"
               title="Targeted Flyer Distribution"
@@ -191,7 +191,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Why Choose Us</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             <WhyCard
               icon="pin"
               title="GPS-Tracked Every Drop"
@@ -254,7 +254,7 @@ function ServiceCard({ number, title, description, image, imageAlt }: { number: 
           <Image src={image} alt={imageAlt || title} fill className="object-cover" />
         </div>
       )}
-      <div className="p-8">
+      <div className="p-5 sm:p-8">
         <h3 className="text-lg font-semibold text-black mb-2">{title}</h3>
         <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
       </div>

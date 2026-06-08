@@ -48,14 +48,14 @@ export default function Header() {
       {/* Main nav */}
       <div className={`bg-white transition-shadow duration-300 ${scrolled ? "shadow-md" : "border-b border-gray-200"}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-16 sm:h-20">
             <Link href="/" className="flex items-center shrink-0">
               <Image
                 src="/logo.png"
                 alt="South East Flyers and Marketing Solutions"
                 width={540}
                 height={144}
-                className="h-14 w-auto"
+                className="h-10 sm:h-14 w-auto"
                 priority
               />
             </Link>
@@ -85,7 +85,7 @@ export default function Header() {
             </nav>
 
             <button
-              className="lg:hidden text-gray-700 p-2 -mr-2 hover:bg-gray-100 rounded transition-colors"
+              className="lg:hidden text-gray-700 p-3 -mr-3 hover:bg-gray-100 rounded transition-colors"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
             >
@@ -111,14 +111,14 @@ export default function Header() {
               <div className="mt-3 pt-3 border-t border-gray-100 flex flex-col gap-2">
                 <Link
                   href="/contact"
-                  className="bg-cta text-white font-semibold rounded px-4 py-2.5 text-center text-sm transition-all duration-200 hover:bg-cta-hover"
+                  className="bg-cta text-white font-semibold rounded px-4 py-3 text-center text-base transition-all duration-200 hover:bg-cta-hover"
                   onClick={() => setMobileOpen(false)}
                 >
                   Get a Free Quote
                 </Link>
                 <a
                   href="tel:+61402824070"
-                  className="flex items-center justify-center gap-2 text-navy font-semibold border border-navy rounded px-4 py-2.5 text-sm transition-all duration-200 hover:bg-navy hover:text-white"
+                  className="flex items-center justify-center gap-2 text-navy font-semibold border border-navy rounded px-4 py-3 text-base transition-all duration-200 hover:bg-navy hover:text-white"
                   onClick={() => setMobileOpen(false)}
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -150,7 +150,7 @@ function MobileNavLink({ href, children, onClick }: { href: string; children: Re
   return (
     <Link
       href={href}
-      className="text-gray-700 font-medium text-sm px-3 py-2.5 rounded hover:bg-gray-50 hover:text-navy transition-colors"
+      className="text-gray-700 font-medium text-base px-3 py-3 rounded hover:bg-gray-50 hover:text-navy transition-colors"
       onClick={onClick}
     >
       {children}

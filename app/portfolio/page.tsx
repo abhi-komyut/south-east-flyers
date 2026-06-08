@@ -80,11 +80,11 @@ export default function Portfolio() {
               Trusted by 200+ businesses
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
             {clients.map((client, index) => (
               <div
                 key={index}
-                className="bg-white border border-gray-200 rounded-lg p-6 flex flex-col items-center justify-center gap-3 h-36 hover:shadow-md hover:border-gray-300 transition-all duration-200"
+                className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6 flex flex-col items-center justify-center gap-2 sm:gap-3 h-28 sm:h-32 md:h-36 hover:shadow-md hover:border-gray-300 transition-all duration-200"
               >
                 <Image
                   src={client.src}

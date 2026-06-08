@@ -58,9 +58,9 @@ export default async function BlogPostPage({
       <section className="py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
-            className="prose prose-lg max-w-none
-              [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-black [&_h2]:mt-10 [&_h2]:mb-4
-              [&_p]:text-gray-700 [&_p]:leading-relaxed [&_p]:mb-6
+            className="prose prose-base sm:prose-lg max-w-none
+              [&_h2]:text-xl [&_h2]:sm:text-2xl [&_h2]:font-bold [&_h2]:text-black [&_h2]:mt-8 [&_h2]:sm:mt-10 [&_h2]:mb-3 [&_h2]:sm:mb-4
+              [&_p]:text-gray-700 [&_p]:leading-relaxed [&_p]:mb-4 [&_p]:sm:mb-6
               [&_a]:text-navy [&_a]:underline"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
@@ -88,7 +88,7 @@ export default async function BlogPostPage({
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-white text-navy font-semibold px-6 py-3 rounded transition-all duration-200 hover:opacity-90 hover:scale-[1.02]"
+            className="inline-block bg-cta text-white font-semibold px-6 py-3 rounded transition-all duration-200 hover:bg-cta-hover hover:scale-[1.02]"
           >
             Get a Free Quote
           </Link>
