@@ -1,9 +1,18 @@
 "use client";
 
 import { useForm, ValidationError } from "@formspree/react";
+import { useEffect } from "react";
+import { trackEvent } from "../lib/gtag";
 
 export default function QuickQuoteForm() {
   const [state, handleSubmit] = useForm("xzdqreda");
+
+  useEffect(() => {
+    if (state.succeeded) {
+      trackEvent("form_submit", { form_name: "quick_quote" });
+      trackEvent("generate_lead", { form_name: "quick_quote" });
+    }
+  }, [state.succeeded]);
 
   return (
     <section className="py-20 bg-gray-50">

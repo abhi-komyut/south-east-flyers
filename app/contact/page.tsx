@@ -1,9 +1,18 @@
 "use client";
 
 import { useForm, ValidationError } from "@formspree/react";
+import { useEffect } from "react";
+import { trackEvent } from "../lib/gtag";
 
 export default function Contact() {
   const [state, handleSubmit] = useForm("xzdqreda");
+
+  useEffect(() => {
+    if (state.succeeded) {
+      trackEvent("form_submit", { form_name: "contact" });
+      trackEvent("generate_lead", { form_name: "contact" });
+    }
+  }, [state.succeeded]);
 
   return (
     <>

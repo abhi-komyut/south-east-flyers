@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { posts, getPostBySlug } from "../posts";
+import Breadcrumbs from "../../components/Breadcrumbs";
+
+const SITE_URL = "https://www.southeastflyers.com.au";
 
 export function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
@@ -21,6 +24,9 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: {
+      canonical: `${SITE_URL}/blog/${post.slug}`,
+    },
   };
 }
 
@@ -36,10 +42,38 @@ export default async function BlogPostPage({
     notFound();
   }
 
+  const blogPostingLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    dateModified: post.date,
+    image: `${SITE_URL}${post.image}`,
+    mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,
+    author: { "@id": `${SITE_URL}/#organization` },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingLd) }}
+      />
       {/* Hero */}
       <section className="bg-navy text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-8">
+            <Breadcrumbs
+              items={[
+                { name: "Home", href: "/" },
+                { name: "Blog", href: "/blog" },
+                { name: post.title },
+              ]}
+            />
+          </div>
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gray-300 mb-3">
             {new Date(post.date).toLocaleDateString("en-AU", {
@@ -88,6 +122,7 @@ export default async function BlogPostPage({
           </p>
           <Link
             href="/contact"
+            data-quote-cta
             className="inline-block bg-cta text-white font-semibold px-6 py-3 rounded transition-all duration-200 hover:bg-cta-hover hover:scale-[1.02]"
           >
             Get a Free Quote

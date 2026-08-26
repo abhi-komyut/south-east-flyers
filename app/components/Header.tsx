@@ -77,6 +77,7 @@ export default function Header() {
                 </a>
                 <Link
                   href="/contact"
+                  data-quote-cta
                   className="bg-cta text-white font-semibold text-sm px-5 py-2 rounded hover:bg-cta-hover transition-all duration-200 hover:scale-[1.02]"
                 >
                   Get a Free Quote
@@ -111,6 +112,7 @@ export default function Header() {
               <div className="mt-3 pt-3 border-t border-gray-100 flex flex-col gap-2">
                 <Link
                   href="/contact"
+                  data-quote-cta
                   className="bg-cta text-white font-semibold rounded px-4 py-3 text-center text-base transition-all duration-200 hover:bg-cta-hover"
                   onClick={() => setMobileOpen(false)}
                 >

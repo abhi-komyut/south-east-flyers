@@ -4,9 +4,9 @@ import PortfolioContent from "./PortfolioContent";
 export const metadata: Metadata = {
   title: "Our Clients | Flyer Distribution Melbourne & Sydney",
   description:
-    "Trusted by Ray White, McGrath, Belle Property & more. Professional letterbox distribution and flyer drops across Melbourne & Sydney. 20,000+ flyers delivered daily with GPS tracking.",
+    "Trusted by Ray White, McGrath, Belle Property & more. Professional letterbox distribution and flyer drops across Melbourne & Sydney. High-volume daily distribution with GPS tracking.",
   alternates: {
-    canonical: "https://southeastflyers.com.au/portfolio",
+    canonical: "https://www.southeastflyers.com.au/portfolio",
   },
 };
 

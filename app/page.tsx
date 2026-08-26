@@ -9,10 +9,15 @@ import FAQ from "./components/FAQ";
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": "https://www.southeastflyers.com.au/#localbusiness",
   name: "South East Flyers & Marketing Solutions",
   description:
     "Professional flyer distribution and letterbox drops across Melbourne and Sydney. GPS-tracked delivery, no junk mail compliant.",
-  url: "https://southeastflyers.com.au",
+  url: "https://www.southeastflyers.com.au",
+  telephone: "+61402824070",
+  email: "abhiram@southeastflyers.com.au",
+  image: "https://www.southeastflyers.com.au/og-logo.jpg",
+  logo: "https://www.southeastflyers.com.au/logo.png",
   areaServed: [
     { "@type": "City", name: "Melbourne", addressCountry: "AU" },
     { "@type": "City", name: "Sydney", addressCountry: "AU" },
@@ -60,11 +65,12 @@ export default function Home() {
                 Flyer distribution that actually gets read.
               </h1>
               <p className="text-base sm:text-lg text-gray-300 mb-8">
-                Professional letterbox drops across Melbourne &amp; Sydney — nearly 20,000 flyers delivered daily with GPS tracking, no junk mail compliance, and zero bundling.
+                Professional letterbox drops across Melbourne &amp; Sydney — large-scale daily delivery with GPS tracking, no junk mail compliance, and zero bundling.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/contact"
+                  data-quote-cta
                   className="inline-block bg-cta text-white font-semibold px-6 py-3 rounded text-center transition-all duration-200 hover:bg-cta-hover hover:scale-[1.02]"
                 >
                   Get a Free Quote
@@ -236,6 +242,7 @@ export default function Home() {
           </p>
           <Link
             href="/contact"
+            data-quote-cta
             className="inline-block bg-cta text-white font-semibold px-8 py-3 rounded transition-all duration-200 hover:bg-cta-hover hover:scale-[1.02]"
           >
             Get a Free Quote
