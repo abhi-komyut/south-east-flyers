@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
+import FAQSection from "../../components/FAQSection";
 
 const SITE_URL = "https://www.southeastflyers.com.au";
 const PAGE_PATH = "/industries/real-estate";
@@ -46,6 +47,39 @@ const useCases: { title: string; body: string }[] = [
   {
     title: "Agency branding",
     body: "Keep your agency visible across your core suburbs with consistent, well-targeted local distribution.",
+  },
+];
+
+const faqs = [
+  {
+    question: "How many flyers do I need for a Just Listed drop?",
+    answer:
+      "A Just Listed drop usually targets the streets immediately around the property — often a few hundred nearby homes. Our minimum campaign is 1,000 flyers, which comfortably covers the surrounding streets and lets you extend into the wider farm area if you want.",
+  },
+  {
+    question: "Do you work with real estate agencies?",
+    answer:
+      "Yes — we distribute for real estate agencies including Ray White, McGrath and Belle Property, running Just Listed, Open Home, Auction and Sold campaigns across their local areas.",
+  },
+  {
+    question: "Can you deliver to houses and avoid apartment blocks?",
+    answer:
+      "We target the suburbs and streets you specify. If you'd prefer to focus on houses and skip large apartment blocks, tell us and we'll factor that into the route planning where it's practical.",
+  },
+  {
+    question: "How quickly can you turn around a Just Listed campaign?",
+    answer:
+      "We offer a 48-hour turnaround for urgent campaigns, which suits the tight timelines around a new listing or an upcoming open home. Standard campaigns usually start within 3–5 business days.",
+  },
+  {
+    question: "Are real estate drops GPS-tracked?",
+    answer:
+      "Yes. Every run is tracked via the Strava app and you receive a report of the streets covered — useful proof for your vendor that the marketing was delivered.",
+  },
+  {
+    question: "Do you print the flyers?",
+    answer:
+      "No — we distribute, we don't print. You provide your Just Listed cards, brochures or Sold notices and we deliver them to the right streets.",
   },
 ];
 
@@ -207,6 +241,13 @@ export default function RealEstate() {
 
       {/* Quote form */}
       <QuickQuoteForm />
+
+      {/* FAQ */}
+      <FAQSection
+        items={faqs}
+        title="Real Estate Distribution FAQs"
+        subtitle="Common questions from agents about letterbox campaigns."
+      />
 
       {/* CTA banner */}
       <section className="bg-navy py-16 sm:py-20 border-t border-white/10">

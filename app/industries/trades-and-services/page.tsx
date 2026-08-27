@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
+import FAQSection from "../../components/FAQSection";
 
 const SITE_URL = "https://www.southeastflyers.com.au";
 const PAGE_PATH = "/industries/trades-and-services";
@@ -31,6 +32,34 @@ const trades: string[] = [
   "Renovations & building",
   "Pest control",
   "Other local home services",
+];
+
+const faqs = [
+  {
+    question: "How many flyers should a tradie drop?",
+    answer:
+      "It depends on the size of the area you service. Our minimum is 1,000 flyers, which covers a good pocket of local streets. If you work across several suburbs we'll help you work out a quantity that covers your patch.",
+  },
+  {
+    question: "Which trades and services do you work with?",
+    answer:
+      "Plumbers, electricians, landscapers, roofers, cleaners, renovators, pest control and other local home services. If you run a local trade or service business, the approach is the same regardless of the trade.",
+  },
+  {
+    question: "What's the best way to get local jobs from flyers?",
+    answer:
+      "Target the suburbs you already service and repeat drops over time. Consistent local distribution builds name recognition, so when a household needs your trade, yours is the flyer they remember and keep.",
+  },
+  {
+    question: "Is the delivery GPS-tracked?",
+    answer:
+      "Yes. Every run is tracked via the Strava app and you get a report of the streets covered, so you know your flyers reached the areas you're chasing work in.",
+  },
+  {
+    question: "Do you print the flyers?",
+    answer:
+      "No — we're a distribution specialist. You supply the printed flyers and we deliver them to the streets you service.",
+  },
 ];
 
 const serviceLd = {
@@ -178,6 +207,13 @@ export default function TradesAndServices() {
 
       {/* Quote form */}
       <QuickQuoteForm />
+
+      {/* FAQ */}
+      <FAQSection
+        items={faqs}
+        title="Trades & Services Distribution FAQs"
+        subtitle="Common questions from local trade and service businesses."
+      />
 
       {/* CTA banner */}
       <section className="bg-navy py-16 sm:py-20 border-t border-white/10">

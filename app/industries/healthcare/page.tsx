@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
+import FAQSection from "../../components/FAQSection";
 
 const SITE_URL = "https://www.southeastflyers.com.au";
 const PAGE_PATH = "/industries/healthcare";
@@ -38,6 +39,34 @@ const useCases: { title: string; body: string }[] = [
   {
     title: "Promoting a specific service",
     body: "Raise awareness of a particular service or clinic offering among nearby residents.",
+  },
+];
+
+const faqs = [
+  {
+    question: "Can flyer distribution help a new practice or clinic?",
+    answer:
+      "Yes — most patients come from the neighbourhoods around a practice, so a letterbox drop to the local catchment is a practical way to introduce a new clinic or announce an opening to the households nearby.",
+  },
+  {
+    question: "Which suburbs should a healthcare practice target?",
+    answer:
+      "Usually the immediate catchment around your location — the suburbs most of your patients travel from. Tell us where you are and we'll help you map a sensible local area.",
+  },
+  {
+    question: "Do you deliver to 'No Junk Mail' letterboxes?",
+    answer:
+      "No. We skip every letterbox marked 'No Junk Mail' or 'No Advertising Material', which keeps your practice's material with households happy to receive it.",
+  },
+  {
+    question: "What's the minimum order?",
+    answer:
+      "1,000 flyers per campaign, which is enough to cover the streets immediately around most practices. We can scale up from there across a wider catchment.",
+  },
+  {
+    question: "Do you handle the design or wording of the flyer?",
+    answer:
+      "No — we distribute, we don't print or write your material. You provide the printed flyers, and any professional or advertising standards that apply to healthcare content remain yours to determine.",
   },
 ];
 
@@ -186,6 +215,13 @@ export default function Healthcare() {
 
       {/* Quote form */}
       <QuickQuoteForm />
+
+      {/* FAQ */}
+      <FAQSection
+        items={faqs}
+        title="Healthcare Distribution FAQs"
+        subtitle="Common questions from practices and clinics."
+      />
 
       {/* CTA banner */}
       <section className="bg-navy py-16 sm:py-20 border-t border-white/10">

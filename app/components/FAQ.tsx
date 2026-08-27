@@ -1,12 +1,10 @@
-"use client";
-
-import { useState } from "react";
+import FAQSection from "./FAQSection";
 
 const faqs = [
   {
     question: "What areas do you cover?",
     answer:
-      "We cover the entire Melbourne metropolitan area, Sydney metropolitan area, and South East Melbourne suburbs. We can target specific suburbs based on your campaign needs and demographic data.",
+      "We cover the Melbourne metropolitan area, the Sydney metropolitan area, and the South East Melbourne suburbs. We can target specific suburbs based on your campaign needs — see our Melbourne page for the full confirmed service area.",
   },
   {
     question: "What is the minimum order for a letterbox drop?",
@@ -16,7 +14,7 @@ const faqs = [
   {
     question: "How does GPS tracking work?",
     answer:
-      "Every distributor tracks their route via the Strava app in real time. After your campaign, you receive a detailed report showing the streets covered, number of letterboxes delivered to, and a map of the distribution route.",
+      "Every distributor tracks their route via the Strava app in real time. After your campaign, you receive a report showing the streets covered and a map of the distribution route.",
   },
   {
     question: "What does 'no junk mail compliant' mean?",
@@ -33,60 +31,18 @@ const faqs = [
     answer:
       "No. We have a strict anti-bundling policy. Your flyers are delivered individually so they get maximum attention in each letterbox — never mixed in with other advertising.",
   },
+  {
+    question: "Do you print the flyers as well?",
+    answer:
+      "No — we're a distribution specialist, not a printer. You provide the printed flyers and we handle getting them into the right letterboxes across Melbourne and Sydney.",
+  },
 ];
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
   return (
-    <section className="py-20 border-t border-gray-200">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-gray-600">
-            Everything you need to know about our letterbox distribution services.
-          </p>
-        </div>
-        <div className="space-y-3">
-          {faqs.map((faq, index) => {
-            const isOpen = openIndex === index;
-            return (
-              <div
-                key={index}
-                className="border border-gray-200 rounded-lg overflow-hidden"
-              >
-                <button
-                  onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full flex items-center justify-between px-4 sm:px-6 py-3.5 sm:py-4 text-left hover:bg-gray-50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-inset"
-                  aria-expanded={isOpen}
-                >
-                  <span className="font-medium text-black text-sm pr-4">
-                    {faq.question}
-                  </span>
-                  <svg
-                    className={`w-5 h-5 text-gray-400 shrink-0 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                {isOpen && (
-                  <div className="px-4 sm:px-6 pb-4">
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      {faq.answer}
-                    </p>
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </section>
+    <FAQSection
+      items={faqs}
+      subtitle="Everything you need to know about our letterbox distribution services."
+    />
   );
 }

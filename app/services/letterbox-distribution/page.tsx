@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
+import FAQSection from "../../components/FAQSection";
 
 const SITE_URL = "https://www.southeastflyers.com.au";
 const PAGE_PATH = "/services/letterbox-distribution";
@@ -57,6 +58,34 @@ const features: { title: string; body: string }[] = [
   {
     title: "Tracked and reported",
     body: "GPS tracking on every run plus a clear campaign report, so you know where your letterbox drop actually went.",
+  },
+];
+
+const faqs = [
+  {
+    question: "How much does a letterbox drop cost?",
+    answer:
+      "Letterbox distribution is priced per campaign based on your quantity, the suburbs you're targeting and how spread out the delivery is. Tell us your target area and how many flyers you have and we'll send a clear quote. The minimum campaign is 1,000 flyers.",
+  },
+  {
+    question: "Do letterbox drops actually work?",
+    answer:
+      "For local marketing, yes — a flyer in the letterbox reaches nearby households directly and doesn't get lost in a crowded online feed. It works best when the offer is genuinely local and relevant and the distribution is targeted to the right suburbs, which is exactly what we help with.",
+  },
+  {
+    question: "How many households will 1,000 flyers reach?",
+    answer:
+      "Roughly one flyer per letterbox, so around 1,000 households — enough to cover a focused pocket of a suburb. If you want to blanket a whole suburb or several, we'll help you work out the right quantity.",
+  },
+  {
+    question: "Do you skip 'No Junk Mail' letterboxes?",
+    answer:
+      "Yes, always. We don't deliver to any letterbox marked 'No Junk Mail' or 'No Advertising Material'. It keeps your brand reputable and your flyers with households happy to receive them.",
+  },
+  {
+    question: "When is the best time to do a letterbox drop?",
+    answer:
+      "It depends on your offer — seasonal promotions, a new opening or a local event all have natural timing. Tell us what you're promoting and we'll help you plan a schedule that lines up with it.",
   },
 ];
 
@@ -228,6 +257,13 @@ export default function LetterboxDistribution() {
 
       {/* Quote form */}
       <QuickQuoteForm />
+
+      {/* FAQ */}
+      <FAQSection
+        items={faqs}
+        title="Letterbox Distribution FAQs"
+        subtitle="Common questions about letterbox drops across Melbourne and Sydney."
+      />
 
       {/* CTA banner */}
       <section className="bg-navy py-16 sm:py-20 border-t border-white/10">

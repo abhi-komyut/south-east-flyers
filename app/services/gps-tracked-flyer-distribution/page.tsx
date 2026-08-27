@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
+import FAQSection from "../../components/FAQSection";
 
 const SITE_URL = "https://www.southeastflyers.com.au";
 const PAGE_PATH = "/services/gps-tracked-flyer-distribution";
@@ -38,6 +39,34 @@ const tracked: { title: string; body: string }[] = [
   {
     title: "A report at the end",
     body: "Once your campaign is complete you receive a report summarising the routes and streets covered, with a map of the distribution.",
+  },
+];
+
+const faqs = [
+  {
+    question: "How does your GPS tracking work?",
+    answer:
+      "When our distributors are out delivering, they record their route in real time using the Strava app. That produces a mapped record of the streets and areas covered during your campaign.",
+  },
+  {
+    question: "What's included in the report I receive?",
+    answer:
+      "After the campaign you get a report summarising the routes and streets covered, along with a map of the distribution — so you can see where your flyers went.",
+  },
+  {
+    question: "Does GPS tracking prove every letterbox received a flyer?",
+    answer:
+      "We're upfront about this: GPS records the route the distributor travelled and the streets they covered. It gives you real accountability over where the campaign went, but we don't claim it proves each individual letterbox received a flyer.",
+  },
+  {
+    question: "Why does GPS tracking matter for flyer distribution?",
+    answer:
+      "Distribution has a reputation problem — not every operator delivers what they're paid for. GPS tracking is how we stay accountable: you're not just trusting the work was done, you can see the routes it took.",
+  },
+  {
+    question: "Can I see how the campaign is progressing?",
+    answer:
+      "Yes. Because runs are logged as they happen, we can see progress across the scheduled area during the campaign, not just at the end.",
   },
 ];
 
@@ -187,6 +216,13 @@ export default function GpsTrackedFlyerDistribution() {
 
       {/* Quote form */}
       <QuickQuoteForm />
+
+      {/* FAQ */}
+      <FAQSection
+        items={faqs}
+        title="GPS Tracking FAQs"
+        subtitle="Common questions about how we track and report on your campaign."
+      />
 
       {/* CTA banner */}
       <section className="bg-navy py-16 sm:py-20 border-t border-white/10">

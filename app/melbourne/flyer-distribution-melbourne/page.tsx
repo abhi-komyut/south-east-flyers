@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
+import FAQSection from "../../components/FAQSection";
 
 const SITE_URL = "https://www.southeastflyers.com.au";
 const PAGE_PATH = "/melbourne/flyer-distribution-melbourne";
@@ -173,6 +174,39 @@ const industries: { title: string; body: string; href: string }[] = [
     title: "Trades & Services",
     body: "Plumbers, electricians, landscapers and other local trades reaching nearby households directly.",
     href: "/industries/trades-and-services",
+  },
+];
+
+const faqs = [
+  {
+    question: "How much does flyer distribution cost in Melbourne?",
+    answer:
+      "Pricing depends on how many flyers you have, which suburbs you want to reach and how spread out the delivery is. Rather than a fixed rate, we quote each campaign on those details — tell us your target suburbs and quantity and we'll send a clear price. The minimum campaign is 1,000 flyers.",
+  },
+  {
+    question: "How many flyers do I need for a Melbourne suburb?",
+    answer:
+      "As a rough guide, one flyer covers one letterbox, so a few thousand flyers covers a decent pocket of a suburb rather than the whole thing. If you tell us the suburb and your goal, we'll help you work out a sensible quantity — you don't have to guess.",
+  },
+  {
+    question: "Which Melbourne suburbs do you cover?",
+    answer:
+      "We service the bayside and inner south (St Kilda, Brighton, South Yarra, Caulfield, Malvern), the Monash and eastern suburbs (Glen Waverley, Box Hill, Blackburn), Boroondara and Manningham (Balwyn, Doncaster) and more. The full confirmed list is in the coverage section above.",
+  },
+  {
+    question: "Do you deliver to letterboxes marked 'No Junk Mail'?",
+    answer:
+      "No. We skip every letterbox displaying a 'No Junk Mail' or 'No Advertising Material' sign. It keeps your brand in good standing and means your flyers only reach households happy to receive them.",
+  },
+  {
+    question: "How do I know my flyers were actually delivered?",
+    answer:
+      "Every distribution run is GPS-tracked in real time using the Strava app. After the campaign you receive a report showing the streets covered and a map of the route — so you can see where your flyers went rather than taking it on trust.",
+  },
+  {
+    question: "How long does a Melbourne flyer campaign take?",
+    answer:
+      "We offer a 48-hour turnaround for urgent campaigns. For standard campaigns we usually begin distribution within 3–5 business days of receiving your flyers, then complete the run to the schedule we agree.",
   },
 ];
 
@@ -450,6 +484,13 @@ export default function FlyerDistributionMelbourne() {
 
       {/* Quote form */}
       <QuickQuoteForm />
+
+      {/* FAQ */}
+      <FAQSection
+        items={faqs}
+        title="Melbourne Flyer Distribution FAQs"
+        subtitle="Common questions about distributing flyers across Melbourne."
+      />
 
       {/* CTA banner */}
       <section className="bg-navy py-16 sm:py-20 border-t border-white/10">

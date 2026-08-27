@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
+import FAQSection from "../../components/FAQSection";
 
 const SITE_URL = "https://www.southeastflyers.com.au";
 const PAGE_PATH = "/services/targeted-flyer-distribution";
@@ -38,6 +39,34 @@ const targeting: { title: string; body: string }[] = [
   {
     title: "By campaign objective",
     body: "Tell us what you're trying to achieve — a local launch, a service-area push, a real estate farm — and we'll help shape a sensible area for it.",
+  },
+];
+
+const faqs = [
+  {
+    question: "What does targeted flyer distribution actually mean?",
+    answer:
+      "It means you decide where your flyers go rather than spreading them thinly across a whole city. You choose the suburbs, postcodes or defined pockets you want to reach, and we concentrate the campaign there.",
+  },
+  {
+    question: "Can you target specific streets or a radius around a location?",
+    answer:
+      "Where it's practical, yes — for example the streets immediately surrounding a store, listing or venue. Tell us the location and how far out you want to go and we'll map a sensible area.",
+  },
+  {
+    question: "Do you offer demographic targeting?",
+    answer:
+      "We're honest about this: our targeting is based on the areas you choose, not household-level demographic data. If you have a type of customer in mind we'll help match the right suburbs to them, but we won't promise precision we can't deliver.",
+  },
+  {
+    question: "What's the minimum for a targeted campaign?",
+    answer:
+      "1,000 flyers. From there you can scale up across as many suburbs or streets as you'd like to cover.",
+  },
+  {
+    question: "Is a targeted campaign still GPS-tracked?",
+    answer:
+      "Yes. Every run is tracked via the Strava app and you receive a report of the streets covered, so you can confirm the campaign stayed within your chosen area.",
   },
 ];
 
@@ -187,6 +216,13 @@ export default function TargetedFlyerDistribution() {
 
       {/* Quote form */}
       <QuickQuoteForm />
+
+      {/* FAQ */}
+      <FAQSection
+        items={faqs}
+        title="Targeted Distribution FAQs"
+        subtitle="Common questions about targeting your flyer campaign."
+      />
 
       {/* CTA banner */}
       <section className="bg-navy py-16 sm:py-20 border-t border-white/10">

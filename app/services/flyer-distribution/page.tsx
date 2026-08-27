@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
+import FAQSection from "../../components/FAQSection";
 
 const SITE_URL = "https://www.southeastflyers.com.au";
 const PAGE_PATH = "/services/flyer-distribution";
@@ -57,6 +58,34 @@ const features: { title: string; body: string }[] = [
   {
     title: "GPS tracking & reporting",
     body: "Every distribution run is tracked in real time via Strava, with a route report provided once your campaign is complete.",
+  },
+];
+
+const faqs = [
+  {
+    question: "What's the difference between flyer distribution and letterbox distribution?",
+    answer:
+      "In practice they're the same thing — physically delivering your printed material into residential letterboxes. 'Letterbox distribution' just emphasises the letterbox drop itself. We handle both, and most campaigns use the two terms interchangeably.",
+  },
+  {
+    question: "Do you print the flyers?",
+    answer:
+      "No — we're a distribution specialist, not a printer. You supply the printed flyers, leaflets or brochures and we get them into the right letterboxes across Melbourne and Sydney.",
+  },
+  {
+    question: "How much does flyer distribution cost?",
+    answer:
+      "It depends on your quantity, the suburbs you're targeting and how spread out the delivery is, so we quote each campaign individually. Send us your target area and how many flyers you have and we'll come back with a clear price. The minimum campaign is 1,000 flyers.",
+  },
+  {
+    question: "Are my flyers delivered individually or bundled with other ads?",
+    answer:
+      "Individually. We have a strict anti-bundling policy, so your flyer is delivered on its own into each letterbox rather than stuffed in with a stack of other advertising — which means it actually gets noticed.",
+  },
+  {
+    question: "How is the delivery tracked?",
+    answer:
+      "Distributors record their routes in real time via the Strava app. Once the campaign is finished you get a report showing the streets covered and a map of the route.",
   },
 ];
 
@@ -235,6 +264,13 @@ export default function FlyerDistribution() {
 
       {/* Quote form */}
       <QuickQuoteForm />
+
+      {/* FAQ */}
+      <FAQSection
+        items={faqs}
+        title="Flyer Distribution FAQs"
+        subtitle="Common questions about our flyer distribution service."
+      />
 
       {/* CTA banner */}
       <section className="bg-navy py-16 sm:py-20 border-t border-white/10">
