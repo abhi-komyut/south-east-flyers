@@ -46,6 +46,9 @@ export default function Footer() {
                 <Link href="/services/letterbox-distribution" className="hover:text-white transition-colors">Letterbox Distribution</Link>
               </li>
               <li>
+                <Link href="/industries" className="hover:text-white transition-colors">Industries</Link>
+              </li>
+              <li>
                 <Link href="/portfolio" className="hover:text-white transition-colors">Our Clients</Link>
               </li>
               <li>

@@ -158,18 +158,21 @@ const services: { title: string; body: string; href?: string }[] = [
   },
 ];
 
-const industries: { title: string; body: string }[] = [
+const industries: { title: string; body: string; href: string }[] = [
   {
     title: "Real Estate",
     body: "Just Listed, Open Home, Auction and Sold campaigns delivered to the streets around your listings.",
+    href: "/industries/real-estate",
   },
   {
     title: "Healthcare",
     body: "Local-area awareness for new practices, clinics and services opening or growing across Melbourne.",
+    href: "/industries/healthcare",
   },
   {
     title: "Trades & Services",
     body: "Plumbers, electricians, landscapers and other local trades reaching nearby households directly.",
+    href: "/industries/trades-and-services",
   },
 ];
 
@@ -424,17 +427,22 @@ export default function FlyerDistributionMelbourne() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
             {industries.map((industry) => (
-              <div
+              <Link
                 key={industry.title}
-                className="bg-white border border-gray-200 rounded-xl p-6"
+                href={industry.href}
+                className="block bg-white border border-gray-200 rounded-xl p-6 transition-colors hover:border-navy"
               >
                 <h3 className="font-semibold text-black mb-2">
                   {industry.title}
+                  <span className="text-cta" aria-hidden="true">
+                    {" "}
+                    &rarr;
+                  </span>
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
                   {industry.body}
                 </p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
