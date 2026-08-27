@@ -4,6 +4,19 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
+const serviceLinks = [
+  { href: "/services/flyer-distribution", label: "Flyer Distribution" },
+  { href: "/services/letterbox-distribution", label: "Letterbox Distribution" },
+  { href: "/services/targeted-flyer-distribution", label: "Targeted Flyer Distribution" },
+  { href: "/services/gps-tracked-flyer-distribution", label: "GPS-Tracked Distribution" },
+];
+
+const industryLinks = [
+  { href: "/industries/real-estate", label: "Real Estate" },
+  { href: "/industries/healthcare", label: "Healthcare" },
+  { href: "/industries/trades-and-services", label: "Trades & Services" },
+];
+
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -13,6 +26,8 @@ export default function Header() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const closeMobile = () => setMobileOpen(false);
 
   return (
     <header className="sticky top-0 z-50">
@@ -60,8 +75,11 @@ export default function Header() {
               />
             </Link>
 
-            <nav className="hidden lg:flex items-center gap-1">
+            <nav className="hidden lg:flex items-center gap-0.5">
               <NavLink href="/">Home</NavLink>
+              <NavDropdown label="Services" items={serviceLinks} />
+              <NavLink href="/melbourne/flyer-distribution-melbourne">Melbourne</NavLink>
+              <NavDropdown label="Industries" labelHref="/industries" items={industryLinks} />
               <NavLink href="/portfolio">Our Clients</NavLink>
               <NavLink href="/blog">Blog</NavLink>
               <NavLink href="/contact">Contact</NavLink>
@@ -103,25 +121,49 @@ export default function Header() {
 
         {/* Mobile menu */}
         {mobileOpen && (
-          <div className="lg:hidden border-t border-gray-100">
+          <div className="lg:hidden border-t border-gray-100 max-h-[80vh] overflow-y-auto">
             <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col gap-1">
-              <MobileNavLink href="/" onClick={() => setMobileOpen(false)}>Home</MobileNavLink>
-              <MobileNavLink href="/portfolio" onClick={() => setMobileOpen(false)}>Our Clients</MobileNavLink>
-              <MobileNavLink href="/blog" onClick={() => setMobileOpen(false)}>Blog</MobileNavLink>
-              <MobileNavLink href="/contact" onClick={() => setMobileOpen(false)}>Contact</MobileNavLink>
+              <MobileNavLink href="/" onClick={closeMobile}>Home</MobileNavLink>
+
+              <p className="mt-3 px-3 text-xs font-semibold uppercase tracking-wide text-gray-400">Services</p>
+              {serviceLinks.map((l) => (
+                <MobileNavLink key={l.href} href={l.href} onClick={closeMobile} indent>
+                  {l.label}
+                </MobileNavLink>
+              ))}
+
+              <p className="mt-3 px-3 text-xs font-semibold uppercase tracking-wide text-gray-400">Locations</p>
+              <MobileNavLink href="/melbourne/flyer-distribution-melbourne" onClick={closeMobile} indent>
+                Flyer Distribution Melbourne
+              </MobileNavLink>
+
+              <p className="mt-3 px-3 text-xs font-semibold uppercase tracking-wide text-gray-400">Industries</p>
+              <MobileNavLink href="/industries" onClick={closeMobile} indent>All Industries</MobileNavLink>
+              {industryLinks.map((l) => (
+                <MobileNavLink key={l.href} href={l.href} onClick={closeMobile} indent>
+                  {l.label}
+                </MobileNavLink>
+              ))}
+
+              <div className="mt-3 pt-3 border-t border-gray-100 flex flex-col gap-1">
+                <MobileNavLink href="/portfolio" onClick={closeMobile}>Our Clients</MobileNavLink>
+                <MobileNavLink href="/blog" onClick={closeMobile}>Blog</MobileNavLink>
+                <MobileNavLink href="/contact" onClick={closeMobile}>Contact</MobileNavLink>
+              </div>
+
               <div className="mt-3 pt-3 border-t border-gray-100 flex flex-col gap-2">
                 <Link
                   href="/contact"
                   data-quote-cta
                   className="bg-cta text-white font-semibold rounded px-4 py-3 text-center text-base transition-all duration-200 hover:bg-cta-hover"
-                  onClick={() => setMobileOpen(false)}
+                  onClick={closeMobile}
                 >
                   Get a Free Quote
                 </Link>
                 <a
                   href="tel:+61402824070"
                   className="flex items-center justify-center gap-2 text-navy font-semibold border border-navy rounded px-4 py-3 text-base transition-all duration-200 hover:bg-navy hover:text-white"
-                  onClick={() => setMobileOpen(false)}
+                  onClick={closeMobile}
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -148,11 +190,70 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
   );
 }
 
-function MobileNavLink({ href, children, onClick }: { href: string; children: React.ReactNode; onClick: () => void }) {
+function NavDropdown({
+  label,
+  labelHref,
+  items,
+}: {
+  label: string;
+  labelHref?: string;
+  items: { href: string; label: string }[];
+}) {
+  const triggerClass =
+    "flex items-center gap-1 text-gray-600 font-medium text-sm px-3 py-2 rounded hover:text-navy hover:bg-gray-50 transition-all duration-200";
+  const chevron = (
+    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+    </svg>
+  );
+
+  return (
+    <div className="relative group">
+      {labelHref ? (
+        <Link href={labelHref} className={triggerClass}>
+          {label}
+          {chevron}
+        </Link>
+      ) : (
+        <button type="button" className={triggerClass} aria-haspopup="true">
+          {label}
+          {chevron}
+        </button>
+      )}
+      <div className="absolute left-0 top-full pt-2 hidden group-hover:block group-focus-within:block z-50">
+        <div className="bg-white border border-gray-200 rounded-lg shadow-lg py-2 min-w-[240px]">
+          {items.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-navy transition-colors"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function MobileNavLink({
+  href,
+  children,
+  onClick,
+  indent,
+}: {
+  href: string;
+  children: React.ReactNode;
+  onClick: () => void;
+  indent?: boolean;
+}) {
   return (
     <Link
       href={href}
-      className="text-gray-700 font-medium text-base px-3 py-3 rounded hover:bg-gray-50 hover:text-navy transition-colors"
+      className={`text-gray-700 font-medium text-base py-3 rounded hover:bg-gray-50 hover:text-navy transition-colors ${
+        indent ? "pl-6 pr-3 text-sm" : "px-3"
+      }`}
       onClick={onClick}
     >
       {children}
