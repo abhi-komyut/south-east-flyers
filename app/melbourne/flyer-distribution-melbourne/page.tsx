@@ -149,10 +149,12 @@ const services: { title: string; body: string; href?: string }[] = [
   {
     title: "Targeted Distribution",
     body: "Define your distribution area by suburb so your flyers land where your customers actually are.",
+    href: "/services/targeted-flyer-distribution",
   },
   {
     title: "GPS-Tracked Delivery",
     body: "Every distribution run is tracked via the Strava app, with a route report provided once your campaign is complete.",
+    href: "/services/gps-tracked-flyer-distribution",
   },
 ];
 
