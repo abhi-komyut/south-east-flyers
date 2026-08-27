@@ -54,7 +54,14 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-3">Service Areas</h4>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li>Melbourne Metropolitan</li>
+              <li>
+                <Link
+                  href="/melbourne/flyer-distribution-melbourne"
+                  className="hover:text-white transition-colors"
+                >
+                  Flyer Distribution Melbourne
+                </Link>
+              </li>
               <li>Sydney Metropolitan</li>
               <li>South East Melbourne</li>
             </ul>

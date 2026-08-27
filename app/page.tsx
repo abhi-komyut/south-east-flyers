@@ -86,8 +86,8 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-2 sm:gap-3">
               <div className="space-y-2 sm:space-y-3">
                 <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-3 sm:p-5 text-center">
-                  <p className="text-2xl sm:text-3xl font-bold"><CountUp end={20} suffix="K+" /></p>
-                  <p className="text-xs sm:text-sm text-gray-300 mt-1">Flyers dropped daily</p>
+                  <p className="text-2xl sm:text-3xl font-bold"><CountUp end={50} suffix="K+" /></p>
+                  <p className="text-xs sm:text-sm text-gray-300 mt-1">Flyers per campaign</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-3 sm:p-5 text-center">
                   <p className="text-2xl sm:text-3xl font-bold"><CountUp end={200} suffix="+" /></p>

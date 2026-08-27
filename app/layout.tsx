@@ -80,6 +80,11 @@ const organizationLd = {
     "Flyer distribution and letterbox drops across Melbourne and Sydney. GPS-tracked delivery, no junk mail compliant.",
   email: "abhiram@southeastflyers.com.au",
   telephone: "+61402824070",
+  sameAs: [
+    "https://www.facebook.com/southeastflyers",
+    "https://www.instagram.com/southeastflyers",
+    "https://www.linkedin.com/company/southeastflyers",
+  ],
   areaServed: [
     { "@type": "City", name: "Melbourne", addressCountry: "AU" },
     { "@type": "City", name: "Sydney", addressCountry: "AU" },
