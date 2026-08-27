@@ -135,14 +135,16 @@ const steps: { title: string; body: string }[] = [
   },
 ];
 
-const services: { title: string; body: string }[] = [
+const services: { title: string; body: string; href?: string }[] = [
   {
     title: "Flyer Distribution",
     body: "Residential flyer and leaflet delivery across your chosen Melbourne suburbs, delivered individually — never bundled with other material.",
+    href: "/services/flyer-distribution",
   },
   {
     title: "Letterbox Distribution",
     body: "Suburb-by-suburb letterbox drops planned around the areas and household types you want to reach.",
+    href: "/services/letterbox-distribution",
   },
   {
     title: "Targeted Distribution",
@@ -339,19 +341,39 @@ export default function FlyerDistributionMelbourne() {
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
-            {services.map((service) => (
-              <div
-                key={service.title}
-                className="bg-white border border-gray-200 rounded-xl p-6"
-              >
-                <h3 className="font-semibold text-black mb-2">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {service.body}
-                </p>
-              </div>
-            ))}
+            {services.map((service) => {
+              const cardClass =
+                "bg-white border border-gray-200 rounded-xl p-6 block";
+              const inner = (
+                <>
+                  <h3 className="font-semibold text-black mb-2">
+                    {service.title}
+                    {service.href && (
+                      <span className="text-cta" aria-hidden="true">
+                        {" "}
+                        &rarr;
+                      </span>
+                    )}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {service.body}
+                  </p>
+                </>
+              );
+              return service.href ? (
+                <Link
+                  key={service.title}
+                  href={service.href}
+                  className={`${cardClass} transition-colors hover:border-navy`}
+                >
+                  {inner}
+                </Link>
+              ) : (
+                <div key={service.title} className={cardClass}>
+                  {inner}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

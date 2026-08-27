@@ -40,6 +40,12 @@ export default function Footer() {
                 <Link href="/" className="hover:text-white transition-colors">Home</Link>
               </li>
               <li>
+                <Link href="/services/flyer-distribution" className="hover:text-white transition-colors">Flyer Distribution</Link>
+              </li>
+              <li>
+                <Link href="/services/letterbox-distribution" className="hover:text-white transition-colors">Letterbox Distribution</Link>
+              </li>
+              <li>
                 <Link href="/portfolio" className="hover:text-white transition-colors">Our Clients</Link>
               </li>
               <li>
