@@ -10,14 +10,14 @@ const PAGE_PATH = "/services/letterbox-distribution";
 export const metadata: Metadata = {
   title: "Letterbox Distribution",
   description:
-    "Letterbox distribution and letterbox drops across Melbourne and Sydney. Suburb-level targeting, no junk mail compliant, GPS tracking and campaign reporting. Get a free quote.",
+    "Letterbox distribution and letterbox drops across Melbourne's south-east and eastern suburbs. Suburb-level targeting, no junk mail compliant, GPS tracking and campaign reporting. Get a free quote.",
   alternates: {
     canonical: `${SITE_URL}${PAGE_PATH}`,
   },
   openGraph: {
     title: "Letterbox Distribution | South East Flyers",
     description:
-      "Suburb-by-suburb letterbox drops across Melbourne and Sydney. No junk mail compliant, GPS-tracked, delivered individually with full campaign reporting.",
+      "Suburb-by-suburb letterbox drops across Melbourne's south-east and eastern suburbs. No junk mail compliant, GPS-tracked, delivered individually with full campaign reporting.",
     url: `${SITE_URL}${PAGE_PATH}`,
     type: "website",
   },
@@ -95,13 +95,10 @@ const serviceLd = {
   name: "Letterbox Distribution",
   serviceType: "Letterbox Distribution",
   description:
-    "Letterbox distribution and letterbox drops across Melbourne and Sydney. Suburb-level targeting, no junk mail compliant, GPS-tracked with campaign reporting.",
+    "Letterbox distribution and letterbox drops across Melbourne's south-east and eastern suburbs. Suburb-level targeting, no junk mail compliant, GPS-tracked with campaign reporting.",
   url: `${SITE_URL}${PAGE_PATH}`,
   provider: { "@id": `${SITE_URL}/#organization` },
-  areaServed: [
-    { "@type": "City", name: "Melbourne", addressCountry: "AU" },
-    { "@type": "City", name: "Sydney", addressCountry: "AU" },
-  ],
+  areaServed: [{ "@type": "City", name: "Melbourne", addressCountry: "AU" }],
 };
 
 export default function LetterboxDistribution() {
@@ -128,10 +125,10 @@ export default function LetterboxDistribution() {
               Letterbox Distribution
             </h1>
             <p className="text-lg text-gray-200 mb-4">
-              Suburb-by-suburb letterbox drops across Melbourne and Sydney. We
-              deliver your flyers directly into household letterboxes in the
-              areas you want to reach — no junk mail compliant, GPS-tracked and
-              fully reported.
+              Suburb-by-suburb letterbox drops across Melbourne&rsquo;s
+              south-east and eastern suburbs. We deliver your flyers directly
+              into household letterboxes in the areas you want to reach, no
+              junk mail compliant, GPS-tracked and fully reported.
             </p>
             <p className="text-base text-gray-300 mb-8">
               You provide the flyers. We handle the distribution.
@@ -169,8 +166,8 @@ export default function LetterboxDistribution() {
               className="text-navy underline"
             >
               Melbourne
-            </Link>{" "}
-            and Sydney.
+            </Link>
+            &rsquo;s south-east and eastern suburbs.
           </p>
         </div>
       </section>
@@ -262,7 +259,7 @@ export default function LetterboxDistribution() {
       <FAQSection
         items={faqs}
         title="Letterbox Distribution FAQs"
-        subtitle="Common questions about letterbox drops across Melbourne and Sydney."
+        subtitle="Common questions about letterbox drops across Melbourne's south-east and eastern suburbs."
       />
 
       {/* CTA banner */}

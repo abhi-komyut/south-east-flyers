@@ -27,6 +27,8 @@ export const metadata: Metadata = {
 // it is linked from the coverage list.
 const suburbPages: Record<string, string> = {
   Brighton: "/melbourne/flyer-distribution-brighton",
+  Kew: "/melbourne/flyer-distribution-kew",
+  "Glen Waverley": "/melbourne/flyer-distribution-glen-waverley",
 };
 
 // Confirmed Melbourne service areas — source of truth. Do not add suburbs
@@ -100,6 +102,9 @@ const coverageGroups: { region: string; suburbs: string[] }[] = [
   {
     region: "Boroondara / Manningham",
     suburbs: [
+      "Kew",
+      "Hawthorn",
+      "Camberwell",
       "Doncaster",
       "Doncaster East",
       "Balwyn",

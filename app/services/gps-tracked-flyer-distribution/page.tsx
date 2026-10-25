@@ -10,7 +10,7 @@ const PAGE_PATH = "/services/gps-tracked-flyer-distribution";
 export const metadata: Metadata = {
   title: "GPS-Tracked Flyer Distribution",
   description:
-    "GPS-tracked flyer distribution across Melbourne and Sydney. Every distribution run is tracked via the Strava app, so you get a report of the routes and streets covered. Get a free quote.",
+    "GPS-tracked flyer distribution across Melbourne's south-east and eastern suburbs. Every distribution run is tracked via the Strava app, so you get a report of the routes and streets covered. Get a free quote.",
   alternates: {
     canonical: `${SITE_URL}${PAGE_PATH}`,
   },
@@ -76,13 +76,10 @@ const serviceLd = {
   name: "GPS-Tracked Flyer Distribution",
   serviceType: "GPS-Tracked Flyer Distribution",
   description:
-    "GPS-tracked flyer distribution across Melbourne and Sydney. Distribution runs are tracked via the Strava app, with a report of the routes and streets covered.",
+    "GPS-tracked flyer distribution across Melbourne's south-east and eastern suburbs. Distribution runs are tracked via the Strava app, with a report of the routes and streets covered.",
   url: `${SITE_URL}${PAGE_PATH}`,
   provider: { "@id": `${SITE_URL}/#organization` },
-  areaServed: [
-    { "@type": "City", name: "Melbourne", addressCountry: "AU" },
-    { "@type": "City", name: "Sydney", addressCountry: "AU" },
-  ],
+  areaServed: [{ "@type": "City", name: "Melbourne", addressCountry: "AU" }],
 };
 
 export default function GpsTrackedFlyerDistribution() {
@@ -208,8 +205,8 @@ export default function GpsTrackedFlyerDistribution() {
               className="text-navy underline"
             >
               Melbourne
-            </Link>{" "}
-            and Sydney.
+            </Link>
+            &rsquo;s south-east and eastern suburbs.
           </p>
         </div>
       </section>

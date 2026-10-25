@@ -15,7 +15,7 @@ export default function Footer() {
               className="h-12 w-auto mb-3 invert"
             />
             <p className="text-gray-300 text-sm mb-4">
-              Professional letterbox distribution services across Melbourne and Sydney.
+              Exclusive, GPS-tracked letterbox distribution across Melbourne&rsquo;s south-east and eastern suburbs.
             </p>
             <div className="space-y-2 text-sm">
               <a href="tel:+61402824070" className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">

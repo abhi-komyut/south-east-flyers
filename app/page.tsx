@@ -12,16 +12,13 @@ const jsonLd = {
   "@id": "https://www.southeastflyers.com.au/#localbusiness",
   name: "South East Flyers & Marketing Solutions",
   description:
-    "Professional flyer distribution and letterbox drops across Melbourne and Sydney. GPS-tracked delivery, no junk mail compliant.",
+    "Exclusive, GPS-tracked flyer distribution and letterbox drops across Melbourne's south-east and eastern suburbs. Never bundled.",
   url: "https://www.southeastflyers.com.au",
   telephone: "+61402824070",
   email: "abhiram@southeastflyers.com.au",
   image: "https://www.southeastflyers.com.au/og-logo.jpg",
   logo: "https://www.southeastflyers.com.au/logo.png",
-  areaServed: [
-    { "@type": "City", name: "Melbourne", addressCountry: "AU" },
-    { "@type": "City", name: "Sydney", addressCountry: "AU" },
-  ],
+  areaServed: [{ "@type": "City", name: "Melbourne", addressCountry: "AU" }],
   serviceType: [
     "Flyer Distribution",
     "Letterbox Drops",
@@ -59,13 +56,13 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-sm uppercase tracking-widest text-gray-400 mb-4">
-                Melbourne &amp; Sydney
+                Melbourne&rsquo;s South-East
               </p>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ fontFamily: "Georgia, serif" }}>
                 Flyer distribution that actually gets read.
               </h1>
               <p className="text-base sm:text-lg text-gray-300 mb-8">
-                Professional letterbox drops across Melbourne &amp; Sydney — large-scale daily delivery with GPS tracking, no junk mail compliance, and zero bundling.
+                Exclusive letterbox drops across Melbourne&rsquo;s south-east and eastern suburbs, with GPS tracking, no junk mail compliance, and zero bundling.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -119,7 +116,7 @@ export default function Home() {
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Our Team on the Ground</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Professional walkers and e-bike distributors covering Melbourne and Sydney suburbs every day.
+              Professional walkers and e-bike distributors covering Melbourne&rsquo;s south-east and eastern suburbs every day.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -176,7 +173,7 @@ export default function Home() {
             <ServiceCard
               number="01"
               title="Targeted Flyer Distribution"
-              description="Suburb-level leaflet distribution using demographic data to reach the right households across Melbourne and Sydney."
+              description="Suburb-level leaflet distribution using demographic data to reach the right households across Melbourne."
               image="/service-targeted.png"
               imageAlt="Melbourne suburb targeting map"
             />
@@ -238,7 +235,7 @@ export default function Home() {
             Ready to start your letterbox campaign?
           </h2>
           <p className="text-gray-300 mb-8 max-w-xl mx-auto">
-            Get a free quote for flyer distribution across Melbourne and Sydney — no obligation.
+            Get a free quote for flyer distribution across Melbourne, no obligation.
           </p>
           <Link
             href="/contact"

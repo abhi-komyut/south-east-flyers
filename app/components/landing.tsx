@@ -12,7 +12,7 @@ import Breadcrumbs, { type Crumb } from "./Breadcrumbs";
 export const SITE_URL = "https://www.southeastflyers.com.au";
 export const PHONE_DISPLAY = "0402 824 070";
 export const PHONE_TEL = "tel:+61402824070";
-/** Price per 1,000 flyers, exclusive delivery. GST treatment not yet confirmed. */
+/** Price per 1,000 flyers, exclusive delivery. */
 export const PRICE_PER_THOUSAND = 200;
 
 export function formatAud(n: number) {

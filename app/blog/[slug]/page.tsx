@@ -118,7 +118,7 @@ export default async function BlogPostPage({
           </h2>
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
             Get in touch with our team for a free quote on flyer distribution
-            across Melbourne and Sydney.
+            across Melbourne&rsquo;s south-east and eastern suburbs.
           </p>
           <Link
             href="/contact"

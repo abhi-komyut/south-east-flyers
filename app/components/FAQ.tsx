@@ -4,7 +4,7 @@ const faqs = [
   {
     question: "What areas do you cover?",
     answer:
-      "We cover the Melbourne metropolitan area, the Sydney metropolitan area, and the South East Melbourne suburbs. We can target specific suburbs based on your campaign needs — see our Melbourne page for the full confirmed service area.",
+      "We cover Melbourne's south-east and eastern suburbs. You can target specific suburbs based on your campaign needs, and the full confirmed service area is on our Melbourne page.",
   },
   {
     question: "What is the minimum order for a letterbox drop?",
@@ -34,7 +34,7 @@ const faqs = [
   {
     question: "Do you print the flyers as well?",
     answer:
-      "No — we're a distribution specialist, not a printer. You provide the printed flyers and we handle getting them into the right letterboxes across Melbourne and Sydney.",
+      "No, we're a distribution specialist, not a printer. You provide the printed flyers and we handle getting them into the right letterboxes across Melbourne.",
   },
 ];
 

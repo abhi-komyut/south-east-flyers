@@ -3,6 +3,7 @@ import Link from "next/link";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
+import { ProofStrip, TextLink } from "../../components/landing";
 
 const SITE_URL = "https://www.southeastflyers.com.au";
 const PAGE_PATH = "/industries/real-estate";
@@ -10,14 +11,14 @@ const PAGE_PATH = "/industries/real-estate";
 export const metadata: Metadata = {
   title: "Real Estate Flyer Distribution",
   description:
-    "Real estate flyer distribution and letterbox drops across Melbourne and Sydney. Just Listed, Open Home, Auction and Sold campaigns, GPS-tracked. Trusted by leading agencies. Get a free quote.",
+    "Real estate flyer distribution and letterbox drops across Melbourne's south-east and eastern suburbs. Just Listed, Open Home, Auction and Sold campaigns, GPS-tracked. Trusted by leading agencies. Get a free quote.",
   alternates: {
     canonical: `${SITE_URL}${PAGE_PATH}`,
   },
   openGraph: {
     title: "Real Estate Flyer Distribution | South East Flyers",
     description:
-      "Just Listed, Open Home, Auction and Sold letterbox campaigns delivered to the streets around your listings across Melbourne and Sydney. GPS-tracked.",
+      "Just Listed, Open Home, Auction and Sold letterbox campaigns delivered to the streets around your listings across Melbourne's south-east and eastern suburbs. GPS-tracked.",
     url: `${SITE_URL}${PAGE_PATH}`,
     type: "website",
   },
@@ -54,12 +55,12 @@ const faqs = [
   {
     question: "How many flyers do I need for a Just Listed drop?",
     answer:
-      "A Just Listed drop usually targets the streets immediately around the property — often a few hundred nearby homes. Our minimum campaign is 1,000 flyers, which comfortably covers the surrounding streets and lets you extend into the wider farm area if you want.",
+      "A Just Listed drop usually targets the streets immediately around the property, often a few hundred nearby homes. Our minimum campaign is 1,000 flyers, which comfortably covers the surrounding streets and lets you extend into the wider farm area if you want.",
   },
   {
     question: "Do you work with real estate agencies?",
     answer:
-      "Yes — we distribute for real estate agencies including Ray White, McGrath and Belle Property, running Just Listed, Open Home, Auction and Sold campaigns across their local areas.",
+      "Yes. We distribute for real estate agencies including Ray White, McGrath and Belle Property, running Just Listed, Open Home, Auction and Sold campaigns across their local areas.",
   },
   {
     question: "Can you deliver to houses and avoid apartment blocks?",
@@ -69,17 +70,17 @@ const faqs = [
   {
     question: "How quickly can you turn around a Just Listed campaign?",
     answer:
-      "We offer a 48-hour turnaround for urgent campaigns, which suits the tight timelines around a new listing or an upcoming open home. Standard campaigns usually start within 3–5 business days.",
+      "We offer a 48-hour turnaround for urgent campaigns, which suits the tight timelines around a new listing or an upcoming open home. Standard campaigns usually start within 3 to 5 business days.",
   },
   {
     question: "Are real estate drops GPS-tracked?",
     answer:
-      "Yes. Every run is tracked via the Strava app and you receive a report of the streets covered — useful proof for your vendor that the marketing was delivered.",
+      "Yes. Every run is tracked via the Strava app and you receive a report of the streets covered, useful proof for your vendor that the marketing was delivered.",
   },
   {
     question: "Do you print the flyers?",
     answer:
-      "No — we distribute, we don't print. You provide your Just Listed cards, brochures or Sold notices and we deliver them to the right streets.",
+      "No. We distribute, we don't print. You provide your Just Listed cards, brochures or Sold notices and we deliver them to the right streets.",
   },
 ];
 
@@ -89,13 +90,10 @@ const serviceLd = {
   name: "Real Estate Flyer Distribution",
   serviceType: "Real Estate Flyer Distribution",
   description:
-    "Real estate flyer distribution and letterbox drops across Melbourne and Sydney — Just Listed, Open Home, Auction and Sold campaigns, GPS-tracked with reporting.",
+    "Real estate flyer distribution and letterbox drops across Melbourne's south-east and eastern suburbs. Just Listed, Open Home, Auction and Sold campaigns, GPS-tracked with reporting.",
   url: `${SITE_URL}${PAGE_PATH}`,
   provider: { "@id": `${SITE_URL}/#organization` },
-  areaServed: [
-    { "@type": "City", name: "Melbourne", addressCountry: "AU" },
-    { "@type": "City", name: "Sydney", addressCountry: "AU" },
-  ],
+  areaServed: [{ "@type": "City", name: "Melbourne", addressCountry: "AU" }],
 };
 
 export default function RealEstate() {
@@ -123,9 +121,10 @@ export default function RealEstate() {
               Real Estate Flyer Distribution
             </h1>
             <p className="text-lg text-gray-200 mb-4">
-              Letterbox campaigns built for agents — Just Listed, Open Home,
+              Letterbox campaigns built for agents: Just Listed, Open Home,
               Auction and Sold drops delivered to the streets around your
-              listings across Melbourne and Sydney, and tracked with GPS.
+              listings across Melbourne&rsquo;s south-east and eastern
+              suburbs, and tracked with GPS.
             </p>
             <p className="text-base text-gray-300 mb-8">
               You provide the flyers. We handle the distribution.
@@ -140,6 +139,8 @@ export default function RealEstate() {
           </div>
         </div>
       </section>
+
+      <ProofStrip />
 
       {/* Trust */}
       <section className="py-12 bg-white border-b border-gray-200">
@@ -167,10 +168,10 @@ export default function RealEstate() {
             them.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            You supply the printed material — Just Listed cards, brochures,
-            invitations or Sold notices — and we deliver it across the suburbs
-            and streets you want to reach, then report on where it went. The
-            minimum campaign is 1,000 flyers.
+            You supply the printed material, whether that's Just Listed cards,
+            brochures, invitations or Sold notices, and we deliver it across
+            the suburbs and streets you want to reach, then report on where
+            it went. The minimum campaign is 1,000 flyers.
           </p>
         </div>
       </section>
@@ -235,6 +236,30 @@ export default function RealEstate() {
               Melbourne
             </Link>{" "}
             page.
+          </p>
+        </div>
+      </section>
+
+      {/* Cost */}
+      <section className="py-16 sm:py-20 bg-gray-50 border-t border-gray-200">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-black mb-4">
+            Cost of a real estate letterbox drop
+          </h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Every drop is <strong>$200 per 1,000 flyers</strong>, delivered exclusively, with a
+            1,000-flyer minimum. A Just Listed run of 2,500 homes around a property costs $500; a
+            whole suburb the size of{" "}
+            <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink> (about
+            10,500 homes) costs about $2,100. See the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for more
+            quantities.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            Real estate is one of several industries we deliver for. See our{" "}
+            <TextLink href="/industries/local-businesses">local business flyer distribution</TextLink>{" "}
+            page, or the full{" "}
+            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
           </p>
         </div>
       </section>
