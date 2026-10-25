@@ -7,21 +7,21 @@ import {
   ProofStrip,
   Section,
   Bullets,
-  Steps,
   CtaBanner,
   TextLink,
   JsonLd,
+  HowItWorks,
 } from "../../components/landing";
 
 const PAGE_PATH = "/industries/electricians";
 
 export const metadata: Metadata = {
-  title: { absolute: "Flyer Distribution for Electricians | SEF" },
+  title: { absolute: "Electrician Flyers Melbourne | South East Flyers" },
   description:
-    "Electrician flyers delivered to the letterboxes around your base. Exclusive, never bundled, GPS-tracked. $200 per 1,000 flyers across Melbourne's south-east.",
+    "Electrician flyers for switchboard, safety switch, solar and EV charger work, delivered on their own across Melbourne's south-east. $200 per 1,000 flyers.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
-    title: "Electrician Flyers & Letterbox Drops Melbourne | South East Flyers",
+    title: "Electrician Flyers Melbourne | South East Flyers",
     description: "Exclusive, GPS-tracked letterbox drops for electricians across Melbourne's south-east. From 1,000 flyers.",
     url: `${SITE_URL}${PAGE_PATH}`,
     type: "website",
@@ -30,29 +30,29 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: "Do flyers actually generate work for electricians?",
+    question: "Do electrician flyers work?",
     answer:
-      "Switchboard faults and power outages are urgent, so the number already in the kitchen drawer gets the call. Electrician flyers work by being in the house before the trip switch fails, not by competing for attention online at that moment.",
+      "They work best for planned jobs such as switchboard upgrades, safety switches, solar batteries and EV chargers, which owners think about for weeks. A flyer on the fridge is there when they decide.",
   },
   {
-    question: "How many electrician flyers should I start with?",
+    question: "Should I advertise emergency work or upgrades?",
     answer:
-      "Start with 1,000 to 2,500 homes around your base or a recent job, costing $200 to $500. Ask new callers where they found you, then expand into the streets that respond.",
+      "Lead with one. An upgrade flyer with a clear offer suits a general drop; an emergency number suits a magnet-style flyer kept for later. Trying to say both on one side usually says neither.",
   },
   {
-    question: "When should an electrician run a letterbox drop?",
+    question: "When is the best time for an electrician letterbox drop?",
     answer:
-      "Spring suits solar, EV charger and air conditioning flyers before summer bills arrive. Late summer and storm season suit safety switch and switchboard flyers after outages. Regular drops keep your number on hand for faults that happen any time of year.",
+      "Late winter and spring suit solar, battery, EV charger and air conditioning circuit flyers ahead of summer. Autumn suits safety switch and smoke alarm checks before the heaters go on.",
   },
   {
-    question: "Can you drop flyers around a switchboard or solar job I'm doing?",
+    question: "What should an electrician flyer include?",
     answer:
-      "Yes. Give us the job address and we will cover the surrounding streets, so neighbours who saw your van parked outside have your number too.",
+      "Your REC number, the one or two jobs you want more of, a price or a free quote offer, the suburbs you cover, and a phone number large enough to read from across a room.",
   },
   {
-    question: "Will my flyer be bundled with another electrician's flyer?",
+    question: "How many flyers should an electrician start with?",
     answer:
-      "No. Every drop is exclusive. The walker carries only your flyer on that route, so it never arrives next to a competitor's in the same letterbox.",
+      "1,000 to 2,500 homes around your base, costing $200 to $500. Track which streets call, then repeat there and move outward.",
   },
 ];
 
@@ -61,7 +61,7 @@ const serviceLd = {
   "@type": "Service",
   name: "Flyer distribution for electricians",
   serviceType: "Flyer distribution",
-  audience: { "@type": "BusinessAudience", name: "Electrical businesses" },
+  audience: { "@type": "BusinessAudience", name: "Electrical contractors" },
   url: `${SITE_URL}${PAGE_PATH}`,
   provider: { "@id": `${SITE_URL}/#organization` },
   areaServed: { "@type": "City", name: "Melbourne", addressCountry: "AU" },
@@ -80,99 +80,84 @@ export default function Electricians() {
           { name: "Home Services", href: "/industries/home-services" },
           { name: "Electricians" },
         ]}
-        h1="Letterbox Marketing for Electricians"
-        lead="Electrician marketing that reaches the streets around your base. Your flyer goes into each letterbox on its own, every route is GPS-tracked, and you can start with 1,000 homes."
-        proof={["Exclusive, never bundled", "$200 per 1,000 flyers", "Drops around active jobs"]}
+        h1="Electrician Flyers That Win Upgrade Work"
+        lead="Electrician flyers delivered on their own to the homes most likely to need a switchboard, safety switch, solar or EV charger job. Every route is GPS-tracked, from 1,000 flyers."
+        proof={["Exclusive, never bundled", "$200 per 1,000 flyers", "Seasonal and neighbour drops"]}
       />
 
       <ProofStrip />
 
-      <Section title="Why electrician flyers still get calls">
+      <Section title="Planned upgrades are where flyers pay off">
         <p>
-          Nobody shops around when the power trips at 9pm or a switchboard starts smoking. They call the number
-          they can find fastest: the one on the fridge, saved in their phone from last time, or on the flyer
-          that arrived a few weeks ago. Electrician flyers work because they are already in the house before
-          the fault happens.
+          Electrical work splits into two kinds. Faults and outages are urgent and short; the household rings whoever
+          they can reach. Upgrades are different: a new switchboard, safety switches, a solar battery, an EV charger or
+          extra circuits for air conditioning. Owners think about those for weeks and often want two quotes.
         </p>
         <p>
-          That only works if the flyer gets noticed. One folded inside a stack of real estate catalogues is easy
-          to miss. Ours are delivered exclusively, so yours is the only thing the walker puts in that letterbox.
+          Electrician flyers do their best work on the second kind. A flyer that arrives on its own, with one upgrade
+          and a clear offer, sits on the bench while the owner decides, and gets picked up when they are ready.
         </p>
       </Section>
 
-      <Section title="What to put on an electrician flyer" tone="gray">
-        <p>The electrician flyers that bring in calls tend to share a few things:</p>
+      <Section title="Homes that need electrical upgrades" tone="gray">
         <Bullets
           items={[
-            <><strong>The job in big type.</strong> &ldquo;Switchboard upgrade?&rdquo; or &ldquo;Power keeps tripping?&rdquo; reads faster than your business name.</>,
-            <><strong>A phone number readable from across the kitchen</strong>, plus whether you cover after-hours faults.</>,
-            <><strong>Your licence number</strong>, which tells households the work is compliant and insured.</>,
-            <><strong>The suburbs you cover</strong>, so people know you can get there quickly.</>,
-            <><strong>A reason to keep it</strong>, such as a free safety switch check, a discount code or a tear-off strip.</>,
+            <><strong>Older homes with original switchboards.</strong> Ceramic fuses and missing safety switches are common in houses built before the 1990s.</>,
+            <><strong>Streets of detached houses.</strong> They have roof space for solar and driveways for EV chargers, as in the house-lined streets of <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink>.</>,
+            <><strong>Homes being renovated or sold.</strong> Rewiring and compliance work come up before sale and during renovations.</>,
+            <><strong>Long-term owners.</strong> Owners who have been in suburbs like <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink> for decades invest in the house they plan to stay in.</>,
           ]}
         />
       </Section>
 
-      <Section title="Where and when to drop">
+      <Section title="What to put on an electrician flyer">
         <p>
-          Start with the streets closest to your base, where you can reach a call-out fastest. Older weatherboard
-          and brick homes still running fuse-based switchboards are a strong target for safety switch and
-          switchboard upgrade flyers.
+          Pick the job you want more of and build the flyer around it. &ldquo;Switchboard upgrade from $X&rdquo; or
+          &ldquo;Free EV charger quote&rdquo; gets a better response than a list of every service you offer. Then add:
         </p>
-        <p>
-          Timing helps too. Spring is when households start thinking about solar, EV chargers and air
-          conditioning before summer bills land. Late summer and storm season bring outages and surge damage,
-          which drives calls for switchboard and safety switch work. A drop every few months keeps your number
-          on hand for the faults that happen any time.
-        </p>
-      </Section>
-
-      <Section title="Drops around the jobs you are already on" tone="gray">
-        <p>
-          When your van is parked outside a switchboard or solar job, the neighbours notice. A 1,000-flyer drop
-          in the surrounding streets, mentioning the work you just finished nearby, turns that visibility into
-          the next booking. Give us the job address and we will quote for the streets around it.
-        </p>
-      </Section>
-
-      <Section title="A first three months for an electrician drop">
-        <Steps
-          steps={[
-            { title: "Month one: 1,000 to 2,500 homes", body: "Cover the streets nearest your base. Note every caller who mentions the flyer." },
-            { title: "Month two: a neighbour drop", body: "Pick a switchboard or solar job and cover the streets around it with the same flyer." },
-            { title: "Month three: repeat what worked", body: "Go back to the streets that called, and add the next suburb along." },
+        <Bullets
+          items={[
+            <>Your REC number, so households can check you are a registered electrical contractor</>,
+            <>A photo of a finished switchboard or install, not a stock lightning bolt</>,
+            <>The suburbs you cover and a phone number readable from across a room</>,
+            <>One line about emergency call-outs, if you offer them</>,
           ]}
         />
+      </Section>
+
+      <Section title="Timing electrician drops" tone="gray">
         <p>
-          By the end of three months you will know your cost per call from letterbox drops, and which streets are
-          worth covering every season.
+          Interest in solar, batteries and air conditioning builds through late winter and spring as owners plan for
+          summer, so those flyers belong in letterboxes from August to October. Safety switch, smoke alarm and heating
+          circuit checks suit autumn, before the heaters go on.
+        </p>
+        <p>
+          Between seasons, a drop around any job you are on keeps the van&rsquo;s visibility working for you: the
+          neighbours saw you there, and now they have your number.
         </p>
       </Section>
 
-      <Section title="Cost of an electrician letterbox drop" tone="gray">
+      <Section title="Cost of an electrician letterbox drop">
         <p>
-          Every drop is $200 per 1,000 flyers. Covering 2,500 homes around your base costs $500; a whole suburb
-          the size of <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink> (about 10,500
-          homes) costs about $2,100. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink>{" "}
-          page for more quantities.
-        </p>
-        <p>
-          For marketing for electricians beyond letterbox drops, our team can talk through where flyers fit
-          alongside your other local marketing. Electricians are one of several trades we deliver for. See{" "}
-          <TextLink href="/industries/home-services">home services marketing</TextLink> for{" "}
-          <TextLink href="/industries/plumbers">plumbers</TextLink>,{" "}
-          <TextLink href="/industries/roofing">roofers</TextLink>, builders and cleaners, or our{" "}
-          <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
+          Every drop is $200 per 1,000 flyers, delivered exclusively. 2,500 homes around your base costs $500. See the{" "}
+          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for other quantities, or{" "}
+          <TextLink href="/industries/home-services">home services</TextLink> for how{" "}
+          <TextLink href="/industries/plumbers">plumbers</TextLink> and{" "}
+          <TextLink href="/industries/roofing">roofers</TextLink> use letterbox drops. Our{" "}
+          <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> lists every suburb
+          we cover.
         </p>
       </Section>
+
+      <HowItWorks />
 
       <QuickQuoteForm />
 
       <FAQSection items={faqs} title="Electrician Letterbox Drop FAQs" />
 
       <CtaBanner
-        title="Get your electrical number on local fridges"
-        body="Tell us where you're based and the suburbs you cover. We'll quote within 24 hours."
+        title="Get your next upgrade job from the letterbox"
+        body="Tell us your base, the jobs you want more of and the suburbs you cover. We'll quote within 24 hours."
       />
     </>
   );

@@ -209,3 +209,22 @@ export function CtaBanner({ title, body }: { title: string; body: string }) {
 export function JsonLd({ data }: { data: object }) {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
 }
+
+/**
+ * Sitewide "how it works" block. Deliberately identical on every page and kept
+ * short, so suburb and industry pages spend their words on page-specific facts.
+ */
+export function HowItWorks() {
+  return (
+    <Section title="How it works" tone="gray">
+      <Steps
+        steps={[
+          { title: "Tell us the area", body: "Streets, a radius or whole suburbs, plus quantity and start date." },
+          { title: "Quote within 24 hours", body: "Letterbox count, total cost and timeline." },
+          { title: "Send your printed flyers", body: "We distribute; we don't print." },
+          { title: "We deliver and report", body: "Walkers and e-bike riders cover the route; you get the GPS map." },
+        ]}
+      />
+    </Section>
+  );
+}

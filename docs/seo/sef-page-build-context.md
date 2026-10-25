@@ -36,7 +36,9 @@ Get **10 organic calls a day** from the website alone. Every page exists to make
 
 **Unknown, ask Abhi before writing:** whether the $200 includes GST, real campaign results, client permission to name them.
 
-**Pricing maths for pages:** cost = dwellings ÷ 1,000 × $200. Round dwellings to the nearest 100 and say "about". Example: Brighton has about 10,500 dwellings, so full coverage is about $2,100.
+**No census statistics on pages (Abhi, 25 Oct 2026).** Don't publish ABS demographics (income, age, ownership, families, languages, dwelling-mix percentages) or link ABS. The only number allowed is an approximate household count for the cost line.
+
+**Pricing maths for pages:** cost = homes ÷ 1,000 × $200. Round homes to the nearest 100 and say "about". Example: Brighton has about 10,500 dwellings, so full coverage is about $2,100.
 
 **No delivery zones or street boundaries.** Don't split suburbs into named zones. Say the client can cover the whole suburb or pick the streets nearest their business.
 
@@ -128,7 +130,7 @@ Melbourne volumes (Keyword Planner, Oct 2025 to Sep 2026), each 10 to 100 a mont
 
 - Their depot is in Campbellfield (north). Their suburb pages are mostly north and west Melbourne. They cover only **Glen Waverley and Mount Waverley** from SEF's 56 suburbs.
 - Minimum **10,000 homes**, **shared (bundled) distribution**, no GPS proof. SEF's 1,000 minimum, solo delivery and GPS proof go in every page's first screen.
-- They list homes and postcodes per suburb. SEF pages must do the same, from ABS data.
+- They list homes and postcodes per suburb. SEF pages give the approximate household count and postcode.
 - Their cost page has FAQs but no prices. SEF's cost page publishes its price: $200 per 1,000, exclusive. Their shared rate is lower ($75 to $98 per 1,000) but bundled with other flyers and needs a 10,000-home minimum. Frame SEF's price as the cost of exclusive delivery and small minimums. Never quote their prices on SEF pages.
 - They have no pages for pet groomers, vets, dentists, medical clinics or roofers.
 - Never copy, paraphrase or mention their text or brand on SEF pages.
@@ -141,10 +143,10 @@ Melbourne volumes (Keyword Planner, Oct 2025 to Sep 2026), each 10 to 100 a mont
 
 Google demotes or removes sets of near-identical location pages. Every suburb page must carry at least **five page-specific facts** that would be wrong on any other suburb page:
 
-1. ABS 2021 dwelling count and postcode (source: ABS QuickStats, linked)
-2. Dwelling mix: houses vs townhouses vs apartments, and what that means for coverage
-3. Full-suburb coverage cost at $200 per 1,000 (from the ABS dwelling count)
-4. Who buys there, tied to an ABS figure (owner-occupancy, families with children, income)
+1. Approximate household count and postcode
+2. Housing type described in words (mostly houses, many apartments) and what that means for coverage
+3. Full-suburb coverage cost at $200 per 1,000 (from the approximate household count)
+4. Local detail: shopping strips, schools, stations, community, the property cycle, and who buys there
 5. One real SEF campaign in or near that suburb (ask Abhi; never invent one)
 6. Suburb-specific FAQs (at least two of the six)
 7. Links to that suburb's actual neighbours
@@ -221,7 +223,7 @@ Write like a local operator who has walked these streets, not like a marketing b
 
 ### 7.6 Facts and claims (truth guard)
 
-- Every statistic needs a source: ABS QuickStats link, SEF's own data (say so), or Keyword Planner. No unsourced numbers.
+- Every statistic needs a source: SEF's own data (say so) or Keyword Planner. No census statistics (see section 2). No unsourced numbers.
 - Never invent clients, testimonials, reviews, campaign results, response rates or prices. Use a `[TODO: …]` placeholder and list it for Abhi.
 - Don't say a logo client used SEF in a specific suburb unless Abhi confirms it.
 - Don't claim "best", "No.1", "cheapest" or a guarantee.
@@ -291,7 +293,7 @@ Rules:
 1. H1 + one-line proof (solo delivery, GPS, No Junk Mail) + Quote button + click-to-call
 2. Intro: dwellings, one local fact, the primary keyword once (80 to 120 words)
 3. H2: Why {Suburb} businesses choose SEF (4 to 5 proof bullets)
-4. H2: Letterbox drops across {Suburb} {postcode} (dwelling mix from ABS; whole suburb or chosen streets)
+4. H2s specific to the suburb: what it is like, housing type and coverage, local shops or schools, timing
 5. H2: Who we deliver for in {Suburb} (industries, with links)
 6. H2: How it works (5 numbered steps)
 7. H2: Cost ($200 per 1,000, minimum job and full-suburb cost; link to the cost page)
@@ -314,7 +316,7 @@ Target length: 900 to 1,300 words. The quote form and phone number must be visib
 ## 8. Workflow for each page
 
 1. Read the page's row in `sef-page-plan.csv`.
-2. Collect page-specific facts: ABS QuickStats for the suburb, plus SEF data from Abhi.
+2. Collect page-specific local facts (shops, schools, housing type, community), plus SEF data from Abhi.
 3. Draft using the template in 7.8 and the Brighton page as the model.
 4. Run the QA checklist below. Fix everything before showing the page to Abhi.
 5. List every `[TODO]` for Abhi in the PR description.
@@ -339,3 +341,4 @@ Target length: 900 to 1,300 words. The quote form and phone number must be visib
 ## 10. Build status
 
 - Batch 1 (PR `seo/batch-1-pages`): Brighton, letterbox drop cost, Local Businesses hub, Home Services hub (replaces Trades & Services, 308 redirect), Plumbers. Shared components in `app/components/landing.tsx`. New suburb pages must be added to `suburbPages` in the Melbourne page.
+- Batch 2 review fixes: suburb and trade pages rewritten to under 15% shared wording; census figures removed; shared `HowItWorks` component; Real Estate page rebuilt; homepage title, description, H1 and internal links fixed; title template shortened to "%s | South East Flyers".

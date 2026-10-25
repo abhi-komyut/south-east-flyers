@@ -2,9 +2,9 @@ import FAQSection from "./FAQSection";
 
 const faqs = [
   {
-    question: "What areas do you cover?",
+    question: "Is there a flyer distribution service near me in Melbourne's south-east?",
     answer:
-      "We cover Melbourne's south-east and eastern suburbs. You can target specific suburbs based on your campaign needs, and the full confirmed service area is on our Melbourne page.",
+      "If you are between Port Melbourne and Box Hill, yes. We deliver across the bayside, inner-south and eastern suburbs, including St Kilda, Brighton, Caulfield, Bentleigh, Glen Waverley, Kew, Camberwell and Box Hill. The full list is on our Melbourne page.",
   },
   {
     question: "What is the minimum order for a letterbox drop?",
@@ -29,7 +29,7 @@ const faqs = [
   {
     question: "Do you bundle flyers with other material?",
     answer:
-      "No. We have a strict anti-bundling policy. Your flyers are delivered individually so they get maximum attention in each letterbox — never mixed in with other advertising.",
+      "No. We have a strict anti-bundling policy. Your flyers are delivered individually so they get full attention in each letterbox, never mixed in with other advertising.",
   },
   {
     question: "Do you print the flyers as well?",

@@ -7,20 +7,15 @@ import {
   ProofStrip,
   Section,
   Bullets,
-  Steps,
   CtaBanner,
   TextLink,
   JsonLd,
-  coverageCost,
-  formatAud,
+  HowItWorks,
 } from "../../components/landing";
 
 const PAGE_PATH = "/melbourne/flyer-distribution-brighton";
-const ABS_URL = "https://www.abs.gov.au/census/find-census-data/quickstats/2021/SAL20337";
 
-// ABS 2021 Census QuickStats, Brighton (Vic.) SAL20337: 10,536 private dwellings
-const DWELLINGS_ROUNDED = 10500;
-const FULL_COST = coverageCost(DWELLINGS_ROUNDED);
+// About 10,500 homes (household count used only for the full-coverage cost estimate).
 
 export const metadata: Metadata = {
   title: { absolute: "Flyer Distribution Brighton VIC 3186 | South East Flyers" },
@@ -29,8 +24,7 @@ export const metadata: Metadata = {
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Flyer Distribution Brighton VIC 3186 | South East Flyers",
-    description:
-      "Exclusive, GPS-tracked letterbox drops across Brighton 3186. Your flyer on its own, never bundled. From 1,000 flyers.",
+    description: "Exclusive, GPS-tracked letterbox drops across Brighton 3186. From 1,000 flyers.",
     url: `${SITE_URL}${PAGE_PATH}`,
     type: "website",
   },
@@ -39,31 +33,28 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "How many letterboxes are there in Brighton?",
-    answer: `Brighton 3186 has about ${DWELLINGS_ROUNDED.toLocaleString("en-AU")} private dwellings (ABS 2021 Census). We reach every open street letterbox and skip apartment blocks with locked mail rooms. Your quote shows the exact count for the streets you choose.`,
-  },
-  {
-    question: "How much does a letterbox drop cost in Brighton?",
-    answer: `We charge $200 per 1,000 flyers, delivered exclusively. A 1,000-flyer test run costs $200, and covering every letterbox in Brighton costs about ${formatAud(FULL_COST)}.`,
-  },
-  {
-    question: "Can I target only certain streets in Brighton?",
     answer:
-      "Yes. Choose a few streets, a radius around your shop or listing, or the whole suburb. We confirm the letterbox count for that area before you book.",
+      "Brighton 3186 has about 10,500 homes. Most are houses and townhouses with street letterboxes. Your quote gives the exact count for the streets you pick.",
   },
   {
-    question: "How do I know my flyers were delivered?",
+    question: "What does it cost to cover all of Brighton?",
     answer:
-      "Every walker records the route in Strava. When the drop finishes you get the GPS map and a summary of the streets covered.",
+      "About $2,100. We charge $200 per 1,000 flyers, so a drop to roughly 10,500 homes comes to around that figure. A 1,000-flyer test run costs $200.",
   },
   {
-    question: "Do you deliver to letterboxes with a No Junk Mail sign?",
+    question: "Do Brighton apartments get flyers?",
     answer:
-      "No. We skip them on every run, so your flyer never lands where the household has asked not to receive advertising.",
+      "Only where the letterboxes can be reached from the street. Blocks with locked mail rooms are skipped, and the GPS report shows which ones.",
   },
   {
-    question: "How soon can a Brighton campaign start?",
+    question: "Where in Brighton should a first drop go?",
     answer:
-      "Urgent campaigns can start within 48 hours of your flyers arriving. Standard campaigns usually start within 3 to 5 business days, and quotes are sent within 24 hours.",
+      "Shops and cafes usually start with the streets around Church Street or Bay Street. Agents start with the blocks around a listing. Trades start closest to their base.",
+  },
+  {
+    question: "Can one campaign cover Brighton and Brighton East?",
+    answer:
+      "Yes. We deliver in both, as well as Hampton, Elsternwick and Sandringham, and can quote them as one campaign with a single GPS report.",
   },
 ];
 
@@ -79,12 +70,7 @@ const serviceLd = {
     name: "Brighton, VIC 3186",
     address: { "@type": "PostalAddress", addressLocality: "Brighton", addressRegion: "VIC", postalCode: "3186", addressCountry: "AU" },
   },
-  offers: {
-    "@type": "Offer",
-    price: "200",
-    priceCurrency: "AUD",
-    description: "Per 1,000 flyers, exclusive delivery, never bundled",
-  },
+  offers: { "@type": "Offer", price: "200", priceCurrency: "AUD", description: "Per 1,000 flyers, exclusive delivery, never bundled" },
 };
 
 export default function Brighton() {
@@ -99,96 +85,91 @@ export default function Brighton() {
           { name: "Brighton" },
         ]}
         h1="Flyer Distribution & Letterbox Drops in Brighton"
-        lead="GPS-tracked flyer distribution across Brighton 3186. Your flyer goes into each letterbox on its own, never bundled with other advertising, and we skip every No Junk Mail sign."
-        proof={["Minimum 1,000 flyers", "$200 per 1,000", "GPS route report with every drop"]}
+        lead="Flyer distribution in Brighton 3186, from North Road to the Hampton border. Your flyer goes into each letterbox on its own, every route is GPS-tracked, and you can start with 1,000 homes."
+        proof={["Minimum 1,000 flyers", "$200 per 1,000", "Full suburb about $2,100"]}
         ctaLabel="Get a Free Brighton Quote"
       />
 
       <ProofStrip />
 
-      <Section title="Reaching Brighton households">
+      <Section title="Brighton at a glance">
         <p>
-          Brighton has about {DWELLINGS_ROUNDED.toLocaleString("en-AU")} homes and a median household income
-          of $2,710 a week (
-          <a href={ABS_URL} className="underline" rel="noopener" target="_blank">
-            ABS 2021 Census
-          </a>
-          ). Our flyer distribution in Brighton covers the suburb on foot and by e-bike, from North Road down to
-          the Hampton border.
+          Brighton is one of the most established suburbs we cover: large period and post-war homes, wide tree-lined
+          streets, and owners who have often lived in the same house for decades. Its shops sit along Church Street
+          and Bay Street, and the Sandringham line runs down the middle of the suburb.
         </p>
         <p>
-          You pick the streets, we walk them, and you get a GPS map of the route once the drop is done.
+          For a letterbox drop that means about 10,500 homes, most of them houses with street letterboxes, and
+          households that read what arrives rather than skimming it.
         </p>
       </Section>
 
-      <Section title="Why Brighton businesses choose South East Flyers" tone="gray">
+      <Section title="Long-term owners, big decisions" tone="gray">
+        <p>
+          Households that have owned their home for decades make the large, considered purchases: selling and
+          downsizing, renovating a kitchen, replacing a roof, choosing a new dentist. Those decisions take weeks, and a
+          flyer that stays on the bench gets looked at more than once.
+        </p>
+        <p>
+          That suits businesses with a high-value job and a long decision, such as{" "}
+          <TextLink href="/industries/real-estate">real estate agents</TextLink> running appraisal campaigns,{" "}
+          <TextLink href="/industries/roofing">roofers</TextLink>, renovators and{" "}
+          <TextLink href="/industries/healthcare">health practices</TextLink>. Repeat drops to the same streets work
+          better here than one big blast.
+        </p>
+      </Section>
+
+      <Section title="Mostly houses, so coverage is high">
+        <p>
+          Most Brighton homes are houses and townhouses with letterboxes on the street, so a drop reaches nearly every
+          door on the route. In suburbs with more apartment towers, locked mail
+          rooms cut that number down.
+        </p>
+        <p>
+          Shops and cafes around Church Street and Bay Street draw from the blocks within walking distance, so a
+          1,000 to 2,500 flyer drop around the strip is a sensible first test. Trades and agents usually pick the
+          streets nearest their base or their listing.
+        </p>
+      </Section>
+
+      <Section title="Timing a Brighton drop around the property market" tone="gray">
+        <p>
+          Melbourne&rsquo;s busiest selling season runs from September to early December, with a smaller peak in
+          autumn. Brighton agents push appraisal flyers in the weeks before each season, and renovators, painters and
+          landscapers follow, because owners getting ready to sell want the house looking its best.
+        </p>
+        <p>
+          If your business benefits from that cycle, book your Brighton drops for late winter and late summer, when
+          owners are planning rather than already in the middle of a campaign.
+        </p>
+      </Section>
+
+      <Section title="Who letterbox drops in Brighton suit">
         <Bullets
           items={[
-            <><strong>Exclusive delivery.</strong> Your flyer goes into the letterbox by itself, not folded inside a bundle of catalogues.</>,
-            <><strong>GPS proof on every run.</strong> Each walker records the route in Strava, and you receive the map and a drop summary.</>,
-            <><strong>No Junk Mail respected.</strong> We skip those letterboxes, so your brand never arrives where it is not wanted.</>,
-            <><strong>Small runs welcome.</strong> Start with 1,000 flyers and test one part of Brighton before covering the rest.</>,
-            <><strong>Fast starts.</strong> Urgent campaigns can begin within 48 hours of your flyers arriving.</>,
-          ]}
-        />
-      </Section>
-
-      <Section title="Letterbox drops across Brighton 3186">
-        <p>
-          Brighton&rsquo;s occupied homes are 57% separate houses, 22% townhouses and semis, and 20% flats or
-          apartments (ABS 2021). Houses and townhouses have open street letterboxes, so coverage there is close to
-          complete. Apartment blocks with locked mail rooms are skipped, and the GPS report shows exactly where.
-        </p>
-        <p>
-          You can cover the whole suburb or pick the streets closest to your shop, office or listing. Your quote shows
-          the letterbox count for exactly the area you choose.
-        </p>
-      </Section>
-
-      <Section title="Who we deliver for in Brighton" tone="gray">
-        <p>
-          About 73% of Brighton homes are owner-occupied and 58% of families have children (ABS 2021). That makes
-          flyer distribution in Brighton a strong fit for businesses that sell to homeowners and families:
-        </p>
-        <Bullets
-          items={[
-            <><TextLink href="/industries/real-estate">Real estate agents</TextLink>: just listed, just sold and appraisal flyers</>,
-            <><TextLink href="/industries/home-services">Home services</TextLink>: <TextLink href="/industries/plumbers">plumbers</TextLink>, electricians, roofers, builders and renovators</>,
-            <><TextLink href="/industries/healthcare">Health practices</TextLink>: dentists, GPs and physios</>,
-            <>Pet businesses: dog groomers and vet clinics</>,
-            <>Local food: restaurants, cafes and takeaway menus</>,
+            <>Agents with appraisal and just-sold campaigns aimed at long-term owners</>,
+            <>Builders and renovators working on Brighton&rsquo;s older homes</>,
+            <><TextLink href="/industries/plumbers">Plumbers</TextLink>, <TextLink href="/industries/electricians">electricians</TextLink> and other trades based in the bayside suburbs</>,
+            <>Dentists, physios and GPs taking on new patients</>,
+            <>Cafes and restaurants near Church Street and Bay Street</>,
           ]}
         />
         <p>
-          Not on the list? Our <TextLink href="/industries/local-businesses">local business flyer distribution</TextLink>{" "}
-          page covers how other Brighton businesses use letterbox drops.
+          Other businesses: see <TextLink href="/industries/local-businesses">local business flyer distribution</TextLink>.
         </p>
       </Section>
 
-      <Section title="How a Brighton letterbox drop works">
-        <Steps
-          steps={[
-            { title: "Tell us your target", body: "Name the streets or area, the quantity and your start date." },
-            { title: "Get a quote within 24 hours", body: "It includes the letterbox count and a timeline." },
-            { title: "Send us your printed flyers", body: "We distribute; we don't print. Any print shop's flyers work." },
-            { title: "We deliver", body: "Walkers and e-bike riders cover the route, recorded by GPS." },
-            { title: "Get your report", body: "You receive the route map, drop count and dates covered." },
-          ]}
-        />
+      <Section title="Letterbox drop cost in Brighton">
+        <p>
+          Every drop is <strong>$200 per 1,000 flyers</strong>, delivered exclusively. A first test costs $200; the
+          whole suburb costs about $2,100. The <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page
+          has more quantities, and our <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>{" "}
+          lists every suburb we cover, including <TextLink href="/melbourne/flyer-distribution-kew">Kew</TextLink> and{" "}
+          <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink>.
+        </p>
       </Section>
 
-      <Section title="Letterbox drop cost in Brighton" tone="gray">
-        <p>
-          Letterbox drops in Brighton cost <strong>$200 per 1,000 flyers</strong>, delivered exclusively. At our
-          1,000-flyer minimum, a first test run costs $200. Covering every Brighton letterbox (about{" "}
-          {DWELLINGS_ROUNDED.toLocaleString("en-AU")}) costs about {formatAud(FULL_COST)}.
-        </p>
-        <p>
-          See how pricing works on our <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or
-          compare Brighton with the rest of our{" "}
-          <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
-        </p>
-      </Section>
+      <HowItWorks />
 
       <QuickQuoteForm />
 

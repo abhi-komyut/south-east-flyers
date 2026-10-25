@@ -12,11 +12,11 @@ const geistSans = Geist({
 
 export const metadata: Metadata = {
   title: {
-    default: "Flyer Distribution Melbourne | Letterbox Drops | South East Flyers",
-    template: "%s | South East Flyers & Marketing Solutions",
+    default: "Flyer Distribution Melbourne | South East Flyers",
+    template: "%s | South East Flyers",
   },
   description:
-    "Exclusive, GPS-tracked flyer distribution and letterbox drops across Melbourne's south-east and eastern suburbs. Never bundled, from $200 per 1,000. Get a free quote today.",
+    "Flyer distribution in Melbourne's south-east and east: exclusive, GPS-tracked letterbox drops, never bundled. $200 per 1,000 flyers. Quote in 24 hours.",
   keywords: [
     "flyer distribution melbourne",
     "letterbox drops melbourne",
