@@ -107,8 +107,8 @@ export default function HomeServices() {
         <Bullets
           items={[
             <><TextLink href="/industries/plumbers">Plumbers</TextLink>: blocked drains, hot water, gas fitting and emergency call-outs</>,
-            <>Electricians: safety switches, switchboards, lighting, solar and EV chargers</>,
-            <>Roofers: inspections, restorations, gutters and storm repairs</>,
+            <><TextLink href="/industries/electricians">Electricians</TextLink>: safety switches, switchboards, lighting, solar and EV chargers</>,
+            <><TextLink href="/industries/roofing">Roofers</TextLink>: inspections, restorations, gutters and storm repairs</>,
             <>Builders: knockdown rebuilds, extensions and neighbour notices around a site</>,
             <>Renovators: kitchens, bathrooms and whole-home renovations</>,
             <>Carpenters: decks, pergolas, built-ins and repairs</>,

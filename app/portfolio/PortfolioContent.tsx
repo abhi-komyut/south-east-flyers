@@ -66,7 +66,7 @@ const commitments = [
   {
     title: "High-Volume Daily Distribution",
     description:
-      "We distribute flyers at scale every day across Melbourne and Sydney, ensuring your campaign reaches a wide audience on schedule.",
+      "We distribute flyers at scale every day across Melbourne's south-east and eastern suburbs, ensuring your campaign reaches a wide audience on schedule.",
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
@@ -133,7 +133,7 @@ export default function PortfolioContent() {
           <h1 className="text-3xl sm:text-4xl font-bold mb-4">Our Clients</h1>
           <p className="text-gray-300 max-w-2xl mx-auto text-base sm:text-lg mb-10">
             We&apos;re proud to work with some of Australia&apos;s most recognised brands,
-            delivering flyers at scale every day across Melbourne and Sydney.
+            delivering flyers at scale every day across Melbourne&rsquo;s south-east and eastern suburbs.
           </p>
           <div className="grid grid-cols-3 gap-3 sm:gap-6 max-w-lg mx-auto">
             <div>

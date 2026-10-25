@@ -76,7 +76,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-sm font-medium text-black">Service Areas</p>
-                    <p className="text-sm text-gray-600">Melbourne &amp; Sydney Metropolitan</p>
+                    <p className="text-sm text-gray-600">Melbourne&rsquo;s South-East &amp; Eastern Suburbs</p>
                   </div>
                 </div>
 

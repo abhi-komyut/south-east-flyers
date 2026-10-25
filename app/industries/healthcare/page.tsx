@@ -10,14 +10,14 @@ const PAGE_PATH = "/industries/healthcare";
 export const metadata: Metadata = {
   title: "Flyer Distribution for Healthcare",
   description:
-    "Flyer and letterbox distribution for healthcare businesses across Melbourne and Sydney. Build local awareness for new practices, clinics and services. GPS-tracked. Get a free quote.",
+    "Flyer and letterbox distribution for healthcare businesses across Melbourne's south-east and eastern suburbs. Build local awareness for new practices, clinics and services. GPS-tracked. Get a free quote.",
   alternates: {
     canonical: `${SITE_URL}${PAGE_PATH}`,
   },
   openGraph: {
     title: "Flyer Distribution for Healthcare | South East Flyers",
     description:
-      "Local-area awareness for healthcare practices and clinics across Melbourne and Sydney through targeted, GPS-tracked letterbox distribution.",
+      "Local-area awareness for healthcare practices and clinics across Melbourne's south-east and eastern suburbs through targeted, GPS-tracked letterbox distribution.",
     url: `${SITE_URL}${PAGE_PATH}`,
     type: "website",
   },
@@ -76,13 +76,10 @@ const serviceLd = {
   name: "Flyer Distribution for Healthcare",
   serviceType: "Flyer Distribution",
   description:
-    "Flyer and letterbox distribution for healthcare businesses across Melbourne and Sydney — local-area awareness for practices, clinics and services, GPS-tracked.",
+    "Flyer and letterbox distribution for healthcare businesses across Melbourne's south-east and eastern suburbs. Local-area awareness for practices, clinics and services, GPS-tracked.",
   url: `${SITE_URL}${PAGE_PATH}`,
   provider: { "@id": `${SITE_URL}/#organization` },
-  areaServed: [
-    { "@type": "City", name: "Melbourne", addressCountry: "AU" },
-    { "@type": "City", name: "Sydney", addressCountry: "AU" },
-  ],
+  areaServed: [{ "@type": "City", name: "Melbourne", addressCountry: "AU" }],
 };
 
 export default function Healthcare() {
@@ -111,8 +108,8 @@ export default function Healthcare() {
             </h1>
             <p className="text-lg text-gray-200 mb-4">
               Build awareness for your practice, clinic or service among the
-              local households closest to you — across Melbourne and Sydney, with
-              GPS-tracked distribution.
+              local households closest to you, across Melbourne&rsquo;s
+              south-east and eastern suburbs, with GPS-tracked distribution.
             </p>
             <p className="text-base text-gray-300 mb-8">
               You provide the flyers. We handle the distribution.

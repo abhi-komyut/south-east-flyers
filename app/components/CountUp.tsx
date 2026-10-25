@@ -11,7 +11,11 @@ export default function CountUp({
   suffix?: string;
   duration?: number;
 }) {
-  const [count, setCount] = useState(0);
+  // Start at the real value so server-rendered HTML (and no-JS/crawler
+  // views) always show the true number, never "0". The count-up is a
+  // client-only visual enhancement layered on top once the element is
+  // in view, not the only source of the number.
+  const [count, setCount] = useState(end);
   const ref = useRef<HTMLSpanElement>(null);
   const hasAnimated = useRef(false);
 

@@ -9,6 +9,12 @@ const nextConfig: NextConfig = {
         destination: "/industries/home-services",
         permanent: true,
       },
+      // Sydney-focused post removed; service area is Melbourne-only.
+      {
+        source: "/blog/choosing-flyer-distribution-company-sydney",
+        destination: "/blog",
+        permanent: true,
+      },
     ];
   },
 };

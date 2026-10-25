@@ -12,26 +12,21 @@ const geistSans = Geist({
 
 export const metadata: Metadata = {
   title: {
-    default: "Flyer Distribution Melbourne & Sydney | Letterbox Drops | South East Flyers",
-    template: "%s | South East Flyers & Marketing Solutions",
+    default: "Flyer Distribution Melbourne | South East Flyers",
+    template: "%s | South East Flyers",
   },
   description:
-    "Professional flyer distribution and letterbox drops across Melbourne & Sydney. GPS-tracked delivery, no junk mail compliant, large-scale daily distribution. Get a free quote today.",
+    "Flyer distribution in Melbourne's south-east and east: exclusive, GPS-tracked letterbox drops, never bundled. $200 per 1,000 flyers. Quote in 24 hours.",
   keywords: [
     "flyer distribution melbourne",
-    "flyer distribution sydney",
     "letterbox drops melbourne",
-    "letterbox drops sydney",
     "letterbox distribution melbourne",
-    "letterbox distribution sydney",
     "leaflet distribution melbourne",
-    "leaflet distribution sydney",
     "pamphlet distribution",
     "letterbox advertising",
     "letterbox marketing",
     "flyer delivery service",
     "catalogue distribution melbourne",
-    "brochure distribution sydney",
     "GPS tracked flyer distribution",
     "no junk mail compliant distribution",
     "targeted letterbox distribution",
@@ -44,9 +39,9 @@ export const metadata: Metadata = {
     canonical: "https://www.southeastflyers.com.au",
   },
   openGraph: {
-    title: "Flyer Distribution Melbourne & Sydney | South East Flyers",
+    title: "Flyer Distribution Melbourne | South East Flyers",
     description:
-      "Professional flyer distribution and letterbox drops across Melbourne & Sydney. GPS-tracked, no junk mail compliant. Large-scale daily distribution across both cities.",
+      "Exclusive, GPS-tracked flyer distribution and letterbox drops across Melbourne's south-east and eastern suburbs. Never bundled, from $200 per 1,000.",
     url: "https://www.southeastflyers.com.au",
     siteName: "South East Flyers & Marketing Solutions",
     locale: "en_AU",
@@ -77,7 +72,7 @@ const organizationLd = {
   logo: `${SITE_URL}/logo.png`,
   image: `${SITE_URL}/og-logo.jpg`,
   description:
-    "Flyer distribution and letterbox drops across Melbourne and Sydney. GPS-tracked delivery, no junk mail compliant.",
+    "Exclusive, GPS-tracked flyer distribution and letterbox drops across Melbourne's south-east and eastern suburbs. Never bundled.",
   email: "abhiram@southeastflyers.com.au",
   telephone: "+61402824070",
   sameAs: [
@@ -85,10 +80,7 @@ const organizationLd = {
     "https://www.instagram.com/southeastflyers",
     "https://www.linkedin.com/company/southeastflyers",
   ],
-  areaServed: [
-    { "@type": "City", name: "Melbourne", addressCountry: "AU" },
-    { "@type": "City", name: "Sydney", addressCountry: "AU" },
-  ],
+  areaServed: [{ "@type": "City", name: "Melbourne", addressCountry: "AU" }],
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+61402824070",

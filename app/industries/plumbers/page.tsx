@@ -157,8 +157,9 @@ export default function Plumbers() {
         </p>
         <p>
           Plumbing is one of several trades we deliver for. See{" "}
-          <TextLink href="/industries/home-services">home services marketing</TextLink> for electricians, roofers,
-          builders and cleaners, or our{" "}
+          <TextLink href="/industries/home-services">home services marketing</TextLink> for{" "}
+          <TextLink href="/industries/electricians">electricians</TextLink>,{" "}
+          <TextLink href="/industries/roofing">roofers</TextLink>, builders and cleaners, or our{" "}
           <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
         </p>
       </Section>

@@ -10,14 +10,14 @@ const PAGE_PATH = "/services/flyer-distribution";
 export const metadata: Metadata = {
   title: "Flyer Distribution",
   description:
-    "Professional flyer distribution across Melbourne and Sydney. Residential delivery, suburb-level targeting, GPS tracking and campaign reporting. You provide the flyers, we handle the distribution. Get a free quote.",
+    "Professional flyer distribution across Melbourne's south-east and eastern suburbs. Residential delivery, suburb-level targeting, GPS tracking and campaign reporting. You provide the flyers, we handle the distribution. Get a free quote.",
   alternates: {
     canonical: `${SITE_URL}${PAGE_PATH}`,
   },
   openGraph: {
     title: "Flyer Distribution | South East Flyers",
     description:
-      "Residential flyer and leaflet distribution across Melbourne and Sydney — GPS-tracked, no junk mail compliant, delivered individually with full campaign reporting.",
+      "Residential flyer and leaflet distribution across Melbourne's south-east and eastern suburbs. GPS-tracked, no junk mail compliant, delivered individually with full campaign reporting.",
     url: `${SITE_URL}${PAGE_PATH}`,
     type: "website",
   },
@@ -70,7 +70,7 @@ const faqs = [
   {
     question: "Do you print the flyers?",
     answer:
-      "No — we're a distribution specialist, not a printer. You supply the printed flyers, leaflets or brochures and we get them into the right letterboxes across Melbourne and Sydney.",
+      "No — we're a distribution specialist, not a printer. You supply the printed flyers, leaflets or brochures and we get them into the right letterboxes across Melbourne's south-east and eastern suburbs.",
   },
   {
     question: "How much does flyer distribution cost?",
@@ -95,13 +95,10 @@ const serviceLd = {
   name: "Flyer Distribution",
   serviceType: "Flyer Distribution",
   description:
-    "Professional residential flyer and leaflet distribution across Melbourne and Sydney. GPS-tracked, no junk mail compliant, delivered individually with campaign reporting.",
+    "Professional residential flyer and leaflet distribution across Melbourne's south-east and eastern suburbs. GPS-tracked, no junk mail compliant, delivered individually with campaign reporting.",
   url: `${SITE_URL}${PAGE_PATH}`,
   provider: { "@id": `${SITE_URL}/#organization` },
-  areaServed: [
-    { "@type": "City", name: "Melbourne", addressCountry: "AU" },
-    { "@type": "City", name: "Sydney", addressCountry: "AU" },
-  ],
+  areaServed: [{ "@type": "City", name: "Melbourne", addressCountry: "AU" }],
 };
 
 export default function FlyerDistribution() {
@@ -128,10 +125,10 @@ export default function FlyerDistribution() {
               Professional Flyer Distribution
             </h1>
             <p className="text-lg text-gray-200 mb-4">
-              Residential flyer and leaflet distribution across Melbourne and
-              Sydney. We deliver your material directly into letterboxes in the
-              suburbs you want to reach, with GPS tracking and full campaign
-              reporting.
+              Residential flyer and leaflet distribution across
+              Melbourne&rsquo;s south-east and eastern suburbs. We deliver your
+              material directly into letterboxes in the suburbs you want to
+              reach, with GPS tracking and full campaign reporting.
             </p>
             <p className="text-base text-gray-300 mb-8">
               You provide the flyers. We handle the distribution.
@@ -170,8 +167,8 @@ export default function FlyerDistribution() {
               className="text-navy underline"
             >
               Melbourne
-            </Link>{" "}
-            and Sydney.
+            </Link>
+            &rsquo;s south-east and eastern suburbs.
           </p>
         </div>
       </section>

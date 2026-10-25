@@ -10,14 +10,14 @@ const PAGE_PATH = "/services/targeted-flyer-distribution";
 export const metadata: Metadata = {
   title: "Targeted Flyer Distribution",
   description:
-    "Targeted flyer distribution across Melbourne and Sydney. Define your distribution area by suburb, postcode or defined streets so your flyers reach the right areas. GPS-tracked. Get a free quote.",
+    "Targeted flyer distribution across Melbourne's south-east and eastern suburbs. Define your distribution area by suburb, postcode or defined streets so your flyers reach the right areas. GPS-tracked. Get a free quote.",
   alternates: {
     canonical: `${SITE_URL}${PAGE_PATH}`,
   },
   openGraph: {
     title: "Targeted Flyer Distribution | South East Flyers",
     description:
-      "Choose exactly where your flyers go — by suburb, postcode or defined area — across Melbourne and Sydney. GPS-tracked delivery with campaign reporting.",
+      "Choose exactly where your flyers go, by suburb, postcode or defined area, across Melbourne's south-east and eastern suburbs. GPS-tracked delivery with campaign reporting.",
     url: `${SITE_URL}${PAGE_PATH}`,
     type: "website",
   },
@@ -76,13 +76,10 @@ const serviceLd = {
   name: "Targeted Flyer Distribution",
   serviceType: "Targeted Flyer Distribution",
   description:
-    "Targeted flyer distribution across Melbourne and Sydney — define your distribution area by suburb, postcode or defined streets, with GPS tracking and campaign reporting.",
+    "Targeted flyer distribution across Melbourne's south-east and eastern suburbs. Define your distribution area by suburb, postcode or defined streets, with GPS tracking and campaign reporting.",
   url: `${SITE_URL}${PAGE_PATH}`,
   provider: { "@id": `${SITE_URL}/#organization` },
-  areaServed: [
-    { "@type": "City", name: "Melbourne", addressCountry: "AU" },
-    { "@type": "City", name: "Sydney", addressCountry: "AU" },
-  ],
+  areaServed: [{ "@type": "City", name: "Melbourne", addressCountry: "AU" }],
 };
 
 export default function TargetedFlyerDistribution() {

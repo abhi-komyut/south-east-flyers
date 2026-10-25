@@ -37,7 +37,7 @@ export default function Header() {
       <div className="bg-navy text-white text-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-8">
           <p className="hidden sm:block text-gray-300">
-            Professional letterbox distribution — Melbourne &amp; Sydney
+            Exclusive letterbox distribution across Melbourne&rsquo;s south-east
           </p>
           <div className="flex items-center gap-5 ml-auto">
             <a

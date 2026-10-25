@@ -5,12 +5,12 @@ import { posts } from "./posts";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Expert insights on letterbox distribution, flyer marketing, and leaflet delivery across Melbourne and Sydney. Tips, strategies, and industry news from South East Flyers.",
+    "Expert insights on letterbox distribution, flyer marketing, and leaflet delivery across Melbourne's south-east and eastern suburbs. Tips, strategies, and industry news from South East Flyers.",
   keywords: [
     "letterbox distribution blog",
     "flyer marketing tips",
     "letterbox advertising Melbourne",
-    "flyer distribution Sydney",
+    "flyer distribution Melbourne",
     "leaflet distribution Australia",
   ],
 };
@@ -46,7 +46,7 @@ export default function BlogPage() {
           <h1 className="text-3xl md:text-4xl font-bold mb-4">Blog</h1>
           <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto">
             Insights, tips, and news about letterbox distribution and flyer
-            marketing across Melbourne and Sydney.
+            marketing across Melbourne&rsquo;s south-east and eastern suburbs.
           </p>
         </div>
       </section>

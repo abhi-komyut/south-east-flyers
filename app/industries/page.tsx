@@ -8,14 +8,14 @@ const PAGE_PATH = "/industries";
 export const metadata: Metadata = {
   title: "Industries We Work With",
   description:
-    "Flyer and letterbox distribution for real estate, healthcare, and trades and services businesses across Melbourne and Sydney. Get a free quote.",
+    "Flyer and letterbox distribution for local businesses, home services trades, real estate and healthcare across Melbourne's south-east and eastern suburbs. Get a free quote.",
   alternates: {
     canonical: `${SITE_URL}${PAGE_PATH}`,
   },
   openGraph: {
     title: "Industries We Work With | South East Flyers",
     description:
-      "Flyer and letterbox distribution for real estate, healthcare, and trades and services businesses across Melbourne and Sydney.",
+      "Flyer and letterbox distribution for local businesses, home services trades, real estate and healthcare across Melbourne's south-east and eastern suburbs.",
     url: `${SITE_URL}${PAGE_PATH}`,
     type: "website",
   },
@@ -29,7 +29,7 @@ const industries: { title: string; body: string; href: string }[] = [
   },
   {
     title: "Healthcare",
-    body: "Local-area awareness for new practices, clinics and services opening or growing across Melbourne and Sydney.",
+    body: "Local-area awareness for new practices, clinics and services opening or growing across Melbourne.",
     href: "/industries/healthcare",
   },
   {
@@ -66,7 +66,7 @@ export default function Industries() {
             </h1>
             <p className="text-lg text-gray-200">
               Flyer and letterbox distribution built around how different local
-              businesses actually reach customers across Melbourne and Sydney.
+              businesses actually reach customers across Melbourne.
             </p>
           </div>
         </div>
