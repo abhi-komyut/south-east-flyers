@@ -75,13 +75,12 @@ export default function FAQSection({
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                {isOpen && (
-                  <div className="px-4 sm:px-6 pb-4">
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      {faq.answer}
-                    </p>
-                  </div>
-                )}
+                {/* Always in the HTML (hidden when closed) so search engines can read answers that match the FAQPage schema */}
+                <div className={`px-4 sm:px-6 pb-4 ${isOpen ? "" : "hidden"}`}>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
               </div>
             );
           })}

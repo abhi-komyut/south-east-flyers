@@ -5,6 +5,7 @@ Read this file before creating or editing any SEO page on southeastflyers.com.au
 Companion files (put them in the repo next to this one, for example under `/docs/seo/`):
 - `sef-page-plan.csv`: all 80 pages (incl. homepage, Melbourne page and the local-advertising guide) with URL, title, H1, primary and secondary keywords, and priority
 - `sef-keyword-data.csv`: Google Keyword Planner volumes (Melbourne VIC, Oct 2025 to Sep 2026, pulled 25 Oct 2026)
+- `sef-image-list.csv`: 30 industry-page images with file names, briefs, alt text and sizes. Use the exact file names and alt text. Flyer samples use fictional business names only, never real brands or client logos. Hero photos must be real SEF walkers.
 - Brighton page draft (the approved template): https://claude.ai/artifact/Nsu8rjoihwqDuXfGTXAhq1
 
 ---
@@ -31,7 +32,9 @@ Get **10 organic calls a day** from the website alone. Every page exists to make
 | Turnaround | 48-hour start available; quote within 24 hours |
 | Client logos on site | Ray White, McGrath, Marshall White, Belle Property, Barry Plant, Buxton, Harcourts, High Dental, Storm Shield Roofing |
 
-**Unknown, ask Abhi before writing:** whether the $200 includes GST, whether SEF prints flyers, real campaign results, client permission to name them.
+**Confirmed:** SEF distributes but does not print (stated on the live site). Do not build the flyer printing page; say "we distribute, we don't print".
+
+**Unknown, ask Abhi before writing:** whether the $200 includes GST, real campaign results, client permission to name them.
 
 **Pricing maths for pages:** cost = dwellings ÷ 1,000 × $200. Round dwellings to the nearest 100 and say "about". Example: Brighton has about 10,500 dwellings, so full coverage is about $2,100.
 
@@ -91,7 +94,7 @@ On suburb and industry pages, reuse the strip and at most one sentence of the co
 
 **Merges (do not split):** house cleaning and bathroom cleaning share one page; dog grooming and dog wash share one page. Separate pages would be near-duplicates with almost no search volume each.
 
-**P1 services:** Flyer printing and distribution (only if SEF prints), letterbox drop cost page, South East and Eastern Melbourne hub.
+**P1 services:** letterbox drop cost page, South East and Eastern Melbourne hub. (Flyer printing page dropped: SEF doesn't print.)
 
 **Small suburbs:** Gardenvale, Ripponlea, St Kilda West, Middle Park, Box Hill South, Blackburn North and similar P3 pockets can be a section on the nearest bigger page instead of a standalone page. Ask Abhi before creating a page under 2,000 dwellings.
 
@@ -331,3 +334,8 @@ Target length: 900 to 1,300 words. The quote form and phone number must be visib
 - [ ] Schema validates in the Rich Results Test
 - [ ] Quote form and phone link visible above the fold on mobile
 - [ ] 900 to 1,300 words
+
+
+## 10. Build status
+
+- Batch 1 (PR `seo/batch-1-pages`): Brighton, letterbox drop cost, Local Businesses hub, Home Services hub (replaces Trades & Services, 308 redirect), Plumbers. Shared components in `app/components/landing.tsx`. New suburb pages must be added to `suburbPages` in the Melbourne page.

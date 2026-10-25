@@ -23,7 +23,7 @@ export default function QuickQuoteForm() {
               Get a Free Quote in 24 Hours
             </h2>
             <p className="text-gray-600 mb-6">
-              Tell us about your campaign and we&apos;ll send you a detailed quote with pricing, coverage maps, and timeline — no obligation.
+              Tell us about your campaign and we&apos;ll send you a detailed quote with pricing, coverage maps and a timeline. No obligation.
             </p>
             <ul className="space-y-3 text-sm text-gray-700">
               <li className="flex items-center gap-2">
