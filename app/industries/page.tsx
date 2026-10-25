@@ -33,9 +33,19 @@ const industries: { title: string; body: string; href: string }[] = [
     href: "/industries/healthcare",
   },
   {
-    title: "Trades & Services",
-    body: "Plumbers, electricians, landscapers and other local trades reaching nearby households directly.",
-    href: "/industries/trades-and-services",
+    title: "Home Services",
+    body: "Plumbers, electricians, roofers, builders, renovators and cleaners reaching the households they service.",
+    href: "/industries/home-services",
+  },
+  {
+    title: "Plumbers",
+    body: "Plumbing flyers delivered on their own to the streets around your base and your active jobs.",
+    href: "/industries/plumbers",
+  },
+  {
+    title: "Local Businesses",
+    body: "Shops, cafes, clinics and studios putting their offer in the letterboxes around them.",
+    href: "/industries/local-businesses",
   },
 ];
 

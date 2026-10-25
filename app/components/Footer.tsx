@@ -49,6 +49,9 @@ export default function Footer() {
                 <Link href="/industries" className="hover:text-white transition-colors">Industries</Link>
               </li>
               <li>
+                <Link href="/letterbox-drop-cost" className="hover:text-white transition-colors">Letterbox Drop Cost</Link>
+              </li>
+              <li>
                 <Link href="/portfolio" className="hover:text-white transition-colors">Our Clients</Link>
               </li>
               <li>
@@ -71,7 +74,14 @@ export default function Footer() {
                   Flyer Distribution Melbourne
                 </Link>
               </li>
-              <li>Sydney Metropolitan</li>
+              <li>
+                <Link
+                  href="/melbourne/flyer-distribution-brighton"
+                  className="hover:text-white transition-colors"
+                >
+                  Flyer Distribution Brighton
+                </Link>
+              </li>
               <li>South East Melbourne</li>
             </ul>
           </div>

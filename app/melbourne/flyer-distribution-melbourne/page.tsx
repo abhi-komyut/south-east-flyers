@@ -23,6 +23,12 @@ export const metadata: Metadata = {
   },
 };
 
+// Suburbs that have their own landing page. Add each new suburb page here so
+// it is linked from the coverage list.
+const suburbPages: Record<string, string> = {
+  Brighton: "/melbourne/flyer-distribution-brighton",
+};
+
 // Confirmed Melbourne service areas — source of truth. Do not add suburbs
 // that are not on this list.
 const coverageGroups: { region: string; suburbs: string[] }[] = [
@@ -171,9 +177,14 @@ const industries: { title: string; body: string; href: string }[] = [
     href: "/industries/healthcare",
   },
   {
-    title: "Trades & Services",
-    body: "Plumbers, electricians, landscapers and other local trades reaching nearby households directly.",
-    href: "/industries/trades-and-services",
+    title: "Home Services",
+    body: "Plumbers, electricians, roofers, builders, renovators and cleaners reaching the households they service.",
+    href: "/industries/home-services",
+  },
+  {
+    title: "Local Businesses",
+    body: "Shops, cafes, clinics and studios putting their offer in the letterboxes around them.",
+    href: "/industries/local-businesses",
   },
 ];
 
@@ -181,7 +192,7 @@ const faqs = [
   {
     question: "How much does flyer distribution cost in Melbourne?",
     answer:
-      "Pricing depends on how many flyers you have, which suburbs you want to reach and how spread out the delivery is. Rather than a fixed rate, we quote each campaign on those details — tell us your target suburbs and quantity and we'll send a clear price. The minimum campaign is 1,000 flyers.",
+      "Flyer distribution costs $200 per 1,000 flyers, delivered exclusively and GPS-tracked. The minimum campaign is 1,000 flyers ($200), and a 5,000-flyer drop costs $1,000. See our letterbox drop cost page for more quantities.",
   },
   {
     question: "How many flyers do I need for a Melbourne suburb?",
@@ -442,7 +453,15 @@ export default function FlyerDistributionMelbourne() {
                 <h3 className="font-semibold text-navy mb-3">{group.region}</h3>
                 <ul className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-sm text-gray-700">
                   {group.suburbs.map((suburb) => (
-                    <li key={suburb}>{suburb}</li>
+                    <li key={suburb}>
+                      {suburbPages[suburb] ? (
+                        <Link href={suburbPages[suburb]} className="text-navy underline underline-offset-2">
+                          {suburb}
+                        </Link>
+                      ) : (
+                        suburb
+                      )}
+                    </li>
                   ))}
                 </ul>
               </div>

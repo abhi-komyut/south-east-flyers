@@ -14,7 +14,9 @@ const serviceLinks = [
 const industryLinks = [
   { href: "/industries/real-estate", label: "Real Estate" },
   { href: "/industries/healthcare", label: "Healthcare" },
-  { href: "/industries/trades-and-services", label: "Trades & Services" },
+  { href: "/industries/home-services", label: "Home Services" },
+  { href: "/industries/plumbers", label: "Plumbers" },
+  { href: "/industries/local-businesses", label: "Local Businesses" },
 ];
 
 export default function Header() {
