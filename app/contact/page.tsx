@@ -1,18 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import { useForm, ValidationError } from "@formspree/react";
+import { useEffect, useRef } from "react";
 import { trackEvent } from "../lib/gtag";
 
 const WHATSAPP_NUMBER = "61402824070";
 
 export default function Contact() {
-  const [submitted, setSubmitted] = useState(false);
-  const [sending, setSending] = useState(false);
+  const [state, handleSubmit] = useForm("xzdqreda");
+  const waUrlRef = useRef<string | null>(null);
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setSending(true);
+  useEffect(() => {
+    if (state.succeeded) {
+      trackEvent("form_submit", { form_name: "contact" });
+      trackEvent("generate_lead", { form_name: "contact" });
+    }
+  }, [state.succeeded]);
 
+  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     const form = e.currentTarget;
     const name = (form.elements.namedItem("name") as HTMLInputElement).value;
     const phone = (form.elements.namedItem("phone") as HTMLInputElement).value;
@@ -26,15 +31,15 @@ export default function Contact() {
       company && `Company: ${company}`,
       message && `Message: ${message}`,
     ].filter(Boolean);
+    waUrlRef.current = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`;
 
-    const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`;
+    handleSubmit(e);
+  }
 
-    trackEvent("form_submit", { form_name: "contact" });
-    trackEvent("generate_lead", { form_name: "contact" });
-
-    window.open(waUrl, "_blank", "noopener,noreferrer");
-    setSending(false);
-    setSubmitted(true);
+  function sendOnWhatsApp() {
+    if (!waUrlRef.current) return;
+    trackEvent("whatsapp_followup", { form_name: "contact" });
+    window.open(waUrlRef.current, "_blank", "noopener,noreferrer");
   }
 
   return (
@@ -131,27 +136,27 @@ export default function Contact() {
             {/* Form */}
             <div className="lg:col-span-2">
               <div className="bg-white border border-gray-200 rounded-lg p-6 sm:p-8">
-                {submitted ? (
+                {state.succeeded ? (
                   <div className="py-12 text-center">
                     <svg className="w-12 h-12 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <h2 className="text-xl font-semibold text-black mb-2">WhatsApp Opened</h2>
-                    <p className="text-gray-600">
-                      We&apos;ve opened WhatsApp with your enquiry filled in. Just hit send and we&apos;ll reply within 1 business day.
+                    <h2 className="text-xl font-semibold text-black mb-2">Message Sent</h2>
+                    <p className="text-gray-600 mb-4">
+                      Thank you for your enquiry. We&apos;ll be in touch within 1 business day.
                     </p>
                     <button
-                      onClick={() => setSubmitted(false)}
-                      className="mt-4 text-sm text-navy underline underline-offset-2 hover:text-navy-light"
+                      onClick={sendOnWhatsApp}
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-navy border border-navy rounded px-4 py-2 hover:bg-navy hover:text-white transition-colors"
                     >
-                      Send another enquiry
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.43 1.26 4.87L2 22l5.27-1.38a9.93 9.93 0 004.77 1.22h.01c5.52 0 10-4.48 10-10s-4.48-10-10.01-10zm5.84 14.17c-.25.7-1.45 1.33-2 1.42-.51.08-1.15.11-1.86-.12a16.9 16.9 0 01-1.65-.61c-2.91-1.26-4.8-4.18-4.95-4.38-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.26-.28.57-.35.76-.35.19 0 .38 0 .55.01.17.01.41-.07.64.49.25.6.83 2.07.9 2.22.07.15.12.33.02.52-.1.19-.15.3-.3.47-.15.17-.31.37-.44.5-.15.14-.3.3-.13.6.17.3.77 1.27 1.65 2.06 1.14 1.01 2.1 1.33 2.42 1.48.32.15.5.13.7-.08.2-.2.8-.93 1.01-1.26.21-.32.42-.27.7-.16.28.1 1.79.84 2.1 1 .31.15.51.23.59.36.08.13.08.74-.17 1.44z" />
+                      </svg>
+                      Also send on WhatsApp
                     </button>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-5">
-                    <p className="text-sm text-gray-600 bg-gray-50 border border-gray-200 rounded px-4 py-3">
-                      Fill this in and we&apos;ll open WhatsApp with your enquiry ready to send, no email needed.
-                    </p>
+                  <form onSubmit={onSubmit} className="space-y-5">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div>
                         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -165,6 +170,7 @@ export default function Contact() {
                           className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-navy focus:border-transparent"
                           placeholder="Your full name"
                         />
+                        <ValidationError prefix="Name" field="name" errors={state.errors} className="text-red-600 text-sm mt-1" />
                       </div>
 
                       <div>
@@ -179,6 +185,7 @@ export default function Contact() {
                           className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-navy focus:border-transparent"
                           placeholder="04XX XXX XXX"
                         />
+                        <ValidationError prefix="Phone" field="phone" errors={state.errors} className="text-red-600 text-sm mt-1" />
                       </div>
                     </div>
 
@@ -193,6 +200,7 @@ export default function Contact() {
                         className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-navy focus:border-transparent"
                         placeholder="Your company name"
                       />
+                      <ValidationError prefix="Company" field="company" errors={state.errors} className="text-red-600 text-sm mt-1" />
                     </div>
 
                     <div>
@@ -206,14 +214,19 @@ export default function Contact() {
                         className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-navy focus:border-transparent resize-y"
                         placeholder="Tell us about your campaign: target suburbs, quantity, timing..."
                       />
+                      <ValidationError prefix="Message" field="message" errors={state.errors} className="text-red-600 text-sm mt-1" />
                     </div>
+
+                    {state.errors && (
+                      <ValidationError errors={state.errors} className="text-red-600 text-sm" />
+                    )}
 
                     <button
                       type="submit"
-                      disabled={sending}
+                      disabled={state.submitting}
                       className="w-full bg-cta text-white font-semibold py-3 rounded transition-all duration-200 hover:bg-cta-hover hover:scale-[1.02] disabled:opacity-50"
                     >
-                      {sending ? "Opening WhatsApp..." : "Send via WhatsApp"}
+                      {state.submitting ? "Sending..." : "Send Message"}
                     </button>
                   </form>
                 )}
