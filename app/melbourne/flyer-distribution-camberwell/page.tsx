@@ -127,11 +127,6 @@ export default function Camberwell() {
           Shops around the Junction draw from the surrounding blocks, so a 1,000 to 2,500 flyer drop there is a
           sensible first test before covering more of the suburb.
         </p>
-        <p>
-          Whether you search for letterbox drop Camberwell, letterbox distribution Camberwell, leaflet
-          distribution Camberwell or pamphlet delivery Camberwell, you&rsquo;ll land on the same service:
-          exclusive delivery, GPS-tracked.
-        </p>
       </Section>
 
       <Section title="Camberwell Junction and the Grammar schools" tone="gray">

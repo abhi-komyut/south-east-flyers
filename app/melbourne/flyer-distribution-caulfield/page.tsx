@@ -128,11 +128,6 @@ export default function Caulfield() {
           Because the suburb is small, many businesses skip testing a pocket and go straight to a full-suburb
           drop rather than splitting the run into stages.
         </p>
-        <p>
-          Whether you search for letterbox drop Caulfield, letterbox distribution Caulfield, leaflet
-          distribution Caulfield or pamphlet delivery Caulfield, you&rsquo;ll land on the same service:
-          exclusive delivery, GPS-tracked.
-        </p>
       </Section>
 
       <Section title="Racecourse and university timing" tone="gray">

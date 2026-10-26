@@ -127,11 +127,6 @@ export default function Hawthorn() {
           We plan each route around this. If your offer suits students, we focus on the station end; if it
           suits homeowners, we focus on the house streets.
         </p>
-        <p>
-          Whether you search for letterbox drop Hawthorn, letterbox distribution Hawthorn, leaflet
-          distribution Hawthorn or pamphlet delivery Hawthorn, you&rsquo;ll land on the same service:
-          exclusive delivery, GPS-tracked.
-        </p>
       </Section>
 
       <Section title="Glenferrie Road trade and Scotch College" tone="gray">

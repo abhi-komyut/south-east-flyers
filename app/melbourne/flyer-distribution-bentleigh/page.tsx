@@ -126,11 +126,6 @@ export default function Bentleigh() {
           Shops along Centre Road draw from the blocks within walking distance, so a 1,000 to 2,500 flyer drop
           around the strip is a sensible first test before covering more of the suburb.
         </p>
-        <p>
-          Whether you search for letterbox drop Bentleigh, letterbox distribution Bentleigh, leaflet
-          distribution Bentleigh or pamphlet delivery Bentleigh, you&rsquo;ll land on the same service:
-          exclusive delivery, GPS-tracked.
-        </p>
       </Section>
 
       <Section title="Centre Road trade and the family market" tone="gray">

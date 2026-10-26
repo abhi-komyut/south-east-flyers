@@ -114,11 +114,6 @@ export default function StKilda() {
           This means a St Kilda quote is about the reachable letterboxes on your chosen streets, not a simple
           multiple of homes. We tell you the real number before you commit to a run.
         </p>
-        <p>
-          Whether you search for letterbox drop St Kilda, letterbox distribution St Kilda, leaflet
-          distribution St Kilda or pamphlet delivery St Kilda, you&rsquo;ll land on the same service: exclusive
-          delivery, GPS-tracked.
-        </p>
       </Section>
 
       <Section title="A renter suburb with regular turnover">
