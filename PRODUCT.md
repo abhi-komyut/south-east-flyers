@@ -27,13 +27,13 @@ Confident local operator. Not corporate, not a tech startup, not a bargain-bin c
 ## Reference point
 No single named reference site. Trust judgment: closer to a premium local trade/services brand (think: the quality bar of a well-run boutique real estate agency's site, not a logistics SaaS) than to any tech product.
 
-## Design principles already committed this session (treat as existing system, don't relitigate)
-- Primary brand color: teal `#069494` (`--color-navy` token name is historical, value is teal).
+## Design principles (see DESIGN.md for the full token/type/spacing system)
+- Primary brand color: teal `#046B6B` (`--color-navy` token name is historical, value is teal). Full palette — `teal-deep`, `ink`, `body`, `muted`, `beige`, `orange`, `orange-hover`, `orange-on-dark`, `required`, `field-border`, `line` — lives in `DESIGN.md`, sourced from the October 2026 redesign.
 - Secondary: true beige `#EDE4D3` (`--color-cream` token), used as section background, not as pure off-white.
-- CTA/accent: orange `#E97B1F`.
-- Headings: Montserrat (sans, confident/geometric). Body: Roboto Slab (slab serif — deliberate "craft/local-trade" pairing, contrast axis against the sans heading). Display accent: Lora (serif, used selectively on CTA-banner headings and the homepage H1 for a touch of editorial warmth).
-- WCAG AA contrast is non-negotiable: opacity-based white (`white/70`–`/85`) on teal backgrounds, not fixed gray shades.
-- No side-stripe borders, no gradient text, no glassmorphism, no identical card grids as default, no tiny uppercase eyebrow kickers repeated per section, no numbered 01/02/03 scaffolding unless a section is a genuine sequence (the homepage "How it works" 4-step list legitimately is one).
+- CTA/accent: orange `#E97B1F`. CTA text is `ink` on orange, never white (white on `#E97B1F` is 2.9:1, fails WCAG AA).
+- Headings: Montserrat (sans, confident/geometric). Body: Roboto Slab (slab serif — deliberate "craft/local-trade" pairing, contrast axis against the sans heading). Display accent: Lora (serif, used for H1s and section H2s).
+- WCAG AA contrast is non-negotiable: opacity-based white (`white/80`–`/85`) on teal backgrounds, not fixed gray shades.
+- No em dashes in copy, no side-stripe borders, no gradient text, no glassmorphism, no identical card grids as default, no tiny uppercase eyebrow kickers repeated per section, no numbered 01/02/03 scaffolding unless a section is a genuine sequence, no animated counters that render "0" to crawlers.
 
 ## Accessibility
 WCAG AA minimum. Skip-to-content link present. Visible focus states required on all interactive elements. This audience includes older trade-business owners on varied devices — legibility and obvious affordances matter more than cleverness.

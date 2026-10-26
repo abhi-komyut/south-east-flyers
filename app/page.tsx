@@ -4,6 +4,7 @@ import LogoSlider from "./components/LogoSlider";
 import CountUp from "./components/CountUp";
 import QuickQuoteForm from "./components/QuickQuoteForm";
 import FAQ from "./components/FAQ";
+import Reveal from "./components/Reveal";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -111,14 +112,14 @@ export default function Home() {
       {/* Our Distributors */}
       <section className="border-t border-gray-200 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
+          <Reveal className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Our Team on the Ground</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Professional walkers and e-bike distributors covering Melbourne&rsquo;s south-east and eastern suburbs every day.
             </p>
-          </div>
+          </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="relative rounded-xl overflow-hidden aspect-[4/3] group">
+            <Reveal delay={0} className="relative rounded-xl overflow-hidden aspect-[4/3] group">
               <Image
                 src="/walker-1.png"
                 alt="E-bike flyer distribution"
@@ -130,8 +131,8 @@ export default function Home() {
                 <p className="text-white font-semibold text-sm">E-Bike Distribution</p>
                 <p className="text-white/70 text-xs">Fast, eco-friendly suburb coverage</p>
               </div>
-            </div>
-            <div className="relative rounded-xl overflow-hidden aspect-[4/3] group">
+            </Reveal>
+            <Reveal delay={100} className="relative rounded-xl overflow-hidden aspect-[4/3] group">
               <Image
                 src="/walker-2.png"
                 alt="Flyer distributor on foot"
@@ -143,8 +144,8 @@ export default function Home() {
                 <p className="text-white font-semibold text-sm">On-Foot Walkers</p>
                 <p className="text-white/70 text-xs">Thorough, street-by-street delivery</p>
               </div>
-            </div>
-            <div className="relative rounded-xl overflow-hidden aspect-[4/3] group">
+            </Reveal>
+            <Reveal delay={200} className="relative rounded-xl overflow-hidden aspect-[4/3] group">
               <Image
                 src="/walker-3.png"
                 alt="Flyer distribution team"
@@ -156,61 +157,74 @@ export default function Home() {
                 <p className="text-white font-semibold text-sm">Team Operations</p>
                 <p className="text-white/70 text-xs">Coordinated daily campaigns</p>
               </div>
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>
 
       {/* Services */}
-      <section className="border-t border-gray-200 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Letterbox Distribution Services</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8">
-            <ServiceCard
-              title="Targeted Flyer Distribution"
-              description="Suburb-level leaflet distribution using demographic data to reach the right households across Melbourne."
-              image="/service-targeted.png"
-              imageAlt="Melbourne suburb targeting map"
-            />
-            <ServiceCard
-              title="GPS Tracked Drops"
-              description="Every letterbox drop is tracked via the Strava app with full reporting so you know exactly where your flyers and pamphlets were delivered."
-              image="/service-gps.avif"
-              imageAlt="GPS route tracking map"
-            />
-          </div>
+      <section className="border-t border-gray-200 py-20 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-14">
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-black">Letterbox Distribution Services</h2>
+          </Reveal>
         </div>
+
+        <ServiceFeature
+          eyebrow="Suburb-level targeting"
+          title="Targeted Flyer Distribution"
+          description="Suburb-level leaflet distribution using demographic data to reach the right households across Melbourne."
+          image="/service-targeted.png"
+          imageAlt="Melbourne suburb targeting map"
+        />
+        <ServiceFeature
+          eyebrow="Every run, verified"
+          title="GPS Tracked Drops"
+          description="Every letterbox drop is tracked via the Strava app with full reporting so you know exactly where your flyers and pamphlets were delivered."
+          image="/service-gps.avif"
+          imageAlt="GPS route tracking map"
+          reverse
+        />
       </section>
 
       {/* Why Choose Us */}
       <section className="bg-cream py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Why Choose Us</h2>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            <WhyCard
-              icon="pin"
-              title="GPS-Tracked Every Drop"
-              description="Real-time tracking on every delivery run with detailed route reporting."
-            />
-            <WhyCard
-              icon="shield"
-              title="No Junk Mail Compliant"
-              description="We respect every 'No Junk Mail' sign, which keeps your brand reputable."
-            />
-            <WhyCard
-              icon="clock"
-              title="48hr Turnaround Available"
-              description="Fast campaign deployment when you need to move quickly."
-            />
-            <WhyCard
-              icon="chart"
-              title="Campaign Reporting"
-              description="Detailed reports on drops completed, areas covered, and delivery proof."
-            />
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-12">Why Choose Us</h2>
+          </Reveal>
+          <div className="space-y-5 sm:space-y-6">
+            <Reveal>
+              <WhyFeature
+                icon="pin"
+                title="GPS-Tracked Every Drop"
+                description="Real-time tracking on every delivery run, with a detailed route report so you can see exactly which streets were covered before you pay for the next one."
+                featured
+              />
+            </Reveal>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6">
+              <Reveal delay={80}>
+                <WhyFeature
+                  icon="shield"
+                  title="No Junk Mail Compliant"
+                  description="We respect every 'No Junk Mail' sign, which keeps your brand reputable."
+                />
+              </Reveal>
+              <Reveal delay={160}>
+                <WhyFeature
+                  icon="clock"
+                  title="48hr Turnaround Available"
+                  description="Fast campaign deployment when you need to move quickly."
+                />
+              </Reveal>
+              <Reveal delay={240}>
+                <WhyFeature
+                  icon="chart"
+                  title="Campaign Reporting"
+                  description="Detailed reports on drops completed, areas covered, and delivery proof."
+                />
+              </Reveal>
+            </div>
           </div>
         </div>
       </section>
@@ -219,13 +233,15 @@ export default function Home() {
       {/* Where we deliver and who for: internal links to hubs, suburbs and pricing */}
       <section className="py-16 sm:py-20 bg-white border-t border-gray-200">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4 text-center">
-            Local flyer distribution across Melbourne&rsquo;s south-east
-          </h2>
-          <p className="text-gray-600 text-center max-w-2xl mx-auto mb-10">
-            Our flyer distribution in Melbourne covers the bayside, inner-south and eastern suburbs on foot and by
-            e-bike, for $200 per 1,000 flyers.
-          </p>
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4 text-center">
+              Local flyer distribution across Melbourne&rsquo;s south-east
+            </h2>
+            <p className="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+              Our flyer distribution in Melbourne covers the bayside, inner-south and eastern suburbs on foot and by
+              e-bike, for $200 per 1,000 flyers.
+            </p>
+          </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
             <div>
               <h3 className="font-semibold text-black mb-3">Suburbs</h3>
@@ -261,7 +277,7 @@ export default function Home() {
 
       {/* CTA Banner */}
       <section className="bg-navy py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-display">
             Ready to start your letterbox campaign?
           </h2>
@@ -275,34 +291,61 @@ export default function Home() {
           >
             Get a Free Quote
           </Link>
-        </div>
+        </Reveal>
       </section>
     </>
   );
 }
 
-function ServiceCard({ title, description, image, imageAlt }: { title: string; description: string; image?: string; imageAlt?: string }) {
+function ServiceFeature({
+  eyebrow,
+  title,
+  description,
+  image,
+  imageAlt,
+  reverse = false,
+}: {
+  eyebrow: string;
+  title: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+  reverse?: boolean;
+}) {
   return (
-    <div className="group rounded-lg overflow-hidden bg-white shadow-[0_1px_2px_rgba(10,10,10,0.06)] transition-shadow duration-300 hover:shadow-[0_12px_32px_rgba(27,58,107,0.14)]">
-      {image && (
-        <div className="relative aspect-[16/9] overflow-hidden">
-          <Image
-            src={image}
-            alt={imageAlt || title}
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-          />
+    <div className={`grid grid-cols-1 lg:grid-cols-2 items-stretch ${reverse ? "lg:[&>*:first-child]:order-2" : ""}`}>
+      <Reveal className="relative aspect-[4/3] lg:aspect-auto overflow-hidden group">
+        <Image
+          src={image}
+          alt={imageAlt}
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+        />
+      </Reveal>
+      <Reveal delay={100} className="flex items-center bg-white">
+        <div className="max-w-md px-6 py-12 sm:px-12 sm:py-16 lg:px-16 mx-auto lg:mx-0">
+          <span className="inline-block text-xs font-semibold text-navy bg-navy/10 rounded px-2.5 py-1 mb-4">
+            {eyebrow}
+          </span>
+          <h3 className="text-2xl sm:text-3xl font-bold text-black mb-3 font-display">{title}</h3>
+          <p className="text-gray-600 leading-relaxed">{description}</p>
         </div>
-      )}
-      <div className="p-5 sm:p-8">
-        <h3 className="text-lg font-semibold text-black mb-2">{title}</h3>
-        <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
-      </div>
+      </Reveal>
     </div>
   );
 }
 
-function WhyCard({ icon, title, description }: { icon: string; title: string; description: string }) {
+function WhyFeature({
+  icon,
+  title,
+  description,
+  featured = false,
+}: {
+  icon: string;
+  title: string;
+  description: string;
+  featured?: boolean;
+}) {
   const icons: Record<string, React.ReactNode> = {
     pin: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -326,6 +369,20 @@ function WhyCard({ icon, title, description }: { icon: string; title: string; de
       </svg>
     ),
   };
+
+  if (featured) {
+    return (
+      <div className="group bg-navy rounded-lg p-6 sm:p-10 flex flex-col sm:flex-row items-start sm:items-center gap-6 transition-shadow duration-300 hover:shadow-[0_16px_40px_rgba(4,107,107,0.35)]">
+        <div className="w-16 h-16 rounded-full bg-white/10 text-white shrink-0 flex items-center justify-center transition-colors duration-300 group-hover:bg-cta group-hover:text-white">
+          {icons[icon]}
+        </div>
+        <div>
+          <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 font-display">{title}</h3>
+          <p className="text-white/85 leading-relaxed max-w-xl">{description}</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="group bg-white rounded-lg p-6 text-center shadow-[0_1px_2px_rgba(10,10,10,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(27,58,107,0.14)]">

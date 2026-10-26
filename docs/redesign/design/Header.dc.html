@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<title>Site header</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&amp;family=Montserrat:wght@500;600;700&amp;family=Roboto+Slab:wght@400;500&amp;display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<header style="position: relative; z-index: 3; background: #FFFFFF; border-bottom: 1px solid rgba(16,48,47,0.08); font-family: 'Roboto Slab', Georgia, serif; color: #10302F">
+<div style="max-width: 1240px; margin: 0 auto; padding: 14px clamp(20px, 4vw, 48px); display: flex; align-items: center; gap: 28px; min-height: 76px; box-sizing: border-box">
+<a href="https://www.southeastflyers.com.au/" aria-label="South East Flyers home" style="display: flex; align-items: center; flex-shrink: 0">
+<img src="/_blob/9667249954ab9b0e1fc4945821bff009" alt="South East Flyers and Marketing Solutions" style="height: 42px; width: auto; display: block">
+</a>
+<nav class="navlinks" aria-label="Main" style="display: flex; gap: 26px; align-items: center; font-family: Montserrat, sans-serif; font-size: 14px; font-weight: 600; margin-left: 12px">
+<a class="navlink" href="https://www.southeastflyers.com.au/services/flyer-distribution" style="color: #10302F; text-decoration: none">Services</a>
+<a class="navlink" href="https://www.southeastflyers.com.au/melbourne/flyer-distribution-melbourne" style="color: #10302F; text-decoration: none">Suburbs</a>
+<a class="navlink" href="https://www.southeastflyers.com.au/industries" style="color: #10302F; text-decoration: none">Industries</a>
+<a class="navlink" href="https://www.southeastflyers.com.au/letterbox-drop-cost" style="color: #10302F; text-decoration: none">Pricing</a>
+<a class="navlink" href="https://www.southeastflyers.com.au/portfolio" style="color: #10302F; text-decoration: none">Our clients</a>
+<a class="navlink" href="https://www.southeastflyers.com.au/blog" style="color: #10302F; text-decoration: none">Blog</a>
+</nav>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 18px">
+<a class="hide-sm navlink" href="tel:0402824070" style="display: flex; align-items: center; gap: 8px; color: #10302F; text-decoration: none; font-family: Montserrat, sans-serif; font-weight: 600; font-size: 14px; font-variant-numeric: tabular-nums">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#046B6B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"></path></svg>
+0402 824 070
+</a>
+<a class="btn btn-cta" href="https://www.southeastflyers.com.au/contact" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; border-radius: 999px; background: #E97B1F; color: #10302F; text-decoration: none; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 14px; white-space: nowrap">Get a free quote</a>
+<button class="menubtn" type="button" onClick="{{toggle}}" aria-expanded="{{expanded}}" aria-controls="mobile-nav" aria-label="Menu" style="align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; border: 1px solid #A9B5B4; background: #FFFFFF; color: #10302F; cursor: pointer; padding: 0">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="{{iconPath}}"></path></svg>
+</button>
+</div>
+</div>
+<sc-if value="{{open}}" hint-placeholder-val="{{false}}">
+<nav id="mobile-nav" aria-label="Main" style="border-top: 1px solid rgba(16,48,47,0.08); padding: 8px clamp(20px, 4vw, 48px) 20px; display: flex; flex-direction: column; font-family: Montserrat, sans-serif; font-size: 17px; font-weight: 600">
+<a href="https://www.southeastflyers.com.au/services/flyer-distribution" style="color: #10302F; text-decoration: none; padding: 12px 0; min-height: 44px">Services</a>
+<a href="https://www.southeastflyers.com.au/melbourne/flyer-distribution-melbourne" style="color: #10302F; text-decoration: none; padding: 12px 0; min-height: 44px">Suburbs</a>
+<a href="https://www.southeastflyers.com.au/industries" style="color: #10302F; text-decoration: none; padding: 12px 0; min-height: 44px">Industries</a>
+<a href="https://www.southeastflyers.com.au/letterbox-drop-cost" style="color: #10302F; text-decoration: none; padding: 12px 0; min-height: 44px">Pricing</a>
+<a href="https://www.southeastflyers.com.au/portfolio" style="color: #10302F; text-decoration: none; padding: 12px 0; min-height: 44px">Our clients</a>
+<a href="https://www.southeastflyers.com.au/blog" style="color: #10302F; text-decoration: none; padding: 12px 0; min-height: 44px">Blog</a>
+<a href="tel:0402824070" style="color: #046B6B; text-decoration: none; padding: 12px 0; min-height: 44px; font-variant-numeric: tabular-nums">Call 0402 824 070</a>
+</nav>
+</sc-if>
+</header>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":77}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { open: false };
+  }
+  renderVals() {
+    const open = this.state.open;
+    return {
+      open: open,
+      expanded: open ? 'true' : 'false',
+      iconPath: open ? 'M6 6l12 12M18 6L6 18' : 'M4 7h16M4 12h16M4 17h16',
+      toggle: () => this.setState({ open: !open })
+    };
+  }
+}
+</script>
+</body>
+</html>

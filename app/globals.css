@@ -3,8 +3,16 @@
 @theme inline {
   --color-navy: #046B6B;
   --color-navy-light: #0E8F8F;
+  --color-teal-deep: #053F3F;
+  --color-ink: #10302F;
+  --color-body: #3E5251;
+  --color-muted: #4B5E5D;
   --color-cta: #E97B1F;
-  --color-cta-hover: #D16A12;
+  --color-cta-hover: #F2913F;
+  --color-cta-on-dark: #F2A462;
+  --color-required: #B4540A;
+  --color-field-border: #A9B5B4;
+  --color-line: rgba(16, 48, 47, 0.12);
   --color-cream: #EDE4D3;
   --color-black: #0A0A0A;
   --color-white: #FFFFFF;
@@ -19,17 +27,95 @@
   --font-sans: var(--font-roboto-slab);
   --font-heading: var(--font-montserrat);
   --font-display: var(--font-lora);
+  --radius-card: 14px;
+  --radius-input: 10px;
 }
 
 @layer base {
   body {
     background: var(--color-white);
-    color: var(--color-black);
+    color: var(--color-ink);
     font-family: var(--font-sans), Georgia, serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading), Arial, Helvetica, sans-serif;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+.press {
+  transition: transform 0.16s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.press:active {
+  transform: scale(0.97);
+}
+@media (prefers-reduced-motion: reduce) {
+  .press:active {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.accordion-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.accordion-panel.is-open {
+  grid-template-rows: 1fr;
+}
+.accordion-panel > div {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.dropdown-panel {
+  opacity: 0;
+  transform: translateY(-6px) scale(0.98);
+  pointer-events: none;
+  transition: opacity 0.18s ease-out, transform 0.18s ease-out;
+}
+.group:hover .dropdown-panel,
+.group:focus-within .dropdown-panel {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.mobile-menu-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.mobile-menu-panel.is-open {
+  grid-template-rows: 1fr;
+}
+.mobile-menu-panel > div {
+  overflow: hidden;
+  min-height: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dropdown-panel,
+  .mobile-menu-panel,
+  .accordion-panel {
+    transition: none;
   }
 }
 

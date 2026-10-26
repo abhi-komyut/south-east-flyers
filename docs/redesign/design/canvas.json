@@ -1,0 +1,32 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "Main.dc.html": {"expand": "fill", "h": 7503, "is_interactive": true, "title": "Homepage (desktop, responsive)", "w": 8000, "x": -3666, "y": -103, "page": "home"},
+    "Service.dc.html": {"expand": "fill", "h": 5600, "title": "Service page (Flyer distribution)", "w": 1440, "x": 0, "y": 0, "page": "service"},
+    "Suburb.dc.html": {"expand": "fill", "h": 6900, "title": "Suburb page (Brighton)", "w": 1440, "x": 0, "y": 0, "page": "suburb"},
+    "Industry.dc.html": {"expand": "fill", "h": 7300, "title": "Industry page (Real estate)", "w": 1440, "x": 0, "y": 0, "page": "industry"},
+    "Pricing.dc.html": {"expand": "fill", "h": 6600, "is_interactive": true, "title": "Pricing (Letterbox drop cost)", "w": 1440, "x": 0, "y": 0, "page": "pricing"},
+    "Contact.dc.html": {"expand": "fill", "h": 1900, "is_interactive": true, "title": "Contact", "w": 1440, "x": 0, "y": 0, "page": "contact"},
+    "Clients.dc.html": {"expand": "fill", "h": 4300, "is_interactive": true, "title": "Our clients", "w": 1440, "x": 0, "y": 0, "page": "clients"},
+    "Header.dc.html": {"expand": "fill", "h": 77, "is_interactive": true, "title": "Shared: header", "w": 1440, "x": 0, "y": 0, "page": "shared"},
+    "QuoteBand.dc.html": {"expand": "fill", "h": 760, "is_interactive": true, "title": "Shared: quote form band", "w": 1440, "x": 0, "y": 317, "page": "shared"},
+    "Footer.dc.html": {"expand": "fill", "h": 440, "title": "Shared: footer", "w": 1440, "x": 0, "y": 1317, "page": "shared"}
+  },
+  "createdOnFiles": {"at": "2026-10-26T08:15:00Z", "v": 1},
+  "designSystems": [],
+  "launch": {"view": "canvas", "page": "home"},
+  "notes": {},
+  "order": ["Main.dc.html", "Header.dc.html", "QuoteBand.dc.html", "Footer.dc.html", "Service.dc.html", "Suburb.dc.html", "Industry.dc.html", "Pricing.dc.html", "Contact.dc.html", "Clients.dc.html"],
+  "pages": [
+    {"id": "home", "name": "Homepage"},
+    {"id": "service", "name": "Service"},
+    {"id": "suburb", "name": "Suburb"},
+    {"id": "industry", "name": "Industry"},
+    {"id": "pricing", "name": "Pricing"},
+    {"id": "contact", "name": "Contact"},
+    {"id": "clients", "name": "Our clients"},
+    {"id": "shared", "name": "Shared sections"}
+  ],
+  "title": "South East Flyers Homepage Redesign"
+}

@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<title>Flyer distribution service page</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&amp;family=Montserrat:wght@500;600;700&amp;family=Roboto+Slab:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#FFFFFF;color:#10302F;font-family:'Roboto Slab',Georgia,serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#046B6B}a:hover{color:#053F3F}
+h1,h2,h3{text-wrap:balance}
+p{text-wrap:pretty}
+.btn{transition:transform 160ms cubic-bezier(0.23,1,0.32,1),background-color 200ms ease,color 200ms ease}
+.btn:active{transform:scale(0.97)}
+.arrow{transition:transform 200ms cubic-bezier(0.23,1,0.32,1)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #E97B1F;outline-offset:3px}
+@media (hover:hover) and (pointer:fine){.btn-cta:hover{background:#F2913F !important}.btn-ghost:hover{background:rgba(255,255,255,0.12) !important}.navlink:hover{color:#046B6B !important}.more:hover .arrow{transform:translateX(4px) !important}}
+.menubtn{display:none}
+@media (max-width:980px){.navlinks{display:none}.menubtn{display:inline-flex}}
+@media (max-width:640px){.hide-sm{display:none}}
+@media (prefers-reduced-motion:reduce){.btn,.arrow{transition:none}.btn:active{transform:none}}
+</style>
+</helmet>
+
+<div style="background: #FFFFFF; color: #10302F; overflow-x: hidden">
+<dc-import name="Header" hint-size="100%,77px"></dc-import>
+
+<section aria-labelledby="page-title" style="display: flex; flex-wrap: wrap; background: #053F3F; color: #FFFFFF">
+<div style="flex: 1 1 560px; display: flex; justify-content: flex-end; padding: 40px clamp(20px, 4vw, 64px) clamp(72px, 8vw, 112px) clamp(20px, 4vw, 48px)">
+<div style="width: 100%; max-width: 600px; display: flex; flex-direction: column; gap: 24px">
+<nav aria-label="Breadcrumb" style="font-family: Montserrat, sans-serif; font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.75); display: flex; gap: 8px; flex-wrap: wrap">
+<a href="https://www.southeastflyers.com.au/" style="color: rgba(255,255,255,0.75)">Home</a><span aria-hidden="true">/</span><span aria-current="page" style="color: #FFFFFF">Flyer distribution</span>
+</nav>
+<h1 id="page-title" style="margin: 32px 0 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: clamp(40px, 4.6vw, 64px); line-height: 1.06; letter-spacing: -0.02em">Professional flyer distribution</h1>
+<p style="margin: 0; font-size: clamp(17px, 1.4vw, 19px); line-height: 1.65; color: rgba(255,255,255,0.85); max-width: 520px">Residential flyer and leaflet distribution across Melbourne's south-east and eastern suburbs, with GPS tracking and full campaign reporting.</p>
+<p style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 600; font-size: 16px; color: #F2A462">You provide the flyers. We handle the distribution.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 14px 18px; margin-top: 4px">
+<a class="btn btn-cta" href="https://www.southeastflyers.com.au/contact" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 30px; border-radius: 999px; background: #E97B1F; color: #10302F; text-decoration: none; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 16px">Get a free quote</a>
+<a class="btn btn-ghost" href="tel:0402824070" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 26px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.55); color: #FFFFFF; text-decoration: none; font-family: Montserrat, sans-serif; font-weight: 600; font-size: 16px; font-variant-numeric: tabular-nums">Call 0402 824 070</a>
+</div>
+</div>
+</div>
+<div style="flex: 1 1 480px; position: relative; min-height: clamp(320px, 40vw, 600px)">
+<img fetchpriority="high" src="/_blob/b1c01a59118f52fd914e23210d1eefd0" alt="A hand posting a flyer into a steel letterbox" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%">
+</div>
+</section>
+
+<section aria-labelledby="what-title" style="padding: clamp(80px, 9vw, 128px) clamp(20px, 4vw, 48px)">
+<div style="max-width: 1144px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 32px 88px">
+<h2 id="what-title" style="flex: 1 1 300px; margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: clamp(32px, 3.4vw, 46px); line-height: 1.1; letter-spacing: -0.015em">What is flyer distribution?</h2>
+<div style="flex: 1.7 1 480px; display: flex; flex-direction: column; gap: 20px">
+<p style="margin: 0; font-size: clamp(19px, 1.6vw, 22px); line-height: 1.6; color: #10302F">Flyer distribution is the physical delivery of your printed marketing material, whether flyers, leaflets, pamphlets or brochures, straight into residential letterboxes.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.75; color: #3E5251">It puts your offer in front of local households in the specific suburbs you choose, without competing for attention in a crowded digital feed.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.75; color: #3E5251">South East Flyers handles the distribution end to end. You supply the flyers; we plan the routes, deliver them across your target area, track each run and report back on where they went. The minimum campaign is 1,000 flyers, scaling up for metro-wide pushes across <a href="https://www.southeastflyers.com.au/melbourne/flyer-distribution-melbourne">Melbourne</a>'s south-east and eastern suburbs.</p>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="how-title" style="background: #053F3F; color: #FFFFFF; padding: clamp(80px, 9vw, 120px) clamp(20px, 4vw, 48px)">
+<div style="max-width: 1144px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px">
+<h2 id="how-title" style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: clamp(32px, 3.4vw, 46px); line-height: 1.1; letter-spacing: -0.015em">How flyer distribution works</h2>
+<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 40px 32px">
+<li style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 14px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,0.22)">
+<span style="font-family: Lora, Georgia, serif; font-size: 22px; color: #F2A462">01</span>
+<h3 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 600; font-size: 19px">You provide the flyers</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.65; color: rgba(255,255,255,0.8)">You supply your printed flyers, leaflets, pamphlets or brochures. We're a distribution specialist: we don't print, we deliver.</p>
+</li>
+<li style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 14px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,0.22)">
+<span style="font-family: Lora, Georgia, serif; font-size: 22px; color: #F2A462">02</span>
+<h3 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 600; font-size: 19px">We plan the campaign</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.65; color: rgba(255,255,255,0.8)">We agree on your target suburbs, confirm quantities and map the walking and e-bike routes that cover them.</p>
+</li>
+<li style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 14px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,0.22)">
+<span style="font-family: Lora, Georgia, serif; font-size: 22px; color: #F2A462">03</span>
+<h3 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 600; font-size: 19px">Our team distributes</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.65; color: rgba(255,255,255,0.8)">On-foot walkers and e-bike distributors deliver door to door, one flyer per letterbox, skipping every "No Junk Mail" sign.</p>
+</li>
+<li style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 14px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,0.22)">
+<span style="font-family: Lora, Georgia, serif; font-size: 22px; color: #F2A462">04</span>
+<h3 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 600; font-size: 19px">You get tracking and a report</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.65; color: rgba(255,255,255,0.8)">Runs are tracked via the Strava app and you receive a report showing the streets covered and letterboxes delivered to.</p>
+</li>
+</ol>
+</div>
+</section>
+
+<section aria-labelledby="get-title" style="padding: clamp(80px, 9vw, 128px) clamp(20px, 4vw, 48px)">
+<div style="max-width: 1144px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 48px 88px; align-items: stretch">
+<div style="flex: 1 1 400px; border-radius: 14px; overflow: hidden; min-height: 460px">
+<img loading="lazy" src="/_blob/7efa8c46755bef6cf95a67d088ee8ee4" alt="An e-bike distributor stopping at a letterbox on a residential street" style="width: 100%; height: 100%; object-fit: cover; display: block">
+</div>
+<div style="flex: 1.15 1 440px; display: flex; flex-direction: column; gap: 34px; justify-content: center">
+<h2 id="get-title" style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: clamp(32px, 3.4vw, 46px); line-height: 1.1; letter-spacing: -0.015em">What you get</h2>
+<dl style="margin: 0; display: flex; flex-direction: column; gap: 26px">
+<div style="display: flex; gap: 18px">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#046B6B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"></path></svg>
+<div><dt style="font-family: Montserrat, sans-serif; font-weight: 600; font-size: 18px; margin-bottom: 6px">Residential delivery</dt><dd style="margin: 0; font-size: 16px; line-height: 1.65; color: #3E5251">Your flyers go directly into household letterboxes across the suburbs you choose, the places your local customers actually live.</dd></div>
+</div>
+<div style="display: flex; gap: 18px">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#046B6B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 8h8M8 12h8M8 16h5"></path></svg>
+<div><dt style="font-family: Montserrat, sans-serif; font-weight: 600; font-size: 18px; margin-bottom: 6px">Delivered individually</dt><dd style="margin: 0; font-size: 16px; line-height: 1.65; color: #3E5251">We never bundle your flyer with other advertising. Each one is delivered on its own so it gets maximum attention.</dd></div>
+</div>
+<div style="display: flex; gap: 18px">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#046B6B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6z"></path><path d="m9 12 2 2 4-4"></path></svg>
+<div><dt style="font-family: Montserrat, sans-serif; font-weight: 600; font-size: 18px; margin-bottom: 6px">No Junk Mail compliant</dt><dd style="margin: 0; font-size: 16px; line-height: 1.65; color: #3E5251">We respect every "No Junk Mail" and "No Advertising Material" sign, protecting your brand's reputation.</dd></div>
+</div>
+<div style="display: flex; gap: 18px">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#046B6B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>
+<div><dt style="font-family: Montserrat, sans-serif; font-weight: 600; font-size: 18px; margin-bottom: 6px">GPS tracking and reporting</dt><dd style="margin: 0; font-size: 16px; line-height: 1.65; color: #3E5251">Every distribution run is tracked in real time via Strava, with a route report provided once your campaign is complete.</dd></div>
+</div>
+</dl>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="provide-title" style="padding: 0 clamp(20px, 4vw, 48px) clamp(80px, 9vw, 128px)">
+<div style="max-width: 1144px; margin: 0 auto; background: #EDE4D3; border-radius: 14px; padding: clamp(36px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 24px 72px">
+<h2 id="provide-title" style="flex: 1 1 280px; margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: clamp(28px, 2.8vw, 38px); line-height: 1.15">What you need to provide</h2>
+<div style="flex: 1.7 1 440px; display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-size: 17px; line-height: 1.75; color: #3E5251">You provide the printed flyers and let us know which suburbs you want to reach, roughly how many flyers you have and when you'd like the campaign to run. If you're not sure how far your quantity will stretch, we'll help you work out a practical distribution area.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.75; color: #3E5251">Related services include <a href="https://www.southeastflyers.com.au/services/letterbox-distribution">letterbox distribution</a> and targeted suburb campaigns across <a href="https://www.southeastflyers.com.au/melbourne/flyer-distribution-melbourne">Melbourne</a>.</p>
+</div>
+</div>
+</section>
+
+<dc-import name="QuoteBand" heading="Ready to distribute your flyers?" lead="Tell us your target suburbs and flyer quantity for a free, no-obligation quote." hint-size="100%,760px"></dc-import>
+
+<section aria-labelledby="faq-title" style="padding: clamp(80px, 9vw, 128px) clamp(20px, 4vw, 48px)">
+<div style="max-width: 1144px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 48px 88px">
+<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 18px">
+<h2 id="faq-title" style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: clamp(32px, 3.4vw, 44px); line-height: 1.1; letter-spacing: -0.015em">Flyer distribution FAQs</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #3E5251">Common questions about our flyer distribution service.</p>
+</div>
+<dl style="flex: 1.6 1 480px; margin: 0; display: flex; flex-direction: column; gap: 30px">
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 26px; border-top: 1px solid rgba(16,48,47,0.12)">
+<dt style="font-family: Montserrat, sans-serif; font-weight: 600; font-size: 18px">What's the difference between flyer distribution and letterbox distribution?</dt>
+<dd style="margin: 0; font-size: 16px; line-height: 1.7; color: #3E5251">In practice they're the same thing: physically delivering your printed material into residential letterboxes. "Letterbox distribution" just emphasises the letterbox drop itself. We handle both, and most campaigns use the two terms interchangeably.</dd>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 26px; border-top: 1px solid rgba(16,48,47,0.12)">
+<dt style="font-family: Montserrat, sans-serif; font-weight: 600; font-size: 18px">Do you print the flyers?</dt>
+<dd style="margin: 0; font-size: 16px; line-height: 1.7; color: #3E5251">No. We're a distribution specialist, not a printer. You supply the printed flyers, leaflets or brochures and we get them into the right letterboxes across Melbourne's south-east and eastern suburbs.</dd>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 26px; border-top: 1px solid rgba(16,48,47,0.12)">
+<dt style="font-family: Montserrat, sans-serif; font-weight: 600; font-size: 18px">How much does flyer distribution cost?</dt>
+<dd style="margin: 0; font-size: 16px; line-height: 1.7; color: #3E5251">It depends on your quantity, the suburbs you're targeting and how spread out the delivery is, so we quote each campaign individually. Send us your target area and how many flyers you have and we'll come back with a clear price. The minimum campaign is 1,000 flyers.</dd>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 26px; border-top: 1px solid rgba(16,48,47,0.12)">
+<dt style="font-family: Montserrat, sans-serif; font-weight: 600; font-size: 18px">Are my flyers delivered individually or bundled with other ads?</dt>
+<dd style="margin: 0; font-size: 16px; line-height: 1.7; color: #3E5251">Individually. We have a strict anti-bundling policy, so your flyer is delivered on its own into each letterbox rather than stuffed in with a stack of other advertising, which means it actually gets noticed.</dd>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 26px; border-top: 1px solid rgba(16,48,47,0.12)">
+<dt style="font-family: Montserrat, sans-serif; font-weight: 600; font-size: 18px">How is the delivery tracked?</dt>
+<dd style="margin: 0; font-size: 16px; line-height: 1.7; color: #3E5251">Distributors record their routes in real time via the Strava app. Once the campaign is finished you get a report showing the streets covered and a map of the route.</dd>
+</div>
+</dl>
+</div>
+</section>
+
+<dc-import name="Footer" hint-size="100%,440px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":5600}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

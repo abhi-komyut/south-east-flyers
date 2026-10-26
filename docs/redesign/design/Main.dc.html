@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<title>South East Flyers homepage</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&amp;family=Montserrat:wght@500;600;700&amp;family=Roboto+Slab:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#FFFFFF;color:#10302F;font-family:'Roboto Slab',Georgia,serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#046B6B}a:hover{color:#053F3F}
+h1,h2,h3{text-wrap:balance}
+p{text-wrap:pretty}
+.btn{transition:transform 160ms cubic-bezier(0.23,1,0.32,1),background-color 200ms ease,color 200ms ease,box-shadow 200ms ease}
+.btn:active{transform:scale(0.97)}
+.lift{transition:transform 500ms cubic-bezier(0.23,1,0.32,1)}
+.arrow{transition:transform 200ms cubic-bezier(0.23,1,0.32,1)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #E97B1F;outline-offset:3px}
+input:focus,select:focus{border-color:#046B6B}
+@media (hover:hover) and (pointer:fine){
+.btn-cta:hover{background:#F2913F !important}
+.btn-ghost:hover{background:rgba(255,255,255,0.12) !important}
+.navlink:hover{color:#046B6B !important}
+.tile:hover .lift{transform:scale(1.035)}
+.more:hover .arrow{transform:translateX(4px)}
+}
+.menubtn{display:none}
+@media (max-width:980px){.navlinks{display:none}.menubtn{display:inline-flex}}
+@media (max-width:640px){.hide-sm{display:none}}
+@media (prefers-reduced-motion:reduce){.btn,.lift,.arrow{transition:none}.btn:active{transform:none}}
+</style>
+</helmet>
+
+<div style="background: #FFFFFF; color: #10302F; overflow-x: hidden">
+
+<dc-import name="Header" hint-size="100%,77px"></dc-import>
+
+<section aria-labelledby="hero-title" style="position: relative; display: flex; flex-wrap: wrap; color: #FFFFFF; background: #053F3F">
+<div style="flex: 1 1 560px; display: flex; justify-content: flex-end; padding: clamp(72px, 9vw, 120px) clamp(20px, 4vw, 64px) clamp(120px, 12vw, 168px) clamp(20px, 4vw, 48px)">
+<div style="width: 100%; max-width: 600px; display: flex; flex-direction: column; justify-content: center; gap: 26px">
+<p style="margin: 0; font-family: Montserrat, sans-serif; font-size: 16px; font-weight: 600; color: #F2A462">Letterbox distribution in Melbourne's south-east</p>
+<h1 id="hero-title" style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: clamp(42px, 4.8vw, 68px); line-height: 1.05; letter-spacing: -0.02em">Flyer distribution in Melbourne that actually gets read.</h1>
+<p style="margin: 0; font-size: clamp(17px, 1.4vw, 19px); line-height: 1.65; color: rgba(255,255,255,0.84); max-width: 500px">Every flyer goes in the letterbox on its own, never bundled. Every run is GPS-tracked, so you see the streets we covered.</p>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px; margin-top: 6px">
+<a class="btn btn-cta" href="https://www.southeastflyers.com.au/contact" style="display: inline-flex; align-items: center; gap: 10px; min-height: 54px; padding: 0 30px; border-radius: 999px; background: #E97B1F; color: #10302F; text-decoration: none; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 16px">Get a free quote
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+</a>
+<a class="btn btn-ghost" href="tel:0402824070" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 26px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.55); color: #FFFFFF; text-decoration: none; font-family: Montserrat, sans-serif; font-weight: 600; font-size: 16px; font-variant-numeric: tabular-nums">Call 0402 824 070</a>
+</div>
+</div>
+</div>
+<div style="flex: 1 1 520px; position: relative; min-height: clamp(380px, 52vw, 760px); overflow: hidden">
+<img fetchpriority="high" src="/_blob/435e8a047f99d21dc25823e5d7929d79" alt="A South East Flyers walker posting a flyer into a letterbox on a sunny Melbourne street" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 100% 55%">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(5,63,63,0.45) 0%, rgba(5,63,63,0) 10%)"></div>
+</div>
+</section>
+
+<section aria-label="At a glance" style="position: relative; z-index: 2; padding: 0 clamp(20px, 4vw, 48px)">
+<div style="max-width: 1144px; margin: -80px auto 0; background: #FFFFFF; border-radius: 14px; box-shadow: 0 24px 48px -28px rgba(4,60,60,0.45); display: flex; flex-wrap: wrap">
+<div style="flex: 1 1 240px; padding: 34px 34px 32px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: 38px; line-height: 1.1; color: #046B6B; font-variant-numeric: tabular-nums">$200</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4B5E5D">per 1,000 flyers delivered</p>
+</div>
+<div style="flex: 1 1 240px; padding: 34px 34px 32px; display: flex; flex-direction: column; gap: 6px; border-left: 1px solid rgba(16,48,47,0.1)">
+<p style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: 38px; line-height: 1.1; color: #046B6B; font-variant-numeric: tabular-nums">1,000</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4B5E5D">flyer minimum per campaign</p>
+</div>
+<div style="flex: 1 1 240px; padding: 34px 34px 32px; display: flex; flex-direction: column; gap: 6px; border-left: 1px solid rgba(16,48,47,0.1)">
+<p style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: 38px; line-height: 1.1; color: #046B6B">Never</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4B5E5D">bundled with other advertisers</p>
+</div>
+<div style="flex: 1 1 240px; padding: 34px 34px 32px; display: flex; flex-direction: column; gap: 6px; border-left: 1px solid rgba(16,48,47,0.1)">
+<p style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: 38px; line-height: 1.1; color: #046B6B; font-variant-numeric: tabular-nums">24 hrs</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4B5E5D">to a detailed, written quote</p>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="clients-title" style="padding: 88px clamp(20px, 4vw, 48px) 96px">
+<div style="max-width: 1144px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 40px">
+<h2 id="clients-title" style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 600; font-size: 15px; color: #4B5E5D; text-align: center">Trusted by Melbourne agencies, clinics and trades</h2>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 36px 64px; opacity: 0.82">
+<img loading="lazy" src="/_blob/d8183737c83834b725a610e504300370" alt="Marshall White" style="height: 18px; width: auto">
+<img loading="lazy" src="/_blob/de1308dbf365e7a564cebf27c00bb4d4" alt="McGrath" style="height: 26px; width: auto">
+<img loading="lazy" src="/_blob/951b423aa0af1475a4bafc833d44c20f" alt="Belle Property" style="height: 58px; width: auto">
+<img loading="lazy" src="/_blob/5c231dda4ea3309f3dc813b1e843bf3e" alt="Barry Plant" style="height: 17px; width: auto">
+<img loading="lazy" src="/_blob/c384bb5cbcf3e3c7b4a318ad01b9228f" alt="Buxton" style="height: 28px; width: auto">
+<img loading="lazy" src="/_blob/e2883d790f6a04b0f229902fd132af5b" alt="High Dental Melbourne" style="height: 50px; width: auto">
+<img loading="lazy" src="/_blob/c3b6f59f0f243c58332fa3542e9db2b5" alt="Storm Shield Roofing" style="height: 50px; width: auto">
+</div>
+</div>
+</section>
+
+<section aria-labelledby="exclusive-title" style="background: #EDE4D3; padding: clamp(80px, 9vw, 128px) clamp(20px, 4vw, 48px)">
+<div style="max-width: 1144px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 56px 80px; align-items: center">
+<div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 22px">
+<h2 id="exclusive-title" style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: clamp(34px, 3.6vw, 50px); line-height: 1.1; letter-spacing: -0.015em; color: #10302F">One flyer. One letterbox. Nothing stacked on top.</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.7; color: #3E5251; max-width: 470px">Bundled drops put your flyer inside a pack of other advertisers' catalogues. Ours go in by themselves, so the household sees your offer first and only.</p>
+<a class="more" href="https://www.southeastflyers.com.au/services/letterbox-distribution" style="display: inline-flex; align-items: center; gap: 8px; font-family: Montserrat, sans-serif; font-weight: 600; font-size: 15px; color: #046B6B; text-decoration: none; min-height: 44px">How our letterbox distribution works
+<svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+</a>
+</div>
+<div style="flex: 1.2 1 460px; background: #FFFFFF; border-radius: 14px; overflow: hidden">
+<div style="display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) minmax(0, 1fr); font-size: 15px; line-height: 1.5">
+<div style="padding: 20px 24px; font-family: Montserrat, sans-serif; font-size: 13px; font-weight: 600; color: #4B5E5D"></div>
+<div style="padding: 20px 24px; font-family: Montserrat, sans-serif; font-size: 13px; font-weight: 600; color: #4B5E5D">Bundled drops</div>
+<div style="padding: 20px 24px; font-family: Montserrat, sans-serif; font-size: 13px; font-weight: 700; color: #FFFFFF; background: #046B6B">South East Flyers</div>
+<div style="padding: 20px 24px; border-top: 1px solid rgba(16,48,47,0.09); font-family: Montserrat, sans-serif; font-weight: 600; color: #10302F">In the letterbox</div>
+<div style="padding: 20px 24px; border-top: 1px solid rgba(16,48,47,0.09); color: #4B5E5D">Inside a pack of other ads</div>
+<div style="padding: 20px 24px; border-top: 1px solid rgba(255,255,255,0.14); color: #10302F; background: rgba(4,107,107,0.07)">Your flyer, on its own</div>
+<div style="padding: 20px 24px; border-top: 1px solid rgba(16,48,47,0.09); font-family: Montserrat, sans-serif; font-weight: 600; color: #10302F">Minimum order</div>
+<div style="padding: 20px 24px; border-top: 1px solid rgba(16,48,47,0.09); color: #4B5E5D">Often several thousand</div>
+<div style="padding: 20px 24px; border-top: 1px solid rgba(16,48,47,0.06); color: #10302F; background: rgba(4,107,107,0.07); font-variant-numeric: tabular-nums">1,000 flyers</div>
+<div style="padding: 20px 24px; border-top: 1px solid rgba(16,48,47,0.09); font-family: Montserrat, sans-serif; font-weight: 600; color: #10302F">Proof of delivery</div>
+<div style="padding: 20px 24px; border-top: 1px solid rgba(16,48,47,0.09); color: #4B5E5D">Rarely shown</div>
+<div style="padding: 20px 24px; border-top: 1px solid rgba(16,48,47,0.06); color: #10302F; background: rgba(4,107,107,0.07)">GPS route map, every time</div>
+<div style="padding: 20px 24px; border-top: 1px solid rgba(16,48,47,0.09); font-family: Montserrat, sans-serif; font-weight: 600; color: #10302F">"No Junk Mail" signs</div>
+<div style="padding: 20px 24px; border-top: 1px solid rgba(16,48,47,0.09); color: #4B5E5D">Varies by walker</div>
+<div style="padding: 20px 24px; border-top: 1px solid rgba(16,48,47,0.06); color: #10302F; background: rgba(4,107,107,0.07)">Always respected</div>
+</div>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="gps-title" style="padding: clamp(80px, 9vw, 128px) clamp(20px, 4vw, 48px)">
+<div style="max-width: 1144px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 56px 88px; align-items: center">
+<div style="flex: 1.15 1 440px; border-radius: 14px; overflow: hidden; background: #E9EDEC; aspect-ratio: 1 / 0.86; display: flex; align-items: center; justify-content: center">
+<img loading="lazy" src="/_blob/d26d859d6bf798b6acddb8c3ef83c86d" alt="Three phone screens showing Strava route maps recorded during a South East Flyers letterbox run" style="width: 100%; height: 100%; object-fit: cover">
+</div>
+<div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 22px">
+<h2 id="gps-title" style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: clamp(34px, 3.6vw, 50px); line-height: 1.1; letter-spacing: -0.015em; color: #10302F">Proof of delivery, street by street.</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.7; color: #3E5251; max-width: 460px">Every walker records their route on Strava. When the run is finished, you get the map and a summary, so you know exactly where your budget went.</p>
+<ul style="list-style: none; margin: 6px 0 0; padding: 0; display: flex; flex-direction: column; gap: 14px">
+<li style="display: flex; gap: 14px; align-items: flex-start; font-size: 16px; line-height: 1.5; color: #10302F">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#046B6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 1px"><circle cx="12" cy="12" r="9.5"></circle><path d="M8 12.5l2.6 2.5L16 9.5"></path></svg>
+A route map for every run</li>
+<li style="display: flex; gap: 14px; align-items: flex-start; font-size: 16px; line-height: 1.5; color: #10302F">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#046B6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 1px"><circle cx="12" cy="12" r="9.5"></circle><path d="M8 12.5l2.6 2.5L16 9.5"></path></svg>
+The streets and suburbs covered</li>
+<li style="display: flex; gap: 14px; align-items: flex-start; font-size: 16px; line-height: 1.5; color: #10302F">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#046B6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 1px"><circle cx="12" cy="12" r="9.5"></circle><path d="M8 12.5l2.6 2.5L16 9.5"></path></svg>
+Drops completed against your order</li>
+</ul>
+<a class="more" href="https://www.southeastflyers.com.au/services/gps-tracked-flyer-distribution" style="display: inline-flex; align-items: center; gap: 8px; font-family: Montserrat, sans-serif; font-weight: 600; font-size: 15px; color: #046B6B; text-decoration: none; min-height: 44px">See how GPS tracking works
+<svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+</a>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="team-title" style="padding: 0 clamp(20px, 4vw, 48px) clamp(80px, 9vw, 128px)">
+<div style="max-width: 1144px; margin: 0 auto; display: flex; flex-direction: column; gap: 44px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 640px">
+<h2 id="team-title" style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: clamp(34px, 3.6vw, 50px); line-height: 1.1; letter-spacing: -0.015em; color: #10302F">Real people on Melbourne footpaths.</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.7; color: #3E5251">Walkers and e-bike riders cover the bayside, inner-south and eastern suburbs every day, from Port Melbourne out to Box Hill.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px">
+<figure class="tile" style="flex: 2 1 460px; margin: 0; display: flex; flex-direction: column; gap: 12px">
+<div style="border-radius: 14px; overflow: hidden; height: 540px">
+<img loading="lazy" class="lift" src="/_blob/7efa8c46755bef6cf95a67d088ee8ee4" alt="An e-bike distributor stopping at a letterbox on a quiet residential street" style="width: 100%; height: 100%; object-fit: cover; display: block">
+</div>
+<figcaption style="font-size: 14px; color: #4B5E5D">E-bike riders for fast, wide suburb coverage</figcaption>
+</figure>
+<div style="flex: 1 1 280px; display: flex; flex-direction: column; gap: 20px">
+<figure class="tile" style="margin: 0; display: flex; flex-direction: column; gap: 12px">
+<div style="border-radius: 14px; overflow: hidden; height: 238px">
+<img loading="lazy" class="lift" src="/_blob/b1c01a59118f52fd914e23210d1eefd0" alt="A hand posting a real estate flyer into a steel letterbox" style="width: 100%; height: 100%; object-fit: cover; display: block">
+</div>
+<figcaption style="font-size: 14px; color: #4B5E5D">One flyer per letterbox</figcaption>
+</figure>
+<figure class="tile" style="margin: 0; display: flex; flex-direction: column; gap: 12px">
+<div style="border-radius: 14px; overflow: hidden; height: 238px">
+<img loading="lazy" class="lift" src="/_blob/e26cacc056c2bb14ba90e4ccb6ccacdd" alt="A walker checking his flyers beside a brick letterbox on a leafy street" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; display: block">
+</div>
+<figcaption style="font-size: 14px; color: #4B5E5D">Walkers, street by street</figcaption>
+</figure>
+</div>
+<figure class="tile" style="flex: 1 1 240px; margin: 0; display: flex; flex-direction: column; gap: 12px">
+<div style="border-radius: 14px; overflow: hidden; height: 540px">
+<img loading="lazy" class="lift" src="/_blob/8ea1d6be7005db433ae682cfe80ada60" alt="A South East Flyers distributor delivering to a brick letterbox on a Melbourne footpath" style="width: 100%; height: 100%; object-fit: cover; display: block">
+</div>
+<figcaption style="font-size: 14px; color: #4B5E5D">On the job in Melbourne's south-east</figcaption>
+</figure>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="steps-title" style="background: #053F3F; color: #FFFFFF; padding: clamp(80px, 9vw, 120px) clamp(20px, 4vw, 48px)">
+<div style="max-width: 1144px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px">
+<h2 id="steps-title" style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: clamp(34px, 3.6vw, 50px); line-height: 1.1; letter-spacing: -0.015em; max-width: 620px">From quote to GPS report in four steps.</h2>
+<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 40px 32px">
+<li style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 14px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,0.22)">
+<span style="font-family: Lora, Georgia, serif; font-size: 22px; color: #F2A462; font-variant-numeric: tabular-nums">01</span>
+<h3 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 600; font-size: 19px; line-height: 1.3">Tell us your suburbs</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.65; color: rgba(255,255,255,0.8)">Choose suburbs or streets. We'll suggest the areas most likely to respond to your offer.</p>
+</li>
+<li style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 14px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,0.22)">
+<span style="font-family: Lora, Georgia, serif; font-size: 22px; color: #F2A462; font-variant-numeric: tabular-nums">02</span>
+<h3 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 600; font-size: 19px; line-height: 1.3">Hand over your flyers</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.65; color: rgba(255,255,255,0.8)">You print, so you keep control of design and stock. We plan the walks around your quantity.</p>
+</li>
+<li style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 14px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,0.22)">
+<span style="font-family: Lora, Georgia, serif; font-size: 22px; color: #F2A462; font-variant-numeric: tabular-nums">03</span>
+<h3 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 600; font-size: 19px; line-height: 1.3">We deliver on foot and e-bike</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.65; color: rgba(255,255,255,0.8)">Distribution starts within 3 to 5 business days, or within 48 hours when it's urgent.</p>
+</li>
+<li style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 14px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,0.22)">
+<span style="font-family: Lora, Georgia, serif; font-size: 22px; color: #F2A462; font-variant-numeric: tabular-nums">04</span>
+<h3 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 600; font-size: 19px; line-height: 1.3">You get the GPS report</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.65; color: rgba(255,255,255,0.8)">Route maps, streets covered and drops completed, ready for planning your next campaign.</p>
+</li>
+</ol>
+</div>
+</section>
+
+<section aria-labelledby="industries-title" style="background: #EDE4D3; padding: clamp(80px, 9vw, 128px) clamp(20px, 4vw, 48px)">
+<div style="max-width: 1144px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px">
+<h2 id="industries-title" style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: clamp(34px, 3.6vw, 50px); line-height: 1.1; letter-spacing: -0.015em; color: #10302F; max-width: 640px">Built for businesses that run on local trust.</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 28px">
+<a class="tile" href="https://www.southeastflyers.com.au/industries/real-estate" style="flex: 1.45 1 400px; display: flex; flex-direction: column; gap: 18px; text-decoration: none; color: #10302F">
+<div style="border-radius: 14px; overflow: hidden; height: 520px">
+<img loading="lazy" class="lift" src="/_blob/2db14ccc8748ad3b2b27a73ab6baa906" alt="A real estate agent standing in front of a For Sale sign" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; display: block">
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 600; font-size: 21px">Real estate</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #3E5251; max-width: 440px">Just listed, just sold and appraisal drops around every listing, timed to your open homes.</p>
+</div>
+</a>
+<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 28px">
+<a class="tile" href="https://www.southeastflyers.com.au/industries/home-services" style="display: flex; gap: 20px; align-items: flex-start; text-decoration: none; color: #10302F; flex-wrap: wrap">
+<div style="flex: 0 0 168px; height: 210px; border-radius: 14px; overflow: hidden">
+<img loading="lazy" class="lift" src="/_blob/56d1b3d0a0479a12abfffd9efe380b38" alt="A roofer in hi-vis working on a tiled Melbourne roof" style="width: 100%; height: 100%; object-fit: cover; display: block">
+</div>
+<div style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 8px; padding-top: 6px">
+<h3 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 600; font-size: 19px">Trades and home services</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #3E5251">Roofers, plumbers and electricians reaching the streets they already work in.</p>
+</div>
+</a>
+<a class="tile" href="https://www.southeastflyers.com.au/industries/healthcare" style="display: flex; gap: 20px; align-items: flex-start; text-decoration: none; color: #10302F; flex-wrap: wrap">
+<div style="flex: 0 0 168px; height: 210px; border-radius: 14px; overflow: hidden">
+<img loading="lazy" class="lift" src="/_blob/4e7ec0fd656c9ae7cabf9f995a679fc2" alt="A dentist in her clinic" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 25%; display: block">
+</div>
+<div style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 8px; padding-top: 6px">
+<h3 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 600; font-size: 19px">Healthcare</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #3E5251">Dental and allied health clinics introducing themselves to nearby households.</p>
+</div>
+</a>
+<a class="more" href="https://www.southeastflyers.com.au/industries" style="display: inline-flex; align-items: center; gap: 8px; font-family: Montserrat, sans-serif; font-weight: 600; font-size: 15px; color: #046B6B; text-decoration: none; min-height: 44px">All industries we work with
+<svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="reviews-title" style="padding: clamp(80px, 9vw, 128px) clamp(20px, 4vw, 48px)">
+<div style="max-width: 1144px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px">
+<h2 id="reviews-title" style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 600; font-size: 15px; color: #4B5E5D">What clients say</h2>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 26px; max-width: 920px">
+<blockquote style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: clamp(26px, 2.8vw, 38px); line-height: 1.3; letter-spacing: -0.01em; color: #10302F">“The GPS tracking gives us full confidence that every flyer reaches the right letterboxes. Our open home attendance has noticeably improved.”</blockquote>
+<figcaption style="font-family: Montserrat, sans-serif; font-size: 15px; color: #10302F"><strong style="font-weight: 600">Sarah M.</strong><span style="color: #4B5E5D"> - Real estate agent</span></figcaption>
+</figure>
+<div style="display: flex; flex-wrap: wrap; gap: 28px 64px; padding-top: 40px; border-top: 1px solid rgba(16,48,47,0.12)">
+<figure style="flex: 1 1 360px; margin: 0; display: flex; flex-direction: column; gap: 16px">
+<blockquote style="margin: 0; font-size: 17px; line-height: 1.65; color: #10302F">“We've tried other distribution companies before, but the reporting was never this detailed. Knowing exactly which streets were covered makes a huge difference.”</blockquote>
+<figcaption style="font-family: Montserrat, sans-serif; font-size: 14px; color: #10302F"><strong style="font-weight: 600">James T.</strong><span style="color: #4B5E5D"> - Business owner</span></figcaption>
+</figure>
+<figure style="flex: 1 1 360px; margin: 0; display: flex; flex-direction: column; gap: 16px">
+<blockquote style="margin: 0; font-size: 17px; line-height: 1.65; color: #10302F">“Professional, reliable, and great communication. They respect no junk mail signs, which is important for our brand. We've used them for over two years.”</blockquote>
+<figcaption style="font-family: Montserrat, sans-serif; font-size: 14px; color: #10302F"><strong style="font-weight: 600">Priya K.</strong><span style="color: #4B5E5D"> - Practice manager</span></figcaption>
+</figure>
+</div>
+</div>
+</section>
+
+<section id="quote" aria-labelledby="quote-title" style="background: #046B6B; color: #FFFFFF; padding: clamp(80px, 9vw, 120px) clamp(20px, 4vw, 48px)">
+<div style="max-width: 1144px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 56px 88px; align-items: center">
+<div style="flex: 1 1 400px; display: flex; flex-direction: column; gap: 24px">
+<h2 id="quote-title" style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: clamp(36px, 4vw, 56px); line-height: 1.08; letter-spacing: -0.015em">$200 per 1,000 flyers. A quote back within 24 hours.</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.85); max-width: 460px">Tell us where and how many. We'll send pricing, a coverage map and a timeline. No obligation.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px">
+<li style="display: flex; gap: 12px; align-items: center; font-size: 16px; color: #FFFFFF"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F2A462" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Minimum order of just 1,000 flyers</li>
+<li style="display: flex; gap: 12px; align-items: center; font-size: 16px; color: #FFFFFF"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F2A462" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Free suburb-level targeting advice</li>
+<li style="display: flex; gap: 12px; align-items: center; font-size: 16px; color: #FFFFFF"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F2A462" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>GPS tracking report included</li>
+</ul>
+<p style="margin: 8px 0 0; font-size: 15px; color: rgba(255,255,255,0.85)">Prefer to talk? <a href="tel:0402824070" style="color: #FFFFFF; font-family: Montserrat, sans-serif; font-weight: 600; font-variant-numeric: tabular-nums">0402 824 070</a> or <a href="https://wa.me/61402824070" style="color: #FFFFFF; font-family: Montserrat, sans-serif; font-weight: 600">WhatsApp us</a></p>
+</div>
+<form onSubmit="{{onSubmit}}" style="flex: 1 1 420px; background: #FFFFFF; color: #10302F; border-radius: 14px; padding: clamp(28px, 3vw, 44px); display: flex; flex-direction: column; gap: 20px; box-shadow: 0 30px 60px -32px rgba(2,30,30,0.6)">
+<div style="display: flex; flex-wrap: wrap; gap: 20px">
+<div style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 8px">
+<label for="q-name" style="font-family: Montserrat, sans-serif; font-size: 14px; font-weight: 600">Name <span style="color: #B4540A">*</span></label>
+<input id="q-name" name="name" type="text" required="required" autocomplete="name" style="min-height: 50px; border: 1px solid #A9B5B4; border-radius: 10px; padding: 0 14px; font: inherit; font-size: 16px; color: #10302F; background: #FFFFFF">
+</div>
+<div style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 8px">
+<label for="q-phone" style="font-family: Montserrat, sans-serif; font-size: 14px; font-weight: 600">Phone <span style="color: #B4540A">*</span></label>
+<input id="q-phone" name="phone" type="tel" required="required" autocomplete="tel" style="min-height: 50px; border: 1px solid #A9B5B4; border-radius: 10px; padding: 0 14px; font: inherit; font-size: 16px; color: #10302F; background: #FFFFFF">
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="q-suburbs" style="font-family: Montserrat, sans-serif; font-size: 14px; font-weight: 600">Target suburb(s)</label>
+<input id="q-suburbs" name="suburbs" type="text" placeholder="e.g. Brighton, Hampton, Sandringham" style="min-height: 50px; border: 1px solid #A9B5B4; border-radius: 10px; padding: 0 14px; font: inherit; font-size: 16px; color: #10302F; background: #FFFFFF">
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="q-qty" style="font-family: Montserrat, sans-serif; font-size: 14px; font-weight: 600">Quantity</label>
+<select id="q-qty" name="quantity" style="min-height: 50px; border: 1px solid #A9B5B4; border-radius: 10px; padding: 0 14px; font: inherit; font-size: 16px; color: #10302F; background: #FFFFFF">
+<option value="">Select quantity</option>
+<option value="1000-5000">1,000 to 5,000</option>
+<option value="5000-10000">5,000 to 10,000</option>
+<option value="10000-20000">10,000 to 20,000</option>
+<option value="20000+">20,000+</option>
+</select>
+</div>
+<button class="btn btn-cta" type="submit" style="min-height: 54px; border: 0; border-radius: 999px; background: #E97B1F; color: #10302F; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 16px; cursor: pointer; margin-top: 4px">{{submitLabel}}</button>
+<p style="margin: 0; font-size: 13px; line-height: 1.5; color: #4B5E5D; text-align: center">No spam. We'll only contact you about your quote.</p>
+</form>
+</div>
+</section>
+
+<section aria-labelledby="faq-title" style="padding: clamp(80px, 9vw, 128px) clamp(20px, 4vw, 48px)">
+<div style="max-width: 1144px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 48px 88px">
+<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 18px">
+<h2 id="faq-title" style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: clamp(34px, 3.6vw, 46px); line-height: 1.1; letter-spacing: -0.015em; color: #10302F">Questions we hear every week.</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #3E5251">Something else on your mind? Call <a href="tel:0402824070" style="font-variant-numeric: tabular-nums">0402 824 070</a>.</p>
+</div>
+<dl style="flex: 1.6 1 480px; margin: 0; display: flex; flex-direction: column; gap: 30px">
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 26px; border-top: 1px solid rgba(16,48,47,0.12)">
+<dt style="font-family: Montserrat, sans-serif; font-weight: 600; font-size: 18px; color: #10302F">Which suburbs do you cover?</dt>
+<dd style="margin: 0; font-size: 16px; line-height: 1.7; color: #3E5251">Anywhere between Port Melbourne and Box Hill, including St Kilda, Brighton, Caulfield, Bentleigh, Glen Waverley, Kew and Camberwell. <a href="https://www.southeastflyers.com.au/melbourne/flyer-distribution-melbourne">See every suburb</a>.</dd>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 26px; border-top: 1px solid rgba(16,48,47,0.12)">
+<dt style="font-family: Montserrat, sans-serif; font-weight: 600; font-size: 18px; color: #10302F">What's the minimum order?</dt>
+<dd style="margin: 0; font-size: 16px; line-height: 1.7; color: #3E5251">1,000 flyers per campaign. We scale to 50,000+ for a metro-wide push and plan the drop around your budget.</dd>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 26px; border-top: 1px solid rgba(16,48,47,0.12)">
+<dt style="font-family: Montserrat, sans-serif; font-weight: 600; font-size: 18px; color: #10302F">How does GPS tracking work?</dt>
+<dd style="margin: 0; font-size: 16px; line-height: 1.7; color: #3E5251">Each distributor records their route in Strava. After the campaign you receive a report with the streets covered and a map of the route.</dd>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 26px; border-top: 1px solid rgba(16,48,47,0.12)">
+<dt style="font-family: Montserrat, sans-serif; font-weight: 600; font-size: 18px; color: #10302F">Do you print the flyers too?</dt>
+<dd style="margin: 0; font-size: 16px; line-height: 1.7; color: #3E5251">No. We specialise in distribution. You supply the printed flyers and we get them into the right letterboxes.</dd>
+</div>
+</dl>
+</div>
+</section>
+
+<footer style="background: #EDE4D3; padding: 72px clamp(20px, 4vw, 48px) 36px">
+<div style="max-width: 1144px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px">
+<div style="display: flex; flex-wrap: wrap; gap: 40px 64px">
+<div style="flex: 1.4 1 280px; display: flex; flex-direction: column; gap: 18px">
+<img loading="lazy" src="/_blob/9667249954ab9b0e1fc4945821bff009" alt="South East Flyers and Marketing Solutions" style="height: 44px; width: auto; align-self: flex-start">
+<p style="margin: 0; font-size: 15px; line-height: 1.65; color: #3E5251; max-width: 320px">Exclusive, GPS-tracked letterbox distribution across Melbourne's south-east and eastern suburbs.</p>
+<a href="tel:0402824070" style="font-family: Montserrat, sans-serif; font-weight: 600; font-size: 17px; color: #10302F; text-decoration: none; font-variant-numeric: tabular-nums">0402 824 070</a>
+</div>
+<nav aria-label="Services" style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 12px; font-size: 15px">
+<h3 style="margin: 0 0 4px; font-family: Montserrat, sans-serif; font-weight: 600; font-size: 14px; color: #10302F">Services</h3>
+<a href="https://www.southeastflyers.com.au/services/flyer-distribution" style="color: #3E5251; text-decoration: none">Flyer distribution</a>
+<a href="https://www.southeastflyers.com.au/services/letterbox-distribution" style="color: #3E5251; text-decoration: none">Letterbox distribution</a>
+<a href="https://www.southeastflyers.com.au/services/targeted-flyer-distribution" style="color: #3E5251; text-decoration: none">Targeted distribution</a>
+<a href="https://www.southeastflyers.com.au/services/gps-tracked-flyer-distribution" style="color: #3E5251; text-decoration: none">GPS-tracked distribution</a>
+</nav>
+<nav aria-label="Suburbs" style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 12px; font-size: 15px">
+<h3 style="margin: 0 0 4px; font-family: Montserrat, sans-serif; font-weight: 600; font-size: 14px; color: #10302F">Suburbs</h3>
+<a href="https://www.southeastflyers.com.au/melbourne/flyer-distribution-brighton" style="color: #3E5251; text-decoration: none">Brighton</a>
+<a href="https://www.southeastflyers.com.au/melbourne/flyer-distribution-kew" style="color: #3E5251; text-decoration: none">Kew</a>
+<a href="https://www.southeastflyers.com.au/melbourne/flyer-distribution-glen-waverley" style="color: #3E5251; text-decoration: none">Glen Waverley</a>
+<a href="https://www.southeastflyers.com.au/melbourne/flyer-distribution-melbourne" style="color: #3E5251; text-decoration: none">All Melbourne suburbs</a>
+</nav>
+<nav aria-label="Company" style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 12px; font-size: 15px">
+<h3 style="margin: 0 0 4px; font-family: Montserrat, sans-serif; font-weight: 600; font-size: 14px; color: #10302F">Company</h3>
+<a href="https://www.southeastflyers.com.au/letterbox-drop-cost" style="color: #3E5251; text-decoration: none">Letterbox drop cost</a>
+<a href="https://www.southeastflyers.com.au/portfolio" style="color: #3E5251; text-decoration: none">Our clients</a>
+<a href="https://www.southeastflyers.com.au/blog" style="color: #3E5251; text-decoration: none">Blog</a>
+<a href="https://www.southeastflyers.com.au/contact" style="color: #3E5251; text-decoration: none">Contact</a>
+</nav>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding-top: 26px; border-top: 1px solid rgba(16,48,47,0.15); font-size: 13px; color: #4B5E5D">
+<p style="margin: 0">© 2026 South East Flyers and Marketing Solutions</p>
+<div style="display: flex; gap: 22px">
+<a href="https://www.facebook.com/southeastflyers" style="color: #3E5251">Facebook</a>
+<a href="https://www.instagram.com/southeastflyers" style="color: #3E5251">Instagram</a>
+<a href="https://www.linkedin.com/company/southeastflyers" style="color: #3E5251">LinkedIn</a>
+</div>
+</div>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":7400}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { sent: false };
+  }
+  renderVals() {
+    return {
+      submitLabel: this.state.sent ? 'Thanks. We will be in touch within 24 hours.' : 'Get a free quote',
+      onSubmit: (e) => { e.preventDefault(); this.setState({ sent: true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

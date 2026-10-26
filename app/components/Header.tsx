@@ -124,8 +124,11 @@ export default function Header() {
         </div>
 
         {/* Mobile menu */}
-        {mobileOpen && (
-          <div className="lg:hidden border-t border-gray-100 max-h-[80vh] overflow-y-auto">
+        <div
+          className={`mobile-menu-panel lg:hidden border-t border-gray-100 ${mobileOpen ? "is-open" : ""}`}
+          inert={!mobileOpen}
+        >
+          <div className="max-h-[80vh] overflow-y-auto">
             <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col gap-1">
               <MobileNavLink href="/" onClick={closeMobile}>Home</MobileNavLink>
 
@@ -177,7 +180,7 @@ export default function Header() {
               </div>
             </nav>
           </div>
-        )}
+        </div>
       </div>
     </header>
   );
@@ -224,7 +227,7 @@ function NavDropdown({
           {chevron}
         </button>
       )}
-      <div className="absolute left-0 top-full pt-2 hidden group-hover:block group-focus-within:block z-50">
+      <div className="dropdown-panel absolute left-0 top-full pt-2 z-50">
         <div className="bg-white border border-gray-200 rounded-lg shadow-lg py-2 min-w-[240px]">
           {items.map((item) => (
             <Link

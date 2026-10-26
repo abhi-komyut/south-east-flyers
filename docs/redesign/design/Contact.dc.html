@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<title>Contact page</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&amp;family=Montserrat:wght@500;600;700&amp;family=Roboto+Slab:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#FFFFFF;color:#10302F;font-family:'Roboto Slab',Georgia,serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#046B6B}a:hover{color:#053F3F}
+h1,h2,h3{text-wrap:balance}
+p{text-wrap:pretty}
+.btn{transition:transform 160ms cubic-bezier(0.23,1,0.32,1),background-color 200ms ease,color 200ms ease}
+.btn:active{transform:scale(0.97)}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #E97B1F;outline-offset:3px}
+@media (hover:hover) and (pointer:fine){.btn-cta:hover{background:#F2913F !important}.btn-line:hover{background:#046B6B !important;color:#FFFFFF !important}.navlink:hover{color:#046B6B !important}}
+.menubtn{display:none}
+@media (max-width:980px){.navlinks{display:none}.menubtn{display:inline-flex}}
+@media (max-width:640px){.hide-sm{display:none}}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}.btn:active{transform:none}}
+</style>
+</helmet>
+
+<div style="background: #FFFFFF; color: #10302F; overflow-x: hidden">
+<dc-import name="Header" hint-size="100%,77px"></dc-import>
+
+<section aria-labelledby="page-title" style="background: #053F3F; color: #FFFFFF; padding: clamp(64px, 7vw, 96px) clamp(20px, 4vw, 48px) clamp(140px, 13vw, 180px)">
+<div style="max-width: 1144px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px">
+<h1 id="page-title" style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: clamp(40px, 4.6vw, 62px); line-height: 1.06; letter-spacing: -0.02em">Contact us</h1>
+<p style="margin: 0; font-size: clamp(17px, 1.4vw, 19px); line-height: 1.65; color: rgba(255,255,255,0.85); max-width: 560px">Get in touch for a free, no-obligation quote on your next letterbox campaign.</p>
+</div>
+</section>
+
+<section style="padding: 0 clamp(20px, 4vw, 48px) clamp(80px, 9vw, 120px)">
+<div style="max-width: 1144px; margin: -110px auto 0; display: flex; flex-wrap: wrap; gap: 40px 64px; align-items: flex-start">
+
+<form onSubmit="{{onSubmit}}" aria-label="Enquiry form" style="flex: 1.5 1 480px; order: 2; background: #FFFFFF; border-radius: 14px; padding: clamp(28px, 3.4vw, 48px); box-shadow: 0 30px 60px -34px rgba(4,60,60,0.5); display: flex; flex-direction: column; gap: 22px; position: relative; z-index: 2">
+<sc-if value="{{sent}}" hint-placeholder-val="{{false}}">
+<div style="padding: 32px 0; display: flex; flex-direction: column; align-items: flex-start; gap: 16px">
+<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#046B6B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M7.5 12.5l3 3 6-6.5"></path></svg>
+<h2 style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: 32px">Message sent</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.7; color: #3E5251">Thank you for your enquiry. We'll be in touch within 1 business day.</p>
+<a class="btn btn-line" href="https://wa.me/61402824070" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 999px; border: 1px solid #046B6B; color: #046B6B; text-decoration: none; font-family: Montserrat, sans-serif; font-weight: 600; font-size: 15px">Also send on WhatsApp</a>
+</div>
+</sc-if>
+<sc-if value="{{notSent}}" hint-placeholder-val="{{true}}">
+<div style="display: flex; flex-direction: column; gap: 22px">
+<h2 style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: 30px">Tell us about your campaign</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 20px">
+<div style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 8px">
+<label for="c-name" style="font-family: Montserrat, sans-serif; font-size: 14px; font-weight: 600">Name <span style="color: #B4540A">*</span></label>
+<input id="c-name" name="name" type="text" required="required" autocomplete="name" placeholder="Your full name" style="min-height: 50px; border: 1px solid #A9B5B4; border-radius: 10px; padding: 0 14px; font: inherit; font-size: 16px; color: #10302F; background: #FFFFFF">
+</div>
+<div style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 8px">
+<label for="c-phone" style="font-family: Montserrat, sans-serif; font-size: 14px; font-weight: 600">Phone number <span style="color: #B4540A">*</span></label>
+<input id="c-phone" name="phone" type="tel" required="required" autocomplete="tel" placeholder="04XX XXX XXX" style="min-height: 50px; border: 1px solid #A9B5B4; border-radius: 10px; padding: 0 14px; font: inherit; font-size: 16px; color: #10302F; background: #FFFFFF">
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="c-company" style="font-family: Montserrat, sans-serif; font-size: 14px; font-weight: 600">Company name</label>
+<input id="c-company" name="company" type="text" autocomplete="organization" placeholder="Your company name" style="min-height: 50px; border: 1px solid #A9B5B4; border-radius: 10px; padding: 0 14px; font: inherit; font-size: 16px; color: #10302F; background: #FFFFFF">
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="c-message" style="font-family: Montserrat, sans-serif; font-size: 14px; font-weight: 600">Message</label>
+<textarea id="c-message" name="message" rows="5" placeholder="Target suburbs, quantity, timing" style="border: 1px solid #A9B5B4; border-radius: 10px; padding: 14px; font: inherit; font-size: 16px; line-height: 1.6; color: #10302F; background: #FFFFFF; resize: vertical"></textarea>
+</div>
+<button class="btn btn-cta" type="submit" style="min-height: 54px; border: 0; border-radius: 999px; background: #E97B1F; color: #10302F; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 16px; cursor: pointer">Send message</button>
+<p style="margin: 0; font-size: 13px; color: #4B5E5D; text-align: center">No spam. We'll only contact you about your enquiry.</p>
+</div>
+</sc-if>
+</form>
+
+<div style="flex: 1 1 320px; order: 1; display: flex; flex-direction: column; gap: 28px; padding-top: 140px">
+<p style="margin: 0; font-size: 17px; line-height: 1.7; color: #3E5251">Whether you need a one-off campaign or ongoing distribution, we're here to help plan your next letterbox drop.</p>
+<dl style="margin: 0; display: flex; flex-direction: column; gap: 22px">
+<div style="display: flex; gap: 16px; align-items: flex-start"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#046B6B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 3px"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"></path></svg><div><dt style="font-family: Montserrat, sans-serif; font-weight: 600; font-size: 14px; color: #4B5E5D">Phone</dt><dd style="margin: 4px 0 0"><a href="tel:+61402824070" style="font-family: Lora, Georgia, serif; font-size: 26px; color: #10302F; text-decoration: none; font-variant-numeric: tabular-nums">0402 824 070</a></dd></div></div>
+<div style="display: flex; gap: 16px; align-items: flex-start"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#046B6B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 3px"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.6-5.4A8.5 8.5 0 1 1 21 11.5z"></path></svg><div><dt style="font-family: Montserrat, sans-serif; font-weight: 600; font-size: 14px; color: #4B5E5D">WhatsApp</dt><dd style="margin: 4px 0 0; font-size: 16px"><a href="https://wa.me/61402824070">Message us directly</a></dd></div></div>
+<div style="display: flex; gap: 16px; align-items: flex-start"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#046B6B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 3px"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg><div><dt style="font-family: Montserrat, sans-serif; font-weight: 600; font-size: 14px; color: #4B5E5D">Service areas</dt><dd style="margin: 4px 0 0; font-size: 16px; color: #10302F">Melbourne's south-east and eastern suburbs</dd></div></div>
+<div style="display: flex; gap: 16px; align-items: flex-start"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#046B6B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 3px"><circle cx="12" cy="12" r="9"></circle><path d="M12 7.5V12l3 3"></path></svg><div><dt style="font-family: Montserrat, sans-serif; font-weight: 600; font-size: 14px; color: #4B5E5D">Response time</dt><dd style="margin: 4px 0 0; font-size: 16px; color: #10302F">Within 1 business day. Calls Monday to Friday, 8am to 6pm AEST.</dd></div></div>
+</dl>
+<div style="border-radius: 14px; overflow: hidden; height: 300px">
+<img loading="lazy" src="/_blob/8ea1d6be7005db433ae682cfe80ada60" alt="A South East Flyers distributor delivering to a letterbox in Melbourne" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; display: block">
+</div>
+</div>
+
+</div>
+</section>
+
+<dc-import name="Footer" hint-size="100%,440px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1900}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { sent: false };
+  }
+  renderVals() {
+    return {
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      onSubmit: (e) => { e.preventDefault(); this.setState({ sent: true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

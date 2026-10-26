@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Reveal from "./Reveal";
 
 export interface FAQItem {
   question: string;
@@ -43,18 +44,20 @@ export default function FAQSection({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <Reveal className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
             {title}
           </h2>
           {subtitle && <p className="text-gray-600">{subtitle}</p>}
-        </div>
+        </Reveal>
         <div className="space-y-3">
           {items.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
-              <div
+              <Reveal
+                as="div"
                 key={index}
+                delay={Math.min(index, 4) * 60}
                 className="border border-gray-200 rounded-lg overflow-hidden"
               >
                 <button
@@ -75,13 +78,15 @@ export default function FAQSection({
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                {/* Always in the HTML (hidden when closed) so search engines can read answers that match the FAQPage schema */}
-                <div className={`px-4 sm:px-6 pb-4 ${isOpen ? "" : "hidden"}`}>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {faq.answer}
-                  </p>
+                {/* Always in the HTML so search engines can read answers that match the FAQPage schema */}
+                <div className={`accordion-panel ${isOpen ? "is-open" : ""}`}>
+                  <div>
+                    <p className="px-4 sm:px-6 pb-4 text-gray-600 text-sm leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </Reveal>
             );
           })}
         </div>

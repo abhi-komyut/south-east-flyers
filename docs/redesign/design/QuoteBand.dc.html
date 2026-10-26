@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<title>Quote form band</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&amp;family=Montserrat:wght@500;600;700&amp;family=Roboto+Slab:wght@400;500&amp;display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<section id="quote" aria-labelledby="quote-title" style="background: #046B6B; color: #FFFFFF; padding: clamp(80px, 9vw, 120px) clamp(20px, 4vw, 48px); font-family: 'Roboto Slab', Georgia, serif; box-sizing: border-box">
+<div style="max-width: 1144px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 56px 88px; align-items: center">
+<div style="flex: 1 1 400px; display: flex; flex-direction: column; gap: 24px">
+<h2 id="quote-title" style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: clamp(36px, 4vw, 56px); line-height: 1.08; letter-spacing: -0.015em; text-wrap: balance">{{heading}}</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.85); max-width: 460px">{{lead}}</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px">
+<li style="display: flex; gap: 12px; align-items: center; font-size: 16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F2A462" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Minimum order of just 1,000 flyers</li>
+<li style="display: flex; gap: 12px; align-items: center; font-size: 16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F2A462" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Free suburb-level targeting advice</li>
+<li style="display: flex; gap: 12px; align-items: center; font-size: 16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F2A462" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>GPS tracking report included</li>
+</ul>
+<p style="margin: 8px 0 0; font-size: 15px; color: rgba(255,255,255,0.85)">Prefer to talk? <a href="tel:0402824070" style="color: #FFFFFF; font-family: Montserrat, sans-serif; font-weight: 600; font-variant-numeric: tabular-nums">0402 824 070</a> or <a href="https://wa.me/61402824070" style="color: #FFFFFF; font-family: Montserrat, sans-serif; font-weight: 600">WhatsApp us</a></p>
+</div>
+<form onSubmit="{{onSubmit}}" style="flex: 1 1 420px; background: #FFFFFF; color: #10302F; border-radius: 14px; padding: clamp(28px, 3vw, 44px); display: flex; flex-direction: column; gap: 20px; box-shadow: 0 30px 60px -32px rgba(2,30,30,0.6); box-sizing: border-box">
+<div style="display: flex; flex-wrap: wrap; gap: 20px">
+<div style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 8px">
+<label for="qb-name" style="font-family: Montserrat, sans-serif; font-size: 14px; font-weight: 600">Name <span style="color: #B4540A">*</span></label>
+<input id="qb-name" name="name" type="text" required="required" autocomplete="name" style="min-height: 50px; border: 1px solid #A9B5B4; border-radius: 10px; padding: 0 14px; font: inherit; font-size: 16px; color: #10302F; background: #FFFFFF">
+</div>
+<div style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 8px">
+<label for="qb-phone" style="font-family: Montserrat, sans-serif; font-size: 14px; font-weight: 600">Phone <span style="color: #B4540A">*</span></label>
+<input id="qb-phone" name="phone" type="tel" required="required" autocomplete="tel" style="min-height: 50px; border: 1px solid #A9B5B4; border-radius: 10px; padding: 0 14px; font: inherit; font-size: 16px; color: #10302F; background: #FFFFFF">
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="qb-suburbs" style="font-family: Montserrat, sans-serif; font-size: 14px; font-weight: 600">Target suburb(s)</label>
+<input id="qb-suburbs" name="suburbs" type="text" placeholder="{{suburbHint}}" style="min-height: 50px; border: 1px solid #A9B5B4; border-radius: 10px; padding: 0 14px; font: inherit; font-size: 16px; color: #10302F; background: #FFFFFF">
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="qb-qty" style="font-family: Montserrat, sans-serif; font-size: 14px; font-weight: 600">Quantity</label>
+<select id="qb-qty" name="quantity" style="min-height: 50px; border: 1px solid #A9B5B4; border-radius: 10px; padding: 0 14px; font: inherit; font-size: 16px; color: #10302F; background: #FFFFFF">
+<option value="">Select quantity</option>
+<option value="1000-5000">1,000 to 5,000</option>
+<option value="5000-10000">5,000 to 10,000</option>
+<option value="10000-20000">10,000 to 20,000</option>
+<option value="20000+">20,000+</option>
+</select>
+</div>
+<button class="btn btn-cta" type="submit" style="min-height: 54px; border: 0; border-radius: 999px; background: #E97B1F; color: #10302F; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 16px; cursor: pointer; margin-top: 4px">{{submitLabel}}</button>
+<p style="margin: 0; font-size: 13px; line-height: 1.5; color: #4B5E5D; text-align: center">No spam. We'll only contact you about your quote.</p>
+</form>
+</div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"heading":{"editor":null,"default":"$200 per 1,000 flyers. A quote back within 24 hours."},"lead":{"editor":null,"default":"Tell us where and how many. We&#39;ll send pricing, a coverage map and a timeline. No obligation."},"suburbHint":{"editor":null,"default":"e.g. Brighton, Hampton, Sandringham"},"$preview":{"width":1440,"height":760}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { sent: false };
+  }
+  renderVals() {
+    return {
+      heading: this.props.heading ?? '$200 per 1,000 flyers. A quote back within 24 hours.',
+      lead: this.props.lead ?? "Tell us where and how many. We'll send pricing, a coverage map and a timeline. No obligation.",
+      suburbHint: this.props.suburbHint ?? 'e.g. Brighton, Hampton, Sandringham',
+      submitLabel: this.state.sent ? 'Thanks. We will be in touch within 24 hours.' : 'Get a free quote',
+      onSubmit: (e) => { e.preventDefault(); this.setState({ sent: true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

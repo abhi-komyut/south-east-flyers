@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Breadcrumbs, { type Crumb } from "./Breadcrumbs";
+import Reveal from "./Reveal";
 
 /**
  * Shared building blocks for SEO landing pages (suburb, industry, hub and
@@ -99,12 +100,12 @@ export function ProofStrip() {
     <section className="bg-white border-b border-gray-200 py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <dl className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          {stats.map((s) => (
-            <div key={s.label}>
+          {stats.map((s, i) => (
+            <Reveal as="div" key={s.label} delay={i * 80}>
               <dt className="sr-only">{s.label}</dt>
               <dd className="text-2xl sm:text-3xl font-bold text-navy">{s.value}</dd>
               <dd className="text-sm text-gray-600 mt-1">{s.label}</dd>
-            </div>
+            </Reveal>
           ))}
         </dl>
       </div>
@@ -127,10 +128,10 @@ export function Section({
     <section
       className={`py-14 sm:py-16 border-t border-gray-200 ${tone === "gray" ? "bg-cream" : "bg-white"}`}
     >
-      <div className={`${wide ? "max-w-7xl" : "max-w-3xl"} mx-auto px-4 sm:px-6 lg:px-8`}>
+      <Reveal className={`${wide ? "max-w-7xl" : "max-w-3xl"} mx-auto px-4 sm:px-6 lg:px-8`}>
         <h2 className="text-2xl sm:text-3xl font-bold text-black mb-5">{title}</h2>
         <div className="space-y-4 text-gray-700 leading-relaxed">{children}</div>
-      </div>
+      </Reveal>
     </section>
   );
 }
@@ -152,7 +153,7 @@ export function Steps({ steps }: { steps: { title: string; body: React.ReactNode
   return (
     <ol className="space-y-4">
       {steps.map((s, i) => (
-        <li key={s.title} className="flex gap-4">
+        <Reveal as="li" key={s.title} delay={i * 80} className="flex gap-4">
           <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-navy text-white text-sm font-semibold">
             {i + 1}
           </span>
@@ -160,7 +161,7 @@ export function Steps({ steps }: { steps: { title: string; body: React.ReactNode
             <h3 className="font-semibold text-black">{s.title}</h3>
             <p className="text-gray-700">{s.body}</p>
           </div>
-        </li>
+        </Reveal>
       ))}
     </ol>
   );
@@ -169,7 +170,7 @@ export function Steps({ steps }: { steps: { title: string; body: React.ReactNode
 export function CtaBanner({ title, body }: { title: string; body: string }) {
   return (
     <section className="bg-navy py-16 sm:py-20 border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-display">
           {title}
         </h2>
@@ -189,7 +190,7 @@ export function CtaBanner({ title, body }: { title: string; body: string }) {
             Call {PHONE_DISPLAY}
           </a>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }
