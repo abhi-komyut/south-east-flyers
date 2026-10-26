@@ -200,7 +200,7 @@ export default function PortfolioContent() {
       </section>
 
       {/* How It Works — 3-step process */}
-      <section className="bg-gray-50 py-16 sm:py-20">
+      <section className="bg-cream py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeInSection>
             <div className="text-center mb-12 sm:mb-16">

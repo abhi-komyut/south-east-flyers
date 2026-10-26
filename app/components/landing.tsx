@@ -137,7 +137,7 @@ export function Section({
 }) {
   return (
     <section
-      className={`py-14 sm:py-16 border-t border-gray-200 ${tone === "gray" ? "bg-gray-50" : "bg-white"}`}
+      className={`py-14 sm:py-16 border-t border-gray-200 ${tone === "gray" ? "bg-cream" : "bg-white"}`}
     >
       <div className={`${wide ? "max-w-7xl" : "max-w-3xl"} mx-auto px-4 sm:px-6 lg:px-8`}>
         <h2 className="text-2xl sm:text-3xl font-bold text-black mb-5">{title}</h2>
