@@ -117,10 +117,10 @@ export default function HomeServices() {
             <><TextLink href="/industries/plumbers">Plumbers</TextLink>: blocked drains, hot water, gas fitting and emergency call-outs</>,
             <><TextLink href="/industries/electricians">Electricians</TextLink>: safety switches, switchboards, lighting, solar and EV chargers</>,
             <><TextLink href="/industries/roofing">Roofers</TextLink>: inspections, restorations, gutters and storm repairs</>,
-            <>Builders: knockdown rebuilds, extensions and neighbour notices around a site</>,
-            <>Renovators: kitchens, bathrooms and whole-home renovations</>,
+            <><TextLink href="/industries/builders">Builders</TextLink>: knockdown rebuilds, extensions and neighbour notices around a site</>,
+            <><TextLink href="/industries/renovation">Renovators</TextLink>: kitchens, bathrooms and whole-home renovations</>,
             <>Carpenters: decks, pergolas, built-ins and repairs</>,
-            <>Cleaners: regular home cleans, bathroom deep cleans and end-of-lease cleans</>,
+            <><TextLink href="/industries/cleaning">Cleaners</TextLink>: regular home cleans, bathroom deep cleans and end-of-lease cleans</>,
             <>Handymen, painters, pest control and landscapers</>,
           ]}
         />

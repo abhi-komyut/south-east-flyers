@@ -342,3 +342,5 @@ Target length: 900 to 1,300 words. The quote form and phone number must be visib
 
 - Batch 1 (PR `seo/batch-1-pages`): Brighton, letterbox drop cost, Local Businesses hub, Home Services hub (replaces Trades & Services, 308 redirect), Plumbers. Shared components in `app/components/landing.tsx`. New suburb pages must be added to `suburbPages` in the Melbourne page.
 - Batch 2 review fixes: suburb and trade pages rewritten to under 15% shared wording; census figures removed; shared `HowItWorks` component; Real Estate page rebuilt; homepage title, description, H1 and internal links fixed; title template shortened to "%s | South East Flyers".
+- Batch 4 (PR #7 `seo/batch-4-pages`): Malvern, Mount Waverley, Sandringham.
+- Batch 5 (PR #8 `seo/batch-5-pages`): Box Hill, Builders, Renovation, Cleaning, Dog Groomers (`/industries/pet-groomers`), Restaurants & Cafes, South East hub (`/melbourne/flyer-distribution-south-east-melbourne`, add each new suburb to its `suburbPages`), local advertising guide (`/guides/...`, Article schema). All P1 pages now built.
