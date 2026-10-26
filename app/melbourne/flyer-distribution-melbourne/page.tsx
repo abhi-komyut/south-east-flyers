@@ -50,6 +50,7 @@ const coverageGroups: { region: string; suburbs: string[] }[] = [
       "Brighton East",
       "Hampton",
       "Sandringham",
+      "Elsternwick",
     ],
   },
   {
@@ -82,6 +83,7 @@ const coverageGroups: { region: string; suburbs: string[] }[] = [
       "Oakleigh East",
       "Noble Park",
       "Mulgrave",
+      "Wheelers Hill",
     ],
   },
   {
@@ -305,19 +307,16 @@ export default function FlyerDistributionMelbourne() {
             St Kilda and Brighton through to the Monash and eastern suburbs
             like Glen Waverley, Box Hill and Doncaster.
           </p>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Whatever you call it, leaflet distribution Melbourne businesses
-            already search for, letterbox distribution or one of the many
-            flyer distribution companies in the city, the service is the
-            same: exclusive delivery, GPS-tracked, never bundled.
-          </p>
           <p className="text-gray-700 leading-relaxed">
             We deliver every flyer individually rather than bundling it with
             other advertising, skip every letterbox marked &lsquo;No Junk
             Mail&rsquo;, and track each distribution run through the Strava app so
-            you receive a clear report once your campaign is complete. The
-            minimum campaign is 1,000 flyers, and we scale up from there for
-            metro-wide pushes.
+            you receive a clear report once your campaign is complete. That&rsquo;s
+            leaflet distribution Melbourne businesses can rely on without
+            guessing where their flyers went. The minimum campaign is 1,000
+            flyers, and we scale up from there for metro-wide pushes. Many
+            flyer distribution companies run shared drops with high
+            minimums; we don&rsquo;t.
           </p>
         </div>
       </section>

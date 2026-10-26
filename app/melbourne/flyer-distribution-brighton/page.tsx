@@ -54,7 +54,7 @@ const faqs = [
   {
     question: "Can one campaign cover Brighton and Brighton East?",
     answer:
-      "Yes. We deliver in both, as well as Hampton and Sandringham, and can quote them as one campaign with a single GPS report rather than booking each suburb separately.",
+      "Yes. We deliver in both, as well as Hampton, Elsternwick and Sandringham, and can quote them as one campaign with a single GPS report rather than booking each suburb separately.",
   },
 ];
 
@@ -101,11 +101,6 @@ export default function Brighton() {
         <p>
           For a letterbox drop that means about 10,500 homes, most of them houses with street letterboxes, and
           households that read what arrives rather than skimming it.
-        </p>
-        <p>
-          Whether you search for letterbox drop Brighton, letterbox distribution Brighton, leaflet
-          distribution Brighton or pamphlet delivery Brighton, you&rsquo;ll land on the same service:
-          exclusive delivery, GPS-tracked.
         </p>
       </Section>
 

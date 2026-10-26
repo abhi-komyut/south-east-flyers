@@ -58,7 +58,7 @@ const faqs = [
   {
     question: "Do you print trade flyers?",
     answer:
-      "No. We distribute; we don't print. Use any print shop and send the flyers to us, or ask your printer to deliver them directly to our depot before the run.",
+      "No. We distribute; we don't print. Use any print shop and send the flyers to us, or ask your printer to deliver them directly.",
   },
 ];
 
@@ -113,13 +113,9 @@ export default function HomeServices() {
             <>Renovators: kitchens, bathrooms and whole-home renovations</>,
             <>Carpenters: decks, pergolas, built-ins and repairs</>,
             <>Cleaners: regular home cleans, bathroom deep cleans and end-of-lease cleans</>,
-            <>Handyman flyers, painter flyers, pest control flyers and landscaping flyers</>,
+            <>Handymen, painters, pest control and landscapers</>,
           ]}
         />
-        <p>
-          Painting business marketing and tradie marketing both work the same way here: one flyer, delivered
-          on its own, to the streets where the work actually is.
-        </p>
       </Section>
 
       <Section title="Timing your drops through the year">
@@ -150,8 +146,10 @@ export default function HomeServices() {
       <Section title="Choosing the right streets for your trade" tone="gray">
         <p>
           The best streets depend on the work. Older brick and weatherboard homes need more plumbing, roofing and
-          electrical upgrades. Streets with big gardens suit landscapers and decking. Areas with lots of townhouses and
-          units suit cleaners, and suburbs with ageing homes on large blocks are where builders find knockdown rebuilds.
+          electrical upgrades, which is also where handyman flyers tend to do best. Streets with big gardens suit
+          landscapers, decking and pest control flyers. Areas with lots of townhouses and units suit cleaners, and
+          suburbs with ageing homes on large blocks are where builders find knockdown rebuilds and painter flyers
+          get the most calls.
         </p>
         <p>
           Tell us your trade and the jobs you want more of, and we will suggest which streets in your service area to
@@ -167,14 +165,16 @@ export default function HomeServices() {
         </p>
         <p>
           Builders and renovators also use neighbour drops to let residents know about work hours and contact details
-          before a project starts, which helps keep the street on side.
+          before a project starts, which helps keep the street on side. It is a small piece of tradie marketing
+          that costs nothing beyond the flyers themselves.
         </p>
       </Section>
 
       <Section title="What it costs" tone="gray">
         <p>
           Every drop is $200 per 1,000 flyers, with a 1,000-flyer minimum. A 2,500-home drop around your base costs
-          $500. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for more quantities,
+          $500, which covers most painting business marketing campaigns comfortably. See the{" "}
+          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for more quantities,
           or the <TextLink href="/industries/local-businesses">local businesses</TextLink> page for other ways
           businesses use our service.
         </p>

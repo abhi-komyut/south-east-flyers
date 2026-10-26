@@ -100,9 +100,9 @@ export default function Roofing() {
           <TextLink href="/portfolio">Storm Shield Roofing</TextLink>.
         </p>
         <p>
-          Roof restoration flyers are the single most common job we see on a roofing drop, usually because a
-          restoration is the kind of job that benefits most from repeat name recognition before a big-ticket
-          decision. It is a small piece of roofing marketing overall, but a reliable one.
+          Roof restoration flyers benefit most from repeat name recognition, since it is a big-ticket decision
+          owners weigh up over time rather than acting on immediately. It is a small piece of roofing marketing
+          overall, but a reliable one.
         </p>
       </Section>
 

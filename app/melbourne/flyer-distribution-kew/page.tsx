@@ -102,10 +102,6 @@ export default function Kew() {
           For a letterbox drop that means about 10,600 homes, with more apartments than Brighton or Glen Waverley,
           which affects how many letterboxes a route can reach.
         </p>
-        <p>
-          Whether you search for letterbox drop Kew, letterbox distribution Kew, leaflet distribution Kew or
-          pamphlet delivery Kew, you&rsquo;ll land on the same service: exclusive delivery, GPS-tracked.
-        </p>
       </Section>
 
       <Section title="Families and school catchments" tone="gray">

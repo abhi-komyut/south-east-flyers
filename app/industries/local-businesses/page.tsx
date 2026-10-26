@@ -105,9 +105,8 @@ export default function LocalBusinesses() {
           calls came from.
         </p>
         <p>
-          Whether you&rsquo;re after local business marketing Melbourne shoppers actually notice, small business
-          flyers for a single street, or local marketing Melbourne customers respond to at scale, the approach is
-          the same: exclusive delivery, GPS-tracked, never bundled.
+          Small business flyers work the same way whether you run one shop or five: pick the streets, set the
+          quantity, and let the GPS report tell you where to go next.
         </p>
       </Section>
 
@@ -139,8 +138,9 @@ export default function LocalBusinesses() {
 
       <Section title="Measuring what a drop brings in" tone="gray">
         <p>
-          A letterbox drop is easy to measure if you plan for it before printing. Give the flyer its own offer code,
-          QR link or phone extension, and ask every new customer how they heard about you for the next few weeks.
+          Most local marketing Melbourne owners run is hard to measure. A letterbox drop isn&rsquo;t: give the
+          flyer its own offer code, QR link or phone extension, and ask every new customer how they heard about
+          you for the next few weeks.
         </p>
         <p>
           Compare those numbers with the GPS report. If most enquiries came from three streets out of ten, the next
@@ -148,15 +148,17 @@ export default function LocalBusinesses() {
           aren&rsquo;t, which is more than most online ads will tell a local business.
         </p>
         <p>
-          That kind of street-by-street feedback is one reason small business marketing Melbourne owners run
-          themselves tends to beat agency campaigns that never see the actual streets.
+          That kind of street-by-street feedback is something small business marketing Melbourne owners run
+          themselves can actually see, drop by drop.
         </p>
       </Section>
 
       <Section title="Local flyer distribution, street by street">
         <p>
-          We cover Melbourne&rsquo;s south-east and eastern suburbs on foot and by e-bike. Tell us your address and how
-          far your customers travel, and we will suggest the streets to start with. See{" "}
+          This is local business marketing Melbourne shops and clinics have used for decades, just with GPS
+          proof added on top. We cover Melbourne&rsquo;s south-east and eastern suburbs on foot and by e-bike.
+          Tell us your address and how far your customers travel, and we will suggest the streets to start
+          with. See{" "}
           <TextLink href="/melbourne/flyer-distribution-brighton">flyer distribution in Brighton</TextLink> for an example
           of what a suburb drop includes, or our{" "}
           <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> for the full list.

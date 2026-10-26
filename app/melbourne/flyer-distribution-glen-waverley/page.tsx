@@ -52,9 +52,9 @@ const faqs = [
       "Yes. Tell us your address and how far customers travel, and we quote for those streets rather than the whole suburb. Restaurants on the Kingsway often start with a 1,000 to 2,500 flyer radius.",
   },
   {
-    question: "Do you deliver in Mount Waverley too?",
+    question: "Do you deliver in Mount Waverley and Wheelers Hill too?",
     answer:
-      "Yes. It borders Glen Waverley and is in our service area, so one campaign can cover both with a single GPS report rather than booking separately.",
+      "Yes. Both border Glen Waverley and are in our service area, so one campaign can cover all three with a single GPS report rather than booking separately.",
   },
 ];
 
@@ -102,11 +102,6 @@ export default function GlenWaverley() {
           For a letterbox drop that means about 16,500 homes, around half as many again as Brighton or Kew, and
           street after street of houses with letterboxes at the front gate.
         </p>
-        <p>
-          Whether you search for letterbox drop Glen Waverley, letterbox distribution Glen Waverley, leaflet
-          distribution Glen Waverley or pamphlet delivery Glen Waverley, you&rsquo;ll land on the same service:
-          exclusive delivery, GPS-tracked.
-        </p>
       </Section>
 
       <Section title="Bilingual flyers reach more of the suburb" tone="gray">
@@ -142,7 +137,7 @@ export default function GlenWaverley() {
         </p>
         <p>
           Restaurants usually start with the streets within a short drive of the Kingsway, then expand into
-          Mount Waverley once they know which areas order. A bilingual menu often helps here too.
+          Mount Waverley and Wheelers Hill once they know which areas order. A bilingual menu often helps here too.
         </p>
       </Section>
 

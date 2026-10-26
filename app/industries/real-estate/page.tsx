@@ -48,7 +48,7 @@ const faqs = [
   {
     question: "Which agencies do you deliver for?",
     answer:
-      "We distribute for agencies including Ray White, McGrath and Belle Property, running Just Listed, Open Home, Auction and Sold campaigns across their local areas, usually on behalf of individual agents rather than head office.",
+      "We distribute for agencies including Ray White, McGrath and Belle Property, running Just Listed, Open Home, Auction and Sold campaigns across their local areas.",
   },
   {
     question: "Can I show my vendor proof the flyers were delivered?",
@@ -116,10 +116,6 @@ export default function RealEstate() {
           Real estate flyer distribution also shows vendors that the marketing is happening. A GPS map of every street
           covered is easier to put in a vendor report than an impression count.
         </p>
-        <p>
-          Real estate flyers remain one of the few parts of real estate marketing Melbourne vendors can
-          physically see arrive in letterboxes, which is exactly why agents still budget for them.
-        </p>
       </Section>
 
       <Section title="Campaigns we deliver for agents" tone="gray" wide>
@@ -161,13 +157,14 @@ export default function RealEstate() {
 
       <Section title="Cost of a real estate letterbox drop">
         <p>
-          Every drop is <strong>$200 per 1,000 flyers</strong>, delivered exclusively, with a 1,000-flyer minimum. A
-          Just Listed run of 2,500 homes around a property costs $500, and a four-drop campaign to the same 2,500 homes
-          costs $2,000. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for more
-          quantities.
+          Real estate flyers are priced the same as any other campaign: <strong>$200 per 1,000</strong>, delivered
+          exclusively, with a 1,000-flyer minimum. A Just Listed run of 2,500 homes around a property costs $500,
+          and a four-drop campaign to the same 2,500 homes costs $2,000. See the{" "}
+          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for more quantities.
         </p>
         <p>
-          We cover agents&rsquo; patches across Melbourne&rsquo;s south-east and east, including{" "}
+          This is real estate marketing Melbourne agencies have used for decades, just with GPS proof added on
+          top. We cover agents&rsquo; patches across Melbourne&rsquo;s south-east and east, including{" "}
           <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink>,{" "}
           <TextLink href="/melbourne/flyer-distribution-kew">Kew</TextLink> and{" "}
           <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink>. See the full{" "}
