@@ -16,14 +16,21 @@
   --color-gray-500: #6b7280;
   --color-gray-600: #4b5563;
   --color-gray-700: #374151;
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-roboto-slab);
+  --font-heading: var(--font-montserrat);
   --font-display: var(--font-lora);
 }
 
-body {
-  background: var(--color-white);
-  color: var(--color-black);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+@layer base {
+  body {
+    background: var(--color-white);
+    color: var(--color-black);
+    font-family: var(--font-sans), Georgia, serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), Arial, Helvetica, sans-serif;
+  }
 }
 
 @keyframes scroll {
