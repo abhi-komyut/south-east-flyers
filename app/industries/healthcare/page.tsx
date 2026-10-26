@@ -106,12 +106,12 @@ export default function Healthcare() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-5">
               Flyer Distribution for Healthcare
             </h1>
-            <p className="text-lg text-gray-200 mb-4">
+            <p className="text-lg text-white/85 mb-4">
               Build awareness for your practice, clinic or service among the
               local households closest to you, across Melbourne&rsquo;s
               south-east and eastern suburbs, with GPS-tracked distribution.
             </p>
-            <p className="text-base text-gray-300 mb-8">
+            <p className="text-base text-white/80 mb-8">
               You provide the flyers. We handle the distribution.
             </p>
             <Link
@@ -228,7 +228,7 @@ export default function Healthcare() {
           >
             Grow awareness in your local area
           </h2>
-          <p className="text-gray-300 mb-8 max-w-xl mx-auto">
+          <p className="text-white/80 mb-8 max-w-xl mx-auto">
             Tell us the suburbs around your practice and your flyer quantity for
             a free, no-obligation quote.
           </p>

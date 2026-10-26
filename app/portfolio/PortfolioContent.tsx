@@ -131,22 +131,22 @@ export default function PortfolioContent() {
       <section className="bg-navy text-white py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl sm:text-4xl font-bold mb-4">Our Clients</h1>
-          <p className="text-gray-300 max-w-2xl mx-auto text-base sm:text-lg mb-10">
+          <p className="text-white/80 max-w-2xl mx-auto text-base sm:text-lg mb-10">
             We&apos;re proud to work with some of Australia&apos;s most recognised brands,
             delivering flyers at scale every day across Melbourne&rsquo;s south-east and eastern suburbs.
           </p>
           <div className="grid grid-cols-3 gap-3 sm:gap-6 max-w-lg mx-auto">
             <div>
               <p className="text-2xl sm:text-3xl font-bold"><CountUp end={200} suffix="+" /></p>
-              <p className="text-xs sm:text-sm text-gray-400 mt-1">Happy Clients</p>
+              <p className="text-xs sm:text-sm text-white/70 mt-1">Happy Clients</p>
             </div>
             <div>
               <p className="text-2xl sm:text-3xl font-bold"><CountUp end={20} suffix="K+" /></p>
-              <p className="text-xs sm:text-sm text-gray-400 mt-1">Flyers Daily</p>
+              <p className="text-xs sm:text-sm text-white/70 mt-1">Flyers Daily</p>
             </div>
             <div>
               <p className="text-2xl sm:text-3xl font-bold"><CountUp end={10} suffix="+" /></p>
-              <p className="text-xs sm:text-sm text-gray-400 mt-1">Years Experience</p>
+              <p className="text-xs sm:text-sm text-white/70 mt-1">Years Experience</p>
             </div>
           </div>
         </div>
@@ -271,7 +271,7 @@ export default function PortfolioContent() {
       <section className="bg-navy py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">Join Our Growing Client List</h2>
-          <p className="text-gray-300 mb-8 max-w-xl mx-auto text-sm sm:text-base">
+          <p className="text-white/80 mb-8 max-w-xl mx-auto text-sm sm:text-base">
             Get in touch to find out how we can deliver your next campaign with precision and professionalism.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">

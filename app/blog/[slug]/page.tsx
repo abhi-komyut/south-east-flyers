@@ -75,7 +75,7 @@ export default async function BlogPostPage({
           </div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-gray-300 mb-3">
+          <p className="text-white/80 mb-3">
             {new Date(post.date).toLocaleDateString("en-AU", {
               year: "numeric",
               month: "long",
@@ -116,7 +116,7 @@ export default async function BlogPostPage({
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
             Ready to Start Your Letterbox Campaign?
           </h2>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-white/80 mb-8 max-w-2xl mx-auto">
             Get in touch with our team for a free quote on flyer distribution
             across Melbourne&rsquo;s south-east and eastern suburbs.
           </p>

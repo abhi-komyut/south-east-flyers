@@ -269,12 +269,12 @@ export default function FlyerDistributionMelbourne() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-5">
               Flyer Distribution Melbourne
             </h1>
-            <p className="text-lg text-gray-200 mb-4">
+            <p className="text-lg text-white/85 mb-4">
               Professional flyer and letterbox distribution across our confirmed
               Melbourne service areas. GPS-tracked delivery, no junk mail
               compliant, and planned around the suburbs you want to reach.
             </p>
-            <p className="text-base text-gray-300 mb-8">
+            <p className="text-base text-white/80 mb-8">
               You provide the flyers. We handle the distribution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -537,7 +537,7 @@ export default function FlyerDistributionMelbourne() {
           >
             Planning a Melbourne flyer campaign?
           </h2>
-          <p className="text-gray-300 mb-8 max-w-xl mx-auto">
+          <p className="text-white/80 mb-8 max-w-xl mx-auto">
             Tell us the suburbs you want to reach and how many flyers you have.
             We&rsquo;ll put together a free, no-obligation quote.
           </p>

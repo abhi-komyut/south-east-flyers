@@ -105,12 +105,12 @@ export default function GpsTrackedFlyerDistribution() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-5">
               GPS-Tracked Flyer Distribution
             </h1>
-            <p className="text-lg text-gray-200 mb-4">
+            <p className="text-lg text-white/85 mb-4">
               Every distribution run is GPS-tracked using the Strava app, so you
               can see the routes and streets your campaign covered — not just an
               invoice at the end.
             </p>
-            <p className="text-base text-gray-300 mb-8">
+            <p className="text-base text-white/80 mb-8">
               You provide the flyers. We handle the distribution — and show you
               where it went.
             </p>
@@ -229,7 +229,7 @@ export default function GpsTrackedFlyerDistribution() {
             >
             Want proof of where your flyers went?
           </h2>
-          <p className="text-gray-300 mb-8 max-w-xl mx-auto">
+          <p className="text-white/80 mb-8 max-w-xl mx-auto">
             Every campaign is GPS-tracked and reported. Get a free,
             no-obligation quote for your distribution.
           </p>

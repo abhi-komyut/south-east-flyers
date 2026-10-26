@@ -124,13 +124,13 @@ export default function LetterboxDistribution() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-5">
               Letterbox Distribution
             </h1>
-            <p className="text-lg text-gray-200 mb-4">
+            <p className="text-lg text-white/85 mb-4">
               Suburb-by-suburb letterbox drops across Melbourne&rsquo;s
               south-east and eastern suburbs. We deliver your flyers directly
               into household letterboxes in the areas you want to reach, no
               junk mail compliant, GPS-tracked and fully reported.
             </p>
-            <p className="text-base text-gray-300 mb-8">
+            <p className="text-base text-white/80 mb-8">
               You provide the flyers. We handle the distribution.
             </p>
             <Link
@@ -270,7 +270,7 @@ export default function LetterboxDistribution() {
             >
             Planning a letterbox drop?
           </h2>
-          <p className="text-gray-300 mb-8 max-w-xl mx-auto">
+          <p className="text-white/80 mb-8 max-w-xl mx-auto">
             Tell us which suburbs you want to reach and how many flyers you have.
             We&rsquo;ll put together a free, no-obligation quote.
           </p>

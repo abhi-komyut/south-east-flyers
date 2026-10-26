@@ -64,7 +64,7 @@ export default function Industries() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-5">
               Industries We Work With
             </h1>
-            <p className="text-lg text-gray-200">
+            <p className="text-lg text-white/85">
               Flyer and letterbox distribution built around how different local
               businesses actually reach customers across Melbourne.
             </p>
@@ -106,7 +106,7 @@ export default function Industries() {
           >
             Ready to reach local customers?
           </h2>
-          <p className="text-gray-300 mb-8 max-w-xl mx-auto">
+          <p className="text-white/80 mb-8 max-w-xl mx-auto">
             Tell us your target suburbs and flyer quantity for a free,
             no-obligation quote.
           </p>

@@ -42,7 +42,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       {/* Hero Section */}
-      <section className="relative min-h-[480px] sm:min-h-[600px] flex items-center bg-[#1B3A6B] text-white">
+      <section className="relative min-h-[480px] sm:min-h-[600px] flex items-center bg-navy text-white">
         <Image
           src="/letterbox-hero.png"
           alt="Hand dropping a flyer into a letterbox"
@@ -50,17 +50,17 @@ export default function Home() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-[#1B3A6B] opacity-70" />
+        <div className="absolute inset-0 bg-navy opacity-70" />
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-sm uppercase tracking-widest text-gray-400 mb-4">
+              <p className="text-sm uppercase tracking-widest text-white/70 mb-4">
                 Melbourne&rsquo;s South-East
               </p>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 font-display">
                 Flyer distribution in Melbourne that actually gets read.
               </h1>
-              <p className="text-base sm:text-lg text-gray-300 mb-8">
+              <p className="text-base sm:text-lg text-white/80 mb-8">
                 Exclusive letterbox drops across Melbourne&rsquo;s south-east and eastern suburbs, with GPS tracking, no junk mail compliance, and zero bundling.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -83,21 +83,21 @@ export default function Home() {
               <div className="space-y-2 sm:space-y-3">
                 <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-3 sm:p-5 text-center">
                   <p className="text-2xl sm:text-3xl font-bold"><CountUp end={50} suffix="K+" /></p>
-                  <p className="text-xs sm:text-sm text-gray-300 mt-1">Flyers per campaign</p>
+                  <p className="text-xs sm:text-sm text-white/80 mt-1">Flyers per campaign</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-3 sm:p-5 text-center">
                   <p className="text-2xl sm:text-3xl font-bold"><CountUp end={200} suffix="+" /></p>
-                  <p className="text-xs sm:text-sm text-gray-300 mt-1">Happy clients</p>
+                  <p className="text-xs sm:text-sm text-white/80 mt-1">Happy clients</p>
                 </div>
               </div>
               <div className="space-y-2 sm:space-y-3 mt-4 sm:mt-6">
                 <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-3 sm:p-5 text-center">
                   <p className="text-2xl sm:text-3xl font-bold"><CountUp end={100} suffix="%" /></p>
-                  <p className="text-xs sm:text-sm text-gray-300 mt-1">GPS tracked</p>
+                  <p className="text-xs sm:text-sm text-white/80 mt-1">GPS tracked</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-3 sm:p-5 text-center">
                   <p className="text-2xl sm:text-3xl font-bold"><CountUp end={10} suffix="+" /></p>
-                  <p className="text-xs sm:text-sm text-gray-300 mt-1">Years experience</p>
+                  <p className="text-xs sm:text-sm text-white/80 mt-1">Years experience</p>
                 </div>
               </div>
             </div>
@@ -269,7 +269,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-display">
             Ready to start your letterbox campaign?
           </h2>
-          <p className="text-gray-300 mb-8 max-w-xl mx-auto">
+          <p className="text-white/80 mb-8 max-w-xl mx-auto">
             Get a free quote for flyer distribution across Melbourne, no obligation.
           </p>
           <Link

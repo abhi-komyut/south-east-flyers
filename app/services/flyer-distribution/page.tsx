@@ -124,13 +124,13 @@ export default function FlyerDistribution() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-5">
               Professional Flyer Distribution
             </h1>
-            <p className="text-lg text-gray-200 mb-4">
+            <p className="text-lg text-white/85 mb-4">
               Residential flyer and leaflet distribution across
               Melbourne&rsquo;s south-east and eastern suburbs. We deliver your
               material directly into letterboxes in the suburbs you want to
               reach, with GPS tracking and full campaign reporting.
             </p>
-            <p className="text-base text-gray-300 mb-8">
+            <p className="text-base text-white/80 mb-8">
               You provide the flyers. We handle the distribution.
             </p>
             <Link
@@ -277,7 +277,7 @@ export default function FlyerDistribution() {
             >
             Ready to distribute your flyers?
           </h2>
-          <p className="text-gray-300 mb-8 max-w-xl mx-auto">
+          <p className="text-white/80 mb-8 max-w-xl mx-auto">
             Tell us your target suburbs and flyer quantity for a free,
             no-obligation quote.
           </p>

@@ -105,12 +105,12 @@ export default function TargetedFlyerDistribution() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-5">
               Targeted Flyer Distribution
             </h1>
-            <p className="text-lg text-gray-200 mb-4">
+            <p className="text-lg text-white/85 mb-4">
               Choose exactly where your flyers go. We help you define a practical
               distribution area — by suburb, postcode or a defined pocket — so
               your material reaches the areas that matter to your business.
             </p>
-            <p className="text-base text-gray-300 mb-8">
+            <p className="text-base text-white/80 mb-8">
               You provide the flyers. We handle the distribution.
             </p>
             <Link
@@ -229,7 +229,7 @@ export default function TargetedFlyerDistribution() {
             >
             Know the areas you want to reach?
           </h2>
-          <p className="text-gray-300 mb-8 max-w-xl mx-auto">
+          <p className="text-white/80 mb-8 max-w-xl mx-auto">
             Tell us your target suburbs and flyer quantity and we&rsquo;ll put
             together a free, no-obligation quote.
           </p>
