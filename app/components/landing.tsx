@@ -67,7 +67,7 @@ export function PageHero({
         <div className="max-w-[1144px] mx-auto flex flex-col gap-10">
           {crumbs && <Breadcrumbs items={crumbs} />}
           <div className="flex flex-wrap gap-12 gap-x-20 items-center">
-            <div className="flex-[1.1_1_440px] flex flex-col gap-6">
+            <div className="hero-stagger flex-[1.1_1_440px] flex flex-col gap-6">
               <h1 className="m-0 font-display font-medium text-[clamp(40px,4.6vw,62px)] leading-[1.06] tracking-[-0.02em]">
                 {h1}
               </h1>
@@ -103,7 +103,7 @@ export function PageHero({
           hasRight ? "flex-[1_1_560px] pb-[clamp(72px,9vw,160px)]" : "flex-1 pb-10 sm:pb-[clamp(72px,9vw,120px)]"
         }`}
       >
-        <div className={`w-full flex flex-col gap-6 ${hasRight ? "max-w-[600px]" : "max-w-3xl"}`}>
+        <div className={`hero-stagger w-full flex flex-col gap-6 ${hasRight ? "max-w-[600px]" : "max-w-3xl"}`}>
           {crumbs && <Breadcrumbs items={crumbs} />}
           <h1 className="m-0 font-display font-medium text-[clamp(40px,4.6vw,64px)] leading-[1.06] tracking-[-0.02em]">
             {h1}
