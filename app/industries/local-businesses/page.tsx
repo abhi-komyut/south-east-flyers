@@ -150,7 +150,7 @@ export default function LocalBusinesses() {
 
       <Section title="Measuring what a drop brings in">
         <p>
-          Most local marketing Melbourne owners run is hard to measure. A letterbox drop isn&rsquo;t: give the
+          Much of what local businesses spend on marketing is hard to measure. A letterbox drop isn&rsquo;t: give the
           flyer its own offer code, QR link or phone extension, and ask every new customer how they heard about
           you for the next few weeks.
         </p>
@@ -160,8 +160,8 @@ export default function LocalBusinesses() {
           aren&rsquo;t, which is more than most online ads will tell a local business.
         </p>
         <p>
-          That kind of street-by-street feedback is something small business marketing Melbourne owners run
-          themselves can actually see, drop by drop.
+          That kind of street-by-street feedback is rare in small business marketing, and it lets you spend the next
+          drop only where it has already worked.
         </p>
       </Section>
 
