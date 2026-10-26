@@ -1,18 +1,41 @@
 "use client";
 
-import { useForm, ValidationError } from "@formspree/react";
-import { useEffect } from "react";
+import { useState } from "react";
 import { trackEvent } from "../lib/gtag";
 
-export default function QuickQuoteForm() {
-  const [state, handleSubmit] = useForm("xzdqreda");
+const WHATSAPP_NUMBER = "61402824070";
 
-  useEffect(() => {
-    if (state.succeeded) {
-      trackEvent("form_submit", { form_name: "quick_quote" });
-      trackEvent("generate_lead", { form_name: "quick_quote" });
-    }
-  }, [state.succeeded]);
+export default function QuickQuoteForm() {
+  const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setSending(true);
+
+    const form = e.currentTarget;
+    const name = (form.elements.namedItem("name") as HTMLInputElement).value;
+    const phone = (form.elements.namedItem("phone") as HTMLInputElement).value;
+    const suburb = (form.elements.namedItem("suburb") as HTMLInputElement).value;
+    const quantity = (form.elements.namedItem("quantity") as HTMLSelectElement).value;
+
+    const lines = [
+      "Hi South East Flyers, I'd like a free quote.",
+      `Name: ${name}`,
+      `Phone: ${phone}`,
+      suburb && `Target suburb(s): ${suburb}`,
+      quantity && `Quantity: ${quantity}`,
+    ].filter(Boolean);
+
+    const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`;
+
+    trackEvent("form_submit", { form_name: "quick_quote" });
+    trackEvent("generate_lead", { form_name: "quick_quote" });
+
+    window.open(waUrl, "_blank", "noopener,noreferrer");
+    setSending(false);
+    setSubmitted(true);
+  }
 
   return (
     <section className="py-20 bg-gray-50">
@@ -23,7 +46,7 @@ export default function QuickQuoteForm() {
               Get a Free Quote in 24 Hours
             </h2>
             <p className="text-gray-600 mb-6">
-              Tell us about your campaign and we&apos;ll send you a detailed quote with pricing, coverage maps and a timeline. No obligation.
+              Tell us about your campaign and we&apos;ll send you a detailed quote with pricing, coverage maps and a timeline, over WhatsApp. No obligation.
             </p>
             <ul className="space-y-3 text-sm text-gray-700">
               <li className="flex items-center gap-2">
@@ -48,15 +71,21 @@ export default function QuickQuoteForm() {
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg p-6 sm:p-8">
-            {state.succeeded ? (
+            {submitted ? (
               <div className="text-center py-8">
                 <svg className="w-12 h-12 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                <h3 className="text-lg font-semibold text-black mb-2">Quote Request Received</h3>
+                <h3 className="text-lg font-semibold text-black mb-2">WhatsApp Opened</h3>
                 <p className="text-gray-600 text-sm">
-                  We&apos;ll get back to you within 24 hours with a detailed quote.
+                  We&apos;ve opened WhatsApp with your quote request filled in. Just hit send and we&apos;ll reply within 24 hours.
                 </p>
+                <button
+                  onClick={() => setSubmitted(false)}
+                  className="mt-3 text-sm text-navy underline underline-offset-2 hover:text-navy-light"
+                >
+                  Send another request
+                </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -73,7 +102,6 @@ export default function QuickQuoteForm() {
                       className="w-full px-4 py-2.5 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-navy focus:border-transparent text-sm"
                       placeholder="Your name"
                     />
-                    <ValidationError prefix="Name" field="name" errors={state.errors} className="text-red-600 text-xs mt-1" />
                   </div>
                   <div>
                     <label htmlFor="quote-phone" className="block text-sm font-medium text-gray-700 mb-1">
@@ -87,7 +115,6 @@ export default function QuickQuoteForm() {
                       className="w-full px-4 py-2.5 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-navy focus:border-transparent text-sm"
                       placeholder="04XX XXX XXX"
                     />
-                    <ValidationError prefix="Phone" field="phone" errors={state.errors} className="text-red-600 text-xs mt-1" />
                   </div>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -120,13 +147,12 @@ export default function QuickQuoteForm() {
                     </select>
                   </div>
                 </div>
-                <input type="hidden" name="_subject" value="Quick Quote Request from Website" />
                 <button
                   type="submit"
-                  disabled={state.submitting}
+                  disabled={sending}
                   className="w-full bg-cta text-white font-semibold py-3 rounded transition-all duration-200 hover:bg-cta-hover hover:scale-[1.02] disabled:opacity-50"
                 >
-                  {state.submitting ? "Sending..." : "Get My Free Quote"}
+                  {sending ? "Opening WhatsApp..." : "Get My Free Quote via WhatsApp"}
                 </button>
                 <p className="text-xs text-gray-400 text-center">No spam. We&apos;ll only contact you about your quote.</p>
               </form>

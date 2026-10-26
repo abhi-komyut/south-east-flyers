@@ -15,7 +15,6 @@ const jsonLd = {
     "Exclusive, GPS-tracked flyer distribution and letterbox drops across Melbourne's south-east and eastern suburbs. Never bundled.",
   url: "https://www.southeastflyers.com.au",
   telephone: "+61402824070",
-  email: "abhiram@southeastflyers.com.au",
   image: "https://www.southeastflyers.com.au/og-logo.jpg",
   logo: "https://www.southeastflyers.com.au/logo.png",
   areaServed: [{ "@type": "City", name: "Melbourne", addressCountry: "AU" }],
