@@ -182,7 +182,7 @@ export function CtaBanner({ title, body }: { title: string; body: string }) {
   return (
     <section className="bg-navy py-16 sm:py-20 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" style={{ fontFamily: "Georgia, serif" }}>
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-display">
           {title}
         </h2>
         <p className="text-gray-300 mb-8 max-w-xl mx-auto">{body}</p>

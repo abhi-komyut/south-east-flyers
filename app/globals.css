@@ -16,6 +16,7 @@
   --color-gray-600: #4b5563;
   --color-gray-700: #374151;
   --font-sans: var(--font-geist-sans);
+  --font-display: var(--font-lora);
 }
 
 body {

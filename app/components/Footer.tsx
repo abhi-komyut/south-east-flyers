@@ -87,7 +87,22 @@ export default function Footer() {
                   Flyer Distribution Brighton
                 </Link>
               </li>
-              <li>South East Melbourne</li>
+              <li>
+                <Link
+                  href="/melbourne/flyer-distribution-kew"
+                  className="hover:text-white transition-colors"
+                >
+                  Flyer Distribution Kew
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/melbourne/flyer-distribution-glen-waverley"
+                  className="hover:text-white transition-colors"
+                >
+                  Flyer Distribution Glen Waverley
+                </Link>
+              </li>
             </ul>
           </div>
 

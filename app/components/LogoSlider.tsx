@@ -24,10 +24,9 @@ export default function LogoSlider() {
             Who we work with
           </p>
           <h2
-            className="text-3xl md:text-4xl font-bold text-black"
-            style={{ fontFamily: "Georgia, serif" }}
+            className="text-3xl md:text-4xl font-bold text-black font-display"
           >
-            Trusted by leading brands across Australia
+            Trusted by leading brands across Melbourne
           </h2>
         </div>
       </div>

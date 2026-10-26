@@ -57,7 +57,7 @@ export default function Home() {
               <p className="text-sm uppercase tracking-widest text-gray-400 mb-4">
                 Melbourne&rsquo;s South-East
               </p>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ fontFamily: "Georgia, serif" }}>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 font-display">
                 Flyer distribution in Melbourne that actually gets read.
               </h1>
               <p className="text-base sm:text-lg text-gray-300 mb-8">
@@ -170,14 +170,12 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8">
             <ServiceCard
-              number="01"
               title="Targeted Flyer Distribution"
               description="Suburb-level leaflet distribution using demographic data to reach the right households across Melbourne."
               image="/service-targeted.png"
               imageAlt="Melbourne suburb targeting map"
             />
             <ServiceCard
-              number="02"
               title="GPS Tracked Drops"
               description="Every letterbox drop is tracked via the Strava app with full reporting so you know exactly where your flyers and pamphlets were delivered."
               image="/service-gps.avif"
@@ -268,7 +266,7 @@ export default function Home() {
       {/* CTA Banner */}
       <section className="bg-navy py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" style={{ fontFamily: "Georgia, serif" }}>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-display">
             Ready to start your letterbox campaign?
           </h2>
           <p className="text-gray-300 mb-8 max-w-xl mx-auto">
@@ -287,12 +285,17 @@ export default function Home() {
   );
 }
 
-function ServiceCard({ number, title, description, image, imageAlt }: { number: string; title: string; description: string; image?: string; imageAlt?: string }) {
+function ServiceCard({ title, description, image, imageAlt }: { title: string; description: string; image?: string; imageAlt?: string }) {
   return (
-    <div className="border border-gray-200 rounded-lg overflow-hidden">
+    <div className="group rounded-lg overflow-hidden bg-white shadow-[0_1px_2px_rgba(10,10,10,0.06)] transition-shadow duration-300 hover:shadow-[0_12px_32px_rgba(27,58,107,0.14)]">
       {image && (
-        <div className="relative aspect-[16/9]">
-          <Image src={image} alt={imageAlt || title} fill className="object-cover" />
+        <div className="relative aspect-[16/9] overflow-hidden">
+          <Image
+            src={image}
+            alt={imageAlt || title}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+          />
         </div>
       )}
       <div className="p-5 sm:p-8">
@@ -329,8 +332,10 @@ function WhyCard({ icon, title, description }: { icon: string; title: string; de
   };
 
   return (
-    <div className="bg-white border border-gray-200 rounded-lg p-6 text-center">
-      <div className="text-navy mb-3 flex justify-center">{icons[icon]}</div>
+    <div className="group bg-white rounded-lg p-6 text-center shadow-[0_1px_2px_rgba(10,10,10,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(27,58,107,0.14)]">
+      <div className="w-12 h-12 rounded-full bg-navy/5 text-navy mb-4 mx-auto flex items-center justify-center transition-colors duration-300 group-hover:bg-cta/10 group-hover:text-cta">
+        {icons[icon]}
+      </div>
       <h3 className="text-sm font-semibold text-black mb-2">{title}</h3>
       <p className="text-gray-500 text-xs leading-relaxed">{description}</p>
     </div>
