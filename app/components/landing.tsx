@@ -46,6 +46,7 @@ export function PageHero({
   crumbs,
   h1,
   lead,
+  tagline,
   ctaLabel = "Get a free quote",
   image,
   rightSlot,
@@ -53,6 +54,7 @@ export function PageHero({
   crumbs?: Crumb[];
   h1: string;
   lead: React.ReactNode;
+  tagline?: string;
   ctaLabel?: string;
   image?: { src: string; alt: string };
   rightSlot?: React.ReactNode;
@@ -71,6 +73,7 @@ export function PageHero({
             {h1}
           </h1>
           <p className="m-0 text-[clamp(17px,1.4vw,19px)] leading-relaxed text-white/85 max-w-[540px]">{lead}</p>
+          {tagline && <p className="m-0 font-heading font-semibold text-base text-cta-on-dark">{tagline}</p>}
           <div className="flex flex-wrap items-center gap-3.5">
             <Link
               href="/contact"
@@ -191,7 +194,7 @@ export function Callout({
   children,
 }: {
   title: string;
-  figures: { value: string; label: string }[];
+  figures?: { value: string; label: string }[];
   children: React.ReactNode;
 }) {
   return (
@@ -201,18 +204,20 @@ export function Callout({
     >
       <div className="flex-[1_1_300px] flex flex-col gap-[22px]">
         <h2 className="m-0 font-display font-medium text-[clamp(28px,2.8vw,38px)] leading-[1.15]">{title}</h2>
-        <div className="flex flex-wrap gap-7 gap-x-12">
-          {figures.map((f) => (
-            <div key={f.label}>
-              <p className="m-0 font-display text-[40px] leading-none text-navy [font-variant-numeric:tabular-nums]">
-                {f.value}
-              </p>
-              <p className="mt-2 mb-0 text-sm text-muted">{f.label}</p>
-            </div>
-          ))}
-        </div>
+        {figures && (
+          <div className="flex flex-wrap gap-7 gap-x-12">
+            {figures.map((f) => (
+              <div key={f.label}>
+                <p className="m-0 font-display text-[40px] leading-none text-navy [font-variant-numeric:tabular-nums]">
+                  {f.value}
+                </p>
+                <p className="mt-2 mb-0 text-sm text-muted">{f.label}</p>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
-      <p className="flex-[1.6_1_440px] m-0 text-[17px] leading-[1.75] text-body">{children}</p>
+      <div className="flex-[1.6_1_440px] flex flex-col gap-4 text-[17px] leading-[1.75] text-body">{children}</div>
     </Reveal>
   );
 }
@@ -255,10 +260,12 @@ export function StepsBand({
 
 export function Bullets({ items }: { items: React.ReactNode[] }) {
   return (
-    <ul className="space-y-3">
+    <ul className="list-none m-0 p-0 flex flex-wrap gap-4 gap-x-8">
       {items.map((item, i) => (
-        <li key={i} className="flex gap-3">
-          <span className="mt-2 h-1.5 w-1.5 rounded-full bg-cta shrink-0" aria-hidden="true" />
+        <li key={i} className="flex-[1_1_260px] flex gap-3 text-base leading-snug">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-navy shrink-0 mt-0.5" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M5 12.5l4.5 4.5L19 7.5" />
+          </svg>
           <span>{item}</span>
         </li>
       ))}
@@ -320,35 +327,39 @@ export function JsonLd({ data }: { data: object }) {
  * Sitewide "how it works" block. Deliberately identical on every page and kept
  * short, so suburb and industry pages spend their words on page-specific facts.
  */
-export function HowItWorks() {
-  return (
-    <StepsBand
-      title="How it works"
-      steps={[
-        { title: "Tell us the area", body: "Streets, a radius or whole suburbs, plus quantity and start date." },
-        { title: "Quote within 24 hours", body: "Letterbox count, total cost and timeline." },
-        { title: "Send your printed flyers", body: "We distribute; we don't print." },
-        { title: "We deliver and report", body: "Walkers and e-bike riders cover the route; you get the GPS map." },
-      ]}
-    />
-  );
+export function HowItWorks({
+  title = "How it works",
+  steps = [
+    { title: "Tell us the area", body: "Streets, a radius or whole suburbs, plus quantity and start date." },
+    { title: "Quote within 24 hours", body: "Letterbox count, total cost and timeline." },
+    { title: "Send your printed flyers", body: "We distribute; we don't print." },
+    { title: "We deliver and report", body: "Walkers and e-bike riders cover the route; you get the GPS map." },
+  ],
+}: {
+  title?: string;
+  steps?: { title: string; body: React.ReactNode }[];
+} = {}) {
+  return <StepsBand title={title} steps={steps} />;
 }
 
 /** Single-colour client logos, no labels, used on Home and the industries hub. */
+export const ALL_CLIENT_LOGOS: { src: string; alt: string; height: number }[] = [
+  { src: "/images/redesign/logo-marshallwhite.png", alt: "Marshall White", height: 18 },
+  { src: "/images/redesign/logo-mcgrath.png", alt: "McGrath", height: 26 },
+  { src: "/images/redesign/logo-belle.png", alt: "Belle Property", height: 58 },
+  { src: "/images/redesign/logo-barryplant.png", alt: "Barry Plant", height: 17 },
+  { src: "/images/redesign/logo-buxton.png", alt: "Buxton", height: 28 },
+  { src: "/images/redesign/logo-highdental.png", alt: "High Dental Melbourne", height: 50 },
+  { src: "/images/redesign/logo-stormshield.png", alt: "Storm Shield Roofing", height: 50 },
+];
+
 export function LogoWall({
   heading = "Trusted by Melbourne agencies, clinics and trades",
+  logos = ALL_CLIENT_LOGOS,
 }: {
   heading?: string;
+  logos?: { src: string; alt: string; height: number }[];
 }) {
-  const logos: { src: string; alt: string; height: number }[] = [
-    { src: "/images/redesign/logo-marshallwhite.png", alt: "Marshall White", height: 18 },
-    { src: "/images/redesign/logo-mcgrath.png", alt: "McGrath", height: 26 },
-    { src: "/images/redesign/logo-belle.png", alt: "Belle Property", height: 58 },
-    { src: "/images/redesign/logo-barryplant.png", alt: "Barry Plant", height: 17 },
-    { src: "/images/redesign/logo-buxton.png", alt: "Buxton", height: 28 },
-    { src: "/images/redesign/logo-highdental.png", alt: "High Dental Melbourne", height: 50 },
-    { src: "/images/redesign/logo-stormshield.png", alt: "Storm Shield Roofing", height: 50 },
-  ];
   return (
     <section aria-label={heading} className="py-[88px] px-[clamp(20px,4vw,48px)]">
       <div className="max-w-[1144px] mx-auto flex flex-col items-center gap-10">

@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
+import Reveal from "../../components/Reveal";
 import {
   SITE_URL,
   PageHero,
-  ProofStrip,
+  FactsStrip,
   Section,
+  Callout,
   Bullets,
-  CtaBanner,
   TextLink,
   JsonLd,
   HowItWorks,
@@ -86,13 +88,19 @@ export default function Brighton() {
         ]}
         h1="Flyer Distribution & Letterbox Drops in Brighton"
         lead="Flyer distribution in Brighton 3186, from North Road to the Hampton border. Your flyer goes into each letterbox on its own, every route is GPS-tracked, and you can start with 1,000 homes."
-        proof={["Minimum 1,000 flyers", "$200 per 1,000", "Full suburb about $2,100"]}
-        ctaLabel="Get a Free Brighton Quote"
+        image={{ src: "/images/redesign/suburb-map.jpg", alt: "Map of Melbourne's suburbs showing the areas South East Flyers covers" }}
       />
 
-      <ProofStrip />
+      <FactsStrip
+        stats={[
+          { value: "10,500", label: "homes in Brighton 3186, approx." },
+          { value: "$200", label: "per 1,000 flyers, exclusive" },
+          { value: "$2,100", label: "to cover the whole suburb, approx." },
+          { value: "1,000", label: "flyer minimum, $200 test run" },
+        ]}
+      />
 
-      <Section title="Brighton at a glance">
+      <Section title="Brighton at a glance" first>
         <p>
           Brighton is one of the most established suburbs we cover: large period and post-war homes, wide tree-lined
           streets, and owners who have often lived in the same house for decades. Its shops sit along Church Street
@@ -104,7 +112,7 @@ export default function Brighton() {
         </p>
       </Section>
 
-      <Section title="Long-term owners, big decisions" tone="gray">
+      <Section title="Long-term owners, big decisions">
         <p>
           Households that have owned their home for decades make the large, considered purchases: selling and
           downsizing, renovating a kitchen, replacing a roof, choosing a new dentist. Those decisions take weeks, and a
@@ -119,6 +127,19 @@ export default function Brighton() {
         </p>
       </Section>
 
+      <Reveal as="figure" className="mx-auto mt-14 mb-0 max-w-[1144px] px-[clamp(20px,4vw,48px)] flex flex-col gap-3">
+        <div className="rounded-card overflow-hidden aspect-[21/8]">
+          <Image
+            src="/images/redesign/walker-street.jpg"
+            alt="A walker beside a brick letterbox on a leafy bayside street"
+            width={1144}
+            height={436}
+            className="w-full h-full object-cover object-[50%_45%]"
+          />
+        </div>
+        <figcaption className="text-sm text-muted">Most Brighton homes have letterboxes right on the street.</figcaption>
+      </Reveal>
+
       <Section title="Mostly houses, so coverage is high">
         <p>
           Most Brighton homes are houses and townhouses with letterboxes on the street, so a drop reaches nearly every
@@ -132,7 +153,7 @@ export default function Brighton() {
         </p>
       </Section>
 
-      <Section title="Timing a Brighton drop around the property market" tone="gray">
+      <Section title="Timing a Brighton drop around the property market">
         <p>
           Melbourne&rsquo;s busiest selling season runs from September to early December, with a smaller peak in
           autumn. Brighton agents push appraisal flyers in the weeks before each season, and renovators, painters and
@@ -159,28 +180,32 @@ export default function Brighton() {
         </p>
       </Section>
 
-      <Section title="Letterbox drop cost in Brighton">
-        <p>
-          Every drop is <strong>$200 per 1,000 flyers</strong>, delivered exclusively. A first test costs $200; the
-          whole suburb costs about $2,100. Brighton sits in the City of Bayside, so our flyer distribution
-          across Bayside also reaches Hampton and Sandringham. The{" "}
-          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page
-          has more quantities, and our <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>{" "}
-          lists every suburb we cover, including <TextLink href="/melbourne/flyer-distribution-kew">Kew</TextLink> and{" "}
+      <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
+        <Callout
+          title="Letterbox drop cost in Brighton"
+          figures={[
+            { value: "$200", label: "first test, 1,000 flyers" },
+            { value: "$2,100", label: "whole suburb, approx." },
+          ]}
+        >
+          Every drop is <strong className="text-ink">$200 per 1,000 flyers</strong>, delivered exclusively. Brighton
+          sits in the City of Bayside, so our flyer distribution across Bayside also reaches Hampton and Sandringham.
+          The <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page has more quantities, and our{" "}
+          <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> lists every
+          suburb we cover, including <TextLink href="/melbourne/flyer-distribution-kew">Kew</TextLink> and{" "}
           <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink>.
-        </p>
-      </Section>
+        </Callout>
+      </div>
 
       <HowItWorks />
 
-      <QuickQuoteForm />
-
-      <FAQSection items={faqs} title="Brighton Letterbox Drop FAQs" />
-
-      <CtaBanner
-        title="Ready to reach Brighton letterboxes?"
-        body="Tell us your streets and quantity, and we'll send a quote with the letterbox count within 24 hours."
+      <QuickQuoteForm
+        heading="Ready to reach Brighton letterboxes?"
+        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count within 24 hours."
+        suburbHint="e.g. Brighton, Brighton East, Hampton"
       />
+
+      <FAQSection items={faqs} title="Brighton letterbox drop FAQs" />
     </>
   );
 }
