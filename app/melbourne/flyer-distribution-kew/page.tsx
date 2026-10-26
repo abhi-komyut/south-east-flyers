@@ -39,7 +39,7 @@ const faqs = [
   {
     question: "What does a letterbox drop across all of Kew cost?",
     answer:
-      "About $2,100 at $200 per 1,000 flyers. Most businesses start smaller: 1,000 flyers around Kew Junction or one school catchment costs $200.",
+      "About $2,100 at $200 per 1,000 flyers. Most businesses start smaller: 1,000 flyers around Kew Junction or one school catchment costs $200, then expand once they know which streets respond.",
   },
   {
     question: "Is Kew a good suburb for tutoring and kids' activity flyers?",
@@ -49,7 +49,7 @@ const faqs = [
   {
     question: "Can I target just the streets near Kew Junction?",
     answer:
-      "Yes. Give us your shop address and how far your customers walk or drive, and we will quote for those streets only.",
+      "Yes. Give us your shop address and how far your customers walk or drive, and we will quote for those streets only, which is the usual starting point for Junction cafes and shops.",
   },
   {
     question: "Should Kew flyers be in English and Chinese?",
@@ -101,6 +101,10 @@ export default function Kew() {
         <p>
           For a letterbox drop that means about 10,600 homes, with more apartments than Brighton or Glen Waverley,
           which affects how many letterboxes a route can reach.
+        </p>
+        <p>
+          Whether you search for letterbox drop Kew, letterbox distribution Kew, leaflet distribution Kew or
+          pamphlet delivery Kew, you&rsquo;ll land on the same service: exclusive delivery, GPS-tracked.
         </p>
       </Section>
 
@@ -159,7 +163,8 @@ export default function Kew() {
       <Section title="Letterbox drop cost in Kew">
         <p>
           Every drop is <strong>$200 per 1,000 flyers</strong>, delivered exclusively. One school catchment or the
-          streets around the Junction (1,000 flyers) costs $200; the whole suburb is about $2,100. See the{" "}
+          streets around the Junction (1,000 flyers) costs $200; the whole suburb is about $2,100. Our flyer
+          distribution across Boroondara also reaches Hawthorn and Camberwell. See the{" "}
           <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
           <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink>,{" "}
           <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink> and the rest of our{" "}

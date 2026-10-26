@@ -52,7 +52,7 @@ const faqs = [
   {
     question: "How many flyers should an electrician start with?",
     answer:
-      "1,000 to 2,500 homes around your base, costing $200 to $500. Track which streets call, then repeat there and move outward.",
+      "1,000 to 2,500 homes around your base, costing $200 to $500. Track which streets call, then repeat the drop there and move outward into the streets next door once you know it works.",
   },
 ];
 
@@ -96,6 +96,11 @@ export default function Electricians() {
         <p>
           Electrician flyers do their best work on the second kind. A flyer that arrives on its own, with one upgrade
           and a clear offer, sits on the bench while the owner decides, and gets picked up when they are ready.
+        </p>
+        <p>
+          It is a small, inexpensive part of electrician marketing overall, but it is the part that puts your
+          name in the house before the decision gets made. For marketing for electricians beyond letterbox
+          drops, talk to us about which suburbs and seasons are worth the spend.
         </p>
       </Section>
 

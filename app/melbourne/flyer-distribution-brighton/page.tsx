@@ -44,7 +44,7 @@ const faqs = [
   {
     question: "Do Brighton apartments get flyers?",
     answer:
-      "Only where the letterboxes can be reached from the street. Blocks with locked mail rooms are skipped, and the GPS report shows which ones.",
+      "Only where the letterboxes can be reached from the street. Blocks with locked mail rooms are skipped, and the GPS report shows which ones so you know your real coverage before the next run.",
   },
   {
     question: "Where in Brighton should a first drop go?",
@@ -54,7 +54,7 @@ const faqs = [
   {
     question: "Can one campaign cover Brighton and Brighton East?",
     answer:
-      "Yes. We deliver in both, as well as Hampton, Elsternwick and Sandringham, and can quote them as one campaign with a single GPS report.",
+      "Yes. We deliver in both, as well as Hampton and Sandringham, and can quote them as one campaign with a single GPS report rather than booking each suburb separately.",
   },
 ];
 
@@ -101,6 +101,11 @@ export default function Brighton() {
         <p>
           For a letterbox drop that means about 10,500 homes, most of them houses with street letterboxes, and
           households that read what arrives rather than skimming it.
+        </p>
+        <p>
+          Whether you search for letterbox drop Brighton, letterbox distribution Brighton, leaflet
+          distribution Brighton or pamphlet delivery Brighton, you&rsquo;ll land on the same service:
+          exclusive delivery, GPS-tracked.
         </p>
       </Section>
 
@@ -162,7 +167,9 @@ export default function Brighton() {
       <Section title="Letterbox drop cost in Brighton">
         <p>
           Every drop is <strong>$200 per 1,000 flyers</strong>, delivered exclusively. A first test costs $200; the
-          whole suburb costs about $2,100. The <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page
+          whole suburb costs about $2,100. Brighton sits in the City of Bayside, so our flyer distribution
+          across Bayside also reaches Hampton and Sandringham. The{" "}
+          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page
           has more quantities, and our <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>{" "}
           lists every suburb we cover, including <TextLink href="/melbourne/flyer-distribution-kew">Kew</TextLink> and{" "}
           <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink>.

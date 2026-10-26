@@ -10,7 +10,7 @@ const PAGE_PATH = "/melbourne/flyer-distribution-melbourne";
 export const metadata: Metadata = {
   title: "Flyer Distribution Melbourne",
   description:
-    "Professional flyer and letterbox distribution across Melbourne. GPS-tracked delivery, no junk mail compliant, suburb-level targeting. You provide the flyers, we handle the distribution. Get a free quote.",
+    "Flyer distribution Melbourne: exclusive, GPS-tracked letterbox drops across our service suburbs. $200 per 1,000 flyers, from 1,000. Free quote today.",
   alternates: {
     canonical: `${SITE_URL}${PAGE_PATH}`,
   },
@@ -202,12 +202,12 @@ const faqs = [
   {
     question: "How many flyers do I need for a Melbourne suburb?",
     answer:
-      "As a rough guide, one flyer covers one letterbox, so a few thousand flyers covers a decent pocket of a suburb rather than the whole thing. If you tell us the suburb and your goal, we'll help you work out a sensible quantity — you don't have to guess.",
+      "As a rough guide, one flyer covers one letterbox, so a few thousand flyers covers a decent pocket of a suburb rather than the whole thing. If you tell us the suburb and your goal, we'll help you work out a sensible quantity, so you don't have to guess.",
   },
   {
-    question: "Which Melbourne suburbs do you cover?",
+    question: "Is there a flyer distribution service near me in the south-east?",
     answer:
-      "We service the bayside and inner south (St Kilda, Brighton, South Yarra, Caulfield, Malvern), the Monash and eastern suburbs (Glen Waverley, Box Hill, Blackburn), Boroondara and Manningham (Balwyn, Doncaster) and more. The full confirmed list is in the coverage section above.",
+      "Likely, yes. We service the bayside and inner south (St Kilda, Brighton, South Yarra, Caulfield, Malvern), the Monash and eastern suburbs (Glen Waverley, Box Hill, Blackburn), Boroondara and Manningham (Balwyn, Doncaster) and more. The full confirmed list is in the coverage section above.",
   },
   {
     question: "Do you deliver to letterboxes marked 'No Junk Mail'?",
@@ -217,12 +217,12 @@ const faqs = [
   {
     question: "How do I know my flyers were actually delivered?",
     answer:
-      "Every distribution run is GPS-tracked in real time using the Strava app. After the campaign you receive a report showing the streets covered and a map of the route — so you can see where your flyers went rather than taking it on trust.",
+      "Every distribution run is GPS-tracked in real time using the Strava app. After the campaign you receive a report showing the streets covered and a map of the route, so you can see where your flyers went rather than taking it on trust.",
   },
   {
     question: "How long does a Melbourne flyer campaign take?",
     answer:
-      "We offer a 48-hour turnaround for urgent campaigns. For standard campaigns we usually begin distribution within 3–5 business days of receiving your flyers, then complete the run to the schedule we agree.",
+      "We offer a 48-hour turnaround for urgent campaigns. For standard campaigns we usually begin distribution within 3 to 5 business days of receiving your flyers, then complete the run to the schedule we agree.",
   },
 ];
 
@@ -295,12 +295,21 @@ export default function FlyerDistributionMelbourne() {
             Flyer distribution across Melbourne
           </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            South East Flyers is a Melbourne flyer and letterbox distribution
-            specialist. Businesses across the city give us their printed
-            material and we deliver it, letterbox by letterbox, across the
-            suburbs they want to target — from the bayside around St Kilda and
-            Brighton through to the Monash and eastern suburbs like Glen
-            Waverley, Box Hill and Doncaster.
+            South East Flyers is a flyer distribution service Melbourne
+            businesses use when they want solo delivery rather than a bundle.
+            We&rsquo;re a flyer distribution company Melbourne clients choose
+            precisely because we&rsquo;re not one of the big operators running
+            10,000-home minimums. Businesses across the city give us their
+            printed material and we deliver it, letterbox by letterbox,
+            across the suburbs they want to target, from the bayside around
+            St Kilda and Brighton through to the Monash and eastern suburbs
+            like Glen Waverley, Box Hill and Doncaster.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Whatever you call it, leaflet distribution Melbourne businesses
+            already search for, letterbox distribution or one of the many
+            flyer distribution companies in the city, the service is the
+            same: exclusive delivery, GPS-tracked, never bundled.
           </p>
           <p className="text-gray-700 leading-relaxed">
             We deliver every flyer individually rather than bundling it with

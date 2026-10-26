@@ -47,12 +47,12 @@ const faqs = [
   {
     question: "Can you deliver around a roof I'm restoring?",
     answer:
-      "Yes. Scaffolding and a crew on a roof get noticed, so a 1,000-flyer drop around the job converts that attention into quote requests. Give us the address.",
+      "Yes. Scaffolding and a crew on a roof get noticed, so a 1,000-flyer drop around the job converts that attention into quote requests. Give us the address and we'll quote the surrounding streets.",
   },
   {
     question: "How many roofing flyers should I start with?",
     answer:
-      "2,500 to 5,000 homes ($500 to $1,000) gives a roofer enough reach to see results, because a roof is a bigger, less frequent job than a blocked drain.",
+      "2,500 to 5,000 homes ($500 to $1,000) gives a roofer enough reach to see results, because a roof is a bigger, less frequent job than a blocked drain and needs a wider pool of households to generate a steady number of calls.",
   },
 ];
 
@@ -98,6 +98,11 @@ export default function Roofing() {
           catalogues, gets read; the second and third one in the same street build the familiarity that gets the
           call. We already deliver for roofing companies including{" "}
           <TextLink href="/portfolio">Storm Shield Roofing</TextLink>.
+        </p>
+        <p>
+          Roof restoration flyers are the single most common job we see on a roofing drop, usually because a
+          restoration is the kind of job that benefits most from repeat name recognition before a big-ticket
+          decision. It is a small piece of roofing marketing overall, but a reliable one.
         </p>
       </Section>
 

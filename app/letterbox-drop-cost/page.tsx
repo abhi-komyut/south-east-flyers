@@ -19,7 +19,7 @@ const PAGE_PATH = "/letterbox-drop-cost";
 export const metadata: Metadata = {
   title: { absolute: "Letterbox Drop Cost Melbourne 2026 | South East Flyers" },
   description:
-    "A letterbox drop in Melbourne costs $200 per 1,000 flyers with South East Flyers: exclusive, GPS-tracked, never bundled. Prices for 1,000 to 20,000 flyers.",
+    "Letterbox drop cost Melbourne: $200 per 1,000 flyers, exclusive, GPS-tracked, never bundled. Prices for 1,000 to 20,000 flyers. Free quote in 24 hours.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Letterbox Drop Cost Melbourne | South East Flyers",
@@ -40,7 +40,7 @@ const faqs = [
   {
     question: "What is the minimum order?",
     answer:
-      "The minimum is 1,000 flyers, which costs $200. It is enough to cover a few streets around your business or listing and test the response before a larger drop.",
+      "The minimum is 1,000 flyers, which costs $200. It is enough to cover a few streets around your business or listing and test the response before committing to a larger, full-suburb drop.",
   },
   {
     question: "Why does exclusive delivery cost more than shared distribution?",
@@ -60,7 +60,7 @@ const faqs = [
   {
     question: "How quickly will I get a price?",
     answer:
-      "Quotes are sent within 24 hours and show the letterbox count, total cost and start date. Urgent campaigns can start within 48 hours of your flyers arriving.",
+      "Quotes are sent within 24 hours and show the letterbox count, total cost and start date. Urgent campaigns can start within 48 hours of your flyers arriving, once we've confirmed the streets with you.",
   },
 ];
 
@@ -98,6 +98,11 @@ export default function LetterboxDropCost() {
 
       <Section title="Letterbox drop prices by quantity">
         <p>The rate is the same for every quantity, so the total is easy to work out before you call.</p>
+        <p>
+          That works out to a letterbox drop price per 1,000 of exactly $200, whether you think of it as
+          flyer distribution cost, leaflet drop cost or leaflet distribution price. The rate doesn&rsquo;t
+          change depending on which term you search.
+        </p>
         <div className="overflow-x-auto">
           <table className="w-full text-left border border-gray-200 rounded-lg overflow-hidden">
             <thead className="bg-gray-50 text-sm text-gray-600">

@@ -46,7 +46,7 @@ const faqs = [
   {
     question: "How small can a local campaign be?",
     answer:
-      "Our minimum is 1,000 flyers, which costs $200. That covers the streets closest to most shops or a single neighbourhood, so you can test before spending more.",
+      "Our minimum is 1,000 flyers, which costs $200. That covers the streets closest to most shops or a single neighbourhood, so you can test the idea before spending more on a wider run.",
   },
   {
     question: "Can you deliver only near my shop?",
@@ -56,12 +56,12 @@ const faqs = [
   {
     question: "Will my flyer be mixed in with other businesses' advertising?",
     answer:
-      "No. Every South East Flyers drop is exclusive: your flyer is the only one the walker delivers on that run, so it arrives on its own.",
+      "No. Every South East Flyers drop is exclusive: your flyer is the only one the walker delivers on that run, so it arrives on its own rather than buried in a stack of catalogues.",
   },
   {
     question: "Which suburbs do you cover?",
     answer:
-      "We deliver across Melbourne's south-east and eastern suburbs, from Port Melbourne and St Kilda through Brighton, Caulfield and Glen Waverley to Box Hill and Vermont South.",
+      "We deliver across Melbourne's south-east and eastern suburbs, from Port Melbourne and St Kilda through Brighton, Caulfield and Glen Waverley to Box Hill and Vermont South. See the full list on our Melbourne service area page.",
   },
 ];
 
@@ -104,6 +104,11 @@ export default function LocalBusinesses() {
           where each flyer went. If one area brings in calls and another doesn&rsquo;t, the next drop goes where the
           calls came from.
         </p>
+        <p>
+          Whether you&rsquo;re after local business marketing Melbourne shoppers actually notice, small business
+          flyers for a single street, or local marketing Melbourne customers respond to at scale, the approach is
+          the same: exclusive delivery, GPS-tracked, never bundled.
+        </p>
       </Section>
 
       <Section title="Local businesses we deliver for" tone="gray" wide>
@@ -141,6 +146,10 @@ export default function LocalBusinesses() {
           Compare those numbers with the GPS report. If most enquiries came from three streets out of ten, the next
           drop concentrates there. After two or three drops you know which streets are worth the spend and which
           aren&rsquo;t, which is more than most online ads will tell a local business.
+        </p>
+        <p>
+          That kind of street-by-street feedback is one reason small business marketing Melbourne owners run
+          themselves tends to beat agency campaigns that never see the actual streets.
         </p>
       </Section>
 

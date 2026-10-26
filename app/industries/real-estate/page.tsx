@@ -48,7 +48,7 @@ const faqs = [
   {
     question: "Which agencies do you deliver for?",
     answer:
-      "We distribute for agencies including Ray White, McGrath and Belle Property, running Just Listed, Open Home, Auction and Sold campaigns across their local areas.",
+      "We distribute for agencies including Ray White, McGrath and Belle Property, running Just Listed, Open Home, Auction and Sold campaigns across their local areas, usually on behalf of individual agents rather than head office.",
   },
   {
     question: "Can I show my vendor proof the flyers were delivered?",
@@ -63,7 +63,7 @@ const faqs = [
   {
     question: "Can you focus on houses and skip apartment blocks?",
     answer:
-      "Yes. Tell us, and we will plan the route around houses and townhouses where that is practical. The GPS report shows exactly what was covered.",
+      "Yes. Tell us, and we will plan the route around houses and townhouses where that is practical, which usually suits a farming campaign better than full suburb coverage. The GPS report shows exactly what was covered.",
   },
 ];
 
@@ -115,6 +115,10 @@ export default function RealEstate() {
         <p>
           Real estate flyer distribution also shows vendors that the marketing is happening. A GPS map of every street
           covered is easier to put in a vendor report than an impression count.
+        </p>
+        <p>
+          Real estate flyers remain one of the few parts of real estate marketing Melbourne vendors can
+          physically see arrive in letterboxes, which is exactly why agents still budget for them.
         </p>
       </Section>
 

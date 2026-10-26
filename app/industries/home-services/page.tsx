@@ -15,9 +15,9 @@ import {
 const PAGE_PATH = "/industries/home-services";
 
 export const metadata: Metadata = {
-  title: { absolute: "Home Services Letterbox Drops Melbourne | South East Flyers" },
+  title: { absolute: "Home Services Marketing Melbourne | South East Flyers" },
   description:
-    "Flyer distribution for plumbers, electricians, roofers, builders, renovators and cleaners in Melbourne. Exclusive, GPS-tracked, $200 per 1,000 flyers.",
+    "Home services marketing for plumbers, electricians, roofers and cleaners in Melbourne. Exclusive, GPS-tracked letterbox drops. $200 per 1,000 flyers.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Letterbox Drops for Home Services Melbourne | South East Flyers",
@@ -48,7 +48,7 @@ const faqs = [
   {
     question: "Can you deliver around a job I'm working on?",
     answer:
-      "Yes. Neighbour drops around an active job site work well for builders, renovators and roofers. Give us the address and a radius, and we will quote for those streets.",
+      "Yes. Neighbour drops around an active job site work well for builders, renovators and roofers. Give us the address and a radius, and we will quote for those streets while the work is still visible.",
   },
   {
     question: "Is my flyer delivered with other tradies' flyers?",
@@ -58,7 +58,7 @@ const faqs = [
   {
     question: "Do you print trade flyers?",
     answer:
-      "No. We distribute; we don't print. Use any print shop and send the flyers to us, or ask your printer to deliver them directly.",
+      "No. We distribute; we don't print. Use any print shop and send the flyers to us, or ask your printer to deliver them directly to our depot before the run.",
   },
 ];
 
@@ -113,9 +113,13 @@ export default function HomeServices() {
             <>Renovators: kitchens, bathrooms and whole-home renovations</>,
             <>Carpenters: decks, pergolas, built-ins and repairs</>,
             <>Cleaners: regular home cleans, bathroom deep cleans and end-of-lease cleans</>,
-            <>Handymen, painters, pest control and landscapers</>,
+            <>Handyman flyers, painter flyers, pest control flyers and landscaping flyers</>,
           ]}
         />
+        <p>
+          Painting business marketing and tradie marketing both work the same way here: one flyer, delivered
+          on its own, to the streets where the work actually is.
+        </p>
       </Section>
 
       <Section title="Timing your drops through the year">
