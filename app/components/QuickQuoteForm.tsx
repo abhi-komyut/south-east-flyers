@@ -1,11 +1,14 @@
 "use client";
 
 import { useForm, ValidationError } from "@formspree/react";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { trackEvent } from "../lib/gtag";
+
+const WHATSAPP_NUMBER = "61402824070";
 
 export default function QuickQuoteForm() {
   const [state, handleSubmit] = useForm("xzdqreda");
+  const waUrlRef = useRef<string | null>(null);
 
   useEffect(() => {
     if (state.succeeded) {
@@ -13,6 +16,31 @@ export default function QuickQuoteForm() {
       trackEvent("generate_lead", { form_name: "quick_quote" });
     }
   }, [state.succeeded]);
+
+  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    const form = e.currentTarget;
+    const name = (form.elements.namedItem("name") as HTMLInputElement).value;
+    const phone = (form.elements.namedItem("phone") as HTMLInputElement).value;
+    const suburb = (form.elements.namedItem("suburb") as HTMLInputElement).value;
+    const quantity = (form.elements.namedItem("quantity") as HTMLSelectElement).value;
+
+    const lines = [
+      "Hi South East Flyers, I'd like a free quote.",
+      `Name: ${name}`,
+      `Phone: ${phone}`,
+      suburb && `Target suburb(s): ${suburb}`,
+      quantity && `Quantity: ${quantity}`,
+    ].filter(Boolean);
+    waUrlRef.current = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`;
+
+    handleSubmit(e);
+  }
+
+  function sendOnWhatsApp() {
+    if (!waUrlRef.current) return;
+    trackEvent("whatsapp_followup", { form_name: "quick_quote" });
+    window.open(waUrlRef.current, "_blank", "noopener,noreferrer");
+  }
 
   return (
     <section className="py-20 bg-gray-50">
@@ -54,12 +82,21 @@ export default function QuickQuoteForm() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
                 <h3 className="text-lg font-semibold text-black mb-2">Quote Request Received</h3>
-                <p className="text-gray-600 text-sm">
+                <p className="text-gray-600 text-sm mb-4">
                   We&apos;ll get back to you within 24 hours with a detailed quote.
                 </p>
+                <button
+                  onClick={sendOnWhatsApp}
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-navy border border-navy rounded px-4 py-2 hover:bg-navy hover:text-white transition-colors"
+                >
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.43 1.26 4.87L2 22l5.27-1.38a9.93 9.93 0 004.77 1.22h.01c5.52 0 10-4.48 10-10s-4.48-10-10.01-10zm5.84 14.17c-.25.7-1.45 1.33-2 1.42-.51.08-1.15.11-1.86-.12a16.9 16.9 0 01-1.65-.61c-2.91-1.26-4.8-4.18-4.95-4.38-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.26-.28.57-.35.76-.35.19 0 .38 0 .55.01.17.01.41-.07.64.49.25.6.83 2.07.9 2.22.07.15.12.33.02.52-.1.19-.15.3-.3.47-.15.17-.31.37-.44.5-.15.14-.3.3-.13.6.17.3.77 1.27 1.65 2.06 1.14 1.01 2.1 1.33 2.42 1.48.32.15.5.13.7-.08.2-.2.8-.93 1.01-1.26.21-.32.42-.27.7-.16.28.1 1.79.84 2.1 1 .31.15.51.23.59.36.08.13.08.74-.17 1.44z" />
+                  </svg>
+                  Also send on WhatsApp
+                </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={onSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="quote-name" className="block text-sm font-medium text-gray-700 mb-1">

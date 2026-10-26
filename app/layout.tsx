@@ -73,7 +73,6 @@ const organizationLd = {
   image: `${SITE_URL}/og-logo.jpg`,
   description:
     "Exclusive, GPS-tracked flyer distribution and letterbox drops across Melbourne's south-east and eastern suburbs. Never bundled.",
-  email: "abhiram@southeastflyers.com.au",
   telephone: "+61402824070",
   sameAs: [
     "https://www.facebook.com/southeastflyers",
@@ -84,7 +83,6 @@ const organizationLd = {
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+61402824070",
-    email: "abhiram@southeastflyers.com.au",
     contactType: "sales",
     areaServed: "AU",
     availableLanguage: "English",
