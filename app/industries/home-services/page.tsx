@@ -4,12 +4,13 @@ import FAQSection from "../../components/FAQSection";
 import {
   SITE_URL,
   PageHero,
-  ProofStrip,
+  FactsStrip,
   Section,
   Bullets,
-  CtaBanner,
+  Callout,
   TextLink,
   JsonLd,
+  HowItWorks,
 } from "../../components/landing";
 
 const PAGE_PATH = "/industries/home-services";
@@ -84,14 +85,21 @@ export default function HomeServices() {
           { name: "Industries", href: "/industries" },
           { name: "Home Services" },
         ]}
-        h1="Letterbox Marketing for Home Service Businesses"
+        h1="Letterbox marketing for home service businesses"
         lead="Home services marketing that reaches the households in your service area. We deliver your flyer on its own to the streets you work in, track every run by GPS, and start from 1,000 flyers."
-        proof={["Exclusive, never bundled", "$200 per 1,000 flyers", "Neighbour drops around active jobs"]}
+        image={{ src: "/images/redesign/ind-trades.jpg", alt: "A roofer in hi-vis working on a tiled Melbourne roof" }}
       />
 
-      <ProofStrip />
+      <FactsStrip
+        stats={[
+          { value: "Exclusive", label: "never bundled with other ads" },
+          { value: "$200", label: "per 1,000 flyers" },
+          { value: "1,000", label: "flyer minimum, $200 test run" },
+          { value: "GPS map", label: "proof of delivery, every run" },
+        ]}
+      />
 
-      <Section title="Why trades still use letterbox drops">
+      <Section title="Why trades still use letterbox drops" first>
         <p>
           When a hot water system fails or a roof starts leaking, most households call the business they already know
           about. A flyer on the fridge, or one that arrived last week, is often that business. Letterbox drops put your
@@ -103,7 +111,7 @@ export default function HomeServices() {
         </p>
       </Section>
 
-      <Section title="Trades and home services we deliver for" tone="gray">
+      <Section title="Trades and home services we deliver for">
         <Bullets
           items={[
             <><TextLink href="/industries/plumbers">Plumbers</TextLink>: blocked drains, hot water, gas fitting and emergency call-outs</>,
@@ -124,17 +132,17 @@ export default function HomeServices() {
           your flyer in the house before the problem does.
         </p>
         <div className="overflow-x-auto">
-          <table className="w-full text-left border border-gray-200 rounded-lg overflow-hidden">
-            <thead className="bg-gray-50 text-sm text-gray-600">
+          <table className="w-full text-left border border-line rounded-card overflow-hidden">
+            <thead className="bg-cream text-sm text-muted">
               <tr>
                 <th scope="col" className="px-4 py-3 font-semibold">Drop in</th>
                 <th scope="col" className="px-4 py-3 font-semibold">Work households start looking for</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200">
+            <tbody className="divide-y divide-line">
               {seasons.map((s) => (
                 <tr key={s.months}>
-                  <td className="px-4 py-3 font-semibold text-black whitespace-nowrap">{s.months}</td>
+                  <td className="px-4 py-3 font-semibold text-ink whitespace-nowrap">{s.months}</td>
                   <td className="px-4 py-3 text-sm">{s.demand}</td>
                 </tr>
               ))}
@@ -143,7 +151,7 @@ export default function HomeServices() {
         </div>
       </Section>
 
-      <Section title="Choosing the right streets for your trade" tone="gray">
+      <Section title="Choosing the right streets for your trade">
         <p>
           The best streets depend on the work. Older brick and weatherboard homes need more plumbing, roofing and
           electrical upgrades, which is also where handyman flyers tend to do best. Streets with big gardens suit
@@ -170,29 +178,36 @@ export default function HomeServices() {
         </p>
       </Section>
 
-      <Section title="What it costs" tone="gray">
-        <p>
-          Every drop is $200 per 1,000 flyers, with a 1,000-flyer minimum. A 2,500-home drop around your base costs
-          $500, which covers most painting business marketing campaigns comfortably. See the{" "}
-          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for more quantities,
-          or the <TextLink href="/industries/local-businesses">local businesses</TextLink> page for other ways
-          businesses use our service.
-        </p>
-        <p>
-          We cover Melbourne&rsquo;s south-east and eastern suburbs, including{" "}
-          <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink>. See the full{" "}
-          <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
-        </p>
-      </Section>
+      <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
+        <Callout
+          title="What it costs"
+          figures={[
+            { value: "$200", label: "test run, 1,000 flyers" },
+            { value: "$500", label: "2,500 homes around your base" },
+          ]}
+        >
+          <p className="m-0">
+            Every drop is $200 per 1,000 flyers, with a 1,000-flyer minimum. See the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for more quantities, or the{" "}
+            <TextLink href="/industries/local-businesses">local businesses</TextLink> page for other ways businesses
+            use our service.
+          </p>
+          <p className="m-0">
+            We cover Melbourne&rsquo;s south-east and eastern suburbs, including{" "}
+            <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink>. See the full{" "}
+            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
+          </p>
+        </Callout>
+      </div>
 
-      <QuickQuoteForm />
+      <HowItWorks />
 
-      <FAQSection items={faqs} title="Home Services Letterbox Drop FAQs" />
-
-      <CtaBanner
-        title="Get your trade into local letterboxes"
-        body="Tell us your trade, your base and the suburbs you service. We'll quote within 24 hours."
+      <QuickQuoteForm
+        heading="Get your trade into local letterboxes"
+        lead="Tell us your trade, your base and the suburbs you service. We'll quote within 24 hours."
       />
+
+      <FAQSection items={faqs} title="Home services letterbox drop FAQs" />
     </>
   );
 }

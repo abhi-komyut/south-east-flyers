@@ -4,10 +4,10 @@ import FAQSection from "../../components/FAQSection";
 import {
   SITE_URL,
   PageHero,
-  ProofStrip,
+  FactsStrip,
   Section,
+  Callout,
   Bullets,
-  CtaBanner,
   TextLink,
   JsonLd,
   HowItWorks,
@@ -86,13 +86,19 @@ export default function Kew() {
         ]}
         h1="Flyer Distribution & Letterbox Drops in Kew"
         lead="Flyer distribution in Kew 3101, from Kew Junction out to the streets near the Yarra. Each flyer is delivered on its own and every route is GPS-tracked."
-        proof={["Minimum 1,000 flyers", "$200 per 1,000", "Full suburb about $2,100"]}
-        ctaLabel="Get a Free Kew Quote"
+        image={{ src: "/images/redesign/suburb-map.jpg", alt: "Map of Melbourne's suburbs showing the areas South East Flyers covers" }}
       />
 
-      <ProofStrip />
+      <FactsStrip
+        stats={[
+          { value: "10,600", label: "homes in Kew 3101, approx." },
+          { value: "$200", label: "per 1,000 flyers, exclusive" },
+          { value: "$2,100", label: "to cover the whole suburb, approx." },
+          { value: "1,000", label: "flyer minimum, $200 test run" },
+        ]}
+      />
 
-      <Section title="Kew at a glance">
+      <Section title="Kew at a glance" first>
         <p>
           Kew is a family suburb in the City of Boroondara, with large period homes, townhouses and apartment blocks.
           Kew Junction, where High Street meets Cotham Road, is the main shopping and dining strip, and the suburb runs
@@ -104,7 +110,7 @@ export default function Kew() {
         </p>
       </Section>
 
-      <Section title="Families and school catchments" tone="gray">
+      <Section title="Families and school catchments">
         <p>
           Kew is full of school-age families, and the suburb is home to several large schools, including
           Xavier College, Trinity Grammar and Methodist Ladies&rsquo; College. That makes Kew a strong suburb for
@@ -128,7 +134,7 @@ export default function Kew() {
         </p>
       </Section>
 
-      <Section title="Kew Junction shops and cafes" tone="gray">
+      <Section title="Kew Junction shops and cafes">
         <p>
           Most of Kew&rsquo;s retail and dining sits around Kew Junction and along High Street. Customers for those
           businesses mostly walk or make a short drive, so a drop of 1,000 to 2,500 flyers in the streets around the
@@ -156,28 +162,32 @@ export default function Kew() {
         </p>
       </Section>
 
-      <Section title="Letterbox drop cost in Kew">
-        <p>
-          Every drop is <strong>$200 per 1,000 flyers</strong>, delivered exclusively. One school catchment or the
-          streets around the Junction (1,000 flyers) costs $200; the whole suburb is about $2,100. Our flyer
+      <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
+        <Callout
+          title="Letterbox drop cost in Kew"
+          figures={[
+            { value: "$200", label: "first test, 1,000 flyers" },
+            { value: "$2,100", label: "whole suburb, approx." },
+          ]}
+        >
+          Every drop is <strong className="text-ink">$200 per 1,000 flyers</strong>, delivered exclusively. Our flyer
           distribution across Boroondara also reaches Hawthorn and Camberwell. See the{" "}
           <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
           <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink>,{" "}
           <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink> and the rest of our{" "}
           <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
-        </p>
-      </Section>
+        </Callout>
+      </div>
 
       <HowItWorks />
 
-      <QuickQuoteForm />
-
-      <FAQSection items={faqs} title="Kew Letterbox Drop FAQs" />
-
-      <CtaBanner
-        title="Ready to reach Kew families?"
-        body="Tell us your streets or school catchment and quantity. We'll quote within 24 hours."
+      <QuickQuoteForm
+        heading="Ready to reach Kew families?"
+        lead="Tell us your streets or school catchment and quantity. We'll quote within 24 hours."
+        suburbHint="e.g. Kew, Kew East, Hawthorn"
       />
+
+      <FAQSection items={faqs} title="Kew letterbox drop FAQs" />
     </>
   );
 }

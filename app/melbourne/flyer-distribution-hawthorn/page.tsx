@@ -4,10 +4,10 @@ import FAQSection from "../../components/FAQSection";
 import {
   SITE_URL,
   PageHero,
-  ProofStrip,
+  FactsStrip,
   Section,
+  Callout,
   Bullets,
-  CtaBanner,
   TextLink,
   JsonLd,
   HowItWorks,
@@ -86,13 +86,19 @@ export default function Hawthorn() {
         ]}
         h1="Flyer Distribution & Letterbox Drops in Hawthorn"
         lead="Flyer distribution in Hawthorn 3122, from Glenferrie Road out to the leafy streets around Swinburne. Your flyer goes into each letterbox on its own, and every route is GPS-tracked."
-        proof={["Minimum 1,000 flyers", "$200 per 1,000", "Full suburb about $2,400"]}
-        ctaLabel="Get a Free Hawthorn Quote"
+        image={{ src: "/images/redesign/suburb-map.jpg", alt: "Map of Melbourne's suburbs showing the areas South East Flyers covers" }}
       />
 
-      <ProofStrip />
+      <FactsStrip
+        stats={[
+          { value: "11,900", label: "homes in Hawthorn 3122, approx." },
+          { value: "$200", label: "per 1,000 flyers, exclusive" },
+          { value: "$2,400", label: "to cover the whole suburb, approx." },
+          { value: "1,000", label: "flyer minimum, $200 test run" },
+        ]}
+      />
 
-      <Section title="Hawthorn at a glance">
+      <Section title="Hawthorn at a glance" first>
         <p>
           Hawthorn is an established inner-east suburb in the City of Boroondara, with Glenferrie Road as its
           main strip of shops, cafes and banks. Hawthorn and Glenferrie stations sit on the Belgrave, Lilydale
@@ -104,7 +110,7 @@ export default function Hawthorn() {
         </p>
       </Section>
 
-      <Section title="Two audiences on the same streets" tone="gray">
+      <Section title="Two audiences on the same streets">
         <p>
           Swinburne University&rsquo;s main campus sits in Hawthorn, so the blocks near the station and Glenferrie
           Road have a large student and share-house population. A few streets further out, the audience shifts
@@ -129,7 +135,7 @@ export default function Hawthorn() {
         </p>
       </Section>
 
-      <Section title="Glenferrie Road trade and Scotch College" tone="gray">
+      <Section title="Glenferrie Road trade and Scotch College">
         <p>
           Glenferrie Road carries steady foot traffic from Swinburne, Scotch College families and local
           residents, so shops and cafes there benefit from a flyer that reaches the surrounding blocks directly
@@ -156,28 +162,32 @@ export default function Hawthorn() {
         </p>
       </Section>
 
-      <Section title="Letterbox drop cost in Hawthorn">
-        <p>
-          Every drop is <strong>$200 per 1,000 flyers</strong>, delivered exclusively. A 1,000-flyer drop near
-          Glenferrie Road costs $200; the whole suburb costs about $2,400. Our flyer distribution across
-          Boroondara also reaches Kew and Camberwell. See the{" "}
+      <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
+        <Callout
+          title="Letterbox drop cost in Hawthorn"
+          figures={[
+            { value: "$200", label: "first test, near Glenferrie Road" },
+            { value: "$2,400", label: "whole suburb, approx." },
+          ]}
+        >
+          Every drop is <strong className="text-ink">$200 per 1,000 flyers</strong>, delivered exclusively. Our flyer
+          distribution across Boroondara also reaches Kew and Camberwell. See the{" "}
           <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
           <TextLink href="/melbourne/flyer-distribution-kew">Kew</TextLink>,{" "}
           <TextLink href="/melbourne/flyer-distribution-camberwell">Camberwell</TextLink> and the rest of our{" "}
           <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
-        </p>
-      </Section>
+        </Callout>
+      </div>
 
       <HowItWorks />
 
-      <QuickQuoteForm />
-
-      <FAQSection items={faqs} title="Hawthorn Letterbox Drop FAQs" />
-
-      <CtaBanner
-        title="Ready to reach Hawthorn letterboxes?"
-        body="Tell us your streets and quantity, and we'll send a quote with the letterbox count within 24 hours."
+      <QuickQuoteForm
+        heading="Ready to reach Hawthorn letterboxes?"
+        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count within 24 hours."
+        suburbHint="e.g. Hawthorn, Hawthorn East, Kew"
       />
+
+      <FAQSection items={faqs} title="Hawthorn letterbox drop FAQs" />
     </>
   );
 }

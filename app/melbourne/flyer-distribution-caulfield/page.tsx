@@ -4,10 +4,10 @@ import FAQSection from "../../components/FAQSection";
 import {
   SITE_URL,
   PageHero,
-  ProofStrip,
+  FactsStrip,
   Section,
+  Callout,
   Bullets,
-  CtaBanner,
   TextLink,
   JsonLd,
   HowItWorks,
@@ -88,13 +88,19 @@ export default function Caulfield() {
         ]}
         h1="Flyer Distribution & Letterbox Drops in Caulfield"
         lead="Flyer distribution in Caulfield 3162, one of the smallest and easiest suburbs on our list to cover in full. Your flyer goes into each letterbox on its own, and every route is GPS-tracked."
-        proof={["Minimum 1,000 flyers", "$200 per 1,000", "Full suburb about $500"]}
-        ctaLabel="Get a Free Caulfield Quote"
+        image={{ src: "/images/redesign/suburb-map.jpg", alt: "Map of Melbourne's suburbs showing the areas South East Flyers covers" }}
       />
 
-      <ProofStrip />
+      <FactsStrip
+        stats={[
+          { value: "2,400", label: "homes in Caulfield 3162, approx." },
+          { value: "$200", label: "per 1,000 flyers, exclusive" },
+          { value: "$500", label: "to cover the whole suburb, approx." },
+          { value: "1,000", label: "flyer minimum, $200 test run" },
+        ]}
+      />
 
-      <Section title="Caulfield at a glance">
+      <Section title="Caulfield at a glance" first>
         <p>
           Caulfield itself is a tightly bounded suburb in the City of Glen Eira, best known for Caulfield
           Racecourse, Monash University&rsquo;s Caulfield campus and Caulfield station, a major interchange
@@ -106,7 +112,7 @@ export default function Caulfield() {
         </p>
       </Section>
 
-      <Section title="A small suburb, but a big catchment passes through" tone="gray">
+      <Section title="A small suburb, but a big catchment passes through">
         <p>
           Caulfield station brings a lot of people through who do not live in the suburb itself, heading to
           Monash, the Alfred and Cabrini health precincts, or the races. Letterbox drops reach the households
@@ -130,7 +136,7 @@ export default function Caulfield() {
         </p>
       </Section>
 
-      <Section title="Racecourse and university timing" tone="gray">
+      <Section title="Racecourse and university timing">
         <p>
           Caulfield Racecourse hosts major race meetings through spring, which lifts demand for nearby
           hospitality and parking-adjacent businesses in the weeks around each event. Monash&rsquo;s academic
@@ -157,27 +163,31 @@ export default function Caulfield() {
         </p>
       </Section>
 
-      <Section title="Letterbox drop cost in Caulfield">
-        <p>
-          Every drop is <strong>$200 per 1,000 flyers</strong>, delivered exclusively. Because Caulfield has
-          about 2,400 homes, a full-suburb run costs about $500. Our flyer distribution across Glen Eira also
-          reaches Caulfield North, Caulfield South and Bentleigh. See the{" "}
+      <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
+        <Callout
+          title="Letterbox drop cost in Caulfield"
+          figures={[
+            { value: "$200", label: "first test, 1,000 flyers" },
+            { value: "$500", label: "whole suburb, approx." },
+          ]}
+        >
+          Every drop is <strong className="text-ink">$200 per 1,000 flyers</strong>, delivered exclusively. Our flyer
+          distribution across Glen Eira also reaches Caulfield North, Caulfield South and Bentleigh. See the{" "}
           <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
           <TextLink href="/melbourne/flyer-distribution-bentleigh">Bentleigh</TextLink> and the rest of our{" "}
           <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
-        </p>
-      </Section>
+        </Callout>
+      </div>
 
       <HowItWorks />
 
-      <QuickQuoteForm />
-
-      <FAQSection items={faqs} title="Caulfield Letterbox Drop FAQs" />
-
-      <CtaBanner
-        title="Ready to reach Caulfield letterboxes?"
-        body="Tell us your streets and quantity, and we'll send a quote with the letterbox count within 24 hours."
+      <QuickQuoteForm
+        heading="Ready to reach Caulfield letterboxes?"
+        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count within 24 hours."
+        suburbHint="e.g. Caulfield, Caulfield North, Bentleigh"
       />
+
+      <FAQSection items={faqs} title="Caulfield letterbox drop FAQs" />
     </>
   );
 }

@@ -4,10 +4,10 @@ import FAQSection from "../../components/FAQSection";
 import {
   SITE_URL,
   PageHero,
-  ProofStrip,
+  FactsStrip,
   Section,
   Bullets,
-  CtaBanner,
+  Callout,
   TextLink,
   JsonLd,
   HowItWorks,
@@ -80,14 +80,21 @@ export default function Electricians() {
           { name: "Home Services", href: "/industries/home-services" },
           { name: "Electricians" },
         ]}
-        h1="Electrician Flyers That Win Upgrade Work"
+        h1="Electrician flyers that win upgrade work"
         lead="Electrician flyers delivered on their own to the homes most likely to need a switchboard, safety switch, solar or EV charger job. Every route is GPS-tracked, from 1,000 flyers."
-        proof={["Exclusive, never bundled", "$200 per 1,000 flyers", "Seasonal and neighbour drops"]}
+        image={{ src: "/images/redesign/ind-trades.jpg", alt: "A tradesperson in hi-vis working on a Melbourne home" }}
       />
 
-      <ProofStrip />
+      <FactsStrip
+        stats={[
+          { value: "Exclusive", label: "never bundled with other ads" },
+          { value: "$200", label: "per 1,000 flyers" },
+          { value: "1,000", label: "flyer minimum, $200 test run" },
+          { value: "GPS map", label: "proof of delivery, every run" },
+        ]}
+      />
 
-      <Section title="Planned upgrades are where flyers pay off">
+      <Section title="Planned upgrades are where flyers pay off" first>
         <p>
           Electrical work splits into two kinds. Faults and outages are urgent and short; the household rings whoever
           they can reach. Upgrades are different: a new switchboard, safety switches, a solar battery, an EV charger or
@@ -104,7 +111,7 @@ export default function Electricians() {
         </p>
       </Section>
 
-      <Section title="Homes that need electrical upgrades" tone="gray">
+      <Section title="Homes that need electrical upgrades">
         <Bullets
           items={[
             <><strong>Older homes with original switchboards.</strong> Ceramic fuses and missing safety switches are common in houses built before the 1990s.</>,
@@ -130,7 +137,7 @@ export default function Electricians() {
         />
       </Section>
 
-      <Section title="Timing electrician drops" tone="gray">
+      <Section title="Timing electrician drops">
         <p>
           Interest in solar, batteries and air conditioning builds through late winter and spring as owners plan for
           summer, so those flyers belong in letterboxes from August to October. Safety switch, smoke alarm and heating
@@ -142,28 +149,28 @@ export default function Electricians() {
         </p>
       </Section>
 
-      <Section title="Cost of an electrician letterbox drop">
-        <p>
-          Every drop is $200 per 1,000 flyers, delivered exclusively. 2,500 homes around your base costs $500. See the{" "}
-          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for other quantities, or{" "}
-          <TextLink href="/industries/home-services">home services</TextLink> for how{" "}
+      <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
+        <Callout
+          title="Cost of an electrician letterbox drop"
+          figures={[{ value: "$200", label: "per 1,000 flyers" }, { value: "$500", label: "2,500 homes around your base" }]}
+        >
+          Every drop is delivered exclusively. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink>{" "}
+          page for other quantities, or <TextLink href="/industries/home-services">home services</TextLink> for how{" "}
           <TextLink href="/industries/plumbers">plumbers</TextLink> and{" "}
           <TextLink href="/industries/roofing">roofers</TextLink> use letterbox drops. Our{" "}
           <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> lists every suburb
           we cover.
-        </p>
-      </Section>
+        </Callout>
+      </div>
 
       <HowItWorks />
 
-      <QuickQuoteForm />
-
-      <FAQSection items={faqs} title="Electrician Letterbox Drop FAQs" />
-
-      <CtaBanner
-        title="Get your next upgrade job from the letterbox"
-        body="Tell us your base, the jobs you want more of and the suburbs you cover. We'll quote within 24 hours."
+      <QuickQuoteForm
+        heading="Get your next upgrade job from the letterbox"
+        lead="Tell us your base, the jobs you want more of and the suburbs you cover. We'll quote within 24 hours."
       />
+
+      <FAQSection items={faqs} title="Electrician letterbox drop FAQs" />
     </>
   );
 }

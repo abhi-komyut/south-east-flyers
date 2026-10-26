@@ -60,6 +60,42 @@ export function PageHero({
   rightSlot?: React.ReactNode;
 }) {
   const hasRight = Boolean(image || rightSlot);
+
+  if (rightSlot && !image) {
+    return (
+      <section className="bg-teal-deep text-white px-[clamp(20px,4vw,48px)] py-10 sm:py-[clamp(40px,5vw,64px)]">
+        <div className="max-w-[1144px] mx-auto flex flex-col gap-10">
+          {crumbs && <Breadcrumbs items={crumbs} />}
+          <div className="flex flex-wrap gap-12 gap-x-20 items-center">
+            <div className="flex-[1.1_1_440px] flex flex-col gap-6">
+              <h1 className="m-0 font-display font-medium text-[clamp(40px,4.6vw,62px)] leading-[1.06] tracking-[-0.02em]">
+                {h1}
+              </h1>
+              <p className="m-0 text-[clamp(17px,1.4vw,19px)] leading-relaxed text-white/85 max-w-[520px]">{lead}</p>
+              {tagline && <p className="m-0 font-heading font-semibold text-base text-cta-on-dark">{tagline}</p>}
+              <div className="flex flex-wrap items-center gap-3.5">
+                <Link
+                  href="/contact"
+                  data-quote-cta
+                  className="press inline-flex items-center min-h-[54px] px-[30px] rounded-full bg-cta text-ink no-underline font-heading font-bold text-base hover:bg-cta-hover transition-colors"
+                >
+                  {ctaLabel}
+                </Link>
+                <a
+                  href={PHONE_TEL}
+                  className="press inline-flex items-center min-h-[54px] px-[26px] rounded-full border border-white/55 text-white no-underline font-heading font-semibold text-base [font-variant-numeric:tabular-nums] hover:bg-white/10 transition-colors"
+                >
+                  Call {PHONE_DISPLAY}
+                </a>
+              </div>
+            </div>
+            <div className="flex-[1_1_400px]">{rightSlot}</div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="flex flex-wrap bg-teal-deep text-white">
       <div
@@ -91,12 +127,9 @@ export function PageHero({
           </div>
         </div>
       </div>
-      {hasRight && (
+      {image && (
         <div className="flex-[1_1_480px] relative min-h-[clamp(320px,40vw,620px)] bg-[#DCE7E6] overflow-hidden">
-          {image && (
-            <Image src={image.src} alt={image.alt} fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" priority />
-          )}
-          {rightSlot}
+          <Image src={image.src} alt={image.alt} fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" priority />
         </div>
       )}
     </section>
@@ -282,8 +315,8 @@ export function Steps({ steps }: { steps: { title: string; body: React.ReactNode
             {i + 1}
           </span>
           <div>
-            <h3 className="font-semibold text-black">{s.title}</h3>
-            <p className="text-gray-700">{s.body}</p>
+            <h3 className="font-heading font-semibold text-ink">{s.title}</h3>
+            <p className="text-body">{s.body}</p>
           </div>
         </Reveal>
       ))}

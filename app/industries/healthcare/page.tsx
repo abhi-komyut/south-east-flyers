@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import Breadcrumbs from "../../components/Breadcrumbs";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
+import Reveal from "../../components/Reveal";
+import {
+  SITE_URL,
+  PageHero,
+  FactsStrip,
+  Section,
+  TextLink,
+  JsonLd,
+  HowItWorks,
+} from "../../components/landing";
 
-const SITE_URL = "https://www.southeastflyers.com.au";
 const PAGE_PATH = "/industries/healthcare";
 
 export const metadata: Metadata = {
@@ -34,7 +41,7 @@ const useCases: { title: string; body: string }[] = [
   },
   {
     title: "Local-area awareness",
-    body: "Stay visible to the households closest to your practice — the catchment most of your patients come from.",
+    body: "Stay visible to the households closest to your practice, the catchment most of your patients come from.",
   },
   {
     title: "Promoting a specific service",
@@ -46,12 +53,12 @@ const faqs = [
   {
     question: "Can flyer distribution help a new practice or clinic?",
     answer:
-      "Yes — most patients come from the neighbourhoods around a practice, so a letterbox drop to the local catchment is a practical way to introduce a new clinic or announce an opening to the households nearby.",
+      "Yes. Most patients come from the neighbourhoods around a practice, so a letterbox drop to the local catchment is a practical way to introduce a new clinic or announce an opening to the households nearby.",
   },
   {
     question: "Which suburbs should a healthcare practice target?",
     answer:
-      "Usually the immediate catchment around your location — the suburbs most of your patients travel from. Tell us where you are and we'll help you map a sensible local area.",
+      "Usually the immediate catchment around your location, the suburbs most of your patients travel from. Tell us where you are and we'll help you map a sensible local area.",
   },
   {
     question: "Do you deliver to 'No Junk Mail' letterboxes?",
@@ -66,7 +73,7 @@ const faqs = [
   {
     question: "Do you handle the design or wording of the flyer?",
     answer:
-      "No — we distribute, we don't print or write your material. You provide the printed flyers, and any professional or advertising standards that apply to healthcare content remain yours to determine.",
+      "No, we distribute, we don't print or write your material. You provide the printed flyers, and any professional or advertising standards that apply to healthcare content remain yours to determine.",
   },
 ];
 
@@ -85,162 +92,79 @@ const serviceLd = {
 export default function Healthcare() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }}
+      <JsonLd data={serviceLd} />
+
+      <PageHero
+        crumbs={[
+          { name: "Home", href: "/" },
+          { name: "Industries", href: "/industries" },
+          { name: "Healthcare" },
+        ]}
+        h1="Flyer distribution for healthcare"
+        lead="Build awareness for your practice, clinic or service among the local households closest to you, across Melbourne's south-east and eastern suburbs, with GPS-tracked distribution."
+        tagline="You provide the flyers. We handle the distribution."
+        image={{ src: "/images/redesign/ind-health.jpg", alt: "A dentist in her clinic" }}
       />
 
-      {/* Hero */}
-      <section className="bg-navy text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-          <Breadcrumbs
-            items={[
-              { name: "Home", href: "/" },
-              { name: "Industries", href: "/industries" },
-              { name: "Healthcare" },
-            ]}
-          />
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <div className="max-w-3xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-5">
-              Flyer Distribution for Healthcare
-            </h1>
-            <p className="text-lg text-white/85 mb-4">
-              Build awareness for your practice, clinic or service among the
-              local households closest to you, across Melbourne&rsquo;s
-              south-east and eastern suburbs, with GPS-tracked distribution.
-            </p>
-            <p className="text-base text-white/80 mb-8">
-              You provide the flyers. We handle the distribution.
-            </p>
-            <Link
-              href="/contact"
-              data-quote-cta
-              className="inline-block bg-cta text-white font-semibold px-6 py-3 rounded text-center transition-all duration-200 hover:bg-cta-hover hover:scale-[1.02]"
-            >
-              Get a Free Quote
-            </Link>
-          </div>
-        </div>
-      </section>
+      <FactsStrip
+        stats={[
+          { value: "Exclusive", label: "never bundled with other ads" },
+          { value: "$200", label: "per 1,000 flyers" },
+          { value: "GPS map", label: "proof of delivery, every run" },
+          { value: "1,000", label: "flyer minimum, $200 test run" },
+        ]}
+      />
 
-      {/* Intro */}
-      <section className="py-16 sm:py-20 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-black mb-4">
-            Reaching your local catchment
+      <Section title="Reaching your local catchment" first>
+        <p>
+          Most patients come from the neighbourhoods around a practice. That makes letterbox distribution a
+          practical way to introduce a new clinic, announce an opening or keep a local service front of mind with
+          the households nearby.
+        </p>
+        <p>
+          You provide the printed material and choose the suburbs around your practice; we deliver it and report on
+          where it went. We help with the distribution; the content of your material and any professional or
+          advertising standards that apply to it remain yours to determine.
+        </p>
+      </Section>
+
+      <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
+        <Reveal as="section" className="bg-cream rounded-card p-9 sm:p-16 flex flex-col gap-9">
+          <h2 className="m-0 font-display font-medium text-[clamp(28px,2.8vw,38px)] leading-[1.15]">
+            Common healthcare campaigns
           </h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Most patients come from the neighbourhoods around a practice. That
-            makes letterbox distribution a practical way to introduce a new
-            clinic, announce an opening or keep a local service front of mind
-            with the households nearby.
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            You provide the printed material and choose the suburbs around your
-            practice; we deliver it and report on where it went. We help with the
-            distribution — the content of your material and any professional or
-            advertising standards that apply to it remain yours to determine.
-          </p>
-        </div>
-      </section>
-
-      {/* Use cases */}
-      <section className="py-16 sm:py-20 bg-cream border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
-              Common healthcare campaigns
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
+          <dl className="m-0 flex flex-wrap gap-7 gap-x-14">
             {useCases.map((uc) => (
-              <div
-                key={uc.title}
-                className="bg-white border border-gray-200 rounded-xl p-6"
-              >
-                <h3 className="font-semibold text-black mb-2">{uc.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {uc.body}
-                </p>
+              <div key={uc.title} className="flex-[1_1_400px] pt-5 border-t border-[rgba(16,48,47,0.16)] flex flex-col gap-2">
+                <dt className="font-heading font-semibold text-lg">{uc.title}</dt>
+                <dd className="m-0 text-base leading-relaxed text-body">{uc.body}</dd>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
+          </dl>
+        </Reveal>
+      </div>
 
-      {/* Related */}
-      <section className="py-16 sm:py-20 bg-white border-t border-gray-200">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-black mb-4">
-            How it works
-          </h2>
-          <p className="text-gray-700 leading-relaxed">
-            Campaigns run through our{" "}
-            <Link
-              href="/services/letterbox-distribution"
-              className="text-navy underline"
-            >
-              letterbox distribution
-            </Link>{" "}
-            and{" "}
-            <Link
-              href="/services/targeted-flyer-distribution"
-              className="text-navy underline"
-            >
-              targeted distribution
-            </Link>{" "}
-            services, are{" "}
-            <Link
-              href="/services/gps-tracked-flyer-distribution"
-              className="text-navy underline"
-            >
-              GPS-tracked
-            </Link>
-            , and cover the suburbs on our{" "}
-            <Link
-              href="/melbourne/flyer-distribution-melbourne"
-              className="text-navy underline"
-            >
-              Melbourne
-            </Link>{" "}
-            page.
-          </p>
-        </div>
-      </section>
+      <Section title="Where this fits">
+        <p>
+          Campaigns run through our <TextLink href="/services/letterbox-distribution">letterbox distribution</TextLink>{" "}
+          and <TextLink href="/services/targeted-flyer-distribution">targeted distribution</TextLink> services, are{" "}
+          <TextLink href="/services/gps-tracked-flyer-distribution">GPS-tracked</TextLink>, and cover the suburbs on
+          our <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne</TextLink> page.
+        </p>
+      </Section>
 
-      {/* Quote form */}
-      <QuickQuoteForm />
+      <HowItWorks />
 
-      {/* FAQ */}
-      <FAQSection
-        items={faqs}
-        title="Healthcare Distribution FAQs"
-        subtitle="Common questions from practices and clinics."
+      <QuickQuoteForm
+        heading="Grow awareness in your local area"
+        lead="Tell us the suburbs around your practice and your flyer quantity for a free, no-obligation quote."
       />
 
-      {/* CTA banner */}
-      <section className="bg-navy py-16 sm:py-20 border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2
-            className="text-3xl md:text-4xl font-bold text-white mb-4 font-display"
-          >
-            Grow awareness in your local area
-          </h2>
-          <p className="text-white/80 mb-8 max-w-xl mx-auto">
-            Tell us the suburbs around your practice and your flyer quantity for
-            a free, no-obligation quote.
-          </p>
-          <Link
-            href="/contact"
-            data-quote-cta
-            className="inline-block bg-cta text-white font-semibold px-8 py-3 rounded transition-all duration-200 hover:bg-cta-hover hover:scale-[1.02]"
-          >
-            Get a Free Quote
-          </Link>
-        </div>
-      </section>
+      <FAQSection
+        items={faqs}
+        title="Healthcare distribution FAQs"
+        subtitle="Common questions from practices and clinics."
+      />
     </>
   );
 }

@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
+import Reveal from "../../components/Reveal";
 import {
   SITE_URL,
   PageHero,
-  ProofStrip,
+  FactsStrip,
   Section,
+  Callout,
   Bullets,
-  CtaBanner,
   TextLink,
   JsonLd,
   HowItWorks,
@@ -86,13 +88,19 @@ export default function Camberwell() {
         ]}
         h1="Flyer Distribution & Letterbox Drops in Camberwell"
         lead="Flyer distribution in Camberwell 3124, from Camberwell Junction out through the surrounding streets. Your flyer goes into each letterbox on its own, and every route is GPS-tracked."
-        proof={["Minimum 1,000 flyers", "$200 per 1,000", "Full suburb about $1,800"]}
-        ctaLabel="Get a Free Camberwell Quote"
+        image={{ src: "/images/redesign/suburb-map.jpg", alt: "Map of Melbourne's suburbs showing the areas South East Flyers covers" }}
       />
 
-      <ProofStrip />
+      <FactsStrip
+        stats={[
+          { value: "9,000", label: "homes in Camberwell 3124, approx." },
+          { value: "$200", label: "per 1,000 flyers, exclusive" },
+          { value: "$1,800", label: "to cover the whole suburb, approx." },
+          { value: "1,000", label: "flyer minimum, $200 test run" },
+        ]}
+      />
 
-      <Section title="Camberwell at a glance">
+      <Section title="Camberwell at a glance" first>
         <p>
           Camberwell Junction, where Burke Road meets Camberwell Road, has been the suburb&rsquo;s trading hub
           since the 1880s, with Camberwell station right at the corner and the Sunday Camberwell Market a short
@@ -104,7 +112,7 @@ export default function Camberwell() {
         </p>
       </Section>
 
-      <Section title="Long-term owners, considered decisions" tone="gray">
+      <Section title="Long-term owners, considered decisions">
         <p>
           Camberwell households tend to stay put for years, so the decisions that lead to a call are the big
           ones: selling the family home, a kitchen renovation, replacing a roof, choosing a new GP. Those
@@ -129,7 +137,20 @@ export default function Camberwell() {
         </p>
       </Section>
 
-      <Section title="Camberwell Junction and the Grammar schools" tone="gray">
+      <Reveal as="figure" className="mx-auto mt-14 mb-0 max-w-[1144px] px-[clamp(20px,4vw,48px)] flex flex-col gap-3">
+        <div className="rounded-card overflow-hidden aspect-[21/8]">
+          <Image
+            src="/images/redesign/walker-street.jpg"
+            alt="A walker beside a letterbox on a leafy Camberwell street"
+            width={1144}
+            height={436}
+            className="w-full h-full object-cover object-[50%_45%]"
+          />
+        </div>
+        <figcaption className="text-sm text-muted">Most Camberwell homes have letterboxes right on the footpath.</figcaption>
+      </Reveal>
+
+      <Section title="Camberwell Junction and the Grammar schools">
         <p>
           Camberwell Grammar School and Camberwell Girls Grammar School draw families to the area, which keeps
           demand steady for tutors, uniform and school-supply businesses and family-oriented local services
@@ -156,28 +177,32 @@ export default function Camberwell() {
         </p>
       </Section>
 
-      <Section title="Letterbox drop cost in Camberwell">
-        <p>
-          Every drop is <strong>$200 per 1,000 flyers</strong>, delivered exclusively. A first test run costs
-          $200; the whole suburb costs about $1,800. Our flyer distribution across Boroondara also reaches
-          Hawthorn and Kew. See the{" "}
+      <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
+        <Callout
+          title="Letterbox drop cost in Camberwell"
+          figures={[
+            { value: "$200", label: "first test, 1,000 flyers" },
+            { value: "$1,800", label: "whole suburb, approx." },
+          ]}
+        >
+          Every drop is <strong className="text-ink">$200 per 1,000 flyers</strong>, delivered exclusively. Our flyer
+          distribution across Boroondara also reaches Hawthorn and Kew. See the{" "}
           <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
           <TextLink href="/melbourne/flyer-distribution-hawthorn">Hawthorn</TextLink>,{" "}
           <TextLink href="/melbourne/flyer-distribution-kew">Kew</TextLink> and the rest of our{" "}
           <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
-        </p>
-      </Section>
+        </Callout>
+      </div>
 
       <HowItWorks />
 
-      <QuickQuoteForm />
-
-      <FAQSection items={faqs} title="Camberwell Letterbox Drop FAQs" />
-
-      <CtaBanner
-        title="Ready to reach Camberwell letterboxes?"
-        body="Tell us your streets and quantity, and we'll send a quote with the letterbox count within 24 hours."
+      <QuickQuoteForm
+        heading="Ready to reach Camberwell letterboxes?"
+        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count within 24 hours."
+        suburbHint="e.g. Camberwell, Hawthorn, Kew"
       />
+
+      <FAQSection items={faqs} title="Camberwell letterbox drop FAQs" />
     </>
   );
 }

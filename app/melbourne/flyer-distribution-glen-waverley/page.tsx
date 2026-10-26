@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
+import Reveal from "../../components/Reveal";
 import {
   SITE_URL,
   PageHero,
-  ProofStrip,
+  FactsStrip,
   Section,
+  Callout,
   Bullets,
-  CtaBanner,
   TextLink,
   JsonLd,
   HowItWorks,
@@ -86,13 +88,19 @@ export default function GlenWaverley() {
         ]}
         h1="Flyer Distribution & Letterbox Drops in Glen Waverley"
         lead="Flyer distribution in Glen Waverley 3150, one of the largest and most house-heavy suburbs we cover. Your flyer goes into each letterbox on its own, and every route is GPS-tracked."
-        proof={["Minimum 1,000 flyers", "$200 per 1,000", "Full suburb about $3,300"]}
-        ctaLabel="Get a Free Glen Waverley Quote"
+        image={{ src: "/images/redesign/suburb-map.jpg", alt: "Map of Melbourne's suburbs showing the areas South East Flyers covers" }}
       />
 
-      <ProofStrip />
+      <FactsStrip
+        stats={[
+          { value: "16,500", label: "homes in Glen Waverley 3150, approx." },
+          { value: "$200", label: "per 1,000 flyers, exclusive" },
+          { value: "$3,300", label: "to cover the whole suburb, approx." },
+          { value: "1,000", label: "flyer minimum, $200 test run" },
+        ]}
+      />
 
-      <Section title="Glen Waverley at a glance">
+      <Section title="Glen Waverley at a glance" first>
         <p>
           Glen Waverley is a big, family suburb in the City of Monash, built mostly from the 1950s to the 1980s on
           quarter-acre-style blocks. The Kingsway is its restaurant and cafe strip, The Glen is the major shopping
@@ -104,7 +112,7 @@ export default function GlenWaverley() {
         </p>
       </Section>
 
-      <Section title="Bilingual flyers reach more of the suburb" tone="gray">
+      <Section title="Bilingual flyers reach more of the suburb">
         <p>
           Glen Waverley has a large Chinese-speaking community, with many households speaking Mandarin or Cantonese
           at home, and a sizeable Sri Lankan community too. An English-only flyer still works, but a headline or offer
@@ -129,7 +137,20 @@ export default function GlenWaverley() {
         </p>
       </Section>
 
-      <Section title="Kingsway restaurants and takeaway menus" tone="gray">
+      <Reveal as="figure" className="mx-auto mt-14 mb-0 max-w-[1144px] px-[clamp(20px,4vw,48px)] flex flex-col gap-3">
+        <div className="rounded-card overflow-hidden aspect-[21/8]">
+          <Image
+            src="/images/redesign/walker-street.jpg"
+            alt="A walker beside a letterbox on a quiet residential street"
+            width={1144}
+            height={436}
+            className="w-full h-full object-cover object-[50%_45%]"
+          />
+        </div>
+        <figcaption className="text-sm text-muted">Almost every Glen Waverley home has a letterbox right on the street.</figcaption>
+      </Reveal>
+
+      <Section title="Kingsway restaurants and takeaway menus">
         <p>
           The Kingsway is a busy dining strip, so restaurants there compete hard for the same
           households. A takeaway menu delivered on its own, not inside a bundle with other menus, is the
@@ -160,28 +181,32 @@ export default function GlenWaverley() {
         </p>
       </Section>
 
-      <Section title="Letterbox drop cost in Glen Waverley">
-        <p>
-          Every drop is <strong>$200 per 1,000 flyers</strong>, delivered exclusively. A 2,500-flyer drop around the
-          Kingsway costs $500; the whole suburb costs about $3,300. Our flyer distribution across Monash also
-          reaches Mount Waverley. See the{" "}
+      <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
+        <Callout
+          title="Letterbox drop cost in Glen Waverley"
+          figures={[
+            { value: "$500", label: "2,500 flyers, around the Kingsway" },
+            { value: "$3,300", label: "whole suburb, approx." },
+          ]}
+        >
+          Every drop is <strong className="text-ink">$200 per 1,000 flyers</strong>, delivered exclusively. Our flyer
+          distribution across Monash also reaches Mount Waverley. See the{" "}
           <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
           <TextLink href="/melbourne/flyer-distribution-kew">Kew</TextLink>,{" "}
           <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink> and the rest of our{" "}
           <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
-        </p>
-      </Section>
+        </Callout>
+      </div>
 
       <HowItWorks />
 
-      <QuickQuoteForm />
-
-      <FAQSection items={faqs} title="Glen Waverley Letterbox Drop FAQs" />
-
-      <CtaBanner
-        title="Ready to reach Glen Waverley letterboxes?"
-        body="Tell us your streets and quantity, and we'll quote with the letterbox count within 24 hours."
+      <QuickQuoteForm
+        heading="Ready to reach Glen Waverley letterboxes?"
+        lead="Tell us your streets and quantity, and we'll quote with the letterbox count within 24 hours."
+        suburbHint="e.g. Glen Waverley, Mount Waverley, Wheelers Hill"
       />
+
+      <FAQSection items={faqs} title="Glen Waverley letterbox drop FAQs" />
     </>
   );
 }

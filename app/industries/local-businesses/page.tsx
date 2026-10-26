@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
+import Reveal from "../../components/Reveal";
 import {
   SITE_URL,
   PageHero,
-  ProofStrip,
+  FactsStrip,
   Section,
   Bullets,
-  CtaBanner,
   TextLink,
   JsonLd,
+  HowItWorks,
 } from "../../components/landing";
 
 const PAGE_PATH = "/industries/local-businesses";
@@ -87,14 +88,20 @@ export default function LocalBusinesses() {
           { name: "Industries", href: "/industries" },
           { name: "Local Businesses" },
         ]}
-        h1="Letterbox Marketing for Local Melbourne Businesses"
+        h1="Letterbox marketing for local Melbourne businesses"
         lead="Local business flyers delivered to the streets your customers live in. Each flyer goes into the letterbox on its own, every route is GPS-tracked, and you can start with 1,000 flyers."
-        proof={["Exclusive, never bundled", "$200 per 1,000 flyers", "GPS report with every drop"]}
       />
 
-      <ProofStrip />
+      <FactsStrip
+        stats={[
+          { value: "Exclusive", label: "never bundled with other ads" },
+          { value: "$200", label: "per 1,000 flyers" },
+          { value: "1,000", label: "flyer minimum, $200 test run" },
+          { value: "GPS map", label: "report with every drop" },
+        ]}
+      />
 
-      <Section title="Why letterbox drops suit local businesses">
+      <Section title="Why letterbox drops suit local businesses" first>
         <p>
           Most local businesses draw customers from a few kilometres around them. A letterbox drop puts your offer in
           front of every household in that area, whether or not they follow you online or search for you that week.
@@ -110,18 +117,23 @@ export default function LocalBusinesses() {
         </p>
       </Section>
 
-      <Section title="Local businesses we deliver for" tone="gray" wide>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {businesses.map((b) => (
-            <div key={b.name} className="bg-white border border-gray-200 rounded-xl p-6">
-              <h3 className="font-semibold text-black mb-2">
-                {b.href ? <TextLink href={b.href}>{b.name}</TextLink> : b.name}
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">{b.note}</p>
-            </div>
-          ))}
-        </div>
-      </Section>
+      <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
+        <Reveal as="section" className="bg-cream rounded-card p-9 sm:p-16 flex flex-col gap-9">
+          <h2 className="m-0 font-display font-medium text-[clamp(28px,2.8vw,38px)] leading-[1.15]">
+            Local businesses we deliver for
+          </h2>
+          <dl className="m-0 flex flex-wrap gap-7 gap-x-10">
+            {businesses.map((b) => (
+              <div key={b.name} className="flex-[1_1_300px] pt-5 border-t border-[rgba(16,48,47,0.16)] flex flex-col gap-2">
+                <dt className="font-heading font-semibold text-lg">
+                  {b.href ? <TextLink href={b.href}>{b.name}</TextLink> : b.name}
+                </dt>
+                <dd className="m-0 text-[15px] leading-relaxed text-body">{b.note}</dd>
+              </div>
+            ))}
+          </dl>
+        </Reveal>
+      </div>
 
       <Section title="What a local flyer needs to do">
         <p>Local business flyers have one job: make the right household pick up the phone. The ones that work usually have:</p>
@@ -136,7 +148,7 @@ export default function LocalBusinesses() {
         />
       </Section>
 
-      <Section title="Measuring what a drop brings in" tone="gray">
+      <Section title="Measuring what a drop brings in">
         <p>
           Most local marketing Melbourne owners run is hard to measure. A letterbox drop isn&rsquo;t: give the
           flyer its own offer code, QR link or phone extension, and ask every new customer how they heard about
@@ -170,14 +182,14 @@ export default function LocalBusinesses() {
         </p>
       </Section>
 
-      <QuickQuoteForm />
+      <HowItWorks />
 
-      <FAQSection items={faqs} title="Local Business Letterbox Drop FAQs" />
-
-      <CtaBanner
-        title="Put your business in local letterboxes"
-        body="Tell us your address, the area you want to reach and how many flyers you have. We'll quote within 24 hours."
+      <QuickQuoteForm
+        heading="Put your business in local letterboxes"
+        lead="Tell us your address, the area you want to reach and how many flyers you have. We'll quote within 24 hours."
       />
+
+      <FAQSection items={faqs} title="Local business letterbox drop FAQs" />
     </>
   );
 }

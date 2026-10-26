@@ -4,10 +4,10 @@ import FAQSection from "../../components/FAQSection";
 import {
   SITE_URL,
   PageHero,
-  ProofStrip,
+  FactsStrip,
   Section,
+  Callout,
   Bullets,
-  CtaBanner,
   TextLink,
   JsonLd,
   HowItWorks,
@@ -86,13 +86,19 @@ export default function StKilda() {
         ]}
         h1="Flyer Distribution & Letterbox Drops in St Kilda"
         lead="Flyer distribution in St Kilda 3182, across Fitzroy Street, Acland Street and the streets around them. Your flyer goes into each letterbox on its own, and every route is GPS-tracked."
-        proof={["Minimum 1,000 flyers", "$200 per 1,000", "Full suburb about $2,800"]}
-        ctaLabel="Get a Free St Kilda Quote"
+        image={{ src: "/images/redesign/suburb-map.jpg", alt: "Map of Melbourne's suburbs showing the areas South East Flyers covers" }}
       />
 
-      <ProofStrip />
+      <FactsStrip
+        stats={[
+          { value: "14,100", label: "homes in St Kilda 3182, approx." },
+          { value: "$200", label: "per 1,000 flyers, exclusive" },
+          { value: "$2,800", label: "to cover the whole suburb, approx." },
+          { value: "1,000", label: "flyer minimum, $200 test run" },
+        ]}
+      />
 
-      <Section title="St Kilda at a glance">
+      <Section title="St Kilda at a glance" first>
         <p>
           St Kilda is Melbourne&rsquo;s beachside entertainment suburb: Luna Park, the Palais Theatre and St Kilda
           Pier sit close to Fitzroy Street&rsquo;s bars and restaurants, with Acland Street&rsquo;s cafes and cake
@@ -104,7 +110,7 @@ export default function StKilda() {
         </p>
       </Section>
 
-      <Section title="An apartment suburb needs a different kind of route" tone="gray">
+      <Section title="An apartment suburb needs a different kind of route">
         <p>
           Most St Kilda buildings are flats, many of them older art deco blocks with a shared mail room rather
           than individual letterboxes on the street. Where a mail room is accessible, we deliver into it; where
@@ -128,7 +134,7 @@ export default function StKilda() {
         </p>
       </Section>
 
-      <Section title="Fitzroy Street and Acland Street trade" tone="gray">
+      <Section title="Fitzroy Street and Acland Street trade">
         <p>
           Hospitality drives St Kilda&rsquo;s economy. Bars, restaurants and cafes on both strips compete for the
           same passing foot traffic and the same nearby apartments, so a flyer delivered on its own, not folded
@@ -155,27 +161,32 @@ export default function StKilda() {
         </p>
       </Section>
 
-      <Section title="Letterbox drop cost in St Kilda">
-        <p>
-          Every drop is <strong>$200 per 1,000 flyers</strong>, delivered exclusively. A 1,000-flyer drop around one
-          strip costs $200; the whole suburb costs about $2,800. St Kilda sits in the City of Port Phillip, so our
-          flyer distribution across Port Phillip also reaches St Kilda East, Elwood, Balaclava and Albert Park.
-          See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
+      <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
+        <Callout
+          title="Letterbox drop cost in St Kilda"
+          figures={[
+            { value: "$200", label: "first test, around one strip" },
+            { value: "$2,800", label: "whole suburb, approx." },
+          ]}
+        >
+          Every drop is <strong className="text-ink">$200 per 1,000 flyers</strong>, delivered exclusively. St Kilda
+          sits in the City of Port Phillip, so our flyer distribution across Port Phillip also reaches St Kilda East,
+          Elwood, Balaclava and Albert Park. See the{" "}
+          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
           <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink> and the rest of our{" "}
           <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
-        </p>
-      </Section>
+        </Callout>
+      </div>
 
       <HowItWorks />
 
-      <QuickQuoteForm />
-
-      <FAQSection items={faqs} title="St Kilda Letterbox Drop FAQs" />
-
-      <CtaBanner
-        title="Ready to reach St Kilda letterboxes?"
-        body="Tell us your strip and quantity, and we'll send a quote with the reachable letterbox count within 24 hours."
+      <QuickQuoteForm
+        heading="Ready to reach St Kilda letterboxes?"
+        lead="Tell us your strip and quantity, and we'll send a quote with the reachable letterbox count within 24 hours."
+        suburbHint="e.g. St Kilda, St Kilda East, Elwood"
       />
+
+      <FAQSection items={faqs} title="St Kilda letterbox drop FAQs" />
     </>
   );
 }

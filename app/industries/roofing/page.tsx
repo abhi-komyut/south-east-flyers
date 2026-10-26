@@ -4,10 +4,10 @@ import FAQSection from "../../components/FAQSection";
 import {
   SITE_URL,
   PageHero,
-  ProofStrip,
+  FactsStrip,
   Section,
   Bullets,
-  CtaBanner,
+  Callout,
   TextLink,
   JsonLd,
   HowItWorks,
@@ -80,14 +80,21 @@ export default function Roofing() {
           { name: "Home Services", href: "/industries/home-services" },
           { name: "Roofing" },
         ]}
-        h1="Roofing Flyers for Melbourne Roofers"
+        h1="Roofing flyers for Melbourne roofers"
         lead="Roofing flyers delivered on their own to the streets with ageing roofs, the streets a storm just hit, and the streets around your current job. Every route is GPS-tracked."
-        proof={["Exclusive, never bundled", "$200 per 1,000 flyers", "Storm and neighbour drops"]}
+        image={{ src: "/images/redesign/ind-trades.jpg", alt: "A roofer in hi-vis working on a tiled Melbourne roof" }}
       />
 
-      <ProofStrip />
+      <FactsStrip
+        stats={[
+          { value: "Exclusive", label: "never bundled with other ads" },
+          { value: "$200", label: "per 1,000 flyers" },
+          { value: "1,000", label: "flyer minimum, $200 test run" },
+          { value: "GPS map", label: "proof of delivery, every run" },
+        ]}
+      />
 
-      <Section title="A roof is a big decision">
+      <Section title="A roof is a big decision" first>
         <p>
           Nobody replaces a roof on impulse. Owners notice a stain, get a quote or two, and often wait for the next
           wet season before committing. The roofing companies that win the job are usually the ones whose name the
@@ -106,7 +113,7 @@ export default function Roofing() {
         </p>
       </Section>
 
-      <Section title="Which streets need a roofer" tone="gray">
+      <Section title="Which streets need a roofer">
         <p>
           Tiled and iron roofs on homes built from the 1950s to the 1980s are now at the age where restorations,
           re-pointing and replacements come up. Much of Melbourne&rsquo;s south-east and east was built in that era,
@@ -133,7 +140,7 @@ export default function Roofing() {
         </p>
       </Section>
 
-      <Section title="What sells a roof on paper" tone="gray">
+      <Section title="What sells a roof on paper">
         <Bullets
           items={[
             <><strong>Before-and-after photos</strong> of a restoration you completed, ideally in a nearby suburb.</>,
@@ -144,31 +151,30 @@ export default function Roofing() {
         />
       </Section>
 
-      <Section title="Quantities and cost">
-        <p>
+      <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
+        <Callout
+          title="Quantities and cost"
+          figures={[{ value: "$500", label: "2,500 homes, a first test" }, { value: "$1,000", label: "5,000 homes, wider reach" }]}
+        >
           Because roof jobs are less frequent but larger than most trade work, roofers usually need more reach than a
-          plumber to see results. A 2,500-home drop costs $500 and a 5,000-home drop costs $1,000, at $200 per 1,000.
-          See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for more quantities.
-        </p>
-        <p>
-          Roofing is one of the trades on our <TextLink href="/industries/home-services">home services</TextLink> page,
+          plumber to see results, at $200 per 1,000. See the{" "}
+          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for more quantities. Roofing is
+          one of the trades on our <TextLink href="/industries/home-services">home services</TextLink> page,
           alongside <TextLink href="/industries/plumbers">plumbers</TextLink> and{" "}
           <TextLink href="/industries/electricians">electricians</TextLink>. Our{" "}
           <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> lists every suburb
           we cover.
-        </p>
-      </Section>
+        </Callout>
+      </div>
 
       <HowItWorks />
 
-      <QuickQuoteForm />
-
-      <FAQSection items={faqs} title="Roofing Letterbox Drop FAQs" />
-
-      <CtaBanner
-        title="Put your roofing work in front of the right streets"
-        body="Tell us your base, recent jobs and the suburbs you cover. We'll quote within 24 hours."
+      <QuickQuoteForm
+        heading="Put your roofing work in front of the right streets"
+        lead="Tell us your base, recent jobs and the suburbs you cover. We'll quote within 24 hours."
       />
+
+      <FAQSection items={faqs} title="Roofing letterbox drop FAQs" />
     </>
   );
 }

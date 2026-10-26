@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
+import Reveal from "../../components/Reveal";
 import {
   SITE_URL,
   PageHero,
-  ProofStrip,
+  FactsStrip,
   Section,
+  Callout,
   Bullets,
-  CtaBanner,
   TextLink,
   JsonLd,
   HowItWorks,
@@ -86,13 +88,19 @@ export default function Bentleigh() {
         ]}
         h1="Flyer Distribution & Letterbox Drops in Bentleigh"
         lead="Flyer distribution in Bentleigh 3204, from Centre Road out through the family streets around it. Your flyer goes into each letterbox on its own, and every route is GPS-tracked."
-        proof={["Minimum 1,000 flyers", "$200 per 1,000", "Full suburb about $1,500"]}
-        ctaLabel="Get a Free Bentleigh Quote"
+        image={{ src: "/images/redesign/suburb-map.jpg", alt: "Map of Melbourne's suburbs showing the areas South East Flyers covers" }}
       />
 
-      <ProofStrip />
+      <FactsStrip
+        stats={[
+          { value: "7,500", label: "homes in Bentleigh 3204, approx." },
+          { value: "$200", label: "per 1,000 flyers, exclusive" },
+          { value: "$1,500", label: "to cover the whole suburb, approx." },
+          { value: "1,000", label: "flyer minimum, $200 test run" },
+        ]}
+      />
 
-      <Section title="Bentleigh at a glance">
+      <Section title="Bentleigh at a glance" first>
         <p>
           Bentleigh is a family suburb in the City of Glen Eira, with Centre Road as its main strip of more
           than 250 shops, cafes and services. Bentleigh and Patterson stations both sit on the Frankston line
@@ -104,7 +112,7 @@ export default function Bentleigh() {
         </p>
       </Section>
 
-      <Section title="A suburb chosen for its school zoning" tone="gray">
+      <Section title="A suburb chosen for its school zoning">
         <p>
           A lot of Bentleigh&rsquo;s buyer demand comes from families chasing well-regarded government
           secondary school zones nearby. That keeps the suburb full of school-age families, which supports
@@ -128,7 +136,20 @@ export default function Bentleigh() {
         </p>
       </Section>
 
-      <Section title="Centre Road trade and the family market" tone="gray">
+      <Reveal as="figure" className="mx-auto mt-14 mb-0 max-w-[1144px] px-[clamp(20px,4vw,48px)] flex flex-col gap-3">
+        <div className="rounded-card overflow-hidden aspect-[21/8]">
+          <Image
+            src="/images/redesign/walker-street.jpg"
+            alt="A walker beside a letterbox on a quiet Bentleigh street"
+            width={1144}
+            height={436}
+            className="w-full h-full object-cover object-[50%_45%]"
+          />
+        </div>
+        <figcaption className="text-sm text-muted">Most Bentleigh homes have letterboxes right on the street.</figcaption>
+      </Reveal>
+
+      <Section title="Centre Road trade and the family market">
         <p>
           Centre Road&rsquo;s long run of shops competes for the same local households, so a flyer delivered on
           its own, rather than folded into a stack of other offers, is more likely to get read on the kitchen
@@ -155,27 +176,31 @@ export default function Bentleigh() {
         </p>
       </Section>
 
-      <Section title="Letterbox drop cost in Bentleigh">
-        <p>
-          Every drop is <strong>$200 per 1,000 flyers</strong>, delivered exclusively. A first test run costs
-          $200; the whole suburb costs about $1,500. Our flyer distribution across Glen Eira also reaches
-          Caulfield. See the{" "}
+      <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
+        <Callout
+          title="Letterbox drop cost in Bentleigh"
+          figures={[
+            { value: "$200", label: "first test, 1,000 flyers" },
+            { value: "$1,500", label: "whole suburb, approx." },
+          ]}
+        >
+          Every drop is <strong className="text-ink">$200 per 1,000 flyers</strong>, delivered exclusively. Our flyer
+          distribution across Glen Eira also reaches Caulfield. See the{" "}
           <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
           <TextLink href="/melbourne/flyer-distribution-caulfield">Caulfield</TextLink> and the rest of our{" "}
           <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
-        </p>
-      </Section>
+        </Callout>
+      </div>
 
       <HowItWorks />
 
-      <QuickQuoteForm />
-
-      <FAQSection items={faqs} title="Bentleigh Letterbox Drop FAQs" />
-
-      <CtaBanner
-        title="Ready to reach Bentleigh letterboxes?"
-        body="Tell us your streets and quantity, and we'll send a quote with the letterbox count within 24 hours."
+      <QuickQuoteForm
+        heading="Ready to reach Bentleigh letterboxes?"
+        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count within 24 hours."
+        suburbHint="e.g. Bentleigh, Bentleigh East, Caulfield"
       />
+
+      <FAQSection items={faqs} title="Bentleigh letterbox drop FAQs" />
     </>
   );
 }

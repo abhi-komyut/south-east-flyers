@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import Breadcrumbs from "../../components/Breadcrumbs";
+import Image from "next/image";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
+import Reveal from "../../components/Reveal";
+import {
+  SITE_URL,
+  PageHero,
+  Section,
+  Callout,
+  TextLink,
+  JsonLd,
+} from "../../components/landing";
 
-const SITE_URL = "https://www.southeastflyers.com.au";
 const PAGE_PATH = "/services/targeted-flyer-distribution";
 
 export const metadata: Metadata = {
@@ -23,22 +30,26 @@ export const metadata: Metadata = {
   },
 };
 
-const targeting: { title: string; body: string }[] = [
+const targeting: { title: string; body: string; icon: React.ReactNode }[] = [
   {
     title: "By suburb",
     body: "Choose the specific suburbs you want to reach. This is the most common way to focus a campaign on the areas your customers live in.",
+    icon: <><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" /><circle cx="12" cy="9.5" r="2.5" /></>,
   },
   {
     title: "By postcode",
     body: "Cover one or more postcodes when your service area lines up with them, rather than the whole metro.",
+    icon: <><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></>,
   },
   {
     title: "By defined area",
-    body: "Where practical, we can focus on particular streets or a defined pocket around a location — for example the streets surrounding a store or listing.",
+    body: "Where practical, we can focus on particular streets or a defined pocket around a location, for example the streets surrounding a store or listing.",
+    icon: <><circle cx="12" cy="12" r="8" /><circle cx="12" cy="12" r="3" /><path d="M12 2v3M12 19v3M2 12h3M19 12h3" /></>,
   },
   {
     title: "By campaign objective",
-    body: "Tell us what you're trying to achieve — a local launch, a service-area push, a real estate farm — and we'll help shape a sensible area for it.",
+    body: "Tell us what you're trying to achieve: a local launch, a service-area push, a real estate farm, and we'll help shape a sensible area for it.",
+    icon: <><path d="M5 3v18" /><path d="M5 4h11l-2 4 2 4H5" /></>,
   },
 ];
 
@@ -51,7 +62,7 @@ const faqs = [
   {
     question: "Can you target specific streets or a radius around a location?",
     answer:
-      "Where it's practical, yes — for example the streets immediately surrounding a store, listing or venue. Tell us the location and how far out you want to go and we'll map a sensible area.",
+      "Where it's practical, yes, for example the streets immediately surrounding a store, listing or venue. Tell us the location and how far out you want to go and we'll map a sensible area.",
   },
   {
     question: "Do you offer demographic targeting?",
@@ -85,163 +96,82 @@ const serviceLd = {
 export default function TargetedFlyerDistribution() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }}
+      <JsonLd data={serviceLd} />
+
+      <PageHero
+        crumbs={[{ name: "Home", href: "/" }, { name: "Targeted flyer distribution" }]}
+        h1="Targeted flyer distribution"
+        lead="Choose exactly where your flyers go. We help you define a practical distribution area, by suburb, postcode or a defined pocket, so your material reaches the areas that matter to your business."
+        tagline="You provide the flyers. We handle the distribution."
+        image={{ src: "/images/redesign/walker-ebike.jpg", alt: "An e-bike distributor delivering flyers on a residential street" }}
       />
 
-      {/* Hero */}
-      <section className="bg-navy text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-          <Breadcrumbs
-            items={[
-              { name: "Home", href: "/" },
-              { name: "Targeted Flyer Distribution" },
-            ]}
+      <Section title="What is targeted flyer distribution?" first>
+        <p className="text-lg text-ink">
+          Targeted distribution simply means deciding where your flyers are delivered rather than spreading them
+          thinly across a whole city. You tell us the areas you want to reach, and we concentrate the campaign
+          there, so your budget goes toward the households most likely to care about your offer.
+        </p>
+        <p>
+          We keep this honest: our targeting is based on the areas you choose, suburbs, postcodes and defined
+          residential pockets. If you have a particular type of customer in mind, tell us and we&rsquo;ll help
+          match the area to it, but we won&rsquo;t promise household-level demographic precision we can&rsquo;t
+          deliver.
+        </p>
+      </Section>
+
+      <section aria-labelledby="ways-title" className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] py-[clamp(80px,9vw,128px)] flex flex-wrap gap-12 gap-x-[88px] items-stretch">
+        <Reveal className="flex-[1_1_400px] rounded-card overflow-hidden min-h-[460px]">
+          <Image
+            src="/images/redesign/suburb-map.jpg"
+            alt="Map of Melbourne's suburbs showing the areas South East Flyers covers"
+            width={700}
+            height={460}
+            className="w-full h-full object-cover"
           />
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <div className="max-w-3xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-5">
-              Targeted Flyer Distribution
-            </h1>
-            <p className="text-lg text-white/85 mb-4">
-              Choose exactly where your flyers go. We help you define a practical
-              distribution area — by suburb, postcode or a defined pocket — so
-              your material reaches the areas that matter to your business.
-            </p>
-            <p className="text-base text-white/80 mb-8">
-              You provide the flyers. We handle the distribution.
-            </p>
-            <Link
-              href="/contact"
-              data-quote-cta
-              className="inline-block bg-cta text-white font-semibold px-6 py-3 rounded text-center transition-all duration-200 hover:bg-cta-hover hover:scale-[1.02]"
-            >
-              Get a Free Quote
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Intro */}
-      <section className="py-16 sm:py-20 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-black mb-4">
-            What is targeted flyer distribution?
+        </Reveal>
+        <Reveal delay={100} className="flex-[1.15_1_440px] flex flex-col gap-9 justify-center">
+          <h2 id="ways-title" className="m-0 font-display font-medium text-[clamp(32px,3.4vw,46px)] leading-[1.1] tracking-[-0.015em]">
+            Ways to define your distribution area
           </h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Targeted distribution simply means deciding where your flyers are
-            delivered rather than spreading them thinly across a whole city. You
-            tell us the areas you want to reach, and we concentrate the campaign
-            there — so your budget goes toward the households most likely to care
-            about your offer.
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            We keep this honest: our targeting is based on the areas you choose —
-            suburbs, postcodes and defined residential pockets. If you have a
-            particular type of customer in mind, tell us and we&rsquo;ll help
-            match the area to it, but we won&rsquo;t promise household-level
-            demographic precision we can&rsquo;t deliver.
-          </p>
-        </div>
-      </section>
-
-      {/* Targeting dimensions */}
-      <section className="py-16 sm:py-20 bg-cream border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
-              Ways to define your distribution area
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
-            {targeting.map((item) => (
-              <div
-                key={item.title}
-                className="bg-white border border-gray-200 rounded-xl p-6"
-              >
-                <h3 className="font-semibold text-black mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {item.body}
-                </p>
+          <dl className="m-0 flex flex-col gap-7">
+            {targeting.map((t) => (
+              <div key={t.title} className="flex gap-[18px]">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" className="text-navy shrink-0 mt-0.5" stroke="currentColor" strokeWidth={1.7} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  {t.icon}
+                </svg>
+                <div>
+                  <dt className="font-heading font-semibold text-lg mb-1.5">{t.title}</dt>
+                  <dd className="m-0 text-base leading-relaxed text-body">{t.body}</dd>
+                </div>
               </div>
             ))}
-          </div>
-        </div>
+          </dl>
+        </Reveal>
       </section>
 
-      {/* Related */}
-      <section className="py-16 sm:py-20 bg-white border-t border-gray-200">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-black mb-4">
-            Related services
-          </h2>
-          <p className="text-gray-700 leading-relaxed">
-            Targeted campaigns run through our{" "}
-            <Link
-              href="/services/flyer-distribution"
-              className="text-navy underline"
-            >
-              flyer distribution
-            </Link>{" "}
-            and{" "}
-            <Link
-              href="/services/letterbox-distribution"
-              className="text-navy underline"
-            >
-              letterbox distribution
-            </Link>{" "}
-            services, are tracked with{" "}
-            <Link
-              href="/services/gps-tracked-flyer-distribution"
-              className="text-navy underline"
-            >
-              GPS tracking
-            </Link>
-            , and cover the suburbs listed on our{" "}
-            <Link
-              href="/melbourne/flyer-distribution-melbourne"
-              className="text-navy underline"
-            >
-              Melbourne
-            </Link>{" "}
+      <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pb-[clamp(80px,9vw,128px)]">
+        <Callout title="Related services">
+          <p className="m-0">
+            Targeted campaigns run through our <TextLink href="/services/flyer-distribution">flyer distribution</TextLink>{" "}
+            and <TextLink href="/services/letterbox-distribution">letterbox distribution</TextLink> services, are
+            tracked with <TextLink href="/services/gps-tracked-flyer-distribution">GPS tracking</TextLink>, and cover
+            the suburbs listed on our <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne</TextLink>{" "}
             page.
           </p>
-        </div>
-      </section>
+        </Callout>
+      </div>
 
-      {/* Quote form */}
-      <QuickQuoteForm />
-
-      {/* FAQ */}
-      <FAQSection
-        items={faqs}
-        title="Targeted Distribution FAQs"
-        subtitle="Common questions about targeting your flyer campaign."
+      <QuickQuoteForm
+        heading="Know the areas you want to reach?"
+        lead="Tell us your target suburbs and flyer quantity and we'll put together a free, no-obligation quote."
       />
 
-      {/* CTA banner */}
-      <section className="bg-navy py-16 sm:py-20 border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2
-            className="text-3xl md:text-4xl font-bold text-white mb-4 font-display"
-            >
-            Know the areas you want to reach?
-          </h2>
-          <p className="text-white/80 mb-8 max-w-xl mx-auto">
-            Tell us your target suburbs and flyer quantity and we&rsquo;ll put
-            together a free, no-obligation quote.
-          </p>
-          <Link
-            href="/contact"
-            data-quote-cta
-            className="inline-block bg-cta text-white font-semibold px-8 py-3 rounded transition-all duration-200 hover:bg-cta-hover hover:scale-[1.02]"
-          >
-            Get a Free Quote
-          </Link>
-        </div>
-      </section>
+      <FAQSection
+        items={faqs}
+        title="Targeted distribution FAQs"
+        subtitle="Common questions about targeting your flyer campaign."
+      />
     </>
   );
 }

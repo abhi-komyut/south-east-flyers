@@ -4,13 +4,14 @@ import FAQSection from "../../components/FAQSection";
 import {
   SITE_URL,
   PageHero,
-  ProofStrip,
+  FactsStrip,
   Section,
   Bullets,
   Steps,
-  CtaBanner,
+  Callout,
   TextLink,
   JsonLd,
+  HowItWorks,
 } from "../../components/landing";
 
 const PAGE_PATH = "/industries/plumbers";
@@ -80,14 +81,21 @@ export default function Plumbers() {
           { name: "Home Services", href: "/industries/home-services" },
           { name: "Plumbers" },
         ]}
-        h1="Plumber Flyers Delivered to Your Local Streets"
+        h1="Plumber flyers delivered to your local streets"
         lead="Letterbox marketing for plumbers in Melbourne's south-east. Your flyer goes into each letterbox on its own, every route is GPS-tracked, and you can start with 1,000 homes around your base."
-        proof={["Exclusive, never bundled", "$200 per 1,000 flyers", "Drops around active jobs"]}
+        image={{ src: "/images/redesign/ind-trades.jpg", alt: "A tradesperson in hi-vis working on a Melbourne home" }}
       />
 
-      <ProofStrip />
+      <FactsStrip
+        stats={[
+          { value: "Exclusive", label: "never bundled with other ads" },
+          { value: "$200", label: "per 1,000 flyers" },
+          { value: "1,000", label: "flyer minimum, $200 test run" },
+          { value: "GPS map", label: "proof of delivery, every run" },
+        ]}
+      />
 
-      <Section title="Why plumbing flyers still get calls">
+      <Section title="Why plumbing flyers still get calls" first>
         <p>
           Nobody shops around for a plumber when water is coming through the ceiling. They call the number they can
           find fastest: the one on the fridge, in the kitchen drawer, or on the flyer that arrived last week. Plumber
@@ -104,7 +112,7 @@ export default function Plumbers() {
         </p>
       </Section>
 
-      <Section title="What to put on a plumbing flyer" tone="gray">
+      <Section title="What to put on a plumbing flyer">
         <p>The plumbing flyers that bring in calls tend to share a few things:</p>
         <Bullets
           items={[
@@ -130,7 +138,7 @@ export default function Plumbers() {
         </p>
       </Section>
 
-      <Section title="Drops around the jobs you are already on" tone="gray">
+      <Section title="Drops around the jobs you are already on">
         <p>
           When your van is parked in a street, the neighbours notice. A 1,000-flyer drop in the surrounding streets,
           mentioning that you are working nearby, turns that visibility into the next booking. Give us the job address
@@ -152,30 +160,36 @@ export default function Plumbers() {
         </p>
       </Section>
 
-      <Section title="Cost of a plumbing letterbox drop" tone="gray">
-        <p>
-          Every drop is $200 per 1,000 flyers. Covering 2,500 homes around your base costs $500; a whole suburb the
-          size of <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink> (about 10,500 homes) costs
-          about $2,100. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for more
-          quantities.
-        </p>
-        <p>
-          Plumbing is one of several trades we deliver for. See{" "}
-          <TextLink href="/industries/home-services">home services marketing</TextLink> for{" "}
-          <TextLink href="/industries/electricians">electricians</TextLink>,{" "}
-          <TextLink href="/industries/roofing">roofers</TextLink>, builders and cleaners, or our{" "}
-          <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
-        </p>
-      </Section>
+      <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
+        <Callout
+          title="Cost of a plumbing letterbox drop"
+          figures={[
+            { value: "$500", label: "2,500 homes around your base" },
+            { value: "$2,100", label: "a Brighton-sized suburb, approx." },
+          ]}
+        >
+          <p className="m-0">
+            Every drop is $200 per 1,000 flyers. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink>{" "}
+            page for more quantities.
+          </p>
+          <p className="m-0">
+            Plumbing is one of several trades we deliver for. See{" "}
+            <TextLink href="/industries/home-services">home services marketing</TextLink> for{" "}
+            <TextLink href="/industries/electricians">electricians</TextLink>,{" "}
+            <TextLink href="/industries/roofing">roofers</TextLink>, builders and cleaners, or our{" "}
+            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
+          </p>
+        </Callout>
+      </div>
 
-      <QuickQuoteForm />
+      <HowItWorks />
 
-      <FAQSection items={faqs} title="Plumber Letterbox Drop FAQs" />
-
-      <CtaBanner
-        title="Get your plumbing number on local fridges"
-        body="Tell us where you're based and the suburbs you cover. We'll quote within 24 hours."
+      <QuickQuoteForm
+        heading="Get your plumbing number on local fridges"
+        lead="Tell us where you're based and the suburbs you cover. We'll quote within 24 hours."
       />
+
+      <FAQSection items={faqs} title="Plumber letterbox drop FAQs" />
     </>
   );
 }
