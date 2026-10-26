@@ -300,12 +300,11 @@ export default function FlyerDistributionMelbourne() {
             South East Flyers is a flyer distribution service Melbourne
             businesses use when they want solo delivery rather than a bundle.
             We&rsquo;re a flyer distribution company Melbourne clients choose
-            precisely because we&rsquo;re not one of the big operators running
-            10,000-home minimums. Businesses across the city give us their
-            printed material and we deliver it, letterbox by letterbox,
-            across the suburbs they want to target, from the bayside around
-            St Kilda and Brighton through to the Monash and eastern suburbs
-            like Glen Waverley, Box Hill and Doncaster.
+            for a 1,000-flyer minimum. Businesses across the city give us
+            their printed material and we deliver it, letterbox by
+            letterbox, across the suburbs they want to target, from the
+            bayside around St Kilda and Brighton through to the Monash and
+            eastern suburbs like Glen Waverley, Box Hill and Doncaster.
           </p>
           <p className="text-gray-700 leading-relaxed">
             We deliver every flyer individually rather than bundling it with
@@ -314,9 +313,9 @@ export default function FlyerDistributionMelbourne() {
             you receive a clear report once your campaign is complete. That&rsquo;s
             leaflet distribution Melbourne businesses can rely on without
             guessing where their flyers went. The minimum campaign is 1,000
-            flyers, and we scale up from there for metro-wide pushes. Many
-            flyer distribution companies run shared drops with high
-            minimums; we don&rsquo;t.
+            flyers, and we scale up from there for metro-wide pushes. We&rsquo;re
+            one of the flyer distribution companies that tracks every run by
+            GPS as standard, not as an add-on.
           </p>
         </div>
       </section>
