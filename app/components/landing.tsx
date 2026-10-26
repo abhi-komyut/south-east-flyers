@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Breadcrumbs, { type Crumb } from "./Breadcrumbs";
 import Reveal from "./Reveal";
 
@@ -25,7 +26,7 @@ export function coverageCost(dwellings: number) {
   return Math.round((dwellings / 1000) * PRICE_PER_THOUSAND / 100) * 100;
 }
 
-const linkClass = "text-navy underline underline-offset-2 hover:text-navy-light";
+const linkClass = "text-navy underline underline-offset-2 hover:text-teal-deep";
 
 export function TextLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
@@ -35,54 +36,90 @@ export function TextLink({ href, children }: { href: string; children: React.Rea
   );
 }
 
+/**
+ * Split hero: breadcrumbs, Lora H1, lead, CTA + call button on the left;
+ * a full-height photo on the right (stacks on mobile). Pass `rightSlot`
+ * instead of `image` to swap the photo for custom content (the pricing
+ * calculator card, or nothing for a text-only hero on Contact/Clients).
+ */
 export function PageHero({
   crumbs,
   h1,
   lead,
-  proof,
-  ctaLabel = "Get a Free Quote",
+  ctaLabel = "Get a free quote",
+  image,
+  rightSlot,
 }: {
-  crumbs: Crumb[];
+  crumbs?: Crumb[];
   h1: string;
   lead: React.ReactNode;
-  proof: string[];
   ctaLabel?: string;
+  image?: { src: string; alt: string };
+  rightSlot?: React.ReactNode;
 }) {
+  const hasRight = Boolean(image || rightSlot);
   return (
-    <section className="bg-navy text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-        <Breadcrumbs items={crumbs} />
-      </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
-        <div className="max-w-3xl">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-5">{h1}</h1>
-          <p className="text-lg text-white/85 mb-6">{lead}</p>
-          <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-white/80 mb-8">
-            {proof.map((p) => (
-              <li key={p} className="flex items-center gap-2">
-                <svg className="w-4 h-4 text-cta shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                </svg>
-                {p}
-              </li>
-            ))}
-          </ul>
-          <div className="flex flex-col sm:flex-row gap-3">
+    <section className="flex flex-wrap bg-teal-deep text-white">
+      <div
+        className={`flex justify-end px-[clamp(20px,4vw,64px)] sm:px-[clamp(20px,4vw,64px)] py-10 sm:py-[clamp(72px,9vw,120px)] ${
+          hasRight ? "flex-[1_1_560px] pb-[clamp(72px,9vw,160px)]" : "flex-1 pb-10 sm:pb-[clamp(72px,9vw,120px)]"
+        }`}
+      >
+        <div className={`w-full flex flex-col gap-6 ${hasRight ? "max-w-[600px]" : "max-w-3xl"}`}>
+          {crumbs && <Breadcrumbs items={crumbs} />}
+          <h1 className="m-0 font-display font-medium text-[clamp(40px,4.6vw,64px)] leading-[1.06] tracking-[-0.02em]">
+            {h1}
+          </h1>
+          <p className="m-0 text-[clamp(17px,1.4vw,19px)] leading-relaxed text-white/85 max-w-[540px]">{lead}</p>
+          <div className="flex flex-wrap items-center gap-3.5">
             <Link
               href="/contact"
               data-quote-cta
-              className="inline-block bg-cta text-white font-semibold px-6 py-3 rounded text-center transition-all duration-200 hover:bg-cta-hover hover:scale-[1.02]"
+              className="press inline-flex items-center min-h-[54px] px-[30px] rounded-full bg-cta text-ink no-underline font-heading font-bold text-base hover:bg-cta-hover transition-colors"
             >
               {ctaLabel}
             </Link>
             <a
               href={PHONE_TEL}
-              className="inline-block border border-white/60 text-white font-semibold px-6 py-3 rounded text-center hover:bg-white/10 transition-colors"
+              className="press inline-flex items-center min-h-[54px] px-[26px] rounded-full border border-white/55 text-white no-underline font-heading font-semibold text-base [font-variant-numeric:tabular-nums] hover:bg-white/10 transition-colors"
             >
               Call {PHONE_DISPLAY}
             </a>
           </div>
         </div>
+      </div>
+      {hasRight && (
+        <div className="flex-[1_1_480px] relative min-h-[clamp(320px,40vw,620px)] bg-[#DCE7E6] overflow-hidden">
+          {image && (
+            <Image src={image.src} alt={image.alt} fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" priority />
+          )}
+          {rightSlot}
+        </div>
+      )}
+    </section>
+  );
+}
+
+/**
+ * White panel overlapping the hero below it by ~-80px. Pass exactly the
+ * figures that should show; each gets a hairline border from the second
+ * column on.
+ */
+export function FactsStrip({ stats }: { stats: { value: string; label: string }[] }) {
+  return (
+    <section aria-label="At a glance" className="relative z-[2] px-[clamp(20px,4vw,48px)]">
+      <div className="max-w-[1144px] mx-auto -mt-20 bg-white rounded-card shadow-[0_24px_48px_-28px_rgba(4,60,60,0.45)] flex flex-wrap">
+        {stats.map((s, i) => (
+          <div
+            key={s.label}
+            className={`flex-[1_1_240px] px-[34px] py-8 flex flex-col gap-1.5 ${i > 0 ? "border-l border-line" : ""}`}
+          >
+            <p className="m-0 font-display font-medium text-[38px] leading-[1.1] text-navy [font-variant-numeric:tabular-nums]">
+              {s.value}
+            </p>
+            <p className="m-0 text-[15px] leading-snug text-muted">{s.label}</p>
+          </div>
+        ))}
       </div>
     </section>
   );
@@ -113,25 +150,105 @@ export function ProofStrip() {
   );
 }
 
+/**
+ * Editorial content section: H2 on the left (flex 1 / 300px), body on
+ * the right (flex 1.7 / 480px), with a hairline top border between
+ * sections. Pass `first` on the first section in an article to drop
+ * that border and its top padding.
+ */
 export function Section({
   title,
   children,
-  tone = "white",
-  wide = false,
+  first = false,
 }: {
   title: string;
   children: React.ReactNode;
-  tone?: "white" | "gray";
-  wide?: boolean;
+  first?: boolean;
 }) {
   return (
-    <section
-      className={`py-14 sm:py-16 border-t border-gray-200 ${tone === "gray" ? "bg-cream" : "bg-white"}`}
+    <Reveal
+      as="section"
+      className={`flex flex-wrap gap-5 gap-x-[88px] ${first ? "" : "pt-14 border-t border-line"}`}
     >
-      <Reveal className={`${wide ? "max-w-7xl" : "max-w-3xl"} mx-auto px-4 sm:px-6 lg:px-8`}>
-        <h2 className="text-2xl sm:text-3xl font-bold text-black mb-5">{title}</h2>
-        <div className="space-y-4 text-gray-700 leading-relaxed">{children}</div>
-      </Reveal>
+      <h2 className="flex-[1_1_300px] m-0 font-display font-medium text-[clamp(28px,2.8vw,38px)] leading-[1.15]">
+        {title}
+      </h2>
+      <div className="flex-[1.7_1_480px] flex flex-col gap-[18px] text-[17px] leading-[1.75] text-body">
+        {children}
+      </div>
+    </Reveal>
+  );
+}
+
+/**
+ * Beige callout panel for cost breakdowns and "what you need to
+ * provide" blocks: title + big Lora figures on the left, a paragraph
+ * on the right.
+ */
+export function Callout({
+  title,
+  figures,
+  children,
+}: {
+  title: string;
+  figures: { value: string; label: string }[];
+  children: React.ReactNode;
+}) {
+  return (
+    <Reveal
+      as="section"
+      className="bg-cream rounded-card p-9 sm:p-16 flex flex-wrap gap-8 gap-x-[72px] items-start"
+    >
+      <div className="flex-[1_1_300px] flex flex-col gap-[22px]">
+        <h2 className="m-0 font-display font-medium text-[clamp(28px,2.8vw,38px)] leading-[1.15]">{title}</h2>
+        <div className="flex flex-wrap gap-7 gap-x-12">
+          {figures.map((f) => (
+            <div key={f.label}>
+              <p className="m-0 font-display text-[40px] leading-none text-navy [font-variant-numeric:tabular-nums]">
+                {f.value}
+              </p>
+              <p className="mt-2 mb-0 text-sm text-muted">{f.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <p className="flex-[1.6_1_440px] m-0 text-[17px] leading-[1.75] text-body">{children}</p>
+    </Reveal>
+  );
+}
+
+/**
+ * Dark teal band of numbered steps, used for "How it works" and
+ * service-specific process explanations. The numbering is legitimate
+ * here since each list genuinely is an ordered sequence.
+ */
+export function StepsBand({
+  title,
+  steps,
+}: {
+  title: string;
+  steps: { title: string; body: React.ReactNode }[];
+}) {
+  return (
+    <section className="bg-teal-deep text-white py-[clamp(72px,8vw,112px)] px-[clamp(20px,4vw,48px)]">
+      <div className="max-w-[1144px] mx-auto flex flex-col gap-12">
+        <Reveal>
+          <h2 className="m-0 font-display font-medium text-[clamp(32px,3.4vw,44px)] leading-[1.1] max-w-[620px]">
+            {title}
+          </h2>
+        </Reveal>
+        <ol className="list-none m-0 p-0 flex flex-wrap gap-9 gap-x-8">
+          {steps.map((s, i) => (
+            <Reveal as="li" key={s.title} delay={i * 80} className="flex-[1_1_220px] flex flex-col gap-3.5 pt-[22px] border-t border-white/20">
+              <span className="font-display text-[22px] text-cta-on-dark [font-variant-numeric:tabular-nums]">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <h3 className="m-0 font-heading font-semibold text-[19px] leading-snug">{s.title}</h3>
+              <p className="m-0 text-[15px] leading-relaxed text-white/80">{s.body}</p>
+            </Reveal>
+          ))}
+        </ol>
+      </div>
     </section>
   );
 }
@@ -205,15 +322,43 @@ export function JsonLd({ data }: { data: object }) {
  */
 export function HowItWorks() {
   return (
-    <Section title="How it works" tone="gray">
-      <Steps
-        steps={[
-          { title: "Tell us the area", body: "Streets, a radius or whole suburbs, plus quantity and start date." },
-          { title: "Quote within 24 hours", body: "Letterbox count, total cost and timeline." },
-          { title: "Send your printed flyers", body: "We distribute; we don't print." },
-          { title: "We deliver and report", body: "Walkers and e-bike riders cover the route; you get the GPS map." },
-        ]}
-      />
-    </Section>
+    <StepsBand
+      title="How it works"
+      steps={[
+        { title: "Tell us the area", body: "Streets, a radius or whole suburbs, plus quantity and start date." },
+        { title: "Quote within 24 hours", body: "Letterbox count, total cost and timeline." },
+        { title: "Send your printed flyers", body: "We distribute; we don't print." },
+        { title: "We deliver and report", body: "Walkers and e-bike riders cover the route; you get the GPS map." },
+      ]}
+    />
+  );
+}
+
+/** Single-colour client logos, no labels, used on Home and the industries hub. */
+export function LogoWall({
+  heading = "Trusted by Melbourne agencies, clinics and trades",
+}: {
+  heading?: string;
+}) {
+  const logos: { src: string; alt: string; height: number }[] = [
+    { src: "/images/redesign/logo-marshallwhite.png", alt: "Marshall White", height: 18 },
+    { src: "/images/redesign/logo-mcgrath.png", alt: "McGrath", height: 26 },
+    { src: "/images/redesign/logo-belle.png", alt: "Belle Property", height: 58 },
+    { src: "/images/redesign/logo-barryplant.png", alt: "Barry Plant", height: 17 },
+    { src: "/images/redesign/logo-buxton.png", alt: "Buxton", height: 28 },
+    { src: "/images/redesign/logo-highdental.png", alt: "High Dental Melbourne", height: 50 },
+    { src: "/images/redesign/logo-stormshield.png", alt: "Storm Shield Roofing", height: 50 },
+  ];
+  return (
+    <section aria-label={heading} className="py-[88px] px-[clamp(20px,4vw,48px)]">
+      <div className="max-w-[1144px] mx-auto flex flex-col items-center gap-10">
+        <h2 className="m-0 font-heading font-semibold text-[15px] text-muted text-center">{heading}</h2>
+        <Reveal className="flex flex-wrap justify-center items-center gap-x-16 gap-y-9 opacity-[0.82]">
+          {logos.map((l) => (
+            <Image key={l.alt} src={l.src} alt={l.alt} width={160} height={l.height} style={{ height: l.height, width: "auto" }} />
+          ))}
+        </Reveal>
+      </div>
+    </section>
   );
 }

@@ -16,7 +16,7 @@ export default function Reveal({
   children: React.ReactNode;
   delay?: number;
   className?: string;
-  as?: "div" | "li" | "span";
+  as?: "div" | "li" | "span" | "section" | "figure";
 }) {
   const ref = useRef<HTMLElement>(null);
   const [visible, setVisible] = useState(false);

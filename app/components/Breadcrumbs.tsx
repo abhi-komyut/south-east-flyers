@@ -27,7 +27,7 @@ export default function Breadcrumbs({ items }: { items: Crumb[] }) {
   };
 
   return (
-    <nav aria-label="Breadcrumb" className="text-sm">
+    <nav aria-label="Breadcrumb" className="font-heading text-[13px] font-medium">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -38,18 +38,15 @@ export default function Breadcrumbs({ items }: { items: Crumb[] }) {
           return (
             <li key={index} className="flex items-center gap-x-2">
               {item.href && !isLast ? (
-                <Link
-                  href={item.href}
-                  className="text-white/80 hover:text-white underline-offset-2 hover:underline transition-colors"
-                >
+                <Link href={item.href} className="text-white/75 hover:text-white transition-colors">
                   {item.name}
                 </Link>
               ) : (
-                <span className="text-white/90" aria-current="page">
+                <span className="text-white" aria-current="page">
                   {item.name}
                 </span>
               )}
-              {!isLast && <span className="text-gray-500">/</span>}
+              {!isLast && <span aria-hidden="true" className="text-white/40">/</span>}
             </li>
           );
         })}
