@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-navy: #2C83EC;
-  --color-navy-light: #4C96EF;
+  --color-navy: #069494;
+  --color-navy-light: #2BA4A4;
   --color-cta: #E97B1F;
   --color-cta-hover: #D16A12;
-  --color-cream: #FAF5EC;
+  --color-cream: #EDE4D3;
   --color-black: #0A0A0A;
   --color-white: #FFFFFF;
   --color-gray-50: #f9fafb;
