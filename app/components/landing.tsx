@@ -162,30 +162,6 @@ export function FactsStrip({ stats }: { stats: { value: string; label: string }[
 }
 
 /** Sitewide proof strip (docs/seo/sef-page-build-context.md, section 2a). */
-export function ProofStrip() {
-  const stats = [
-    { value: "Exclusive", label: "Your flyer on its own, never bundled" },
-    { value: "100%", label: "Of runs GPS-tracked" },
-    { value: "1,000", label: "Minimum flyers" },
-    { value: "44%", label: "Of shoppers read letterbox flyers for specials" },
-  ];
-  return (
-    <section className="bg-white border-b border-gray-200 py-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <dl className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          {stats.map((s, i) => (
-            <Reveal as="div" key={s.label} delay={i * 80}>
-              <dt className="sr-only">{s.label}</dt>
-              <dd className="text-2xl sm:text-3xl font-bold text-navy">{s.value}</dd>
-              <dd className="text-sm text-gray-600 mt-1">{s.label}</dd>
-            </Reveal>
-          ))}
-        </dl>
-      </div>
-    </section>
-  );
-}
-
 /**
  * Editorial content section: H2 on the left (flex 1 / 300px), body on
  * the right (flex 1.7 / 480px), with a hairline top border between
@@ -321,34 +297,6 @@ export function Steps({ steps }: { steps: { title: string; body: React.ReactNode
         </Reveal>
       ))}
     </ol>
-  );
-}
-
-export function CtaBanner({ title, body }: { title: string; body: string }) {
-  return (
-    <section className="bg-navy py-16 sm:py-20 border-t border-white/10">
-      <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-display">
-          {title}
-        </h2>
-        <p className="text-white/80 mb-8 max-w-xl mx-auto">{body}</p>
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <Link
-            href="/contact"
-            data-quote-cta
-            className="inline-block bg-cta text-white font-semibold px-8 py-3 rounded transition-all duration-200 hover:bg-cta-hover hover:scale-[1.02]"
-          >
-            Get a Free Quote
-          </Link>
-          <a
-            href={PHONE_TEL}
-            className="inline-block border border-white/60 text-white font-semibold px-8 py-3 rounded hover:bg-white/10 transition-colors"
-          >
-            Call {PHONE_DISPLAY}
-          </a>
-        </div>
-      </Reveal>
-    </section>
   );
 }
 

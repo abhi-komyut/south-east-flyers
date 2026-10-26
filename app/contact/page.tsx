@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useForm, ValidationError } from "@formspree/react";
 import { useEffect, useRef } from "react";
 import { trackEvent } from "../lib/gtag";
@@ -44,194 +45,182 @@ export default function Contact() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="bg-navy text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">Contact Us</h1>
-          <p className="text-white/80 max-w-2xl mx-auto">
+      <section className="bg-teal-deep text-white px-[clamp(20px,4vw,48px)] pt-[clamp(64px,7vw,96px)] pb-[clamp(140px,13vw,180px)]">
+        <div className="max-w-[1144px] mx-auto flex flex-col gap-5">
+          <h1 className="m-0 font-display font-medium text-[clamp(40px,4.6vw,62px)] leading-[1.06] tracking-[-0.02em]">
+            Contact us
+          </h1>
+          <p className="m-0 text-[clamp(17px,1.4vw,19px)] leading-relaxed text-white/85 max-w-[560px]">
             Get in touch for a free, no-obligation quote on your next letterbox campaign.
           </p>
         </div>
       </section>
 
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
-            {/* Contact info sidebar */}
-            <div className="lg:col-span-1 space-y-8">
-              <div>
-                <h2 className="text-lg font-semibold text-black mb-4">Get in Touch</h2>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Whether you need a one-off campaign or ongoing distribution, we&apos;re here to help plan your next letterbox drop.
-                </p>
-              </div>
-
-              <div className="space-y-5">
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-navy/5 flex items-center justify-center shrink-0 mt-0.5">
-                    <svg className="w-5 h-5 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-black">Phone</p>
-                    <a href="tel:+61402824070" className="text-sm text-gray-600 hover:text-navy transition-colors">
+      <section className="px-[clamp(20px,4vw,48px)] pb-[clamp(80px,9vw,120px)]">
+        <div className="max-w-[1144px] mx-auto -mt-[110px] flex flex-wrap gap-10 gap-x-16 items-start">
+          <div className="flex-[1_1_320px] flex flex-col gap-7 pt-[140px]">
+            <p className="m-0 text-[17px] leading-[1.7] text-body">
+              Whether you need a one-off campaign or ongoing distribution, we&rsquo;re here to help plan your next
+              letterbox drop.
+            </p>
+            <dl className="m-0 flex flex-col gap-[22px]">
+              <div className="flex gap-4 items-start">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-navy shrink-0 mt-0.5" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z" />
+                </svg>
+                <div>
+                  <dt className="font-heading font-semibold text-sm text-muted">Phone</dt>
+                  <dd className="mt-1 mb-0">
+                    <a href="tel:+61402824070" className="font-display text-[26px] text-ink no-underline [font-variant-numeric:tabular-nums]">
                       0402 824 070
                     </a>
-                  </div>
+                  </dd>
                 </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-navy/5 flex items-center justify-center shrink-0 mt-0.5">
-                    <svg className="w-5 h-5 text-navy" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.43 1.26 4.87L2 22l5.27-1.38a9.93 9.93 0 004.77 1.22h.01c5.52 0 10-4.48 10-10s-4.48-10-10.01-10zm5.84 14.17c-.25.7-1.45 1.33-2 1.42-.51.08-1.15.11-1.86-.12a16.9 16.9 0 01-1.65-.61c-2.91-1.26-4.8-4.18-4.95-4.38-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.26-.28.57-.35.76-.35.19 0 .38 0 .55.01.17.01.41-.07.64.49.25.6.83 2.07.9 2.22.07.15.12.33.02.52-.1.19-.15.3-.3.47-.15.17-.31.37-.44.5-.15.14-.3.3-.13.6.17.3.77 1.27 1.65 2.06 1.14 1.01 2.1 1.33 2.42 1.48.32.15.5.13.7-.08.2-.2.8-.93 1.01-1.26.21-.32.42-.27.7-.16.28.1 1.79.84 2.1 1 .31.15.51.23.59.36.08.13.08.74-.17 1.44z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-black">WhatsApp</p>
-                    <a
-                      href={`https://wa.me/${WHATSAPP_NUMBER}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm text-gray-600 hover:text-navy transition-colors"
-                    >
+              </div>
+              <div className="flex gap-4 items-start">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-navy shrink-0 mt-0.5" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.6-5.4A8.5 8.5 0 1 1 21 11.5z" />
+                </svg>
+                <div>
+                  <dt className="font-heading font-semibold text-sm text-muted">WhatsApp</dt>
+                  <dd className="mt-1 mb-0 text-base">
+                    <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer" className="text-navy">
                       Message us directly
                     </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-navy/5 flex items-center justify-center shrink-0 mt-0.5">
-                    <svg className="w-5 h-5 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-black">Service Areas</p>
-                    <p className="text-sm text-gray-600">Melbourne&rsquo;s South-East &amp; Eastern Suburbs</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-navy/5 flex items-center justify-center shrink-0 mt-0.5">
-                    <svg className="w-5 h-5 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-black">Response Time</p>
-                    <p className="text-sm text-gray-600">Within 1 business day</p>
-                  </div>
+                  </dd>
                 </div>
               </div>
+              <div className="flex gap-4 items-start">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-navy shrink-0 mt-0.5" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" />
+                  <circle cx="12" cy="9.5" r="2.5" />
+                </svg>
+                <div>
+                  <dt className="font-heading font-semibold text-sm text-muted">Service areas</dt>
+                  <dd className="mt-1 mb-0 text-base text-ink">Melbourne&rsquo;s south-east and eastern suburbs</dd>
+                </div>
+              </div>
+              <div className="flex gap-4 items-start">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-navy shrink-0 mt-0.5" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7.5V12l3 3" />
+                </svg>
+                <div>
+                  <dt className="font-heading font-semibold text-sm text-muted">Response time</dt>
+                  <dd className="mt-1 mb-0 text-base text-ink">Within 1 business day. Calls Monday to Friday, 8am to 6pm AEST.</dd>
+                </div>
+              </div>
+            </dl>
+            <div className="rounded-card overflow-hidden h-[300px]">
+              <Image
+                src="/images/redesign/delivery-real.jpg"
+                alt="A South East Flyers distributor delivering to a letterbox in Melbourne"
+                width={460}
+                height={300}
+                className="w-full h-full object-cover object-[50%_40%]"
+              />
+            </div>
+          </div>
 
-              <div className="border-t border-gray-200 pt-6">
-                <p className="text-xs text-gray-500 leading-relaxed">
-                  Prefer to call? We&apos;re available Monday to Friday, 8am – 6pm AEST.
+          <div className="flex-[1.5_1_480px] bg-white rounded-card p-7 sm:p-12 shadow-[0_30px_60px_-34px_rgba(4,60,60,0.5)] relative z-[2]">
+            {state.succeeded ? (
+              <div className="py-8 flex flex-col items-start gap-4">
+                <svg width="44" height="44" viewBox="0 0 24 24" fill="none" className="text-navy" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M7.5 12.5l3 3 6-6.5" />
+                </svg>
+                <h2 className="m-0 font-display font-medium text-[32px]">Message sent</h2>
+                <p className="m-0 text-[17px] leading-[1.7] text-body">
+                  Thank you for your enquiry. We&rsquo;ll be in touch within 1 business day.
                 </p>
+                <button
+                  type="button"
+                  onClick={sendOnWhatsApp}
+                  className="press inline-flex items-center gap-2.5 min-h-12 px-[22px] rounded-full border border-navy text-navy font-heading font-semibold text-[15px] hover:bg-navy hover:text-white transition-colors"
+                >
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.43 1.26 4.87L2 22l5.27-1.38a9.93 9.93 0 004.77 1.22h.01c5.52 0 10-4.48 10-10s-4.48-10-10.01-10zm5.84 14.17c-.25.7-1.45 1.33-2 1.42-.51.08-1.15.11-1.86-.12a16.9 16.9 0 01-1.65-.61c-2.91-1.26-4.8-4.18-4.95-4.38-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.26-.28.57-.35.76-.35.19 0 .38 0 .55.01.17.01.41-.07.64.49.25.6.83 2.07.9 2.22.07.15.12.33.02.52-.1.19-.15.3-.3.47-.15.17-.31.37-.44.5-.15.14-.3.3-.13.6.17.3.77 1.27 1.65 2.06 1.14 1.01 2.1 1.33 2.42 1.48.32.15.5.13.7-.08.2-.2.8-.93 1.01-1.26.21-.32.42-.27.7-.16.28.1 1.79.84 2.1 1 .31.15.51.23.59.36.08.13.08.74-.17 1.44z" />
+                  </svg>
+                  Also send on WhatsApp
+                </button>
               </div>
-            </div>
-
-            {/* Form */}
-            <div className="lg:col-span-2">
-              <div className="bg-white border border-gray-200 rounded-lg p-6 sm:p-8">
-                {state.succeeded ? (
-                  <div className="py-12 text-center">
-                    <svg className="w-12 h-12 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <h2 className="text-xl font-semibold text-black mb-2">Message Sent</h2>
-                    <p className="text-gray-600 mb-4">
-                      Thank you for your enquiry. We&apos;ll be in touch within 1 business day.
-                    </p>
-                    <button
-                      onClick={sendOnWhatsApp}
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-navy border border-navy rounded px-4 py-2 hover:bg-navy hover:text-white transition-colors"
-                    >
-                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.43 1.26 4.87L2 22l5.27-1.38a9.93 9.93 0 004.77 1.22h.01c5.52 0 10-4.48 10-10s-4.48-10-10.01-10zm5.84 14.17c-.25.7-1.45 1.33-2 1.42-.51.08-1.15.11-1.86-.12a16.9 16.9 0 01-1.65-.61c-2.91-1.26-4.8-4.18-4.95-4.38-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.26-.28.57-.35.76-.35.19 0 .38 0 .55.01.17.01.41-.07.64.49.25.6.83 2.07.9 2.22.07.15.12.33.02.52-.1.19-.15.3-.3.47-.15.17-.31.37-.44.5-.15.14-.3.3-.13.6.17.3.77 1.27 1.65 2.06 1.14 1.01 2.1 1.33 2.42 1.48.32.15.5.13.7-.08.2-.2.8-.93 1.01-1.26.21-.32.42-.27.7-.16.28.1 1.79.84 2.1 1 .31.15.51.23.59.36.08.13.08.74-.17 1.44z" />
-                      </svg>
-                      Also send on WhatsApp
-                    </button>
+            ) : (
+              <form onSubmit={onSubmit} className="flex flex-col gap-[22px]">
+                <h2 className="m-0 font-display font-medium text-[30px]">Tell us about your campaign</h2>
+                <div className="flex flex-wrap gap-5">
+                  <div className="flex-[1_1_220px] flex flex-col gap-2">
+                    <label htmlFor="name" className="font-heading text-sm font-semibold">
+                      Name <span className="text-required">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      autoComplete="name"
+                      placeholder="Your full name"
+                      className="min-h-[50px] border border-field-border rounded-input px-3.5 text-base text-ink bg-white focus:outline-none focus:border-navy"
+                    />
+                    <ValidationError prefix="Name" field="name" errors={state.errors} className="text-required text-xs" />
                   </div>
-                ) : (
-                  <form onSubmit={onSubmit} className="space-y-5">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                      <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                          Name <span className="text-red-500">*</span>
-                        </label>
-                        <input
-                          type="text"
-                          id="name"
-                          name="name"
-                          required
-                          className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-navy focus:border-transparent"
-                          placeholder="Your full name"
-                        />
-                        <ValidationError prefix="Name" field="name" errors={state.errors} className="text-red-600 text-sm mt-1" />
-                      </div>
+                  <div className="flex-[1_1_220px] flex flex-col gap-2">
+                    <label htmlFor="phone" className="font-heading text-sm font-semibold">
+                      Phone number <span className="text-required">*</span>
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      required
+                      autoComplete="tel"
+                      placeholder="04XX XXX XXX"
+                      className="min-h-[50px] border border-field-border rounded-input px-3.5 text-base text-ink bg-white focus:outline-none focus:border-navy"
+                    />
+                    <ValidationError prefix="Phone" field="phone" errors={state.errors} className="text-required text-xs" />
+                  </div>
+                </div>
 
-                      <div>
-                        <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                          Phone Number <span className="text-red-500">*</span>
-                        </label>
-                        <input
-                          type="tel"
-                          id="phone"
-                          name="phone"
-                          required
-                          className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-navy focus:border-transparent"
-                          placeholder="04XX XXX XXX"
-                        />
-                        <ValidationError prefix="Phone" field="phone" errors={state.errors} className="text-red-600 text-sm mt-1" />
-                      </div>
-                    </div>
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="company" className="font-heading text-sm font-semibold">
+                    Company name
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    autoComplete="organization"
+                    placeholder="Your company name"
+                    className="min-h-[50px] border border-field-border rounded-input px-3.5 text-base text-ink bg-white focus:outline-none focus:border-navy"
+                  />
+                  <ValidationError prefix="Company" field="company" errors={state.errors} className="text-required text-xs" />
+                </div>
 
-                    <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
-                        Company Name
-                      </label>
-                      <input
-                        type="text"
-                        id="company"
-                        name="company"
-                        className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-navy focus:border-transparent"
-                        placeholder="Your company name"
-                      />
-                      <ValidationError prefix="Company" field="company" errors={state.errors} className="text-red-600 text-sm mt-1" />
-                    </div>
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="message" className="font-heading text-sm font-semibold">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={5}
+                    placeholder="Target suburbs, quantity, timing"
+                    className="border border-field-border rounded-input p-3.5 text-base leading-relaxed text-ink bg-white resize-y focus:outline-none focus:border-navy"
+                  />
+                  <ValidationError prefix="Message" field="message" errors={state.errors} className="text-required text-xs" />
+                </div>
 
-                    <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                        Message
-                      </label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        rows={5}
-                        className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-navy focus:border-transparent resize-y"
-                        placeholder="Tell us about your campaign: target suburbs, quantity, timing..."
-                      />
-                      <ValidationError prefix="Message" field="message" errors={state.errors} className="text-red-600 text-sm mt-1" />
-                    </div>
+                {state.errors && <ValidationError errors={state.errors} className="text-required text-sm" />}
 
-                    {state.errors && (
-                      <ValidationError errors={state.errors} className="text-red-600 text-sm" />
-                    )}
-
-                    <button
-                      type="submit"
-                      disabled={state.submitting}
-                      className="w-full bg-cta text-white font-semibold py-3 rounded transition-all duration-200 hover:bg-cta-hover hover:scale-[1.02] disabled:opacity-50"
-                    >
-                      {state.submitting ? "Sending..." : "Send Message"}
-                    </button>
-                  </form>
-                )}
-              </div>
-            </div>
+                <button
+                  type="submit"
+                  disabled={state.submitting}
+                  className="press min-h-[54px] rounded-full bg-cta text-ink font-heading font-bold text-base hover:bg-cta-hover transition-colors disabled:opacity-50"
+                >
+                  {state.submitting ? "Sending..." : "Send message"}
+                </button>
+                <p className="m-0 text-[13px] text-muted text-center">No spam. We&rsquo;ll only contact you about your enquiry.</p>
+              </form>
+            )}
           </div>
         </div>
       </section>
