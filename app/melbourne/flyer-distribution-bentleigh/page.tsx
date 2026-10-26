@@ -39,7 +39,7 @@ const faqs = [
   {
     question: "What does a letterbox drop across all of Bentleigh cost?",
     answer:
-      "About $1,500 at $200 per 1,000 flyers. A first test run of 1,000 flyers around Centre Road costs $200.",
+      "About $1,500 at $200 per 1,000 flyers. A first test run of 1,000 flyers around Centre Road costs $200, and most businesses expand from there once they can see which streets are actually calling.",
   },
   {
     question: "Is Bentleigh a good suburb for family-focused flyers?",
@@ -49,7 +49,7 @@ const faqs = [
   {
     question: "Can I target just the streets around Centre Road?",
     answer:
-      "Yes. Give us your shop address and we will quote for the surrounding streets rather than the whole suburb.",
+      "Yes. Give us your shop address and we will quote for the surrounding streets rather than the whole suburb, which is the usual starting point for shops and cafes along the strip.",
   },
   {
     question: "Are Bentleigh and Patterson train stations both inside the drop area?",
@@ -126,6 +126,11 @@ export default function Bentleigh() {
           Shops along Centre Road draw from the blocks within walking distance, so a 1,000 to 2,500 flyer drop
           around the strip is a sensible first test before covering more of the suburb.
         </p>
+        <p>
+          Whether you search for letterbox drop Bentleigh, letterbox distribution Bentleigh, leaflet
+          distribution Bentleigh or pamphlet delivery Bentleigh, you&rsquo;ll land on the same service:
+          exclusive delivery, GPS-tracked.
+        </p>
       </Section>
 
       <Section title="Centre Road trade and the family market" tone="gray">
@@ -158,7 +163,8 @@ export default function Bentleigh() {
       <Section title="Letterbox drop cost in Bentleigh">
         <p>
           Every drop is <strong>$200 per 1,000 flyers</strong>, delivered exclusively. A first test run costs
-          $200; the whole suburb costs about $1,500. See the{" "}
+          $200; the whole suburb costs about $1,500. Our flyer distribution across Glen Eira also reaches
+          Caulfield. See the{" "}
           <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
           <TextLink href="/melbourne/flyer-distribution-caulfield">Caulfield</TextLink> and the rest of our{" "}
           <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.

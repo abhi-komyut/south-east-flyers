@@ -49,12 +49,12 @@ const faqs = [
   {
     question: "Can you target just the streets near Glenferrie Road?",
     answer:
-      "Yes. Give us your shop address and we will quote for the surrounding streets rather than the whole suburb.",
+      "Yes. Give us your shop address and we will quote for the surrounding streets rather than the whole suburb. That's the usual starting point for cafes and shops that draw from foot traffic on the strip itself.",
   },
   {
     question: "Do you deliver in Camberwell and Kew too?",
     answer:
-      "Yes. Both border Hawthorn and are in our service area, so one campaign can cover all three with a single GPS report.",
+      "Yes. Both border Hawthorn and are in our service area, so one campaign can cover all three with a single GPS report, which is useful if your customers don't stop neatly at a suburb boundary.",
   },
 ];
 
@@ -127,6 +127,11 @@ export default function Hawthorn() {
           We plan each route around this. If your offer suits students, we focus on the station end; if it
           suits homeowners, we focus on the house streets.
         </p>
+        <p>
+          Whether you search for letterbox drop Hawthorn, letterbox distribution Hawthorn, leaflet
+          distribution Hawthorn or pamphlet delivery Hawthorn, you&rsquo;ll land on the same service:
+          exclusive delivery, GPS-tracked.
+        </p>
       </Section>
 
       <Section title="Glenferrie Road trade and Scotch College" tone="gray">
@@ -159,7 +164,8 @@ export default function Hawthorn() {
       <Section title="Letterbox drop cost in Hawthorn">
         <p>
           Every drop is <strong>$200 per 1,000 flyers</strong>, delivered exclusively. A 1,000-flyer drop near
-          Glenferrie Road costs $200; the whole suburb costs about $2,400. See the{" "}
+          Glenferrie Road costs $200; the whole suburb costs about $2,400. Our flyer distribution across
+          Boroondara also reaches Kew and Camberwell. See the{" "}
           <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
           <TextLink href="/melbourne/flyer-distribution-kew">Kew</TextLink>,{" "}
           <TextLink href="/melbourne/flyer-distribution-camberwell">Camberwell</TextLink> and the rest of our{" "}

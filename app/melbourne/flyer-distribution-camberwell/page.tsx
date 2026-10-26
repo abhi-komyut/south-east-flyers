@@ -34,7 +34,7 @@ const faqs = [
   {
     question: "How many letterboxes are there in Camberwell?",
     answer:
-      "Camberwell 3124 has about 9,000 homes, mostly houses with street letterboxes. That makes coverage close to complete across most of the suburb.",
+      "Camberwell 3124 has about 9,000 homes, mostly houses with street letterboxes. That makes coverage close to complete across most of the suburb, unlike apartment-heavy suburbs where locked mail rooms cut the reachable count down.",
   },
   {
     question: "What does a letterbox drop across all of Camberwell cost?",
@@ -49,7 +49,7 @@ const faqs = [
   {
     question: "Can I target just the streets around Camberwell Junction?",
     answer:
-      "Yes. Give us your shop address and we will quote for the surrounding streets rather than all of Camberwell.",
+      "Yes. Give us your shop address and we will quote for the surrounding streets rather than all of Camberwell, which suits most retailers and cafes better than a full-suburb run anyway.",
   },
   {
     question: "Do you deliver in Surrey Hills and Burwood too?",
@@ -127,6 +127,11 @@ export default function Camberwell() {
           Shops around the Junction draw from the surrounding blocks, so a 1,000 to 2,500 flyer drop there is a
           sensible first test before covering more of the suburb.
         </p>
+        <p>
+          Whether you search for letterbox drop Camberwell, letterbox distribution Camberwell, leaflet
+          distribution Camberwell or pamphlet delivery Camberwell, you&rsquo;ll land on the same service:
+          exclusive delivery, GPS-tracked.
+        </p>
       </Section>
 
       <Section title="Camberwell Junction and the Grammar schools" tone="gray">
@@ -159,7 +164,8 @@ export default function Camberwell() {
       <Section title="Letterbox drop cost in Camberwell">
         <p>
           Every drop is <strong>$200 per 1,000 flyers</strong>, delivered exclusively. A first test run costs
-          $200; the whole suburb costs about $1,800. See the{" "}
+          $200; the whole suburb costs about $1,800. Our flyer distribution across Boroondara also reaches
+          Hawthorn and Kew. See the{" "}
           <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
           <TextLink href="/melbourne/flyer-distribution-hawthorn">Hawthorn</TextLink>,{" "}
           <TextLink href="/melbourne/flyer-distribution-kew">Kew</TextLink> and the rest of our{" "}

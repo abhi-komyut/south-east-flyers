@@ -51,12 +51,12 @@ const faqs = [
   {
     question: "Is Caulfield good for flyers aimed at Monash students?",
     answer:
-      "Yes, around the Monash Caulfield campus and the station, where rental turnover is higher than in the surrounding family streets.",
+      "Yes, around the Monash Caulfield campus and the station, where rental turnover is higher than in the surrounding family streets. A drop timed to the start of semester tends to perform best for that audience.",
   },
   {
     question: "Can you target just the streets near Glen Huntly Road?",
     answer:
-      "Yes. Give us your shop address and we will quote for the surrounding streets rather than the whole suburb.",
+      "Yes. Give us your shop address and we will quote for the surrounding streets rather than the whole suburb, though given how small Caulfield is, full coverage is often not much more.",
   },
 ];
 
@@ -128,6 +128,11 @@ export default function Caulfield() {
           Because the suburb is small, many businesses skip testing a pocket and go straight to a full-suburb
           drop rather than splitting the run into stages.
         </p>
+        <p>
+          Whether you search for letterbox drop Caulfield, letterbox distribution Caulfield, leaflet
+          distribution Caulfield or pamphlet delivery Caulfield, you&rsquo;ll land on the same service:
+          exclusive delivery, GPS-tracked.
+        </p>
       </Section>
 
       <Section title="Racecourse and university timing" tone="gray">
@@ -160,7 +165,8 @@ export default function Caulfield() {
       <Section title="Letterbox drop cost in Caulfield">
         <p>
           Every drop is <strong>$200 per 1,000 flyers</strong>, delivered exclusively. Because Caulfield has
-          about 2,400 homes, a full-suburb run costs about $500. See the{" "}
+          about 2,400 homes, a full-suburb run costs about $500. Our flyer distribution across Glen Eira also
+          reaches Caulfield North, Caulfield South and Bentleigh. See the{" "}
           <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
           <TextLink href="/melbourne/flyer-distribution-bentleigh">Bentleigh</TextLink> and the rest of our{" "}
           <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.

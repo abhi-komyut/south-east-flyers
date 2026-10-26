@@ -20,7 +20,7 @@ const PAGE_PATH = "/melbourne/flyer-distribution-st-kilda";
 export const metadata: Metadata = {
   title: { absolute: "Flyer Distribution St Kilda VIC 3182 | South East Flyers" },
   description:
-    "Flyer distribution in St Kilda 3182 for Fitzroy Street and Acland Street businesses. Exclusive, GPS-tracked, never bundled. $200 per 1,000 flyers, from 1,000.",
+    "Flyer distribution St Kilda 3182: Fitzroy Street, Acland Street. Exclusive, GPS-tracked, never bundled. $200 per 1,000 flyers, from 1,000. Free quote.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Flyer Distribution St Kilda VIC 3182 | South East Flyers",
@@ -39,7 +39,7 @@ const faqs = [
   {
     question: "What does a letterbox drop across all of St Kilda cost?",
     answer:
-      "About $2,800 at $200 per 1,000 flyers. Most St Kilda businesses start much smaller: 1,000 flyers around Fitzroy Street or Acland Street costs $200.",
+      "About $2,800 at $200 per 1,000 flyers, though that figure assumes every block is reachable, which isn't the case in an apartment suburb. Most St Kilda businesses start much smaller: 1,000 flyers around Fitzroy Street or Acland Street costs $200, and you can expand from there once you see which streets respond.",
   },
   {
     question: "Does a letterbox drop still work in an apartment suburb?",
@@ -54,7 +54,7 @@ const faqs = [
   {
     question: "Can you target just Fitzroy Street or just Acland Street?",
     answer:
-      "Yes. Tell us which strip your customers come from and we will quote for the surrounding streets only, rather than all of St Kilda.",
+      "Yes. Tell us which strip your customers come from and we will quote for the surrounding streets only, rather than all of St Kilda. Most new venues start this way, then widen the run once they know which blocks are actually generating calls.",
   },
 ];
 
@@ -114,6 +114,11 @@ export default function StKilda() {
           This means a St Kilda quote is about the reachable letterboxes on your chosen streets, not a simple
           multiple of homes. We tell you the real number before you commit to a run.
         </p>
+        <p>
+          Whether you search for letterbox drop St Kilda, letterbox distribution St Kilda, leaflet
+          distribution St Kilda or pamphlet delivery St Kilda, you&rsquo;ll land on the same service: exclusive
+          delivery, GPS-tracked.
+        </p>
       </Section>
 
       <Section title="A renter suburb with regular turnover">
@@ -158,8 +163,9 @@ export default function StKilda() {
       <Section title="Letterbox drop cost in St Kilda">
         <p>
           Every drop is <strong>$200 per 1,000 flyers</strong>, delivered exclusively. A 1,000-flyer drop around one
-          strip costs $200; the whole suburb costs about $2,800. See the{" "}
-          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
+          strip costs $200; the whole suburb costs about $2,800. St Kilda sits in the City of Port Phillip, so our
+          flyer distribution across Port Phillip also reaches St Kilda East, Elwood, Balaclava and Albert Park.
+          See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
           <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink> and the rest of our{" "}
           <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
         </p>
