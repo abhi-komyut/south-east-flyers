@@ -131,22 +131,22 @@ export default function PortfolioContent() {
       <section className="bg-navy text-white py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl sm:text-4xl font-bold mb-4">Our Clients</h1>
-          <p className="text-white/80 max-w-2xl mx-auto text-base sm:text-lg mb-10">
-            We&apos;re proud to work with some of Australia&apos;s most recognised brands,
-            delivering flyers at scale every day across Melbourne&rsquo;s south-east and eastern suburbs.
+          <p className="text-white/85 max-w-2xl mx-auto text-base sm:text-lg mb-10">
+            We work with recognised real estate, healthcare and trades brands across
+            Melbourne&rsquo;s south-east and eastern suburbs, delivering every flyer exclusively and tracking every run by GPS.
           </p>
           <div className="grid grid-cols-3 gap-3 sm:gap-6 max-w-lg mx-auto">
             <div>
-              <p className="text-2xl sm:text-3xl font-bold"><CountUp end={200} suffix="+" /></p>
-              <p className="text-xs sm:text-sm text-white/70 mt-1">Happy Clients</p>
+              <p className="text-2xl sm:text-3xl font-bold">Exclusive</p>
+              <p className="text-xs sm:text-sm text-white/85 mt-1">No bundling, ever</p>
             </div>
             <div>
-              <p className="text-2xl sm:text-3xl font-bold"><CountUp end={20} suffix="K+" /></p>
-              <p className="text-xs sm:text-sm text-white/70 mt-1">Flyers Daily</p>
+              <p className="text-2xl sm:text-3xl font-bold"><CountUp end={100} suffix="%" /></p>
+              <p className="text-xs sm:text-sm text-white/85 mt-1">Runs GPS-tracked</p>
             </div>
             <div>
-              <p className="text-2xl sm:text-3xl font-bold"><CountUp end={10} suffix="+" /></p>
-              <p className="text-xs sm:text-sm text-white/70 mt-1">Years Experience</p>
+              <p className="text-2xl sm:text-3xl font-bold"><CountUp end={1000} suffix="" /></p>
+              <p className="text-xs sm:text-sm text-white/85 mt-1">Minimum flyers</p>
             </div>
           </div>
         </div>

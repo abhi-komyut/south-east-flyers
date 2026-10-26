@@ -93,7 +93,7 @@ export function ProofStrip() {
     { value: "Exclusive", label: "Your flyer on its own, never bundled" },
     { value: "100%", label: "Of runs GPS-tracked" },
     { value: "1,000", label: "Minimum flyers" },
-    { value: "44%", label: "Of shoppers read letterbox flyers for specials*" },
+    { value: "44%", label: "Of shoppers read letterbox flyers for specials" },
   ];
   return (
     <section className="bg-white border-b border-gray-200 py-10">
@@ -107,18 +107,6 @@ export function ProofStrip() {
             </div>
           ))}
         </dl>
-        <p className="text-xs text-gray-500 text-center mt-6">
-          *ACRS Omnibus Survey, reported by{" "}
-          <a
-            href="https://www.bandt.com.au/marketing/nine-out-of-10-aussies-still-shop-from-catalogues-study"
-            className="underline"
-            rel="noopener"
-            target="_blank"
-          >
-            B&amp;T, March 2016
-          </a>
-          .
-        </p>
       </div>
     </section>
   );

@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import LogoSlider from "./components/LogoSlider";
 import CountUp from "./components/CountUp";
-import Testimonials from "./components/Testimonials";
 import QuickQuoteForm from "./components/QuickQuoteForm";
 import FAQ from "./components/FAQ";
 
@@ -54,7 +53,7 @@ export default function Home() {
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-sm uppercase tracking-widest text-white/70 mb-4">
+              <p className="text-sm uppercase tracking-widest text-white/85 mb-4">
                 Melbourne&rsquo;s South-East
               </p>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 font-display">
@@ -79,28 +78,28 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-2 sm:gap-3">
-              <div className="space-y-2 sm:space-y-3">
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-3 sm:p-5 text-center">
-                  <p className="text-2xl sm:text-3xl font-bold"><CountUp end={50} suffix="K+" /></p>
-                  <p className="text-xs sm:text-sm text-white/80 mt-1">Flyers per campaign</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-3 sm:p-5 text-center">
-                  <p className="text-2xl sm:text-3xl font-bold"><CountUp end={200} suffix="+" /></p>
-                  <p className="text-xs sm:text-sm text-white/80 mt-1">Happy clients</p>
-                </div>
+            <dl className="grid grid-cols-2 gap-x-6 gap-y-8 border-t border-white/20 pt-8 lg:border-t-0 lg:border-l lg:pl-10 lg:pt-0">
+              <div>
+                <dt className="sr-only">No bundling</dt>
+                <dd className="text-2xl sm:text-3xl font-bold font-display">Exclusive</dd>
+                <dd className="text-sm text-white/85 mt-1">No bundling, ever</dd>
               </div>
-              <div className="space-y-2 sm:space-y-3 mt-4 sm:mt-6">
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-3 sm:p-5 text-center">
-                  <p className="text-2xl sm:text-3xl font-bold"><CountUp end={100} suffix="%" /></p>
-                  <p className="text-xs sm:text-sm text-white/80 mt-1">GPS tracked</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-3 sm:p-5 text-center">
-                  <p className="text-2xl sm:text-3xl font-bold"><CountUp end={10} suffix="+" /></p>
-                  <p className="text-xs sm:text-sm text-white/80 mt-1">Years experience</p>
-                </div>
+              <div>
+                <dt className="sr-only">Runs GPS-tracked</dt>
+                <dd className="text-2xl sm:text-3xl font-bold font-display"><CountUp end={100} suffix="%" /></dd>
+                <dd className="text-sm text-white/85 mt-1">Of runs GPS-tracked</dd>
               </div>
-            </div>
+              <div>
+                <dt className="sr-only">Minimum flyers</dt>
+                <dd className="text-2xl sm:text-3xl font-bold font-display"><CountUp end={1000} suffix="" /></dd>
+                <dd className="text-sm text-white/85 mt-1">Minimum flyers</dd>
+              </div>
+              <div>
+                <dt className="sr-only">Shoppers who read letterbox flyers for specials</dt>
+                <dd className="text-2xl sm:text-3xl font-bold font-display"><CountUp end={44} suffix="%" /></dd>
+                <dd className="text-sm text-white/85 mt-1">Read flyers for specials</dd>
+              </div>
+            </dl>
           </div>
         </div>
 
@@ -215,9 +214,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Testimonials */}
-      <Testimonials />
 
       {/* Quick Quote Form */}
       {/* Where we deliver and who for: internal links to hubs, suburbs and pricing */}

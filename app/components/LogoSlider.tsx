@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const logos = [
   { src: "/logos/ray-white.jpeg", alt: "Ray White" },
@@ -20,9 +21,6 @@ export default function LogoSlider() {
     <section className="bg-white border-t border-gray-200 py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <p className="text-sm uppercase tracking-widest text-gray-400 mb-3">
-            Who we work with
-          </p>
           <h2
             className="text-3xl md:text-4xl font-bold text-black font-display"
           >
@@ -42,14 +40,14 @@ export default function LogoSlider() {
             {[...logos, ...logos].map((logo, i) => (
               <div
                 key={i}
-                className="flex-shrink-0 mx-6 sm:mx-10 md:mx-14 flex items-center justify-center h-12 sm:h-14 w-28 sm:w-36 md:w-44 opacity-70 hover:opacity-100 transition-opacity duration-300"
+                className="flex-shrink-0 mx-8 sm:mx-12 md:mx-16 flex items-center justify-center h-16 sm:h-20 md:h-24 w-36 sm:w-44 md:w-52"
               >
                 <Image
                   src={logo.src}
                   alt={logo.alt}
-                  width={176}
-                  height={56}
-                  className="object-contain max-h-14"
+                  width={208}
+                  height={96}
+                  className="object-contain max-h-16 sm:max-h-20 md:max-h-24"
                 />
               </div>
             ))}
@@ -59,21 +57,24 @@ export default function LogoSlider() {
 
       {/* Industry Cards */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-center text-gray-500 text-sm mb-8">
+        <h3 className="text-center text-black font-semibold text-lg mb-8">
           Industries we serve
-        </p>
+        </h3>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
           <IndustryCard
+            href="/industries/healthcare"
             src="/client-dentist.png"
             alt="Healthcare professionals using letterbox marketing"
             label="Healthcare"
           />
           <IndustryCard
+            href="/industries/home-services"
             src="/client-roofer.png"
             alt="Trades and home services using letterbox marketing"
             label="Trades & Services"
           />
           <IndustryCard
+            href="/industries/real-estate"
             src="/client-realestate.png"
             alt="Real estate agents using letterbox marketing"
             label="Real Estate"
@@ -84,9 +85,9 @@ export default function LogoSlider() {
   );
 }
 
-function IndustryCard({ src, alt, label }: { src: string; alt: string; label: string }) {
+function IndustryCard({ href, src, alt, label }: { href: string; src: string; alt: string; label: string }) {
   return (
-    <div className="relative rounded-xl overflow-hidden aspect-[3/2] group cursor-default">
+    <Link href={href} className="relative block rounded-xl overflow-hidden aspect-[3/2] group focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy">
       <Image
         src={src}
         alt={alt}
@@ -97,6 +98,6 @@ function IndustryCard({ src, alt, label }: { src: string; alt: string; label: st
       <div className="absolute bottom-0 left-0 right-0 p-5">
         <p className="text-white font-semibold text-base sm:text-lg">{label}</p>
       </div>
-    </div>
+    </Link>
   );
 }
