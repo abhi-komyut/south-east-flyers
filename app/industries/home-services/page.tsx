@@ -15,9 +15,9 @@ import {
 const PAGE_PATH = "/industries/home-services";
 
 export const metadata: Metadata = {
-  title: { absolute: "Home Services Letterbox Drops Melbourne | South East Flyers" },
+  title: { absolute: "Home Services Marketing Melbourne | South East Flyers" },
   description:
-    "Flyer distribution for plumbers, electricians, roofers, builders, renovators and cleaners in Melbourne. Exclusive, GPS-tracked, $200 per 1,000 flyers.",
+    "Home services marketing for plumbers, electricians, roofers and cleaners in Melbourne. Exclusive, GPS-tracked letterbox drops. $200 per 1,000 flyers.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Letterbox Drops for Home Services Melbourne | South East Flyers",
@@ -48,7 +48,7 @@ const faqs = [
   {
     question: "Can you deliver around a job I'm working on?",
     answer:
-      "Yes. Neighbour drops around an active job site work well for builders, renovators and roofers. Give us the address and a radius, and we will quote for those streets.",
+      "Yes. Neighbour drops around an active job site work well for builders, renovators and roofers. Give us the address and a radius, and we will quote for those streets while the work is still visible.",
   },
   {
     question: "Is my flyer delivered with other tradies' flyers?",
@@ -146,8 +146,10 @@ export default function HomeServices() {
       <Section title="Choosing the right streets for your trade" tone="gray">
         <p>
           The best streets depend on the work. Older brick and weatherboard homes need more plumbing, roofing and
-          electrical upgrades. Streets with big gardens suit landscapers and decking. Areas with lots of townhouses and
-          units suit cleaners, and suburbs with ageing homes on large blocks are where builders find knockdown rebuilds.
+          electrical upgrades, which is also where handyman flyers tend to do best. Streets with big gardens suit
+          landscapers, decking and pest control flyers. Areas with lots of townhouses and units suit cleaners, and
+          suburbs with ageing homes on large blocks are where builders find knockdown rebuilds and painter flyers
+          get the most calls.
         </p>
         <p>
           Tell us your trade and the jobs you want more of, and we will suggest which streets in your service area to
@@ -163,14 +165,16 @@ export default function HomeServices() {
         </p>
         <p>
           Builders and renovators also use neighbour drops to let residents know about work hours and contact details
-          before a project starts, which helps keep the street on side.
+          before a project starts, which helps keep the street on side. It is a small piece of tradie marketing
+          that costs nothing beyond the flyers themselves.
         </p>
       </Section>
 
       <Section title="What it costs" tone="gray">
         <p>
           Every drop is $200 per 1,000 flyers, with a 1,000-flyer minimum. A 2,500-home drop around your base costs
-          $500. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for more quantities,
+          $500, which covers most painting business marketing campaigns comfortably. See the{" "}
+          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for more quantities,
           or the <TextLink href="/industries/local-businesses">local businesses</TextLink> page for other ways
           businesses use our service.
         </p>

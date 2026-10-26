@@ -46,7 +46,7 @@ const faqs = [
   {
     question: "How small can a local campaign be?",
     answer:
-      "Our minimum is 1,000 flyers, which costs $200. That covers the streets closest to most shops or a single neighbourhood, so you can test before spending more.",
+      "Our minimum is 1,000 flyers, which costs $200. That covers the streets closest to most shops or a single neighbourhood, so you can test the idea before spending more on a wider run.",
   },
   {
     question: "Can you deliver only near my shop?",
@@ -56,12 +56,12 @@ const faqs = [
   {
     question: "Will my flyer be mixed in with other businesses' advertising?",
     answer:
-      "No. Every South East Flyers drop is exclusive: your flyer is the only one the walker delivers on that run, so it arrives on its own.",
+      "No. Every South East Flyers drop is exclusive: your flyer is the only one the walker delivers on that run, so it arrives on its own rather than buried in a stack of catalogues.",
   },
   {
     question: "Which suburbs do you cover?",
     answer:
-      "We deliver across Melbourne's south-east and eastern suburbs, from Port Melbourne and St Kilda through Brighton, Caulfield and Glen Waverley to Box Hill and Vermont South.",
+      "We deliver across Melbourne's south-east and eastern suburbs, from Port Melbourne and St Kilda through Brighton, Caulfield and Glen Waverley to Box Hill and Vermont South. See the full list on our Melbourne service area page.",
   },
 ];
 
@@ -104,6 +104,10 @@ export default function LocalBusinesses() {
           where each flyer went. If one area brings in calls and another doesn&rsquo;t, the next drop goes where the
           calls came from.
         </p>
+        <p>
+          Small business flyers work the same way whether you run one shop or five: pick the streets, set the
+          quantity, and let the GPS report tell you where to go next.
+        </p>
       </Section>
 
       <Section title="Local businesses we deliver for" tone="gray" wide>
@@ -134,20 +138,27 @@ export default function LocalBusinesses() {
 
       <Section title="Measuring what a drop brings in" tone="gray">
         <p>
-          A letterbox drop is easy to measure if you plan for it before printing. Give the flyer its own offer code,
-          QR link or phone extension, and ask every new customer how they heard about you for the next few weeks.
+          Most local marketing Melbourne owners run is hard to measure. A letterbox drop isn&rsquo;t: give the
+          flyer its own offer code, QR link or phone extension, and ask every new customer how they heard about
+          you for the next few weeks.
         </p>
         <p>
           Compare those numbers with the GPS report. If most enquiries came from three streets out of ten, the next
           drop concentrates there. After two or three drops you know which streets are worth the spend and which
           aren&rsquo;t, which is more than most online ads will tell a local business.
         </p>
+        <p>
+          That kind of street-by-street feedback is something small business marketing Melbourne owners run
+          themselves can actually see, drop by drop.
+        </p>
       </Section>
 
       <Section title="Local flyer distribution, street by street">
         <p>
-          We cover Melbourne&rsquo;s south-east and eastern suburbs on foot and by e-bike. Tell us your address and how
-          far your customers travel, and we will suggest the streets to start with. See{" "}
+          This is local business marketing Melbourne shops and clinics have used for decades, just with GPS
+          proof added on top. We cover Melbourne&rsquo;s south-east and eastern suburbs on foot and by e-bike.
+          Tell us your address and how far your customers travel, and we will suggest the streets to start
+          with. See{" "}
           <TextLink href="/melbourne/flyer-distribution-brighton">flyer distribution in Brighton</TextLink> for an example
           of what a suburb drop includes, or our{" "}
           <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> for the full list.

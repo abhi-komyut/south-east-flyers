@@ -98,6 +98,10 @@ export default function Plumbers() {
           miss. Ours are delivered exclusively, so yours is the only thing the walker puts in
           that letterbox.
         </p>
+        <p>
+          It is a small part of plumbing marketing overall, but it is the part that puts your number in a house
+          before the emergency happens, rather than competing for attention after it already has.
+        </p>
       </Section>
 
       <Section title="What to put on a plumbing flyer" tone="gray">

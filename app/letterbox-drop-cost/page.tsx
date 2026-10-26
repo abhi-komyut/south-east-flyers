@@ -19,7 +19,7 @@ const PAGE_PATH = "/letterbox-drop-cost";
 export const metadata: Metadata = {
   title: { absolute: "Letterbox Drop Cost Melbourne 2026 | South East Flyers" },
   description:
-    "A letterbox drop in Melbourne costs $200 per 1,000 flyers with South East Flyers: exclusive, GPS-tracked, never bundled. Prices for 1,000 to 20,000 flyers.",
+    "Letterbox drop cost Melbourne: $200 per 1,000 flyers, exclusive, GPS-tracked, never bundled. Prices for 1,000 to 20,000 flyers. Free quote in 24 hours.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Letterbox Drop Cost Melbourne | South East Flyers",
@@ -40,7 +40,7 @@ const faqs = [
   {
     question: "What is the minimum order?",
     answer:
-      "The minimum is 1,000 flyers, which costs $200. It is enough to cover a few streets around your business or listing and test the response before a larger drop.",
+      "The minimum is 1,000 flyers, which costs $200. It is enough to cover a few streets around your business or listing and test the response before committing to a larger, full-suburb drop.",
   },
   {
     question: "Why does exclusive delivery cost more than shared distribution?",
@@ -60,7 +60,7 @@ const faqs = [
   {
     question: "How quickly will I get a price?",
     answer:
-      "Quotes are sent within 24 hours and show the letterbox count, total cost and start date. Urgent campaigns can start within 48 hours of your flyers arriving.",
+      "Quotes are sent within 24 hours and show the letterbox count, total cost and start date. Urgent campaigns can start within 48 hours of your flyers arriving, once we've confirmed the streets with you.",
   },
 ];
 
@@ -97,7 +97,7 @@ export default function LetterboxDropCost() {
       <ProofStrip />
 
       <Section title="Letterbox drop prices by quantity">
-        <p>The rate is the same for every quantity, so the total is easy to work out before you call.</p>
+        <p>The rate is the same for every quantity, so the total is easy to work out before you call. The letterbox drop price per 1,000 is exactly $200.</p>
         <div className="overflow-x-auto">
           <table className="w-full text-left border border-gray-200 rounded-lg overflow-hidden">
             <thead className="bg-gray-50 text-sm text-gray-600">
@@ -137,15 +137,16 @@ export default function LetterboxDropCost() {
         />
         <p>
           Printing is not included. We distribute but don&rsquo;t print, so you can use any print shop and have the
-          flyers sent to us.
+          flyers sent to us. A leaflet distribution price quote always separates the two, so you know exactly
+          what you are paying us for.
         </p>
       </Section>
 
       <Section title="Exclusive delivery versus shared distribution">
         <p>
           Many letterbox services run shared distribution. Your flyer is collated with other advertisers&rsquo;
-          material and delivered as one bundle, which lowers the price per 1,000 because several businesses share the
-          walk.
+          material and delivered as one bundle, which lowers the flyer distribution cost per 1,000 because
+          several businesses share the walk.
         </p>
         <p>
           The trade-off is attention. In a bundle, your flyer competes with catalogues and other offers before the
@@ -163,7 +164,7 @@ export default function LetterboxDropCost() {
         <p>
           Most businesses don&rsquo;t need a whole suburb on day one. A plumber might cover 2,500 homes around their
           base; an agent might drop 1,000 flyers around a new listing. Tell us the area and we will confirm the
-          count in your quote.
+          leaflet drop cost and letterbox count in your quote.
         </p>
       </Section>
 

@@ -34,7 +34,7 @@ const faqs = [
   {
     question: "How many letterboxes are there in Glen Waverley?",
     answer:
-      "Glen Waverley 3150 has about 16,500 homes, mostly separate houses. That makes it one of the largest suburbs we cover and one of the easiest to reach in full.",
+      "Glen Waverley 3150 has about 16,500 homes, mostly separate houses with letterboxes on the street. That makes it one of the largest suburbs we cover and one of the easiest to reach in full.",
   },
   {
     question: "What does it cost to cover all of Glen Waverley?",
@@ -49,12 +49,12 @@ const faqs = [
   {
     question: "Can I target the streets around the Kingsway or The Glen?",
     answer:
-      "Yes. Tell us your address and how far customers travel, and we quote for those streets. Restaurants on the Kingsway often start with a 1,000 to 2,500 flyer radius.",
+      "Yes. Tell us your address and how far customers travel, and we quote for those streets rather than the whole suburb. Restaurants on the Kingsway often start with a 1,000 to 2,500 flyer radius.",
   },
   {
     question: "Do you deliver in Mount Waverley and Wheelers Hill too?",
     answer:
-      "Yes. Both border Glen Waverley and are in our service area, so one campaign can cover all three with a single GPS report.",
+      "Yes. Both border Glen Waverley and are in our service area, so one campaign can cover all three with a single GPS report rather than booking separately.",
   },
 ];
 
@@ -136,8 +136,8 @@ export default function GlenWaverley() {
           one that ends up stuck to the fridge.
         </p>
         <p>
-          Restaurants usually start with the streets within a short drive of the Kingsway, then expand into Mount
-          Waverley and Wheelers Hill once they know which areas order. A bilingual menu often helps here too.
+          Restaurants usually start with the streets within a short drive of the Kingsway, then expand into
+          Mount Waverley and Wheelers Hill once they know which areas order. A bilingual menu often helps here too.
         </p>
       </Section>
 
@@ -163,7 +163,8 @@ export default function GlenWaverley() {
       <Section title="Letterbox drop cost in Glen Waverley">
         <p>
           Every drop is <strong>$200 per 1,000 flyers</strong>, delivered exclusively. A 2,500-flyer drop around the
-          Kingsway costs $500; the whole suburb costs about $3,300. See the{" "}
+          Kingsway costs $500; the whole suburb costs about $3,300. Our flyer distribution across Monash also
+          reaches Mount Waverley. See the{" "}
           <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
           <TextLink href="/melbourne/flyer-distribution-kew">Kew</TextLink>,{" "}
           <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink> and the rest of our{" "}
