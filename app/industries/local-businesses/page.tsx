@@ -33,8 +33,8 @@ const businesses: { name: string; href?: string; note: string }[] = [
   { name: "Home services and trades", href: "/industries/home-services", note: "Plumbers, electricians, roofers, builders, renovators and cleaners" },
   { name: "Plumbers", href: "/industries/plumbers", note: "Emergency and hot water work where the phone number matters most" },
   { name: "Health practices", href: "/industries/healthcare", note: "Dentists, GPs, physios and vets announcing new patients or a new location" },
-  { name: "Restaurants and cafes", note: "Takeaway menus and opening offers for the streets you deliver to" },
-  { name: "Dog groomers and dog washes", note: "Mobile grooming routes and new-customer offers" },
+  { name: "Restaurants and cafes", href: "/industries/restaurants", note: "Takeaway menus and opening offers for the streets you deliver to" },
+  { name: "Dog groomers and dog washes", href: "/industries/pet-groomers", note: "Mobile grooming routes and new-customer offers" },
   { name: "Shops and studios", note: "Gyms, hairdressers, bottle shops and retailers drawing from a few kilometres away" },
 ];
 
@@ -173,7 +173,7 @@ export default function LocalBusinesses() {
           with. See{" "}
           <TextLink href="/melbourne/flyer-distribution-brighton">flyer distribution in Brighton</TextLink> for an example
           of what a suburb drop includes, or our{" "}
-          <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> for the full list.
+          <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> for the full list. Comparing channels? Read <TextLink href="/guides/how-to-advertise-local-business-melbourne">how to advertise a local business in Melbourne</TextLink>.
         </p>
         <p>
           Every drop costs $200 per 1,000 flyers. The{" "}

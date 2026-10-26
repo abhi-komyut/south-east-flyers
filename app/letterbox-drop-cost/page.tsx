@@ -192,8 +192,11 @@ export default function LetterboxDropCost() {
         <p>
           Industry guides: <TextLink href="/industries/local-businesses">local businesses</TextLink>,{" "}
           <TextLink href="/industries/home-services">home services</TextLink>,{" "}
-          <TextLink href="/industries/plumbers">plumbers</TextLink> and{" "}
-          <TextLink href="/industries/real-estate">real estate agents</TextLink>.
+          <TextLink href="/industries/plumbers">plumbers</TextLink>,{" "}
+          <TextLink href="/industries/builders">builders</TextLink>,{" "}
+          <TextLink href="/industries/restaurants">restaurants</TextLink> and{" "}
+          <TextLink href="/industries/real-estate">real estate agents</TextLink>. Pricing is the same across our{" "}
+          <TextLink href="/melbourne/flyer-distribution-south-east-melbourne">south-east Melbourne</TextLink> suburbs.
         </p>
       </Section>
 

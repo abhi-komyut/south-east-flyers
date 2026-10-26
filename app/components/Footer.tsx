@@ -35,6 +35,8 @@ export default function Footer() {
             <Link href="/melbourne/flyer-distribution-brighton" className="text-body no-underline">Brighton</Link>
             <Link href="/melbourne/flyer-distribution-kew" className="text-body no-underline">Kew</Link>
             <Link href="/melbourne/flyer-distribution-glen-waverley" className="text-body no-underline">Glen Waverley</Link>
+            <Link href="/melbourne/flyer-distribution-box-hill" className="text-body no-underline">Box Hill</Link>
+            <Link href="/melbourne/flyer-distribution-south-east-melbourne" className="text-body no-underline">South-east Melbourne</Link>
             <Link href="/melbourne/flyer-distribution-melbourne" className="text-body no-underline">All Melbourne suburbs</Link>
           </nav>
 

@@ -43,6 +43,31 @@ const industries: { title: string; body: string; href: string }[] = [
     href: "/industries/plumbers",
   },
   {
+    title: "Builders",
+    body: "Construction flyers for the neighbours of each site and the streets where owners rebuild.",
+    href: "/industries/builders",
+  },
+  {
+    title: "Renovation",
+    body: "Kitchen, bathroom and whole-home renovators reaching homes that are due for work.",
+    href: "/industries/renovation",
+  },
+  {
+    title: "Cleaning",
+    body: "House and bathroom cleaners adding clients along the routes they already run.",
+    href: "/industries/cleaning",
+  },
+  {
+    title: "Restaurants & Cafes",
+    body: "Takeaway menus and opening offers delivered to the streets that can order tonight.",
+    href: "/industries/restaurants",
+  },
+  {
+    title: "Dog Groomers & Dog Washes",
+    body: "Salons, mobile groomers and dog washes reaching dog owners nearby.",
+    href: "/industries/pet-groomers",
+  },
+  {
     title: "Local Businesses",
     body: "Shops, cafes, clinics and studios putting their offer in the letterboxes around them.",
     href: "/industries/local-businesses",

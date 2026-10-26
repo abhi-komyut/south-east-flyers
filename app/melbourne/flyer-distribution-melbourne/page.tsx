@@ -37,6 +37,7 @@ const suburbPages: Record<string, string> = {
   Malvern: "/melbourne/flyer-distribution-malvern",
   "Mount Waverley": "/melbourne/flyer-distribution-mount-waverley",
   Sandringham: "/melbourne/flyer-distribution-sandringham",
+  "Box Hill": "/melbourne/flyer-distribution-box-hill",
 };
 
 // Confirmed Melbourne service areas — source of truth. Do not add suburbs
@@ -462,7 +463,12 @@ export default function FlyerDistributionMelbourne() {
             <p className="text-gray-600 max-w-2xl mx-auto">
               Our confirmed Melbourne service areas, grouped by region. If your
               suburb isn&rsquo;t listed, get in touch — we may still be able to
-              help or point you in the right direction.
+              help or point you in the right direction. For the 56 key suburbs
+              grouped by council, see{" "}
+              <Link href="/melbourne/flyer-distribution-south-east-melbourne" className="text-navy underline underline-offset-2">
+                flyer distribution across south-east Melbourne
+              </Link>
+              .
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
