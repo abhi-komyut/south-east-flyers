@@ -62,8 +62,9 @@ const articleLd = {
   description:
     "An honest comparison of Google Business Profile, local Facebook groups, signage, Google Ads and letterbox drops for Melbourne businesses.",
   url: `${SITE_URL}${PAGE_PATH}`,
-  datePublished: "2026-10-26",
-  dateModified: "2026-10-26",
+  image: `${SITE_URL}/images/redesign/walker-foot.jpg`,
+  datePublished: "2026-10-26T09:00:00+11:00",
+  dateModified: "2026-10-26T09:00:00+11:00",
   author: { "@id": `${SITE_URL}/#organization` },
   publisher: { "@id": `${SITE_URL}/#organization` },
   mainEntityOfPage: `${SITE_URL}${PAGE_PATH}`,
