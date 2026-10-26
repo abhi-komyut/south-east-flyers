@@ -29,6 +29,11 @@ const suburbPages: Record<string, string> = {
   Brighton: "/melbourne/flyer-distribution-brighton",
   Kew: "/melbourne/flyer-distribution-kew",
   "Glen Waverley": "/melbourne/flyer-distribution-glen-waverley",
+  "St Kilda": "/melbourne/flyer-distribution-st-kilda",
+  Hawthorn: "/melbourne/flyer-distribution-hawthorn",
+  Camberwell: "/melbourne/flyer-distribution-camberwell",
+  Caulfield: "/melbourne/flyer-distribution-caulfield",
+  Bentleigh: "/melbourne/flyer-distribution-bentleigh",
 };
 
 // Confirmed Melbourne service areas — source of truth. Do not add suburbs
@@ -63,6 +68,7 @@ const coverageGroups: { region: string; suburbs: string[] }[] = [
       "Armadale",
       "Malvern",
       "Malvern East",
+      "Bentleigh",
     ],
   },
   {
