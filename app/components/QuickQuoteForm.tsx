@@ -1,7 +1,7 @@
 "use client";
 
 import { useForm, ValidationError } from "@formspree/react";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { trackEvent } from "../lib/gtag";
 import Reveal from "./Reveal";
 
@@ -17,7 +17,6 @@ export default function QuickQuoteForm({
   suburbHint?: string;
 }) {
   const [state, handleSubmit] = useForm("xzdqreda");
-  const waUrlRef = useRef<string | null>(null);
 
   useEffect(() => {
     if (state.succeeded) {
@@ -29,26 +28,34 @@ export default function QuickQuoteForm({
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     const form = e.currentTarget;
     const name = (form.elements.namedItem("name") as HTMLInputElement).value;
-    const phone = (form.elements.namedItem("phone") as HTMLInputElement).value;
+    const contact = (form.elements.namedItem("contact") as HTMLInputElement).value;
+    const company = (form.elements.namedItem("company") as HTMLInputElement).value;
+    const flyers = (form.elements.namedItem("flyers") as HTMLInputElement).value;
     const suburb = (form.elements.namedItem("suburb") as HTMLInputElement).value;
-    const quantity = (form.elements.namedItem("quantity") as HTMLSelectElement).value;
 
     const lines = [
       "Hi South East Flyers, I'd like a free quote.",
       `Name: ${name}`,
-      `Phone: ${phone}`,
-      suburb && `Target suburb(s): ${suburb}`,
-      quantity && `Quantity: ${quantity}`,
+      `Contact: ${contact}`,
+      company && `Company: ${company}`,
+      flyers && `Number of flyers: ${flyers}`,
+      suburb && `Suburb: ${suburb}`,
     ].filter(Boolean);
-    waUrlRef.current = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`;
+    const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`;
+
+    // Open WhatsApp immediately, inside the direct click handler, so the
+    // browser doesn't treat it as a blocked popup (that only works while
+    // still synchronous with the user gesture — do this before any await).
+    window.open(waUrl, "_blank", "noopener,noreferrer");
+    trackEvent("whatsapp_followup", { form_name: "quick_quote" });
+
+    fetch("/api/lead-sheet", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, contact, company, flyers, suburb }),
+    }).catch(() => {});
 
     handleSubmit(e);
-  }
-
-  function sendOnWhatsApp() {
-    if (!waUrlRef.current) return;
-    trackEvent("whatsapp_followup", { form_name: "quick_quote" });
-    window.open(waUrlRef.current, "_blank", "noopener,noreferrer");
   }
 
   return (
@@ -84,18 +91,10 @@ export default function QuickQuoteForm({
               </svg>
               <div>
                 <h3 className="m-0 font-heading font-semibold text-lg mb-1.5">Quote request received</h3>
-                <p className="m-0 text-sm text-muted">We&rsquo;ll get back to you within 24 hours with a detailed quote.</p>
+                <p className="m-0 text-sm text-muted">
+                  We&rsquo;ve opened WhatsApp for you and we&rsquo;ll get back to you within 24 hours with a detailed quote.
+                </p>
               </div>
-              <button
-                type="button"
-                onClick={sendOnWhatsApp}
-                className="press inline-flex items-center gap-2 text-sm font-heading font-semibold text-navy border border-navy rounded-full px-5 py-2.5 hover:bg-navy hover:text-white transition-colors"
-              >
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.43 1.26 4.87L2 22l5.27-1.38a9.93 9.93 0 004.77 1.22h.01c5.52 0 10-4.48 10-10s-4.48-10-10.01-10zm5.84 14.17c-.25.7-1.45 1.33-2 1.42-.51.08-1.15.11-1.86-.12a16.9 16.9 0 01-1.65-.61c-2.91-1.26-4.8-4.18-4.95-4.38-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.26-.28.57-.35.76-.35.19 0 .38 0 .55.01.17.01.41-.07.64.49.25.6.83 2.07.9 2.22.07.15.12.33.02.52-.1.19-.15.3-.3.47-.15.17-.31.37-.44.5-.15.14-.3.3-.13.6.17.3.77 1.27 1.65 2.06 1.14 1.01 2.1 1.33 2.42 1.48.32.15.5.13.7-.08.2-.2.8-.93 1.01-1.26.21-.32.42-.27.7-.16.28.1 1.79.84 2.1 1 .31.15.51.23.59.36.08.13.08.74-.17 1.44z" />
-                </svg>
-                Also send on WhatsApp
-              </button>
             </div>
           ) : (
             <form onSubmit={onSubmit} className="flex flex-col gap-5">
@@ -115,23 +114,52 @@ export default function QuickQuoteForm({
                   <ValidationError prefix="Name" field="name" errors={state.errors} className="text-required text-xs" />
                 </div>
                 <div className="flex-[1_1_200px] flex flex-col gap-2">
-                  <label htmlFor="quote-phone" className="font-heading text-sm font-semibold">
-                    Phone <span className="text-required">*</span>
+                  <label htmlFor="quote-contact" className="font-heading text-sm font-semibold">
+                    Contact <span className="text-required">*</span>
                   </label>
                   <input
                     type="tel"
-                    id="quote-phone"
-                    name="phone"
+                    id="quote-contact"
+                    name="contact"
                     required
                     autoComplete="tel"
+                    placeholder="Phone number"
                     className="min-h-[50px] border border-field-border rounded-input px-3.5 text-base text-ink bg-white focus:outline-none focus:border-navy"
                   />
-                  <ValidationError prefix="Phone" field="phone" errors={state.errors} className="text-required text-xs" />
+                  <ValidationError prefix="Contact" field="contact" errors={state.errors} className="text-required text-xs" />
+                </div>
+              </div>
+              <div className="flex flex-wrap gap-5">
+                <div className="flex-[1_1_200px] flex flex-col gap-2">
+                  <label htmlFor="quote-company" className="font-heading text-sm font-semibold">
+                    Company name
+                  </label>
+                  <input
+                    type="text"
+                    id="quote-company"
+                    name="company"
+                    autoComplete="organization"
+                    className="min-h-[50px] border border-field-border rounded-input px-3.5 text-base text-ink bg-white focus:outline-none focus:border-navy"
+                  />
+                </div>
+                <div className="flex-[1_1_200px] flex flex-col gap-2">
+                  <label htmlFor="quote-flyers" className="font-heading text-sm font-semibold">
+                    Number of flyers
+                  </label>
+                  <input
+                    type="number"
+                    id="quote-flyers"
+                    name="flyers"
+                    min={1000}
+                    step={100}
+                    placeholder="e.g. 1000"
+                    className="min-h-[50px] border border-field-border rounded-input px-3.5 text-base text-ink bg-white focus:outline-none focus:border-navy"
+                  />
                 </div>
               </div>
               <div className="flex flex-col gap-2">
                 <label htmlFor="quote-suburb" className="font-heading text-sm font-semibold">
-                  Target suburb(s)
+                  Suburb
                 </label>
                 <input
                   type="text"
@@ -140,22 +168,6 @@ export default function QuickQuoteForm({
                   placeholder={suburbHint}
                   className="min-h-[50px] border border-field-border rounded-input px-3.5 text-base text-ink bg-white focus:outline-none focus:border-navy"
                 />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label htmlFor="quote-quantity" className="font-heading text-sm font-semibold">
-                  Quantity
-                </label>
-                <select
-                  id="quote-quantity"
-                  name="quantity"
-                  className="min-h-[50px] border border-field-border rounded-input px-3.5 text-base text-ink bg-white focus:outline-none focus:border-navy"
-                >
-                  <option value="">Select quantity</option>
-                  <option value="1000-5000">1,000 to 5,000</option>
-                  <option value="5000-10000">5,000 to 10,000</option>
-                  <option value="10000-20000">10,000 to 20,000</option>
-                  <option value="20000+">20,000+</option>
-                </select>
               </div>
               <input type="hidden" name="_subject" value="Quick Quote Request from Website" />
               <button
