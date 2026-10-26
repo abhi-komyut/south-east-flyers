@@ -34,6 +34,9 @@ const suburbPages: Record<string, string> = {
   Camberwell: "/melbourne/flyer-distribution-camberwell",
   Caulfield: "/melbourne/flyer-distribution-caulfield",
   Bentleigh: "/melbourne/flyer-distribution-bentleigh",
+  Malvern: "/melbourne/flyer-distribution-malvern",
+  "Mount Waverley": "/melbourne/flyer-distribution-mount-waverley",
+  Sandringham: "/melbourne/flyer-distribution-sandringham",
 };
 
 // Confirmed Melbourne service areas — source of truth. Do not add suburbs

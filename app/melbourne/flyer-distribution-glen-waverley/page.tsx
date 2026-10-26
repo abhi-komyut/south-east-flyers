@@ -190,7 +190,8 @@ export default function GlenWaverley() {
           ]}
         >
           Every drop is <strong className="text-ink">$200 per 1,000 flyers</strong>, delivered exclusively. Our flyer
-          distribution across Monash also reaches Mount Waverley. See the{" "}
+          distribution across Monash also reaches{" "}
+          <TextLink href="/melbourne/flyer-distribution-mount-waverley">Mount Waverley</TextLink>. See the{" "}
           <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
           <TextLink href="/melbourne/flyer-distribution-kew">Kew</TextLink>,{" "}
           <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink> and the rest of our{" "}

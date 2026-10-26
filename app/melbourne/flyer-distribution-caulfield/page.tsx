@@ -174,7 +174,8 @@ export default function Caulfield() {
           Every drop is <strong className="text-ink">$200 per 1,000 flyers</strong>, delivered exclusively. Our flyer
           distribution across Glen Eira also reaches Caulfield North, Caulfield South and Bentleigh. See the{" "}
           <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
-          <TextLink href="/melbourne/flyer-distribution-bentleigh">Bentleigh</TextLink> and the rest of our{" "}
+          <TextLink href="/melbourne/flyer-distribution-bentleigh">Bentleigh</TextLink>,{" "}
+          <TextLink href="/melbourne/flyer-distribution-malvern">Malvern</TextLink> and the rest of our{" "}
           <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
         </Callout>
       </div>

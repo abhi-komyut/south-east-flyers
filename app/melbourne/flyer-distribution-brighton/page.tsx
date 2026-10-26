@@ -189,7 +189,8 @@ export default function Brighton() {
           ]}
         >
           Every drop is <strong className="text-ink">$200 per 1,000 flyers</strong>, delivered exclusively. Brighton
-          sits in the City of Bayside, so our flyer distribution across Bayside also reaches Hampton and Sandringham.
+          sits in the City of Bayside, so our flyer distribution across Bayside also reaches Hampton and{" "}
+          <TextLink href="/melbourne/flyer-distribution-sandringham">Sandringham</TextLink>.
           The <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page has more quantities, and our{" "}
           <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> lists every
           suburb we cover, including <TextLink href="/melbourne/flyer-distribution-kew">Kew</TextLink> and{" "}
