@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useForm, ValidationError } from "@formspree/react";
 import { useEffect, useRef } from "react";
 import { trackEvent } from "../lib/gtag";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 const WHATSAPP_NUMBER = "61402824070";
 
@@ -47,6 +48,7 @@ export default function Contact() {
     <>
       <section className="bg-teal-deep text-white px-[clamp(20px,4vw,48px)] pt-[clamp(64px,7vw,96px)] pb-[clamp(140px,13vw,180px)]">
         <div className="hero-stagger max-w-[1144px] mx-auto flex flex-col gap-5">
+          <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Contact" }]} />
           <h1 className="m-0 font-display font-medium text-[clamp(40px,4.6vw,62px)] leading-[1.06] tracking-[-0.02em]">
             Contact us
           </h1>

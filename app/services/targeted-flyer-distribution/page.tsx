@@ -17,7 +17,7 @@ const PAGE_PATH = "/services/targeted-flyer-distribution";
 export const metadata: Metadata = {
   title: "Targeted Flyer Distribution",
   description:
-    "Targeted flyer distribution across Melbourne's south-east and eastern suburbs. Define your distribution area by suburb, postcode or defined streets so your flyers reach the right areas. GPS-tracked. Get a free quote.",
+    "Targeted flyer distribution by suburb, postcode or chosen streets in Melbourne's south-east. Exclusive, GPS-tracked delivery. $200 per 1,000 flyers.",
   alternates: {
     canonical: `${SITE_URL}${PAGE_PATH}`,
   },

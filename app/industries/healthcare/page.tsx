@@ -17,7 +17,7 @@ const PAGE_PATH = "/industries/healthcare";
 export const metadata: Metadata = {
   title: "Flyer Distribution for Healthcare",
   description:
-    "Flyer and letterbox distribution for healthcare businesses across Melbourne's south-east and eastern suburbs. Build local awareness for new practices, clinics and services. GPS-tracked. Get a free quote.",
+    "Flyer distribution for dentists, GPs, physios and clinics in Melbourne's south-east. Reach nearby patients. Exclusive, GPS-tracked, $200 per 1,000.",
   alternates: {
     canonical: `${SITE_URL}${PAGE_PATH}`,
   },
@@ -149,7 +149,9 @@ export default function Healthcare() {
           Campaigns run through our <TextLink href="/services/letterbox-distribution">letterbox distribution</TextLink>{" "}
           and <TextLink href="/services/targeted-flyer-distribution">targeted distribution</TextLink> services, are{" "}
           <TextLink href="/services/gps-tracked-flyer-distribution">GPS-tracked</TextLink>, and cover the suburbs on
-          our <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne</TextLink> page.
+          our <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne</TextLink> page. For practice-specific
+          advice, see our pages for <TextLink href="/industries/dentists">dental clinics</TextLink> and{" "}
+          <TextLink href="/industries/vets">vet clinics</TextLink>.
         </p>
       </Section>
 

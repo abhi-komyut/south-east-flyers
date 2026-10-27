@@ -18,7 +18,7 @@ const PAGE_PATH = "/services/letterbox-distribution";
 export const metadata: Metadata = {
   title: "Letterbox Distribution",
   description:
-    "Letterbox distribution and letterbox drops across Melbourne's south-east and eastern suburbs. Suburb-level targeting, no junk mail compliant, GPS tracking and campaign reporting. Get a free quote.",
+    "Letterbox distribution across Melbourne's south-east and eastern suburbs. Exclusive, never bundled, GPS-tracked. $200 per 1,000 flyers. Quote in 24 hours.",
   alternates: {
     canonical: `${SITE_URL}${PAGE_PATH}`,
   },

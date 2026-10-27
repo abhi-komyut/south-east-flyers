@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import PortfolioContent from "./PortfolioContent";
 
 export const metadata: Metadata = {
-  title: "Our Clients | Flyer Distribution Melbourne",
+  title: "Our Clients in Melbourne",
   description:
-    "Trusted by Ray White, McGrath, Belle Property & more. Exclusive letterbox distribution and flyer drops across Melbourne's south-east and eastern suburbs, GPS-tracked.",
+    "Trusted by Ray White, McGrath, Belle Property and more. Exclusive, GPS-tracked letterbox drops across Melbourne's south-east and eastern suburbs.",
   alternates: {
     canonical: "https://www.southeastflyers.com.au/portfolio",
   },

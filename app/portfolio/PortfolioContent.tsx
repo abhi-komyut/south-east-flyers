@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ClientFilter from "../components/ClientFilter";
 import Reveal from "../components/Reveal";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 const steps = [
   {
@@ -44,6 +45,7 @@ export default function PortfolioContent() {
       <section aria-labelledby="page-title" className="bg-teal-deep text-white px-[clamp(20px,4vw,48px)] py-[clamp(64px,7vw,104px)]">
         <div className="max-w-[1144px] mx-auto flex flex-wrap gap-12 gap-x-[88px] items-end">
           <div className="hero-stagger flex-[1.3_1_460px] flex flex-col gap-[22px]">
+            <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Our Clients" }]} />
             <h1 id="page-title" className="m-0 font-display font-medium text-[clamp(40px,4.6vw,62px)] leading-[1.06] tracking-[-0.02em]">
               Our clients
             </h1>

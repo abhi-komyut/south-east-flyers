@@ -18,7 +18,7 @@ const PAGE_PATH = "/services/flyer-distribution";
 export const metadata: Metadata = {
   title: "Flyer Distribution",
   description:
-    "Professional flyer distribution across Melbourne's south-east and eastern suburbs. Residential delivery, suburb-level targeting, GPS tracking and campaign reporting. You provide the flyers, we handle the distribution. Get a free quote.",
+    "Flyer distribution across Melbourne's south-east and east. Each flyer delivered on its own, GPS-tracked. $200 per 1,000, from 1,000. You print, we deliver.",
   alternates: {
     canonical: `${SITE_URL}${PAGE_PATH}`,
   },
@@ -175,6 +175,8 @@ export default function FlyerDistribution() {
           <p className="m-0">
             Related services include <TextLink href="/services/letterbox-distribution">letterbox distribution</TextLink>{" "}
             and targeted suburb campaigns across <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne</TextLink>.
+            We also deliver <TextLink href="/services/catalogue-delivery">retail catalogues</TextLink> and{" "}
+            <TextLink href="/services/pamphlet-delivery">pamphlets and brochures</TextLink>.
           </p>
         </Callout>
       </div>

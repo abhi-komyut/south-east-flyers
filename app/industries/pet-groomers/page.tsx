@@ -165,7 +165,7 @@ export default function PetGroomers() {
           Every drop is $200 per 1,000 flyers, exclusive, from 1,000. See the{" "}
           <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for more quantities, or our{" "}
           <TextLink href="/industries/local-businesses">local business</TextLink> page for other businesses that work
-          the same way.
+          the same way. Vet clinics can see our <TextLink href="/industries/vets">vet marketing</TextLink> page.
         </Callout>
       </div>
 
