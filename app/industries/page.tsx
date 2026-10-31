@@ -6,7 +6,6 @@ import {
   PageHero,
   FactsStrip,
   Section,
-  Bullets,
   TextLink,
   JsonLd,
   HowItWorks,
@@ -151,13 +150,16 @@ export default function Industries() {
           Plumbers, electricians, roofers, builders, renovators and cleaners use flyers to reach the households they
           actually service, not the whole city.
         </p>
-        <Bullets
-          items={trades.map((t) => (
-            <>
-              <TextLink href={t.href}>{t.title}</TextLink>: {t.body}
-            </>
+        <dl className="m-0 flex flex-wrap gap-6 gap-x-10 mt-2">
+          {trades.map((t) => (
+            <div key={t.title} className="flex-[1_1_260px] pt-4 border-t border-line flex flex-col gap-1.5">
+              <dt className="font-heading font-semibold text-base">
+                <TextLink href={t.href}>{t.title}</TextLink>
+              </dt>
+              <dd className="m-0 text-[15px] leading-relaxed text-body">{t.body}</dd>
+            </div>
           ))}
-        />
+        </dl>
       </Section>
 
       <Section title="Real estate, healthcare and local business">
@@ -165,24 +167,30 @@ export default function Industries() {
           Agents, clinics and local shops use letterbox drops to reach the streets around a listing, a practice or a
           storefront.
         </p>
-        <Bullets
-          items={local.map((t) => (
-            <>
-              <TextLink href={t.href}>{t.title}</TextLink>: {t.body}
-            </>
+        <dl className="m-0 flex flex-wrap gap-6 gap-x-10 mt-2">
+          {local.map((t) => (
+            <div key={t.title} className="flex-[1_1_260px] pt-4 border-t border-line flex flex-col gap-1.5">
+              <dt className="font-heading font-semibold text-base">
+                <TextLink href={t.href}>{t.title}</TextLink>
+              </dt>
+              <dd className="m-0 text-[15px] leading-relaxed text-body">{t.body}</dd>
+            </div>
           ))}
-        />
+        </dl>
       </Section>
 
       <Section title="Hospitality and pet services">
         <p>Restaurants, cafes and pet groomers reach the households within walking or driving distance of their door.</p>
-        <Bullets
-          items={hospitality.map((t) => (
-            <>
-              <TextLink href={t.href}>{t.title}</TextLink>: {t.body}
-            </>
+        <dl className="m-0 flex flex-wrap gap-6 gap-x-10 mt-2">
+          {hospitality.map((t) => (
+            <div key={t.title} className="flex-[1_1_260px] pt-4 border-t border-line flex flex-col gap-1.5">
+              <dt className="font-heading font-semibold text-base">
+                <TextLink href={t.href}>{t.title}</TextLink>
+              </dt>
+              <dd className="m-0 text-[15px] leading-relaxed text-body">{t.body}</dd>
+            </div>
           ))}
-        />
+        </dl>
       </Section>
 
       <HowItWorks />
