@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import QuickQuoteForm from "../components/QuickQuoteForm";
+import FAQSection from "../components/FAQSection";
 import {
   SITE_URL,
   PageHero,
@@ -8,6 +9,7 @@ import {
   Bullets,
   TextLink,
   JsonLd,
+  HowItWorks,
 } from "../components/landing";
 
 const PAGE_PATH = "/industries";
@@ -95,6 +97,24 @@ const hospitality: { title: string; href: string; body: string }[] = [
   },
 ];
 
+const faqs = [
+  {
+    question: "What if my business doesn't fit one of these industries?",
+    answer:
+      "Tell us what you do and the suburbs you want to reach. Letterbox drops work for most local businesses with a real catchment area, even if there's no dedicated page for your trade.",
+  },
+  {
+    question: "Can one campaign cover more than one industry?",
+    answer:
+      "Yes. A real estate agency running appraisal flyers and a trade targeting the same streets can both be quoted together or separately, with their own GPS reports.",
+  },
+  {
+    question: "Which industry pages have the most detail?",
+    answer:
+      "Each page above covers timing, targeting and what to put on the flyer for that trade. Start with the one closest to your business, or ask us directly if you're not sure.",
+  },
+];
+
 const serviceLd = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -165,10 +185,14 @@ export default function Industries() {
         />
       </Section>
 
+      <HowItWorks />
+
       <QuickQuoteForm
         heading="Ready to reach local customers?"
         lead="Tell us your target suburbs and flyer quantity for a free, no-obligation quote."
       />
+
+      <FAQSection items={faqs} title="Industries FAQs" />
     </>
   );
 }
