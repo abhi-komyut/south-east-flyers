@@ -160,11 +160,12 @@ export default function Restaurants() {
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
           title="Quantities"
-          figures={[{ value: "1,000", label: "homes, one catchment" }, { value: "2,500", label: "homes, delivery radius" }]}
         >
-          Every drop is exclusive, from 1,000 flyers or menus. See the{" "}
-          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or our{" "}
-          <TextLink href="/industries/local-businesses">local business flyers</TextLink> page for shops and studios.
+          <p className="m-0">
+            Every drop is exclusive, from 1,000 flyers or menus. See the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or our{" "}
+            <TextLink href="/industries/local-businesses">local business flyers</TextLink> page for shops and studios.
+          </p>
         </Callout>
       </div>
 

@@ -207,14 +207,12 @@ export default function SouthEastMelbourne() {
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
           title="Letterbox drop quantities across the south-east"
-          figures={[
-            { value: "1,000", label: "flyers, any suburb" },
-            { value: "5,000", label: "flyers across several suburbs" },
-          ]}
         >
-          Exclusive, never bundled, across all eight councils. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page
-          for a quote, the <TextLink href="/industries/local-businesses">local business</TextLink> guide, or our
-          wider <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
+          <p className="m-0">
+            Exclusive, never bundled, across all eight councils. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page
+            for a quote, the <TextLink href="/industries/local-businesses">local business</TextLink> guide, or our
+            wider <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
+          </p>
         </Callout>
       </div>
 

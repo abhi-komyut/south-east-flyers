@@ -151,14 +151,15 @@ export default function Electricians() {
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
           title="Quantities for an electrician letterbox drop"
-          figures={[{ value: "1,000", label: "flyers, a first test run" }, { value: "2,500", label: "homes around your base" }]}
         >
-          Every drop is delivered exclusively. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink>{" "}
-          page for other quantities, or <TextLink href="/industries/home-services">home services</TextLink> for how{" "}
-          <TextLink href="/industries/plumbers">plumbers</TextLink> and{" "}
-          <TextLink href="/industries/roofing">roofers</TextLink> use letterbox drops. Our{" "}
-          <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> lists every suburb
-          we cover.
+          <p className="m-0">
+            Every drop is delivered exclusively. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink>{" "}
+            page for other quantities, or <TextLink href="/industries/home-services">home services</TextLink> for how{" "}
+            <TextLink href="/industries/plumbers">plumbers</TextLink> and{" "}
+            <TextLink href="/industries/roofing">roofers</TextLink> use letterbox drops. Our{" "}
+            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> lists every suburb
+            we cover.
+          </p>
         </Callout>
       </div>
 

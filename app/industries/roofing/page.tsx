@@ -153,16 +153,17 @@ export default function Roofing() {
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
           title="Quantities"
-          figures={[{ value: "2,500", label: "homes, a first test" }, { value: "5,000", label: "homes, wider reach" }]}
         >
-          Because roof jobs are less frequent but larger than most trade work, roofers usually need more reach than a
-          plumber to see results. See the{" "}
-          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for a quote. Roofing is
-          one of the trades on our <TextLink href="/industries/home-services">home services</TextLink> page,
-          alongside <TextLink href="/industries/plumbers">plumbers</TextLink> and{" "}
-          <TextLink href="/industries/electricians">electricians</TextLink>. Our{" "}
-          <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> lists every suburb
-          we cover.
+          <p className="m-0">
+            Because roof jobs are less frequent but larger than most trade work, roofers usually need more reach than a
+            plumber to see results. See the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for a quote. Roofing is
+            one of the trades on our <TextLink href="/industries/home-services">home services</TextLink> page,
+            alongside <TextLink href="/industries/plumbers">plumbers</TextLink> and{" "}
+            <TextLink href="/industries/electricians">electricians</TextLink>. Our{" "}
+            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> lists every suburb
+            we cover.
+          </p>
         </Callout>
       </div>
 

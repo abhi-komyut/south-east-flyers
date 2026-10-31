@@ -160,13 +160,14 @@ export default function Renovation() {
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
           title="Quantities"
-          figures={[{ value: "2,500", label: "homes, a first test" }, { value: "5,000", label: "homes, wider reach" }]}
         >
-          Renovation jobs are large and less frequent, so most renovators need a few thousand homes to see steady
-          enquiries. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink>{" "}
-          page for a quote. Renovation sits on our <TextLink href="/industries/home-services">home services</TextLink> page with{" "}
-          <TextLink href="/industries/builders">builders</TextLink> and{" "}
-          <TextLink href="/industries/plumbers">plumbers</TextLink>.
+          <p className="m-0">
+            Renovation jobs are large and less frequent, so most renovators need a few thousand homes to see steady
+            enquiries. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink>{" "}
+            page for a quote. Renovation sits on our <TextLink href="/industries/home-services">home services</TextLink> page with{" "}
+            <TextLink href="/industries/builders">builders</TextLink> and{" "}
+            <TextLink href="/industries/plumbers">plumbers</TextLink>.
+          </p>
         </Callout>
       </div>
 

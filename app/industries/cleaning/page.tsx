@@ -156,13 +156,14 @@ export default function Cleaning() {
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
           title="Quantities"
-          figures={[{ value: "1,000", label: "homes on your route" }, { value: "2,500", label: "homes, repeat monthly" }]}
         >
-          Every drop is exclusive, from 1,000 flyers. See the{" "}
-          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for a quote. Cleaning is
-          part of our <TextLink href="/industries/home-services">home services</TextLink> page, alongside{" "}
-          <TextLink href="/industries/plumbers">plumbers</TextLink> and{" "}
-          <TextLink href="/industries/electricians">electricians</TextLink>.
+          <p className="m-0">
+            Every drop is exclusive, from 1,000 flyers. See the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for a quote. Cleaning is
+            part of our <TextLink href="/industries/home-services">home services</TextLink> page, alongside{" "}
+            <TextLink href="/industries/plumbers">plumbers</TextLink> and{" "}
+            <TextLink href="/industries/electricians">electricians</TextLink>.
+          </p>
         </Callout>
       </div>
 

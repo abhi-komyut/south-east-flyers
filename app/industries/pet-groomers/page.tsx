@@ -159,12 +159,13 @@ export default function PetGroomers() {
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
           title="Quantities"
-          figures={[{ value: "1,000", label: "homes, first test" }, { value: "2,500", label: "homes, a mobile route" }]}
         >
-          Every drop is exclusive, from 1,000 flyers. See the{" "}
-          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for a quote, or our{" "}
-          <TextLink href="/industries/local-businesses">local business</TextLink> page for other businesses that work
-          the same way.
+          <p className="m-0">
+            Every drop is exclusive, from 1,000 flyers. See the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for a quote, or our{" "}
+            <TextLink href="/industries/local-businesses">local business</TextLink> page for other businesses that work
+            the same way.
+          </p>
         </Callout>
       </div>
 

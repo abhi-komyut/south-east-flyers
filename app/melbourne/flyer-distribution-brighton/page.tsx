@@ -182,18 +182,16 @@ export default function Brighton() {
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
           title="Letterbox drop quantities in Brighton"
-          figures={[
-            { value: "1,000", label: "flyers, first test" },
-            { value: "10,500", label: "homes, whole suburb" },
-          ]}
         >
-          Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>. Brighton
-          sits in the City of Bayside, so our flyer distribution across Bayside also reaches Hampton and{" "}
-          <TextLink href="/melbourne/flyer-distribution-sandringham">Sandringham</TextLink>.
-          The <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page has more quantities, and our{" "}
-          <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> lists every
-          suburb we cover, including <TextLink href="/melbourne/flyer-distribution-kew">Kew</TextLink> and{" "}
-          <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink>.
+          <p className="m-0">
+            Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>. Brighton
+            sits in the City of Bayside, so our flyer distribution across Bayside also reaches Hampton and{" "}
+            <TextLink href="/melbourne/flyer-distribution-sandringham">Sandringham</TextLink>.
+            The <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page has more quantities, and our{" "}
+            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> lists every
+            suburb we cover, including <TextLink href="/melbourne/flyer-distribution-kew">Kew</TextLink> and{" "}
+            <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink>.
+          </p>
         </Callout>
       </div>
 

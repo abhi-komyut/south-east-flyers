@@ -170,17 +170,15 @@ export default function BoxHill() {
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
           title="Letterbox drop quantities in Box Hill"
-          figures={[
-            { value: "1,000", label: "flyers, first test" },
-            { value: "7,800", label: "homes, approx., whole suburb" },
-          ]}
         >
-          Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>.
-          Our flyer distribution across Whitehorse also reaches Blackburn, Burwood and Nunawading.
-          See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, our{" "}
-          <TextLink href="/melbourne/flyer-distribution-south-east-melbourne">south-east and eastern Melbourne</TextLink>{" "}
-          suburb list, or{" "}
-          <TextLink href="/melbourne/flyer-distribution-mount-waverley">Mount Waverley</TextLink> to the south.
+          <p className="m-0">
+            Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>.
+            Our flyer distribution across Whitehorse also reaches Blackburn, Burwood and Nunawading.
+            See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, our{" "}
+            <TextLink href="/melbourne/flyer-distribution-south-east-melbourne">south-east and eastern Melbourne</TextLink>{" "}
+            suburb list, or{" "}
+            <TextLink href="/melbourne/flyer-distribution-mount-waverley">Mount Waverley</TextLink> to the south.
+          </p>
         </Callout>
       </div>
 

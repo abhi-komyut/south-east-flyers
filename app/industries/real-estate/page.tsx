@@ -199,22 +199,20 @@ export default function RealEstate() {
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
           title="Quantities for a real estate letterbox drop"
-          figures={[
-            { value: "2,500", label: "homes, Just Listed" },
-            { value: "4", label: "drops across a typical campaign" },
-          ]}
         >
-          Real estate flyers are delivered the same way as any other campaign:{" "}
-          <strong className="text-ink">exclusively</strong>, never bundled.
-          See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for a quote.
-          This is real estate marketing Melbourne agencies have used for decades, just with GPS proof added on top.
-          We cover agents&rsquo; patches across Melbourne&rsquo;s south-east and east, including{" "}
-          <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink>,{" "}
-          <TextLink href="/melbourne/flyer-distribution-kew">Kew</TextLink> and{" "}
-          <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink>. See the full{" "}
-          <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>, or{" "}
-          <TextLink href="/industries/local-businesses">local business flyer distribution</TextLink> for other
-          industries.
+          <p className="m-0">
+            Real estate flyers are delivered the same way as any other campaign:{" "}
+            <strong className="text-ink">exclusively</strong>, never bundled.
+            See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for a quote.
+            This is real estate marketing Melbourne agencies have used for decades, just with GPS proof added on top.
+            We cover agents&rsquo; patches across Melbourne&rsquo;s south-east and east, including{" "}
+            <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink>,{" "}
+            <TextLink href="/melbourne/flyer-distribution-kew">Kew</TextLink> and{" "}
+            <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink>. See the full{" "}
+            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>, or{" "}
+            <TextLink href="/industries/local-businesses">local business flyer distribution</TextLink> for other
+            industries.
+          </p>
         </Callout>
       </div>
 

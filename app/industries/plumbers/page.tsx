@@ -162,10 +162,6 @@ export default function Plumbers() {
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
           title="Quantities for a plumbing letterbox drop"
-          figures={[
-            { value: "2,500", label: "homes around your base" },
-            { value: "10,500", label: "homes, a Brighton-sized suburb" },
-          ]}
         >
           <p className="m-0">
             Every drop is exclusive, from 1,000 flyers. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink>{" "}

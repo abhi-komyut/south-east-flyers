@@ -152,10 +152,9 @@ export function FactsStrip({ stats }: { stats: { value: string; label: string }[
 
 /** Sitewide proof strip (docs/seo/sef-page-build-context.md, section 2a). */
 /**
- * Editorial content section: H2 on the left (flex 1 / 300px), body on
- * the right (flex 1.7 / 480px), with a hairline top border between
- * sections. Pass `first` on the first section in an article to drop
- * that border and its top padding.
+ * Editorial content section: H2 stacked above the body, with a hairline
+ * top border between sections. Pass `first` on the first section in an
+ * article to drop that border and its top padding.
  */
 export function Section({
   title,
@@ -169,12 +168,12 @@ export function Section({
   return (
     <Reveal
       as="section"
-      className={`max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] flex flex-wrap gap-5 gap-x-[88px] ${first ? "" : "pt-14 border-t border-line"}`}
+      className={`max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] flex flex-col gap-5 ${first ? "" : "pt-14 border-t border-line"}`}
     >
-      <h2 className="flex-[1_1_300px] m-0 font-display font-medium text-[clamp(28px,2.8vw,38px)] leading-[1.15]">
+      <h2 className="m-0 font-display font-medium text-[clamp(28px,2.8vw,38px)] leading-[1.15]">
         {title}
       </h2>
-      <div className="flex-[1.7_1_480px] flex flex-col gap-[18px] text-[17px] leading-[1.75] text-body">
+      <div className="max-w-[760px] flex flex-col gap-[18px] text-[17px] leading-[1.75] text-body">
         {children}
       </div>
     </Reveal>

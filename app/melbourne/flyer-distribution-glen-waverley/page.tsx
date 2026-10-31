@@ -183,18 +183,16 @@ export default function GlenWaverley() {
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
           title="Letterbox drop quantities in Glen Waverley"
-          figures={[
-            { value: "2,500", label: "flyers, around the Kingsway" },
-            { value: "16,500", label: "homes, whole suburb" },
-          ]}
         >
-          Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>. Our flyer
-          distribution across Monash also reaches{" "}
-          <TextLink href="/melbourne/flyer-distribution-mount-waverley">Mount Waverley</TextLink>. See the{" "}
-          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
-          <TextLink href="/melbourne/flyer-distribution-kew">Kew</TextLink>,{" "}
-          <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink> and the rest of our{" "}
-          <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
+          <p className="m-0">
+            Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>. Our flyer
+            distribution across Monash also reaches{" "}
+            <TextLink href="/melbourne/flyer-distribution-mount-waverley">Mount Waverley</TextLink>. See the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
+            <TextLink href="/melbourne/flyer-distribution-kew">Kew</TextLink>,{" "}
+            <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink> and the rest of our{" "}
+            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
+          </p>
         </Callout>
       </div>
 
