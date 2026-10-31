@@ -89,7 +89,7 @@ export default function Restaurants() {
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
           { value: "$200", label: "per 1,000 flyers or menus" },
-          { value: "1,000", label: "minimum, about one walking catchment" },
+          { value: "1,000", label: "flyers, about one walking catchment" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
       />
@@ -173,7 +173,7 @@ export default function Restaurants() {
 
       <QuickQuoteForm
         heading="Get your menu into local kitchens"
-        lead="Tell us your venue address and delivery area. We'll quote within 24 hours."
+        lead="Tell us your venue address and delivery area. We'll quote within 5 minutes."
       />
 
       <FAQSection items={faqs} title="Restaurant and cafe letterbox drop FAQs" />

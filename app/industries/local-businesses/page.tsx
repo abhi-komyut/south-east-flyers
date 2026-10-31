@@ -47,7 +47,7 @@ const faqs = [
   {
     question: "How small can a local campaign be?",
     answer:
-      "Our minimum is 1,000 flyers, which costs $200. That covers the streets closest to most shops or a single neighbourhood, so you can test the idea before spending more on a wider run.",
+      "You can start with 1,000 flyers for $200. That covers the streets closest to most shops or a single neighbourhood, so you can test the idea before spending more on a wider run.",
   },
   {
     question: "Can you deliver only near my shop?",
@@ -96,7 +96,7 @@ export default function LocalBusinesses() {
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
           { value: "$200", label: "per 1,000 flyers" },
-          { value: "1,000", label: "flyer minimum, $200 test run" },
+          { value: "1,000", label: "flyers, a $200 test run" },
           { value: "GPS map", label: "report with every drop" },
         ]}
       />
@@ -186,7 +186,7 @@ export default function LocalBusinesses() {
 
       <QuickQuoteForm
         heading="Put your business in local letterboxes"
-        lead="Tell us your address, the area you want to reach and how many flyers you have. We'll quote within 24 hours."
+        lead="Tell us your address, the area you want to reach and how many flyers you have. We'll quote within 5 minutes."
       />
 
       <FAQSection items={faqs} title="Local business letterbox drop FAQs" />

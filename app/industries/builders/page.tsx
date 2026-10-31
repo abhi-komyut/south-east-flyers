@@ -89,7 +89,7 @@ export default function Builders() {
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
           { value: "$200", label: "per 1,000 flyers" },
-          { value: "1,000", label: "flyer minimum, one site's neighbours" },
+          { value: "1,000", label: "flyers covers one site's neighbours" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
       />
@@ -179,7 +179,7 @@ export default function Builders() {
 
       <QuickQuoteForm
         heading="Put your builds in front of the neighbours"
-        lead="Tell us your site addresses and the suburbs you build in. We'll quote within 24 hours."
+        lead="Tell us your site addresses and the suburbs you build in. We'll quote within 5 minutes."
       />
 
       <FAQSection items={faqs} title="Builder letterbox drop FAQs" />

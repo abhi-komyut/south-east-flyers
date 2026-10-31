@@ -70,11 +70,6 @@ const faqs = [
       "We're honest about this: our targeting is based on the areas you choose, not household-level demographic data. If you have a type of customer in mind we'll help match the right suburbs to them, but we won't promise precision we can't deliver.",
   },
   {
-    question: "What's the minimum for a targeted campaign?",
-    answer:
-      "1,000 flyers. From there you can scale up across as many suburbs or streets as you'd like to cover.",
-  },
-  {
     question: "Is a targeted campaign still GPS-tracked?",
     answer:
       "Yes. Every run is tracked via the Strava app and you receive a report of the streets covered, so you can confirm the campaign stayed within your chosen area.",

@@ -94,7 +94,7 @@ export default function Kew() {
           { value: "10,600", label: "homes in Kew 3101, approx." },
           { value: "$200", label: "per 1,000 flyers, exclusive" },
           { value: "$2,100", label: "to cover the whole suburb, approx." },
-          { value: "1,000", label: "flyer minimum, $200 test run" },
+          { value: "1,000", label: "flyers, a $200 test run" },
         ]}
       />
 
@@ -183,7 +183,7 @@ export default function Kew() {
 
       <QuickQuoteForm
         heading="Ready to reach Kew families?"
-        lead="Tell us your streets or school catchment and quantity. We'll quote within 24 hours."
+        lead="Tell us your streets or school catchment and quantity. We'll quote within 5 minutes."
         suburbHint="e.g. Kew, Kew East, Hawthorn"
       />
 

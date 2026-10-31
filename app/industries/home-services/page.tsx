@@ -39,7 +39,7 @@ const faqs = [
   {
     question: "How many flyers should a tradie drop?",
     answer:
-      "Start with the streets closest to your base or your current jobs. Our minimum of 1,000 flyers ($200) covers a pocket of local streets. Track the calls, then expand into the suburbs that respond.",
+      "Start with the streets closest to your base or your current jobs. 1,000 flyers ($200) covers a pocket of local streets. Track the calls, then expand into the suburbs that respond.",
   },
   {
     question: "When is the best time to drop home services flyers?",
@@ -94,7 +94,7 @@ export default function HomeServices() {
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
           { value: "$200", label: "per 1,000 flyers" },
-          { value: "1,000", label: "flyer minimum, $200 test run" },
+          { value: "1,000", label: "flyers, a $200 test run" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
       />
@@ -187,7 +187,7 @@ export default function HomeServices() {
           ]}
         >
           <p className="m-0">
-            Every drop is $200 per 1,000 flyers, with a 1,000-flyer minimum. See the{" "}
+            Every drop is $200 per 1,000 flyers. See the{" "}
             <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for more quantities, or the{" "}
             <TextLink href="/industries/local-businesses">local businesses</TextLink> page for other ways businesses
             use our service.
@@ -204,7 +204,7 @@ export default function HomeServices() {
 
       <QuickQuoteForm
         heading="Get your trade into local letterboxes"
-        lead="Tell us your trade, your base and the suburbs you service. We'll quote within 24 hours."
+        lead="Tell us your trade, your base and the suburbs you service. We'll quote within 5 minutes."
       />
 
       <FAQSection items={faqs} title="Home services letterbox drop FAQs" />

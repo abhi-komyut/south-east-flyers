@@ -209,7 +209,7 @@ const faqs = [
   {
     question: "How much does flyer distribution cost in Melbourne?",
     answer:
-      "Flyer distribution costs $200 per 1,000 flyers, delivered exclusively and GPS-tracked. The minimum campaign is 1,000 flyers ($200), and a 5,000-flyer drop costs $1,000. See our letterbox drop cost page for more quantities.",
+      "Flyer distribution costs $200 per 1,000 flyers, delivered exclusively and GPS-tracked. A 5,000-flyer drop costs $1,000. See our letterbox drop cost page for more quantities.",
   },
   {
     question: "How many flyers do I need for a Melbourne suburb?",
@@ -310,7 +310,7 @@ export default function FlyerDistributionMelbourne() {
             South East Flyers is a flyer distribution service Melbourne
             businesses use when they want solo delivery rather than a bundle.
             We&rsquo;re a flyer distribution company Melbourne clients choose
-            for a 1,000-flyer minimum. Businesses across the city give us
+            for exclusive, GPS-tracked delivery. Businesses across the city give us
             their printed material and we deliver it, letterbox by
             letterbox, across the suburbs they want to target, from the
             bayside around St Kilda and Brighton through to the Monash and
@@ -322,8 +322,8 @@ export default function FlyerDistributionMelbourne() {
             Mail&rsquo;, and track each distribution run through the Strava app so
             you receive a clear report once your campaign is complete. That&rsquo;s
             leaflet distribution Melbourne businesses can rely on without
-            guessing where their flyers went. The minimum campaign is 1,000
-            flyers, and we scale up from there for metro-wide pushes. We&rsquo;re
+            guessing where their flyers went. We scale from a small test run
+            up to metro-wide pushes. We&rsquo;re
             one of the flyer distribution companies that tracks every run by
             GPS as standard, not as an add-on.
           </p>

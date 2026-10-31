@@ -90,7 +90,7 @@ export default function Plumbers() {
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
           { value: "$200", label: "per 1,000 flyers" },
-          { value: "1,000", label: "flyer minimum, $200 test run" },
+          { value: "1,000", label: "flyers, a $200 test run" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
       />
@@ -186,7 +186,7 @@ export default function Plumbers() {
 
       <QuickQuoteForm
         heading="Get your plumbing number on local fridges"
-        lead="Tell us where you're based and the suburbs you cover. We'll quote within 24 hours."
+        lead="Tell us where you're based and the suburbs you cover. We'll quote within 5 minutes."
       />
 
       <FAQSection items={faqs} title="Plumber letterbox drop FAQs" />

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: "%s | South East Flyers",
   },
   description:
-    "Flyer distribution in Melbourne's south-east and east: exclusive, GPS-tracked letterbox drops, never bundled. $200 per 1,000 flyers. Quote in 24 hours.",
+    "Flyer distribution in Melbourne's south-east and east: exclusive, GPS-tracked letterbox drops, never bundled. $200 per 1,000 flyers. Quote in 5 minutes.",
   keywords: [
     "flyer distribution melbourne",
     "letterbox drops melbourne",

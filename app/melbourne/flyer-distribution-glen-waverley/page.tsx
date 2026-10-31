@@ -96,7 +96,7 @@ export default function GlenWaverley() {
           { value: "16,500", label: "homes in Glen Waverley 3150, approx." },
           { value: "$200", label: "per 1,000 flyers, exclusive" },
           { value: "$3,300", label: "to cover the whole suburb, approx." },
-          { value: "1,000", label: "flyer minimum, $200 test run" },
+          { value: "1,000", label: "flyers, a $200 test run" },
         ]}
       />
 
@@ -203,7 +203,7 @@ export default function GlenWaverley() {
 
       <QuickQuoteForm
         heading="Ready to reach Glen Waverley letterboxes?"
-        lead="Tell us your streets and quantity, and we'll quote with the letterbox count within 24 hours."
+        lead="Tell us your streets and quantity, and we'll quote with the letterbox count within 5 minutes."
         suburbHint="e.g. Glen Waverley, Mount Waverley, Wheelers Hill"
       />
 

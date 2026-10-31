@@ -201,7 +201,7 @@ export default function LocalAdvertisingGuide() {
 
       <QuickQuoteForm
         heading="Want to test a letterbox drop?"
-        lead="Tell us your business and the streets around you. We'll quote within 24 hours."
+        lead="Tell us your business and the streets around you. We'll quote within 5 minutes."
       />
 
       <FAQSection items={faqs} title="Local advertising FAQs" />

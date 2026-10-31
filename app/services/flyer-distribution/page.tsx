@@ -68,7 +68,7 @@ const faqs = [
   {
     question: "How much does flyer distribution cost?",
     answer:
-      "It depends on your quantity, the suburbs you're targeting and how spread out the delivery is, so we quote each campaign individually. Send us your target area and how many flyers you have and we'll come back with a clear price. The minimum campaign is 1,000 flyers.",
+      "It depends on your quantity, the suburbs you're targeting and how spread out the delivery is, so we quote each campaign individually. Send us your target area and how many flyers you have and we'll come back with a clear price.",
   },
   {
     question: "Are my flyers delivered individually or bundled with other ads?",
@@ -118,8 +118,8 @@ export default function FlyerDistribution() {
         </p>
         <p>
           South East Flyers handles the distribution end to end. You supply the flyers; we plan the routes, deliver
-          them across your target area, track each run and report back on where they went. The minimum campaign is
-          1,000 flyers, scaling up for metro-wide pushes across{" "}
+          them across your target area, track each run and report back on where they went. We scale from a small test
+          run to metro-wide pushes across{" "}
           <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne</TextLink>&rsquo;s south-east and eastern
           suburbs.
         </p>

@@ -95,7 +95,7 @@ export default function Malvern() {
           { value: "4,800", label: "homes in Malvern 3144, approx." },
           { value: "$200", label: "per 1,000 flyers, exclusive" },
           { value: "$1,000", label: "to cover the whole suburb, approx." },
-          { value: "1,000", label: "flyer minimum, $200 test run" },
+          { value: "1,000", label: "flyers, a $200 test run" },
         ]}
       />
 
@@ -187,7 +187,7 @@ export default function Malvern() {
 
       <QuickQuoteForm
         heading="Ready to reach Malvern letterboxes?"
-        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count within 24 hours."
+        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count within 5 minutes."
         suburbHint="e.g. Malvern, Armadale, Glen Iris"
       />
 

@@ -101,7 +101,7 @@ const faqs = [
   {
     question: "What does a letterbox drop cost across several suburbs?",
     answer:
-      "The same $200 per 1,000 flyers, wherever the homes are. A 5,000-flyer drop split across two or three neighbouring suburbs costs $1,000. The minimum is 1,000 flyers in total, not per suburb.",
+      "The same $200 per 1,000 flyers, wherever the homes are. A 5,000-flyer drop split across two or three neighbouring suburbs costs $1,000.",
   },
   {
     question: "Do you deliver to the eastern suburbs as well as the south-east?",
@@ -147,7 +147,7 @@ export default function SouthEastMelbourne() {
           { value: "56", label: "key suburbs we cover" },
           { value: "8", label: "councils, one quote" },
           { value: "$200", label: "per 1,000 flyers, exclusive" },
-          { value: "1,000", label: "flyer minimum in total" },
+          { value: "Never", label: "bundled with other advertisers" },
         ]}
       />
 
@@ -213,8 +213,7 @@ export default function SouthEastMelbourne() {
             { value: "$1,000", label: "5,000 flyers across several suburbs" },
           ]}
         >
-          One rate applies across all eight councils: <strong className="text-ink">$200 per 1,000 flyers</strong>,
-          exclusive, never bundled. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page
+          Exclusive, never bundled, across all eight councils. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page
           for more quantities, the <TextLink href="/industries/local-businesses">local business</TextLink> guide, or our
           wider <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
         </Callout>
@@ -224,7 +223,7 @@ export default function SouthEastMelbourne() {
 
       <QuickQuoteForm
         heading="Planning a drop in the south-east?"
-        lead="Tell us the suburbs or streets and your quantity. We'll quote within 24 hours."
+        lead="Tell us the suburbs or streets and your quantity. We'll quote within 5 minutes."
         suburbHint="e.g. Bentleigh, Brighton, Glen Waverley"
       />
 

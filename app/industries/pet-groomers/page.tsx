@@ -89,7 +89,7 @@ export default function PetGroomers() {
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
           { value: "$200", label: "per 1,000 flyers" },
-          { value: "1,000", label: "flyer minimum, $200 test run" },
+          { value: "1,000", label: "flyers, a $200 test run" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
       />
@@ -173,7 +173,7 @@ export default function PetGroomers() {
 
       <QuickQuoteForm
         heading="Reach the dog owners near you"
-        lead="Tell us where your salon is or which suburbs your van covers. We'll quote within 24 hours."
+        lead="Tell us where your salon is or which suburbs your van covers. We'll quote within 5 minutes."
       />
 
       <FAQSection items={faqs} title="Dog groomer letterbox drop FAQs" />

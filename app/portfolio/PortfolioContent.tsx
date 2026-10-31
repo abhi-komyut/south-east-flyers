@@ -7,7 +7,7 @@ const steps = [
   {
     number: "01",
     title: "Get a quote",
-    description: "Tell us your target suburbs, quantity and timeline. We'll send a detailed quote within 24 hours.",
+    description: "Tell us your target suburbs, quantity and timeline. We'll send a detailed quote within 5 minutes.",
   },
   {
     number: "02",

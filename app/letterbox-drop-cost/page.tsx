@@ -19,7 +19,7 @@ const PAGE_PATH = "/letterbox-drop-cost";
 export const metadata: Metadata = {
   title: { absolute: "Letterbox Drop Cost Melbourne 2026 | South East Flyers" },
   description:
-    "Letterbox drop cost Melbourne: $200 per 1,000 flyers, exclusive, GPS-tracked, never bundled. Prices for 1,000 to 20,000 flyers. Free quote in 24 hours.",
+    "Letterbox drop cost Melbourne: $200 per 1,000 flyers, exclusive, GPS-tracked, never bundled. Prices for 1,000 to 20,000 flyers. Free quote in 5 minutes.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Letterbox Drop Cost Melbourne | South East Flyers",
@@ -36,11 +36,6 @@ const faqs = [
     question: "How much does a letterbox drop cost in Melbourne?",
     answer:
       "With South East Flyers, a letterbox drop costs $200 per 1,000 flyers. Your flyer is delivered on its own, never bundled, and every run is GPS-tracked. A 5,000-flyer campaign costs $1,000.",
-  },
-  {
-    question: "What is the minimum order?",
-    answer:
-      "The minimum is 1,000 flyers, which costs $200. It is enough to cover a few streets around your business or listing and test the response before committing to a larger, full-suburb drop.",
   },
   {
     question: "Why does exclusive delivery cost more than shared distribution?",
@@ -60,7 +55,7 @@ const faqs = [
   {
     question: "How quickly will I get a price?",
     answer:
-      "Quotes are sent within 24 hours and show the letterbox count, total cost and start date. Urgent campaigns can start within 48 hours of your flyers arriving, once we've confirmed the streets with you.",
+      "Quotes are sent within 5 minutes and show the letterbox count, total cost and start date. Urgent campaigns can start within 48 hours of your flyers arriving, once we've confirmed the streets with you.",
   },
 ];
 
@@ -94,7 +89,7 @@ export default function LetterboxDropCost() {
       />
 
       <Section title="Letterbox drop prices by quantity" first>
-        <p>The rate is the same for every quantity, so the total is easy to work out before you call. The letterbox drop price per 1,000 is exactly $200.</p>
+        <p>The total is easy to work out before you call. The letterbox drop price per 1,000 is exactly $200.</p>
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse text-base">
             <thead>
@@ -202,7 +197,7 @@ export default function LetterboxDropCost() {
 
       <QuickQuoteForm
         heading="Get an exact price for your area"
-        lead="Tell us your streets or suburbs and quantity. We'll send the letterbox count and total within 24 hours."
+        lead="Tell us your streets or suburbs and quantity. We'll send the letterbox count and total within 5 minutes."
       />
 
       <FAQSection items={faqs} title="Letterbox drop cost FAQs" />

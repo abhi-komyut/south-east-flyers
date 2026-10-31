@@ -66,11 +66,6 @@ const faqs = [
       "No. We skip every letterbox marked 'No Junk Mail' or 'No Advertising Material', which keeps your practice's material with households happy to receive it.",
   },
   {
-    question: "What's the minimum order?",
-    answer:
-      "1,000 flyers per campaign, which is enough to cover the streets immediately around most practices. We can scale up from there across a wider catchment.",
-  },
-  {
     question: "Do you handle the design or wording of the flyer?",
     answer:
       "No, we distribute, we don't print or write your material. You provide the printed flyers, and any professional or advertising standards that apply to healthcare content remain yours to determine.",
@@ -111,7 +106,7 @@ export default function Healthcare() {
           { value: "Exclusive", label: "never bundled with other ads" },
           { value: "$200", label: "per 1,000 flyers" },
           { value: "GPS map", label: "proof of delivery, every run" },
-          { value: "1,000", label: "flyer minimum, $200 test run" },
+          { value: "1,000", label: "flyers, a $200 test run" },
         ]}
       />
 

@@ -312,7 +312,7 @@ export function HowItWorks({
   title = "How it works",
   steps = [
     { title: "Tell us the area", body: "Streets, a radius or whole suburbs, plus quantity and start date." },
-    { title: "Quote within 24 hours", body: "Letterbox count, total cost and timeline." },
+    { title: "Quote within 5 minutes", body: "Letterbox count, total cost and timeline." },
     { title: "Send your printed flyers", body: "We distribute; we don't print." },
     { title: "We deliver and report", body: "Walkers and e-bike riders cover the route; you get the GPS map." },
   ],

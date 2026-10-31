@@ -63,9 +63,9 @@ export default function Home() {
       <FactsStrip
         stats={[
           { value: "$200", label: "per 1,000 flyers delivered" },
-          { value: "1,000", label: "flyer minimum per campaign" },
+          { value: "100%", label: "GPS-tracked delivery routes" },
           { value: "Never", label: "bundled with other advertisers" },
-          { value: "24 hrs", label: "to a detailed, written quote" },
+          { value: "5 min", label: "to a detailed, written quote" },
         ]}
       />
 
@@ -258,7 +258,7 @@ export default function Home() {
       </section>
 
       <QuickQuoteForm
-        heading="$200 per 1,000 flyers. A quote back within 24 hours."
+        heading="$200 per 1,000 flyers. A quote back within 5 minutes."
         lead="Tell us where and how many. We'll send pricing, a coverage map and a timeline. No obligation."
       />
 
@@ -273,10 +273,6 @@ export default function Home() {
           {
             question: "Which suburbs do you cover?",
             answer: "Anywhere between Port Melbourne and Box Hill, including St Kilda, Brighton, Caulfield, Bentleigh, Glen Waverley, Kew and Camberwell. See every suburb on our Melbourne page.",
-          },
-          {
-            question: "What's the minimum order?",
-            answer: "1,000 flyers per campaign. We scale to 50,000+ for a larger push and plan the drop around your budget.",
           },
           {
             question: "How does GPS tracking work?",

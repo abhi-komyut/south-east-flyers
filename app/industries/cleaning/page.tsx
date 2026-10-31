@@ -89,7 +89,7 @@ export default function Cleaning() {
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
           { value: "$200", label: "per 1,000 flyers" },
-          { value: "1,000", label: "flyer minimum, $200 test run" },
+          { value: "1,000", label: "flyers, a $200 test run" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
       />
@@ -171,7 +171,7 @@ export default function Cleaning() {
 
       <QuickQuoteForm
         heading="Fill the gaps in your cleaning route"
-        lead="Tell us the suburbs you clean in now. We'll quote the streets around them within 24 hours."
+        lead="Tell us the suburbs you clean in now. We'll quote the streets around them within 5 minutes."
       />
 
       <FAQSection items={faqs} title="Cleaning business letterbox drop FAQs" />

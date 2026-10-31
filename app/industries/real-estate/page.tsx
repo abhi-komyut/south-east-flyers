@@ -46,7 +46,7 @@ const faqs = [
   {
     question: "How many flyers does a Just Listed drop need?",
     answer:
-      "Most agents cover the few streets immediately around the property. Our minimum is 1,000 flyers ($200), which covers those streets with room to extend into your wider farm area.",
+      "Most agents cover the few streets immediately around the property. 1,000 flyers ($200) covers those streets with room to extend into your wider farm area.",
   },
   {
     question: "Which agencies do you deliver for?",
@@ -206,7 +206,7 @@ export default function RealEstate() {
           ]}
         >
           Real estate flyers are priced the same as any other campaign:{" "}
-          <strong className="text-ink">$200 per 1,000</strong>, delivered exclusively, with a 1,000-flyer minimum.
+          <strong className="text-ink">$200 per 1,000</strong>, delivered exclusively.
           See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for more quantities.
           This is real estate marketing Melbourne agencies have used for decades, just with GPS proof added on top.
           We cover agents&rsquo; patches across Melbourne&rsquo;s south-east and east, including{" "}
@@ -223,7 +223,7 @@ export default function RealEstate() {
 
       <QuickQuoteForm
         heading="Plan your next listing campaign"
-        lead="Tell us the property address, the streets you want covered and your open home date. We'll quote within 24 hours."
+        lead="Tell us the property address, the streets you want covered and your open home date. We'll quote within 5 minutes."
         suburbHint="e.g. 14 Example St, Brighton and surrounding streets"
       />
 

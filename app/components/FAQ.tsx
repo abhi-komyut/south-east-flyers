@@ -7,11 +7,6 @@ const faqs = [
       "If you are between Port Melbourne and Box Hill, yes. We deliver across the bayside, inner-south and eastern suburbs, including St Kilda, Brighton, Caulfield, Bentleigh, Glen Waverley, Kew, Camberwell and Box Hill. The full list is on our Melbourne page.",
   },
   {
-    question: "What is the minimum order for a letterbox drop?",
-    answer:
-      "Our minimum order is 1,000 flyers per campaign. From there, we can scale up to 50,000+ for a metro-wide push and tailor a distribution plan that fits your budget.",
-  },
-  {
     question: "How does GPS tracking work?",
     answer:
       "Every distributor tracks their route via the Strava app in real time. After your campaign, you receive a report showing the streets covered and a map of the distribution route.",

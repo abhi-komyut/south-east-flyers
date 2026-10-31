@@ -95,7 +95,7 @@ export default function MountWaverley() {
           { value: "13,900", label: "homes in Mount Waverley 3149, approx." },
           { value: "$200", label: "per 1,000 flyers, exclusive" },
           { value: "$2,800", label: "to cover the whole suburb, approx." },
-          { value: "1,000", label: "flyer minimum, $200 test run" },
+          { value: "1,000", label: "flyers, a $200 test run" },
         ]}
       />
 
@@ -174,8 +174,8 @@ export default function MountWaverley() {
             { value: "$2,800", label: "whole suburb, approx." },
           ]}
         >
-          Every drop is <strong className="text-ink">$200 per 1,000 flyers</strong>, delivered exclusively, with a
-          1,000-flyer minimum. Our flyer distribution across Monash also reaches Glen Waverley, Wheelers Hill, Oakleigh
+          Every drop is <strong className="text-ink">$200 per 1,000 flyers</strong>, delivered exclusively.
+          Our flyer distribution across Monash also reaches Glen Waverley, Wheelers Hill, Oakleigh
           and Chadstone. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or the rest
           of our <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
         </Callout>
@@ -185,7 +185,7 @@ export default function MountWaverley() {
 
       <QuickQuoteForm
         heading="Ready to reach Mount Waverley letterboxes?"
-        lead="Tell us your streets or school zone and quantity. We'll quote with the letterbox count within 24 hours."
+        lead="Tell us your streets or school zone and quantity. We'll quote with the letterbox count within 5 minutes."
         suburbHint="e.g. Mount Waverley, Glen Waverley, Chadstone"
       />
 

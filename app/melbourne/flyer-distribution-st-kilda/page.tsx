@@ -94,7 +94,7 @@ export default function StKilda() {
           { value: "14,100", label: "homes in St Kilda 3182, approx." },
           { value: "$200", label: "per 1,000 flyers, exclusive" },
           { value: "$2,800", label: "to cover the whole suburb, approx." },
-          { value: "1,000", label: "flyer minimum, $200 test run" },
+          { value: "1,000", label: "flyers, a $200 test run" },
         ]}
       />
 
@@ -182,7 +182,7 @@ export default function StKilda() {
 
       <QuickQuoteForm
         heading="Ready to reach St Kilda letterboxes?"
-        lead="Tell us your strip and quantity, and we'll send a quote with the reachable letterbox count within 24 hours."
+        lead="Tell us your strip and quantity, and we'll send a quote with the reachable letterbox count within 5 minutes."
         suburbHint="e.g. St Kilda, St Kilda East, Elwood"
       />
 

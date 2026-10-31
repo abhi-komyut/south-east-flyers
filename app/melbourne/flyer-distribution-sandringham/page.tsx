@@ -95,7 +95,7 @@ export default function Sandringham() {
           { value: "4,900", label: "homes in Sandringham 3191, approx." },
           { value: "$200", label: "per 1,000 flyers, exclusive" },
           { value: "$1,000", label: "to cover the whole suburb, approx." },
-          { value: "1,000", label: "flyer minimum, $200 test run" },
+          { value: "1,000", label: "flyers, a $200 test run" },
         ]}
       />
 
@@ -184,7 +184,7 @@ export default function Sandringham() {
 
       <QuickQuoteForm
         heading="Ready to reach Sandringham letterboxes?"
-        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count within 24 hours."
+        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count within 5 minutes."
         suburbHint="e.g. Sandringham, Hampton, Black Rock"
       />
 

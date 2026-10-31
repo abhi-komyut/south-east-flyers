@@ -22,7 +22,7 @@ const PAGE_PATH = "/melbourne/flyer-distribution-brighton";
 export const metadata: Metadata = {
   title: { absolute: "Flyer Distribution Brighton VIC 3186 | South East Flyers" },
   description:
-    "Flyer distribution in Brighton 3186: exclusive, GPS-tracked letterbox drops, never bundled. $200 per 1,000 flyers, from 1,000. Free quote in 24 hours.",
+    "Flyer distribution in Brighton 3186: exclusive, GPS-tracked letterbox drops, never bundled. $200 per 1,000 flyers. Free quote in 5 minutes.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Flyer Distribution Brighton VIC 3186 | South East Flyers",
@@ -96,7 +96,7 @@ export default function Brighton() {
           { value: "10,500", label: "homes in Brighton 3186, approx." },
           { value: "$200", label: "per 1,000 flyers, exclusive" },
           { value: "$2,100", label: "to cover the whole suburb, approx." },
-          { value: "1,000", label: "flyer minimum, $200 test run" },
+          { value: "1,000", label: "flyers, a $200 test run" },
         ]}
       />
 
@@ -202,7 +202,7 @@ export default function Brighton() {
 
       <QuickQuoteForm
         heading="Ready to reach Brighton letterboxes?"
-        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count within 24 hours."
+        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count within 5 minutes."
         suburbHint="e.g. Brighton, Brighton East, Hampton"
       />
 

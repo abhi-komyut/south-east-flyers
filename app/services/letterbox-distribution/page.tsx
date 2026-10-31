@@ -58,7 +58,7 @@ const faqs = [
   {
     question: "How much does a letterbox drop cost?",
     answer:
-      "Letterbox distribution is priced per campaign based on your quantity, the suburbs you're targeting and how spread out the delivery is. Tell us your target area and how many flyers you have and we'll send a clear quote. The minimum campaign is 1,000 flyers.",
+      "Letterbox distribution is priced per campaign based on your quantity, the suburbs you're targeting and how spread out the delivery is. Tell us your target area and how many flyers you have and we'll send a clear quote.",
   },
   {
     question: "Do letterbox drops actually work?",

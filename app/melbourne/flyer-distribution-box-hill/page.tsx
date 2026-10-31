@@ -95,7 +95,7 @@ export default function BoxHill() {
           { value: "7,800", label: "homes in Box Hill 3128, approx." },
           { value: "$200", label: "per 1,000 flyers, exclusive" },
           { value: "$1,600", label: "to cover the whole suburb, approx." },
-          { value: "1,000", label: "flyer minimum, $200 test run" },
+          { value: "1,000", label: "flyers, a $200 test run" },
         ]}
       />
 
@@ -176,8 +176,8 @@ export default function BoxHill() {
             { value: "$1,600", label: "whole suburb, approx." },
           ]}
         >
-          Every drop is <strong className="text-ink">$200 per 1,000 flyers</strong>, delivered exclusively, with a
-          1,000-flyer minimum. Our flyer distribution across Whitehorse also reaches Blackburn, Burwood and Nunawading.
+          Every drop is <strong className="text-ink">$200 per 1,000 flyers</strong>, delivered exclusively.
+          Our flyer distribution across Whitehorse also reaches Blackburn, Burwood and Nunawading.
           See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, our{" "}
           <TextLink href="/melbourne/flyer-distribution-south-east-melbourne">south-east and eastern Melbourne</TextLink>{" "}
           suburb list, or{" "}
@@ -189,7 +189,7 @@ export default function BoxHill() {
 
       <QuickQuoteForm
         heading="Ready to reach Box Hill letterboxes?"
-        lead="Tell us your venue or streets and quantity. We'll quote with the reachable letterbox count within 24 hours."
+        lead="Tell us your venue or streets and quantity. We'll quote with the reachable letterbox count within 5 minutes."
         suburbHint="e.g. Box Hill, Blackburn, Burwood"
       />
 
