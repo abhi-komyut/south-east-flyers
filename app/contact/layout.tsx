@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Flyer Distribution Quote Melbourne",
+  title: "Get a Flyer Distribution Quote",
   description:
-    "Get a free quote for letterbox distribution and flyer drops in Melbourne's south-east and eastern suburbs. GPS-tracked, exclusive delivery, 48hr turnaround available.",
+    "Get a free flyer distribution quote within 24 hours. Exclusive, GPS-tracked letterbox drops across Melbourne's south-east and east. Call 0402 824 070.",
   alternates: {
     canonical: "https://www.southeastflyers.com.au/contact",
   },

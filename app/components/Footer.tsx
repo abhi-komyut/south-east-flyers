@@ -28,6 +28,8 @@ export default function Footer() {
             <Link href="/services/letterbox-distribution" className="text-body no-underline">Letterbox distribution</Link>
             <Link href="/services/targeted-flyer-distribution" className="text-body no-underline">Targeted distribution</Link>
             <Link href="/services/gps-tracked-flyer-distribution" className="text-body no-underline">GPS-tracked distribution</Link>
+            <Link href="/services/catalogue-delivery" className="text-body no-underline">Catalogue delivery</Link>
+            <Link href="/services/pamphlet-delivery" className="text-body no-underline">Pamphlet delivery</Link>
           </nav>
 
           <nav aria-label="Suburbs" className="flex-[1_1_160px] flex flex-col gap-3 text-[15px]">

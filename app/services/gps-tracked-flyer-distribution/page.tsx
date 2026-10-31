@@ -17,7 +17,7 @@ const PAGE_PATH = "/services/gps-tracked-flyer-distribution";
 export const metadata: Metadata = {
   title: "GPS-Tracked Flyer Distribution",
   description:
-    "GPS-tracked flyer distribution across Melbourne's south-east and eastern suburbs. Every distribution run is tracked via the Strava app, so you get a report of the routes and streets covered. Get a free quote.",
+    "GPS-tracked flyer distribution: every run recorded in Strava, with a map of streets covered. Exclusive delivery in Melbourne's south-east, $200 per 1,000.",
   alternates: {
     canonical: `${SITE_URL}${PAGE_PATH}`,
   },

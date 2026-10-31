@@ -8,7 +8,7 @@ const PAGE_PATH = "/industries";
 export const metadata: Metadata = {
   title: "Industries We Work With",
   description:
-    "Flyer and letterbox distribution for local businesses, home services trades, real estate and healthcare across Melbourne's south-east and eastern suburbs. Get a free quote.",
+    "Flyer distribution for real estate, trades, cleaners, restaurants, clinics and local businesses across Melbourne's south-east. $200 per 1,000, GPS-tracked.",
   alternates: {
     canonical: `${SITE_URL}${PAGE_PATH}`,
   },
@@ -66,6 +66,21 @@ const industries: { title: string; body: string; href: string }[] = [
     title: "Dog Groomers & Dog Washes",
     body: "Salons, mobile groomers and dog washes reaching dog owners nearby.",
     href: "/industries/pet-groomers",
+  },
+  {
+    title: "Dentists",
+    body: "Dental clinics reaching the families who live closest, within the health advertising rules.",
+    href: "/industries/dentists",
+  },
+  {
+    title: "Vets",
+    body: "Vet clinics introducing themselves to the pet owners on their doorstep.",
+    href: "/industries/vets",
+  },
+  {
+    title: "Carpenters",
+    body: "Decks, pergolas, built-ins and repairs for the homes that need them.",
+    href: "/industries/carpenters",
   },
   {
     title: "Local Businesses",

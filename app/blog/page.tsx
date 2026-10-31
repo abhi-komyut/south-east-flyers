@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumbs from "../components/Breadcrumbs";
 import { posts } from "./posts";
 
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Expert insights on letterbox distribution, flyer marketing, and leaflet delivery across Melbourne's south-east and eastern suburbs. Tips, strategies, and industry news from South East Flyers.",
+    "Guides on letterbox drops, flyer design and local marketing for Melbourne businesses, written by the South East Flyers team in Melbourne's south-east.",
   keywords: [
     "letterbox distribution blog",
     "flyer marketing tips",
@@ -43,6 +44,9 @@ export default function BlogPage() {
       {/* Hero */}
       <section className="bg-navy text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="flex justify-center mb-6">
+            <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Blog" }]} />
+          </div>
           <h1 className="text-3xl md:text-4xl font-bold mb-4">Blog</h1>
           <p className="text-base sm:text-lg text-white/80 max-w-2xl mx-auto">
             Insights, tips, and news about letterbox distribution and flyer
