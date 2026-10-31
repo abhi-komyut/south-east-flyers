@@ -22,7 +22,7 @@ const PAGE_PATH = "/melbourne/flyer-distribution-caulfield";
 export const metadata: Metadata = {
   title: { absolute: "Flyer Distribution Caulfield VIC 3162 | South East Flyers" },
   description:
-    "Flyer distribution in Caulfield 3162, near the racecourse, Monash and Glen Huntly Road. Exclusive, GPS-tracked, never bundled. $200 per 1,000 flyers.",
+    "Flyer distribution in Caulfield 3162, near the racecourse, Monash and Glen Huntly Road. Exclusive, GPS-tracked, never bundled, from 1,000 flyers.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Flyer Distribution Caulfield VIC 3162 | South East Flyers",
@@ -39,9 +39,9 @@ const faqs = [
       "Caulfield itself is one of the smaller suburbs we cover, with about 2,400 homes. A full-suburb drop is affordable, and most businesses can realistically cover all of it in one run.",
   },
   {
-    question: "What does a letterbox drop across all of Caulfield cost?",
+    question: "How much of Caulfield can a letterbox drop cover?",
     answer:
-      "About $500 at $200 per 1,000 flyers, since the suburb has roughly 2,400 homes. That is low enough that many businesses skip testing and go straight to full coverage.",
+      "All of it in one run for most businesses, since the suburb has roughly 2,400 homes. That is small enough that many businesses skip testing and go straight to full coverage.",
   },
   {
     question: "Do you also cover Caulfield North and Caulfield South?",
@@ -72,7 +72,6 @@ const serviceLd = {
     name: "Caulfield, VIC 3162",
     address: { "@type": "PostalAddress", addressLocality: "Caulfield", addressRegion: "VIC", postalCode: "3162", addressCountry: "AU" },
   },
-  offers: { "@type": "Offer", price: "200", priceCurrency: "AUD", description: "Per 1,000 flyers, exclusive delivery, never bundled" },
 };
 
 export default function Caulfield() {
@@ -94,9 +93,9 @@ export default function Caulfield() {
       <FactsStrip
         stats={[
           { value: "2,400", label: "homes in Caulfield 3162, approx." },
-          { value: "$200", label: "per 1,000 flyers, exclusive" },
-          { value: "$500", label: "to cover the whole suburb, approx." },
-          { value: "1,000", label: "flyers, a $200 test run" },
+          { value: "Exclusive", label: "never bundled with other ads" },
+          { value: "GPS map", label: "proof of delivery, every run" },
+          { value: "1,000", label: "flyers, your first test run" },
         ]}
       />
 
@@ -165,13 +164,13 @@ export default function Caulfield() {
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="Letterbox drop cost in Caulfield"
+          title="Letterbox drop quantities in Caulfield"
           figures={[
-            { value: "$200", label: "first test, 1,000 flyers" },
-            { value: "$500", label: "whole suburb, approx." },
+            { value: "1,000", label: "flyers, first test" },
+            { value: "2,400", label: "homes, whole suburb" },
           ]}
         >
-          Every drop is <strong className="text-ink">$200 per 1,000 flyers</strong>, delivered exclusively. Our flyer
+          Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>. Our flyer
           distribution across Glen Eira also reaches Caulfield North, Caulfield South and Bentleigh. See the{" "}
           <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
           <TextLink href="/melbourne/flyer-distribution-bentleigh">Bentleigh</TextLink>,{" "}
@@ -184,7 +183,7 @@ export default function Caulfield() {
 
       <QuickQuoteForm
         heading="Ready to reach Caulfield letterboxes?"
-        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count within 5 minutes."
+        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count, with a quick turnaround."
         suburbHint="e.g. Caulfield, Caulfield North, Bentleigh"
       />
 

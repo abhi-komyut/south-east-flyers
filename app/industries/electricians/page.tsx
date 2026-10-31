@@ -18,7 +18,7 @@ const PAGE_PATH = "/industries/electricians";
 export const metadata: Metadata = {
   title: { absolute: "Electrician Flyers Melbourne | South East Flyers" },
   description:
-    "Electrician flyers for switchboard, safety switch, solar and EV charger work, delivered on their own across Melbourne's south-east. $200 per 1,000 flyers.",
+    "Electrician flyers for switchboard, safety switch, solar and EV charger work, delivered on their own across Melbourne's south-east. Exclusive delivery, from 1,000 flyers.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Electrician Flyers Melbourne | South East Flyers",
@@ -52,7 +52,7 @@ const faqs = [
   {
     question: "How many flyers should an electrician start with?",
     answer:
-      "1,000 to 2,500 homes around your base, costing $200 to $500. Track which streets call, then repeat the drop there and move outward into the streets next door once you know it works.",
+      "1,000 to 2,500 homes around your base. Track which streets call, then repeat the drop there and move outward into the streets next door once you know it works.",
   },
 ];
 
@@ -65,7 +65,6 @@ const serviceLd = {
   url: `${SITE_URL}${PAGE_PATH}`,
   provider: { "@id": `${SITE_URL}/#organization` },
   areaServed: { "@type": "City", name: "Melbourne", addressCountry: "AU" },
-  offers: { "@type": "Offer", price: "200", priceCurrency: "AUD", description: "Per 1,000 flyers, exclusive delivery" },
 };
 
 export default function Electricians() {
@@ -88,8 +87,8 @@ export default function Electricians() {
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "$200", label: "per 1,000 flyers" },
-          { value: "1,000", label: "flyers, a $200 test run" },
+          { value: "40+", label: "suburbs covered" },
+          { value: "1,000", label: "flyers, your first test run" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
       />
@@ -151,8 +150,8 @@ export default function Electricians() {
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="Cost of an electrician letterbox drop"
-          figures={[{ value: "$200", label: "per 1,000 flyers" }, { value: "$500", label: "2,500 homes around your base" }]}
+          title="Quantities for an electrician letterbox drop"
+          figures={[{ value: "1,000", label: "flyers, a first test run" }, { value: "2,500", label: "homes around your base" }]}
         >
           Every drop is delivered exclusively. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink>{" "}
           page for other quantities, or <TextLink href="/industries/home-services">home services</TextLink> for how{" "}
@@ -167,7 +166,7 @@ export default function Electricians() {
 
       <QuickQuoteForm
         heading="Get your next upgrade job from the letterbox"
-        lead="Tell us your base, the jobs you want more of and the suburbs you cover. We'll quote within 5 minutes."
+        lead="Tell us your base, the jobs you want more of and the suburbs you cover. We'll quote with a quick turnaround."
       />
 
       <FAQSection items={faqs} title="Electrician letterbox drop FAQs" />

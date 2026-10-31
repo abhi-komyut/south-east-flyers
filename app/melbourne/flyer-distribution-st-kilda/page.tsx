@@ -20,7 +20,7 @@ const PAGE_PATH = "/melbourne/flyer-distribution-st-kilda";
 export const metadata: Metadata = {
   title: { absolute: "Flyer Distribution St Kilda VIC 3182 | South East Flyers" },
   description:
-    "Flyer distribution St Kilda 3182: Fitzroy Street, Acland Street. Exclusive, GPS-tracked, never bundled. $200 per 1,000 flyers, from 1,000. Free quote.",
+    "Flyer distribution St Kilda 3182: Fitzroy Street, Acland Street. Exclusive, GPS-tracked, never bundled, from 1,000 flyers. Free quote.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Flyer Distribution St Kilda VIC 3182 | South East Flyers",
@@ -37,9 +37,9 @@ const faqs = [
       "St Kilda 3182 has about 14,100 homes, almost all apartments. Many blocks have shared mail rooms rather than individual street letterboxes, so your quote gives the reachable count for your streets.",
   },
   {
-    question: "What does a letterbox drop across all of St Kilda cost?",
+    question: "How much of St Kilda can a letterbox drop reach?",
     answer:
-      "About $2,800 at $200 per 1,000 flyers, though that figure assumes every block is reachable, which isn't the case in an apartment suburb. Most St Kilda businesses start much smaller: 1,000 flyers around Fitzroy Street or Acland Street costs $200, and you can expand from there once you see which streets respond.",
+      "Most of St Kilda's roughly 14,100 homes, though that's lower than a simple full-suburb count since it's an apartment suburb and not every block is reachable. Most St Kilda businesses start much smaller: 1,000 flyers around Fitzroy Street or Acland Street, and you can expand from there once you see which streets respond.",
   },
   {
     question: "Does a letterbox drop still work in an apartment suburb?",
@@ -70,7 +70,6 @@ const serviceLd = {
     name: "St Kilda, VIC 3182",
     address: { "@type": "PostalAddress", addressLocality: "St Kilda", addressRegion: "VIC", postalCode: "3182", addressCountry: "AU" },
   },
-  offers: { "@type": "Offer", price: "200", priceCurrency: "AUD", description: "Per 1,000 flyers, exclusive delivery, never bundled" },
 };
 
 export default function StKilda() {
@@ -92,9 +91,9 @@ export default function StKilda() {
       <FactsStrip
         stats={[
           { value: "14,100", label: "homes in St Kilda 3182, approx." },
-          { value: "$200", label: "per 1,000 flyers, exclusive" },
-          { value: "$2,800", label: "to cover the whole suburb, approx." },
-          { value: "1,000", label: "flyers, a $200 test run" },
+          { value: "Exclusive", label: "never bundled with other ads" },
+          { value: "GPS map", label: "proof of delivery, every run" },
+          { value: "1,000", label: "flyers, your first test run" },
         ]}
       />
 
@@ -163,13 +162,13 @@ export default function StKilda() {
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="Letterbox drop cost in St Kilda"
+          title="Letterbox drop quantities in St Kilda"
           figures={[
-            { value: "$200", label: "first test, around one strip" },
-            { value: "$2,800", label: "whole suburb, approx." },
+            { value: "1,000", label: "flyers, first test around one strip" },
+            { value: "14,100", label: "homes, approx., whole suburb" },
           ]}
         >
-          Every drop is <strong className="text-ink">$200 per 1,000 flyers</strong>, delivered exclusively. St Kilda
+          Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>. St Kilda
           sits in the City of Port Phillip, so our flyer distribution across Port Phillip also reaches St Kilda East,
           Elwood, Balaclava and Albert Park. See the{" "}
           <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
@@ -182,7 +181,7 @@ export default function StKilda() {
 
       <QuickQuoteForm
         heading="Ready to reach St Kilda letterboxes?"
-        lead="Tell us your strip and quantity, and we'll send a quote with the reachable letterbox count within 5 minutes."
+        lead="Tell us your strip and quantity, and we'll send a quote with the reachable letterbox count, with a quick turnaround."
         suburbHint="e.g. St Kilda, St Kilda East, Elwood"
       />
 

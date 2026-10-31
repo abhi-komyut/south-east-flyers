@@ -21,7 +21,7 @@ const PAGE_PATH = "/melbourne/flyer-distribution-sandringham";
 export const metadata: Metadata = {
   title: { absolute: "Flyer Distribution Sandringham VIC 3191 | South East Flyers" },
   description:
-    "Flyer distribution in Sandringham 3191, from the village to the beach. Exclusive, GPS-tracked letterbox drops, never bundled. $200 per 1,000 flyers.",
+    "Flyer distribution in Sandringham 3191, from the village to the beach. Exclusive, GPS-tracked letterbox drops, never bundled, from 1,000 flyers.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Flyer Distribution Sandringham VIC 3191 | South East Flyers",
@@ -38,9 +38,9 @@ const faqs = [
       "Sandringham 3191 has about 4,900 homes. Most are houses and townhouses with street letterboxes, so coverage on a standard walking route is high.",
   },
   {
-    question: "What does it cost to cover all of Sandringham?",
+    question: "How much of Sandringham can a letterbox drop cover?",
     answer:
-      "About $1,000 at $200 per 1,000 flyers. Because the suburb is compact, many businesses cover all of it in one run.",
+      "All 4,900 homes in one run for most businesses. Because the suburb is compact, many cover all of it rather than testing a pocket first.",
   },
   {
     question: "Can I target just the streets around Sandringham village?",
@@ -71,7 +71,6 @@ const serviceLd = {
     name: "Sandringham, VIC 3191",
     address: { "@type": "PostalAddress", addressLocality: "Sandringham", addressRegion: "VIC", postalCode: "3191", addressCountry: "AU" },
   },
-  offers: { "@type": "Offer", price: "200", priceCurrency: "AUD", description: "Per 1,000 flyers, exclusive delivery, never bundled" },
 };
 
 export default function Sandringham() {
@@ -93,9 +92,9 @@ export default function Sandringham() {
       <FactsStrip
         stats={[
           { value: "4,900", label: "homes in Sandringham 3191, approx." },
-          { value: "$200", label: "per 1,000 flyers, exclusive" },
-          { value: "$1,000", label: "to cover the whole suburb, approx." },
-          { value: "1,000", label: "flyers, a $200 test run" },
+          { value: "Exclusive", label: "never bundled with other ads" },
+          { value: "GPS map", label: "proof of delivery, every run" },
+          { value: "1,000", label: "flyers, your first test run" },
         ]}
       />
 
@@ -138,9 +137,9 @@ export default function Sandringham() {
 
       <Section title="Small enough to cover every month">
         <p>
-          At about $1,000 for the whole suburb, Sandringham is one of the few places where a local business can
-          afford to reach every household regularly. A monthly or seasonal drop to all 4,900 homes builds the kind of
-          familiarity that a single campaign can&rsquo;t.
+          Sandringham is small enough that a local business can affordably reach every household regularly. A
+          monthly or seasonal drop to all 4,900 homes builds the kind of familiarity that a single campaign
+          can&rsquo;t.
         </p>
         <p>
           Village cafes and shops use this to announce changing menus and seasonal stock. Trades and agents use it to
@@ -166,13 +165,13 @@ export default function Sandringham() {
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="Letterbox drop cost in Sandringham"
+          title="Letterbox drop quantities in Sandringham"
           figures={[
-            { value: "$200", label: "first test, 1,000 flyers" },
-            { value: "$1,000", label: "whole suburb, approx." },
+            { value: "1,000", label: "flyers, first test" },
+            { value: "4,900", label: "homes, whole suburb" },
           ]}
         >
-          Every drop is <strong className="text-ink">$200 per 1,000 flyers</strong>, delivered exclusively. Our flyer
+          Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>. Our flyer
           distribution across Bayside also reaches Hampton, Black Rock, Beaumaris and{" "}
           <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink>. See the{" "}
           <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or the rest of our{" "}
@@ -184,7 +183,7 @@ export default function Sandringham() {
 
       <QuickQuoteForm
         heading="Ready to reach Sandringham letterboxes?"
-        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count within 5 minutes."
+        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count, with a quick turnaround."
         suburbHint="e.g. Sandringham, Hampton, Black Rock"
       />
 

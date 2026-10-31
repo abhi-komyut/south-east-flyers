@@ -18,7 +18,7 @@ const PAGE_PATH = "/industries/builders";
 export const metadata: Metadata = {
   title: { absolute: "Construction & Builder Flyers Melbourne | South East Flyers" },
   description:
-    "Construction flyers delivered on their own to the streets around your sites and the suburbs you build in. GPS-tracked, $200 per 1,000 flyers, from 1,000.",
+    "Construction flyers delivered on their own to the streets around your sites and the suburbs you build in. GPS-tracked, exclusive delivery, from 1,000 flyers.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Construction & Builder Flyers Melbourne | South East Flyers",
@@ -37,7 +37,7 @@ const faqs = [
   {
     question: "When should a builder drop flyers around a site?",
     answer:
-      "Three times: before work starts, to introduce yourself and the build hours; at lock-up, when the house takes shape; and at handover, with photos of the finished home. Each drop of around 1,000 flyers costs $200.",
+      "Three times: before work starts, to introduce yourself and the build hours; at lock-up, when the house takes shape; and at handover, with photos of the finished home. Each drop covers around 1,000 flyers around the site.",
   },
   {
     question: "Which suburbs suit knockdown-rebuild flyers?",
@@ -52,7 +52,7 @@ const faqs = [
   {
     question: "How many flyers should a builder start with?",
     answer:
-      "1,000 flyers around one live site, at $200, is a sensible first test. Builders who want enquiries across a whole suburb usually step up to 5,000 homes for $1,000, spread over a few months.",
+      "1,000 flyers around one live site is a sensible first test. Builders who want enquiries across a whole suburb usually step up to 5,000 homes, spread over a few months.",
   },
 ];
 
@@ -65,7 +65,6 @@ const serviceLd = {
   url: `${SITE_URL}${PAGE_PATH}`,
   provider: { "@id": `${SITE_URL}/#organization` },
   areaServed: { "@type": "City", name: "Melbourne", addressCountry: "AU" },
-  offers: { "@type": "Offer", price: "200", priceCurrency: "AUD", description: "Per 1,000 flyers, exclusive delivery" },
 };
 
 export default function Builders() {
@@ -88,7 +87,7 @@ export default function Builders() {
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "$200", label: "per 1,000 flyers" },
+          { value: "40+", label: "suburbs covered" },
           { value: "1,000", label: "flyers covers one site's neighbours" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
@@ -115,8 +114,8 @@ export default function Builders() {
           ]}
         />
         <p>
-          At around 1,000 homes per drop, the full set costs $600 per site. The GPS report from each run shows exactly
-          which streets received it.
+          At around 1,000 homes per drop, three drops cover the whole build cycle at each site. The GPS report from
+          each run shows exactly which streets received it.
         </p>
       </Section>
 
@@ -164,11 +163,11 @@ export default function Builders() {
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="Quantities and cost"
-          figures={[{ value: "$200", label: "1,000 homes around a site" }, { value: "$1,000", label: "5,000 homes, a whole area" }]}
+          title="Quantities"
+          figures={[{ value: "1,000", label: "homes around a site" }, { value: "5,000", label: "homes, a whole area" }]}
         >
-          Every drop is $200 per 1,000 flyers, exclusive, from 1,000. See the{" "}
-          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for more quantities. Building is
+          Every drop is exclusive, from 1,000 flyers. See the{" "}
+          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for a quote. Building is
           one of the trades on our <TextLink href="/industries/home-services">home services</TextLink> page, alongside{" "}
           <TextLink href="/industries/renovation">renovators</TextLink> and{" "}
           <TextLink href="/industries/electricians">electricians</TextLink>.
@@ -179,7 +178,7 @@ export default function Builders() {
 
       <QuickQuoteForm
         heading="Put your builds in front of the neighbours"
-        lead="Tell us your site addresses and the suburbs you build in. We'll quote within 5 minutes."
+        lead="Tell us your site addresses and the suburbs you build in. We'll quote with a quick turnaround."
       />
 
       <FAQSection items={faqs} title="Builder letterbox drop FAQs" />

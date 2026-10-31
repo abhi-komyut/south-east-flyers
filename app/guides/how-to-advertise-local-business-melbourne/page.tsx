@@ -36,7 +36,7 @@ const faqs = [
   {
     question: "How do I advertise my business locally with a small budget?",
     answer:
-      "Set up your Google Business Profile, ask every customer for a review, then test one paid channel at a time. A 1,000-flyer letterbox drop costs $200 with us, which is a contained test you can measure with a unique offer code.",
+      "Set up your Google Business Profile, ask every customer for a review, then test one paid channel at a time. A 1,000-flyer letterbox drop with us is a contained test you can measure with a unique offer code.",
   },
   {
     question: "Are letterbox drops better than Facebook ads?",
@@ -167,9 +167,9 @@ export default function LocalAdvertisingGuide() {
           ]}
         />
         <p>
-          Our drops cost $200 per 1,000 flyers, delivered on their own and GPS-tracked. The{" "}
-          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page has prices from 1,000 to 20,000
-          flyers.
+          Our drops are delivered on their own and GPS-tracked, from 1,000 flyers. The{" "}
+          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page covers quantities from 1,000 to
+          20,000 flyers.
         </p>
       </Section>
 
@@ -191,7 +191,7 @@ export default function LocalAdvertisingGuide() {
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
           title="Local advertising in Melbourne's south-east"
-          figures={[{ value: "$200", label: "a 1,000-flyer test" }, { value: "56", label: "key suburbs we cover" }]}
+          figures={[{ value: "1,000", label: "flyers, a first test" }, { value: "56", label: "key suburbs we cover" }]}
         >
           If a letterbox drop fits your business, we cover 56 key suburbs across{" "}
           <TextLink href="/melbourne/flyer-distribution-south-east-melbourne">south-east and eastern Melbourne</TextLink>.
@@ -201,7 +201,7 @@ export default function LocalAdvertisingGuide() {
 
       <QuickQuoteForm
         heading="Want to test a letterbox drop?"
-        lead="Tell us your business and the streets around you. We'll quote within 5 minutes."
+        lead="Tell us your business and the streets around you. We'll quote with a quick turnaround."
       />
 
       <FAQSection items={faqs} title="Local advertising FAQs" />

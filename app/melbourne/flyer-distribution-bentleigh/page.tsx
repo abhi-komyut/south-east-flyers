@@ -22,7 +22,7 @@ const PAGE_PATH = "/melbourne/flyer-distribution-bentleigh";
 export const metadata: Metadata = {
   title: { absolute: "Flyer Distribution Bentleigh VIC 3204 | South East Flyers" },
   description:
-    "Flyer distribution in Bentleigh 3204, from Centre Road to the family streets around it. Exclusive, GPS-tracked, never bundled. $200 per 1,000 flyers.",
+    "Flyer distribution in Bentleigh 3204, from Centre Road to the family streets around it. Exclusive, GPS-tracked, never bundled, from 1,000 flyers.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Flyer Distribution Bentleigh VIC 3204 | South East Flyers",
@@ -39,9 +39,9 @@ const faqs = [
       "Bentleigh 3204 has about 7,500 homes, mostly separate houses with street letterboxes. That gives a route high coverage across most of the suburb.",
   },
   {
-    question: "What does a letterbox drop across all of Bentleigh cost?",
+    question: "How much of Bentleigh can a letterbox drop cover?",
     answer:
-      "About $1,500 at $200 per 1,000 flyers. A first test run of 1,000 flyers around Centre Road costs $200, and most businesses expand from there once they can see which streets are actually calling.",
+      "With about 7,500 homes, a full-suburb drop covers all of Bentleigh. A first test run of 1,000 flyers around Centre Road is a sensible starting point, and most businesses expand from there once they can see which streets are actually calling.",
   },
   {
     question: "Is Bentleigh a good suburb for family-focused flyers?",
@@ -72,7 +72,6 @@ const serviceLd = {
     name: "Bentleigh, VIC 3204",
     address: { "@type": "PostalAddress", addressLocality: "Bentleigh", addressRegion: "VIC", postalCode: "3204", addressCountry: "AU" },
   },
-  offers: { "@type": "Offer", price: "200", priceCurrency: "AUD", description: "Per 1,000 flyers, exclusive delivery, never bundled" },
 };
 
 export default function Bentleigh() {
@@ -94,9 +93,9 @@ export default function Bentleigh() {
       <FactsStrip
         stats={[
           { value: "7,500", label: "homes in Bentleigh 3204, approx." },
-          { value: "$200", label: "per 1,000 flyers, exclusive" },
-          { value: "$1,500", label: "to cover the whole suburb, approx." },
-          { value: "1,000", label: "flyers, a $200 test run" },
+          { value: "Exclusive", label: "never bundled with other ads" },
+          { value: "GPS map", label: "proof of delivery, every run" },
+          { value: "1,000", label: "flyers, your first test run" },
         ]}
       />
 
@@ -178,13 +177,13 @@ export default function Bentleigh() {
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="Letterbox drop cost in Bentleigh"
+          title="Letterbox drop quantities in Bentleigh"
           figures={[
-            { value: "$200", label: "first test, 1,000 flyers" },
-            { value: "$1,500", label: "whole suburb, approx." },
+            { value: "1,000", label: "flyers, first test" },
+            { value: "7,500", label: "homes, whole suburb" },
           ]}
         >
-          Every drop is <strong className="text-ink">$200 per 1,000 flyers</strong>, delivered exclusively. Our flyer
+          Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>. Our flyer
           distribution across Glen Eira also reaches Caulfield. See the{" "}
           <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
           <TextLink href="/melbourne/flyer-distribution-caulfield">Caulfield</TextLink> and the rest of our{" "}
@@ -196,7 +195,7 @@ export default function Bentleigh() {
 
       <QuickQuoteForm
         heading="Ready to reach Bentleigh letterboxes?"
-        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count within 5 minutes."
+        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count, with a quick turnaround."
         suburbHint="e.g. Bentleigh, Bentleigh East, Caulfield"
       />
 

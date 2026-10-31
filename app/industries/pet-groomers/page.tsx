@@ -18,7 +18,7 @@ const PAGE_PATH = "/industries/pet-groomers";
 export const metadata: Metadata = {
   title: { absolute: "Dog Grooming Marketing Melbourne | South East Flyers" },
   description:
-    "Dog grooming marketing with letterbox drops for salons, mobile groomers and dog washes in Melbourne's south-east. Exclusive, GPS-tracked, $200 per 1,000.",
+    "Dog grooming marketing with letterbox drops for salons, mobile groomers and dog washes in Melbourne's south-east. Exclusive, GPS-tracked, from 1,000 flyers.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Letterbox Drops for Dog Groomers & Dog Washes | South East Flyers",
@@ -52,7 +52,7 @@ const faqs = [
   {
     question: "How many flyers should a groomer start with?",
     answer:
-      "1,000 to 2,500 homes around your salon or across your mobile route, at $200 to $500. Leafy house suburbs with backyards, such as Mount Waverley or Bentleigh, usually hold more dog owners than apartment streets.",
+      "1,000 to 2,500 homes around your salon or across your mobile route. Leafy house suburbs with backyards, such as Mount Waverley or Bentleigh, usually hold more dog owners than apartment streets.",
   },
 ];
 
@@ -65,7 +65,6 @@ const serviceLd = {
   url: `${SITE_URL}${PAGE_PATH}`,
   provider: { "@id": `${SITE_URL}/#organization` },
   areaServed: { "@type": "City", name: "Melbourne", addressCountry: "AU" },
-  offers: { "@type": "Offer", price: "200", priceCurrency: "AUD", description: "Per 1,000 flyers, exclusive delivery" },
 };
 
 export default function PetGroomers() {
@@ -88,8 +87,8 @@ export default function PetGroomers() {
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "$200", label: "per 1,000 flyers" },
-          { value: "1,000", label: "flyers, a $200 test run" },
+          { value: "40+", label: "suburbs covered" },
+          { value: "1,000", label: "flyers, your first test run" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
       />
@@ -159,11 +158,11 @@ export default function PetGroomers() {
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="Quantities and cost"
-          figures={[{ value: "$200", label: "1,000 homes, first test" }, { value: "$500", label: "2,500 homes, a mobile route" }]}
+          title="Quantities"
+          figures={[{ value: "1,000", label: "homes, first test" }, { value: "2,500", label: "homes, a mobile route" }]}
         >
-          Every drop is $200 per 1,000 flyers, exclusive, from 1,000. See the{" "}
-          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for more quantities, or our{" "}
+          Every drop is exclusive, from 1,000 flyers. See the{" "}
+          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for a quote, or our{" "}
           <TextLink href="/industries/local-businesses">local business</TextLink> page for other businesses that work
           the same way.
         </Callout>
@@ -173,7 +172,7 @@ export default function PetGroomers() {
 
       <QuickQuoteForm
         heading="Reach the dog owners near you"
-        lead="Tell us where your salon is or which suburbs your van covers. We'll quote within 5 minutes."
+        lead="Tell us where your salon is or which suburbs your van covers. We'll quote with a quick turnaround."
       />
 
       <FAQSection items={faqs} title="Dog groomer letterbox drop FAQs" />

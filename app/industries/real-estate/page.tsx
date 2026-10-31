@@ -22,7 +22,7 @@ const PAGE_PATH = "/industries/real-estate";
 export const metadata: Metadata = {
   title: { absolute: "Real Estate Letterbox Drops Melbourne | South East Flyers" },
   description:
-    "Real estate letterbox drops for Just Listed, Open Home, Auction and Sold campaigns. Exclusive, GPS-tracked proof for vendors. $200 per 1,000 flyers.",
+    "Real estate letterbox drops for Just Listed, Open Home, Auction and Sold campaigns. Exclusive, GPS-tracked proof for vendors, from 1,000 flyers.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Real Estate Letterbox Drops Melbourne | South East Flyers",
@@ -46,7 +46,7 @@ const faqs = [
   {
     question: "How many flyers does a Just Listed drop need?",
     answer:
-      "Most agents cover the few streets immediately around the property. 1,000 flyers ($200) covers those streets with room to extend into your wider farm area.",
+      "Most agents cover the few streets immediately around the property. 1,000 flyers covers those streets with room to extend into your wider farm area.",
   },
   {
     question: "Which agencies do you deliver for?",
@@ -79,7 +79,6 @@ const serviceLd = {
   url: `${SITE_URL}${PAGE_PATH}`,
   provider: { "@id": `${SITE_URL}/#organization` },
   areaServed: { "@type": "City", name: "Melbourne", addressCountry: "AU" },
-  offers: { "@type": "Offer", price: "200", priceCurrency: "AUD", description: "Per 1,000 flyers, exclusive delivery" },
 };
 
 export default function RealEstate() {
@@ -101,7 +100,7 @@ export default function RealEstate() {
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "$200", label: "per 1,000 flyers" },
+          { value: "40+", label: "suburbs covered" },
           { value: "48 hrs", label: "to start for new listings" },
           { value: "GPS map", label: "to forward to your vendor" },
         ]}
@@ -199,15 +198,15 @@ export default function RealEstate() {
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="Cost of a real estate letterbox drop"
+          title="Quantities for a real estate letterbox drop"
           figures={[
-            { value: "$500", label: "Just Listed, 2,500 homes" },
-            { value: "$2,000", label: "four drops, same 2,500 homes" },
+            { value: "2,500", label: "homes, Just Listed" },
+            { value: "4", label: "drops across a typical campaign" },
           ]}
         >
-          Real estate flyers are priced the same as any other campaign:{" "}
-          <strong className="text-ink">$200 per 1,000</strong>, delivered exclusively.
-          See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for more quantities.
+          Real estate flyers are delivered the same way as any other campaign:{" "}
+          <strong className="text-ink">exclusively</strong>, never bundled.
+          See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for a quote.
           This is real estate marketing Melbourne agencies have used for decades, just with GPS proof added on top.
           We cover agents&rsquo; patches across Melbourne&rsquo;s south-east and east, including{" "}
           <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink>,{" "}
@@ -223,7 +222,7 @@ export default function RealEstate() {
 
       <QuickQuoteForm
         heading="Plan your next listing campaign"
-        lead="Tell us the property address, the streets you want covered and your open home date. We'll quote within 5 minutes."
+        lead="Tell us the property address, the streets you want covered and your open home date. We'll quote with a quick turnaround."
         suburbHint="e.g. 14 Example St, Brighton and surrounding streets"
       />
 

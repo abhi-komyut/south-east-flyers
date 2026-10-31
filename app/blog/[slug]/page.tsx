@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { posts, getPostBySlug } from "../posts";
-import Breadcrumbs from "../../components/Breadcrumbs";
-
-const SITE_URL = "https://www.southeastflyers.com.au";
+import QuickQuoteForm from "../../components/QuickQuoteForm";
+import { SITE_URL, PageHero, TextLink, JsonLd } from "../../components/landing";
 
 export function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
@@ -42,6 +40,12 @@ export default async function BlogPostPage({
     notFound();
   }
 
+  const formattedDate = new Date(post.date).toLocaleDateString("en-AU", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
   const blogPostingLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -57,78 +61,36 @@ export default async function BlogPostPage({
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingLd) }}
+      <JsonLd data={blogPostingLd} />
+
+      <PageHero
+        crumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: post.title }]}
+        h1={post.title}
+        lead={
+          <>
+            {formattedDate}. {post.excerpt}
+          </>
+        }
       />
-      {/* Hero */}
-      <section className="bg-navy text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-8">
-            <Breadcrumbs
-              items={[
-                { name: "Home", href: "/" },
-                { name: "Blog", href: "/blog" },
-                { name: post.title },
-              ]}
-            />
-          </div>
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-white/80 mb-3">
-            {new Date(post.date).toLocaleDateString("en-AU", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })}
-          </p>
-          <h1 className="text-3xl md:text-4xl font-bold max-w-3xl mx-auto">
-            {post.title}
-          </h1>
+
+      <section className="px-[clamp(20px,4vw,48px)] py-[clamp(56px,7vw,96px)]">
+        <div
+          className="max-w-[700px] mx-auto flex flex-col gap-[18px] text-[17px] leading-[1.75] text-body
+            [&_h2]:font-display [&_h2]:font-medium [&_h2]:text-[clamp(24px,2.6vw,32px)] [&_h2]:leading-[1.2] [&_h2]:text-ink [&_h2]:mt-6 [&_h2]:mb-0
+            [&_p]:m-0
+            [&_a]:text-navy [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-teal-deep"
+          dangerouslySetInnerHTML={{ __html: post.content }}
+        />
+
+        <div className="max-w-[700px] mx-auto mt-10 pt-6 border-t border-line">
+          <TextLink href="/blog">← Back to blog</TextLink>
         </div>
       </section>
 
-      {/* Content */}
-      <section className="py-20 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
-            className="prose prose-base sm:prose-lg max-w-none
-              [&_h2]:text-xl [&_h2]:sm:text-2xl [&_h2]:font-bold [&_h2]:text-black [&_h2]:mt-8 [&_h2]:sm:mt-10 [&_h2]:mb-3 [&_h2]:sm:mb-4
-              [&_p]:text-gray-700 [&_p]:leading-relaxed [&_p]:mb-4 [&_p]:sm:mb-6
-              [&_a]:text-navy [&_a]:underline"
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          />
-
-          <div className="mt-12 pt-8 border-t border-gray-200">
-            <Link
-              href="/blog"
-              className="text-navy font-semibold hover:underline"
-            >
-              &larr; Back to Blog
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="bg-navy text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            Ready to Start Your Letterbox Campaign?
-          </h2>
-          <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-            Get in touch with our team for a free quote on flyer distribution
-            across Melbourne&rsquo;s south-east and eastern suburbs.
-          </p>
-          <Link
-            href="/contact"
-            data-quote-cta
-            className="inline-block bg-cta text-white font-semibold px-6 py-3 rounded transition-all duration-200 hover:bg-cta-hover hover:scale-[1.02]"
-          >
-            Get a Free Quote
-          </Link>
-        </div>
-      </section>
+      <QuickQuoteForm
+        heading="Ready to start your letterbox campaign?"
+        lead="Tell us your target suburbs and flyer quantity for a free, no-obligation quote."
+      />
     </>
   );
 }

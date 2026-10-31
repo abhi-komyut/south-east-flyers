@@ -20,7 +20,7 @@ const PAGE_PATH = "/melbourne/flyer-distribution-kew";
 export const metadata: Metadata = {
   title: { absolute: "Flyer Distribution Kew VIC 3101 | South East Flyers" },
   description:
-    "Flyer distribution in Kew 3101 for families, schools and Kew Junction shops. Exclusive, GPS-tracked, never bundled. $200 per 1,000 flyers, from 1,000.",
+    "Flyer distribution in Kew 3101 for families, schools and Kew Junction shops. Exclusive, GPS-tracked, never bundled, from 1,000 flyers.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Flyer Distribution Kew VIC 3101 | South East Flyers",
@@ -37,9 +37,9 @@ const faqs = [
       "Kew 3101 has about 10,600 homes. It has a fair number of apartments, and blocks with locked mail rooms are skipped, so your quote gives the reachable count for your streets.",
   },
   {
-    question: "What does a letterbox drop across all of Kew cost?",
+    question: "How much of Kew can a letterbox drop cover?",
     answer:
-      "About $2,100 at $200 per 1,000 flyers. Most businesses start smaller: 1,000 flyers around Kew Junction or one school catchment costs $200, then expand once they know which streets respond.",
+      "Up to all 10,600 homes across the suburb, though most businesses start smaller: 1,000 flyers around Kew Junction or one school catchment, then expand once they know which streets respond.",
   },
   {
     question: "Is Kew a good suburb for tutoring and kids' activity flyers?",
@@ -70,7 +70,6 @@ const serviceLd = {
     name: "Kew, VIC 3101",
     address: { "@type": "PostalAddress", addressLocality: "Kew", addressRegion: "VIC", postalCode: "3101", addressCountry: "AU" },
   },
-  offers: { "@type": "Offer", price: "200", priceCurrency: "AUD", description: "Per 1,000 flyers, exclusive delivery, never bundled" },
 };
 
 export default function Kew() {
@@ -92,9 +91,9 @@ export default function Kew() {
       <FactsStrip
         stats={[
           { value: "10,600", label: "homes in Kew 3101, approx." },
-          { value: "$200", label: "per 1,000 flyers, exclusive" },
-          { value: "$2,100", label: "to cover the whole suburb, approx." },
-          { value: "1,000", label: "flyers, a $200 test run" },
+          { value: "Exclusive", label: "never bundled with other ads" },
+          { value: "GPS map", label: "proof of delivery, every run" },
+          { value: "1,000", label: "flyers, your first test run" },
         ]}
       />
 
@@ -164,13 +163,13 @@ export default function Kew() {
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="Letterbox drop cost in Kew"
+          title="Letterbox drop quantities in Kew"
           figures={[
-            { value: "$200", label: "first test, 1,000 flyers" },
-            { value: "$2,100", label: "whole suburb, approx." },
+            { value: "1,000", label: "flyers, first test" },
+            { value: "10,600", label: "homes, whole suburb" },
           ]}
         >
-          Every drop is <strong className="text-ink">$200 per 1,000 flyers</strong>, delivered exclusively. Our flyer
+          Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>. Our flyer
           distribution across Boroondara also reaches Hawthorn and Camberwell. See the{" "}
           <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
           <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink>,{" "}
@@ -183,7 +182,7 @@ export default function Kew() {
 
       <QuickQuoteForm
         heading="Ready to reach Kew families?"
-        lead="Tell us your streets or school catchment and quantity. We'll quote within 5 minutes."
+        lead="Tell us your streets or school catchment and quantity. We'll quote with a quick turnaround."
         suburbHint="e.g. Kew, Kew East, Hawthorn"
       />
 

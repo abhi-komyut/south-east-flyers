@@ -5,13 +5,11 @@ import PricingCalculator from "../components/PricingCalculator";
 import Reveal from "../components/Reveal";
 import {
   SITE_URL,
-  PRICE_PER_THOUSAND,
   PageHero,
   Section,
   Bullets,
   TextLink,
   JsonLd,
-  formatAud,
 } from "../components/landing";
 
 const PAGE_PATH = "/letterbox-drop-cost";
@@ -19,11 +17,11 @@ const PAGE_PATH = "/letterbox-drop-cost";
 export const metadata: Metadata = {
   title: { absolute: "Letterbox Drop Cost Melbourne 2026 | South East Flyers" },
   description:
-    "Letterbox drop cost Melbourne: $200 per 1,000 flyers, exclusive, GPS-tracked, never bundled. Prices for 1,000 to 20,000 flyers. Free quote in 5 minutes.",
+    "Letterbox drop cost in Melbourne depends on your flyer quantity and target suburbs. Exclusive, GPS-tracked, never bundled. Free, no-obligation quote with a quick turnaround.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Letterbox Drop Cost Melbourne | South East Flyers",
-    description: "$200 per 1,000 flyers, exclusive delivery, GPS-tracked. Prices from 1,000 to 20,000 flyers.",
+    description: "Exclusive, GPS-tracked letterbox drops across Melbourne's south-east. Tell us your quantity and suburbs for a free quote.",
     url: `${SITE_URL}${PAGE_PATH}`,
     type: "website",
   },
@@ -35,7 +33,7 @@ const faqs = [
   {
     question: "How much does a letterbox drop cost in Melbourne?",
     answer:
-      "With South East Flyers, a letterbox drop costs $200 per 1,000 flyers. Your flyer is delivered on its own, never bundled, and every run is GPS-tracked. A 5,000-flyer campaign costs $1,000.",
+      "Cost depends on your flyer quantity and the suburbs you want to cover. Every drop is delivered on its own, never bundled, and GPS-tracked. Tell us your numbers and we'll send a clear quote with a quick turnaround.",
   },
   {
     question: "Why does exclusive delivery cost more than shared distribution?",
@@ -45,7 +43,7 @@ const faqs = [
   {
     question: "Is printing included in the price?",
     answer:
-      "No. We distribute flyers; we don't print them. You can use any printer and have the flyers sent to us, and the $200 per 1,000 covers delivery and the GPS report.",
+      "No. We distribute flyers; we don't print them. You can use any printer and have the flyers sent to us — delivery and the GPS report are covered in your quote.",
   },
   {
     question: "How many flyers do I need?",
@@ -55,11 +53,11 @@ const faqs = [
   {
     question: "How quickly will I get a price?",
     answer:
-      "Quotes are sent within 5 minutes and show the letterbox count, total cost and start date. Urgent campaigns can start within 48 hours of your flyers arriving, once we've confirmed the streets with you.",
+      "Quotes are sent with a quick turnaround and show the letterbox count, total cost and start date. Urgent campaigns can start within 48 hours of your flyers arriving, once we've confirmed the streets with you.",
   },
 ];
 
-const offerLd = {
+const serviceLd = {
   "@context": "https://schema.org",
   "@type": "Service",
   name: "Letterbox drop (exclusive flyer distribution)",
@@ -67,43 +65,34 @@ const offerLd = {
   url: `${SITE_URL}${PAGE_PATH}`,
   provider: { "@id": `${SITE_URL}/#organization` },
   areaServed: { "@type": "City", name: "Melbourne", addressCountry: "AU" },
-  offers: {
-    "@type": "Offer",
-    price: String(PRICE_PER_THOUSAND),
-    priceCurrency: "AUD",
-    eligibleQuantity: { "@type": "QuantitativeValue", minValue: 1000, unitText: "flyers" },
-    description: "Per 1,000 flyers, exclusive delivery, never bundled, GPS-tracked",
-  },
 };
 
 export default function LetterboxDropCost() {
   return (
     <>
-      <JsonLd data={offerLd} />
+      <JsonLd data={serviceLd} />
 
       <PageHero
         crumbs={[{ name: "Home", href: "/" }, { name: "Letterbox drop cost" }]}
         h1="How much does a letterbox drop cost in Melbourne?"
-        lead="A letterbox drop with South East Flyers costs $200 per 1,000 flyers. That covers exclusive delivery, so your flyer goes into each letterbox on its own, plus a GPS map of every street covered."
+        lead="A letterbox drop cost depends on your flyer quantity and target suburbs. Every drop is delivered exclusively, never bundled, plus a GPS map of every street covered. Tell us your numbers for a free, no-obligation quote."
         rightSlot={<PricingCalculator />}
       />
 
-      <Section title="Letterbox drop prices by quantity" first>
-        <p>The total is easy to work out before you call. The letterbox drop price per 1,000 is exactly $200.</p>
+      <Section title="What different flyer quantities cover" first>
+        <p>The right quantity depends on your target area, not a fixed price list. Here&rsquo;s roughly what each quantity covers:</p>
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse text-base">
             <thead>
               <tr className="font-heading text-[13px] text-muted">
                 <th scope="col" className="pb-3.5 pr-4 font-semibold">Flyers delivered</th>
-                <th scope="col" className="pb-3.5 px-4 font-semibold">Total cost</th>
                 <th scope="col" className="pb-3.5 pl-4 font-semibold">Good for</th>
               </tr>
             </thead>
             <tbody>
               {quantities.map((q) => (
                 <tr key={q} className="border-t border-line">
-                  <td className="py-[18px] pr-4 [font-variant-numeric:tabular-nums]">{q.toLocaleString("en-AU")}</td>
-                  <td className="py-[18px] px-4 font-display text-xl text-navy [font-variant-numeric:tabular-nums]">{formatAud((q / 1000) * PRICE_PER_THOUSAND)}</td>
+                  <td className="py-[18px] pr-4 font-display text-xl text-navy [font-variant-numeric:tabular-nums]">{q.toLocaleString("en-AU")}</td>
                   <td className="py-[18px] pl-4 text-[15px] text-body">
                     {q === 1000 && "Test run, or the streets around one listing or shop"}
                     {q === 2500 && "A tight radius around your business"}
@@ -121,7 +110,7 @@ export default function LetterboxDropCost() {
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Reveal as="section" className="bg-cream rounded-card p-9 sm:p-16 flex flex-col gap-9">
           <h2 className="m-0 font-display font-medium text-[clamp(28px,2.8vw,38px)] leading-[1.15]">
-            What the price includes
+            What&rsquo;s included
           </h2>
           <dl className="m-0 flex flex-wrap gap-7 gap-x-14">
             {[
@@ -152,8 +141,8 @@ export default function LetterboxDropCost() {
       <Section title="Exclusive delivery versus shared distribution">
         <p>
           Many letterbox services run shared distribution. Your flyer is collated with other advertisers&rsquo;
-          material and delivered as one bundle, which lowers the flyer distribution cost per 1,000 because
-          several businesses share the walk.
+          material and delivered as one bundle, which lowers the cost per household because several businesses
+          share the walk.
         </p>
         <p>
           The trade-off is attention. In a bundle, your flyer competes with catalogues and other offers before the
@@ -164,14 +153,14 @@ export default function LetterboxDropCost() {
 
       <Section title="Working out how many flyers you need">
         <p>
-          Start with the letterboxes in your target area. Brighton, for example, has about 10,500 homes, so covering
-          the whole suburb costs about $2,100 (see{" "}
-          <TextLink href="/melbourne/flyer-distribution-brighton">flyer distribution in Brighton</TextLink>).
+          Start with the letterboxes in your target area. Brighton, for example, has about 10,500 homes (see{" "}
+          <TextLink href="/melbourne/flyer-distribution-brighton">flyer distribution in Brighton</TextLink> for
+          suburb-specific coverage details).
         </p>
         <p>
           Most businesses don&rsquo;t need a whole suburb on day one. A plumber might cover 2,500 homes around their
           base; an agent might drop 1,000 flyers around a new listing. Tell us the area and we will confirm the
-          leaflet drop cost and letterbox count in your quote.
+          letterbox count in your quote.
         </p>
       </Section>
 
@@ -190,14 +179,14 @@ export default function LetterboxDropCost() {
           <TextLink href="/industries/plumbers">plumbers</TextLink>,{" "}
           <TextLink href="/industries/builders">builders</TextLink>,{" "}
           <TextLink href="/industries/restaurants">restaurants</TextLink> and{" "}
-          <TextLink href="/industries/real-estate">real estate agents</TextLink>. Pricing is the same across our{" "}
-          <TextLink href="/melbourne/flyer-distribution-south-east-melbourne">south-east Melbourne</TextLink> suburbs.
+          <TextLink href="/industries/real-estate">real estate agents</TextLink>. We cover the same service area
+          across our <TextLink href="/melbourne/flyer-distribution-south-east-melbourne">south-east Melbourne</TextLink> suburbs.
         </p>
       </Section>
 
       <QuickQuoteForm
         heading="Get an exact price for your area"
-        lead="Tell us your streets or suburbs and quantity. We'll send the letterbox count and total within 5 minutes."
+        lead="Tell us your streets or suburbs and quantity. We'll send the letterbox count and total, with a quick turnaround."
       />
 
       <FAQSection items={faqs} title="Letterbox drop cost FAQs" />

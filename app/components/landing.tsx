@@ -14,17 +14,6 @@ import Reveal from "./Reveal";
 export const SITE_URL = "https://www.southeastflyers.com.au";
 export const PHONE_DISPLAY = "0402 824 070";
 export const PHONE_TEL = "tel:+61402824070";
-/** Price per 1,000 flyers, exclusive delivery. */
-export const PRICE_PER_THOUSAND = 200;
-
-export function formatAud(n: number) {
-  return `$${n.toLocaleString("en-AU")}`;
-}
-
-/** Full-coverage cost, rounded to the nearest $100 because dwelling counts are rounded. */
-export function coverageCost(dwellings: number) {
-  return Math.round((dwellings / 1000) * PRICE_PER_THOUSAND / 100) * 100;
-}
 
 const linkClass = "text-navy underline underline-offset-2 hover:text-teal-deep";
 
@@ -312,7 +301,7 @@ export function HowItWorks({
   title = "How it works",
   steps = [
     { title: "Tell us the area", body: "Streets, a radius or whole suburbs, plus quantity and start date." },
-    { title: "Quote within 5 minutes", body: "Letterbox count, total cost and timeline." },
+    { title: "Quote with a quick turnaround", body: "Letterbox count, total cost and timeline." },
     { title: "Send your printed flyers", body: "We distribute; we don't print." },
     { title: "We deliver and report", body: "Walkers and e-bike riders cover the route; you get the GPS map." },
   ],

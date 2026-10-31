@@ -22,7 +22,7 @@ const PAGE_PATH = "/melbourne/flyer-distribution-glen-waverley";
 export const metadata: Metadata = {
   title: { absolute: "Flyer Distribution Glen Waverley 3150 | South East Flyers" },
   description:
-    "Flyer distribution in Glen Waverley 3150: 16,500 homes, mostly houses. Exclusive, GPS-tracked, bilingual flyers welcome. $200 per 1,000, from 1,000.",
+    "Flyer distribution in Glen Waverley 3150: 16,500 homes, mostly houses. Exclusive, GPS-tracked, bilingual flyers welcome, from 1,000 flyers.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Flyer Distribution Glen Waverley 3150 | South East Flyers",
@@ -39,9 +39,9 @@ const faqs = [
       "Glen Waverley 3150 has about 16,500 homes, mostly separate houses with letterboxes on the street. That makes it one of the largest suburbs we cover and one of the easiest to reach in full.",
   },
   {
-    question: "What does it cost to cover all of Glen Waverley?",
+    question: "How much of Glen Waverley can a letterbox drop cover?",
     answer:
-      "About $3,300 at $200 per 1,000 flyers. Many businesses split it into two or three drops a few weeks apart, starting with the streets nearest their shop.",
+      "All 16,500 homes across the suburb, though many businesses split it into two or three drops a few weeks apart, starting with the streets nearest their shop.",
   },
   {
     question: "Should my Glen Waverley flyer be bilingual?",
@@ -72,7 +72,6 @@ const serviceLd = {
     name: "Glen Waverley, VIC 3150",
     address: { "@type": "PostalAddress", addressLocality: "Glen Waverley", addressRegion: "VIC", postalCode: "3150", addressCountry: "AU" },
   },
-  offers: { "@type": "Offer", price: "200", priceCurrency: "AUD", description: "Per 1,000 flyers, exclusive delivery, never bundled" },
 };
 
 export default function GlenWaverley() {
@@ -94,9 +93,9 @@ export default function GlenWaverley() {
       <FactsStrip
         stats={[
           { value: "16,500", label: "homes in Glen Waverley 3150, approx." },
-          { value: "$200", label: "per 1,000 flyers, exclusive" },
-          { value: "$3,300", label: "to cover the whole suburb, approx." },
-          { value: "1,000", label: "flyers, a $200 test run" },
+          { value: "Exclusive", label: "never bundled with other ads" },
+          { value: "GPS map", label: "proof of delivery, every run" },
+          { value: "1,000", label: "flyers, your first test run" },
         ]}
       />
 
@@ -183,13 +182,13 @@ export default function GlenWaverley() {
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="Letterbox drop cost in Glen Waverley"
+          title="Letterbox drop quantities in Glen Waverley"
           figures={[
-            { value: "$500", label: "2,500 flyers, around the Kingsway" },
-            { value: "$3,300", label: "whole suburb, approx." },
+            { value: "2,500", label: "flyers, around the Kingsway" },
+            { value: "16,500", label: "homes, whole suburb" },
           ]}
         >
-          Every drop is <strong className="text-ink">$200 per 1,000 flyers</strong>, delivered exclusively. Our flyer
+          Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>. Our flyer
           distribution across Monash also reaches{" "}
           <TextLink href="/melbourne/flyer-distribution-mount-waverley">Mount Waverley</TextLink>. See the{" "}
           <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
@@ -203,7 +202,7 @@ export default function GlenWaverley() {
 
       <QuickQuoteForm
         heading="Ready to reach Glen Waverley letterboxes?"
-        lead="Tell us your streets and quantity, and we'll quote with the letterbox count within 5 minutes."
+        lead="Tell us your streets and quantity, and we'll quote with the letterbox count, with a quick turnaround."
         suburbHint="e.g. Glen Waverley, Mount Waverley, Wheelers Hill"
       />
 

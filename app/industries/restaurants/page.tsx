@@ -18,7 +18,7 @@ const PAGE_PATH = "/industries/restaurants";
 export const metadata: Metadata = {
   title: { absolute: "Restaurant Flyers Melbourne | South East Flyers" },
   description:
-    "Restaurant flyers and takeaway menus delivered on their own to the streets around your venue in Melbourne's south-east. GPS-tracked, $200 per 1,000.",
+    "Restaurant flyers and takeaway menus delivered on their own to the streets around your venue in Melbourne's south-east. GPS-tracked, exclusive delivery.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Restaurant & Cafe Flyer Distribution Melbourne | South East Flyers",
@@ -52,7 +52,7 @@ const faqs = [
   {
     question: "Can I deliver a full menu rather than a flyer?",
     answer:
-      "Yes. Folded DL menus and A4 menus are both fine. We distribute only, so you supply the printed menus, and we deliver each one on its own at $200 per 1,000.",
+      "Yes. Folded DL menus and A4 menus are both fine. We distribute only, so you supply the printed menus, and we deliver each one on its own, exclusively.",
   },
 ];
 
@@ -65,7 +65,6 @@ const serviceLd = {
   url: `${SITE_URL}${PAGE_PATH}`,
   provider: { "@id": `${SITE_URL}/#organization` },
   areaServed: { "@type": "City", name: "Melbourne", addressCountry: "AU" },
-  offers: { "@type": "Offer", price: "200", priceCurrency: "AUD", description: "Per 1,000 flyers, exclusive delivery" },
 };
 
 export default function Restaurants() {
@@ -88,7 +87,7 @@ export default function Restaurants() {
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "$200", label: "per 1,000 flyers or menus" },
+          { value: "40+", label: "suburbs covered" },
           { value: "1,000", label: "flyers, about one walking catchment" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
@@ -160,10 +159,10 @@ export default function Restaurants() {
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="Quantities and cost"
-          figures={[{ value: "$200", label: "1,000 homes, one catchment" }, { value: "$500", label: "2,500 homes, delivery radius" }]}
+          title="Quantities"
+          figures={[{ value: "1,000", label: "homes, one catchment" }, { value: "2,500", label: "homes, delivery radius" }]}
         >
-          Every drop is $200 per 1,000 flyers or menus, exclusive, from 1,000. See the{" "}
+          Every drop is exclusive, from 1,000 flyers or menus. See the{" "}
           <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or our{" "}
           <TextLink href="/industries/local-businesses">local business flyers</TextLink> page for shops and studios.
         </Callout>
@@ -173,7 +172,7 @@ export default function Restaurants() {
 
       <QuickQuoteForm
         heading="Get your menu into local kitchens"
-        lead="Tell us your venue address and delivery area. We'll quote within 5 minutes."
+        lead="Tell us your venue address and delivery area. We'll quote with a quick turnaround."
       />
 
       <FAQSection items={faqs} title="Restaurant and cafe letterbox drop FAQs" />

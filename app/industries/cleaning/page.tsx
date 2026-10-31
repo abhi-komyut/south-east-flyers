@@ -18,7 +18,7 @@ const PAGE_PATH = "/industries/cleaning";
 export const metadata: Metadata = {
   title: { absolute: "House Cleaning Flyers Melbourne | South East Flyers" },
   description:
-    "House cleaning flyers delivered on their own to the streets on your cleaning routes in Melbourne's south-east. GPS-tracked, $200 per 1,000, from 1,000.",
+    "House cleaning flyers delivered on their own to the streets on your cleaning routes in Melbourne's south-east. GPS-tracked, exclusive delivery, from 1,000 flyers.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "House Cleaning Flyers & Letterbox Drops Melbourne | South East Flyers",
@@ -52,7 +52,7 @@ const faqs = [
   {
     question: "How many flyers should a cleaner start with?",
     answer:
-      "1,000 to 2,500 homes around your current clients, at $200 to $500. Repeat the same streets a month later. Cleaning is a regular service, and most bookings come after a household has seen your name twice.",
+      "1,000 to 2,500 homes around your current clients. Repeat the same streets a month later. Cleaning is a regular service, and most bookings come after a household has seen your name twice.",
   },
 ];
 
@@ -65,7 +65,6 @@ const serviceLd = {
   url: `${SITE_URL}${PAGE_PATH}`,
   provider: { "@id": `${SITE_URL}/#organization` },
   areaServed: { "@type": "City", name: "Melbourne", addressCountry: "AU" },
-  offers: { "@type": "Offer", price: "200", priceCurrency: "AUD", description: "Per 1,000 flyers, exclusive delivery" },
 };
 
 export default function Cleaning() {
@@ -88,8 +87,8 @@ export default function Cleaning() {
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "$200", label: "per 1,000 flyers" },
-          { value: "1,000", label: "flyers, a $200 test run" },
+          { value: "40+", label: "suburbs covered" },
+          { value: "1,000", label: "flyers, your first test run" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
       />
@@ -108,7 +107,7 @@ export default function Cleaning() {
 
       <Section title="One client, years of bookings">
         <p>
-          A regular clean is booked every week or fortnight. A household that signs up from a $200 drop can be worth
+          A regular clean is booked every week or fortnight. A single household that signs up can be worth
           thousands of dollars a year, which is why cleaning businesses can afford to repeat drops in the same
           streets.
         </p>
@@ -148,19 +147,19 @@ export default function Cleaning() {
           will see which streets book and which don&rsquo;t, and the GPS report shows exactly where each flyer went.
         </p>
         <p>
-          Count the value over time, not just the first booking. A client who books a fortnightly clean from a $200
-          drop pays for that drop many times over in the first few months. That is the number to compare when you
-          decide whether to repeat a street.
+          Count the value over time, not just the first booking. A client who books a fortnightly clean pays for
+          that drop many times over in the first few months. That is the number to compare when you decide whether
+          to repeat a street.
         </p>
       </Section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="Quantities and cost"
-          figures={[{ value: "$200", label: "1,000 homes on your route" }, { value: "$500", label: "2,500 homes, repeat monthly" }]}
+          title="Quantities"
+          figures={[{ value: "1,000", label: "homes on your route" }, { value: "2,500", label: "homes, repeat monthly" }]}
         >
-          Every drop is $200 per 1,000 flyers, exclusive, from 1,000. See the{" "}
-          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for more quantities. Cleaning is
+          Every drop is exclusive, from 1,000 flyers. See the{" "}
+          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for a quote. Cleaning is
           part of our <TextLink href="/industries/home-services">home services</TextLink> page, alongside{" "}
           <TextLink href="/industries/plumbers">plumbers</TextLink> and{" "}
           <TextLink href="/industries/electricians">electricians</TextLink>.
@@ -171,7 +170,7 @@ export default function Cleaning() {
 
       <QuickQuoteForm
         heading="Fill the gaps in your cleaning route"
-        lead="Tell us the suburbs you clean in now. We'll quote the streets around them within 5 minutes."
+        lead="Tell us the suburbs you clean in now. We'll quote the streets around them, with a quick turnaround."
       />
 
       <FAQSection items={faqs} title="Cleaning business letterbox drop FAQs" />

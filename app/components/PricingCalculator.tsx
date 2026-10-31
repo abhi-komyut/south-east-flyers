@@ -1,21 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import { PRICE_PER_THOUSAND, formatAud } from "./landing";
 
 const QUANTITIES = [1000, 2500, 5000, 10000, 20000];
 const GOOD_FOR = [
-  "a test run, or the streets around one listing or shop",
-  "a tight radius around your business",
-  "half of a typical suburb",
-  "a whole suburb the size of Brighton",
-  "two or three neighbouring suburbs",
+  "A test run, or the streets around one listing or shop",
+  "A tight radius around your business",
+  "Half of a typical suburb",
+  "A whole suburb the size of Brighton",
+  "Two or three neighbouring suburbs",
 ];
 
 export default function PricingCalculator() {
   const [index, setIndex] = useState(2);
-  const qty = QUANTITIES[index];
-  const total = (qty / 1000) * PRICE_PER_THOUSAND;
 
   return (
     <div className="bg-white text-ink rounded-card p-7 sm:p-10 flex flex-col gap-[22px] shadow-[0_30px_60px_-32px_rgba(2,30,30,0.7)]">
@@ -38,13 +35,12 @@ export default function PricingCalculator() {
         ))}
       </div>
       <div className="pt-[22px] border-t border-line flex flex-col gap-1.5">
-        <p className="m-0 text-sm text-muted">Total, delivered exclusively</p>
-        <p aria-live="polite" className="m-0 font-display font-medium text-[60px] leading-none text-navy [font-variant-numeric:tabular-nums]">
-          {formatAud(total)}
+        <p className="m-0 text-sm text-muted">That&rsquo;s roughly</p>
+        <p aria-live="polite" className="m-0 font-display font-medium text-[28px] sm:text-[32px] leading-tight text-navy">
+          {GOOD_FOR[index]}
         </p>
-        <p className="mt-2 mb-0 text-[15px] leading-snug text-body">Good for: {GOOD_FOR[index]}</p>
       </div>
-      <p className="m-0 text-[13px] leading-snug text-muted">$200 per 1,000 at every quantity. Printing not included.</p>
+      <p className="m-0 text-[13px] leading-snug text-muted">Exclusive delivery, GPS-tracked. Tell us your quantity for a free, no-obligation quote.</p>
     </div>
   );
 }

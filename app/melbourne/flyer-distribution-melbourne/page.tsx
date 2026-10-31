@@ -1,16 +1,23 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import Breadcrumbs from "../../components/Breadcrumbs";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
+import {
+  SITE_URL,
+  PageHero,
+  FactsStrip,
+  Section,
+  Bullets,
+  TextLink,
+  JsonLd,
+  HowItWorks,
+} from "../../components/landing";
 
-const SITE_URL = "https://www.southeastflyers.com.au";
 const PAGE_PATH = "/melbourne/flyer-distribution-melbourne";
 
 export const metadata: Metadata = {
   title: "Flyer Distribution Melbourne",
   description:
-    "Flyer distribution Melbourne: exclusive, GPS-tracked letterbox drops across our service suburbs. $200 per 1,000 flyers, from 1,000. Free quote today.",
+    "Flyer distribution Melbourne: exclusive, GPS-tracked letterbox drops across our service suburbs, from 1,000 flyers. Free quote today.",
   alternates: {
     canonical: `${SITE_URL}${PAGE_PATH}`,
   },
@@ -132,37 +139,31 @@ const coverageGroups: { region: string; suburbs: string[] }[] = [
   },
 ];
 
-const steps: { title: string; body: string }[] = [
+const totalSuburbs = coverageGroups.reduce((n, g) => n + g.suburbs.length, 0);
+
+const whyUseIt: { title: string; body: string }[] = [
   {
-    title: "You provide the flyers",
-    body: "You supply your printed flyers, brochures or promotional material. We're a distribution specialist — we don't print, we get your material into the right letterboxes.",
+    title: "Reach local households directly",
+    body: "A flyer in the letterbox lands in front of nearby residents without competing with a crowded digital feed.",
   },
   {
-    title: "Choose your target area",
-    body: "Tell us which Melbourne suburbs you want to reach. We'll help you shape the most practical distribution area for your goals and budget.",
+    title: "Target specific suburbs",
+    body: "Concentrate your campaign on the exact areas your customers live in, rather than paying to reach the whole city.",
   },
   {
-    title: "We plan your campaign",
-    body: "We map the walking and e-bike routes, confirm your flyer quantity and lock in a schedule that fits your timing.",
+    title: "Promote local, time-sensitive offers",
+    body: "New store openings, seasonal promotions, open homes and local services all suit a focused letterbox campaign.",
   },
   {
-    title: "Our team distributes",
-    body: "Our on-foot walkers and e-bike distributors deliver street by street, skipping every letterbox marked 'No Junk Mail' or 'No Advertising Material'.",
-  },
-  {
-    title: "Every run is GPS tracked",
-    body: "Distributors track their routes in real time via the Strava app, so distribution activity is recorded as it happens.",
-  },
-  {
-    title: "You receive a report",
-    body: "After the campaign we send a report showing the streets covered, the number of letterboxes delivered to and a map of the distribution route.",
+    title: "See where your flyers went",
+    body: "GPS tracking and a post-campaign report show the streets covered, not just an invoice.",
   },
 ];
 
-const services: { title: string; body: string; href?: string }[] = [
+const services: { title: string; body: string; href: string }[] = [
   {
     title: "Flyer Distribution",
-    body: "Residential flyer and leaflet delivery across your chosen Melbourne suburbs, delivered individually — never bundled with other material.",
+    body: "Residential flyer and leaflet delivery across your chosen Melbourne suburbs, delivered individually, never bundled with other material.",
     href: "/services/flyer-distribution",
   },
   {
@@ -209,7 +210,7 @@ const faqs = [
   {
     question: "How much does flyer distribution cost in Melbourne?",
     answer:
-      "Flyer distribution costs $200 per 1,000 flyers, delivered exclusively and GPS-tracked. A 5,000-flyer drop costs $1,000. See our letterbox drop cost page for more quantities.",
+      "Cost depends on your flyer quantity and the suburbs you want to cover, delivered exclusively and GPS-tracked. See our letterbox drop cost page for a quote.",
   },
   {
     question: "How many flyers do I need for a Melbourne suburb?",
@@ -253,312 +254,112 @@ const serviceLd = {
 export default function FlyerDistributionMelbourne() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }}
+      <JsonLd data={serviceLd} />
+
+      <PageHero
+        crumbs={[{ name: "Home", href: "/" }, { name: "Flyer Distribution Melbourne" }]}
+        h1="Flyer Distribution Melbourne"
+        lead="Professional flyer and letterbox distribution across our confirmed Melbourne service areas. GPS-tracked delivery, no junk mail compliant, and planned around the suburbs you want to reach. You provide the flyers. We handle the distribution."
+        image={{ src: "/images/redesign/walker-ebike.jpg", alt: "A South East Flyers e-bike rider delivering flyers on a Melbourne street" }}
       />
 
-      {/* Hero */}
-      <section className="bg-navy text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-          <Breadcrumbs
-            items={[
-              { name: "Home", href: "/" },
-              { name: "Flyer Distribution Melbourne" },
-            ]}
-          />
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <div className="max-w-3xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-5">
-              Flyer Distribution Melbourne
-            </h1>
-            <p className="text-lg text-white/85 mb-4">
-              Professional flyer and letterbox distribution across our confirmed
-              Melbourne service areas. GPS-tracked delivery, no junk mail
-              compliant, and planned around the suburbs you want to reach.
-            </p>
-            <p className="text-base text-white/80 mb-8">
-              You provide the flyers. We handle the distribution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/contact"
-                data-quote-cta
-                className="inline-block bg-cta text-white font-semibold px-6 py-3 rounded text-center transition-all duration-200 hover:bg-cta-hover hover:scale-[1.02]"
-              >
-                Get a Free Quote
-              </Link>
-              <a
-                href="#coverage"
-                className="inline-block border border-white/40 text-white font-semibold px-6 py-3 rounded text-center transition-all duration-200 hover:bg-white/10"
-              >
-                See Where We Distribute
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FactsStrip
+        stats={[
+          { value: String(totalSuburbs), label: "suburbs across our service area" },
+          { value: "GPS map", label: "proof of delivery, every run" },
+          { value: "Never", label: "bundled with other advertisers" },
+          { value: "Quick", label: "turnaround on your quote" },
+        ]}
+      />
 
-      {/* Intro */}
-      <section className="py-16 sm:py-20 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-black mb-4">
-            Flyer distribution across Melbourne
-          </h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            South East Flyers is a flyer distribution service Melbourne
-            businesses use when they want solo delivery rather than a bundle.
-            We&rsquo;re a flyer distribution company Melbourne clients choose
-            for exclusive, GPS-tracked delivery. Businesses across the city give us
-            their printed material and we deliver it, letterbox by
-            letterbox, across the suburbs they want to target, from the
-            bayside around St Kilda and Brighton through to the Monash and
-            eastern suburbs like Glen Waverley, Box Hill and Doncaster.
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            We deliver every flyer individually rather than bundling it with
-            other advertising, skip every letterbox marked &lsquo;No Junk
-            Mail&rsquo;, and track each distribution run through the Strava app so
-            you receive a clear report once your campaign is complete. That&rsquo;s
-            leaflet distribution Melbourne businesses can rely on without
-            guessing where their flyers went. We scale from a small test run
-            up to metro-wide pushes. We&rsquo;re
-            one of the flyer distribution companies that tracks every run by
-            GPS as standard, not as an add-on.
-          </p>
-        </div>
-      </section>
+      <Section title="Flyer distribution across Melbourne" first>
+        <p>
+          South East Flyers is a flyer distribution service Melbourne businesses use when they want solo delivery
+          rather than a bundle. We&rsquo;re a flyer distribution company Melbourne clients choose for exclusive,
+          GPS-tracked delivery. Businesses across the city give us their printed material and we deliver it,
+          letterbox by letterbox, across the suburbs they want to target, from the bayside around St Kilda and
+          Brighton through to the Monash and eastern suburbs like Glen Waverley, Box Hill and Doncaster.
+        </p>
+        <p>
+          We deliver every flyer individually rather than bundling it with other advertising, skip every letterbox
+          marked &lsquo;No Junk Mail&rsquo;, and track each distribution run through the Strava app so you receive a
+          clear report once your campaign is complete. That&rsquo;s leaflet distribution Melbourne businesses can
+          rely on without guessing where their flyers went. We scale from a small test run up to metro-wide pushes.
+        </p>
+      </Section>
 
-      {/* How it works */}
-      <section className="py-16 sm:py-20 bg-cream border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
-              How flyer distribution works
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              A straightforward, tracked process from your flyers to a completed
-              campaign report.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-            {steps.map((step, i) => (
-              <div
-                key={step.title}
-                className="bg-white border border-gray-200 rounded-xl p-6"
-              >
-                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-navy text-white font-bold mb-4">
-                  {i + 1}
-                </div>
-                <h3 className="font-semibold text-black mb-2">{step.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {step.body}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Section title="Why Melbourne businesses use flyer distribution">
+        <Bullets
+          items={whyUseIt.map((item) => (
+            <>
+              <strong className="font-heading font-semibold text-ink">{item.title}.</strong> {item.body}
+            </>
+          ))}
+        />
+      </Section>
 
-      {/* Why Melbourne businesses use flyer distribution */}
-      <section className="py-16 sm:py-20 bg-white border-t border-gray-200">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-black mb-6">
-            Why Melbourne businesses use flyer distribution
-          </h2>
-          <ul className="space-y-4 text-gray-700">
-            <li className="flex gap-3">
-              <span className="text-cta font-bold shrink-0">—</span>
-              <span>
-                <strong>Reach local households directly.</strong> A flyer in the
-                letterbox lands in front of nearby residents without competing
-                with a crowded digital feed.
-              </span>
-            </li>
-            <li className="flex gap-3">
-              <span className="text-cta font-bold shrink-0">—</span>
-              <span>
-                <strong>Target specific suburbs.</strong> Concentrate your
-                campaign on the exact areas your customers live in, rather than
-                paying to reach the whole city.
-              </span>
-            </li>
-            <li className="flex gap-3">
-              <span className="text-cta font-bold shrink-0">—</span>
-              <span>
-                <strong>Promote local, time-sensitive offers.</strong> New store
-                openings, seasonal promotions, open homes and local services all
-                suit a focused letterbox campaign.
-              </span>
-            </li>
-            <li className="flex gap-3">
-              <span className="text-cta font-bold shrink-0">—</span>
-              <span>
-                <strong>See where your flyers went.</strong> GPS tracking and a
-                post-campaign report show the streets covered — not just an
-                invoice.
-              </span>
-            </li>
-          </ul>
-        </div>
-      </section>
+      <Section title="Our Melbourne distribution services">
+        <Bullets
+          items={services.map((s) => (
+            <>
+              <TextLink href={s.href}>{s.title}</TextLink>: {s.body}
+            </>
+          ))}
+        />
+      </Section>
 
-      {/* Services */}
-      <section className="py-16 sm:py-20 bg-cream border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
-              Our Melbourne distribution services
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
-            {services.map((service) => {
-              const cardClass =
-                "bg-white border border-gray-200 rounded-xl p-6 block";
-              const inner = (
-                <>
-                  <h3 className="font-semibold text-black mb-2">
-                    {service.title}
-                    {service.href && (
-                      <span className="text-cta" aria-hidden="true">
-                        {" "}
-                        &rarr;
-                      </span>
+      <Section title="Melbourne suburbs we cover">
+        <p>
+          Our confirmed Melbourne service areas, grouped by region. If your suburb isn&rsquo;t listed, get in touch,
+          we may still be able to help or point you in the right direction. For the 56 key suburbs grouped by
+          council, see{" "}
+          <TextLink href="/melbourne/flyer-distribution-south-east-melbourne">
+            flyer distribution across south-east Melbourne
+          </TextLink>
+          .
+        </p>
+        <div className="flex flex-col gap-8 mt-2">
+          {coverageGroups.map((group) => (
+            <div key={group.region} className="pt-5 border-t border-[rgba(16,48,47,0.16)]">
+              <h3 className="m-0 mb-3 font-heading font-semibold text-lg">{group.region}</h3>
+              <ul className="m-0 p-0 list-none grid grid-cols-2 sm:grid-cols-3 gap-x-5 gap-y-1.5 text-[15px]">
+                {group.suburbs.map((suburb) => (
+                  <li key={suburb}>
+                    {suburbPages[suburb] ? (
+                      <TextLink href={suburbPages[suburb]}>{suburb}</TextLink>
+                    ) : (
+                      suburb
                     )}
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {service.body}
-                  </p>
-                </>
-              );
-              return service.href ? (
-                <Link
-                  key={service.title}
-                  href={service.href}
-                  className={`${cardClass} transition-colors hover:border-navy`}
-                >
-                  {inner}
-                </Link>
-              ) : (
-                <div key={service.title} className={cardClass}>
-                  {inner}
-                </div>
-              );
-            })}
-          </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
-      </section>
+      </Section>
 
-      {/* Melbourne coverage */}
-      <section
-        id="coverage"
-        className="py-16 sm:py-20 bg-white border-t border-gray-200 scroll-mt-24"
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
-              Melbourne suburbs we cover
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Our confirmed Melbourne service areas, grouped by region. If your
-              suburb isn&rsquo;t listed, get in touch — we may still be able to
-              help or point you in the right direction. For the 56 key suburbs
-              grouped by council, see{" "}
-              <Link href="/melbourne/flyer-distribution-south-east-melbourne" className="text-navy underline underline-offset-2">
-                flyer distribution across south-east Melbourne
-              </Link>
-              .
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {coverageGroups.map((group) => (
-              <div
-                key={group.region}
-                className="bg-gray-50 border border-gray-200 rounded-xl p-6"
-              >
-                <h3 className="font-semibold text-navy mb-3">{group.region}</h3>
-                <ul className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-sm text-gray-700">
-                  {group.suburbs.map((suburb) => (
-                    <li key={suburb}>
-                      {suburbPages[suburb] ? (
-                        <Link href={suburbPages[suburb]} className="text-navy underline underline-offset-2">
-                          {suburb}
-                        </Link>
-                      ) : (
-                        suburb
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Section title="Who uses flyer distribution in Melbourne">
+        <Bullets
+          items={industries.map((i) => (
+            <>
+              <TextLink href={i.href}>{i.title}</TextLink>: {i.body}
+            </>
+          ))}
+        />
+      </Section>
 
-      {/* Industries */}
-      <section className="py-16 sm:py-20 bg-cream border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
-              Who uses flyer distribution in Melbourne
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
-            {industries.map((industry) => (
-              <Link
-                key={industry.title}
-                href={industry.href}
-                className="block bg-white border border-gray-200 rounded-xl p-6 transition-colors hover:border-navy"
-              >
-                <h3 className="font-semibold text-black mb-2">
-                  {industry.title}
-                  <span className="text-cta" aria-hidden="true">
-                    {" "}
-                    &rarr;
-                  </span>
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {industry.body}
-                </p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <HowItWorks />
 
-      {/* Quote form */}
-      <QuickQuoteForm />
+      <QuickQuoteForm
+        heading="Planning a Melbourne flyer campaign?"
+        lead="Tell us the suburbs you want to reach and how many flyers you have. We'll put together a free, no-obligation quote."
+      />
 
-      {/* FAQ */}
       <FAQSection
         items={faqs}
         title="Melbourne Flyer Distribution FAQs"
         subtitle="Common questions about distributing flyers across Melbourne."
       />
-
-      {/* CTA banner */}
-      <section className="bg-navy py-16 sm:py-20 border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2
-            className="text-3xl md:text-4xl font-bold text-white mb-4 font-display"
-          >
-            Planning a Melbourne flyer campaign?
-          </h2>
-          <p className="text-white/80 mb-8 max-w-xl mx-auto">
-            Tell us the suburbs you want to reach and how many flyers you have.
-            We&rsquo;ll put together a free, no-obligation quote.
-          </p>
-          <Link
-            href="/contact"
-            data-quote-cta
-            className="inline-block bg-cta text-white font-semibold px-8 py-3 rounded transition-all duration-200 hover:bg-cta-hover hover:scale-[1.02]"
-          >
-            Get a Free Quote
-          </Link>
-        </div>
-      </section>
     </>
   );
 }

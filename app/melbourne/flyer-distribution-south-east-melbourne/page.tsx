@@ -18,7 +18,7 @@ const PAGE_PATH = "/melbourne/flyer-distribution-south-east-melbourne";
 export const metadata: Metadata = {
   title: { absolute: "Flyer Distribution South East Melbourne | South East Flyers" },
   description:
-    "Flyer distribution across south east and eastern Melbourne, council by council. Exclusive, GPS-tracked letterbox drops, never bundled. $200 per 1,000.",
+    "Flyer distribution across south east and eastern Melbourne, council by council. Exclusive, GPS-tracked letterbox drops, never bundled, from 1,000 flyers.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Letterbox Drops Across South East & Eastern Melbourne | South East Flyers",
@@ -99,9 +99,9 @@ const faqs = [
       "Yes. Council boundaries don't matter to a letterbox drop. A plumber in Bentleigh can cover Glen Eira and Kingston streets together, with one quote and one GPS report showing every route.",
   },
   {
-    question: "What does a letterbox drop cost across several suburbs?",
+    question: "Can a letterbox drop cover several suburbs in one campaign?",
     answer:
-      "The same $200 per 1,000 flyers, wherever the homes are. A 5,000-flyer drop split across two or three neighbouring suburbs costs $1,000.",
+      "Yes, wherever the homes are. A 5,000-flyer drop can be split across two or three neighbouring suburbs with a single quote and one GPS report.",
   },
   {
     question: "Do you deliver to the eastern suburbs as well as the south-east?",
@@ -123,7 +123,6 @@ const serviceLd = {
   url: `${SITE_URL}${PAGE_PATH}`,
   provider: { "@id": `${SITE_URL}/#organization` },
   areaServed: councils.map((c) => ({ "@type": "AdministrativeArea", name: `City of ${c.name}, VIC` })),
-  offers: { "@type": "Offer", price: "200", priceCurrency: "AUD", description: "Per 1,000 flyers, exclusive delivery, never bundled" },
 };
 
 export default function SouthEastMelbourne() {
@@ -146,7 +145,7 @@ export default function SouthEastMelbourne() {
         stats={[
           { value: "56", label: "key suburbs we cover" },
           { value: "8", label: "councils, one quote" },
-          { value: "$200", label: "per 1,000 flyers, exclusive" },
+          { value: "GPS map", label: "proof of delivery, every run" },
           { value: "Never", label: "bundled with other advertisers" },
         ]}
       />
@@ -158,8 +157,8 @@ export default function SouthEastMelbourne() {
           the area our walkers and e-bike riders cover every week.
         </p>
         <p>
-          You can cover one suburb, a few streets around your shop, or a mix of suburbs across council lines. The
-          price is the same everywhere: $200 per 1,000 flyers, delivered on their own, with a GPS report for every run.
+          You can cover one suburb, a few streets around your shop, or a mix of suburbs across council lines. Every
+          flyer is delivered on its own, wherever the homes are, with a GPS report for every run.
         </p>
       </Section>
 
@@ -207,14 +206,14 @@ export default function SouthEastMelbourne() {
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="Letterbox drop cost across the south-east"
+          title="Letterbox drop quantities across the south-east"
           figures={[
-            { value: "$200", label: "1,000 flyers, any suburb" },
-            { value: "$1,000", label: "5,000 flyers across several suburbs" },
+            { value: "1,000", label: "flyers, any suburb" },
+            { value: "5,000", label: "flyers across several suburbs" },
           ]}
         >
           Exclusive, never bundled, across all eight councils. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page
-          for more quantities, the <TextLink href="/industries/local-businesses">local business</TextLink> guide, or our
+          for a quote, the <TextLink href="/industries/local-businesses">local business</TextLink> guide, or our
           wider <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
         </Callout>
       </div>
@@ -223,7 +222,7 @@ export default function SouthEastMelbourne() {
 
       <QuickQuoteForm
         heading="Planning a drop in the south-east?"
-        lead="Tell us the suburbs or streets and your quantity. We'll quote within 5 minutes."
+        lead="Tell us the suburbs or streets and your quantity. We'll quote with a quick turnaround."
         suburbHint="e.g. Bentleigh, Brighton, Glen Waverley"
       />
 

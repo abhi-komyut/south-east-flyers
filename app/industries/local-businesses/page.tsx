@@ -18,7 +18,7 @@ const PAGE_PATH = "/industries/local-businesses";
 export const metadata: Metadata = {
   title: { absolute: "Local Business Flyers Melbourne | South East Flyers" },
   description:
-    "Local business flyers delivered on their own to the streets around you, GPS-tracked. $200 per 1,000 flyers, from 1,000, across Melbourne's south-east.",
+    "Local business flyers delivered on their own to the streets around you, GPS-tracked. Exclusive delivery, from 1,000 flyers, across Melbourne's south-east.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Local Business Flyers & Letterbox Drops Melbourne | South East Flyers",
@@ -47,7 +47,7 @@ const faqs = [
   {
     question: "How small can a local campaign be?",
     answer:
-      "You can start with 1,000 flyers for $200. That covers the streets closest to most shops or a single neighbourhood, so you can test the idea before spending more on a wider run.",
+      "You can start with 1,000 flyers. That covers the streets closest to most shops or a single neighbourhood, so you can test the idea before spending more on a wider run.",
   },
   {
     question: "Can you deliver only near my shop?",
@@ -95,8 +95,8 @@ export default function LocalBusinesses() {
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "$200", label: "per 1,000 flyers" },
-          { value: "1,000", label: "flyers, a $200 test run" },
+          { value: "40+", label: "suburbs covered" },
+          { value: "1,000", label: "flyers, your first test run" },
           { value: "GPS map", label: "report with every drop" },
         ]}
       />
@@ -176,9 +176,9 @@ export default function LocalBusinesses() {
           <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> for the full list. Comparing channels? Read <TextLink href="/guides/how-to-advertise-local-business-melbourne">how to advertise a local business in Melbourne</TextLink>.
         </p>
         <p>
-          Every drop costs $200 per 1,000 flyers. The{" "}
-          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page shows totals from 1,000 to 20,000
-          flyers.
+          Every drop is exclusive, from 1,000 flyers. The{" "}
+          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page covers quantities from 1,000 to
+          20,000 flyers.
         </p>
       </Section>
 
@@ -186,7 +186,7 @@ export default function LocalBusinesses() {
 
       <QuickQuoteForm
         heading="Put your business in local letterboxes"
-        lead="Tell us your address, the area you want to reach and how many flyers you have. We'll quote within 5 minutes."
+        lead="Tell us your address, the area you want to reach and how many flyers you have. We'll quote with a quick turnaround."
       />
 
       <FAQSection items={faqs} title="Local business letterbox drop FAQs" />

@@ -104,9 +104,9 @@ export default function Healthcare() {
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "$200", label: "per 1,000 flyers" },
+          { value: "40+", label: "suburbs covered" },
           { value: "GPS map", label: "proof of delivery, every run" },
-          { value: "1,000", label: "flyers, a $200 test run" },
+          { value: "1,000", label: "flyers, your first test run" },
         ]}
       />
 

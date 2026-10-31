@@ -1,17 +1,22 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import Breadcrumbs from "../components/Breadcrumbs";
+import QuickQuoteForm from "../components/QuickQuoteForm";
+import {
+  SITE_URL,
+  PageHero,
+  FactsStrip,
+  Section,
+  Bullets,
+  TextLink,
+  JsonLd,
+} from "../components/landing";
 
-const SITE_URL = "https://www.southeastflyers.com.au";
 const PAGE_PATH = "/industries";
 
 export const metadata: Metadata = {
-  title: "Industries We Work With",
+  title: { absolute: "Industries We Work With | South East Flyers" },
   description:
-    "Flyer and letterbox distribution for local businesses, home services trades, real estate and healthcare across Melbourne's south-east and eastern suburbs. Get a free quote.",
-  alternates: {
-    canonical: `${SITE_URL}${PAGE_PATH}`,
-  },
+    "Flyer and letterbox distribution for local businesses, home services trades, real estate and healthcare across Melbourne's south-east and eastern suburbs.",
+  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Industries We Work With | South East Flyers",
     description:
@@ -21,129 +26,149 @@ export const metadata: Metadata = {
   },
 };
 
-const industries: { title: string; body: string; href: string }[] = [
-  {
-    title: "Real Estate",
-    body: "Just Listed, Open Home, Auction and Sold campaigns delivered to the streets around your listings.",
-    href: "/industries/real-estate",
-  },
-  {
-    title: "Healthcare",
-    body: "Local-area awareness for new practices, clinics and services opening or growing across Melbourne.",
-    href: "/industries/healthcare",
-  },
+const trades: { title: string; href: string; body: string }[] = [
   {
     title: "Home Services",
-    body: "Plumbers, electricians, roofers, builders, renovators and cleaners reaching the households they service.",
     href: "/industries/home-services",
+    body: "Plumbers, electricians, roofers, builders, renovators and cleaners reaching the households they service.",
   },
   {
     title: "Plumbers",
-    body: "Plumbing flyers delivered on their own to the streets around your base and your active jobs.",
     href: "/industries/plumbers",
+    body: "Plumbing flyers delivered on their own to the streets around your base and your active jobs.",
+  },
+  {
+    title: "Electricians",
+    href: "/industries/electricians",
+    body: "Switchboard, safety and solar flyers reaching the suburbs where older wiring needs upgrading.",
+  },
+  {
+    title: "Roofing",
+    href: "/industries/roofing",
+    body: "Roof restoration and repair flyers delivered after storms and around ageing roof lines.",
   },
   {
     title: "Builders",
-    body: "Construction flyers for the neighbours of each site and the streets where owners rebuild.",
     href: "/industries/builders",
+    body: "Construction flyers for the neighbours of each site and the streets where owners rebuild.",
   },
   {
     title: "Renovation",
-    body: "Kitchen, bathroom and whole-home renovators reaching homes that are due for work.",
     href: "/industries/renovation",
+    body: "Kitchen, bathroom and whole-home renovators reaching homes that are due for work.",
   },
   {
     title: "Cleaning",
-    body: "House and bathroom cleaners adding clients along the routes they already run.",
     href: "/industries/cleaning",
+    body: "House and bathroom cleaners adding clients along the routes they already run.",
+  },
+];
+
+const local: { title: string; href: string; body: string }[] = [
+  {
+    title: "Real Estate",
+    href: "/industries/real-estate",
+    body: "Just Listed, Open Home, Auction and Sold campaigns delivered to the streets around your listings.",
   },
   {
-    title: "Restaurants & Cafes",
-    body: "Takeaway menus and opening offers delivered to the streets that can order tonight.",
-    href: "/industries/restaurants",
-  },
-  {
-    title: "Dog Groomers & Dog Washes",
-    body: "Salons, mobile groomers and dog washes reaching dog owners nearby.",
-    href: "/industries/pet-groomers",
+    title: "Healthcare",
+    href: "/industries/healthcare",
+    body: "Local-area awareness for new practices, clinics and services opening or growing across Melbourne.",
   },
   {
     title: "Local Businesses",
-    body: "Shops, cafes, clinics and studios putting their offer in the letterboxes around them.",
     href: "/industries/local-businesses",
+    body: "Shops, cafes, clinics and studios putting their offer in the letterboxes around them.",
   },
 ];
+
+const hospitality: { title: string; href: string; body: string }[] = [
+  {
+    title: "Restaurants & Cafes",
+    href: "/industries/restaurants",
+    body: "Takeaway menus and opening offers delivered to the streets that can order tonight.",
+  },
+  {
+    title: "Dog Groomers & Dog Washes",
+    href: "/industries/pet-groomers",
+    body: "Salons, mobile groomers and dog washes reaching dog owners nearby.",
+  },
+];
+
+const serviceLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Flyer distribution by industry",
+  serviceType: "Flyer distribution",
+  url: `${SITE_URL}${PAGE_PATH}`,
+  provider: { "@id": `${SITE_URL}/#organization` },
+  areaServed: { "@type": "City", name: "Melbourne", addressCountry: "AU" },
+};
 
 export default function Industries() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-navy text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-          <Breadcrumbs
-            items={[{ name: "Home", href: "/" }, { name: "Industries" }]}
-          />
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <div className="max-w-3xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-5">
-              Industries We Work With
-            </h1>
-            <p className="text-lg text-white/85">
-              Flyer and letterbox distribution built around how different local
-              businesses actually reach customers across Melbourne.
-            </p>
-          </div>
-        </div>
-      </section>
+      <JsonLd data={serviceLd} />
 
-      {/* Industry cards */}
-      <section className="py-16 sm:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
-            {industries.map((industry) => (
-              <Link
-                key={industry.title}
-                href={industry.href}
-                className="block bg-gray-50 border border-gray-200 rounded-xl p-6 transition-colors hover:border-navy"
-              >
-                <h2 className="font-semibold text-black mb-2">
-                  {industry.title}
-                  <span className="text-cta" aria-hidden="true">
-                    {" "}
-                    &rarr;
-                  </span>
-                </h2>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {industry.body}
-                </p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <PageHero
+        crumbs={[{ name: "Home", href: "/" }, { name: "Industries" }]}
+        h1="Industries We Work With"
+        lead="Flyer and letterbox distribution built around how different local businesses actually reach customers across Melbourne's south-east and east."
+        image={{ src: "/images/redesign/letterbox-hand.jpg", alt: "A hand posting a flyer into a steel letterbox" }}
+      />
 
-      {/* CTA banner */}
-      <section className="bg-navy py-16 sm:py-20 border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2
-            className="text-3xl md:text-4xl font-bold text-white mb-4 font-display"
-          >
-            Ready to reach local customers?
-          </h2>
-          <p className="text-white/80 mb-8 max-w-xl mx-auto">
-            Tell us your target suburbs and flyer quantity for a free,
-            no-obligation quote.
-          </p>
-          <Link
-            href="/contact"
-            data-quote-cta
-            className="inline-block bg-cta text-white font-semibold px-8 py-3 rounded transition-all duration-200 hover:bg-cta-hover hover:scale-[1.02]"
-          >
-            Get a Free Quote
-          </Link>
-        </div>
-      </section>
+      <FactsStrip
+        stats={[
+          { value: "10", label: "industries we specialise in" },
+          { value: "40+", label: "suburbs covered" },
+          { value: "Exclusive", label: "never bundled with other ads" },
+          { value: "GPS map", label: "proof of delivery, every run" },
+        ]}
+      />
+
+      <Section title="Trades and home services" first>
+        <p>
+          Plumbers, electricians, roofers, builders, renovators and cleaners use flyers to reach the households they
+          actually service, not the whole city.
+        </p>
+        <Bullets
+          items={trades.map((t) => (
+            <>
+              <TextLink href={t.href}>{t.title}</TextLink>: {t.body}
+            </>
+          ))}
+        />
+      </Section>
+
+      <Section title="Real estate, healthcare and local business">
+        <p>
+          Agents, clinics and local shops use letterbox drops to reach the streets around a listing, a practice or a
+          storefront.
+        </p>
+        <Bullets
+          items={local.map((t) => (
+            <>
+              <TextLink href={t.href}>{t.title}</TextLink>: {t.body}
+            </>
+          ))}
+        />
+      </Section>
+
+      <Section title="Hospitality and pet services">
+        <p>Restaurants, cafes and pet groomers reach the households within walking or driving distance of their door.</p>
+        <Bullets
+          items={hospitality.map((t) => (
+            <>
+              <TextLink href={t.href}>{t.title}</TextLink>: {t.body}
+            </>
+          ))}
+        />
+      </Section>
+
+      <QuickQuoteForm
+        heading="Ready to reach local customers?"
+        lead="Tell us your target suburbs and flyer quantity for a free, no-obligation quote."
+      />
     </>
   );
 }

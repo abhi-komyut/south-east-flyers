@@ -22,7 +22,7 @@ const PAGE_PATH = "/melbourne/flyer-distribution-brighton";
 export const metadata: Metadata = {
   title: { absolute: "Flyer Distribution Brighton VIC 3186 | South East Flyers" },
   description:
-    "Flyer distribution in Brighton 3186: exclusive, GPS-tracked letterbox drops, never bundled. $200 per 1,000 flyers. Free quote in 5 minutes.",
+    "Flyer distribution in Brighton 3186: exclusive, GPS-tracked letterbox drops, never bundled, from 1,000 flyers. Free quote, quick turnaround.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Flyer Distribution Brighton VIC 3186 | South East Flyers",
@@ -39,9 +39,9 @@ const faqs = [
       "Brighton 3186 has about 10,500 homes. Most are houses and townhouses with street letterboxes. Your quote gives the exact count for the streets you pick.",
   },
   {
-    question: "What does it cost to cover all of Brighton?",
+    question: "How much of Brighton can a letterbox drop cover?",
     answer:
-      "About $2,100. We charge $200 per 1,000 flyers, so a drop to roughly 10,500 homes comes to around that figure. A 1,000-flyer test run costs $200.",
+      "A full-suburb drop reaches roughly 10,500 homes across Brighton. A 1,000-flyer test run is a sensible starting point before covering more of the suburb.",
   },
   {
     question: "Do Brighton apartments get flyers?",
@@ -72,7 +72,6 @@ const serviceLd = {
     name: "Brighton, VIC 3186",
     address: { "@type": "PostalAddress", addressLocality: "Brighton", addressRegion: "VIC", postalCode: "3186", addressCountry: "AU" },
   },
-  offers: { "@type": "Offer", price: "200", priceCurrency: "AUD", description: "Per 1,000 flyers, exclusive delivery, never bundled" },
 };
 
 export default function Brighton() {
@@ -94,9 +93,9 @@ export default function Brighton() {
       <FactsStrip
         stats={[
           { value: "10,500", label: "homes in Brighton 3186, approx." },
-          { value: "$200", label: "per 1,000 flyers, exclusive" },
-          { value: "$2,100", label: "to cover the whole suburb, approx." },
-          { value: "1,000", label: "flyers, a $200 test run" },
+          { value: "Exclusive", label: "never bundled with other ads" },
+          { value: "GPS map", label: "proof of delivery, every run" },
+          { value: "1,000", label: "flyers, your first test run" },
         ]}
       />
 
@@ -182,13 +181,13 @@ export default function Brighton() {
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="Letterbox drop cost in Brighton"
+          title="Letterbox drop quantities in Brighton"
           figures={[
-            { value: "$200", label: "first test, 1,000 flyers" },
-            { value: "$2,100", label: "whole suburb, approx." },
+            { value: "1,000", label: "flyers, first test" },
+            { value: "10,500", label: "homes, whole suburb" },
           ]}
         >
-          Every drop is <strong className="text-ink">$200 per 1,000 flyers</strong>, delivered exclusively. Brighton
+          Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>. Brighton
           sits in the City of Bayside, so our flyer distribution across Bayside also reaches Hampton and{" "}
           <TextLink href="/melbourne/flyer-distribution-sandringham">Sandringham</TextLink>.
           The <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page has more quantities, and our{" "}
@@ -202,7 +201,7 @@ export default function Brighton() {
 
       <QuickQuoteForm
         heading="Ready to reach Brighton letterboxes?"
-        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count within 5 minutes."
+        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count, with a quick turnaround."
         suburbHint="e.g. Brighton, Brighton East, Hampton"
       />
 

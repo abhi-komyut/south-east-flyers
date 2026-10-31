@@ -21,7 +21,7 @@ const PAGE_PATH = "/melbourne/flyer-distribution-malvern";
 export const metadata: Metadata = {
   title: { absolute: "Flyer Distribution Malvern VIC 3144 | South East Flyers" },
   description:
-    "Flyer distribution in Malvern 3144, from Glenferrie Road to High Street. Exclusive, GPS-tracked letterbox drops, never bundled. $200 per 1,000 flyers.",
+    "Flyer distribution in Malvern 3144, from Glenferrie Road to High Street. Exclusive, GPS-tracked letterbox drops, never bundled, from 1,000 flyers.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Flyer Distribution Malvern VIC 3144 | South East Flyers",
@@ -38,9 +38,9 @@ const faqs = [
       "Malvern 3144 has about 4,800 homes. Most are houses and townhouses with street letterboxes, so a drop reaches nearly every door on the route. Your quote gives the exact count for your streets.",
   },
   {
-    question: "What does it cost to cover all of Malvern?",
+    question: "How much of Malvern can a letterbox drop cover?",
     answer:
-      "About $1,000 at $200 per 1,000 flyers. That is small enough that many businesses cover the whole suburb in one run rather than testing a pocket first.",
+      "All 4,800 homes in one run for most businesses. That is small enough that many skip testing a pocket first and cover the whole suburb straight away.",
   },
   {
     question: "Do you deliver to Malvern's period homes with front gates?",
@@ -71,7 +71,6 @@ const serviceLd = {
     name: "Malvern, VIC 3144",
     address: { "@type": "PostalAddress", addressLocality: "Malvern", addressRegion: "VIC", postalCode: "3144", addressCountry: "AU" },
   },
-  offers: { "@type": "Offer", price: "200", priceCurrency: "AUD", description: "Per 1,000 flyers, exclusive delivery, never bundled" },
 };
 
 export default function Malvern() {
@@ -93,9 +92,9 @@ export default function Malvern() {
       <FactsStrip
         stats={[
           { value: "4,800", label: "homes in Malvern 3144, approx." },
-          { value: "$200", label: "per 1,000 flyers, exclusive" },
-          { value: "$1,000", label: "to cover the whole suburb, approx." },
-          { value: "1,000", label: "flyers, a $200 test run" },
+          { value: "Exclusive", label: "never bundled with other ads" },
+          { value: "GPS map", label: "proof of delivery, every run" },
+          { value: "1,000", label: "flyers, your first test run" },
         ]}
       />
 
@@ -168,13 +167,13 @@ export default function Malvern() {
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="Letterbox drop cost in Malvern"
+          title="Letterbox drop quantities in Malvern"
           figures={[
-            { value: "$200", label: "first test, 1,000 flyers" },
-            { value: "$1,000", label: "whole suburb, approx." },
+            { value: "1,000", label: "flyers, first test" },
+            { value: "4,800", label: "homes, whole suburb" },
           ]}
         >
-          Every drop is <strong className="text-ink">$200 per 1,000 flyers</strong>, delivered exclusively. Our flyer
+          Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>. Our flyer
           distribution across Stonnington also reaches Armadale and Glen Iris. See the{" "}
           <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
           <TextLink href="/melbourne/flyer-distribution-caulfield">Caulfield</TextLink>,{" "}
@@ -187,7 +186,7 @@ export default function Malvern() {
 
       <QuickQuoteForm
         heading="Ready to reach Malvern letterboxes?"
-        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count within 5 minutes."
+        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count, with a quick turnaround."
         suburbHint="e.g. Malvern, Armadale, Glen Iris"
       />
 

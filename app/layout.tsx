@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: "%s | South East Flyers",
   },
   description:
-    "Flyer distribution in Melbourne's south-east and east: exclusive, GPS-tracked letterbox drops, never bundled. $200 per 1,000 flyers. Quote in 5 minutes.",
+    "Flyer distribution in Melbourne's south-east and east: exclusive, GPS-tracked letterbox drops, never bundled. Free quote, quick turnaround.",
   keywords: [
     "flyer distribution melbourne",
     "letterbox drops melbourne",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Flyer Distribution Melbourne | South East Flyers",
     description:
-      "Exclusive, GPS-tracked flyer distribution and letterbox drops across Melbourne's south-east and eastern suburbs. Never bundled, from $200 per 1,000.",
+      "Exclusive, GPS-tracked flyer distribution and letterbox drops across Melbourne's south-east and eastern suburbs. Never bundled, from 1,000 flyers.",
     url: "https://www.southeastflyers.com.au",
     siteName: "South East Flyers & Marketing Solutions",
     locale: "en_AU",

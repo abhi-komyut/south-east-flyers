@@ -18,7 +18,7 @@ const PAGE_PATH = "/industries/renovation";
 export const metadata: Metadata = {
   title: { absolute: "Renovation Flyers Melbourne | South East Flyers" },
   description:
-    "Renovation flyers for kitchen, bathroom and whole-home renovators, delivered on their own to older homes in Melbourne's south-east. $200 per 1,000 flyers.",
+    "Renovation flyers for kitchen, bathroom and whole-home renovators, delivered on their own to older homes in Melbourne's south-east. Exclusive delivery, from 1,000 flyers.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Renovation Flyers & Letterbox Drops Melbourne | South East Flyers",
@@ -47,7 +47,7 @@ const faqs = [
   {
     question: "Can you deliver around a renovation I'm finishing?",
     answer:
-      "Yes. Neighbours have watched the skip bin and the trades come and go, and many are curious about the result. A 1,000-flyer drop around the job, at $200, turns that curiosity into quote requests.",
+      "Yes. Neighbours have watched the skip bin and the trades come and go, and many are curious about the result. A 1,000-flyer drop around the job turns that curiosity into quote requests.",
   },
   {
     question: "Which homes should a renovation drop target?",
@@ -65,7 +65,6 @@ const serviceLd = {
   url: `${SITE_URL}${PAGE_PATH}`,
   provider: { "@id": `${SITE_URL}/#organization` },
   areaServed: { "@type": "City", name: "Melbourne", addressCountry: "AU" },
-  offers: { "@type": "Offer", price: "200", priceCurrency: "AUD", description: "Per 1,000 flyers, exclusive delivery" },
 };
 
 export default function Renovation() {
@@ -88,8 +87,8 @@ export default function Renovation() {
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "$200", label: "per 1,000 flyers" },
-          { value: "1,000", label: "flyers, a $200 test run" },
+          { value: "40+", label: "suburbs covered" },
+          { value: "1,000", label: "flyers, your first test run" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
       />
@@ -160,12 +159,12 @@ export default function Renovation() {
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="Quantities and cost"
-          figures={[{ value: "$500", label: "2,500 homes, a first test" }, { value: "$1,000", label: "5,000 homes, wider reach" }]}
+          title="Quantities"
+          figures={[{ value: "2,500", label: "homes, a first test" }, { value: "5,000", label: "homes, wider reach" }]}
         >
           Renovation jobs are large and less frequent, so most renovators need a few thousand homes to see steady
-          enquiries, at $200 per 1,000. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink>{" "}
-          page. Renovation sits on our <TextLink href="/industries/home-services">home services</TextLink> page with{" "}
+          enquiries. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink>{" "}
+          page for a quote. Renovation sits on our <TextLink href="/industries/home-services">home services</TextLink> page with{" "}
           <TextLink href="/industries/builders">builders</TextLink> and{" "}
           <TextLink href="/industries/plumbers">plumbers</TextLink>.
         </Callout>
@@ -175,7 +174,7 @@ export default function Renovation() {
 
       <QuickQuoteForm
         heading="Reach the homes that need a renovation"
-        lead="Tell us your suburbs and recent jobs. We'll quote within 5 minutes."
+        lead="Tell us your suburbs and recent jobs. We'll quote with a quick turnaround."
       />
 
       <FAQSection items={faqs} title="Renovation letterbox drop FAQs" />

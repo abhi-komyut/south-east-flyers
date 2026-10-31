@@ -18,7 +18,7 @@ const PAGE_PATH = "/industries/roofing";
 export const metadata: Metadata = {
   title: { absolute: "Roofing Flyers Melbourne | South East Flyers" },
   description:
-    "Roofing flyers delivered on their own to older homes and storm-hit streets in Melbourne's south-east. GPS-tracked, $200 per 1,000 flyers, from 1,000.",
+    "Roofing flyers delivered on their own to older homes and storm-hit streets in Melbourne's south-east. GPS-tracked, exclusive delivery, from 1,000 flyers.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Roofing Flyers & Letterbox Drops Melbourne | South East Flyers",
@@ -52,7 +52,7 @@ const faqs = [
   {
     question: "How many roofing flyers should I start with?",
     answer:
-      "2,500 to 5,000 homes ($500 to $1,000) gives a roofer enough reach to see results, because a roof is a bigger, less frequent job than a blocked drain and needs a wider pool of households to generate a steady number of calls.",
+      "2,500 to 5,000 homes gives a roofer enough reach to see results, because a roof is a bigger, less frequent job than a blocked drain and needs a wider pool of households to generate a steady number of calls.",
   },
 ];
 
@@ -65,7 +65,6 @@ const serviceLd = {
   url: `${SITE_URL}${PAGE_PATH}`,
   provider: { "@id": `${SITE_URL}/#organization` },
   areaServed: { "@type": "City", name: "Melbourne", addressCountry: "AU" },
-  offers: { "@type": "Offer", price: "200", priceCurrency: "AUD", description: "Per 1,000 flyers, exclusive delivery" },
 };
 
 export default function Roofing() {
@@ -88,8 +87,8 @@ export default function Roofing() {
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "$200", label: "per 1,000 flyers" },
-          { value: "1,000", label: "flyers, a $200 test run" },
+          { value: "40+", label: "suburbs covered" },
+          { value: "1,000", label: "flyers, your first test run" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
       />
@@ -153,12 +152,12 @@ export default function Roofing() {
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="Quantities and cost"
-          figures={[{ value: "$500", label: "2,500 homes, a first test" }, { value: "$1,000", label: "5,000 homes, wider reach" }]}
+          title="Quantities"
+          figures={[{ value: "2,500", label: "homes, a first test" }, { value: "5,000", label: "homes, wider reach" }]}
         >
           Because roof jobs are less frequent but larger than most trade work, roofers usually need more reach than a
-          plumber to see results, at $200 per 1,000. See the{" "}
-          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for more quantities. Roofing is
+          plumber to see results. See the{" "}
+          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for a quote. Roofing is
           one of the trades on our <TextLink href="/industries/home-services">home services</TextLink> page,
           alongside <TextLink href="/industries/plumbers">plumbers</TextLink> and{" "}
           <TextLink href="/industries/electricians">electricians</TextLink>. Our{" "}
@@ -171,7 +170,7 @@ export default function Roofing() {
 
       <QuickQuoteForm
         heading="Put your roofing work in front of the right streets"
-        lead="Tell us your base, recent jobs and the suburbs you cover. We'll quote within 5 minutes."
+        lead="Tell us your base, recent jobs and the suburbs you cover. We'll quote with a quick turnaround."
       />
 
       <FAQSection items={faqs} title="Roofing letterbox drop FAQs" />

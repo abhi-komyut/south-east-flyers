@@ -22,7 +22,7 @@ const PAGE_PATH = "/melbourne/flyer-distribution-camberwell";
 export const metadata: Metadata = {
   title: { absolute: "Flyer Distribution Camberwell VIC 3124 | South East Flyers" },
   description:
-    "Flyer distribution in Camberwell 3124, from Camberwell Junction to the surrounding streets. Exclusive, GPS-tracked, never bundled. $200 per 1,000 flyers.",
+    "Flyer distribution in Camberwell 3124, from Camberwell Junction to the surrounding streets. Exclusive, GPS-tracked, never bundled, from 1,000 flyers.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Flyer Distribution Camberwell VIC 3124 | South East Flyers",
@@ -39,9 +39,9 @@ const faqs = [
       "Camberwell 3124 has about 9,000 homes, mostly houses with street letterboxes. That makes coverage close to complete across most of the suburb, unlike apartment-heavy suburbs where locked mail rooms cut the reachable count down.",
   },
   {
-    question: "What does a letterbox drop across all of Camberwell cost?",
+    question: "How much of Camberwell can a letterbox drop cover?",
     answer:
-      "About $1,800 at $200 per 1,000 flyers. A first test run of 1,000 flyers around Camberwell Junction costs $200.",
+      "With about 9,000 homes, a full-suburb drop covers all of Camberwell. A first test run of 1,000 flyers around Camberwell Junction is a sensible starting point.",
   },
   {
     question: "Is Camberwell a good suburb for appraisal flyers?",
@@ -72,7 +72,6 @@ const serviceLd = {
     name: "Camberwell, VIC 3124",
     address: { "@type": "PostalAddress", addressLocality: "Camberwell", addressRegion: "VIC", postalCode: "3124", addressCountry: "AU" },
   },
-  offers: { "@type": "Offer", price: "200", priceCurrency: "AUD", description: "Per 1,000 flyers, exclusive delivery, never bundled" },
 };
 
 export default function Camberwell() {
@@ -94,9 +93,9 @@ export default function Camberwell() {
       <FactsStrip
         stats={[
           { value: "9,000", label: "homes in Camberwell 3124, approx." },
-          { value: "$200", label: "per 1,000 flyers, exclusive" },
-          { value: "$1,800", label: "to cover the whole suburb, approx." },
-          { value: "1,000", label: "flyers, a $200 test run" },
+          { value: "Exclusive", label: "never bundled with other ads" },
+          { value: "GPS map", label: "proof of delivery, every run" },
+          { value: "1,000", label: "flyers, your first test run" },
         ]}
       />
 
@@ -179,13 +178,13 @@ export default function Camberwell() {
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="Letterbox drop cost in Camberwell"
+          title="Letterbox drop quantities in Camberwell"
           figures={[
-            { value: "$200", label: "first test, 1,000 flyers" },
-            { value: "$1,800", label: "whole suburb, approx." },
+            { value: "1,000", label: "flyers, first test" },
+            { value: "9,000", label: "homes, whole suburb" },
           ]}
         >
-          Every drop is <strong className="text-ink">$200 per 1,000 flyers</strong>, delivered exclusively. Our flyer
+          Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>. Our flyer
           distribution across Boroondara also reaches Hawthorn and Kew. See the{" "}
           <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
           <TextLink href="/melbourne/flyer-distribution-hawthorn">Hawthorn</TextLink>,{" "}
@@ -198,7 +197,7 @@ export default function Camberwell() {
 
       <QuickQuoteForm
         heading="Ready to reach Camberwell letterboxes?"
-        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count within 5 minutes."
+        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count, with a quick turnaround."
         suburbHint="e.g. Camberwell, Hawthorn, Kew"
       />
 

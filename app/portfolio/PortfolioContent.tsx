@@ -7,7 +7,7 @@ const steps = [
   {
     number: "01",
     title: "Get a quote",
-    description: "Tell us your target suburbs, quantity and timeline. We'll send a detailed quote within 5 minutes.",
+    description: "Tell us your target suburbs, quantity and timeline. We'll send a detailed quote with a quick turnaround.",
   },
   {
     number: "02",
@@ -62,8 +62,8 @@ export default function PortfolioContent() {
               <dd className="mb-1.5 font-display text-[34px] leading-[1.1] [font-variant-numeric:tabular-nums]">100%</dd>
             </div>
             <div className="flex flex-col-reverse">
-              <dt className="text-sm text-white/80">Minimum flyers</dt>
-              <dd className="mb-1.5 font-display text-[34px] leading-[1.1] [font-variant-numeric:tabular-nums]">1,000</dd>
+              <dt className="text-sm text-white/80">Start from</dt>
+              <dd className="mb-1.5 font-display text-[34px] leading-[1.1] [font-variant-numeric:tabular-nums]">1,000 flyers</dd>
             </div>
           </dl>
         </div>

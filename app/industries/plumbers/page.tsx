@@ -19,7 +19,7 @@ const PAGE_PATH = "/industries/plumbers";
 export const metadata: Metadata = {
   title: { absolute: "Plumber Flyers Melbourne | South East Flyers" },
   description:
-    "Plumber flyers delivered to the letterboxes around your base. Exclusive, never bundled, GPS-tracked. $200 per 1,000 flyers across Melbourne's south-east.",
+    "Plumber flyers delivered to the letterboxes around your base. Exclusive, never bundled, GPS-tracked, from 1,000 flyers across Melbourne's south-east.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Plumber Flyers & Letterbox Drops Melbourne | South East Flyers",
@@ -38,7 +38,7 @@ const faqs = [
   {
     question: "How many plumbing flyers should I start with?",
     answer:
-      "Start with 1,000 to 2,500 homes closest to your base, which costs $200 to $500. Ask callers where they found you, then extend to the suburbs that respond.",
+      "Start with 1,000 to 2,500 homes closest to your base. Ask callers where they found you, then extend to the suburbs that respond.",
   },
   {
     question: "When should a plumber do a letterbox drop?",
@@ -66,7 +66,6 @@ const serviceLd = {
   url: `${SITE_URL}${PAGE_PATH}`,
   provider: { "@id": `${SITE_URL}/#organization` },
   areaServed: { "@type": "City", name: "Melbourne", addressCountry: "AU" },
-  offers: { "@type": "Offer", price: "200", priceCurrency: "AUD", description: "Per 1,000 flyers, exclusive delivery" },
 };
 
 export default function Plumbers() {
@@ -89,8 +88,8 @@ export default function Plumbers() {
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "$200", label: "per 1,000 flyers" },
-          { value: "1,000", label: "flyers, a $200 test run" },
+          { value: "40+", label: "suburbs covered" },
+          { value: "1,000", label: "flyers, your first test run" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
       />
@@ -162,15 +161,15 @@ export default function Plumbers() {
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="Cost of a plumbing letterbox drop"
+          title="Quantities for a plumbing letterbox drop"
           figures={[
-            { value: "$500", label: "2,500 homes around your base" },
-            { value: "$2,100", label: "a Brighton-sized suburb, approx." },
+            { value: "2,500", label: "homes around your base" },
+            { value: "10,500", label: "homes, a Brighton-sized suburb" },
           ]}
         >
           <p className="m-0">
-            Every drop is $200 per 1,000 flyers. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink>{" "}
-            page for more quantities.
+            Every drop is exclusive, from 1,000 flyers. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink>{" "}
+            page for a quote.
           </p>
           <p className="m-0">
             Plumbing is one of several trades we deliver for. See{" "}
@@ -186,7 +185,7 @@ export default function Plumbers() {
 
       <QuickQuoteForm
         heading="Get your plumbing number on local fridges"
-        lead="Tell us where you're based and the suburbs you cover. We'll quote within 5 minutes."
+        lead="Tell us where you're based and the suburbs you cover. We'll quote with a quick turnaround."
       />
 
       <FAQSection items={faqs} title="Plumber letterbox drop FAQs" />

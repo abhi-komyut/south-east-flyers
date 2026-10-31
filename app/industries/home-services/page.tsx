@@ -18,7 +18,7 @@ const PAGE_PATH = "/industries/home-services";
 export const metadata: Metadata = {
   title: { absolute: "Home Services Marketing Melbourne | South East Flyers" },
   description:
-    "Home services marketing for plumbers, electricians, roofers and cleaners in Melbourne. Exclusive, GPS-tracked letterbox drops. $200 per 1,000 flyers.",
+    "Home services marketing for plumbers, electricians, roofers and cleaners in Melbourne. Exclusive, GPS-tracked letterbox drops, from 1,000 flyers.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Letterbox Drops for Home Services Melbourne | South East Flyers",
@@ -39,7 +39,7 @@ const faqs = [
   {
     question: "How many flyers should a tradie drop?",
     answer:
-      "Start with the streets closest to your base or your current jobs. 1,000 flyers ($200) covers a pocket of local streets. Track the calls, then expand into the suburbs that respond.",
+      "Start with the streets closest to your base or your current jobs. 1,000 flyers covers a pocket of local streets. Track the calls, then expand into the suburbs that respond.",
   },
   {
     question: "When is the best time to drop home services flyers?",
@@ -93,8 +93,8 @@ export default function HomeServices() {
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "$200", label: "per 1,000 flyers" },
-          { value: "1,000", label: "flyers, a $200 test run" },
+          { value: "40+", label: "suburbs covered" },
+          { value: "1,000", label: "flyers, your first test run" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
       />
@@ -180,15 +180,15 @@ export default function HomeServices() {
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="What it costs"
+          title="Quantities"
           figures={[
-            { value: "$200", label: "test run, 1,000 flyers" },
-            { value: "$500", label: "2,500 homes around your base" },
+            { value: "1,000", label: "flyers, a test run" },
+            { value: "2,500", label: "homes around your base" },
           ]}
         >
           <p className="m-0">
-            Every drop is $200 per 1,000 flyers. See the{" "}
-            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for more quantities, or the{" "}
+            Every drop is exclusive, from 1,000 flyers. See the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for a quote, or the{" "}
             <TextLink href="/industries/local-businesses">local businesses</TextLink> page for other ways businesses
             use our service.
           </p>
@@ -204,7 +204,7 @@ export default function HomeServices() {
 
       <QuickQuoteForm
         heading="Get your trade into local letterboxes"
-        lead="Tell us your trade, your base and the suburbs you service. We'll quote within 5 minutes."
+        lead="Tell us your trade, your base and the suburbs you service. We'll quote with a quick turnaround."
       />
 
       <FAQSection items={faqs} title="Home services letterbox drop FAQs" />

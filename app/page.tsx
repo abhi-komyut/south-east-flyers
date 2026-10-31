@@ -41,7 +41,7 @@ const jsonLd = {
 
 const comparisonRows: { feature: string; bundled: string; sef: string }[] = [
   { feature: "In the letterbox", bundled: "Inside a pack of other ads", sef: "Your flyer, on its own" },
-  { feature: "Minimum order", bundled: "Often several thousand", sef: "1,000 flyers" },
+  { feature: "Starting quantity", bundled: "Often several thousand", sef: "1,000 flyers" },
   { feature: "Proof of delivery", bundled: "Rarely shown", sef: "GPS route map, every time" },
   { feature: "“No Junk Mail” signs", bundled: "Varies by walker", sef: "Always respected" },
 ];
@@ -62,10 +62,10 @@ export default function Home() {
 
       <FactsStrip
         stats={[
-          { value: "$200", label: "per 1,000 flyers delivered" },
+          { value: "40+", label: "suburbs across Melbourne's south-east" },
           { value: "100%", label: "GPS-tracked delivery routes" },
           { value: "Never", label: "bundled with other advertisers" },
-          { value: "5 min", label: "to a detailed, written quote" },
+          { value: "Quick", label: "turnaround on your quote" },
         ]}
       />
 
@@ -258,7 +258,7 @@ export default function Home() {
       </section>
 
       <QuickQuoteForm
-        heading="$200 per 1,000 flyers. A quote back within 5 minutes."
+        heading="Get a quote with a quick turnaround."
         lead="Tell us where and how many. We'll send pricing, a coverage map and a timeline. No obligation."
       />
 

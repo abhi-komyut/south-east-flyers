@@ -115,7 +115,7 @@ export default function LetterboxDistribution() {
         </p>
         <p>
           South East Flyers plans and delivers the drop for you. You provide the flyers and choose the areas; we
-          handle route planning, door-to-door delivery, GPS tracking and reporting. Minimum campaign is 1,000
+          handle route planning, door-to-door delivery, GPS tracking and reporting. Campaigns start from 1,000
           flyers, scaling up for larger runs across{" "}
           <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne</TextLink>&rsquo;s south-east and
           eastern suburbs.

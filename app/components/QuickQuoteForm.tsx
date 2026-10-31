@@ -8,7 +8,7 @@ import Reveal from "./Reveal";
 const WHATSAPP_NUMBER = "61402824070";
 
 export default function QuickQuoteForm({
-  heading = "$200 per 1,000 flyers. A quote back within 5 minutes.",
+  heading = "Get a quote with a quick turnaround.",
   lead = "Tell us where and how many. We'll send pricing, a coverage map and a timeline. No obligation.",
   suburbHint = "e.g. Brighton, Hampton, Sandringham",
 }: {
@@ -67,7 +67,7 @@ export default function QuickQuoteForm({
           </h2>
           <p className="m-0 text-[17px] leading-[1.7] text-white/85 max-w-[460px]">{lead}</p>
           <ul className="list-none m-0 p-0 flex flex-col gap-3">
-            {["Exclusive delivery, never bundled", "Free suburb-level targeting advice", "GPS tracking report included"].map((item) => (
+            {["Coverage across 40+ suburbs", "High-conversion letterbox marketing", "Helps you acquire new customers"].map((item) => (
               <li key={item} className="flex gap-3 items-center text-base">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-cta-on-dark shrink-0" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M5 12.5l4.5 4.5L19 7.5" />
@@ -92,7 +92,7 @@ export default function QuickQuoteForm({
               <div>
                 <h3 className="m-0 font-heading font-semibold text-lg mb-1.5">Quote request received</h3>
                 <p className="m-0 text-sm text-muted">
-                  We&rsquo;ve opened WhatsApp for you and we&rsquo;ll get back to you within 5 minutes with a detailed quote.
+                  We&rsquo;ve opened WhatsApp for you and we&rsquo;ll get back to you with a quick turnaround on a detailed quote.
                 </p>
               </div>
             </div>

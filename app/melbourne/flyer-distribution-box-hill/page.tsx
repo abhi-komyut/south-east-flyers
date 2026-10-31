@@ -21,7 +21,7 @@ const PAGE_PATH = "/melbourne/flyer-distribution-box-hill";
 export const metadata: Metadata = {
   title: { absolute: "Flyer Distribution Box Hill VIC 3128 | South East Flyers" },
   description:
-    "Flyer distribution in Box Hill 3128, from Whitehorse Road towers to the house streets around them. Exclusive, GPS-tracked, never bundled. $200 per 1,000.",
+    "Flyer distribution in Box Hill 3128, from Whitehorse Road towers to the house streets around them. Exclusive, GPS-tracked, never bundled, from 1,000 flyers.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Flyer Distribution Box Hill VIC 3128 | South East Flyers",
@@ -38,9 +38,9 @@ const faqs = [
       "Box Hill 3128 has about 7,800 homes, and more than half are apartments. Many towers have mailrooms we can't enter, so your quote counts the letterboxes our walkers can actually reach from the street.",
   },
   {
-    question: "What does it cost to cover all of Box Hill?",
+    question: "How much of Box Hill can a letterbox drop reach?",
     answer:
-      "About $1,600 at $200 per 1,000 flyers, before you remove any locked buildings. Most businesses start with 1,000 to 2,500 flyers around their shop or clinic and widen the area once calls come in.",
+      "Most of Box Hill's roughly 7,800 homes, aside from apartment towers with locked mailrooms our walkers can't enter. Most businesses start with 1,000 to 2,500 flyers around their shop or clinic and widen the area once calls come in.",
   },
   {
     question: "Can I send bilingual flyers in Box Hill?",
@@ -71,7 +71,6 @@ const serviceLd = {
     name: "Box Hill, VIC 3128",
     address: { "@type": "PostalAddress", addressLocality: "Box Hill", addressRegion: "VIC", postalCode: "3128", addressCountry: "AU" },
   },
-  offers: { "@type": "Offer", price: "200", priceCurrency: "AUD", description: "Per 1,000 flyers, exclusive delivery, never bundled" },
 };
 
 export default function BoxHill() {
@@ -93,9 +92,9 @@ export default function BoxHill() {
       <FactsStrip
         stats={[
           { value: "7,800", label: "homes in Box Hill 3128, approx." },
-          { value: "$200", label: "per 1,000 flyers, exclusive" },
-          { value: "$1,600", label: "to cover the whole suburb, approx." },
-          { value: "1,000", label: "flyers, a $200 test run" },
+          { value: "Exclusive", label: "never bundled with other ads" },
+          { value: "GPS map", label: "proof of delivery, every run" },
+          { value: "1,000", label: "flyers, your first test run" },
         ]}
       />
 
@@ -170,13 +169,13 @@ export default function BoxHill() {
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="Letterbox drop cost in Box Hill"
+          title="Letterbox drop quantities in Box Hill"
           figures={[
-            { value: "$200", label: "first test, 1,000 flyers" },
-            { value: "$1,600", label: "whole suburb, approx." },
+            { value: "1,000", label: "flyers, first test" },
+            { value: "7,800", label: "homes, approx., whole suburb" },
           ]}
         >
-          Every drop is <strong className="text-ink">$200 per 1,000 flyers</strong>, delivered exclusively.
+          Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>.
           Our flyer distribution across Whitehorse also reaches Blackburn, Burwood and Nunawading.
           See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, our{" "}
           <TextLink href="/melbourne/flyer-distribution-south-east-melbourne">south-east and eastern Melbourne</TextLink>{" "}
@@ -189,7 +188,7 @@ export default function BoxHill() {
 
       <QuickQuoteForm
         heading="Ready to reach Box Hill letterboxes?"
-        lead="Tell us your venue or streets and quantity. We'll quote with the reachable letterbox count within 5 minutes."
+        lead="Tell us your venue or streets and quantity. We'll quote with the reachable letterbox count, with a quick turnaround."
         suburbHint="e.g. Box Hill, Blackburn, Burwood"
       />
 

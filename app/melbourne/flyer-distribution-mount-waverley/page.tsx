@@ -21,7 +21,7 @@ const PAGE_PATH = "/melbourne/flyer-distribution-mount-waverley";
 export const metadata: Metadata = {
   title: { absolute: "Flyer Distribution Mount Waverley 3149 | South East Flyers" },
   description:
-    "Flyer distribution in Mount Waverley 3149: family homes, school zones and two village strips. Exclusive, GPS-tracked, never bundled. $200 per 1,000 flyers.",
+    "Flyer distribution in Mount Waverley 3149: family homes, school zones and two village strips. Exclusive, GPS-tracked, never bundled, from 1,000 flyers.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Flyer Distribution Mount Waverley 3149 | South East Flyers",
@@ -38,9 +38,9 @@ const faqs = [
       "Mount Waverley 3149 has about 13,900 homes, mostly houses with letterboxes at the front gate. It is one of the larger suburbs we cover, so most businesses start with one part of it.",
   },
   {
-    question: "What does it cost to cover all of Mount Waverley?",
+    question: "How much of Mount Waverley can a letterbox drop cover?",
     answer:
-      "About $2,800 at $200 per 1,000 flyers. Many businesses split it into two or three drops, starting with the streets nearest their shop or base.",
+      "Up to all 13,900 homes across the suburb, though many businesses split it into two or three drops, starting with the streets nearest their shop or base.",
   },
   {
     question: "Which part of Mount Waverley should a first drop cover?",
@@ -71,7 +71,6 @@ const serviceLd = {
     name: "Mount Waverley, VIC 3149",
     address: { "@type": "PostalAddress", addressLocality: "Mount Waverley", addressRegion: "VIC", postalCode: "3149", addressCountry: "AU" },
   },
-  offers: { "@type": "Offer", price: "200", priceCurrency: "AUD", description: "Per 1,000 flyers, exclusive delivery, never bundled" },
 };
 
 export default function MountWaverley() {
@@ -93,9 +92,9 @@ export default function MountWaverley() {
       <FactsStrip
         stats={[
           { value: "13,900", label: "homes in Mount Waverley 3149, approx." },
-          { value: "$200", label: "per 1,000 flyers, exclusive" },
-          { value: "$2,800", label: "to cover the whole suburb, approx." },
-          { value: "1,000", label: "flyers, a $200 test run" },
+          { value: "Exclusive", label: "never bundled with other ads" },
+          { value: "GPS map", label: "proof of delivery, every run" },
+          { value: "1,000", label: "flyers, your first test run" },
         ]}
       />
 
@@ -146,8 +145,8 @@ export default function MountWaverley() {
         </p>
         <p>
           A sensible plan is to start with the section nearest your shop or base, track the calls for a few weeks,
-          then roll into the next section with the same flyer. Three drops of around 4,500 homes each cost about
-          $900 apiece and cover the whole suburb over a season, with a GPS report for each run.
+          then roll into the next section with the same flyer. Three drops of around 4,500 homes each cover the
+          whole suburb over a season, with a GPS report for each run.
         </p>
       </Section>
 
@@ -168,13 +167,13 @@ export default function MountWaverley() {
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="Letterbox drop cost in Mount Waverley"
+          title="Letterbox drop quantities in Mount Waverley"
           figures={[
-            { value: "$500", label: "2,500 homes near your base" },
-            { value: "$2,800", label: "whole suburb, approx." },
+            { value: "2,500", label: "homes near your base" },
+            { value: "13,900", label: "homes, whole suburb" },
           ]}
         >
-          Every drop is <strong className="text-ink">$200 per 1,000 flyers</strong>, delivered exclusively.
+          Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>.
           Our flyer distribution across Monash also reaches Glen Waverley, Wheelers Hill, Oakleigh
           and Chadstone. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or the rest
           of our <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
@@ -185,7 +184,7 @@ export default function MountWaverley() {
 
       <QuickQuoteForm
         heading="Ready to reach Mount Waverley letterboxes?"
-        lead="Tell us your streets or school zone and quantity. We'll quote with the letterbox count within 5 minutes."
+        lead="Tell us your streets or school zone and quantity. We'll quote with the letterbox count, with a quick turnaround."
         suburbHint="e.g. Mount Waverley, Glen Waverley, Chadstone"
       />
 
