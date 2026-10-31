@@ -169,7 +169,7 @@ export function Section({
   return (
     <Reveal
       as="section"
-      className={`flex flex-wrap gap-5 gap-x-[88px] ${first ? "" : "pt-14 border-t border-line"}`}
+      className={`max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] flex flex-wrap gap-5 gap-x-[88px] ${first ? "" : "pt-14 border-t border-line"}`}
     >
       <h2 className="flex-[1_1_300px] m-0 font-display font-medium text-[clamp(28px,2.8vw,38px)] leading-[1.15]">
         {title}
