@@ -99,7 +99,9 @@ export default function CatalogueDelivery() {
         </p>
         <p>
           We deliver each catalogue on its own. When it&rsquo;s the only thing in the letterbox, it gets opened. That
-          matters most for independent retailers whose catalogue can&rsquo;t compete on size with the national chains.
+          matters most for independent retailers and other{" "}
+          <TextLink href="/industries/local-businesses">local businesses</TextLink> whose catalogue can&rsquo;t compete
+          on size with the national chains.
         </p>
       </Section>
 
@@ -110,7 +112,7 @@ export default function CatalogueDelivery() {
             <><strong>Furniture, bedding and homewares stores</strong> running a seasonal sale.</>,
             <><strong>Garden centres and hardware stores</strong> ahead of spring.</>,
             <><strong>Pharmacies and bottle shops</strong> with a monthly catalogue of offers.</>,
-            <><strong>Real estate agencies</strong> sending a quarterly property magazine to their farm area.</>,
+            <><strong><TextLink href="/industries/real-estate">Real estate agencies</TextLink></strong> sending a quarterly property magazine to their farm area.</>,
           ]}
         />
       </Section>
@@ -122,9 +124,10 @@ export default function CatalogueDelivery() {
           suburbs may be worth covering.
         </p>
         <p>
-          Retail catalogue letterbox drops work best on a regular cycle. Delivering early in the week puts the
-          catalogue in the house before weekend shopping. Each run comes with a GPS report, so you can compare one
-          month&rsquo;s sales by area with the next.
+          Retail catalogue letterbox drops work best on a regular cycle, the same as our{" "}
+          <TextLink href="/services/flyer-distribution">flyer distribution</TextLink> runs. Delivering early in the week
+          puts the catalogue in the house before weekend shopping. Each run comes with a GPS report, so you can compare
+          one month&rsquo;s sales by area with the next.
         </p>
       </Section>
 

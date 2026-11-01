@@ -98,8 +98,9 @@ export default function PamphletDelivery() {
           room.
         </p>
         <p>
-          Pamphlet delivery works the same way as our flyer drops. You choose the streets, we deliver each pamphlet on
-          its own, and the GPS report shows exactly where it went.
+          Pamphlet delivery works the same way as our{" "}
+          <TextLink href="/services/flyer-distribution">flyer distribution</TextLink> drops. You choose the streets, we
+          deliver each pamphlet on its own, and the GPS report shows exactly where it went.
         </p>
       </Section>
 
@@ -110,7 +111,7 @@ export default function PamphletDelivery() {
             <><strong>Childcare and aged care centres</strong> introducing a new site to the surrounding streets.</>,
             <><strong>Community groups and sports clubs</strong> announcing registrations and events.</>,
             <><strong>New housing developments</strong> telling neighbours what is being built.</>,
-            <><strong>Service businesses</strong>, such as financial planners or builders, with a range to explain.</>,
+            <><strong>Service businesses</strong> and other{" "}<TextLink href="/industries/local-businesses">local businesses</TextLink>, such as financial planners or builders, with a range to explain.</>,
           ]}
         />
       </Section>
