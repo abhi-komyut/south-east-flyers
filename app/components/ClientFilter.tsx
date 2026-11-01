@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 
-type Category = "all" | "real-estate" | "healthcare" | "trades";
+type Category = "all" | "real-estate" | "healthcare" | "trades" | "local-business";
 
 const CLIENTS: { name: string; src: string; height: number; category: Category }[] = [
   { name: "Marshall White", src: "/images/redesign/logo-marshallwhite.png", height: 20, category: "real-estate" },
@@ -11,8 +11,14 @@ const CLIENTS: { name: string; src: string; height: number; category: Category }
   { name: "Belle Property", src: "/images/redesign/logo-belle.png", height: 64, category: "real-estate" },
   { name: "Barry Plant", src: "/images/redesign/logo-barryplant.png", height: 20, category: "real-estate" },
   { name: "Buxton Real Estate", src: "/images/redesign/logo-buxton.png", height: 32, category: "real-estate" },
+  { name: "Scott Kim Real Estate", src: "/images/redesign/logo-scottkim.png", height: 40, category: "real-estate" },
   { name: "High Dental", src: "/images/redesign/logo-highdental.png", height: 60, category: "healthcare" },
   { name: "Storm Shield Roofing", src: "/images/redesign/logo-stormshield.png", height: 60, category: "trades" },
+  { name: "Apex Roofing Melbourne", src: "/images/redesign/logo-apexroofing.png", height: 58, category: "trades" },
+  { name: "Renovate Pro", src: "/images/redesign/logo-renovatepro.png", height: 40, category: "trades" },
+  { name: "YellowBrickRoad Home Loans", src: "/images/redesign/logo-yellowbrickroad.png", height: 38, category: "local-business" },
+  { name: "Bubble's Dog Salon", src: "/images/redesign/logo-bubbles.jpg", height: 96, category: "local-business" },
+  { name: "CHN Group", src: "/images/redesign/logo-chn.png", height: 44, category: "local-business" },
 ];
 
 const TABS: { key: Category; label: string }[] = [
@@ -20,6 +26,7 @@ const TABS: { key: Category; label: string }[] = [
   { key: "real-estate", label: "Real estate" },
   { key: "healthcare", label: "Healthcare" },
   { key: "trades", label: "Trades" },
+  { key: "local-business", label: "Local business" },
 ];
 
 export default function ClientFilter({ heading }: { heading: string }) {
