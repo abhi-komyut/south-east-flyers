@@ -150,7 +150,7 @@ Melbourne volumes (Keyword Planner, Oct 2025 to Sep 2026), each 10 to 100 a mont
 - Their depot is in Campbellfield (north). Their suburb pages are mostly north and west Melbourne. They cover only **Glen Waverley and Mount Waverley** from SEF's 56 suburbs.
 - Minimum **10,000 homes**, **shared (bundled) distribution**, no GPS proof. SEF's 1,000 minimum, solo delivery and GPS proof go in every page's first screen.
 - They list homes and postcodes per suburb. SEF pages give the approximate household count and postcode.
-- Their cost page has FAQs but no prices. SEF's cost page publishes its price: $200 per 1,000, exclusive. Their shared rate is lower ($75 to $98 per 1,000) but bundled with other flyers and needs a 10,000-home minimum. Frame SEF's price as the cost of exclusive delivery and small minimums. Never quote their prices on SEF pages.
+- Their cost page has FAQs but no prices. SEF's cost page shows a starting price only: from $180 per 1,000, exclusive (see §2). Their shared rate is lower ($75 to $98 per 1,000) but bundled with other flyers and needs a 10,000-home minimum. Frame SEF's starting price as the cost of exclusive delivery and small minimums. Never quote their prices on SEF pages.
 - They have no pages for pet groomers, vets, dentists, medical clinics or roofers.
 - Never copy, paraphrase or mention their text or brand on SEF pages.
 
@@ -164,7 +164,7 @@ Google demotes or removes sets of near-identical location pages. Every suburb pa
 
 1. Approximate household count and postcode
 2. Housing type described in words (mostly houses, many apartments) and what that means for coverage
-3. Full-suburb coverage cost at $200 per 1,000 (from the approximate household count)
+3. Full-suburb coverage described in homes, not dollars (e.g. "a full-suburb drop covers about 10,500 homes"). **No per-suburb dollar cost** — suburb pages are price-free (see §2, §2b).
 4. Local detail: shopping strips, schools, stations, community, the property cycle, and who buys there
 5. One real SEF campaign in or near that suburb (ask Abhi; never invent one)
 6. Suburb-specific FAQs (at least two of the six)
@@ -252,7 +252,7 @@ Write like a local operator who has walked these streets, not like a marketing b
 
 - **Suburb pages:** `LocalBusiness` (name, phone, url, areaServed with suburb and postcode), `Service` (serviceType "Flyer distribution"), `FAQPage`, `BreadcrumbList`
 - **Industry pages:** `Service` (with audience), `FAQPage`, `BreadcrumbList`
-- **Cost page:** `FAQPage` and `Offer` (price 200, priceCurrency AUD, unit "per 1,000 flyers"; add the GST note once confirmed)
+- **Cost page:** `FAQPage` only. **Do NOT add `Offer`/`price` JSON-LD** — the cost page is a quote-request page showing a starting price in copy, not structured pricing (see §2, §2b).
 - Validate each page in Google's Rich Results Test before merging. No review or AggregateRating schema unless real, verifiable reviews exist.
 
 ### 7.7a Sitewide LocalBusiness schema (supports "flyer distribution near me")
@@ -271,7 +271,7 @@ Put one `LocalBusiness` JSON-LD block in the root layout so it renders on every 
   "logo": "https://www.southeastflyers.com.au/logo.png",
   "image": "https://www.southeastflyers.com.au/og-logo.jpg",
   "description": "Exclusive, GPS-tracked flyer distribution and letterbox drops across Melbourne's south-east and eastern suburbs. Never bundled. From 1,000 flyers.",
-  "priceRange": "$200 per 1,000 flyers",
+  "priceRange": "From $180 per 1,000 flyers",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Melbourne",
@@ -292,13 +292,14 @@ Put one `LocalBusiness` JSON-LD block in the root layout so it renders on every 
     "@type": "OfferCatalog",
     "name": "Letterbox distribution",
     "itemListElement": [
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Flyer distribution"}, "price": "200", "priceCurrency": "AUD", "description": "Per 1,000 flyers, exclusive delivery, never bundled"}
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Flyer distribution"}, "priceSpecification": {"@type": "PriceSpecification", "minPrice": "180", "priceCurrency": "AUD"}, "description": "From $180 per 1,000 flyers, exclusive delivery, never bundled"}
     ]
   }
 }
 ```
 
 Rules:
+- **This sitewide block is the ONLY place a structured price is allowed.** It carries the business-level starting price ($180) as a `priceSpecification` → `minPrice`, not a fixed `price`. The §2b ban on re-adding `Offer`/`price` JSON-LD applies to **page-level** schema (cost, suburb, industry pages); it does not remove this one business-level catalogue entry. If Abhi prefers no structured price anywhere, drop the whole `hasOfferCatalog` and keep only the `priceRange` string. **[Decision for Abhi / claude-chat: keep the sitewide `minPrice` or strip to `priceRange` only?]**
 - **Name, phone and address must match the Google Business Profile exactly**, character for character. Ask Abhi for the profile's exact name and address before shipping.
 - SEF is a service-area business. Leave out `streetAddress`, `postalCode` and `geo` unless Abhi confirms a public street address that matches the profile.
 - Build `areaServed` from the suburb list in `sef-page-plan.csv`, not by hand.
@@ -315,7 +316,7 @@ Rules:
 4. H2s specific to the suburb: what it is like, housing type and coverage, local shops or schools, timing
 5. H2: Who we deliver for in {Suburb} (industries, with links)
 6. H2: How it works (5 numbered steps)
-7. H2: Cost ($200 per 1,000, minimum job and full-suburb cost; link to the cost page)
+7. H2: Coverage and quote — describe how much of the suburb a drop covers (in homes, not dollars), say "start from 1,000 flyers", and link to the cost page for the starting price. **No price figure, no per-suburb dollar total on the page itself** (see §2, §2b).
 8. FAQs (4 to 6)
 9. Closing call to action + quote form
 
@@ -363,3 +364,4 @@ Target length: 900 to 1,300 words. The quote form and phone number must be visib
 - Batch 2 review fixes: suburb and trade pages rewritten to under 15% shared wording; census figures removed; shared `HowItWorks` component; Real Estate page rebuilt; homepage title, description, H1 and internal links fixed; title template shortened to "%s | South East Flyers".
 - Batch 4 (PR #7 `seo/batch-4-pages`): Malvern, Mount Waverley, Sandringham.
 - Batch 5 (PR #8 `seo/batch-5-pages`): Box Hill, Builders, Renovation, Cleaning, Dog Groomers (`/industries/pet-groomers`), Restaurants & Cafes, South East hub (`/melbourne/flyer-distribution-south-east-melbourne`, add each new suburb to its `suburbPages`), local advertising guide (`/guides/...`, Article schema). All P1 pages now built.
+- Batches 6/7 (was PR #10, landed from the `main` side on 1 Nov 2026, commit `f4d9c25`; PR #10 closed as superseded): 5 industry pages — Carpenters, Dentists, GP & Medical Clinics (`/industries/medical-clinics`), Schools & Childcare (`/industries/schools-childcare`), Vets — plus 2 service pages — Catalogue Delivery (`/services/catalogue-delivery`) and Pamphlet Delivery (`/services/pamphlet-delivery`). All live, pricing-free, wired into the industries hub (+5 icon tiles, count now "15+"), the Footer (catalogue + pamphlet links), and `sitemap.ts`. **Do not rebuild these.** With these, every industry and service page in the plan is built (35 of ~79); only the suburb pages remain, on hold until mid-November Search Console data.
