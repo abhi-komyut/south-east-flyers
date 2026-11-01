@@ -151,6 +151,48 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Proof of results */}
+      <section aria-labelledby="results-title" className="bg-cream py-[clamp(80px,9vw,128px)] px-[clamp(20px,4vw,48px)]">
+        <div className="max-w-[1144px] mx-auto flex flex-col gap-11">
+          <Reveal className="flex flex-col gap-4 max-w-[640px]">
+            <h2 id="results-title" className="m-0 font-display font-medium text-[clamp(34px,3.6vw,50px)] leading-[1.1] tracking-[-0.015em]">
+              Proof it still works.
+            </h2>
+            <p className="m-0 text-[17px] leading-[1.7] text-body">
+              Letterbox marketing isn&rsquo;t coasting on habit. The response data, the household behaviour and the
+              biggest advertisers in the country all point the same way.
+            </p>
+          </Reveal>
+          <div className="flex flex-wrap gap-10 gap-x-14">
+            {[
+              {
+                value: "1 to 3%",
+                title: "Response rates have held steady for years.",
+                body: "Research from Australia Post and direct marketing agencies puts letterbox response rates at 1 to 3%. For tightly targeted local campaigns, that figure has crept up as digital fatigue sets in.",
+              },
+              {
+                value: "81%",
+                title: "of Australians check their mail the same day.",
+                body: "Most households receive fewer than two unaddressed items a week, so a flyer in the letterbox faces far less competition than an ad in a Facebook or Instagram feed.",
+              },
+              {
+                value: "Millions",
+                title: "spent every year by major Australian retailers.",
+                body: "The country's biggest catalogue advertisers keep allocating budget to letterbox drops because the return on investment keeps proving itself, year after year.",
+              },
+            ].map((item, i) => (
+              <Reveal key={item.value} delay={i * 80} className="flex-[1_1_300px] flex flex-col gap-3 pt-6 border-t border-line">
+                <p className="m-0 font-display font-medium text-[clamp(34px,3.2vw,44px)] leading-none text-navy [font-variant-numeric:tabular-nums]">
+                  {item.value}
+                </p>
+                <h3 className="m-0 font-heading font-semibold text-lg leading-snug">{item.title}</h3>
+                <p className="m-0 text-[15px] leading-relaxed text-body">{item.body}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Team gallery */}
       <section aria-labelledby="team-title" className="px-[clamp(20px,4vw,48px)] pb-[clamp(80px,9vw,128px)]">
         <div className="max-w-[1144px] mx-auto flex flex-col gap-11">
