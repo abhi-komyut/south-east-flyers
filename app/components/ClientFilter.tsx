@@ -12,6 +12,7 @@ const CLIENTS: { name: string; src: string; height: number; category: Category }
   { name: "Barry Plant", src: "/images/redesign/logo-barryplant.png", height: 20, category: "real-estate" },
   { name: "Buxton Real Estate", src: "/images/redesign/logo-buxton.png", height: 32, category: "real-estate" },
   { name: "Scott Kim Real Estate", src: "/images/redesign/logo-scottkim.png", height: 40, category: "real-estate" },
+  { name: "Ray White", src: "/images/redesign/logo-raywhite.jpg", height: 84, category: "real-estate" },
   { name: "High Dental", src: "/images/redesign/logo-highdental.png", height: 60, category: "healthcare" },
   { name: "Storm Shield Roofing", src: "/images/redesign/logo-stormshield.png", height: 60, category: "trades" },
   { name: "Apex Roofing Melbourne", src: "/images/redesign/logo-apexroofing.png", height: 58, category: "trades" },
