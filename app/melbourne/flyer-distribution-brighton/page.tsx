@@ -185,7 +185,9 @@ export default function Brighton() {
         >
           <p className="m-0">
             Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>. Brighton
-            sits in the City of Bayside, so our flyer distribution across Bayside also reaches Hampton and{" "}
+            sits in the City of Bayside, so our flyer distribution across Bayside also reaches{" "}
+            <TextLink href="/melbourne/flyer-distribution-hampton">Hampton</TextLink>,{" "}
+            <TextLink href="/melbourne/flyer-distribution-brighton-east">Brighton East</TextLink> and{" "}
             <TextLink href="/melbourne/flyer-distribution-sandringham">Sandringham</TextLink>.
             The <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page has more quantities, and our{" "}
             <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> lists every

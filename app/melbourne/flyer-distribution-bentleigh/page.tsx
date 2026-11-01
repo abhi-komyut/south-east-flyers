@@ -181,7 +181,8 @@ export default function Bentleigh() {
         >
           <p className="m-0">
             Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>. Our flyer
-            distribution across Glen Eira also reaches Caulfield. See the{" "}
+            distribution across Glen Eira also reaches Caulfield and{" "}
+            <TextLink href="/melbourne/flyer-distribution-bentleigh-east">Bentleigh East</TextLink>. See the{" "}
             <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
             <TextLink href="/melbourne/flyer-distribution-caulfield">Caulfield</TextLink> and the rest of our{" "}
             <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.

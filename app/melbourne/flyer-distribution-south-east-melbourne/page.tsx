@@ -42,6 +42,10 @@ const suburbPages: Record<string, string> = {
   "Glen Waverley": "/melbourne/flyer-distribution-glen-waverley",
   "Mount Waverley": "/melbourne/flyer-distribution-mount-waverley",
   "Box Hill": "/melbourne/flyer-distribution-box-hill",
+  "Bentleigh East": "/melbourne/flyer-distribution-bentleigh-east",
+  "Brighton East": "/melbourne/flyer-distribution-brighton-east",
+  "Hampton": "/melbourne/flyer-distribution-hampton",
+  "Glen Iris": "/melbourne/flyer-distribution-glen-iris",
 };
 
 const councils: { name: string; note: string; suburbs: string[] }[] = [

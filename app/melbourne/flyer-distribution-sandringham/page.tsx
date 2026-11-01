@@ -169,7 +169,8 @@ export default function Sandringham() {
         >
           <p className="m-0">
             Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>. Our flyer
-            distribution across Bayside also reaches Hampton, Black Rock, Beaumaris and{" "}
+            distribution across Bayside also reaches{" "}
+            <TextLink href="/melbourne/flyer-distribution-hampton">Hampton</TextLink>, Black Rock, Beaumaris and{" "}
             <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink>. See the{" "}
             <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or the rest of our{" "}
             <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
