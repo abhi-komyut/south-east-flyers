@@ -75,12 +75,15 @@ export default function LetterboxDropCost() {
       <PageHero
         crumbs={[{ name: "Home", href: "/" }, { name: "Letterbox drop cost" }]}
         h1="How much does a letterbox drop cost in Melbourne?"
-        lead="A letterbox drop cost depends on your flyer quantity and target suburbs. Every drop is delivered exclusively, never bundled, plus a GPS map of every street covered. Tell us your numbers for a free, no-obligation quote."
+        lead="Flyer distribution starts at $180 per 1,000 flyers. The total depends on your quantity and the suburbs you want to cover, and every drop is delivered exclusively, never bundled, with a GPS map of every street. Tell us your numbers for a free, no-obligation quote."
         rightSlot={<PricingCalculator />}
       />
 
       <Section title="What different flyer quantities cover" first>
-        <p>The right quantity depends on your target area, not a fixed price list. Here&rsquo;s roughly what each quantity covers:</p>
+        <p>
+          Pricing starts at <strong className="text-ink">$180 per 1,000 flyers</strong>
+          <sup>*</sup> and scales with the quantity you need. Here&rsquo;s roughly what each quantity covers:
+        </p>
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse text-base">
             <thead>
@@ -105,6 +108,9 @@ export default function LetterboxDropCost() {
             </tbody>
           </table>
         </div>
+        <p className="text-[13px] leading-snug text-muted">
+          *Starting price for 1,000 flyers. Larger quantities and full-suburb coverage are quoted on request.
+        </p>
       </Section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">

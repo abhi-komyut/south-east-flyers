@@ -62,10 +62,10 @@ export default function Home() {
 
       <FactsStrip
         stats={[
-          { value: "40+", label: "suburbs across Melbourne's south-east" },
+          { value: "$180", label: "per 1,000 flyers, to start" },
           { value: "100%", label: "GPS-tracked delivery routes" },
           { value: "Never", label: "bundled with other advertisers" },
-          { value: "Quick", label: "turnaround on your quote" },
+          { value: "40+", label: "suburbs across the south-east" },
         ]}
       />
 
