@@ -49,6 +49,11 @@ const ICONS = {
   storefront: "M4 9l1-5h14l1 5M4 9v10h16V9M4 9h16M9 19v-5h2v5h2v-5h2v5",
   cup: "M5 4h10v9a5 5 0 01-10 0V4zM15 6h2a2 2 0 010 4h-2M3 20h14",
   paw: "M8 10a1.5 2 0 100-4 1.5 2 0 000 4zM13 8a1.5 2 0 100-4 1.5 2 0 000 4zM5.5 13.5a1.3 1.8 0 100-3.6 1.3 1.8 0 000 3.6zM16.5 13.5a1.3 1.8 0 100-3.6 1.3 1.8 0 000 3.6zM11 20c-2.5 0-5-1.3-5-3.3C6 14.5 8 13 11 13s5 1.5 5 3.7c0 2-2.5 3.3-5 3.3z",
+  ruler: "M4 8l4-4 12 12-4 4zM8 8l2 2M12 12l2 2M16 16l2 2",
+  medcross: "M9 3h6v6h6v6h-6v6H9v-6H3V9h6z",
+  tooth: "M12 3c-2 0-3 1-5 1-1.5 0-3 1-3 4 0 2 .6 4 1 6s.8 3 1.8 3 1.2-2 1.6-3.5S9.5 13 12 13s2.2 1 2.6 2.5S15.2 17 16.2 17s1.4-1 1.8-3 1-4 1-6c0-3-1.5-4-3-4-2 0-3-1-5-1z",
+  cap: "M12 4L2 9l10 5 10-5-10-5zM6 11v4.5c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5V11M20 9.5v5",
+  bone: "M5 10.5a2 2 0 11.4-4 2 2 0 013.6-1l6 6a2 2 0 013.6 1 2 2 0 11-.4 4 2 2 0 01-3.6 1l-6-6a2 2 0 01-3.6-1z",
 };
 
 const trades: { title: string; href: string; body: string; icon: keyof typeof ICONS }[] = [
@@ -58,18 +63,23 @@ const trades: { title: string; href: string; body: string; icon: keyof typeof IC
   { title: "Roofing", href: "/industries/roofing", body: "Roof restoration and repair flyers delivered after storms and around ageing roof lines.", icon: "roof" },
   { title: "Builders", href: "/industries/builders", body: "Construction flyers for the neighbours of each site and the streets where owners rebuild.", icon: "hammer" },
   { title: "Renovation", href: "/industries/renovation", body: "Kitchen, bathroom and whole-home renovators reaching homes that are due for work.", icon: "roller" },
+  { title: "Carpenters", href: "/industries/carpenters", body: "Decks, pergolas, built-ins and repairs delivered to the homes around each job.", icon: "ruler" },
   { title: "Cleaning", href: "/industries/cleaning", body: "House and bathroom cleaners adding clients along the routes they already run.", icon: "sparkle" },
 ];
 
 const local: { title: string; href: string; body: string; icon: keyof typeof ICONS }[] = [
   { title: "Real Estate", href: "/industries/real-estate", body: "Just Listed, Open Home, Auction and Sold campaigns delivered to the streets around your listings.", icon: "key" },
   { title: "Healthcare", href: "/industries/healthcare", body: "Local-area awareness for new practices, clinics and services opening or growing across Melbourne.", icon: "heart" },
+  { title: "GP & Medical Clinics", href: "/industries/medical-clinics", body: "GPs and medical centres reaching the families who want a doctor close to home.", icon: "medcross" },
+  { title: "Dentists", href: "/industries/dentists", body: "Dental clinics announcing a new dentist, new hours or a new service to nearby homes.", icon: "tooth" },
+  { title: "Schools & Childcare", href: "/industries/schools-childcare", body: "Childcare centres, kindergartens and schools reaching local families before enrolment season.", icon: "cap" },
   { title: "Local Businesses", href: "/industries/local-businesses", body: "Shops, cafes, clinics and studios putting their offer in the letterboxes around them.", icon: "storefront" },
 ];
 
 const hospitality: { title: string; href: string; body: string; icon: keyof typeof ICONS }[] = [
   { title: "Restaurants & Cafes", href: "/industries/restaurants", body: "Takeaway menus and opening offers delivered to the streets that can order tonight.", icon: "cup" },
   { title: "Dog Groomers & Dog Washes", href: "/industries/pet-groomers", body: "Salons, mobile groomers and dog washes reaching dog owners nearby.", icon: "paw" },
+  { title: "Vets", href: "/industries/vets", body: "Vet clinics reaching the pet owners in the streets around their practice.", icon: "bone" },
 ];
 
 const faqs = [
@@ -139,7 +149,7 @@ export default function Industries() {
 
       <FactsStrip
         stats={[
-          { value: "10", label: "industries we specialise in" },
+          { value: "15+", label: "industries we specialise in" },
           { value: "40+", label: "suburbs covered" },
           { value: "Exclusive", label: "never bundled with other ads" },
           { value: "GPS map", label: "proof of delivery, every run" },
