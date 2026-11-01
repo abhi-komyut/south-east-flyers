@@ -23,22 +23,22 @@ Get **10 organic calls a day** from the website alone. Every page exists to make
 | Phone | 0402 824 070 |
 | Email | abhiram@southeastflyers.com.au |
 | Service area | Melbourne only, focused on the 56 key suburbs in section 4 |
-| Price | **$200 per 1,000 flyers**, exclusive delivery (GST treatment to be confirmed by Abhi) |
-| Minimum order | 1,000 flyers (so the smallest job is $200) |
+| Price | **NEVER SHOWN (changed 1 Nov 2026).** All price figures — `$200`, "per 1,000 flyers", per-suburb totals, and the JSON-LD `Offer`/`price` block — were removed from every page. Pages invite a free quote instead. Do not write any dollar figure or "$X per 1,000" anywhere. |
+| Minimum / starting quantity | Say **"start from 1,000 flyers"**. Never "minimum order", never "smallest job is $200". |
 | Delivery method | Walkers on foot and e-bike riders |
 | Proof of delivery | Every route GPS-tracked in Strava; client gets the map and drop summary |
 | No Junk Mail | Always respected |
 | Bundling | None. Exclusive delivery: the flyer goes in by itself, never bundled |
-| Turnaround | 48-hour start available; quote within 24 hours |
-| Client logos on site | Ray White, McGrath, Marshall White, Belle Property, Barry Plant, Buxton, Harcourts, High Dental, Storm Shield Roofing |
+| Turnaround | 48-hour start available; say **"quote with a quick turnaround"** (the "24 hours" and "5 minutes" wording was removed 30-31 Oct 2026) |
+| Client logos on site | Ray White, McGrath, Marshall White, Belle Property, Barry Plant, Buxton, High Dental, Storm Shield Roofing, **Scott Kim Real Estate, Apex Roofing Melbourne, Renovate Pro, YellowBrickRoad Home Loans, Bubble's Dog Salon, CHN Group** (Harcourts is not currently on the site). Shown in the filterable `ClientFilter` grid on `/portfolio`, with a `local-business` category added for YellowBrickRoad / Bubble's / CHN. |
 
 **Confirmed:** SEF distributes but does not print (stated on the live site). Do not build the flyer printing page; say "we distribute, we don't print".
 
-**Unknown, ask Abhi before writing:** whether the $200 includes GST, real campaign results, client permission to name them.
+**Unknown, ask Abhi before writing:** real campaign results, client permission to name them. (GST is moot now that no price is shown.)
 
-**No census statistics on pages (Abhi, 25 Oct 2026).** Don't publish ABS demographics (income, age, ownership, families, languages, dwelling-mix percentages) or link ABS. The only number allowed is an approximate household count for the cost line.
+**No census statistics on pages (Abhi, 25 Oct 2026).** Don't publish ABS demographics (income, age, ownership, families, languages, dwelling-mix percentages) or link ABS. The only number allowed is an approximate household count, used now as **reach/coverage context** ("about 10,500 homes"), never multiplied into a cost.
 
-**Pricing maths for pages:** cost = homes ÷ 1,000 × $200. Round homes to the nearest 100 and say "about". Example: Brighton has about 10,500 dwellings, so full coverage is about $2,100.
+**No pricing maths (changed 1 Nov 2026).** The old "cost = homes ÷ 1,000 × $200" formula is retired. Use the household count only to describe how much of a suburb a drop covers (e.g. "a full-suburb drop covers about 10,500 homes"), never to compute or state a dollar cost.
 
 **No delivery zones or street boundaries.** Don't split suburbs into named zones. Say the client can cover the whole suburb or pick the streets nearest their business.
 
@@ -52,14 +52,19 @@ Approved copy (Abhi's draft, edited to pass the fact and style rules):
 >
 > ¹ ACRS Omnibus Survey, reported by [B&T, March 2016](https://www.bandt.com.au/marketing/nine-out-of-10-aussies-still-shop-from-catalogues-study)
 
-Stat strip (render server-side, not as animated zeros):
+Stat strip (render server-side, not as animated zeros). **Updated 1 Nov 2026 — no `$200`, no "minimum".** Pick tiles that fit the page; never a price tile:
 
 | Stat | Label |
 | --- | --- |
-| Exclusive | No bundling, ever |
-| 100% | Of runs GPS-tracked |
-| 1,000 | Minimum flyers |
-| 44% | Of shoppers read letterbox flyers for specials¹ |
+| Exclusive | Never bundled with other ads |
+| 100% | GPS-tracked delivery routes |
+| GPS map | Proof of delivery, every run |
+| 40+ | Suburbs across Melbourne's south-east |
+| 1,000 | Flyers, your first test run (use this phrasing, never "minimum") |
+| Never | Bundled with other advertisers |
+| Quick | Turnaround on your quote |
+
+(The homepage currently uses 40+ / 100% / Never / Quick. Suburb and industry pages lead with the suburb's home-count tile, then Exclusive / GPS map / "1,000 flyers, your first test run".)
 
 On suburb and industry pages, reuse the strip and at most one sentence of the copy. Don't paste the whole block on every page; that repeats text across dozens of pages (7.1).
 
@@ -70,6 +75,19 @@ On suburb and industry pages, reuse the strip and at most one sentence of the co
 - "or worse, end up dumped": implies other distributors dump flyers, which can't be proven.
 - "100% category exclusivity": removed by Abhi. Never claim category exclusivity. The only wording allowed is "exclusive and not bundled" (or "exclusive delivery, never bundled").
 - The rhetorical-question opener and the em dash break the style rules in 7.5.
+
+## 2b. Changes made on `main` 30 Oct – 1 Nov 2026 (apply to ALL new and rebased pages)
+
+A separate Claude Code session shipped these to `main` (and production) while batch 6/7 were in a branch. **Any page branched before 1 Nov must be rebased onto current `main` and brought in line with the following, or it will revert live fixes.**
+
+1. **All pricing removed, sitewide.** No `$200`, no "per 1,000 flyers", no per-suburb dollar totals, no `Offer`/`price` JSON-LD. See section 2. The `/letterbox-drop-cost` page was converted from a price table into a **quote-request** page, and the `PricingCalculator` became a **coverage estimator** (shows "that's roughly half a suburb", not a dollar total). `PRICE_PER_THOUSAND` / `formatAud` / `coverageCost` were deleted from `landing.tsx` — do not import them.
+2. **"Minimum order" wording removed** everywhere → "start from 1,000 flyers". "Quote within 24 hours" / "5 minutes" → "quote with a quick turnaround".
+3. **`Section` component now stacks** the H2 **above** the body (was a 2-column H2-left / body-right split) and self-contains its `max-w-[1144px]` container + side padding — so pages must NOT wrap `<Section>` in their own container div.
+4. **`Callout` body must be wrapped in a single `<p className="m-0">`.** Passing raw text + `<TextLink>`s as direct children makes every run stack onto its own line. The `figures={[...]}` stat prop was removed from all callouts (it duplicated the FactsStrip) — omit it.
+5. **Industries hub (`/industries`) was redesigned** into an icon-tile grid (one line-icon per industry, hover lift, scroll-reveal) and gained a `HowItWorks` band + FAQ. It no longer uses the checkmark `Bullets` list for the industry listing.
+6. **Build command is `next build --webpack`** (package.json). Turbopack's `next/font/google` resolver currently fails on Vercel's build image; webpack avoids it. Keep `--webpack` until Vercel fixes it.
+7. **New homepage section "Proof it still works"** (three sourced stats: 1–3% response rate, 81% same-day mail open, retailer catalogue spend) sits after the GPS "Proof of delivery" section. **NOTE / open question:** section 7.6 and the "do not add back" list above ban the "1% to 3% response rate" stat as unsourced — it was added this session on Abhi's instruction with an Australia Post / direct-marketing-agency attribution. Confirm that source holds, or this stat and the doc are in conflict.
+8. **Six client logos added** to the `ClientFilter` grid (see section 2 logo row) under a new `local-business` filter tab. The homepage monochrome logo strip was left unchanged (these are full-colour marks).
 
 ## 3. Scope decisions already made
 
