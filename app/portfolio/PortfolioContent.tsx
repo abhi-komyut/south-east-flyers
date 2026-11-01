@@ -52,16 +52,16 @@ export default function PortfolioContent() {
               and eastern suburbs, delivering every flyer exclusively and tracking every run by GPS.
             </p>
           </div>
-          <dl className="flex-[1_1_360px] m-0 flex flex-wrap gap-6 gap-x-10">
-            <div className="flex flex-col-reverse">
+          <dl className="flex-[1_1_300px] m-0 flex flex-col">
+            <div className="flex flex-col-reverse pb-5">
               <dt className="text-sm text-white/80">No bundling, ever</dt>
               <dd className="mb-1.5 font-display text-[34px] leading-[1.1]">Exclusive</dd>
             </div>
-            <div className="flex flex-col-reverse">
+            <div className="flex flex-col-reverse py-5 border-t border-white/15">
               <dt className="text-sm text-white/80">Runs GPS-tracked</dt>
               <dd className="mb-1.5 font-display text-[34px] leading-[1.1] [font-variant-numeric:tabular-nums]">100%</dd>
             </div>
-            <div className="flex flex-col-reverse">
+            <div className="flex flex-col-reverse pt-5 border-t border-white/15">
               <dt className="text-sm text-white/80">Start from</dt>
               <dd className="mb-1.5 font-display text-[34px] leading-[1.1] [font-variant-numeric:tabular-nums]">1,000 flyers</dd>
             </div>
