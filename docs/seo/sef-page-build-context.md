@@ -345,3 +345,4 @@ Target length: 900 to 1,300 words. The quote form and phone number must be visib
 - Batch 4 (PR #7 `seo/batch-4-pages`): Malvern, Mount Waverley, Sandringham.
 - Batch 5 (PR #8 `seo/batch-5-pages`): Box Hill, Builders, Renovation, Cleaning, Dog Groomers (`/industries/pet-groomers`), Restaurants & Cafes, South East hub (`/melbourne/flyer-distribution-south-east-melbourne`, add each new suburb to its `suburbPages`), local advertising guide (`/guides/...`, Article schema). All P1 pages now built.
 - Batch 6 (PR `seo/batch-6-pages`): Dentists, Vets, Carpenters, Catalogue Delivery, Pamphlet Delivery; metas under 155, titles under 60 and breadcrumbs fixed on the 9 older pages. Remaining P2/P3 suburbs on hold until Search Console data (mid-Nov).
+- Batch 7 (PR `seo/batch-7-pages`, stacked on batch 6): GP & Medical Clinics, Schools & Childcare. All industry and service pages in the plan are now built; only suburbs remain.

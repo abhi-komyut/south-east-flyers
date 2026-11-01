@@ -107,7 +107,7 @@ export default function PamphletDelivery() {
       <Section title="Who uses brochure distribution">
         <Bullets
           items={[
-            <><strong>Schools and kindergartens</strong> promoting open days and enrolments.</>,
+            <><strong>Schools and kindergartens</strong> promoting open days and enrolments (see <TextLink href="/industries/schools-childcare">school and childcare enrolment drops</TextLink>).</>,
             <><strong>Childcare and aged care centres</strong> introducing a new site to the surrounding streets.</>,
             <><strong>Community groups and sports clubs</strong> announcing registrations and events.</>,
             <><strong>New housing developments</strong> telling neighbours what is being built.</>,

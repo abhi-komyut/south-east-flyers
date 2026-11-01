@@ -83,6 +83,16 @@ const industries: { title: string; body: string; href: string }[] = [
     href: "/industries/carpenters",
   },
   {
+    title: "GP & Medical Clinics",
+    body: "GPs and medical centres telling nearby families who is taking new patients.",
+    href: "/industries/medical-clinics",
+  },
+  {
+    title: "Schools & Childcare",
+    body: "Childcare centres, kindergartens and schools reaching local families before enrolment season.",
+    href: "/industries/schools-childcare",
+  },
+  {
     title: "Local Businesses",
     body: "Shops, cafes, clinics and studios putting their offer in the letterboxes around them.",
     href: "/industries/local-businesses",

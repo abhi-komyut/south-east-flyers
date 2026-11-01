@@ -150,7 +150,8 @@ export default function Healthcare() {
           and <TextLink href="/services/targeted-flyer-distribution">targeted distribution</TextLink> services, are{" "}
           <TextLink href="/services/gps-tracked-flyer-distribution">GPS-tracked</TextLink>, and cover the suburbs on
           our <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne</TextLink> page. For practice-specific
-          advice, see our pages for <TextLink href="/industries/dentists">dental clinics</TextLink> and{" "}
+          advice, see our pages for <TextLink href="/industries/medical-clinics">GP and medical clinics</TextLink>,{" "}
+          <TextLink href="/industries/dentists">dental clinics</TextLink> and{" "}
           <TextLink href="/industries/vets">vet clinics</TextLink>.
         </p>
       </Section>
