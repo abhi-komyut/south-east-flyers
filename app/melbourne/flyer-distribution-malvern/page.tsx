@@ -171,7 +171,8 @@ export default function Malvern() {
         >
           <p className="m-0">
             Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>. Our flyer
-            distribution across Stonnington also reaches Armadale and Glen Iris. See the{" "}
+            distribution across Stonnington also reaches Armadale and{" "}
+            <TextLink href="/melbourne/flyer-distribution-glen-iris">Glen Iris</TextLink>. See the{" "}
             <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
             <TextLink href="/melbourne/flyer-distribution-caulfield">Caulfield</TextLink>,{" "}
             <TextLink href="/melbourne/flyer-distribution-camberwell">Camberwell</TextLink> and the rest of our{" "}

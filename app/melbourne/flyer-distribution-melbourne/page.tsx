@@ -45,6 +45,10 @@ const suburbPages: Record<string, string> = {
   "Mount Waverley": "/melbourne/flyer-distribution-mount-waverley",
   Sandringham: "/melbourne/flyer-distribution-sandringham",
   "Box Hill": "/melbourne/flyer-distribution-box-hill",
+  "Bentleigh East": "/melbourne/flyer-distribution-bentleigh-east",
+  "Brighton East": "/melbourne/flyer-distribution-brighton-east",
+  "Hampton": "/melbourne/flyer-distribution-hampton",
+  "Glen Iris": "/melbourne/flyer-distribution-glen-iris",
 };
 
 // Confirmed Melbourne service areas — source of truth. Do not add suburbs
