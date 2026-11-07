@@ -318,8 +318,15 @@ export const ALL_CLIENT_LOGOS: { src: string; alt: string; height: number }[] = 
   { src: "/images/redesign/logo-belle.png", alt: "Belle Property", height: 58 },
   { src: "/images/redesign/logo-barryplant.png", alt: "Barry Plant", height: 17 },
   { src: "/images/redesign/logo-buxton.png", alt: "Buxton", height: 28 },
+  { src: "/images/redesign/logo-scottkim.png", alt: "Scott Kim Real Estate", height: 34 },
+  { src: "/images/redesign/logo-raywhite.jpg", alt: "Ray White", height: 72 },
   { src: "/images/redesign/logo-highdental.png", alt: "High Dental Melbourne", height: 50 },
   { src: "/images/redesign/logo-stormshield.png", alt: "Storm Shield Roofing", height: 50 },
+  { src: "/images/redesign/logo-apexroofing.png", alt: "Apex Roofing Melbourne", height: 50 },
+  { src: "/images/redesign/logo-renovatepro.png", alt: "Renovate Pro", height: 34 },
+  { src: "/images/redesign/logo-yellowbrickroad.png", alt: "YellowBrickRoad Home Loans", height: 32 },
+  { src: "/images/redesign/logo-bubbles.jpg", alt: "Bubble's Dog Salon", height: 82 },
+  { src: "/images/redesign/logo-chn.png", alt: "CHN Group", height: 38 },
 ];
 
 export function LogoWall({
