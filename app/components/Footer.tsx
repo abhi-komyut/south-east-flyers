@@ -20,6 +20,9 @@ export default function Footer() {
             <a href="tel:0402824070" className="font-heading font-semibold text-[17px] text-ink no-underline [font-variant-numeric:tabular-nums]">
               0402 824 070
             </a>
+            <a href="mailto:abhiram@southeastflyers.com.au" className="text-[15px] text-body no-underline break-all">
+              abhiram@southeastflyers.com.au
+            </a>
           </div>
 
           <nav aria-label="Services" className="flex-[1_1_160px] flex flex-col gap-3 text-[15px]">

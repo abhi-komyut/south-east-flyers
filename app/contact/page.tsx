@@ -93,6 +93,20 @@ export default function Contact() {
               </div>
               <div className="flex gap-4 items-start">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-navy shrink-0 mt-0.5" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <rect x="3" y="5" width="18" height="14" rx="2" />
+                  <path d="M3 7.5l9 6 9-6" />
+                </svg>
+                <div>
+                  <dt className="font-heading font-semibold text-sm text-muted">Email</dt>
+                  <dd className="mt-1 mb-0 text-base">
+                    <a href="mailto:abhiram@southeastflyers.com.au" className="text-navy break-all">
+                      abhiram@southeastflyers.com.au
+                    </a>
+                  </dd>
+                </div>
+              </div>
+              <div className="flex gap-4 items-start">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-navy shrink-0 mt-0.5" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" />
                   <circle cx="12" cy="9.5" r="2.5" />
                 </svg>
