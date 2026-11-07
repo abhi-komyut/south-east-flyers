@@ -1,24 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import { useForm, ValidationError } from "@formspree/react";
-import { useEffect, useRef } from "react";
+import { useState } from "react";
 import { trackEvent } from "../lib/gtag";
 
 const WHATSAPP_NUMBER = "61402824070";
 
 export default function Contact() {
-  const [state, handleSubmit] = useForm("xzdqreda");
-  const waUrlRef = useRef<string | null>(null);
-
-  useEffect(() => {
-    if (state.succeeded) {
-      trackEvent("form_submit", { form_name: "contact" });
-      trackEvent("generate_lead", { form_name: "contact" });
-    }
-  }, [state.succeeded]);
+  const [submitted, setSubmitted] = useState(false);
+  const [waUrl, setWaUrl] = useState<string | null>(null);
 
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
     const form = e.currentTarget;
     const name = (form.elements.namedItem("name") as HTMLInputElement).value;
     const phone = (form.elements.namedItem("phone") as HTMLInputElement).value;
@@ -32,15 +25,23 @@ export default function Contact() {
       company && `Company: ${company}`,
       message && `Message: ${message}`,
     ].filter(Boolean);
-    waUrlRef.current = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`;
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`;
+    setWaUrl(url);
 
-    handleSubmit(e);
+    // Open WhatsApp synchronously within the submit gesture so the browser
+    // doesn't treat it as a blocked popup.
+    window.open(url, "_blank", "noopener,noreferrer");
+    trackEvent("form_submit", { form_name: "contact" });
+    trackEvent("generate_lead", { form_name: "contact" });
+    trackEvent("whatsapp_followup", { form_name: "contact" });
+
+    setSubmitted(true);
   }
 
   function sendOnWhatsApp() {
-    if (!waUrlRef.current) return;
+    if (!waUrl) return;
     trackEvent("whatsapp_followup", { form_name: "contact" });
-    window.open(waUrlRef.current, "_blank", "noopener,noreferrer");
+    window.open(waUrl, "_blank", "noopener,noreferrer");
   }
 
   return (
@@ -123,15 +124,15 @@ export default function Contact() {
           </div>
 
           <div className="flex-[1.5_1_480px] bg-white rounded-card p-7 sm:p-12 shadow-[0_30px_60px_-34px_rgba(4,60,60,0.5)] relative z-[2]">
-            {state.succeeded ? (
+            {submitted ? (
               <div className="py-8 flex flex-col items-start gap-4">
                 <svg width="44" height="44" viewBox="0 0 24 24" fill="none" className="text-navy" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <circle cx="12" cy="12" r="10" />
                   <path d="M7.5 12.5l3 3 6-6.5" />
                 </svg>
-                <h2 className="m-0 font-display font-medium text-[32px]">Message sent</h2>
+                <h2 className="m-0 font-display font-medium text-[32px]">We&rsquo;ve opened WhatsApp</h2>
                 <p className="m-0 text-[17px] leading-[1.7] text-body">
-                  Thank you for your enquiry. We&rsquo;ll be in touch within 1 business day.
+                  Send us your message on WhatsApp and we&rsquo;ll be in touch within 1 business day. If WhatsApp didn&rsquo;t open, tap below.
                 </p>
                 <button
                   type="button"
@@ -141,7 +142,7 @@ export default function Contact() {
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.43 1.26 4.87L2 22l5.27-1.38a9.93 9.93 0 004.77 1.22h.01c5.52 0 10-4.48 10-10s-4.48-10-10.01-10zm5.84 14.17c-.25.7-1.45 1.33-2 1.42-.51.08-1.15.11-1.86-.12a16.9 16.9 0 01-1.65-.61c-2.91-1.26-4.8-4.18-4.95-4.38-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.26-.28.57-.35.76-.35.19 0 .38 0 .55.01.17.01.41-.07.64.49.25.6.83 2.07.9 2.22.07.15.12.33.02.52-.1.19-.15.3-.3.47-.15.17-.31.37-.44.5-.15.14-.3.3-.13.6.17.3.77 1.27 1.65 2.06 1.14 1.01 2.1 1.33 2.42 1.48.32.15.5.13.7-.08.2-.2.8-.93 1.01-1.26.21-.32.42-.27.7-.16.28.1 1.79.84 2.1 1 .31.15.51.23.59.36.08.13.08.74-.17 1.44z" />
                   </svg>
-                  Also send on WhatsApp
+                  Open WhatsApp
                 </button>
               </div>
             ) : (
@@ -161,7 +162,6 @@ export default function Contact() {
                       placeholder="Your full name"
                       className="min-h-[50px] border border-field-border rounded-input px-3.5 text-base text-ink bg-white focus:outline-none focus:border-navy"
                     />
-                    <ValidationError prefix="Name" field="name" errors={state.errors} className="text-required text-xs" />
                   </div>
                   <div className="flex-[1_1_220px] flex flex-col gap-2">
                     <label htmlFor="phone" className="font-heading text-sm font-semibold">
@@ -176,7 +176,6 @@ export default function Contact() {
                       placeholder="04XX XXX XXX"
                       className="min-h-[50px] border border-field-border rounded-input px-3.5 text-base text-ink bg-white focus:outline-none focus:border-navy"
                     />
-                    <ValidationError prefix="Phone" field="phone" errors={state.errors} className="text-required text-xs" />
                   </div>
                 </div>
 
@@ -192,7 +191,6 @@ export default function Contact() {
                     placeholder="Your company name"
                     className="min-h-[50px] border border-field-border rounded-input px-3.5 text-base text-ink bg-white focus:outline-none focus:border-navy"
                   />
-                  <ValidationError prefix="Company" field="company" errors={state.errors} className="text-required text-xs" />
                 </div>
 
                 <div className="flex flex-col gap-2">
@@ -206,17 +204,13 @@ export default function Contact() {
                     placeholder="Target suburbs, quantity, timing"
                     className="border border-field-border rounded-input p-3.5 text-base leading-relaxed text-ink bg-white resize-y focus:outline-none focus:border-navy"
                   />
-                  <ValidationError prefix="Message" field="message" errors={state.errors} className="text-required text-xs" />
                 </div>
-
-                {state.errors && <ValidationError errors={state.errors} className="text-required text-sm" />}
 
                 <button
                   type="submit"
-                  disabled={state.submitting}
                   className="press min-h-[54px] rounded-full bg-cta text-ink font-heading font-bold text-base hover:bg-cta-hover transition-colors disabled:opacity-50"
                 >
-                  {state.submitting ? "Sending..." : "Send message"}
+                  Send on WhatsApp
                 </button>
                 <p className="m-0 text-[13px] text-muted text-center">No spam. We&rsquo;ll only contact you about your enquiry.</p>
               </form>

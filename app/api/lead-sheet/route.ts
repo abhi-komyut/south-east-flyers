@@ -20,9 +20,8 @@ export async function POST(request: Request) {
       }),
     });
   } catch {
-    // Best-effort: the lead has already been sent to Formspree and
-    // opened in WhatsApp, so a sheet-logging failure shouldn't surface
-    // as an error to the visitor.
+    // Best-effort: the lead has already been opened in WhatsApp, so a
+    // sheet-logging failure shouldn't surface as an error to the visitor.
   }
 
   return Response.json({ status: "ok" });

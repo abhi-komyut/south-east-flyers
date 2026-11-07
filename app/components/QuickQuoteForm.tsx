@@ -1,7 +1,6 @@
 "use client";
 
-import { useForm, ValidationError } from "@formspree/react";
-import { useEffect } from "react";
+import { useState } from "react";
 import { trackEvent } from "../lib/gtag";
 import Reveal from "./Reveal";
 
@@ -16,16 +15,10 @@ export default function QuickQuoteForm({
   lead?: string;
   suburbHint?: string;
 }) {
-  const [state, handleSubmit] = useForm("xzdqreda");
-
-  useEffect(() => {
-    if (state.succeeded) {
-      trackEvent("form_submit", { form_name: "quick_quote" });
-      trackEvent("generate_lead", { form_name: "quick_quote" });
-    }
-  }, [state.succeeded]);
+  const [submitted, setSubmitted] = useState(false);
 
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
     const form = e.currentTarget;
     const name = (form.elements.namedItem("name") as HTMLInputElement).value;
     const contact = (form.elements.namedItem("contact") as HTMLInputElement).value;
@@ -47,6 +40,8 @@ export default function QuickQuoteForm({
     // browser doesn't treat it as a blocked popup (that only works while
     // still synchronous with the user gesture — do this before any await).
     window.open(waUrl, "_blank", "noopener,noreferrer");
+    trackEvent("form_submit", { form_name: "quick_quote" });
+    trackEvent("generate_lead", { form_name: "quick_quote" });
     trackEvent("whatsapp_followup", { form_name: "quick_quote" });
 
     fetch("/api/lead-sheet", {
@@ -55,7 +50,7 @@ export default function QuickQuoteForm({
       body: JSON.stringify({ name, contact, company, flyers, suburb }),
     }).catch(() => {});
 
-    handleSubmit(e);
+    setSubmitted(true);
   }
 
   return (
@@ -84,7 +79,7 @@ export default function QuickQuoteForm({
         </Reveal>
 
         <Reveal delay={100} className="flex-[1_1_420px] bg-white text-ink rounded-card p-7 sm:p-11 shadow-[0_30px_60px_-32px_rgba(2,30,30,0.6)]">
-          {state.succeeded ? (
+          {submitted ? (
             <div className="text-center py-7 flex flex-col items-center gap-4">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" className="text-navy" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M5 13l4 4L19 7" />
@@ -111,7 +106,6 @@ export default function QuickQuoteForm({
                     autoComplete="name"
                     className="min-h-[50px] border border-field-border rounded-input px-3.5 text-base text-ink bg-white focus:outline-none focus:border-navy"
                   />
-                  <ValidationError prefix="Name" field="name" errors={state.errors} className="text-required text-xs" />
                 </div>
                 <div className="flex-[1_1_200px] flex flex-col gap-2">
                   <label htmlFor="quote-contact" className="font-heading text-sm font-semibold">
@@ -126,7 +120,6 @@ export default function QuickQuoteForm({
                     placeholder="Phone number"
                     className="min-h-[50px] border border-field-border rounded-input px-3.5 text-base text-ink bg-white focus:outline-none focus:border-navy"
                   />
-                  <ValidationError prefix="Contact" field="contact" errors={state.errors} className="text-required text-xs" />
                 </div>
               </div>
               <div className="flex flex-wrap gap-5">
@@ -169,13 +162,11 @@ export default function QuickQuoteForm({
                   className="min-h-[50px] border border-field-border rounded-input px-3.5 text-base text-ink bg-white focus:outline-none focus:border-navy"
                 />
               </div>
-              <input type="hidden" name="_subject" value="Quick Quote Request from Website" />
               <button
                 type="submit"
-                disabled={state.submitting}
                 className="press min-h-[54px] rounded-full bg-cta text-ink font-heading font-bold text-base hover:bg-cta-hover transition-colors disabled:opacity-50 mt-1"
               >
-                {state.submitting ? "Sending..." : "Get a free quote"}
+                Get a free quote
               </button>
               <p className="m-0 text-[13px] leading-snug text-muted text-center">No spam. We&rsquo;ll only contact you about your quote.</p>
             </form>
