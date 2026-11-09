@@ -161,17 +161,15 @@ export default function Camberwell() {
       </Section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
-        <Callout
-          title="Covering Camberwell's 9,000 homes"
-        >
+        <Callout title="Camberwell and nearby suburbs">
           <p className="m-0">
-            Every Camberwell drop goes out on its own, with <strong className="text-ink">no other advertisers&rsquo; flyers in the run</strong>. Our flyer
-            distribution across Boroondara also reaches Hawthorn, Kew and{" "}
-            <TextLink href="/melbourne/flyer-distribution-glen-iris">Glen Iris</TextLink>. See the{" "}
-            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. We also cover{" "}
             <TextLink href="/melbourne/flyer-distribution-hawthorn">Hawthorn</TextLink>,{" "}
-            <TextLink href="/melbourne/flyer-distribution-kew">Kew</TextLink> and the rest of our{" "}
-            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
+            <TextLink href="/melbourne/flyer-distribution-kew">Kew</TextLink> and{" "}
+            <TextLink href="/melbourne/flyer-distribution-glen-iris">Glen Iris</TextLink>, so campaigns can be spread
+            across different suburbs. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page
+            or the rest of our <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>{" "}
+            to see how we can help you.
           </p>
         </Callout>
       </div>
