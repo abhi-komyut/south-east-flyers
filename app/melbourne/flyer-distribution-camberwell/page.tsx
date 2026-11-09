@@ -107,26 +107,21 @@ export default function Camberwell() {
         </p>
       </Section>
 
-      <Section title="Long-term owners, considered decisions">
+      <Section title="Letterbox drops for Camberwell agents and trades">
         <p>
-          Camberwell is a strong area for{" "}
-          <TextLink href="/industries/real-estate">real estate agents</TextLink> running appraisal campaigns, and
-          lucrative for <TextLink href="/industries/roofing">roofers</TextLink> working on its established homes.
-          Its 9,000 homes, mostly older houses, need regular repairs and upkeep, so{" "}
-          <TextLink href="/industries/plumbers">plumbers</TextLink>,{" "}
+          Camberwell is a strong area for <TextLink href="/industries/real-estate">real estate agents</TextLink>{" "}
+          running appraisal campaigns, and lucrative for <TextLink href="/industries/roofing">roofers</TextLink>{" "}
+          working on its established homes. Its homes, mostly older houses, need regular repairs and upkeep,
+          so <TextLink href="/industries/plumbers">plumbers</TextLink>,{" "}
           <TextLink href="/industries/electricians">electricians</TextLink> and painters find steady work here too.
         </p>
       </Section>
 
-      <Section title="A Camberwell route reaches nearly every door">
+      <Section title="Start with the streets around the Junction">
         <p>
-          Houses make up the majority of Camberwell&rsquo;s homes, with townhouses and a smaller share of
-          apartments mixed in. Most streets have individual letterboxes on the footpath, so a route reaches
-          close to every door rather than being cut down by locked apartment mail rooms.
-        </p>
-        <p>
-          Shops around the Junction draw from the surrounding blocks, so a 1,000 to 2,500 flyer drop there is a
-          sensible first test before covering more of the suburb.
+          Most Camberwell homes have their own letterbox on the footpath, so our walkers reach nearly every door.
+          Shops around the Junction can start with 1,000 to 2,500 flyers in the nearby streets, then cover more of
+          the suburb.
         </p>
       </Section>
 
@@ -140,23 +135,22 @@ export default function Camberwell() {
             className="w-full h-full object-cover object-[50%_45%]"
           />
         </div>
-        <figcaption className="text-sm text-muted">Most Camberwell homes have letterboxes right on the footpath.</figcaption>
+        <figcaption className="text-sm text-muted">A walker on a Camberwell street.</figcaption>
       </Reveal>
 
       <Section title="Families near Camberwell's schools">
         <p>
           Camberwell Grammar and Camberwell Girls Grammar are just over the border in Canterbury, so plenty of
-          families live nearby. Tutors, music teachers and{" "}
-          <TextLink href="/industries/schools-childcare">kids&rsquo; activities</TextLink> do well with a drop at
-          the start of each term. Shops near the Junction can drop before market Sundays, when the area is busiest.
+          families live nearby. Tutors, music teachers and kids&rsquo; activities do well with a drop at the start of
+          each term. Shops near the Junction can drop before market Sundays, when the area is busiest.
         </p>
       </Section>
 
       <Section title="Who uses letterbox drops in Camberwell">
         <Bullets
           items={[
-            <>Real estate agents running appraisal and just-sold campaigns</>,
-            <>Roofers, plumbers, electricians and other <TextLink href="/industries/home-services">home services</TextLink></>,
+            <><TextLink href="/industries/real-estate">Real estate agents</TextLink> running appraisal and just-sold campaigns</>,
+            <><TextLink href="/industries/roofing">Roofers</TextLink>, <TextLink href="/industries/plumbers">plumbers</TextLink>, <TextLink href="/industries/electricians">electricians</TextLink> and other <TextLink href="/industries/home-services">home services</TextLink></>,
             <>Tutors and family services near the schools</>,
             <>Shops and cafes around Camberwell Junction</>,
           ]}
@@ -167,17 +161,15 @@ export default function Camberwell() {
       </Section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
-        <Callout
-          title="Camberwell and nearby suburbs"
-        >
+        <Callout title="Camberwell and nearby suburbs">
           <p className="m-0">
-            Every drop is exclusive, with <strong className="text-ink">no other advertisers&rsquo; flyers in the run</strong>. We also cover{" "}
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. We also cover{" "}
             <TextLink href="/melbourne/flyer-distribution-hawthorn">Hawthorn</TextLink>,{" "}
             <TextLink href="/melbourne/flyer-distribution-kew">Kew</TextLink> and{" "}
-            <TextLink href="/melbourne/flyer-distribution-glen-iris">Glen Iris</TextLink>, so campaigns can be spread across
-            different suburbs. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page or the
-            rest of our <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> to see
-            how we can help you.
+            <TextLink href="/melbourne/flyer-distribution-glen-iris">Glen Iris</TextLink>, so campaigns can be spread
+            across different suburbs. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page
+            or the rest of our <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>{" "}
+            to see how we can help you.
           </p>
         </Callout>
       </div>
