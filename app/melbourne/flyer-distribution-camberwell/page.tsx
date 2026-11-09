@@ -109,14 +109,12 @@ export default function Camberwell() {
 
       <Section title="Long-term owners, considered decisions">
         <p>
-          Camberwell households tend to stay put for years, so the decisions that lead to a call are the big
-          ones: selling the family home, a kitchen renovation, replacing a roof, choosing a new GP. Those
-          decisions take weeks, and a flyer that sits on the bench gets looked at more than once.
-        </p>
-        <p>
-          That suits businesses with a high-value job and a longer decision window, such as{" "}
-          <TextLink href="/industries/real-estate">real estate agents</TextLink> running appraisal campaigns and{" "}
-          <TextLink href="/industries/roofing">roofers</TextLink> working on established homes.
+          Camberwell is a strong area for{" "}
+          <TextLink href="/industries/real-estate">real estate agents</TextLink> running appraisal campaigns, and
+          lucrative for <TextLink href="/industries/roofing">roofers</TextLink> working on its established homes.
+          Its 9,000 homes, mostly older houses, need regular repairs and upkeep, so{" "}
+          <TextLink href="/industries/plumbers">plumbers</TextLink>,{" "}
+          <TextLink href="/industries/electricians">electricians</TextLink> and painters find steady work here too.
         </p>
       </Section>
 
