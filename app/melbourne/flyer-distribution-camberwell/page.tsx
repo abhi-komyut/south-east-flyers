@@ -103,7 +103,7 @@ export default function Camberwell() {
         <p>
           Camberwell Junction, where Burke, Camberwell and Riversdale roads meet, is the suburb&rsquo;s main
           shopping hub, with the station and the Sunday market a short walk away. A targeted letterbox campaign
-          across Camberwell can reach every home in the suburb.
+          across Camberwell can reach up to 9,000 homes.
         </p>
       </Section>
 
@@ -111,7 +111,7 @@ export default function Camberwell() {
         <p>
           Camberwell is a strong area for <TextLink href="/industries/real-estate">real estate agents</TextLink>{" "}
           running appraisal campaigns, and lucrative for <TextLink href="/industries/roofing">roofers</TextLink>{" "}
-          working on its established homes. Its 9,000 homes, mostly older houses, need regular repairs and upkeep,
+          working on its established homes. Its homes, mostly older houses, need regular repairs and upkeep,
           so <TextLink href="/industries/plumbers">plumbers</TextLink>,{" "}
           <TextLink href="/industries/electricians">electricians</TextLink> and painters find steady work here too.
         </p>
