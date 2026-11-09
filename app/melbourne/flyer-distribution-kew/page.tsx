@@ -34,27 +34,27 @@ const faqs = [
   {
     question: "How many letterboxes are there in Kew?",
     answer:
-      "Kew 3101 has about 10,600 homes. It has a fair number of apartments, and blocks with locked mail rooms are skipped, so your quote gives the reachable count for your streets.",
+      "About 10,600. Kew has more apartments than most, so locked mail rooms are skipped and the GPS report shows your real reach.",
   },
   {
-    question: "How much of Kew can a letterbox drop cover?",
+    question: "When is the best time for a drop in Kew?",
     answer:
-      "Up to all 10,600 homes across the suburb, though most businesses start smaller: 1,000 flyers around Kew Junction or one school catchment, then expand once they know which streets respond.",
+      "Tutors and family services should drop at the start of each school term, when parents are planning activities.",
   },
   {
-    question: "Is Kew a good suburb for tutoring and kids' activity flyers?",
+    question: "Can I target just the streets around Kew Junction?",
     answer:
-      "Yes. Kew is a family suburb with several large schools. Drops in late January and before each school term line up with when parents plan activities.",
-  },
-  {
-    question: "Can I target just the streets near Kew Junction?",
-    answer:
-      "Yes. Give us your shop address and how far your customers walk or drive, and we will quote for those streets only, which is the usual starting point for Junction cafes and shops.",
+      "Yes. Send us your shop address and we'll quote for the streets around it, not the whole suburb.",
   },
   {
     question: "Should Kew flyers be in English and Chinese?",
     answer:
-      "Consider it if your customers include Kew's Chinese-speaking families. An English flyer with a short Chinese line works; we deliver whatever you print.",
+      "Consider it if your customers include Kew's Chinese-speaking families. We deliver whatever you print.",
+  },
+  {
+    question: "Do you also deliver in Hawthorn and Camberwell?",
+    answer:
+      "Yes. Both are in our Boroondara service area, so one campaign can cover Kew and either suburb, with one GPS report.",
   },
 ];
 
@@ -97,62 +97,34 @@ export default function Kew() {
         ]}
       />
 
-      <Section title="Kew at a glance" first>
+      <Section title="Flyer distribution around Kew Junction" first>
         <p>
-          Kew is a family suburb in the City of Boroondara, with large period homes, townhouses and apartment blocks.
-          Kew Junction, where High Street meets Cotham Road, is the main shopping and dining strip, and the suburb runs
-          north and west down to the Yarra.
-        </p>
-        <p>
-          For a letterbox drop that means about 10,600 homes, with more apartments than Brighton or Glen Waverley,
-          which affects how many letterboxes a route can reach.
+          Kew Junction, where High Street meets Cotham Road, is the suburb&rsquo;s main shopping and dining strip. A
+          targeted letterbox campaign across Kew can reach up to 10,600 homes.
         </p>
       </Section>
 
-      <Section title="Families and school catchments">
+      <Section title="Letterbox drops near Kew's schools">
         <p>
-          Kew is full of school-age families, and the suburb is home to several large schools, including
-          Xavier College, Trinity Grammar and Methodist Ladies&rsquo; College. That makes Kew a strong suburb for
-          tutors, music teachers, swim schools, holiday programs and childcare.
-        </p>
-        <p>
-          Timing matters for these businesses. Parents plan activities in late January and in the fortnight before
-          each term, so a drop in those windows lands when the decision is being made.
+          Kew is a family suburb, home to Xavier College, Trinity Grammar and Methodist Ladies&rsquo; College. Tutors,
+          music teachers and kids&rsquo; activities do well with a drop at the start of each term.
         </p>
       </Section>
 
-      <Section title="Planning around Kew's apartments">
+      <Section title="Start with the streets around the Junction">
         <p>
-          Kew has more apartments than most suburbs we cover. Blocks with locked mail rooms can&rsquo;t be reached, so a street with
-          several of them yields fewer letterboxes than a street lined with houses.
-        </p>
-        <p>
-          We plan routes around this. If your customers are homeowners, we weight the drop toward the house streets.
-          If you sell to renters or young professionals, we include the apartment blocks we can reach, and the GPS
-          report shows which ones those were.
+          Most Kew homes have a letterbox on the street, so our walkers reach nearly every door, though locked
+          apartment mail rooms are skipped. Shops can start with 1,000 to 2,500 flyers in the nearby streets, then
+          cover more of the suburb.
         </p>
       </Section>
 
-      <Section title="Kew Junction shops and cafes">
-        <p>
-          Most of Kew&rsquo;s retail and dining sits around Kew Junction and along High Street. Customers for those
-          businesses mostly walk or make a short drive, so a drop of 1,000 to 2,500 flyers in the streets around the
-          Junction reaches the people most likely to come in this week.
-        </p>
-        <p>
-          A new cafe or restaurant can repeat the drop with a different offer each time: an opening offer, then a
-          weekday lunch deal, then a family dinner night. The GPS reports show which streets each drop reached, so you
-          can match them against redemptions.
-        </p>
-      </Section>
-
-      <Section title="Businesses that do well with Kew letterbox drops">
+      <Section title="Who uses letterbox drops in Kew">
         <Bullets
           items={[
             <>Tutors, music schools and kids&rsquo; activity programs</>,
-            <><TextLink href="/industries/real-estate">Real estate agents</TextLink> working the suburb&rsquo;s period homes and townhouses</>,
-            <><TextLink href="/industries/home-services">Home services</TextLink> such as <TextLink href="/industries/plumbers">plumbers</TextLink> and <TextLink href="/industries/roofing">roofers</TextLink> maintaining older homes</>,
-            <><TextLink href="/industries/healthcare">Dentists, GPs and physios</TextLink> near Kew Junction</>,
+            <><TextLink href="/industries/real-estate">Real estate agents</TextLink> working period homes and townhouses</>,
+            <>Plumbers, roofers and other <TextLink href="/industries/home-services">home services</TextLink> on older homes</>,
             <>Cafes and restaurants on High Street</>,
           ]}
         />
@@ -163,15 +135,15 @@ export default function Kew() {
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="Letterbox drop quantities in Kew"
+          title="Kew and nearby suburbs"
         >
           <p className="m-0">
-            Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>. Our flyer
-            distribution across Boroondara also reaches Hawthorn and Camberwell. See the{" "}
-            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
-            <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink>,{" "}
-            <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink> and the rest of our{" "}
-            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
+            Every drop is exclusive, with <strong className="text-ink">no other advertisers&rsquo; flyers in the run</strong>. We also cover{" "}
+            <TextLink href="/melbourne/flyer-distribution-hawthorn">Hawthorn</TextLink> and{" "}
+            <TextLink href="/melbourne/flyer-distribution-camberwell">Camberwell</TextLink>, so campaigns can be spread
+            across different suburbs. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page
+            or the rest of our <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>{" "}
+            to see how we can help you.
           </p>
         </Callout>
       </div>
@@ -179,8 +151,8 @@ export default function Kew() {
       <HowItWorks />
 
       <QuickQuoteForm
-        heading="Ready to reach Kew families?"
-        lead="Tell us your streets or school catchment and quantity. We'll quote with a quick turnaround."
+        heading="Get a quote for your Kew drop"
+        lead="Send us your streets and flyer count, and we'll come back with the letterbox number and a quote, quickly."
         suburbHint="e.g. Kew, Kew East, Hawthorn"
       />
 

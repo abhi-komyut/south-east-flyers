@@ -36,27 +36,27 @@ const faqs = [
   {
     question: "How many letterboxes are there in Glen Waverley?",
     answer:
-      "Glen Waverley 3150 has about 16,500 homes, mostly separate houses with letterboxes on the street. That makes it one of the largest suburbs we cover and one of the easiest to reach in full.",
-  },
-  {
-    question: "How much of Glen Waverley can a letterbox drop cover?",
-    answer:
-      "All 16,500 homes across the suburb, though many businesses split it into two or three drops a few weeks apart, starting with the streets nearest their shop.",
+      "About 16,500, mostly houses with a street letterbox, so our walkers reach nearly every door.",
   },
   {
     question: "Should my Glen Waverley flyer be bilingual?",
     answer:
-      "It is worth considering. Glen Waverley has a large Mandarin- and Cantonese-speaking community, and an English flyer with key lines in Chinese reads well to both. We deliver whatever you print.",
+      "Worth considering. Glen Waverley has a large Mandarin- and Cantonese-speaking community, so an English flyer with key lines in Chinese reads well to both.",
   },
   {
     question: "Can I target the streets around the Kingsway or The Glen?",
     answer:
-      "Yes. Tell us your address and how far customers travel, and we quote for those streets rather than the whole suburb. Restaurants on the Kingsway often start with a 1,000 to 2,500 flyer radius.",
+      "Yes. Send us your address and we'll quote for those streets, not the whole suburb.",
   },
   {
-    question: "Do you deliver in Mount Waverley and Wheelers Hill too?",
+    question: "When is the best time for a drop in Glen Waverley?",
     answer:
-      "Yes. Both border Glen Waverley and are in our service area, so one campaign can cover all three with a single GPS report rather than booking separately.",
+      "Restaurants do well any time; tutors and family services should drop at the start of each school term.",
+  },
+  {
+    question: "Do you also deliver in Mount Waverley and Wheelers Hill?",
+    answer:
+      "Yes. Both border Glen Waverley and are in our service area, so one campaign can cover all three with one GPS report.",
   },
 ];
 
@@ -99,40 +99,26 @@ export default function GlenWaverley() {
         ]}
       />
 
-      <Section title="Glen Waverley at a glance" first>
+      <Section title="Flyer distribution around the Kingsway" first>
         <p>
-          Glen Waverley is a big, family suburb in the City of Monash, built mostly from the 1950s to the 1980s on
-          quarter-acre-style blocks. The Kingsway is its restaurant and cafe strip, The Glen is the major shopping
-          centre, and the station is the end of the Glen Waverley line.
-        </p>
-        <p>
-          For a letterbox drop that means about 16,500 homes, around half as many again as Brighton or Kew, and
-          street after street of houses with letterboxes at the front gate.
+          The Kingsway is Glen Waverley&rsquo;s restaurant and cafe strip, with The Glen shopping centre and the station
+          nearby. A targeted letterbox campaign across Glen Waverley can reach up to 16,500 homes.
         </p>
       </Section>
 
-      <Section title="Bilingual flyers reach more of the suburb">
+      <Section title="Letterbox drops for Glen Waverley restaurants and trades">
         <p>
-          Glen Waverley has a large Chinese-speaking community, with many households speaking Mandarin or Cantonese
-          at home, and a sizeable Sri Lankan community too. An English-only flyer still works, but a headline or offer
-          repeated in Chinese often gets more attention from those households.
-        </p>
-        <p>
-          We don&rsquo;t translate or print, but we deliver any language you print, and the GPS report lets you
-          compare a bilingual run with an English-only one on different streets.
+          The Kingsway restaurants compete hard, so a takeaway menu delivered on its own is the one that sticks to the
+          fridge. A suburb full of houses also keeps <TextLink href="/industries/electricians">electricians</TextLink>,{" "}
+          <TextLink href="/industries/plumbers">plumbers</TextLink> and other{" "}
+          <TextLink href="/industries/home-services">home services</TextLink> busy.
         </p>
       </Section>
 
-      <Section title="Houses everywhere means near-full coverage">
+      <Section title="Houses everywhere, so near-full coverage">
         <p>
-          Apartments are the exception here, so almost every letterbox sits on the street. A drop in Glen Waverley
-          reaches a higher share of homes per street than in suburbs with more apartment blocks, which makes your cost
-          per household reached low.
-        </p>
-        <p>
-          The suburb is large, so most businesses don&rsquo;t cover it all at once. Restaurants and shops on the
-          Kingsway or near The Glen start with the surrounding streets; trades start with the streets closest to their
-          base and expand as calls come in.
+          Apartments are the exception here, so almost every letterbox sits on the street and our walkers reach nearly
+          every door. The suburb is large, so most businesses start with the streets nearest their shop, then expand.
         </p>
       </Section>
 
@@ -140,7 +126,7 @@ export default function GlenWaverley() {
         <div className="rounded-card overflow-hidden aspect-[21/8]">
           <Image
             src="/images/redesign/walker-street.jpg"
-            alt="A walker beside a letterbox on a quiet residential street"
+            alt="A walker beside a letterbox on a quiet Glen Waverley street"
             width={1144}
             height={436}
             className="w-full h-full object-cover object-[50%_45%]"
@@ -149,29 +135,19 @@ export default function GlenWaverley() {
         <figcaption className="text-sm text-muted">Almost every Glen Waverley home has a letterbox right on the street.</figcaption>
       </Reveal>
 
-      <Section title="Kingsway restaurants and takeaway menus">
+      <Section title="Bilingual flyers reach more homes">
         <p>
-          The Kingsway is a busy dining strip, so restaurants there compete hard for the same
-          households. A takeaway menu delivered on its own, not inside a bundle with other menus, is the
-          one that ends up stuck to the fridge.
-        </p>
-        <p>
-          Restaurants usually start with the streets within a short drive of the Kingsway, then expand into
-          Mount Waverley and Wheelers Hill once they know which areas order. A bilingual menu often helps here too.
+          Glen Waverley has a large Mandarin- and Cantonese-speaking community. An English flyer with a line or two in
+          Chinese often gets more attention, and we deliver whatever you print.
         </p>
       </Section>
 
-      <Section title="Glen Waverley businesses that use letterbox drops">
-        <p>
-          Glen Waverley is a family suburb, and its secondary school zones draw families who stay for years. That
-          suits:
-        </p>
+      <Section title="Who uses letterbox drops in Glen Waverley">
         <Bullets
           items={[
+            <>Restaurants and cafes on the Kingsway</>,
             <>Tutoring centres, music schools and holiday programs</>,
             <><TextLink href="/industries/real-estate">Real estate agents</TextLink> working family homes in school zones</>,
-            <>Restaurants and cafes on the Kingsway</>,
-            <><TextLink href="/industries/electricians">Electricians</TextLink>, <TextLink href="/industries/plumbers">plumbers</TextLink> and other <TextLink href="/industries/home-services">home services</TextLink> for a suburb full of houses</>,
             <><TextLink href="/industries/healthcare">Dentists, GPs and physios</TextLink> near The Glen</>,
           ]}
         />
@@ -182,16 +158,15 @@ export default function GlenWaverley() {
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="Letterbox drop quantities in Glen Waverley"
+          title="Glen Waverley and nearby suburbs"
         >
           <p className="m-0">
-            Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>. Our flyer
-            distribution across Monash also reaches{" "}
-            <TextLink href="/melbourne/flyer-distribution-mount-waverley">Mount Waverley</TextLink>. See the{" "}
-            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
-            <TextLink href="/melbourne/flyer-distribution-kew">Kew</TextLink>,{" "}
-            <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink> and the rest of our{" "}
-            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
+            Every drop is exclusive, with <strong className="text-ink">no other advertisers&rsquo; flyers in the run</strong>. We also cover{" "}
+            <TextLink href="/melbourne/flyer-distribution-mount-waverley">Mount Waverley</TextLink> and Wheelers Hill, so
+            campaigns can be spread across different suburbs. See the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page or the rest of our{" "}
+            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> to see how we can
+            help you.
           </p>
         </Callout>
       </div>
@@ -199,8 +174,8 @@ export default function GlenWaverley() {
       <HowItWorks />
 
       <QuickQuoteForm
-        heading="Ready to reach Glen Waverley letterboxes?"
-        lead="Tell us your streets and quantity, and we'll quote with the letterbox count, with a quick turnaround."
+        heading="Get a quote for your Glen Waverley drop"
+        lead="Send us your streets and flyer count, and we'll come back with the letterbox number and a quote, quickly."
         suburbHint="e.g. Glen Waverley, Mount Waverley, Wheelers Hill"
       />
 

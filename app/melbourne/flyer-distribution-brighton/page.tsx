@@ -36,27 +36,27 @@ const faqs = [
   {
     question: "How many letterboxes are there in Brighton?",
     answer:
-      "Brighton 3186 has about 10,500 homes. Most are houses and townhouses with street letterboxes. Your quote gives the exact count for the streets you pick.",
+      "About 10,500. Most are houses with a street letterbox, so our walkers reach nearly every door.",
   },
   {
-    question: "When is the best time to drop flyers in Brighton?",
+    question: "When is the best time for a drop in Brighton?",
     answer:
-      "Melbourne's selling season runs from September to early December, with a smaller autumn peak. Brighton agents, and the renovators and trades who follow them, book in the weeks before each season.",
+      "Agents and renovators do well before the spring selling season, from August to early December.",
   },
   {
-    question: "Do Brighton apartments get flyers?",
+    question: "Is Brighton good for appraisal flyers?",
     answer:
-      "Only where the letterboxes can be reached from the street. Blocks with locked mail rooms are skipped, and the GPS report shows which ones so you know your real coverage before the next run.",
+      "Yes. Many owners have been here for years, so an appraisal flyer after a nearby sale gets their attention.",
   },
   {
-    question: "Where in Brighton should a first drop go?",
+    question: "Can I target just the streets around Church Street?",
     answer:
-      "Shops and cafes usually start with the streets around Church Street or Bay Street. Agents start with the blocks around a listing. Trades start closest to their base.",
+      "Yes. Send us your shop address and we'll quote for the streets around it, not the whole suburb.",
   },
   {
-    question: "Can one campaign cover Brighton and Brighton East?",
+    question: "Do you also deliver in Hampton and Brighton East?",
     answer:
-      "Yes. We deliver in both, as well as Hampton, Elsternwick and Sandringham, and can quote them as one campaign with a single GPS report rather than booking each suburb separately.",
+      "Yes. Both are in our Bayside service area, so one campaign can cover Brighton and either suburb, with one GPS report.",
   },
 ];
 
@@ -99,30 +99,27 @@ export default function Brighton() {
         ]}
       />
 
-      <Section title="10,500 homes, almost all with street letterboxes" first>
+      <Section title="Flyer distribution around Church Street" first>
         <p>
-          Brighton is one of the most established suburbs we cover: large period and post-war homes, wide tree-lined
-          streets, and owners who have often lived in the same house for decades. Its shops sit along Church Street
-          and Bay Street, and the Sandringham line runs down the middle of the suburb.
-        </p>
-        <p>
-          For a letterbox drop that means about 10,500 homes, most of them houses with street letterboxes, and
-          households that read what arrives rather than skimming it.
+          Church Street and Bay Street are the suburb&rsquo;s shopping strips, with the Sandringham line running
+          through the middle. A targeted letterbox campaign across Brighton can reach up to 10,500 homes.
         </p>
       </Section>
 
-      <Section title="Long-term owners, big decisions">
+      <Section title="Letterbox drops for Brighton agents and trades">
         <p>
-          Households that have owned their home for decades make the large, considered purchases: selling and
-          downsizing, renovating a kitchen, replacing a roof, choosing a new dentist. Those decisions take weeks, and a
-          flyer that stays on the bench gets looked at more than once.
+          Brighton suits <TextLink href="/industries/real-estate">real estate agents</TextLink> running appraisal
+          campaigns on its established homes, and the{" "}
+          <TextLink href="/industries/renovation">renovators</TextLink> and{" "}
+          <TextLink href="/industries/roofing">roofers</TextLink> who work on them. Local cafes and restaurants draw
+          steady custom too.
         </p>
+      </Section>
+
+      <Section title="Start with the streets near a listing or shop">
         <p>
-          That suits businesses with a high-value job and a long decision, such as{" "}
-          <TextLink href="/industries/real-estate">real estate agents</TextLink> running appraisal campaigns,{" "}
-          <TextLink href="/industries/roofing">roofers</TextLink>, renovators and{" "}
-          <TextLink href="/industries/healthcare">health practices</TextLink>. Repeat drops to the same streets work
-          better here than one big blast.
+          Most Brighton homes have a letterbox on the street, so our walkers reach nearly every door. Shops can start
+          with 1,000 to 2,500 flyers in the nearby streets, then cover more of the suburb.
         </p>
       </Section>
 
@@ -130,48 +127,29 @@ export default function Brighton() {
         <div className="rounded-card overflow-hidden aspect-[21/8]">
           <Image
             src="/images/redesign/walker-street.jpg"
-            alt="A walker beside a brick letterbox on a leafy bayside street"
+            alt="A walker beside a brick letterbox on a leafy Brighton street"
             width={1144}
             height={436}
             className="w-full h-full object-cover object-[50%_45%]"
           />
         </div>
-        <figcaption className="text-sm text-muted">Most Brighton homes have letterboxes right on the street.</figcaption>
+        <figcaption className="text-sm text-muted">A walker on a Brighton street.</figcaption>
       </Reveal>
 
-      <Section title="A Brighton drop reaches nearly every door">
+      <Section title="When Brighton owners are deciding">
         <p>
-          Most Brighton homes are houses and townhouses with letterboxes on the street, so a drop reaches nearly every
-          door on the route. In suburbs with more apartment towers, locked mail
-          rooms cut that number down.
-        </p>
-        <p>
-          Shops and cafes around Church Street and Bay Street draw from the blocks within walking distance, so a
-          1,000 to 2,500 flyer drop around the strip is a sensible first test. Trades and agents usually pick the
-          streets nearest their base or their listing.
+          Melbourne&rsquo;s selling season runs from September to early December. Brighton agents, and the renovators
+          and painters who follow them, do best dropping in the weeks before.
         </p>
       </Section>
 
-      <Section title="Timing a Brighton drop around the property market">
-        <p>
-          Melbourne&rsquo;s busiest selling season runs from September to early December, with a smaller peak in
-          autumn. Brighton agents push appraisal flyers in the weeks before each season, and renovators, painters and
-          landscapers follow, because owners getting ready to sell want the house looking its best.
-        </p>
-        <p>
-          If your business benefits from that cycle, book your Brighton drops for late winter and late summer, when
-          owners are planning rather than already in the middle of a campaign.
-        </p>
-      </Section>
-
-      <Section title="Agents, renovators and bayside trades in Brighton">
+      <Section title="Who uses letterbox drops in Brighton">
         <Bullets
           items={[
-            <>Agents with appraisal and just-sold campaigns aimed at long-term owners</>,
-            <>Builders and renovators working on Brighton&rsquo;s older homes</>,
-            <><TextLink href="/industries/plumbers">Plumbers</TextLink>, <TextLink href="/industries/electricians">electricians</TextLink> and other trades based in the bayside suburbs</>,
-            <>Dentists, physios and GPs taking on new patients</>,
-            <>Cafes and restaurants near Church Street and Bay Street</>,
+            <>Real estate agents running appraisal and just-sold campaigns</>,
+            <>Renovators, roofers and painters working on older homes</>,
+            <><TextLink href="/industries/healthcare">Dentists, physios and GPs</TextLink> taking on new patients</>,
+            <>Cafes and restaurants on the shopping strips</>,
           ]}
         />
         <p>
@@ -181,18 +159,16 @@ export default function Brighton() {
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="Covering Brighton's 10,500 homes"
+          title="Brighton and nearby suburbs"
         >
           <p className="m-0">
-            Every Brighton drop is yours alone, with <strong className="text-ink">no other advertisers&rsquo; flyers in the run</strong>. Brighton
-            sits in the City of Bayside, so our flyer distribution across Bayside also reaches{" "}
+            Every drop is exclusive, with <strong className="text-ink">no other advertisers&rsquo; flyers in the run</strong>. We also cover{" "}
             <TextLink href="/melbourne/flyer-distribution-hampton">Hampton</TextLink>,{" "}
             <TextLink href="/melbourne/flyer-distribution-brighton-east">Brighton East</TextLink> and{" "}
-            <TextLink href="/melbourne/flyer-distribution-sandringham">Sandringham</TextLink>.
-            The <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page has more quantities, and our{" "}
-            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> lists every
-            suburb we cover, including <TextLink href="/melbourne/flyer-distribution-kew">Kew</TextLink> and{" "}
-            <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink>.
+            <TextLink href="/melbourne/flyer-distribution-sandringham">Sandringham</TextLink>, so campaigns can be spread
+            across different suburbs. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page
+            or the rest of our <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>{" "}
+            to see how we can help you.
           </p>
         </Callout>
       </div>
