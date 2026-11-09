@@ -152,13 +152,12 @@ export default function Camberwell() {
         </p>
       </Section>
 
-      <Section title="Agents, renovators and Junction trades in Camberwell">
+      <Section title="Who uses letterbox drops in Camberwell">
         <Bullets
           items={[
-            <>Agents with appraisal and just-sold campaigns aimed at long-term owners</>,
-            <>Builders and renovators working on Camberwell&rsquo;s established homes</>,
-            <><TextLink href="/industries/plumbers">Plumbers</TextLink>, <TextLink href="/industries/electricians">electricians</TextLink> and other <TextLink href="/industries/home-services">home services</TextLink> trades</>,
-            <>Tutors and services aimed at families near the Grammar schools</>,
+            <>Real estate agents running appraisal and just-sold campaigns</>,
+            <>Roofers, plumbers, electricians and other <TextLink href="/industries/home-services">home services</TextLink></>,
+            <>Tutors and family services near the schools</>,
             <>Shops and cafes around Camberwell Junction</>,
           ]}
         />
