@@ -36,27 +36,27 @@ const faqs = [
   {
     question: "How many letterboxes are there in Camberwell?",
     answer:
-      "Camberwell 3124 has about 9,000 homes, mostly houses with street letterboxes. That makes coverage close to complete across most of the suburb, unlike apartment-heavy suburbs where locked mail rooms cut the reachable count down.",
+      "About 9,000. Most homes are houses with a letterbox on the footpath, so our walkers reach nearly every door.",
   },
   {
-    question: "When is the best time for a Camberwell drop?",
+    question: "When is the best time for a drop in Camberwell?",
     answer:
-      "Camberwell's selling season peaks from September to early December. Agents, renovators and the services around the Grammar schools are busiest in the weeks before, so a run around Camberwell Junction then lands well.",
+      "Agents and renovators do well before the spring selling season, from August to early December. Tutors and family services should drop at the start of each school term.",
   },
   {
-    question: "Is Camberwell a good suburb for appraisal flyers?",
+    question: "Is Camberwell good for appraisal flyers?",
     answer:
-      "Yes. Many homes have long-term owners, so a drop timed around a nearby sale result or ahead of spring and autumn selling seasons tends to land when owners are weighing up their options.",
+      "Yes. Many owners have been here for years, so an appraisal flyer after a nearby sale gets their attention.",
   },
   {
     question: "Can I target just the streets around Camberwell Junction?",
     answer:
-      "Yes. Give us your shop address and we will quote for the surrounding streets rather than all of Camberwell, which suits most retailers and cafes better than a full-suburb run anyway.",
+      "Yes. Send us your shop address and we'll quote for the streets around it, not the whole suburb.",
   },
   {
-    question: "Do you deliver in Surrey Hills and Burwood too?",
+    question: "Do you also deliver in Surrey Hills and Burwood?",
     answer:
-      "Yes, both are in our service area, so a campaign can cover Camberwell alongside either with a single GPS report.",
+      "Yes. Both are in our service area, so one campaign can cover Camberwell and either suburb, with one GPS report.",
   },
 ];
 
