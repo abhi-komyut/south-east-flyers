@@ -138,15 +138,11 @@ export default function Camberwell() {
         <figcaption className="text-sm text-muted">A walker on a Camberwell street.</figcaption>
       </Reveal>
 
-      <Section title="Camberwell Junction and the Grammar schools">
+      <Section title="Families near Camberwell's schools">
         <p>
-          Camberwell Grammar School and Camberwell Girls Grammar School draw families to the area, which keeps
-          demand steady for tutors, uniform and school-supply businesses and family-oriented local services
-          through the school term.
-        </p>
-        <p>
-          Retailers around the Junction and the Sunday market benefit from flyers timed to market weekends and
-          the start of each school term, when local foot traffic is highest.
+          Camberwell Grammar and Camberwell Girls Grammar, just over the border in Canterbury, keep families in the
+          area through the school years. That suits tutors, music teachers and family services, with drops timed for
+          the start of each term. Shops near the Junction can time theirs to market Sundays, when foot traffic peaks.
         </p>
       </Section>
 
