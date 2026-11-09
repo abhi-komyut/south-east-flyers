@@ -39,9 +39,9 @@ const faqs = [
       "Brighton 3186 has about 10,500 homes. Most are houses and townhouses with street letterboxes. Your quote gives the exact count for the streets you pick.",
   },
   {
-    question: "How much of Brighton can a letterbox drop cover?",
+    question: "When is the best time to drop flyers in Brighton?",
     answer:
-      "A full-suburb drop reaches roughly 10,500 homes across Brighton. A 1,000-flyer test run is a sensible starting point before covering more of the suburb.",
+      "Melbourne's selling season runs from September to early December, with a smaller autumn peak. Brighton agents, and the renovators and trades who follow them, book in the weeks before each season.",
   },
   {
     question: "Do Brighton apartments get flyers?",
@@ -99,7 +99,7 @@ export default function Brighton() {
         ]}
       />
 
-      <Section title="Brighton at a glance" first>
+      <Section title="10,500 homes, almost all with street letterboxes" first>
         <p>
           Brighton is one of the most established suburbs we cover: large period and post-war homes, wide tree-lined
           streets, and owners who have often lived in the same house for decades. Its shops sit along Church Street
@@ -139,7 +139,7 @@ export default function Brighton() {
         <figcaption className="text-sm text-muted">Most Brighton homes have letterboxes right on the street.</figcaption>
       </Reveal>
 
-      <Section title="Mostly houses, so coverage is high">
+      <Section title="A Brighton drop reaches nearly every door">
         <p>
           Most Brighton homes are houses and townhouses with letterboxes on the street, so a drop reaches nearly every
           door on the route. In suburbs with more apartment towers, locked mail
@@ -164,7 +164,7 @@ export default function Brighton() {
         </p>
       </Section>
 
-      <Section title="Who letterbox drops in Brighton suit">
+      <Section title="Agents, renovators and bayside trades in Brighton">
         <Bullets
           items={[
             <>Agents with appraisal and just-sold campaigns aimed at long-term owners</>,
@@ -181,10 +181,10 @@ export default function Brighton() {
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="Letterbox drop quantities in Brighton"
+          title="Covering Brighton's 10,500 homes"
         >
           <p className="m-0">
-            Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>. Brighton
+            Every Brighton drop is yours alone, with <strong className="text-ink">no other advertisers&rsquo; flyers in the run</strong>. Brighton
             sits in the City of Bayside, so our flyer distribution across Bayside also reaches{" "}
             <TextLink href="/melbourne/flyer-distribution-hampton">Hampton</TextLink>,{" "}
             <TextLink href="/melbourne/flyer-distribution-brighton-east">Brighton East</TextLink> and{" "}
@@ -200,8 +200,8 @@ export default function Brighton() {
       <HowItWorks />
 
       <QuickQuoteForm
-        heading="Ready to reach Brighton letterboxes?"
-        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count, with a quick turnaround."
+        heading="Get a quote for your Brighton drop"
+        lead="Send us your streets and flyer count, and we'll come back with the letterbox number and a quote, quickly."
         suburbHint="e.g. Brighton, Brighton East, Hampton"
       />
 
