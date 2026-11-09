@@ -81,3 +81,26 @@ This overrides the "No census statistics" rule in section 2 of the page-build co
 - Competitor names, prices or wording.
 - Delivery zones or street boundaries.
 - `[TODO: anything else Abhi wants kept off the site]`
+
+## Abhi's edits on the Camberwell page (9 Nov 2026, PR #13): the model for all suburb pages
+These came from Abhi rewriting the Camberwell page section by section. Treat them as the voice reference until real client chats are added.
+
+**Lines Abhi wrote or approved:**
+- Hero lead: "Get your flyers into letterboxes around Camberwell Junction and across 3124 with GPS-tracked flyer distribution."
+- "A targeted letterbox campaign across Camberwell can reach up to 9,000 homes."
+- "Camberwell is a strong area for real estate agents running appraisal campaigns, and lucrative for roofers working on its established homes."
+- "Every drop is exclusive, with no other advertisers' flyers in the run. We also cover Hawthorn, Kew and Glen Iris, so campaigns can be spread across different suburbs."
+
+**What Abhi pushed back on (don't do these):**
+- Writing "extra": long explanations of why people buy. Say who it suits and stop.
+- Repeating a fact or place in the same paragraph ("Camberwell station … Camberwell Market"). Say "the station and the market".
+- Repeating the same number in several sections. State the home count once, as the reach a campaign gets ("can reach up to 9,000 homes").
+- Stock phrases: "reach every home in the suburb", "considered decisions", "school families", "facilities". Use words a person would say.
+- Sections with no concrete point for a flyer buyer: cut them or turn them into "who it suits / how to start".
+
+**Patterns that work:**
+- Hero lead: "Get your flyers into letterboxes around {landmark} and across {postcode} with GPS-tracked flyer distribution."
+- Frame home counts and local facts as opportunity: who does well here, and how to start.
+- H2s: plain and human, with the keyword in one or two ("Flyer distribution around Camberwell Junction", "Letterbox drops for Camberwell agents and trades", "Families near Camberwell's schools").
+- FAQs: answer first, one or two short sentences.
+- Check local facts (e.g. Camberwell Grammar is in Canterbury, not Camberwell).
