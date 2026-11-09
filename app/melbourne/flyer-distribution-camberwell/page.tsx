@@ -143,15 +143,12 @@ export default function Camberwell() {
         <figcaption className="text-sm text-muted">Most Camberwell homes have letterboxes right on the footpath.</figcaption>
       </Reveal>
 
-      <Section title="Camberwell Junction and the Grammar schools">
+      <Section title="Families near Camberwell's schools">
         <p>
-          Camberwell Grammar School and Camberwell Girls Grammar School draw families to the area, which keeps
-          demand steady for tutors, uniform and school-supply businesses and family-oriented local services
-          through the school term.
-        </p>
-        <p>
-          Retailers around the Junction and the Sunday market benefit from flyers timed to market weekends and
-          the start of each school term, when local foot traffic is highest.
+          Camberwell Grammar and Camberwell Girls Grammar are just over the border in Canterbury, so plenty of
+          families live nearby. Tutors, music teachers and{" "}
+          <TextLink href="/industries/schools-childcare">kids&rsquo; activities</TextLink> do well with a drop at
+          the start of each term. Shops near the Junction can drop before market Sundays, when the area is busiest.
         </p>
       </Section>
 
