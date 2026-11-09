@@ -140,9 +140,9 @@ export default function Camberwell() {
 
       <Section title="Families near Camberwell's schools">
         <p>
-          Camberwell Grammar and Camberwell Girls Grammar, just over the border in Canterbury, keep families in the
-          area through the school years. That suits tutors, music teachers and family services, with drops timed for
-          the start of each term. Shops near the Junction can time theirs to market Sundays, when foot traffic peaks.
+          Camberwell Grammar and Camberwell Girls Grammar are just over the border in Canterbury, so plenty of
+          families live nearby. Tutors, music teachers and kids&rsquo; activities do well with a drop at the start of
+          each term. Shops near the Junction can drop before market Sundays, when the area is busiest.
         </p>
       </Section>
 
