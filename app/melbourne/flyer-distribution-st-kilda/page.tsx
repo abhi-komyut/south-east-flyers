@@ -84,7 +84,7 @@ export default function StKilda() {
           { name: "St Kilda" },
         ]}
         h1="Flyer Distribution & Letterbox Drops in St Kilda"
-        lead="Flyer distribution in St Kilda 3182, across Fitzroy Street, Acland Street and the streets around them. Your flyer goes into each letterbox on its own, and every route is GPS-tracked."
+        lead="Get your flyers into letterboxes around Acland and Fitzroy Streets, and across 3182, with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/suburb-map.jpg", alt: "Map of Melbourne's suburbs showing the areas South East Flyers covers" }}
       />
 

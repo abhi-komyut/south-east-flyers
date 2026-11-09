@@ -263,7 +263,7 @@ export default function FlyerDistributionMelbourne() {
       <PageHero
         crumbs={[{ name: "Home", href: "/" }, { name: "Flyer Distribution Melbourne" }]}
         h1="Flyer Distribution Melbourne"
-        lead="Professional flyer and letterbox distribution across our confirmed Melbourne service areas. GPS-tracked delivery, no junk mail compliant, and planned around the suburbs you want to reach. You provide the flyers. We handle the distribution."
+        lead="Get your flyers into letterboxes across Melbourne's south-east and east with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/walker-ebike.jpg", alt: "A South East Flyers e-bike rider delivering flyers on a Melbourne street" }}
       />
 

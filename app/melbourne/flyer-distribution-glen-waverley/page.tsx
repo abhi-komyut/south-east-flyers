@@ -86,7 +86,7 @@ export default function GlenWaverley() {
           { name: "Glen Waverley" },
         ]}
         h1="Flyer Distribution & Letterbox Drops in Glen Waverley"
-        lead="Flyer distribution in Glen Waverley 3150, one of the largest and most house-heavy suburbs we cover. Your flyer goes into each letterbox on its own, and every route is GPS-tracked."
+        lead="Get your flyers into letterboxes around the Kingsway and across 3150 with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/suburb-map.jpg", alt: "Map of Melbourne's suburbs showing the areas South East Flyers covers" }}
       />
 

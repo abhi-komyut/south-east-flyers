@@ -86,7 +86,7 @@ export default function Camberwell() {
           { name: "Camberwell" },
         ]}
         h1="Flyer Distribution & Letterbox Drops in Camberwell"
-        lead="Flyer distribution in Camberwell 3124, from Camberwell Junction out through the surrounding streets. Your flyer goes into each letterbox on its own, and every route is GPS-tracked."
+        lead="Get your flyers into letterboxes around Camberwell Junction and across 3124 with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/suburb-map.jpg", alt: "Map of Melbourne's suburbs showing the areas South East Flyers covers" }}
       />
 

@@ -86,7 +86,7 @@ export default function Caulfield() {
           { name: "Caulfield" },
         ]}
         h1="Flyer Distribution & Letterbox Drops in Caulfield"
-        lead="Flyer distribution in Caulfield 3162, one of the smallest and easiest suburbs on our list to cover in full. Your flyer goes into each letterbox on its own, and every route is GPS-tracked."
+        lead="Get your flyers into letterboxes around Glen Huntly Road and across 3162 with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/suburb-map.jpg", alt: "Map of Melbourne's suburbs showing the areas South East Flyers covers" }}
       />
 

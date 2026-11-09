@@ -85,7 +85,7 @@ export default function GlenIris() {
           { name: "Glen Iris" },
         ]}
         h1="Flyer Distribution & Letterbox Drops in Glen Iris"
-        lead="Flyer distribution in Glen Iris 3146, a leafy suburb that straddles two councils and the Glen Waverley line. Your flyer goes into each letterbox on its own, and every route is GPS-tracked."
+        lead="Get your flyers into letterboxes along High Street and across 3146 with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/suburb-map.jpg", alt: "Map of Melbourne's suburbs showing the areas South East Flyers covers" }}
       />
 

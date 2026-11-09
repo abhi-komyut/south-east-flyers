@@ -84,7 +84,7 @@ export default function Kew() {
           { name: "Kew" },
         ]}
         h1="Flyer Distribution & Letterbox Drops in Kew"
-        lead="Flyer distribution in Kew 3101, from Kew Junction out to the streets near the Yarra. Each flyer is delivered on its own and every route is GPS-tracked."
+        lead="Get your flyers into letterboxes around Kew Junction and across 3101 with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/suburb-map.jpg", alt: "Map of Melbourne's suburbs showing the areas South East Flyers covers" }}
       />
 

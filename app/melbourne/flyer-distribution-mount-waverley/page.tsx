@@ -85,7 +85,7 @@ export default function MountWaverley() {
           { name: "Mount Waverley" },
         ]}
         h1="Flyer Distribution & Letterbox Drops in Mount Waverley"
-        lead="Flyer distribution in Mount Waverley 3149, a large family suburb of houses on wide streets. Your flyer goes into each letterbox on its own, and every route is GPS-tracked."
+        lead="Get your flyers into letterboxes around Mount Waverley village and across 3149 with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/suburb-map.jpg", alt: "Map of Melbourne's suburbs showing the areas South East Flyers covers" }}
       />
 

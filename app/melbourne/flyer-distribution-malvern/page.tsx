@@ -85,7 +85,7 @@ export default function Malvern() {
           { name: "Malvern" },
         ]}
         h1="Flyer Distribution & Letterbox Drops in Malvern"
-        lead="Flyer distribution in Malvern 3144, a compact suburb of period homes between Glenferrie Road and High Street. Your flyer goes into each letterbox on its own, and every route is GPS-tracked."
+        lead="Get your flyers into letterboxes between Glenferrie Road and High Street, and across 3144, with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/suburb-map.jpg", alt: "Map of Melbourne's suburbs showing the areas South East Flyers covers" }}
       />
 

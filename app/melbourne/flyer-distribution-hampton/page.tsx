@@ -85,7 +85,7 @@ export default function Hampton() {
           { name: "Hampton" },
         ]}
         h1="Flyer Distribution & Letterbox Drops in Hampton"
-        lead="Flyer distribution in Hampton 3188, a bayside suburb built around one long shopping street and a station. Your flyer goes into each letterbox on its own, and every route is GPS-tracked."
+        lead="Get your flyers into letterboxes around Hampton Street and across 3188 with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/suburb-map.jpg", alt: "Map of Melbourne's suburbs showing the areas South East Flyers covers" }}
       />
 

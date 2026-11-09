@@ -85,7 +85,7 @@ export default function Sandringham() {
           { name: "Sandringham" },
         ]}
         h1="Flyer Distribution & Letterbox Drops in Sandringham"
-        lead="Flyer distribution in Sandringham 3191, a compact bayside suburb with a village heart and a long stretch of beach. Your flyer goes into each letterbox on its own, and every route is GPS-tracked."
+        lead="Get your flyers into letterboxes around Sandringham village and across 3191 with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/suburb-map.jpg", alt: "Map of Melbourne's suburbs showing the areas South East Flyers covers" }}
       />
 

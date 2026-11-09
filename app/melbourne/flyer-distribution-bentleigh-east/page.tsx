@@ -85,7 +85,7 @@ export default function BentleighEast() {
           { name: "Bentleigh East" },
         ]}
         h1="Flyer Distribution & Letterbox Drops in Bentleigh East"
-        lead="Flyer distribution in Bentleigh East 3165, a big family suburb of houses on wide streets. Your flyer goes into each letterbox on its own, and every route is GPS-tracked."
+        lead="Get your flyers into letterboxes along Centre Road and East Boundary Road, and across 3165, with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/suburb-map.jpg", alt: "Map of Melbourne's suburbs showing the areas South East Flyers covers" }}
       />
 

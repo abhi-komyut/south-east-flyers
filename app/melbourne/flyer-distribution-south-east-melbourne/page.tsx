@@ -141,7 +141,7 @@ export default function SouthEastMelbourne() {
           { name: "South East Melbourne" },
         ]}
         h1="Letterbox Drops Across South East & Eastern Melbourne"
-        lead="Flyer distribution in south east Melbourne and the eastern suburbs, across 56 key suburbs in eight councils. Your flyer goes into each letterbox on its own, and every route is GPS-tracked."
+        lead="Get your flyers into letterboxes across 56 suburbs with GPS-tracked flyer distribution, from St Kilda to Box Hill."
         image={{ src: "/images/redesign/suburb-map.jpg", alt: "Map of Melbourne's suburbs showing the areas South East Flyers covers" }}
       />
 

@@ -85,7 +85,7 @@ export default function BrightonEast() {
           { name: "Brighton East" },
         ]}
         h1="Flyer Distribution & Letterbox Drops in Brighton East"
-        lead="Flyer distribution in Brighton East 3187, the family-house side of Brighton, away from the beach. Your flyer goes into each letterbox on its own, and every route is GPS-tracked."
+        lead="Get your flyers into letterboxes along Hawthorn Road and across 3187 with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/suburb-map.jpg", alt: "Map of Melbourne's suburbs showing the areas South East Flyers covers" }}
       />
 

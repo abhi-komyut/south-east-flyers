@@ -85,7 +85,7 @@ export default function BoxHill() {
           { name: "Box Hill" },
         ]}
         h1="Flyer Distribution & Letterbox Drops in Box Hill"
-        lead="Flyer distribution in Box Hill 3128, the busiest centre in Melbourne's east, where apartment towers sit a block from streets of older houses. Your flyer goes in on its own, and every route is GPS-tracked."
+        lead="Get your flyers into letterboxes around Box Hill Central and across 3128 with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/suburb-map.jpg", alt: "Map of Melbourne's suburbs showing the areas South East Flyers covers" }}
       />
 

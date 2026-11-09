@@ -86,7 +86,7 @@ export default function Brighton() {
           { name: "Brighton" },
         ]}
         h1="Flyer Distribution & Letterbox Drops in Brighton"
-        lead="Flyer distribution in Brighton 3186, from North Road to the Hampton border. Your flyer goes into each letterbox on its own, every route is GPS-tracked, and you can start with 1,000 homes."
+        lead="Get your flyers into letterboxes around Church Street and across 3186 with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/suburb-map.jpg", alt: "Map of Melbourne's suburbs showing the areas South East Flyers covers" }}
       />
 
