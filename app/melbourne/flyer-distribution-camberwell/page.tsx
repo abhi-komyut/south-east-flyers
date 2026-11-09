@@ -103,30 +103,25 @@ export default function Camberwell() {
         <p>
           Camberwell Junction, where Burke, Camberwell and Riversdale roads meet, is the suburb&rsquo;s main
           shopping hub, with the station and the Sunday market a short walk away. A targeted letterbox campaign
-          across Camberwell can reach up to 9,000 homes.
+          across Camberwell can reach every home in the suburb.
         </p>
       </Section>
 
-      <Section title="Long-term owners, considered decisions">
+      <Section title="Letterbox drops for Camberwell agents and trades">
         <p>
-          Camberwell is a strong area for{" "}
-          <TextLink href="/industries/real-estate">real estate agents</TextLink> running appraisal campaigns, and
-          lucrative for <TextLink href="/industries/roofing">roofers</TextLink> working on its established homes.
-          Its 9,000 homes, mostly older houses, need regular repairs and upkeep, so{" "}
-          <TextLink href="/industries/plumbers">plumbers</TextLink>,{" "}
+          Camberwell is a strong area for <TextLink href="/industries/real-estate">real estate agents</TextLink>{" "}
+          running appraisal campaigns, and lucrative for <TextLink href="/industries/roofing">roofers</TextLink>{" "}
+          working on its established homes. Its 9,000 homes, mostly older houses, need regular repairs and upkeep,
+          so <TextLink href="/industries/plumbers">plumbers</TextLink>,{" "}
           <TextLink href="/industries/electricians">electricians</TextLink> and painters find steady work here too.
         </p>
       </Section>
 
-      <Section title="A Camberwell route reaches nearly every door">
+      <Section title="Start with the streets around the Junction">
         <p>
-          Houses make up the majority of Camberwell&rsquo;s homes, with townhouses and a smaller share of
-          apartments mixed in. Most streets have individual letterboxes on the footpath, so a route reaches
-          close to every door rather than being cut down by locked apartment mail rooms.
-        </p>
-        <p>
-          Shops around the Junction draw from the surrounding blocks, so a 1,000 to 2,500 flyer drop there is a
-          sensible first test before covering more of the suburb.
+          Most Camberwell homes have their own letterbox on the footpath, so our walkers reach nearly every door.
+          Shops around the Junction can start with 1,000 to 2,500 flyers in the nearby streets, then cover more of
+          the suburb.
         </p>
       </Section>
 
@@ -140,7 +135,7 @@ export default function Camberwell() {
             className="w-full h-full object-cover object-[50%_45%]"
           />
         </div>
-        <figcaption className="text-sm text-muted">Most Camberwell homes have letterboxes right on the footpath.</figcaption>
+        <figcaption className="text-sm text-muted">A walker on a Camberwell street.</figcaption>
       </Reveal>
 
       <Section title="Camberwell Junction and the Grammar schools">
