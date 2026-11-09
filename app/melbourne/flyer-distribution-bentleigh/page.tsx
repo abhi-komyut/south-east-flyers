@@ -39,9 +39,9 @@ const faqs = [
       "Bentleigh 3204 has about 7,500 homes, mostly separate houses with street letterboxes. That gives a route high coverage across most of the suburb.",
   },
   {
-    question: "How much of Bentleigh can a letterbox drop cover?",
+    question: "When should I drop flyers in Bentleigh?",
     answer:
-      "With about 7,500 homes, a full-suburb drop covers all of Bentleigh. A first test run of 1,000 flyers around Centre Road is a sensible starting point, and most businesses expand from there once they can see which streets are actually calling.",
+      "For family services, late January and the fortnight before each school term tend to land when parents are deciding on tutoring and activities. A first run of 1,000 flyers around Centre Road is a sensible way to start.",
   },
   {
     question: "Is Bentleigh a good suburb for family-focused flyers?",
@@ -99,7 +99,7 @@ export default function Bentleigh() {
         ]}
       />
 
-      <Section title="Bentleigh at a glance" first>
+      <Section title="7,500 homes, mostly separate houses" first>
         <p>
           Bentleigh is a family suburb in the City of Glen Eira, with Centre Road as its main strip of more
           than 250 shops, cafes and services. Bentleigh and Patterson stations both sit on the Frankston line
@@ -123,7 +123,7 @@ export default function Bentleigh() {
         </p>
       </Section>
 
-      <Section title="Mostly houses, so coverage runs high">
+      <Section title="A route reaches most of Bentleigh's streets">
         <p>
           Houses make up most of Bentleigh&rsquo;s homes, with letterboxes on the street rather than shared
           mail rooms, so a route reaches a high share of the suburb. Townhouses and apartments near Centre Road
@@ -160,7 +160,7 @@ export default function Bentleigh() {
         </p>
       </Section>
 
-      <Section title="Who letterbox drops in Bentleigh suit">
+      <Section title="Tutors, agents and Centre Road trades in Bentleigh">
         <Bullets
           items={[
             <>Tutors, music schools and kids&rsquo; activity programs</>,
@@ -177,10 +177,10 @@ export default function Bentleigh() {
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="Letterbox drop quantities in Bentleigh"
+          title="Covering Bentleigh's 7,500 homes"
         >
           <p className="m-0">
-            Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>. Our flyer
+            Every Bentleigh drop goes out on its own, with <strong className="text-ink">no other advertisers&rsquo; flyers in the run</strong>. Our flyer
             distribution across Glen Eira also reaches Caulfield and{" "}
             <TextLink href="/melbourne/flyer-distribution-bentleigh-east">Bentleigh East</TextLink>. See the{" "}
             <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
@@ -193,8 +193,8 @@ export default function Bentleigh() {
       <HowItWorks />
 
       <QuickQuoteForm
-        heading="Ready to reach Bentleigh letterboxes?"
-        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count, with a quick turnaround."
+        heading="Get a quote for your Bentleigh drop"
+        lead="Send us your streets and flyer count, and we'll come back with the letterbox number and a quote, quickly."
         suburbHint="e.g. Bentleigh, Bentleigh East, Caulfield"
       />
 

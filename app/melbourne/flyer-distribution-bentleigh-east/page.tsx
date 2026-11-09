@@ -38,9 +38,9 @@ const faqs = [
       "Bentleigh East 3165 has about 12,000 homes, and roughly two in three are separate houses with a letterbox at the gate. That makes it one of the larger suburbs we cover, with high coverage on almost every street.",
   },
   {
-    question: "How much of Bentleigh East can one drop cover?",
+    question: "How long does a full Bentleigh East drop take?",
     answer:
-      "Most businesses start with 1,000 to 2,500 homes near their shop or base, then extend. Covering all 12,000 usually works best in three or four runs, with a GPS report for each one.",
+      "Covering all of Bentleigh East usually works best over three or four runs, each one GPS-tracked, so you get a map after every one. Most businesses start with 1,000 to 2,500 homes near their base, then extend.",
   },
   {
     question: "Is Bentleigh East good for builders and renovators?",
@@ -98,7 +98,7 @@ export default function BentleighEast() {
         ]}
       />
 
-      <Section title="Bentleigh East at a glance" first>
+      <Section title="12,000 homes, two in three separate houses" first>
         <p>
           Bentleigh East is one of the largest suburbs in the City of Glen Eira, stretching east from Bentleigh towards
           Moorabbin and Clarinda. It has no train station of its own, so daily life runs on local shopping strips,
@@ -146,7 +146,7 @@ export default function BentleighEast() {
         </p>
       </Section>
 
-      <Section title="Who letterbox drops in Bentleigh East suit">
+      <Section title="Builders, agents and local-strip trades in Bentleigh East">
         <Bullets
           items={[
             <>Builders, renovators and landscapers working on new homes and townhouses</>,
@@ -162,9 +162,9 @@ export default function BentleighEast() {
       </Section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
-        <Callout title="Letterbox drop quantities in Bentleigh East">
+        <Callout title="Covering Bentleigh East's 12,000 homes">
           <p className="m-0">
-            Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>, starting from
+            Every Bentleigh East drop is yours alone, with <strong className="text-ink">no other advertisers&rsquo; flyers in the run</strong>, from
             1,000 flyers. Our flyer distribution across Glen Eira also covers{" "}
             <TextLink href="/melbourne/flyer-distribution-bentleigh">Bentleigh</TextLink> next door and{" "}
             <TextLink href="/melbourne/flyer-distribution-caulfield">Caulfield</TextLink>. See the{" "}
@@ -177,8 +177,8 @@ export default function BentleighEast() {
       <HowItWorks />
 
       <QuickQuoteForm
-        heading="Ready to reach Bentleigh East letterboxes?"
-        lead="Tell us your streets or the strip you're on, and we'll send a quote with the letterbox count, with a quick turnaround."
+        heading="Get a quote for your Bentleigh East drop"
+        lead="Send us your streets or the strip you're on, and we'll come back with the letterbox count and a quote, quickly."
         suburbHint="e.g. Bentleigh East, Bentleigh, Carnegie"
       />
 
