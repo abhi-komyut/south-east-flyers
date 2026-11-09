@@ -320,6 +320,10 @@ Rules:
 8. FAQs (4 to 6)
 9. Closing call to action + quote form
 
+**Hero lead line (the text under the H1):** one action line with a local landmark, the postcode and the keyword, in the form:
+"Get your flyers into letterboxes around {landmark} and across {postcode} with GPS-tracked flyer distribution."
+Keep the H1 unchanged. Example (Camberwell): "Get your flyers into letterboxes around Camberwell Junction and across 3124 with GPS-tracked flyer distribution." Use this pattern for every suburb page, new or existing.
+
 Target length: 900 to 1,300 words. The quote form and phone number must be visible without scrolling on mobile.
 
 ### 7.9 Technical (Next.js)

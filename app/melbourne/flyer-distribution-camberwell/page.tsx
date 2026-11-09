@@ -99,15 +99,11 @@ export default function Camberwell() {
         ]}
       />
 
-      <Section title="9,000 homes, mostly houses with street letterboxes" first>
+      <Section title="Flyer distribution around Camberwell Junction" first>
         <p>
-          Camberwell Junction, where Burke Road meets Camberwell Road, has been the suburb&rsquo;s trading hub
-          since the 1880s, with Camberwell station right at the corner and the Sunday Camberwell Market a short
-          walk away. The Belgrave, Lilydale and Alamein lines put the CBD about 20 minutes away.
-        </p>
-        <p>
-          For a letterbox drop that means about 9,000 homes, most of them houses with letterboxes on the street,
-          in a suburb known for long-term ownership rather than fast turnover.
+          Camberwell Junction, where Burke, Camberwell and Riversdale roads meet, is the suburb&rsquo;s main
+          shopping hub, with the station and the Sunday market a short walk away. A targeted letterbox campaign
+          across Camberwell can reach up to 9,000 homes.
         </p>
       </Section>
 
