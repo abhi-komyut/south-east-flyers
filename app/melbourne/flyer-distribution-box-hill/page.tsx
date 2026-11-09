@@ -98,7 +98,7 @@ export default function BoxHill() {
         ]}
       />
 
-      <Section title="Box Hill at a glance" first>
+      <Section title="7,800 homes, with more apartments than most" first>
         <p>
           Box Hill is the main centre of the City of Whitehorse. Box Hill Central sits on top of the train station and
           bus interchange, Whitehorse Road and Station Street carry most of the shops, and Box Hill Hospital, Epworth
@@ -152,7 +152,7 @@ export default function BoxHill() {
         </p>
       </Section>
 
-      <Section title="Who letterbox drops in Box Hill suit">
+      <Section title="Health practices, agents and food-strip trades in Box Hill">
         <Bullets
           items={[
             <>Restaurants, grocers and takeaway in the Market Street and Station Street precinct</>,
@@ -169,10 +169,10 @@ export default function BoxHill() {
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="Letterbox drop quantities in Box Hill"
+          title="Covering Box Hill's reachable homes"
         >
           <p className="m-0">
-            Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>.
+            Every Box Hill drop goes out on its own, with <strong className="text-ink">no other advertisers&rsquo; flyers in the run</strong>.
             Our flyer distribution across Whitehorse also reaches Blackburn, Burwood and Nunawading.
             See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, our{" "}
             <TextLink href="/melbourne/flyer-distribution-south-east-melbourne">south-east and eastern Melbourne</TextLink>{" "}
@@ -185,8 +185,8 @@ export default function BoxHill() {
       <HowItWorks />
 
       <QuickQuoteForm
-        heading="Ready to reach Box Hill letterboxes?"
-        lead="Tell us your venue or streets and quantity. We'll quote with the reachable letterbox count, with a quick turnaround."
+        heading="Get a quote for your Box Hill drop"
+        lead="Send us your venue or streets, and we'll come back with the reachable letterbox count and a quote, quickly."
         suburbHint="e.g. Box Hill, Blackburn, Burwood"
       />
 

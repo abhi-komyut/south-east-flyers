@@ -98,7 +98,7 @@ export default function BrightonEast() {
         ]}
       />
 
-      <Section title="Brighton East at a glance" first>
+      <Section title="6,400 homes, almost all houses" first>
         <p>
           Brighton East sits in the City of Bayside, east of the Nepean Highway, between Brighton and Bentleigh. Hawthorn Road carries its main shops, and Dendy Park and the public golf course give it more
           open space than its better-known neighbour.
@@ -147,7 +147,7 @@ export default function BrightonEast() {
         </p>
       </Section>
 
-      <Section title="Who letterbox drops in Brighton East suit">
+      <Section title="Agents, renovators and Hawthorn Road trades in Brighton East">
         <Bullets
           items={[
             <>Landscapers, pool services, <TextLink href="/industries/roofing">roofers</TextLink> and other home trades</>,
@@ -163,9 +163,9 @@ export default function BrightonEast() {
       </Section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
-        <Callout title="Letterbox drop quantities in Brighton East">
+        <Callout title="Covering Brighton East's 6,400 homes">
           <p className="m-0">
-            Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>, starting from
+            Every Brighton East drop is yours alone, with <strong className="text-ink">no other advertisers&rsquo; flyers in the run</strong>, from
             1,000 flyers. Our flyer distribution across Bayside also covers{" "}
             <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink>,{" "}
             <TextLink href="/melbourne/flyer-distribution-hampton">Hampton</TextLink> and{" "}
@@ -178,8 +178,8 @@ export default function BrightonEast() {
       <HowItWorks />
 
       <QuickQuoteForm
-        heading="Ready to reach Brighton East letterboxes?"
-        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count, with a quick turnaround."
+        heading="Get a quote for your Brighton East drop"
+        lead="Send us your streets and flyer count, and we'll come back with the letterbox number and a quote, quickly."
         suburbHint="e.g. Brighton East, Brighton, Bentleigh"
       />
 

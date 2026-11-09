@@ -39,9 +39,9 @@ const faqs = [
       "Camberwell 3124 has about 9,000 homes, mostly houses with street letterboxes. That makes coverage close to complete across most of the suburb, unlike apartment-heavy suburbs where locked mail rooms cut the reachable count down.",
   },
   {
-    question: "How much of Camberwell can a letterbox drop cover?",
+    question: "When is the best time for a Camberwell drop?",
     answer:
-      "With about 9,000 homes, a full-suburb drop covers all of Camberwell. A first test run of 1,000 flyers around Camberwell Junction is a sensible starting point.",
+      "Camberwell's selling season peaks from September to early December. Agents, renovators and the services around the Grammar schools are busiest in the weeks before, so a run around Camberwell Junction then lands well.",
   },
   {
     question: "Is Camberwell a good suburb for appraisal flyers?",
@@ -99,7 +99,7 @@ export default function Camberwell() {
         ]}
       />
 
-      <Section title="Camberwell at a glance" first>
+      <Section title="9,000 homes, mostly houses with street letterboxes" first>
         <p>
           Camberwell Junction, where Burke Road meets Camberwell Road, has been the suburb&rsquo;s trading hub
           since the 1880s, with Camberwell station right at the corner and the Sunday Camberwell Market a short
@@ -124,7 +124,7 @@ export default function Camberwell() {
         </p>
       </Section>
 
-      <Section title="Mostly houses, so coverage runs high">
+      <Section title="A Camberwell route reaches nearly every door">
         <p>
           Houses make up the majority of Camberwell&rsquo;s homes, with townhouses and a smaller share of
           apartments mixed in. Most streets have individual letterboxes on the footpath, so a route reaches
@@ -161,7 +161,7 @@ export default function Camberwell() {
         </p>
       </Section>
 
-      <Section title="Who letterbox drops in Camberwell suit">
+      <Section title="Agents, renovators and Junction trades in Camberwell">
         <Bullets
           items={[
             <>Agents with appraisal and just-sold campaigns aimed at long-term owners</>,
@@ -178,10 +178,10 @@ export default function Camberwell() {
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="Letterbox drop quantities in Camberwell"
+          title="Covering Camberwell's 9,000 homes"
         >
           <p className="m-0">
-            Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>. Our flyer
+            Every Camberwell drop goes out on its own, with <strong className="text-ink">no other advertisers&rsquo; flyers in the run</strong>. Our flyer
             distribution across Boroondara also reaches Hawthorn, Kew and{" "}
             <TextLink href="/melbourne/flyer-distribution-glen-iris">Glen Iris</TextLink>. See the{" "}
             <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
@@ -195,8 +195,8 @@ export default function Camberwell() {
       <HowItWorks />
 
       <QuickQuoteForm
-        heading="Ready to reach Camberwell letterboxes?"
-        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count, with a quick turnaround."
+        heading="Get a quote for your Camberwell drop"
+        lead="Send us your streets and flyer count, and we'll come back with the letterbox number and a quote, quickly."
         suburbHint="e.g. Camberwell, Hawthorn, Kew"
       />
 
