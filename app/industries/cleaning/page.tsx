@@ -42,7 +42,7 @@ const faqs = [
   {
     question: "Can I advertise bathroom deep cleans and end-of-lease cleans?",
     answer:
-      "Yes, but give each its own drop. Regular cleans suit family-home streets. End-of-lease cleans suit apartment and rental streets, such as around St Kilda or Box Hill, timed for the busy moving months from December to February.",
+      "Yes, but give each its own drop. Regular cleans suit family-home streets; end-of-lease cleans suit rental streets like St Kilda or Box Hill from December to February.",
   },
   {
     question: "What should a cleaning flyer offer?",
@@ -52,7 +52,7 @@ const faqs = [
   {
     question: "How many flyers should a cleaner start with?",
     answer:
-      "1,000 to 2,500 homes around your current clients. Repeat the same streets a month later. Cleaning is a regular service, and most bookings come after a household has seen your name twice.",
+      "1,000 to 2,500 homes around your current clients, repeated a month later. Most bookings come after a household has seen your name twice.",
   },
 ];
 
@@ -80,14 +80,14 @@ export default function Cleaning() {
           { name: "Cleaning" },
         ]}
         h1="House cleaning flyers for Melbourne cleaners"
-        lead="House cleaning flyers delivered on their own to the streets you already clean in, so each new client fits your route. Every run is GPS-tracked."
+        lead="Get your house cleaning flyers into letterboxes along your cleaning route with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/letterbox-hand.jpg", alt: "A hand posting a flyer into a steel letterbox" }}
       />
 
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "40+", label: "suburbs covered" },
+          { value: "56", label: "suburbs covered" },
           { value: "1,000", label: "flyers, your first test run" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
@@ -154,15 +154,14 @@ export default function Cleaning() {
       </Section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
-        <Callout
-          title="Quantities"
-        >
+        <Callout title="Cleaners across Melbourne">
           <p className="m-0">
-            Every drop is exclusive, from 1,000 flyers. See the{" "}
-            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for a quote. Cleaning is
-            part of our <TextLink href="/industries/home-services">home services</TextLink> page, alongside{" "}
-            <TextLink href="/industries/plumbers">plumbers</TextLink> and{" "}
-            <TextLink href="/industries/electricians">electricians</TextLink>.
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. Regular cleans suit the family
+            streets of <TextLink href="/melbourne/flyer-distribution-bentleigh">Bentleigh</TextLink> and{" "}
+            <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink>; end-of-lease cleans
+            suit rentals in <TextLink href="/melbourne/flyer-distribution-st-kilda">St Kilda</TextLink>. Get a price on
+            the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or see{" "}
+            <TextLink href="/industries/home-services">home services</TextLink> for other trades.
           </p>
         </Callout>
       </div>

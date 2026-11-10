@@ -42,7 +42,7 @@ const faqs = [
   {
     question: "Should I advertise kitchens and bathrooms on the same flyer?",
     answer:
-      "Only if you do both well. One room with a strong before-and-after photo usually works better than a list of services. Many renovators alternate flyers, with a kitchen drop one month and a bathroom drop the next.",
+      "Only if you do both well. One room with a strong before-and-after photo beats a list of services, so many renovators alternate kitchen and bathroom drops.",
   },
   {
     question: "Can you deliver around a renovation I'm finishing?",
@@ -52,7 +52,7 @@ const faqs = [
   {
     question: "Which homes should a renovation drop target?",
     answer:
-      "Houses built from the 1960s to the 1990s with original kitchens and bathrooms. They make up many streets in suburbs like Bentleigh, Glen Waverley and Mount Waverley. Tell us your suburbs and we will suggest streets.",
+      "Houses built from the 1960s to the 1990s with original kitchens and bathrooms, common in Bentleigh, Glen Waverley and Mount Waverley. Tell us your suburbs and we'll suggest streets.",
   },
 ];
 
@@ -80,14 +80,14 @@ export default function Renovation() {
           { name: "Renovation" },
         ]}
         h1="Renovation flyers for Melbourne renovators"
-        lead="Renovation flyers delivered on their own to homes with original kitchens and bathrooms, and to the neighbours of the jobs you are finishing. Every route is GPS-tracked."
+        lead="Get your renovation flyers into letterboxes around the homes due for work with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/walker-street.jpg", alt: "A walker checking flyers beside a brick letterbox on a leafy street" }}
       />
 
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "40+", label: "suburbs covered" },
+          { value: "56", label: "suburbs covered" },
           { value: "1,000", label: "flyers, your first test run" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
@@ -158,15 +158,15 @@ export default function Renovation() {
       </Section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
-        <Callout
-          title="Quantities"
-        >
+        <Callout title="Renovators across Melbourne">
           <p className="m-0">
-            Renovation jobs are large and less frequent, so most renovators need a few thousand homes to see steady
-            enquiries. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink>{" "}
-            page for a quote. Renovation sits on our <TextLink href="/industries/home-services">home services</TextLink> page with{" "}
-            <TextLink href="/industries/builders">builders</TextLink> and{" "}
-            <TextLink href="/industries/plumbers">plumbers</TextLink>.
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. Original kitchens and bathrooms
+            fill the homes of <TextLink href="/melbourne/flyer-distribution-bentleigh">Bentleigh</TextLink>,{" "}
+            <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink> and{" "}
+            <TextLink href="/melbourne/flyer-distribution-mount-waverley">Mount Waverley</TextLink>. Get a price on the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or see{" "}
+            <TextLink href="/industries/home-services">home services</TextLink> for other trades like{" "}
+            <TextLink href="/industries/builders">builders</TextLink>.
           </p>
         </Callout>
       </div>
