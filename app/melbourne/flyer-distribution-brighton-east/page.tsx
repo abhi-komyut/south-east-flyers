@@ -35,27 +35,27 @@ const faqs = [
   {
     question: "How many letterboxes are there in Brighton East?",
     answer:
-      "Brighton East 3187 has about 6,400 homes. Around seven in ten are separate houses and most of the rest are townhouses, so almost every home on a route has a letterbox at the street.",
+      "About 6,400. Around seven in ten are separate houses and most of the rest townhouses, so nearly every home on a route has a letterbox at the street.",
   },
   {
-    question: "Is Brighton East different from Brighton for a letterbox drop?",
+    question: "Is a Brighton East drop different from central Brighton?",
     answer:
-      "Yes. Brighton East has fewer apartments and more family houses on quieter streets, away from the beach and Church Street. Family services and home trades often do better here than in central Brighton.",
+      "Yes. Brighton East has fewer apartments and more family houses on quiet streets, away from the beach and Church Street, so family services and home trades often do better here.",
   },
   {
     question: "Can I cover the whole of Brighton East in one run?",
     answer:
-      "Many businesses do. At about 6,400 homes, it fits a single campaign, and a GPS report shows every street covered. Others start with the streets around Hawthorn Road and extend from there.",
-  },
-  {
-    question: "Can one campaign cover Brighton East, Brighton and Bentleigh?",
-    answer:
-      "Yes. All three are in our service area, along with Hampton and Caulfield South, and we can quote them together with a single GPS report.",
+      "Many do. At about 6,400 homes it fits a single campaign, with a GPS map of every street covered. Others start around Hawthorn Road and widen from there.",
   },
   {
     question: "When do agents drop flyers in Brighton East?",
     answer:
-      "Before the spring and autumn selling seasons, and around every new listing. Many family homes here are held for a long time, so appraisal flyers to long-term owners are a common first campaign.",
+      "Before the spring and autumn selling seasons, and around each new listing. Many homes here are held for years, so appraisal flyers to long-term owners make a common first campaign.",
+  },
+  {
+    question: "Do you also deliver in Brighton and Bentleigh?",
+    answer:
+      "Yes. Both border Brighton East, with Hampton and Caulfield South close by, so one run can cover a few suburbs with a single GPS report.",
   },
 ];
 
@@ -98,60 +98,57 @@ export default function BrightonEast() {
         ]}
       />
 
-      <Section title="6,400 homes, almost all houses" first>
+      <Section title="Flyer distribution around Hawthorn Road" first>
         <p>
-          Brighton East sits in the City of Bayside, east of the Nepean Highway, between Brighton and Bentleigh. Hawthorn Road carries its main shops, and Dendy Park and the public golf course give it more
-          open space than its better-known neighbour.
-        </p>
-        <p>
-          For a letterbox drop that means about 6,400 homes, mostly houses and townhouses on quiet residential streets.
-          It is a suburb most businesses can cover in full.
+          Brighton East sits in the City of Bayside, east of the Nepean Highway, between Brighton and Bentleigh.
+          Hawthorn Road carries its main shops, and Dendy Park and the public golf course give it more open space than
+          its better-known neighbour. A full Brighton East campaign reaches up to 6,400 homes.
         </p>
       </Section>
 
-      <Section title="Houses, not apartments">
+      <Section title="Houses, not apartments, so coverage runs high">
         <p>
           Unlike central Brighton, Brighton East has very few apartment blocks. Almost every home has a letterbox at
-          the street, so a walker reaches nearly every household on the route and your flyer isn&rsquo;t stopped at a
-          locked mailroom.
+          the street, so a walker reaches nearly every household on the route and your flyer is not stopped at a locked
+          mailroom.
         </p>
         <p>
-          Those houses also need upkeep. Gardens, pools, roofs, extensions and second-storey additions keep{" "}
-          <TextLink href="/industries/home-services">home services</TextLink> busy, and owners here keep the flyer of
-          a trade who works locally.
+          Those houses need upkeep. Gardens, pools, roofs and second-storey additions keep{" "}
+          <TextLink href="/industries/home-services">home services</TextLink> busy, and owners here hold on to the
+          flyer of a trade who works locally.
         </p>
       </Section>
 
-      <Section title="Families and long-term owners">
+      <Section title="Families who stay for the schools">
         <p>
           Many Brighton East families have been in the same house for years, and school-age children keep them there.
-          That makes it a strong suburb for tutoring, music and swim schools, family health practices and
-          after-school programs.
+          That makes it a strong suburb for tutoring, music and swim schools, family health practices and after-school
+          programs.
         </p>
         <p>
-          Long-term ownership also means quiet streets for agents. An appraisal flyer reaches owners who may not have
-          had their home valued in a decade. See our{" "}
-          <TextLink href="/industries/real-estate">real estate letterbox drops</TextLink> page for campaign timing.
+          Long tenure also means quiet streets for agents. An appraisal flyer reaches owners who may not have had their
+          home valued in a decade. Our <TextLink href="/industries/real-estate">real estate letterbox drops</TextLink>{" "}
+          page covers how to time a campaign.
         </p>
       </Section>
 
       <Section title="Hawthorn Road and the local shops">
         <p>
-          Hawthorn Road is Brighton East&rsquo;s main shopping street, with cafes, takeaway and everyday services
-          serving the surrounding streets. A 1,000 to 2,500 flyer drop around the strip reaches the households most
-          likely to walk or drive in.
+          Hawthorn Road is Brighton East&rsquo;s main shopping street, with cafes, takeaway and everyday services for
+          the streets around it. A shop can start with 1,000 to 2,500 flyers along the strip, reaching the households
+          most likely to walk or drive in.
         </p>
         <p>
-          Businesses near the eastern edge can extend the same drop into Bentleigh, since residents cross the
-          boundary for shopping without thinking about it.
+          Businesses near the eastern edge can extend the same run into Bentleigh, since residents cross the boundary
+          to shop without thinking about it.
         </p>
       </Section>
 
-      <Section title="Agents, renovators and Hawthorn Road trades in Brighton East">
+      <Section title="Who uses letterbox drops in Brighton East">
         <Bullets
           items={[
             <>Landscapers, pool services, <TextLink href="/industries/roofing">roofers</TextLink> and other home trades</>,
-            <>Real estate agents working family homes and long-held properties</>,
+            <><TextLink href="/industries/real-estate">Real estate agents</TextLink> working family homes and long-held properties</>,
             <>Cafes, takeaway and services on Hawthorn Road</>,
             <>Tutors, swim schools and kids&rsquo; programs</>,
             <><TextLink href="/industries/dentists">Dental</TextLink> and family health practices</>,
@@ -163,14 +160,16 @@ export default function BrightonEast() {
       </Section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
-        <Callout title="Covering Brighton East's 6,400 homes">
+        <Callout title="Brighton East and nearby suburbs">
           <p className="m-0">
-            Every Brighton East drop is yours alone, with <strong className="text-ink">no other advertisers&rsquo; flyers in the run</strong>, from
-            1,000 flyers. Our flyer distribution across Bayside also covers{" "}
-            <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink>,{" "}
+            On a Brighton East run your flyer travels on its own, with <strong className="text-ink">no one else&rsquo;s offer tucked in</strong>. We also
+            deliver in <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink>,{" "}
             <TextLink href="/melbourne/flyer-distribution-hampton">Hampton</TextLink> and{" "}
-            <TextLink href="/melbourne/flyer-distribution-bentleigh">Bentleigh</TextLink> next door. See the{" "}
-            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page.
+            <TextLink href="/melbourne/flyer-distribution-bentleigh">Bentleigh</TextLink> next door, so a bayside or Glen
+            Eira campaign can run across a few suburbs. The{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page lays out quantities, and the{" "}
+            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> covers the other
+            suburbs we reach.
           </p>
         </Callout>
       </div>
@@ -179,7 +178,7 @@ export default function BrightonEast() {
 
       <QuickQuoteForm
         heading="Get a quote for your Brighton East drop"
-        lead="Send us your streets and flyer count, and we'll come back with the letterbox number and a quote, quickly."
+        lead="Give us the streets around Hawthorn Road or the whole suburb, and we'll send back the letterbox count and a price."
         suburbHint="e.g. Brighton East, Brighton, Bentleigh"
       />
 
