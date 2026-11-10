@@ -52,7 +52,7 @@ const faqs = [
   {
     question: "How many roofing flyers should I start with?",
     answer:
-      "2,500 to 5,000 homes gives a roofer enough reach to see results, because a roof is a bigger, less frequent job than a blocked drain and needs a wider pool of households to generate a steady number of calls.",
+      "2,500 to 5,000 homes. A roof is a bigger, less frequent job than a blocked drain, so it needs a wider pool to generate steady calls.",
   },
 ];
 
@@ -80,14 +80,14 @@ export default function Roofing() {
           { name: "Roofing" },
         ]}
         h1="Roofing flyers for Melbourne roofers"
-        lead="Roofing flyers delivered on their own to the streets with ageing roofs, the streets a storm just hit, and the streets around your current job. Every route is GPS-tracked."
+        lead="Get your roofing flyers into letterboxes around your base with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/ind-trades.jpg", alt: "A roofer in hi-vis working on a tiled Melbourne roof" }}
       />
 
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "40+", label: "suburbs covered" },
+          { value: "56", label: "suburbs covered" },
           { value: "1,000", label: "flyers, your first test run" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
@@ -106,9 +106,8 @@ export default function Roofing() {
           <TextLink href="/portfolio">Storm Shield Roofing</TextLink>.
         </p>
         <p>
-          Roof restoration flyers benefit most from repeat name recognition, since it is a big-ticket decision
-          owners weigh up over time rather than acting on immediately. It is a small piece of roofing marketing
-          overall, but a reliable one.
+          Roof restoration flyers suit repeat drops most, since it is a big decision owners weigh over time. It is a
+          small piece of roofing marketing, but a reliable one.
         </p>
       </Section>
 
@@ -151,18 +150,15 @@ export default function Roofing() {
       </Section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
-        <Callout
-          title="Quantities"
-        >
+        <Callout title="Roofers across Melbourne">
           <p className="m-0">
-            Because roof jobs are less frequent but larger than most trade work, roofers usually need more reach than a
-            plumber to see results. See the{" "}
-            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for a quote. Roofing is
-            one of the trades on our <TextLink href="/industries/home-services">home services</TextLink> page,
-            alongside <TextLink href="/industries/plumbers">plumbers</TextLink> and{" "}
-            <TextLink href="/industries/electricians">electricians</TextLink>. Our{" "}
-            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> lists every suburb
-            we cover.
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. Ageing roofs cluster in{" "}
+            <TextLink href="/melbourne/flyer-distribution-kew">Kew</TextLink>,{" "}
+            <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink> and{" "}
+            <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink>. Roof jobs need more
+            reach than most trades, so get a price on the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or see{" "}
+            <TextLink href="/industries/home-services">home services</TextLink> for other trades.
           </p>
         </Callout>
       </div>

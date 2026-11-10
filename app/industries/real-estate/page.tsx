@@ -66,7 +66,7 @@ const faqs = [
   {
     question: "Can you focus on houses and skip apartment blocks?",
     answer:
-      "Yes. Tell us, and we will plan the route around houses and townhouses where that is practical, which usually suits a farming campaign better than full suburb coverage. The GPS report shows exactly what was covered.",
+      "Yes. Tell us and we'll plan the route around houses and townhouses, which suits a farming campaign. The GPS report shows what was covered.",
   },
 ];
 
@@ -93,14 +93,14 @@ export default function RealEstate() {
           { name: "Real Estate" },
         ]}
         h1="Real Estate Letterbox Drops for Melbourne Agents"
-        lead="Real estate letterbox drops for every stage of a campaign: Just Listed, Open Home, Auction and Just Sold. Your flyer goes into each letterbox on its own, and the GPS report is proof you can show your vendor."
+        lead="Get your real estate flyers into letterboxes around every listing with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/ind-realestate.jpg", alt: "A real estate agent standing in front of a For Sale sign" }}
       />
 
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "40+", label: "suburbs covered" },
+          { value: "56", label: "suburbs covered" },
           { value: "48 hrs", label: "to start for new listings" },
           { value: "GPS map", label: "to forward to your vendor" },
         ]}
@@ -111,15 +111,14 @@ export default function RealEstate() {
         logos={ALL_CLIENT_LOGOS.slice(0, 5)}
       />
 
-      <Section title="Why agents still drop flyers" first>
+      <Section title="Why agents use real estate letterbox drops" first>
         <p>
-          The people most likely to sell next are the neighbours of the house you just listed. They watch the board go
-          up, check the price and wonder what their own place is worth. A real estate letterbox drop in those streets
-          answers that question with your name on it.
+          The people most likely to sell next are the neighbours of the house you just listed. A real estate letterbox
+          drop in those streets reaches them with your name on it.
         </p>
         <p>
-          Real estate flyer distribution also shows vendors that the marketing is happening. A GPS map of every street
-          covered is easier to put in a vendor report than an impression count.
+          It also shows vendors the marketing is happening. A GPS map of every street covered beats an impression count
+          in a vendor report. It is real estate marketing Melbourne agencies have used for decades, now with GPS proof.
         </p>
       </Section>
 
@@ -197,21 +196,14 @@ export default function RealEstate() {
       </section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
-        <Callout
-          title="Quantities for a real estate letterbox drop"
-        >
+        <Callout title="Real estate drops across Melbourne">
           <p className="m-0">
-            Real estate flyers are delivered the same way as any other campaign:{" "}
-            <strong className="text-ink">exclusively</strong>, never bundled.
-            See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for a quote.
-            This is real estate marketing Melbourne agencies have used for decades, just with GPS proof added on top.
-            We cover agents&rsquo; patches across Melbourne&rsquo;s south-east and east, including{" "}
-            <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink>,{" "}
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. We work agents&rsquo; patches
+            in <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink>,{" "}
             <TextLink href="/melbourne/flyer-distribution-kew">Kew</TextLink> and{" "}
-            <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink>. See the full{" "}
-            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>, or{" "}
-            <TextLink href="/industries/local-businesses">local business flyer distribution</TextLink> for other
-            industries.
+            <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink>. Get a price on the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or see the full{" "}
+            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
           </p>
         </Callout>
       </div>

@@ -81,14 +81,14 @@ export default function Plumbers() {
           { name: "Plumbers" },
         ]}
         h1="Plumber flyers delivered to your local streets"
-        lead="Letterbox marketing for plumbers in Melbourne's south-east. Your flyer goes into each letterbox on its own, every route is GPS-tracked, and you can start with 1,000 homes around your base."
+        lead="Get your plumber flyers into letterboxes around your base with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/ind-trades.jpg", alt: "A tradesperson in hi-vis working on a Melbourne home" }}
       />
 
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "40+", label: "suburbs covered" },
+          { value: "56", label: "suburbs covered" },
           { value: "1,000", label: "flyers, your first test run" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
@@ -106,8 +106,8 @@ export default function Plumbers() {
           that letterbox.
         </p>
         <p>
-          It is a small part of plumbing marketing overall, but it is the part that puts your number in a house
-          before the emergency happens, rather than competing for attention after it already has.
+          It is a small part of plumbing marketing, but the part that puts your number in the house before the
+          emergency, not after.
         </p>
       </Section>
 
@@ -160,19 +160,14 @@ export default function Plumbers() {
       </Section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
-        <Callout
-          title="Quantities for a plumbing letterbox drop"
-        >
+        <Callout title="Plumbers across Melbourne">
           <p className="m-0">
-            Every drop is exclusive, from 1,000 flyers. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink>{" "}
-            page for a quote.
-          </p>
-          <p className="m-0">
-            Plumbing is one of several trades we deliver for. See{" "}
-            <TextLink href="/industries/home-services">home services marketing</TextLink> for{" "}
-            <TextLink href="/industries/electricians">electricians</TextLink>,{" "}
-            <TextLink href="/industries/roofing">roofers</TextLink>, builders and cleaners, or our{" "}
-            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. Plumbers do well on the older
+            homes of <TextLink href="/melbourne/flyer-distribution-malvern">Malvern</TextLink>,{" "}
+            <TextLink href="/melbourne/flyer-distribution-camberwell">Camberwell</TextLink> and{" "}
+            <TextLink href="/melbourne/flyer-distribution-glen-iris">Glen Iris</TextLink>. Get a price on the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or see{" "}
+            <TextLink href="/industries/home-services">home services marketing</TextLink> for other trades.
           </p>
         </Callout>
       </div>
