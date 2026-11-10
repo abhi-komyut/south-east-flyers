@@ -32,12 +32,12 @@ const faqs = [
   {
     question: "Do restaurant flyers still work?",
     answer:
-      "For venues that rely on locals, yes. A menu on the fridge is still how many households decide on takeaway. A flyer delivered on its own, rather than in a stack of catalogues, is more likely to end up there.",
+      "For venues that rely on locals, yes. A menu on the fridge is still how many households decide on takeaway.",
   },
   {
     question: "How far from my restaurant should I drop menus?",
     answer:
-      "Start with the streets within your delivery radius or a 10-minute walk, usually 1,000 to 2,500 homes. Those are the households who can order tonight. Widen the area once you know which streets order.",
+      "Start within your delivery radius or a 10-minute walk, usually 1,000 to 2,500 homes. Widen the area once you know which streets order.",
   },
   {
     question: "When is the best time to drop takeaway menus?",
@@ -80,14 +80,14 @@ export default function Restaurants() {
           { name: "Restaurants & Cafes" },
         ]}
         h1="Menu flyer distribution for restaurants and cafes"
-        lead="Restaurant flyers and takeaway menus delivered on their own to the streets that can walk in or order tonight. Every run is GPS-tracked."
+        lead="Get your restaurant flyers and takeaway menus into letterboxes around your venue with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/walker-ebike.jpg", alt: "An e-bike distributor delivering flyers on a residential street" }}
       />
 
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "40+", label: "suburbs covered" },
+          { value: "56", label: "suburbs covered" },
           { value: "1,000", label: "flyers, about one walking catchment" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
@@ -158,13 +158,14 @@ export default function Restaurants() {
       </Section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
-        <Callout
-          title="Quantities"
-        >
+        <Callout title="Restaurants across Melbourne">
           <p className="m-0">
-            Every drop is exclusive, from 1,000 flyers or menus. See the{" "}
-            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or our{" "}
-            <TextLink href="/industries/local-businesses">local business flyers</TextLink> page for shops and studios.
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. Dense food strips sit around{" "}
+            <TextLink href="/melbourne/flyer-distribution-st-kilda">St Kilda</TextLink>,{" "}
+            <TextLink href="/melbourne/flyer-distribution-box-hill">Box Hill</TextLink> and{" "}
+            <TextLink href="/melbourne/flyer-distribution-bentleigh">Bentleigh</TextLink>. Get a price on the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or see{" "}
+            <TextLink href="/industries/local-businesses">local business flyer distribution</TextLink>.
           </p>
         </Callout>
       </div>
