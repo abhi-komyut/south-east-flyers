@@ -147,6 +147,11 @@ export default function Bentleigh() {
           into a stack of offers, is the one that gets read on the bench.
         </p>
         <p>
+          Centre Road itself is one of the south-east&rsquo;s busier eating strips, with a long run of cafes, bakeries
+          and restaurants between Bentleigh and Patterson stations. A new menu or opening offer dropped into the streets
+          either side of the strip reaches the households who walk to it, rather than drivers passing through.
+        </p>
+        <p>
           Because Bentleigh skews family rather than short-stay rental, a flyer that sits in the house for a few weeks
           has more chances to be acted on than in a suburb with faster turnover.
         </p>

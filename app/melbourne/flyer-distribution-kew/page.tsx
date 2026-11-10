@@ -136,6 +136,10 @@ export default function Kew() {
           most likely to come in this week.
         </p>
         <p>
+          Cotham Road carries the same shoppers west toward the Kew Library and the recreation centre, so a run that
+          follows it picks up homes a street or two back from the Junction that a High Street-only drop would miss.
+        </p>
+        <p>
           A new cafe can repeat the drop with a fresh offer each time, an opening deal, then a weekday lunch, then a
           family dinner, and match each GPS map against who walks in.
         </p>
