@@ -6,6 +6,7 @@ import {
   PageHero,
   FactsStrip,
   Section,
+  Callout,
   Bullets,
   TextLink,
   JsonLd,
@@ -278,17 +279,15 @@ export default function FlyerDistributionMelbourne() {
 
       <Section title="Flyer distribution across Melbourne" first>
         <p>
-          South East Flyers is a flyer distribution service Melbourne businesses use when they want solo delivery
-          rather than a bundle. We&rsquo;re a flyer distribution company Melbourne clients choose for exclusive,
-          GPS-tracked delivery. Businesses across the city give us their printed material and we deliver it,
-          letterbox by letterbox, across the suburbs they want to target, from the bayside around St Kilda and
-          Brighton through to the Monash and eastern suburbs like Glen Waverley, Box Hill and Doncaster.
+          South East Flyers is a flyer distribution service Melbourne businesses use for solo delivery, not a bundle.
+          We&rsquo;re a flyer distribution company Melbourne clients choose for exclusive, GPS-tracked drops. Give us
+          your printed flyers and we deliver them letterbox by letterbox, from the bayside around St Kilda and Brighton
+          to the Monash and eastern suburbs like Glen Waverley, Box Hill and Doncaster.
         </p>
         <p>
-          We deliver every flyer individually rather than bundling it with other advertising, skip every letterbox
-          marked &lsquo;No Junk Mail&rsquo;, and track each distribution run through the Strava app so you receive a
-          clear report once your campaign is complete. That&rsquo;s leaflet distribution Melbourne businesses can
-          rely on without guessing where their flyers went. We scale from a small test run up to metro-wide pushes.
+          Every flyer goes in on its own, never bundled. We skip every letterbox marked &lsquo;No Junk Mail&rsquo;.
+          Each run is tracked in Strava, so you get a clear report once the campaign is done. That&rsquo;s leaflet
+          distribution Melbourne businesses can rely on, from a small test run up to a metro-wide push.
         </p>
       </Section>
 
@@ -351,6 +350,17 @@ export default function FlyerDistributionMelbourne() {
           ))}
         />
       </Section>
+
+      <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
+        <Callout title="Flyer distribution across Melbourne">
+          <p className="m-0">
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. Get a price on the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, browse the{" "}
+            <TextLink href="/melbourne/flyer-distribution-south-east-melbourne">south-east Melbourne</TextLink> suburbs,
+            or see the <TextLink href="/industries">industries we work with</TextLink>.
+          </p>
+        </Callout>
+      </div>
 
       <HowItWorks />
 

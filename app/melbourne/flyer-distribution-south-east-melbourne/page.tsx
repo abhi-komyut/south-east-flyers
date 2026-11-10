@@ -209,13 +209,12 @@ export default function SouthEastMelbourne() {
       </Section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
-        <Callout
-          title="Letterbox drop quantities across the south-east"
-        >
+        <Callout title="South-east and eastern Melbourne">
           <p className="m-0">
-            Exclusive, never bundled, across all eight councils. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page
-            for a quote, the <TextLink href="/industries/local-businesses">local business</TextLink> guide, or our
-            wider <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run, across all eight councils. Get
+            a price on the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, read the{" "}
+            <TextLink href="/industries/local-businesses">local business</TextLink> guide, or see our wider{" "}
+            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
           </p>
         </Callout>
       </div>
