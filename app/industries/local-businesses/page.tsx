@@ -7,6 +7,7 @@ import {
   PageHero,
   FactsStrip,
   Section,
+  Callout,
   Bullets,
   TextLink,
   JsonLd,
@@ -42,7 +43,7 @@ const faqs = [
   {
     question: "Do letterbox drops still work for small businesses?",
     answer:
-      "They work best for businesses whose customers live within a few kilometres, such as trades, clinics and takeaway shops. A flyer reaches every home in your chosen streets, including people who never see your social posts. Track calls from each drop to measure it.",
+      "They work best for businesses whose customers live within a few kilometres, like trades, clinics and takeaway shops. A flyer reaches every home in your chosen streets, including people who never see your posts.",
   },
   {
     question: "How small can a local campaign be?",
@@ -89,13 +90,13 @@ export default function LocalBusinesses() {
           { name: "Local Businesses" },
         ]}
         h1="Letterbox marketing for local Melbourne businesses"
-        lead="Local business flyers delivered to the streets your customers live in. Each flyer goes into the letterbox on its own, every route is GPS-tracked, and you can start with 1,000 flyers."
+        lead="Get your local business flyers into letterboxes around your shop with GPS-tracked flyer distribution."
       />
 
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "40+", label: "suburbs covered" },
+          { value: "56", label: "suburbs covered" },
           { value: "1,000", label: "flyers, your first test run" },
           { value: "GPS map", label: "report with every drop" },
         ]}
@@ -175,12 +176,20 @@ export default function LocalBusinesses() {
           of what a suburb drop includes, or our{" "}
           <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> for the full list. Comparing channels? Read <TextLink href="/guides/how-to-advertise-local-business-melbourne">how to advertise a local business in Melbourne</TextLink>.
         </p>
-        <p>
-          Every drop is exclusive, from 1,000 flyers. The{" "}
-          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page covers quantities from 1,000 to
-          20,000 flyers.
-        </p>
       </Section>
+
+      <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
+        <Callout title="Local businesses across Melbourne">
+          <p className="m-0">
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. We cover the shops and streets
+            of <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink>,{" "}
+            <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink> and{" "}
+            <TextLink href="/melbourne/flyer-distribution-box-hill">Box Hill</TextLink>. Get a price on the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or see the full{" "}
+            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
+          </p>
+        </Callout>
+      </div>
 
       <HowItWorks />
 

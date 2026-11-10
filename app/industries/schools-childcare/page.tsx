@@ -32,7 +32,7 @@ const faqs = [
   {
     question: "Do letterbox drops work for childcare centres?",
     answer:
-      "Yes. Parents choose childcare close to home or on the way to work, so the surrounding streets are where enrolments come from. A flyer reaches every family there, including those expecting a baby who haven't started looking yet.",
+      "Yes. Parents choose childcare close to home, so the surrounding streets are where enrolments come from. A flyer reaches every family there, even those expecting a baby.",
   },
   {
     question: "When should a school or childcare centre drop flyers?",
@@ -80,14 +80,14 @@ export default function SchoolsChildcare() {
           { name: "Schools & Childcare" },
         ]}
         h1="Enrolment Letterbox Drops for Schools & Childcare"
-        lead="Childcare marketing that reaches the families who live closest, before they decide where to enrol. Your flyer goes in on its own, and every route is GPS-tracked."
+        lead="Get your childcare and enrolment flyers into letterboxes around your centre with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/walker-street.jpg", alt: "A walker checking flyers beside a brick letterbox on a leafy street" }}
       />
 
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "40+", label: "suburbs covered" },
+          { value: "56", label: "suburbs covered" },
           { value: "1,000", label: "flyers, your first test run" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
@@ -150,11 +150,14 @@ export default function SchoolsChildcare() {
       </Section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
-        <Callout title="Quantities">
+        <Callout title="Schools and childcare across Melbourne">
           <p className="m-0">
-            Every drop is exclusive, from 1,000 flyers or pamphlets. See the{" "}
-            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or our{" "}
-            <TextLink href="/industries/local-businesses">local business</TextLink> page.
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. Young families fill the
+            school-zone streets of <TextLink href="/melbourne/flyer-distribution-bentleigh">Bentleigh</TextLink>,{" "}
+            <TextLink href="/melbourne/flyer-distribution-mount-waverley">Mount Waverley</TextLink> and{" "}
+            <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink>. Get a price on the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or see{" "}
+            <TextLink href="/industries/local-businesses">local business flyer distribution</TextLink>.
           </p>
         </Callout>
       </div>

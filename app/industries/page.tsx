@@ -8,6 +8,8 @@ import {
   PageHero,
   FactsStrip,
   Section,
+  Callout,
+  TextLink,
   JsonLd,
   HowItWorks,
 } from "../components/landing";
@@ -143,14 +145,14 @@ export default function Industries() {
       <PageHero
         crumbs={[{ name: "Home", href: "/" }, { name: "Industries" }]}
         h1="Industries We Work With"
-        lead="Flyer and letterbox distribution built around how different local businesses actually reach customers across Melbourne's south-east and east."
+        lead="Get your flyers into the right letterboxes with GPS-tracked flyer distribution, built around how each local business reaches customers."
         image={{ src: "/images/redesign/letterbox-hand.jpg", alt: "A hand posting a flyer into a steel letterbox" }}
       />
 
       <FactsStrip
         stats={[
           { value: "15+", label: "industries we specialise in" },
-          { value: "40+", label: "suburbs covered" },
+          { value: "56", label: "suburbs covered" },
           { value: "Exclusive", label: "never bundled with other ads" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
@@ -176,6 +178,17 @@ export default function Industries() {
         <p>Restaurants, cafes and pet groomers reach the households within walking or driving distance of their door.</p>
         <IndustryGrid items={hospitality} />
       </Section>
+
+      <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
+        <Callout title="Flyer distribution by industry">
+          <p className="m-0">
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run, whatever your trade. Get a
+            price on the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, see the full{" "}
+            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>, or start with{" "}
+            <TextLink href="/industries/local-businesses">local business flyer distribution</TextLink>.
+          </p>
+        </Callout>
+      </div>
 
       <HowItWorks />
 
