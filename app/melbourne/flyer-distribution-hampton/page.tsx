@@ -35,27 +35,27 @@ const faqs = [
   {
     question: "How many letterboxes are there in Hampton?",
     answer:
-      "Hampton 3188 has about 7,900 homes. Most are houses and townhouses, with a smaller share of apartments near Hampton Street, so coverage on a standard walking route is high.",
+      "About 7,900. Most are houses and townhouses, with a smaller band of apartments near the station, so a walking route covers a high share of the suburb.",
+  },
+  {
+    question: "Is Hampton the same as Hampton East?",
+    answer:
+      "No. Hampton East is a separate suburb east of the Nepean Highway, with more units and its own shops. Businesses near the boundary often cover both, and we can quote them together.",
   },
   {
     question: "Can I target just the streets around Hampton Street?",
     answer:
-      "Yes. Shops, cafes and clinics on Hampton Street usually start with the streets within a short walk. Give us your address and we'll quote that area only, with a GPS map of the route.",
+      "Yes. Shops and clinics on Hampton Street usually start with the streets a short walk away. Send your address and we'll quote that area, with a GPS map of the route.",
   },
   {
-    question: "Is Hampton different from Hampton East?",
+    question: "When is the best time for a drop in Hampton?",
     answer:
-      "Yes. Hampton East is a separate suburb east of the Nepean Highway, with more units and a different shopping area. Many businesses near the boundary cover both, and we can quote them together.",
+      "Late winter suits outdoor trades and builders before the summer rush. Agents drop before the spring and autumn selling seasons, when Hampton's family homes draw the most interest.",
   },
   {
-    question: "Can one campaign cover Hampton, Sandringham and Brighton?",
+    question: "Do you also deliver in Brighton and Sandringham?",
     answer:
-      "Yes. All three are in our Bayside service area, along with Brighton East and Black Rock, and we can quote them together with a single GPS report.",
-  },
-  {
-    question: "When is the best time for a letterbox drop in Hampton?",
-    answer:
-      "Spring suits outdoor trades, pool services and hospitality as the beach season starts. Agents drop before the spring and autumn selling seasons, when Hampton's family homes see the most interest.",
+      "Yes. Both sit beside Hampton in the City of Bayside, with Brighton East and Black Rock nearby, so one campaign can take in several suburbs under a single GPS report.",
   },
 ];
 
@@ -98,62 +98,60 @@ export default function Hampton() {
         ]}
       />
 
-      <Section title="Hampton at a glance" first>
+      <Section title="Flyer distribution around Hampton Street" first>
         <p>
-          Hampton sits in the City of Bayside between Brighton and Sandringham. Hampton station on the Sandringham line
-          opens onto Hampton Street, which runs down towards the beach and carries most of the suburb&rsquo;s shops,
-          cafes and services.
-        </p>
-        <p>
-          For a letterbox drop that means about 7,900 homes, mostly houses and townhouses, with some apartments close
-          to the station and the shopping strip.
+          Hampton Street is the suburb&rsquo;s spine. It runs from the station down towards the beach and carries most
+          of Hampton&rsquo;s shops, cafes and clinics, with the City of Bayside stretching either side between Brighton
+          and Sandringham. A full Hampton campaign reaches up to 7,900 homes.
         </p>
       </Section>
 
-      <Section title="One street does most of the trade">
+      <Section title="One street carries most of the trade">
         <p>
-          Hampton Street is the suburb&rsquo;s centre. Locals walk or ride to its cafes, butchers, bakeries, gyms and
-          clinics, so the households within a kilometre or so are the ones a Hampton Street business can win.
+          Because so much sits on the one strip, a Hampton Street business lives on the streets within a short walk of
+          it. Our walkers drop those blocks first, so an opening offer or a changed menu reaches the people most likely
+          to call in this week.
         </p>
         <p>
-          A 1,000 to 2,500 flyer drop around the strip reaches those households directly. An opening offer, a new
-          menu or a seasonal special works well, and a repeat drop a few weeks later keeps the name familiar.
+          Hampton East, east of the Nepean Highway, is a separate suburb with its own shops. A business near the
+          boundary can run both in one campaign, and the GPS map keeps the two sides clearly apart.
         </p>
       </Section>
 
-      <Section title="Beachside houses and busy trades">
+      <Section title="Rebuilt homes keep the trades busy">
         <p>
-          The streets between Hampton Street and the beach are full of family homes, many rebuilt or extended in
-          recent years. Owners spend on gardens, pools, outdoor areas and renovations, especially before summer.
+          The streets between Hampton Street and the beach are full of family homes, many rebuilt or extended in recent
+          years. Owners spend on gardens, pools, decks and second storeys, and they keep the flyer of a trade who works
+          nearby.
         </p>
         <p>
           That suits landscapers, pool services,{" "}
           <TextLink href="/industries/carpenters">carpenters</TextLink> building decks and pergolas, and{" "}
-          <TextLink href="/industries/builders">builders</TextLink>. A drop in late winter lands before the rush, while
-          your diary still has room.
+          <TextLink href="/industries/builders">builders</TextLink>. A late-winter drop lands before the summer rush,
+          while your diary still has room.
         </p>
       </Section>
 
       <Section title="A strong suburb for agents">
         <p>
-          Hampton&rsquo;s family homes attract buyers from across Melbourne, and listings get attention from
-          neighbours as well as buyers. Just listed, open home and sold flyers around each property keep an
-          agent&rsquo;s name in front of the next vendor.
+          Hampton&rsquo;s family homes pull buyers from across Melbourne, and every listing draws attention from
+          neighbours as well. Just-listed, open-home and sold flyers around a property keep an agent&rsquo;s name in
+          front of the next person thinking of selling.
         </p>
         <p>
           See our <TextLink href="/industries/real-estate">real estate letterbox drops</TextLink> page for how agents
-          plan a campaign around a listing.
+          plan a campaign around a single listing.
         </p>
       </Section>
 
-      <Section title="Who letterbox drops in Hampton suit">
+      <Section title="Who uses letterbox drops in Hampton">
         <Bullets
           items={[
             <>Cafes, restaurants and shops on Hampton Street</>,
             <>Landscapers, pool services and outdoor trades before summer</>,
-            <>Real estate agents working bayside family homes</>,
+            <><TextLink href="/industries/real-estate">Real estate agents</TextLink> working bayside family homes</>,
             <>Gyms, physios and health practices near the station</>,
-            <><TextLink href="/industries/cleaning">Cleaners</TextLink>, <TextLink href="/industries/plumbers">plumbers</TextLink> and other home services</>,
+            <><TextLink href="/industries/cleaning">Cleaners</TextLink>, <TextLink href="/industries/plumbers">plumbers</TextLink> and other <TextLink href="/industries/home-services">home services</TextLink></>,
           ]}
         />
         <p>
@@ -162,14 +160,16 @@ export default function Hampton() {
       </Section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
-        <Callout title="Letterbox drop quantities in Hampton">
+        <Callout title="Hampton and nearby suburbs">
           <p className="m-0">
-            Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>, starting from
-            1,000 flyers. Our flyer distribution across Bayside also covers{" "}
-            <TextLink href="/melbourne/flyer-distribution-sandringham">Sandringham</TextLink>,{" "}
+            A Hampton drop carries your flyer and <strong className="text-ink">nothing else beside it</strong>. We
+            also cover <TextLink href="/melbourne/flyer-distribution-sandringham">Sandringham</TextLink>,{" "}
             <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink> and{" "}
-            <TextLink href="/melbourne/flyer-distribution-brighton-east">Brighton East</TextLink>. See the{" "}
-            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page.
+            <TextLink href="/melbourne/flyer-distribution-brighton-east">Brighton East</TextLink> across the bayside, so a
+            campaign can take in a few suburbs at once. Quantities and pricing sit on the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, and the{" "}
+            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> shows where else
+            we deliver.
           </p>
         </Callout>
       </div>
@@ -177,8 +177,8 @@ export default function Hampton() {
       <HowItWorks />
 
       <QuickQuoteForm
-        heading="Ready to reach Hampton letterboxes?"
-        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count, with a quick turnaround."
+        heading="Get a quote for your Hampton drop"
+        lead="Point us at Hampton Street or the streets around your shop, and we'll send back the letterbox count and a price."
         suburbHint="e.g. Hampton, Sandringham, Brighton"
       />
 
