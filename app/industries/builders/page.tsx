@@ -47,7 +47,7 @@ const faqs = [
   {
     question: "Should a builder's flyer show prices?",
     answer:
-      "Usually not. Build costs vary too much for a flyer price to be useful. Show a finished project nearby, your registration, the kind of work you take on and an offer of a site visit or feasibility chat.",
+      "Usually not. Build costs vary too much for a flyer price. Show a finished project nearby, your registration and an offer of a site visit.",
   },
   {
     question: "How many flyers should a builder start with?",
@@ -80,14 +80,14 @@ export default function Builders() {
           { name: "Builders" },
         ]}
         h1="Construction flyers for Melbourne builders"
-        lead="Construction flyers delivered on their own to the neighbours of your sites and the streets where owners are deciding whether to rebuild. Every route is GPS-tracked."
+        lead="Get your construction flyers into letterboxes around your sites with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/ind-trades.jpg", alt: "A tradesperson in hi-vis working on a tiled Melbourne roof" }}
       />
 
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "40+", label: "suburbs covered" },
+          { value: "56", label: "suburbs covered" },
           { value: "1,000", label: "flyers covers one site's neighbours" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
@@ -162,15 +162,15 @@ export default function Builders() {
       </Section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
-        <Callout
-          title="Quantities"
-        >
+        <Callout title="Builders across Melbourne">
           <p className="m-0">
-            Every drop is exclusive, from 1,000 flyers. See the{" "}
-            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for a quote. Building is
-            one of the trades on our <TextLink href="/industries/home-services">home services</TextLink> page, alongside{" "}
-            <TextLink href="/industries/renovation">renovators</TextLink> and{" "}
-            <TextLink href="/industries/electricians">electricians</TextLink>.
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. Knockdown-rebuild work clusters
+            in <TextLink href="/melbourne/flyer-distribution-mount-waverley">Mount Waverley</TextLink>,{" "}
+            <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink> and{" "}
+            <TextLink href="/melbourne/flyer-distribution-bentleigh">Bentleigh</TextLink>. Get a price on the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or see{" "}
+            <TextLink href="/industries/home-services">home services</TextLink> for other trades like{" "}
+            <TextLink href="/industries/renovation">renovators</TextLink>.
           </p>
         </Callout>
       </div>

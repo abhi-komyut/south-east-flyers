@@ -37,7 +37,7 @@ const faqs = [
   {
     question: "When should a carpenter drop deck and pergola flyers?",
     answer:
-      "Late winter and early spring. Owners want outdoor areas ready for summer and start getting quotes in August and September. A drop then lands before the rush, while your diary still has room.",
+      "Late winter and early spring. Owners want outdoor areas ready for summer, so a drop in August or September lands before the rush.",
   },
   {
     question: "Which homes suit carpentry flyers?",
@@ -80,14 +80,14 @@ export default function Carpenters() {
           { name: "Carpenters" },
         ]}
         h1="Letterbox Marketing for Carpenters"
-        lead="Carpentry flyers delivered on their own to the homes that need decks, pergolas, built-ins and repairs. Every route is GPS-tracked."
+        lead="Get your carpentry flyers into letterboxes around the homes that need them with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/ind-trades.jpg", alt: "A tradesperson in hi-vis working on a tiled Melbourne roof" }}
       />
 
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "40+", label: "suburbs covered" },
+          { value: "56", label: "suburbs covered" },
           { value: "1,000", label: "flyers, your first test run" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
@@ -163,13 +163,15 @@ export default function Carpenters() {
       </Section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
-        <Callout title="Quantities">
+        <Callout title="Carpenters across Melbourne">
           <p className="m-0">
-          Every drop is exclusive, from 1,000 flyers. See the{" "}
-          <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page. Carpentry sits on our{" "}
-          <TextLink href="/industries/home-services">home services</TextLink> page with{" "}
-          <TextLink href="/industries/builders">builders</TextLink> and{" "}
-          <TextLink href="/industries/renovation">renovators</TextLink>.
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. Backyard homes for decks and
+            pergolas fill <TextLink href="/melbourne/flyer-distribution-bentleigh">Bentleigh</TextLink>,{" "}
+            <TextLink href="/melbourne/flyer-distribution-mount-waverley">Mount Waverley</TextLink> and{" "}
+            <TextLink href="/melbourne/flyer-distribution-sandringham">Sandringham</TextLink>. Get a price on the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or see{" "}
+            <TextLink href="/industries/home-services">home services</TextLink> for other trades like{" "}
+            <TextLink href="/industries/builders">builders</TextLink>.
           </p>
         </Callout>
       </div>

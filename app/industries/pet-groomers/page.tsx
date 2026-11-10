@@ -32,7 +32,7 @@ const faqs = [
   {
     question: "Do letterbox drops work for dog groomers?",
     answer:
-      "They suit grooming because most clients live within a short drive and come back every six to eight weeks. A flyer reaches dog owners in those streets who haven't found a groomer they like yet, and each one who books can return for years.",
+      "They suit grooming because clients live close and return every six to eight weeks. A flyer reaches dog owners who haven't found a groomer they like yet.",
   },
   {
     question: "Can a mobile dog groomer target specific streets?",
@@ -80,14 +80,14 @@ export default function PetGroomers() {
           { name: "Dog Groomers" },
         ]}
         h1="Letterbox marketing for dog groomers and dog washes"
-        lead="Dog grooming marketing that reaches the households with dogs on your doorstep or along your mobile route. Your flyer goes in on its own, and every run is GPS-tracked."
+        lead="Get your dog grooming flyers into letterboxes around your salon or mobile route with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/walker-foot.jpg", alt: "A South East Flyers walker posting a flyer into a letterbox on a sunny Melbourne street" }}
       />
 
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "40+", label: "suburbs covered" },
+          { value: "56", label: "suburbs covered" },
           { value: "1,000", label: "flyers, your first test run" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
@@ -157,14 +157,14 @@ export default function PetGroomers() {
       </Section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
-        <Callout
-          title="Quantities"
-        >
+        <Callout title="Dog groomers across Melbourne">
           <p className="m-0">
-            Every drop is exclusive, from 1,000 flyers. See the{" "}
-            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for a quote, or our{" "}
-            <TextLink href="/industries/local-businesses">local business</TextLink> page for other businesses that work
-            the same way.
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. Dog owners fill the backyard
+            suburbs of <TextLink href="/melbourne/flyer-distribution-mount-waverley">Mount Waverley</TextLink>,{" "}
+            <TextLink href="/melbourne/flyer-distribution-bentleigh">Bentleigh</TextLink> and{" "}
+            <TextLink href="/melbourne/flyer-distribution-sandringham">Sandringham</TextLink>. Get a price on the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or see{" "}
+            <TextLink href="/industries/local-businesses">local business flyer distribution</TextLink>.
           </p>
         </Callout>
       </div>
