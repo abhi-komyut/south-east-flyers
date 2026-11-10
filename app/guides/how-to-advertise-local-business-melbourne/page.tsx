@@ -189,13 +189,12 @@ export default function LocalAdvertisingGuide() {
       </Section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
-        <Callout
-          title="Local advertising in Melbourne's south-east"
-        >
+        <Callout title="Local advertising in Melbourne's south-east">
           <p className="m-0">
-            If a letterbox drop fits your business, we cover 56 key suburbs across{" "}
+            If a letterbox drop fits your business, we cover 56 suburbs across{" "}
             <TextLink href="/melbourne/flyer-distribution-south-east-melbourne">south-east and eastern Melbourne</TextLink>.
-            Every flyer goes in on its own, and you get a GPS map of every street covered.
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run, and you get a GPS map of every
+            street covered.
           </p>
         </Callout>
       </div>

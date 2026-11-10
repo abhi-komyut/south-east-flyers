@@ -52,7 +52,7 @@ export default function Contact() {
             Contact us
           </h1>
           <p className="m-0 text-[clamp(17px,1.4vw,19px)] leading-relaxed text-white/85 max-w-[560px]">
-            Get in touch for a free, no-obligation quote on your next letterbox campaign.
+            Get a free, no-obligation quote for your letterbox campaign across Melbourne&rsquo;s south-east. Call 0402 824 070 or use the form.
           </p>
         </div>
       </section>

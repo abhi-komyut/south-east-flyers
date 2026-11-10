@@ -129,7 +129,7 @@ export default function PortfolioContent() {
               Join our growing client list
             </h2>
             <p className="m-0 text-[17px] leading-[1.7] text-white/85 max-w-[520px]">
-              Get in touch to find out how we can deliver your next campaign with precision and professionalism.
+              Get in touch to find out how we can deliver your next campaign.
             </p>
           </div>
           <div className="flex flex-wrap gap-3.5">
