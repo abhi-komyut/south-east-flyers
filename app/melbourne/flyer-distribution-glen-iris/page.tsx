@@ -21,11 +21,11 @@ const PAGE_PATH = "/melbourne/flyer-distribution-glen-iris";
 export const metadata: Metadata = {
   title: { absolute: "Flyer Distribution Glen Iris VIC 3146 | South East Flyers" },
   description:
-    "Flyer distribution in Glen Iris 3146, across Stonnington and Boroondara. Exclusive, GPS-tracked letterbox drops, never bundled, from 1,000 flyers.",
+    "Flyer distribution in Glen Iris 3146, from High Street to Burke Road. GPS-tracked letterbox drops checked block by block. Get a fast free quote.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Flyer Distribution Glen Iris VIC 3146 | South East Flyers",
-    description: "Exclusive, GPS-tracked letterbox drops across Glen Iris 3146. From 1,000 flyers.",
+    description: "GPS-tracked letterbox drops across Glen Iris 3146, along Gardiners Creek. Get a free quote.",
     url: `${SITE_URL}${PAGE_PATH}`,
     type: "website",
   },
@@ -35,27 +35,27 @@ const faqs = [
   {
     question: "How many letterboxes are there in Glen Iris?",
     answer:
-      "About 11,300. Just over half are separate houses, with the rest split between townhouses and apartments, so coverage varies by street. Your quote gives the exact count for your area.",
+      "About 11,300. Just over half are houses, the rest townhouses and apartments. Your quote gives the reachable count for your streets.",
   },
   {
     question: "Glen Iris is in two councils. Does that matter for a drop?",
     answer:
-      "Not for delivery. The western part sits in Stonnington and the eastern part in Boroondara, but we plan routes by streets, not council lines. It can matter for your message, since each side identifies with a different shopping centre.",
+      "Not for delivery; we plan by streets, not council lines. It can matter for your message, since each side shops at a different centre.",
   },
   {
     question: "How much of Glen Iris can one drop cover?",
     answer:
-      "Most businesses start with 1,000 to 2,500 homes near their shop or base. Glen Iris is long and narrow, so covering it all usually takes two or three runs, each with its own GPS report.",
+      "The suburb is long and narrow, so covering it all usually takes two or three runs. Most businesses start near their shop.",
   },
   {
     question: "Do you deliver to apartment blocks in Glen Iris?",
     answer:
-      "Yes, where the letterboxes can be reached from the street or a common entry. Locked mailrooms can't be reached, so your quote counts only the letterboxes our walkers can get to.",
+      "Yes, where the letterboxes can be reached from the street. Locked mailrooms are skipped and your quote counts only what we can reach.",
   },
   {
     question: "Do you also deliver in Malvern and Camberwell?",
     answer:
-      "Yes. Glen Iris sits between them, with Armadale and Hawthorn East close by, so one campaign can take in several suburbs under a single GPS report.",
+      "Yes. Glen Iris sits between them, so one run can cover a few suburbs.",
   },
 ];
 
@@ -100,44 +100,25 @@ export default function GlenIris() {
 
       <Section title="Flyer distribution along Gardiners Creek" first>
         <p>
-          Glen Iris follows Gardiners Creek between Malvern and Camberwell. Its western streets fall in the City of
-          Stonnington and its eastern streets in Boroondara, while Gardiner and Glen Iris stations on the Glen Waverley
-          line serve the middle. A campaign across the whole suburb reaches up to 11,300 homes.
+          Glen Iris follows Gardiners Creek between Malvern and Camberwell, split between Stonnington in the west and
+          Boroondara in the east, with Gardiner and Glen Iris stations in the middle. A targeted letterbox campaign
+          across Glen Iris can reach up to 11,300 homes. Our walkers skip locked mailrooms, and your GPS report shows
+          every block covered.
         </p>
       </Section>
 
-      <Section title="Two councils, several shopping centres">
+      <Section title="Letterbox drops for Glen Iris trades and shops">
         <p>
-          Glen Iris has no single centre. Residents in the west shop on High Street and towards Malvern; those in the
-          east head to Burke Road and Camberwell Junction. Each strip pulls from its own pocket of streets.
-        </p>
-        <p>
-          Plan the drop around the shops your customers actually use. A cafe on High Street and a physio near Burke
-          Road reach different households, though both are in Glen Iris. Tell us where you are and our walkers cover the
-          streets most likely to come to you.
+          Glen Iris is a strong area for <TextLink href="/industries/renovation">renovators</TextLink>,{" "}
+          <TextLink href="/industries/electricians">electricians</TextLink>, painters and gardeners on its established
+          homes, and for the shops on High Street and near Burke Road. Start near your shop, then widen the run.
         </p>
       </Section>
 
-      <Section title="Established homes, constant upkeep">
+      <Section title="Two sides, two shopping centres">
         <p>
-          Much of Glen Iris is interwar and post-war housing on settled gardens. Owners renovate, extend and maintain
-          rather than move, which keeps <TextLink href="/industries/renovation">renovators</TextLink>,{" "}
-          <TextLink href="/industries/electricians">electricians</TextLink>, painters and gardeners in work.
-        </p>
-        <p>
-          A before-and-after shot from a nearby street does more on the flyer than a price. Owners here tend to compare
-          two or three trades before choosing, so a second drop a month later helps.
-        </p>
-      </Section>
-
-      <Section title="Families along the creek">
-        <p>
-          The Gardiners Creek Trail, local parks and a spread of primary and secondary schools make Glen Iris popular
-          with families. That suits tutoring, music and swim schools, childcare and family health practices.
-        </p>
-        <p>
-          Those drops land best as summer ends and again a couple of weeks out from each new term, when parents are
-          mapping the next few months.
+          Residents in the west shop on High Street; those in the east head to Burke Road and Camberwell Junction. Drop
+          around the strip your customers actually use.
         </p>
       </Section>
 
@@ -159,12 +140,12 @@ export default function GlenIris() {
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout title="Glen Iris and nearby suburbs">
           <p className="m-0">
-            Your Glen Iris flyer is the only one in the run, with <strong className="text-ink">no competing offer bundled beside it</strong>. We
-            also deliver in <TextLink href="/melbourne/flyer-distribution-malvern">Malvern</TextLink> and{" "}
-            <TextLink href="/melbourne/flyer-distribution-camberwell">Camberwell</TextLink> on either side, so a campaign
-            can cross between Stonnington and Boroondara. You&rsquo;ll find quantity pricing on the{" "}
-            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, and every suburb we run on the{" "}
-            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. We also cover{" "}
+            <TextLink href="/melbourne/flyer-distribution-malvern">Malvern</TextLink> and{" "}
+            <TextLink href="/melbourne/flyer-distribution-camberwell">Camberwell</TextLink>, so campaigns can be spread
+            across different suburbs. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page
+            or the rest of our <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>{" "}
+            to see how we can help you.
           </p>
         </Callout>
       </div>
@@ -173,7 +154,7 @@ export default function GlenIris() {
 
       <QuickQuoteForm
         heading="Get a quote for your Glen Iris drop"
-        lead="Tell us the shops you're near or the streets you want, and we'll send back the letterbox count and a price."
+        lead="Send us your streets and flyer count, and we'll come back with the reachable letterbox number and a quote, quickly."
         suburbHint="e.g. Glen Iris, Malvern, Camberwell"
       />
 

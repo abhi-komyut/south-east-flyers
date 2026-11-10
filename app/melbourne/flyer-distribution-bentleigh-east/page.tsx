@@ -21,11 +21,11 @@ const PAGE_PATH = "/melbourne/flyer-distribution-bentleigh-east";
 export const metadata: Metadata = {
   title: { absolute: "Flyer Distribution Bentleigh East 3165 | South East Flyers" },
   description:
-    "Flyer distribution in Bentleigh East 3165: about 12,000 homes, mostly houses on wide streets. Exclusive, GPS-tracked letterbox drops from 1,000 flyers.",
+    "Flyer distribution in Bentleigh East 3165, around Centre Road and East Boundary Road. GPS-tracked letterbox drops to the door. Get a free quote.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Flyer Distribution Bentleigh East 3165 | South East Flyers",
-    description: "Exclusive, GPS-tracked letterbox drops across Bentleigh East 3165. From 1,000 flyers.",
+    description: "GPS-tracked letterbox drops across Bentleigh East 3165, around Centre Road. Get a free quote.",
     url: `${SITE_URL}${PAGE_PATH}`,
     type: "website",
   },
@@ -35,27 +35,27 @@ const faqs = [
   {
     question: "How many letterboxes are there in Bentleigh East?",
     answer:
-      "About 12,000, and roughly two in three are separate houses with a letterbox at the gate. That makes it one of the larger suburbs we cover, with high coverage on almost every street.",
+      "About 12,000, roughly two in three separate houses with a letterbox at the gate. It is one of the larger suburbs we cover.",
   },
   {
     question: "How long does a full Bentleigh East drop take?",
     answer:
-      "Covering all of it works best over three or four GPS-tracked runs, so a map comes back after each. Most businesses start with 1,000 to 2,500 homes near their base, then extend.",
+      "It works best over three or four GPS-tracked runs. Most businesses start nearest their base, then extend.",
   },
   {
     question: "Is Bentleigh East good for builders and renovators?",
     answer:
-      "Very. Original houses on large blocks are being knocked down for new homes or split into townhouses, so a drop around a current build reaches owners weighing the same move.",
+      "Yes. Old houses on large blocks are being rebuilt or split into townhouses, so a drop around a build reaches owners weighing the same move.",
   },
   {
     question: "Bentleigh East has no train station. Does that change the drop?",
     answer:
-      "It does. People shop at the strip nearest home, so Centre Road and East Boundary Road each draw from their own few streets. Drop around the strip closest to your business rather than across the whole suburb.",
+      "Yes. People shop at the nearest strip, so drop around Centre Road or East Boundary Road closest to your business.",
   },
   {
     question: "Do you also deliver in Bentleigh and Carnegie?",
     answer:
-      "Yes. Both sit near Bentleigh East in the City of Glen Eira, with Ormond and McKinnon close by, so one campaign can take in a few suburbs under a single GPS report.",
+      "Yes. Both sit near Bentleigh East in the City of Glen Eira, so one run can cover a few suburbs.",
   },
 ];
 
@@ -100,46 +100,26 @@ export default function BentleighEast() {
 
       <Section title="Flyer distribution across Bentleigh East's strips" first>
         <p>
-          Bentleigh East is one of the largest suburbs in the City of Glen Eira, running east from Bentleigh towards
-          Moorabbin and Clarinda. It has no train station of its own, so daily life turns on local shopping strips, bus
-          routes and the car. A campaign across the whole suburb reaches up to 12,000 homes, usually planned in stages.
+          Bentleigh East is one of the largest suburbs in the City of Glen Eira. It has no train station, so daily life
+          runs on the Centre Road and East Boundary Road strips. A targeted letterbox campaign across Bentleigh East can
+          reach up to 12,000 homes, usually planned in stages.
         </p>
       </Section>
 
-      <Section title="Knockdowns, townhouses and new owners">
+      <Section title="Letterbox drops for builders, agents and local strips">
         <p>
-          Bentleigh East is changing fast. Post-war houses on large blocks are being replaced by new family homes or
-          pairs of townhouses, and each sale brings an owner who needs trades, furniture and local services.
-        </p>
-        <p>
-          That suits <TextLink href="/industries/builders">builders</TextLink>,{" "}
-          <TextLink href="/industries/renovation">renovators</TextLink> and landscapers, who can drop around a job in
-          progress, and agents, who can reach owners weighing up a sale to a developer.
+          Bentleigh East is a strong area for{" "}
+          <TextLink href="/industries/builders">builders</TextLink> and{" "}
+          <TextLink href="/industries/renovation">renovators</TextLink>, with old houses being replaced by new homes and
+          townhouses, and for agents reaching owners thinking of selling. Cafes and pharmacies work their own strip.
+          Start nearest your base, then widen the run.
         </p>
       </Section>
 
-      <Section title="Local strips instead of a station">
+      <Section title="A family suburb with schools across it">
         <p>
-          With no station, Bentleigh East shoppers use the strip closest to home: Centre Road, East Boundary Road and
-          the smaller parades dotted through the suburb. Each one pulls from a tight ring of streets.
-        </p>
-        <p>
-          A cafe, pharmacy or takeaway does best with 1,000 to 2,500 flyers around its own strip. A trade or mobile
-          service can start near its base and work outwards, weighing the calls from each section against the GPS map
-          from every run.
-        </p>
-      </Section>
-
-      <Section title="A family suburb with schools spread across it">
-        <p>
-          Bentleigh East is a family suburb, with primary schools scattered through it and Bentleigh Secondary College
-          close by. Families tend to stay through the school years, which keeps demand steady for tutoring, swimming
-          and music schools, childcare and family health practices.
-        </p>
-        <p>
-          Those drops work best as each term approaches, when parents are choosing activities. Our{" "}
-          <TextLink href="/industries/schools-childcare">school and childcare</TextLink> page sets out the enrolment
-          windows.
+          Primary schools are spread through the suburb, with Bentleigh Secondary College close by, so tutoring,
+          swimming and music schools do well. Time those drops to the start of each term.
         </p>
       </Section>
 
@@ -161,13 +141,12 @@ export default function BentleighEast() {
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout title="Bentleigh East and nearby suburbs">
           <p className="m-0">
-            Every Bentleigh East run is exclusive to you, with <strong className="text-ink">no second advertiser in the drop</strong>. We also
-            cover <TextLink href="/melbourne/flyer-distribution-bentleigh">Bentleigh</TextLink> next door and{" "}
-            <TextLink href="/melbourne/flyer-distribution-caulfield">Caulfield</TextLink>, so a Glen Eira campaign can
-            take in a few suburbs together. See the{" "}
-            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for quantities, or the{" "}
-            <TextLink href="/melbourne/flyer-distribution-south-east-melbourne">south-east Melbourne</TextLink> list for
-            everywhere we run.
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. We also cover{" "}
+            <TextLink href="/melbourne/flyer-distribution-bentleigh">Bentleigh</TextLink> and{" "}
+            <TextLink href="/melbourne/flyer-distribution-caulfield">Caulfield</TextLink>, so campaigns can be spread
+            across different suburbs. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page
+            or the rest of our <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>{" "}
+            to see how we can help you.
           </p>
         </Callout>
       </div>
@@ -176,7 +155,7 @@ export default function BentleighEast() {
 
       <QuickQuoteForm
         heading="Get a quote for your Bentleigh East drop"
-        lead="Tell us the strip you're on or the streets you want, and we'll send back the letterbox count and a price."
+        lead="Send us the strip you're on or your streets, and we'll come back with the letterbox number and a quote, quickly."
         suburbHint="e.g. Bentleigh East, Bentleigh, Carnegie"
       />
 

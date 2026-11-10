@@ -21,11 +21,11 @@ const PAGE_PATH = "/melbourne/flyer-distribution-malvern";
 export const metadata: Metadata = {
   title: { absolute: "Flyer Distribution Malvern VIC 3144 | South East Flyers" },
   description:
-    "Flyer distribution in Malvern 3144, from Glenferrie Road to High Street. Exclusive, GPS-tracked letterbox drops, never bundled, from 1,000 flyers.",
+    "Flyer distribution in Malvern 3144, around Glenferrie Road and High Street. GPS-tracked letterbox drops for trades and shops. Get a free quote.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Flyer Distribution Malvern VIC 3144 | South East Flyers",
-    description: "Exclusive, GPS-tracked letterbox drops across Malvern 3144. From 1,000 flyers.",
+    description: "GPS-tracked letterbox drops across Malvern 3144, around Glenferrie Road. Get a free quote.",
     url: `${SITE_URL}${PAGE_PATH}`,
     type: "website",
   },
@@ -35,27 +35,27 @@ const faqs = [
   {
     question: "How many letterboxes are there in Malvern?",
     answer:
-      "About 4,800. Most are houses and townhouses with a street letterbox, so a walker reaches almost every one on the route. Your quote gives the exact count for your streets.",
+      "About 4,800, mostly houses and townhouses with a street letterbox. It is small enough to cover in one run.",
   },
   {
     question: "Can a letterbox drop cover all of Malvern at once?",
     answer:
-      "Yes. At about 4,800 homes it is small enough that most businesses cover the whole suburb in one run rather than testing a single pocket first.",
+      "Yes. At about 4,800 homes most businesses cover the whole suburb in a single run.",
   },
   {
-    question: "Do you deliver to Malvern's period homes with front gates?",
+    question: "Is Malvern a good fit for trades on period homes?",
     answer:
-      "Yes. Letterboxes on front fences and gates are reached on every run. Where a home has no letterbox reachable from the street, the walker skips it and the GPS report shows the route covered.",
+      "Yes. Roofs, wiring, plumbing and gardens on the older homes need regular work, and owners keep a trade's flyer.",
   },
   {
     question: "Do you deliver flyers for health practices near Cabrini?",
     answer:
-      "Yes. Clinics and allied health practices near Cabrini Malvern often cover the surrounding streets to reach local patients. Send your address and we'll quote that radius.",
+      "Yes. Clinics near Cabrini Malvern often cover the surrounding streets. Send your address and we'll quote that radius.",
   },
   {
     question: "Do you also deliver in Armadale and Glen Iris?",
     answer:
-      "Yes. Both sit beside Malvern, with Caulfield North close by, so one campaign can take in a few suburbs under a single GPS report.",
+      "Yes. Both sit beside Malvern, so one run can cover a few suburbs.",
   },
 ];
 
@@ -100,49 +100,26 @@ export default function Malvern() {
 
       <Section title="Flyer distribution around Glenferrie Road" first>
         <p>
-          Malvern sits in the City of Stonnington, its shops strung along Glenferrie Road and its southern edge on the
-          High Street boutiques it shares with Armadale. Malvern station, the Town Hall and Cabrini Malvern anchor the
-          suburb, and trams run along Glenferrie, Wattletree and High Street. A full Malvern campaign reaches up to
-          4,800 homes, small enough to cover in a single run.
+          Malvern sits in the City of Stonnington, its shops along Glenferrie Road and the High Street boutiques it
+          shares with Armadale, with trams on Glenferrie, Wattletree and High Street. A targeted letterbox campaign
+          across Malvern can reach up to 4,800 homes.
+        </p>
+      </Section>
+
+      <Section title="Letterbox drops for Malvern's trades and shops">
+        <p>
+          Malvern is a strong area for <TextLink href="/industries/roofing">roofers</TextLink>,{" "}
+          <TextLink href="/industries/electricians">electricians</TextLink>,{" "}
+          <TextLink href="/industries/plumbers">plumbers</TextLink> and painters on its period homes, and for the
+          Glenferrie Road and High Street shops. Start with the streets around your shop or clinic, or cover the whole
+          suburb in one run.
         </p>
       </Section>
 
       <Section title="Period homes keep the trades busy">
         <p>
-          Malvern&rsquo;s older housing needs constant work: slate and terracotta roofs, original wiring and plumbing,
-          leadlight, timber floors and gardens kept in shape. Owners here hire specialists they trust, and they hold on
-          to the flyer of a business that clearly knows period homes.
-        </p>
-        <p>
-          That suits <TextLink href="/industries/roofing">roofers</TextLink>,{" "}
-          <TextLink href="/industries/electricians">electricians</TextLink>,{" "}
-          <TextLink href="/industries/plumbers">plumbers</TextLink>, painters and restoration builders. A photo of a
-          restored roof or repainted facade on a similar house does more than any discount.
-        </p>
-      </Section>
-
-      <Section title="Glenferrie Road and High Street shoppers">
-        <p>
-          Shops, cafes and clinics on Glenferrie Road draw from the streets within walking distance, so a drop of
-          1,000 to 2,500 flyers around the strip reaches the households most likely to call in this week. High Street
-          retailers can do the same for the blocks either side of the boutiques.
-        </p>
-        <p>
-          Practices near Cabrini Malvern can cover the surrounding streets to reach local patients, rather than leaning
-          on hospital referrals alone.
-        </p>
-      </Section>
-
-      <Section title="Tram stops make tight catchments">
-        <p>
-          Trams along Glenferrie Road, Wattletree Road and High Street shape where Malvern residents shop. Most walk to
-          the nearest stop and the shops around it, so each strip has its own small catchment rather than drawing from
-          the whole suburb.
-        </p>
-        <p>
-          Plan the drop around those catchments. A cafe at the Glenferrie and High Street corner and a clinic on
-          Wattletree Road reach different households, though both are in Malvern. Tell us where you are and our walkers
-          cover the streets most likely to walk to you, with the GPS report showing exactly which ones.
+          Malvern&rsquo;s Victorian and Edwardian houses need constant work on roofs, wiring and gardens. A photo of a
+          restored roof on a similar house does more than any discount.
         </p>
       </Section>
 
@@ -164,13 +141,12 @@ export default function Malvern() {
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout title="Malvern and nearby suburbs">
           <p className="m-0">
-            A Malvern drop runs on its own; we <strong className="text-ink">never fold your flyer into a pack of others</strong>. We also
-            cover Armadale and <TextLink href="/melbourne/flyer-distribution-glen-iris">Glen Iris</TextLink> across
-            Stonnington, with <TextLink href="/melbourne/flyer-distribution-caulfield">Caulfield</TextLink> and{" "}
-            <TextLink href="/melbourne/flyer-distribution-camberwell">Camberwell</TextLink> close by. The{" "}
-            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page breaks pricing down by quantity,
-            and the <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> maps the
-            rest.
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. We also cover Armadale,{" "}
+            <TextLink href="/melbourne/flyer-distribution-glen-iris">Glen Iris</TextLink> and Caulfield North, so
+            campaigns can be spread across different suburbs. See the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page or the rest of our{" "}
+            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> to see how we can
+            help you.
           </p>
         </Callout>
       </div>
@@ -179,7 +155,7 @@ export default function Malvern() {
 
       <QuickQuoteForm
         heading="Get a quote for your Malvern drop"
-        lead="Name the streets around Glenferrie Road or High Street, and we'll send back the letterbox count and a price."
+        lead="Send us your streets and flyer count, and we'll come back with the letterbox number and a quote, quickly."
         suburbHint="e.g. Malvern, Armadale, Glen Iris"
       />
 

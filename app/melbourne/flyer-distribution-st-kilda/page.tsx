@@ -20,11 +20,11 @@ const PAGE_PATH = "/melbourne/flyer-distribution-st-kilda";
 export const metadata: Metadata = {
   title: { absolute: "Flyer Distribution St Kilda VIC 3182 | South East Flyers" },
   description:
-    "Flyer distribution St Kilda 3182: Fitzroy Street, Acland Street. Exclusive, GPS-tracked, never bundled, from 1,000 flyers. Free quote.",
+    "Flyer distribution in St Kilda 3182, around Fitzroy and Acland Streets. GPS-tracked letterbox drops you can check block by block. Get a free quote.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Flyer Distribution St Kilda VIC 3182 | South East Flyers",
-    description: "Exclusive, GPS-tracked letterbox drops across St Kilda 3182. From 1,000 flyers.",
+    description: "GPS-tracked letterbox drops across St Kilda 3182, around Fitzroy and Acland Streets. Get a free quote.",
     url: `${SITE_URL}${PAGE_PATH}`,
     type: "website",
   },
@@ -34,27 +34,27 @@ const faqs = [
   {
     question: "How many letterboxes are there in St Kilda?",
     answer:
-      "About 14,100 homes, almost all apartments. Many blocks have shared mailrooms rather than street letterboxes, so your quote gives the reachable count for your streets.",
+      "About 14,100, almost all apartments. Your quote gives the reachable count for your streets.",
   },
   {
-    question: "Does a letterbox drop still work in an apartment suburb?",
+    question: "Does a letterbox drop work in an apartment suburb?",
     answer:
-      "Yes, where mailrooms allow access. We deliver what we can from the street and report which blocks were covered, so you know your real reach before booking a bigger run.",
+      "Yes. We deliver to every mailroom we can reach from the street, and the GPS report shows which blocks were covered.",
   },
   {
-    question: "How much of St Kilda can a drop reach?",
+    question: "Can you target just Fitzroy Street or Acland Street?",
     answer:
-      "Most of the 14,100 homes, though lower than a simple full-suburb count since not every block is reachable. Most businesses start with 1,000 flyers around Fitzroy or Acland Street and widen from there.",
+      "Yes. Name your strip and we'll quote the surrounding streets only.",
   },
   {
-    question: "Is St Kilda worth repeat drops given how many renters move through?",
+    question: "Should I repeat a St Kilda drop?",
     answer:
-      "Often, yes. With tenants turning over, a quarterly drop reaches a fresh audience each time rather than the same households, which suits hospitality and rental-focused agents.",
+      "Repeat it to reach new renters. A seasonal drop lands with households that moved in since the last one.",
   },
   {
-    question: "Can you target just Fitzroy Street or just Acland Street?",
+    question: "Do you also deliver in Elwood and Balaclava?",
     answer:
-      "Yes. Tell us which strip your customers come from and we'll quote the surrounding streets only. Most new venues start this way, then widen once they see which blocks generate calls.",
+      "Yes. Both border St Kilda in the City of Port Phillip, so one run can cover a few suburbs.",
   },
 ];
 
@@ -99,46 +99,24 @@ export default function StKilda() {
 
       <Section title="Flyer distribution around Fitzroy and Acland Streets" first>
         <p>
-          St Kilda is Melbourne&rsquo;s beachside entertainment suburb: Luna Park, the Palais Theatre and St Kilda Pier
-          sit close to Fitzroy Street&rsquo;s bars and restaurants, with Acland Street&rsquo;s cafes and cake shops a
-          short walk away. The Route 96 tram runs the length of both strips. A St Kilda campaign can take in up to
-          14,100 homes, though as an apartment suburb the reachable count is lower and set street by street.
+          St Kilda is Melbourne&rsquo;s beachside entertainment suburb. Luna Park, the Palais Theatre and St Kilda Pier
+          sit near Fitzroy Street&rsquo;s bars and Acland Street&rsquo;s cafes, with the Route 96 tram running both
+          strips. A targeted letterbox campaign across St Kilda can reach up to 14,100 homes. Our walkers skip locked
+          mailrooms, and your GPS report shows every block covered.
         </p>
       </Section>
 
-      <Section title="An apartment suburb needs a different route">
+      <Section title="Letterbox drops for St Kilda venues and agents">
         <p>
-          Most St Kilda buildings are flats, many of them older art deco blocks with a shared mailroom rather than
-          letterboxes on the street. Where a mailroom is open, our walkers deliver into it; where it is locked, that
-          block is skipped and marked as such on your GPS report.
-        </p>
-        <p>
-          So a St Kilda quote counts the reachable letterboxes on your chosen streets, not a flat multiple of homes. We
-          tell you the real number before you commit to a run.
+          St Kilda is a strong area for bars, restaurants and cafes on the two strips. It suits rental agents too, with
+          tenants turning over in the apartment blocks. Start with the streets behind your strip, then widen the run.
         </p>
       </Section>
 
-      <Section title="A renter suburb with regular turnover">
+      <Section title="Repeat drops for a changing street">
         <p>
-          St Kilda has one of the highest renter populations we cover, with young professionals and creatives moving
-          through often. That turnover is a reason to drop more than once: a flyer that reached last quarter&rsquo;s
-          tenants reaches a different set of households this quarter.
-        </p>
-        <p>
-          It suits rental-focused real estate agents directly, since a steady stream of new arrivals is always looking
-          for their next place nearby.
-        </p>
-      </Section>
-
-      <Section title="Fitzroy Street and Acland Street trade">
-        <p>
-          Hospitality drives St Kilda&rsquo;s economy. Bars, restaurants and cafes on both strips compete for the same
-          passing foot traffic and the same nearby apartments, so a flyer that lands on its own, clear of a pile of
-          other offers, is the one a resident actually reads.
-        </p>
-        <p>
-          A new venue usually starts with a run around the blocks right behind its strip, then repeats each season with
-          a different offer.
+          Renters move through St Kilda, so the same streets hold new households each season. A drop every few months
+          reaches people who have just arrived, which works for venues and rental agents alike.
         </p>
       </Section>
 
@@ -147,8 +125,8 @@ export default function StKilda() {
           items={[
             <>Bars, restaurants and cafes on Fitzroy Street and Acland Street</>,
             <><TextLink href="/industries/real-estate">Real estate agents</TextLink> working rentals and apartment sales</>,
-            <>Local businesses: boutiques, galleries and beauty studios</>,
-            <><TextLink href="/industries/healthcare">Health and wellness practices</TextLink> near the beach and the strips</>,
+            <>Boutiques, galleries and beauty studios</>,
+            <><TextLink href="/industries/healthcare">Health and wellness practices</TextLink> near the beach</>,
             <>Events and venues promoting gigs, markets or festival dates</>,
           ]}
         />
@@ -160,12 +138,11 @@ export default function StKilda() {
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout title="St Kilda and nearby suburbs">
           <p className="m-0">
-            A St Kilda run is yours and no one else&rsquo;s, with <strong className="text-ink">no second advertiser folded into the drop</strong>. St
-            Kilda sits in the City of Port Phillip, so we also deliver in St Kilda East, Elwood, Balaclava and Albert
-            Park, and in <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink> down the bay. The{" "}
-            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page shows the price at each quantity,
-            and the <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> lists
-            every suburb we run.
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. We also cover St Kilda East,
+            Elwood and Balaclava, so campaigns can be spread across different suburbs. See the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page or the rest of our{" "}
+            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> to see how we can
+            help you.
           </p>
         </Callout>
       </div>
@@ -174,7 +151,7 @@ export default function StKilda() {
 
       <QuickQuoteForm
         heading="Get a quote for your St Kilda drop"
-        lead="Tell us your strip and quantity, and we'll send back the reachable letterbox count and a price."
+        lead="Send us your strip and flyer count, and we'll come back with the reachable letterbox number and a quote, quickly."
         suburbHint="e.g. St Kilda, St Kilda East, Elwood"
       />
 
