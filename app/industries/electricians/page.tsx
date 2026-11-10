@@ -37,7 +37,7 @@ const faqs = [
   {
     question: "Should I advertise emergency work or upgrades?",
     answer:
-      "Lead with one. An upgrade flyer with a clear offer suits a general drop; an emergency number suits a magnet-style flyer kept for later. Trying to say both on one side usually says neither.",
+      "Lead with one. An upgrade flyer with a clear offer suits a general drop; an emergency number suits a magnet kept for later.",
   },
   {
     question: "When is the best time for an electrician letterbox drop?",
@@ -80,14 +80,14 @@ export default function Electricians() {
           { name: "Electricians" },
         ]}
         h1="Electrician flyers that win upgrade work"
-        lead="Electrician flyers delivered on their own to the homes most likely to need a switchboard, safety switch, solar or EV charger job. Every route is GPS-tracked, from 1,000 flyers."
+        lead="Get your electrician flyers into letterboxes around your base with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/ind-trades.jpg", alt: "A tradesperson in hi-vis working on a Melbourne home" }}
       />
 
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "40+", label: "suburbs covered" },
+          { value: "56", label: "suburbs covered" },
           { value: "1,000", label: "flyers, your first test run" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
@@ -104,9 +104,8 @@ export default function Electricians() {
           and a clear offer, sits on the bench while the owner decides, and gets picked up when they are ready.
         </p>
         <p>
-          It is a small, inexpensive part of electrician marketing overall, but it is the part that puts your
-          name in the house before the decision gets made. For marketing for electricians beyond letterbox
-          drops, talk to us about which suburbs and seasons are worth the spend.
+          It is a small part of electrician marketing, the part that puts your name in the house before the decision.
+          For marketing for electricians beyond drops, ask us which suburbs and seasons pay off.
         </p>
       </Section>
 
@@ -149,16 +148,14 @@ export default function Electricians() {
       </Section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
-        <Callout
-          title="Quantities for an electrician letterbox drop"
-        >
+        <Callout title="Electricians across Melbourne">
           <p className="m-0">
-            Every drop is delivered exclusively. See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink>{" "}
-            page for other quantities, or <TextLink href="/industries/home-services">home services</TextLink> for how{" "}
-            <TextLink href="/industries/plumbers">plumbers</TextLink> and{" "}
-            <TextLink href="/industries/roofing">roofers</TextLink> use letterbox drops. Our{" "}
-            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> lists every suburb
-            we cover.
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. Upgrade work comes from the
+            detached homes of <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink>,{" "}
+            <TextLink href="/melbourne/flyer-distribution-mount-waverley">Mount Waverley</TextLink> and{" "}
+            <TextLink href="/melbourne/flyer-distribution-camberwell">Camberwell</TextLink>. Get a price on the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or see{" "}
+            <TextLink href="/industries/home-services">home services</TextLink> for other trades.
           </p>
         </Callout>
       </div>

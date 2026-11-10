@@ -39,12 +39,12 @@ const faqs = [
   {
     question: "How many flyers should a tradie drop?",
     answer:
-      "Start with the streets closest to your base or your current jobs. 1,000 flyers covers a pocket of local streets. Track the calls, then expand into the suburbs that respond.",
+      "Start with the streets closest to your base. 1,000 flyers covers a pocket, then expand into the suburbs that respond.",
   },
   {
     question: "When is the best time to drop home services flyers?",
     answer:
-      "Two to four weeks before demand peaks. Heating, roofing and gutter flyers suit autumn; air conditioning, decking and landscaping flyers suit spring. Emergency trades like plumbing benefit from regular drops so the magnet or flyer is already on the fridge.",
+      "Two to four weeks before demand peaks. Heating and roofing flyers suit autumn; air conditioning and landscaping suit spring.",
   },
   {
     question: "Can you deliver around a job I'm working on?",
@@ -86,14 +86,14 @@ export default function HomeServices() {
           { name: "Home Services" },
         ]}
         h1="Letterbox marketing for home service businesses"
-        lead="Home services marketing that reaches the households in your service area. We deliver your flyer on its own to the streets you work in, track every run by GPS, and start from 1,000 flyers."
+        lead="Get your trade flyers into letterboxes across your service area with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/ind-trades.jpg", alt: "A roofer in hi-vis working on a tiled Melbourne roof" }}
       />
 
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "40+", label: "suburbs covered" },
+          { value: "56", label: "suburbs covered" },
           { value: "1,000", label: "flyers, your first test run" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
@@ -179,18 +179,13 @@ export default function HomeServices() {
       </Section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
-        <Callout
-          title="Quantities"
-        >
+        <Callout title="Trades across Melbourne">
           <p className="m-0">
-            Every drop is exclusive, from 1,000 flyers. See the{" "}
-            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for a quote, or the{" "}
-            <TextLink href="/industries/local-businesses">local businesses</TextLink> page for other ways businesses
-            use our service.
-          </p>
-          <p className="m-0">
-            We cover Melbourne&rsquo;s south-east and eastern suburbs, including{" "}
-            <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink>. See the full{" "}
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. Trades do well in the house
+            streets of <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink>,{" "}
+            <TextLink href="/melbourne/flyer-distribution-bentleigh-east">Bentleigh East</TextLink> and{" "}
+            <TextLink href="/melbourne/flyer-distribution-malvern">Malvern</TextLink>. Get a price on the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or see the full{" "}
             <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
           </p>
         </Callout>
