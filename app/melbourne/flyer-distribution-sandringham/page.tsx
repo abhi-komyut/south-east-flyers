@@ -21,11 +21,11 @@ const PAGE_PATH = "/melbourne/flyer-distribution-sandringham";
 export const metadata: Metadata = {
   title: { absolute: "Flyer Distribution Sandringham VIC 3191 | South East Flyers" },
   description:
-    "Flyer distribution in Sandringham 3191, from the village to the beach. Exclusive, GPS-tracked letterbox drops, never bundled, from 1,000 flyers.",
+    "Flyer distribution in Sandringham 3191, around the village and the beach. Cover the whole compact suburb in one GPS-tracked run. Get a free quote.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Flyer Distribution Sandringham VIC 3191 | South East Flyers",
-    description: "Exclusive, GPS-tracked letterbox drops across Sandringham 3191. From 1,000 flyers.",
+    description: "GPS-tracked letterbox drops across Sandringham 3191, around the village. Get a free quote.",
     url: `${SITE_URL}${PAGE_PATH}`,
     type: "website",
   },
@@ -35,27 +35,27 @@ const faqs = [
   {
     question: "How many letterboxes are there in Sandringham?",
     answer:
-      "About 4,900. Nearly all are houses and townhouses with a street letterbox, so a walking route reaches most of the suburb in a single run.",
+      "About 4,900, nearly all houses and townhouses with a street letterbox a walker can reach.",
   },
   {
     question: "Can a letterbox drop cover all of Sandringham at once?",
     answer:
-      "Yes. The suburb is compact, so most businesses cover all 4,900 homes in one run rather than testing a single pocket first.",
+      "Yes. The suburb is compact, so most businesses cover all 4,900 homes in one run.",
   },
   {
     question: "Can I target just the streets around Sandringham village?",
     answer:
-      "Yes. Village cafes and shops often start with the surrounding streets. Give us your address and we'll quote that ring only, with a GPS map of the route.",
+      "Yes. Give us your address and we'll quote the village streets only.",
   },
   {
     question: "When is the best time for a drop in Sandringham?",
     answer:
-      "Spring and early summer suit gardens, pools and hospitality as the beach season starts. Agents send appraisal flyers in late winter, before the spring market.",
+      "Spring and early summer for gardens, pools and hospitality. Agents send appraisal flyers in late winter.",
   },
   {
     question: "Do you also deliver in Hampton and Black Rock?",
     answer:
-      "Yes. Both border Sandringham in the City of Bayside, with Beaumaris and Brighton close by, so one run can take in a few bayside suburbs with a single GPS report.",
+      "Yes. Both border Sandringham in the City of Bayside, so one run can cover a few suburbs.",
   },
 ];
 
@@ -101,46 +101,23 @@ export default function Sandringham() {
       <Section title="Flyer distribution around Sandringham village" first>
         <p>
           Sandringham village wraps around the station at the end of the Sandringham line, a short walk from the
-          foreshore, the harbour and the yacht club. The suburb sits in the City of Bayside between Hampton and Black
-          Rock. A full campaign across Sandringham reaches up to 4,900 homes.
+          foreshore, the harbour and the yacht club. A targeted letterbox campaign across Sandringham can reach up to
+          4,900 homes.
         </p>
       </Section>
 
       <Section title="Letterbox drops for the village and bayside trades">
         <p>
-          The village runs on walk-in trade. People stroll or ride to its cafes, butchers and boutiques, so a shop
-          wins the households within a kilometre or so of the strip. Our walkers cover those streets directly, and an
-          opening offer or a changed menu lands while locals are deciding where to spend this week.
-        </p>
-        <p>
-          The beachside houses behind the village keep landscapers, pool services,{" "}
-          <TextLink href="/industries/roofing">roofers</TextLink> and painters in work, and{" "}
-          <TextLink href="/industries/real-estate">real estate agents</TextLink> send appraisal flyers to owners who
-          have held the same home for years.
+          Sandringham is a strong area for the village cafes, butchers and boutiques that locals walk to, and for
+          landscapers, pool services and painters on the beachside houses. Agents send appraisal flyers to long-term
+          owners. Start with the village streets, or cover the whole suburb in one run.
         </p>
       </Section>
 
-      <Section title="A compact suburb, covered in one run">
+      <Section title="Time drops to the beach season">
         <p>
-          Sandringham is small and almost all houses and townhouses on quiet streets, so a walker reaches nearly every
-          letterbox and one run can take in the whole suburb. Most businesses cover all of it rather than starting with
-          a single pocket.
-        </p>
-        <p>
-          Because it is compact, a monthly or seasonal drop to every home stays affordable, and each run comes with its
-          own GPS map, so you can hold one month against the next.
-        </p>
-      </Section>
-
-      <Section title="Beach season sets the calendar">
-        <p>
-          Demand in Sandringham follows the weather. As summer nears, residents spend on gardens, pools and outdoor
-          living, and the spring property market brings appraisal and renovation decisions forward.
-        </p>
-        <p>
-          If your work rides that cycle, book a late-winter drop to land before the rush, while your diary still has
-          room. Sandringham Hospital on the edge of the suburb also brings steady demand for nearby health and allied
-          services.
+          As summer nears, residents spend on gardens, pools and outdoor living. Book a late-winter drop to land before
+          the rush.
         </p>
       </Section>
 
@@ -162,12 +139,12 @@ export default function Sandringham() {
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout title="Sandringham and nearby suburbs">
           <p className="m-0">
-            No other advertiser rides along on a Sandringham drop, so <strong className="text-ink">the run is yours and yours only</strong>. We
-            also deliver in <TextLink href="/melbourne/flyer-distribution-hampton">Hampton</TextLink>, Black Rock,
-            Beaumaris and <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink>, so a bayside
-            campaign can span several suburbs. Pricing by quantity is on the{" "}
-            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, and the{" "}
-            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> lists the rest.
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. We also cover{" "}
+            <TextLink href="/melbourne/flyer-distribution-hampton">Hampton</TextLink>, Black Rock and Beaumaris, so
+            campaigns can be spread across different suburbs. See the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page or the rest of our{" "}
+            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> to see how we can
+            help you.
           </p>
         </Callout>
       </div>
@@ -176,7 +153,7 @@ export default function Sandringham() {
 
       <QuickQuoteForm
         heading="Get a quote for your Sandringham drop"
-        lead="Name the village streets or the whole suburb, and we'll send back the letterbox count and a price."
+        lead="Send us your streets and flyer count, and we'll come back with the letterbox number and a quote, quickly."
         suburbHint="e.g. Sandringham, Hampton, Black Rock"
       />
 

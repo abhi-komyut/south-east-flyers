@@ -21,11 +21,11 @@ const PAGE_PATH = "/melbourne/flyer-distribution-mount-waverley";
 export const metadata: Metadata = {
   title: { absolute: "Flyer Distribution Mount Waverley 3149 | South East Flyers" },
   description:
-    "Flyer distribution in Mount Waverley 3149: family homes, school zones and two village strips. Exclusive, GPS-tracked, never bundled, from 1,000 flyers.",
+    "Flyer distribution in Mount Waverley 3149, around the village and Pinewood. GPS-tracked letterbox drops for builders, schools and shops. Free quote.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Flyer Distribution Mount Waverley 3149 | South East Flyers",
-    description: "Exclusive, GPS-tracked letterbox drops across Mount Waverley 3149. From 1,000 flyers.",
+    description: "GPS-tracked letterbox drops across Mount Waverley 3149, around the village. Get a free quote.",
     url: `${SITE_URL}${PAGE_PATH}`,
     type: "website",
   },
@@ -35,27 +35,27 @@ const faqs = [
   {
     question: "How many letterboxes are there in Mount Waverley?",
     answer:
-      "About 13,900, mostly houses with a letterbox at the front gate. It is one of the larger suburbs we cover, so most businesses start with one part of it.",
+      "About 13,900, mostly houses with a letterbox at the front gate. It is one of the larger suburbs we cover.",
   },
   {
-    question: "How much of Mount Waverley can a letterbox drop cover?",
+    question: "How much of Mount Waverley can a drop cover?",
     answer:
-      "Up to all 13,900 homes, though many businesses split it into two or three drops, starting with the streets nearest their shop or base.",
+      "Most businesses split it into two or three runs, starting with the streets nearest their shop or base.",
   },
   {
     question: "Which part of Mount Waverley should a first drop cover?",
     answer:
-      "Shops usually start around the Mount Waverley village strip by the station or Pinewood. Trades start closest to their base, and agents start with the blocks around a listing.",
+      "Shops start around the village strip or Pinewood, trades nearest their base, agents around a listing.",
   },
   {
-    question: "Is Mount Waverley good for knockdown-rebuild and renovation flyers?",
+    question: "Is Mount Waverley good for knockdown-rebuild flyers?",
     answer:
-      "A strong fit. Much of the suburb is post-war housing on generous blocks, where owners weigh renovating against rebuilding. A builder's flyer with a nearby project photo lands well.",
+      "Yes. Much of the suburb is post-war housing on big blocks, where owners weigh renovating against rebuilding.",
   },
   {
     question: "Do you also deliver in Glen Waverley and Chadstone?",
     answer:
-      "Yes. Both sit near Mount Waverley in the City of Monash, with Oakleigh and Wheelers Hill close by, so one campaign can take in several suburbs under a single GPS report.",
+      "Yes. Both sit near Mount Waverley in the City of Monash, so one run can cover a few suburbs.",
   },
 ];
 
@@ -100,50 +100,24 @@ export default function MountWaverley() {
 
       <Section title="Flyer distribution around Mount Waverley village" first>
         <p>
-          Mount Waverley is a family suburb in the City of Monash, between Glen Waverley and Chadstone. Two stations on
-          the Glen Waverley line, Mount Waverley and Syndal, bracket a village strip by the station and another around
-          Pinewood, and the secondary school zones keep families here for years. A campaign across the whole suburb
-          reaches up to 13,900 homes, usually planned in stages.
+          Mount Waverley is a family suburb in the City of Monash, with two stations on the Glen Waverley line, a
+          village strip by the station and another around Pinewood. A targeted letterbox campaign across Mount Waverley
+          can reach up to 13,900 homes, usually planned in stages.
         </p>
       </Section>
 
-      <Section title="Renovate or rebuild: a suburb in transition">
+      <Section title="Letterbox drops for builders, schools and shops">
         <p>
-          Much of Mount Waverley went up in the post-war decades on generous blocks. Many of those homes are now being
-          extended, renovated or knocked down for two-storey family houses, so there is a steady flow of owners weighing
-          up big building decisions.
-        </p>
-        <p>
-          That suits builders, renovators, <TextLink href="/industries/electricians">electricians</TextLink>,{" "}
-          <TextLink href="/industries/plumbers">plumbers</TextLink> and landscapers. A neighbour drop around a current
-          project, with a photo of the finished house, turns one job into the next enquiry. Our{" "}
-          <TextLink href="/industries/home-services">home services</TextLink> page has timing and flyer tips.
+          Mount Waverley is a strong area for builders and renovators, with post-war homes being rebuilt on big blocks,
+          and for the tutoring, music and swim schools its families use. The village and Pinewood shops do well too.
+          Start nearest your base, then widen the run.
         </p>
       </Section>
 
-      <Section title="School-zone families">
+      <Section title="Bilingual flyers reach more homes">
         <p>
-          Families move to Mount Waverley for its schools and tend to stay through the school years. That makes it a
-          strong suburb for tutoring centres, music and swim schools, holiday programs and family health practices.
-        </p>
-        <p>
-          Aim those drops at the week or two before each term starts, when parents are locking in the year&rsquo;s
-          activities. Like <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink> next
-          door, many households speak Mandarin or Cantonese at home, so a flyer with a key line in Chinese reaches more
-          of the suburb.
-        </p>
-      </Section>
-
-      <Section title="Planning a drop across a big suburb">
-        <p>
-          At nearly 14,000 homes, Mount Waverley is too large for most businesses to cover in one go, and it
-          doesn&rsquo;t need to be. Highbury Road and Waverley Road split it into natural sections, and the two stations
-          give it two separate local centres.
-        </p>
-        <p>
-          A sensible plan starts with the section nearest your shop or base, tracks the calls for a few weeks, then
-          rolls into the next section with the same flyer. Three runs of around 4,500 homes each cover the suburb over a
-          season, with a GPS report for every one.
+          Like Glen Waverley next door, many households speak Mandarin or Cantonese. A flyer with a key line in Chinese
+          reaches more of the suburb.
         </p>
       </Section>
 
@@ -165,12 +139,12 @@ export default function MountWaverley() {
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout title="Mount Waverley and nearby suburbs">
           <p className="m-0">
-            On a Mount Waverley drop your flyer goes out by itself, <strong className="text-ink">with nothing else packed in beside it</strong>. We
-            also cover <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink>, Wheelers
-            Hill, Oakleigh and Chadstone across Monash, so a campaign can run over several suburbs. See the{" "}
-            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page for what each quantity costs, and
-            the <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> for the other
-            suburbs we reach.
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. We also cover{" "}
+            <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink>, Wheelers Hill and
+            Oakleigh, so campaigns can be spread across different suburbs. See the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page or the rest of our{" "}
+            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> to see how we can
+            help you.
           </p>
         </Callout>
       </div>
@@ -179,7 +153,7 @@ export default function MountWaverley() {
 
       <QuickQuoteForm
         heading="Get a quote for your Mount Waverley drop"
-        lead="Give us a section of the suburb or a school zone, and we'll send back the letterbox count and a price."
+        lead="Send us a section of the suburb or a school zone, and we'll come back with the letterbox number and a quote, quickly."
         suburbHint="e.g. Mount Waverley, Glen Waverley, Chadstone"
       />
 

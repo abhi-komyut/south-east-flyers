@@ -21,11 +21,11 @@ const PAGE_PATH = "/melbourne/flyer-distribution-box-hill";
 export const metadata: Metadata = {
   title: { absolute: "Flyer Distribution Box Hill VIC 3128 | South East Flyers" },
   description:
-    "Flyer distribution in Box Hill 3128, from Whitehorse Road towers to the house streets around them. Exclusive, GPS-tracked, never bundled, from 1,000 flyers.",
+    "Flyer distribution in Box Hill 3128, around Box Hill Central and the house streets. GPS-tracked drops checked block by block. Get a free quote.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Flyer Distribution Box Hill VIC 3128 | South East Flyers",
-    description: "Exclusive, GPS-tracked letterbox drops across Box Hill 3128. From 1,000 flyers.",
+    description: "GPS-tracked letterbox drops across Box Hill 3128, around Box Hill Central. Get a free quote.",
     url: `${SITE_URL}${PAGE_PATH}`,
     type: "website",
   },
@@ -35,27 +35,27 @@ const faqs = [
   {
     question: "How many letterboxes are there in Box Hill?",
     answer:
-      "Box Hill 3128 has about 7,800 homes, and more than half are apartments. Many towers have mailrooms we can't enter, so your quote counts the letterboxes our walkers can actually reach from the street.",
+      "About 7,800, more than half apartments. Your quote gives the reachable count for your streets.",
   },
   {
-    question: "How much of Box Hill can a letterbox drop reach?",
+    question: "Does a drop reach the apartment towers?",
     answer:
-      "Most of Box Hill's roughly 7,800 homes, aside from apartment towers with locked mailrooms our walkers can't enter. Most businesses start with 1,000 to 2,500 flyers around their shop or clinic and widen the area once calls come in.",
+      "We deliver to every mailroom we can reach from the street, and the GPS report shows which blocks were covered.",
   },
   {
     question: "Can I send bilingual flyers in Box Hill?",
     answer:
-      "Yes. Many Box Hill businesses print English on one side and Chinese on the other, and we deliver them the same way as any flyer. We distribute only, so the printing and translation stay with you.",
+      "Yes. Print English and Chinese and we deliver them like any flyer. We distribute only, so printing stays with you.",
+  },
+  {
+    question: "Where should a Box Hill drop start?",
+    answer:
+      "Start around your shop or clinic. Many trades start in the house streets toward Box Hill South and Surrey Hills.",
   },
   {
     question: "Do you also deliver in Blackburn and Burwood?",
     answer:
-      "Yes. Both sit near Box Hill in the City of Whitehorse, with Box Hill North, Box Hill South and Nunawading close by, so one campaign can take in several suburbs under a single GPS report.",
-  },
-  {
-    question: "Do you deliver to the house streets south of Whitehorse Road?",
-    answer:
-      "Yes. The streets of older houses towards Box Hill South and Surrey Hills have letterboxes at the front gate, so coverage there is close to every home on the route. Many trades start in those streets.",
+      "Yes. Both sit near Box Hill in the City of Whitehorse, so one run can cover a few suburbs.",
   },
 ];
 
@@ -100,66 +100,36 @@ export default function BoxHill() {
 
       <Section title="Flyer distribution around Box Hill Central" first>
         <p>
-          Box Hill is the main centre of the City of Whitehorse. Box Hill Central sits on top of the train station and
-          bus interchange, Whitehorse Road and Station Street carry most of the shops, and Box Hill Hospital, Epworth
-          Eastern and Box Hill Institute bring thousands of people in each day. A campaign across Box Hill reaches up to
-          7,800 homes, with the reachable count set per street.
-        </p>
-        <p>
-          The mix matters more here than in most suburbs. Towers line Whitehorse Road and the streets around the
-          station, while the blocks towards Surrey Hills and Box Hill South are still mostly houses.
+          Box Hill is the main centre of the City of Whitehorse. Box Hill Central sits on the station and bus
+          interchange, with the shops along Whitehorse Road and Station Street and the hospital precinct close by. A
+          targeted letterbox campaign across Box Hill can reach up to 7,800 homes. Our walkers skip locked mailrooms,
+          and your GPS report shows every block covered.
         </p>
       </Section>
 
-      <Section title="Towers, mailrooms and what we can reach">
+      <Section title="Letterbox drops for Box Hill venues and trades">
         <p>
-          Apartment growth is the big change in Box Hill, with more towers approved around the station and the future
-          Suburban Rail Loop stop. Some buildings have letterbox banks at the street entrance; others keep them in a
-          locked mailroom that walkers can&rsquo;t enter.
-        </p>
-        <p>
-          We tell you this up front. Your quote counts only the letterboxes we can reach, and the GPS report shows the
-          route walked. For tower-heavy streets, many businesses put more of their budget into the house streets
-          nearby, where almost every home has a letterbox at the gate.
+          Box Hill is a strong area for restaurants and grocers around Market Street and Station Street, and for
+          clinics near Box Hill Hospital and Epworth Eastern. It suits trades working the house streets toward Surrey
+          Hills and Box Hill South. Start around your shop, then widen the run.
         </p>
       </Section>
 
-      <Section title="A food and shopping centre for the whole east">
+      <Section title="Bilingual flyers reach more homes">
         <p>
-          Box Hill draws diners and shoppers from well beyond its postcode. The restaurant strip around Market Street
-          and Carrington Road, the grocers inside Box Hill Central and the cafes along Station Street all compete for
-          the same households.
-        </p>
-        <p>
-          A drop of 1,000 to 2,500 flyers around your venue reaches the residents who can walk in tonight. Many venues
-          print a menu in English and Chinese, and{" "}
-          <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink> businesses do the same
-          for a similar reason. Our <TextLink href="/industries/restaurants">restaurant and cafe flyers</TextLink> page
-          covers menu design and timing.
-        </p>
-      </Section>
-
-      <Section title="Hospitals, students and health practices">
-        <p>
-          Box Hill Hospital and Epworth Eastern make the suburb a base for specialists, allied health and family
-          clinics, and Box Hill Institute brings in students who rent nearby. Clinics often cover the streets within a
-          kilometre to reach patients who would rather not drive.
-        </p>
-        <p>
-          Students and renters move often, so a practice or gym that drops at the start of each semester reaches new
-          arrivals before they settle on a provider. See <TextLink href="/industries/healthcare">healthcare flyers</TextLink>{" "}
-          for what a clinic flyer should include.
+          Many Box Hill venues print English on one side and Chinese on the other. We deliver them like any flyer, so a
+          menu or offer lands in the language a household reads.
         </p>
       </Section>
 
       <Section title="Who uses letterbox drops in Box Hill">
         <Bullets
           items={[
-            <>Restaurants, grocers and takeaway in the Market Street and Station Street precinct</>,
+            <>Restaurants, grocers and takeaway around Market Street and Station Street</>,
             <>Clinics and allied health near Box Hill Hospital and Epworth Eastern</>,
-            <><TextLink href="/industries/real-estate">Real estate agents</TextLink> selling apartments and older houses on big blocks</>,
-            <>Tutoring centres and kids&rsquo; programs serving local families</>,
-            <><TextLink href="/industries/builders">Builders</TextLink> and other trades working on the house streets</>,
+            <><TextLink href="/industries/real-estate">Real estate agents</TextLink> selling apartments and older houses</>,
+            <>Tutoring centres and kids&rsquo; programs</>,
+            <><TextLink href="/industries/builders">Builders</TextLink> and trades working the house streets</>,
           ]}
         />
         <p>
@@ -170,12 +140,11 @@ export default function BoxHill() {
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout title="Box Hill and nearby suburbs">
           <p className="m-0">
-            Your Box Hill flyer is delivered by itself, with <strong className="text-ink">no other advertiser&rsquo;s offer in the same run</strong>. We
-            also cover Blackburn, Burwood and Nunawading across Whitehorse, with{" "}
-            <TextLink href="/melbourne/flyer-distribution-mount-waverley">Mount Waverley</TextLink> to the south. The{" "}
-            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page has the quantity pricing, and our{" "}
-            <TextLink href="/melbourne/flyer-distribution-south-east-melbourne">south-east and eastern Melbourne</TextLink>{" "}
-            list covers the rest.
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. We also cover Blackburn,
+            Burwood and Nunawading, so campaigns can be spread across different suburbs. See the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page or the rest of our{" "}
+            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> to see how we can
+            help you.
           </p>
         </Callout>
       </div>
@@ -184,7 +153,7 @@ export default function BoxHill() {
 
       <QuickQuoteForm
         heading="Get a quote for your Box Hill drop"
-        lead="Point us at your venue or the house streets, and we'll send back the reachable letterbox count and a price."
+        lead="Send us your venue or streets, and we'll come back with the reachable letterbox number and a quote, quickly."
         suburbHint="e.g. Box Hill, Blackburn, Burwood"
       />
 
