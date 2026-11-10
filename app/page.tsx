@@ -56,7 +56,7 @@ export default function Home() {
 
       <PageHero
         h1="Flyer distribution in Melbourne that actually gets read."
-        lead="Every flyer goes in the letterbox on its own, never bundled. Every run is GPS-tracked, so you see the streets we covered."
+        lead="Get your flyers into letterboxes across Melbourne's south-east with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/walker-foot.jpg", alt: "A South East Flyers walker posting a flyer into a letterbox on a sunny Melbourne street" }}
       />
 
@@ -65,7 +65,7 @@ export default function Home() {
           { value: "From $180", label: "per 1,000 flyers*" },
           { value: "100%", label: "GPS-tracked delivery routes" },
           { value: "Never", label: "bundled with other advertisers" },
-          { value: "40+", label: "suburbs across the south-east" },
+          { value: "56", label: "suburbs across the south-east" },
         ]}
       />
 
@@ -80,7 +80,7 @@ export default function Home() {
         <div className="max-w-[1144px] mx-auto flex flex-wrap gap-14 gap-x-20 items-center">
           <Reveal className="flex-[1_1_380px] flex flex-col gap-[22px]">
             <h2 id="exclusive-title" className="m-0 font-display font-medium text-[clamp(34px,3.6vw,50px)] leading-[1.1] tracking-[-0.015em]">
-              One flyer. One letterbox. Nothing stacked on top.
+              Exclusive letterbox drops, never bundled
             </h2>
             <p className="m-0 text-[17px] leading-[1.7] text-body max-w-[470px]">
               Bundled drops put your flyer inside a pack of other advertisers&rsquo; catalogues. Ours go in by themselves, so the household sees your offer first and only.
@@ -129,7 +129,7 @@ export default function Home() {
           </Reveal>
           <Reveal delay={100} className="flex-[1_1_380px] flex flex-col gap-[22px]">
             <h2 id="gps-title" className="m-0 font-display font-medium text-[clamp(34px,3.6vw,50px)] leading-[1.1] tracking-[-0.015em]">
-              Proof of delivery, street by street.
+              Proof of delivery, street by street
             </h2>
             <p className="m-0 text-[17px] leading-[1.7] text-body max-w-[460px]">
               Every walker records their route on Strava. When the run is finished, you get the map and a summary, so you know exactly where your budget went.
@@ -160,11 +160,11 @@ export default function Home() {
         <div className="max-w-[1144px] mx-auto flex flex-col gap-11">
           <Reveal className="flex flex-col gap-4 max-w-[640px]">
             <h2 id="results-title" className="m-0 font-display font-medium text-[clamp(34px,3.6vw,50px)] leading-[1.1] tracking-[-0.015em]">
-              Proof it still works.
+              Proof it still works
             </h2>
             <p className="m-0 text-[17px] leading-[1.7] text-body">
-              Letterbox marketing still earns its place. The response data, how households treat their mail, and where
-              big retailers spend all point the same way.
+              Letterbox marketing still earns its place. Steady response rates, GPS proof and a strict No Junk Mail rule
+              back it up.
             </p>
           </Reveal>
           <div className="flex flex-wrap gap-10 gap-x-14">
@@ -172,17 +172,17 @@ export default function Home() {
               {
                 value: "1 to 3%",
                 title: "Response rates have held steady for years.",
-                body: "Australia Post and direct marketing research puts letterbox response at 1 to 3%, and tight local targeting pushes it higher.",
+                body: "Australia Post and direct marketing research puts letterbox response at 1 to 3%.",
               },
               {
-                value: "81%",
-                title: "of Australians check their mail the same day.",
-                body: "Households get fewer than two unaddressed items a week, so your flyer faces far less competition than a social feed.",
+                value: "100%",
+                title: "of runs GPS-tracked in Strava.",
+                body: "Every walker records the route in Strava, and you get the map and a drop summary after each run.",
               },
               {
-                value: "Millions",
-                title: "spent every year by major Australian retailers.",
-                body: "The biggest catalogue advertisers keep funding letterbox drops because the return keeps proving itself.",
+                value: "Always",
+                title: "No Junk Mail signs respected.",
+                body: "We skip every letterbox with a No Junk Mail or No Advertising sign, so your flyer only reaches willing households.",
               },
             ].map((item, i) => (
               <Reveal key={item.value} delay={i * 80} className="flex-[1_1_300px] flex flex-col gap-3 pt-6 border-t border-line">
@@ -202,7 +202,7 @@ export default function Home() {
         <div className="max-w-[1144px] mx-auto flex flex-col gap-11">
           <Reveal className="flex flex-col gap-4 max-w-[640px]">
             <h2 id="team-title" className="m-0 font-display font-medium text-[clamp(34px,3.6vw,50px)] leading-[1.1] tracking-[-0.015em]">
-              Real people on Melbourne footpaths.
+              Real people on Melbourne footpaths
             </h2>
             <p className="m-0 text-[17px] leading-[1.7] text-body">
               Walkers and e-bike riders cover the bayside, inner-south and eastern suburbs every day, from Port Melbourne out to Box Hill.
@@ -240,7 +240,7 @@ export default function Home() {
       </section>
 
       <StepsBand
-        title="From quote to GPS report in four steps."
+        title="From quote to GPS report in four steps"
         steps={[
           { title: "Tell us your suburbs", body: "Choose suburbs or streets. We'll suggest the areas most likely to respond to your offer." },
           { title: "Hand over your flyers", body: "You print, so you keep control of design and stock. We plan the walks around your quantity." },
@@ -254,7 +254,7 @@ export default function Home() {
         <div className="max-w-[1144px] mx-auto flex flex-col gap-12">
           <Reveal>
             <h2 id="industries-title" className="m-0 font-display font-medium text-[clamp(34px,3.6vw,50px)] leading-[1.1] tracking-[-0.015em] max-w-[640px]">
-              Built for businesses that run on local trust.
+              Flyer distribution for Melbourne&rsquo;s local businesses
             </h2>
           </Reveal>
           <div className="flex flex-wrap gap-7">
@@ -304,12 +304,12 @@ export default function Home() {
       </section>
 
       <QuickQuoteForm
-        heading="Get a quote with a quick turnaround."
+        heading="Get a quote with a quick turnaround"
         lead="Tell us where and how many. We'll send pricing, a coverage map and a timeline. No obligation."
       />
 
       <FAQSection
-        title="Questions we hear every week."
+        title="Questions we hear every week"
         subtitle={
           <>
             Something else on your mind? Call <a href="tel:0402824070" className="text-navy [font-variant-numeric:tabular-nums]">0402 824 070</a>.
