@@ -32,12 +32,12 @@ const faqs = [
   {
     question: "Do dental flyers bring in new patients?",
     answer:
-      "They work best for clinics whose patients live nearby, which is most of them. A flyer reaches households that haven't chosen a dentist or have let their check-ups slip, and it stays on the fridge until the next toothache or reminder.",
+      "They work best for clinics whose patients live nearby, which is most. A flyer reaches households that haven't chosen a dentist and stays on the fridge until the next reminder.",
   },
   {
     question: "What can a dental flyer say under the advertising rules?",
     answer:
-      "Dental advertising in Australia must follow AHPRA's guidelines. That means no patient testimonials, no misleading claims, and clear terms on any offer. Your flyer content is your responsibility, so check it against the guidelines before printing.",
+      "Dental advertising must follow AHPRA's guidelines: no patient testimonials, no misleading claims, clear terms on offers. The flyer content is yours to check before printing.",
   },
   {
     question: "How far from my clinic should I drop dental flyers?",
@@ -80,14 +80,14 @@ export default function Dentists() {
           { name: "Dentists" },
         ]}
         h1="Letterbox Marketing for Dental Clinics"
-        lead="Dental flyers delivered on their own to the households around your practice, so the families who live closest know where to book. Every route is GPS-tracked."
+        lead="Get your dental flyers into letterboxes around your practice with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/ind-health.jpg", alt: "A dentist in her clinic" }}
       />
 
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "40+", label: "suburbs covered" },
+          { value: "56", label: "suburbs covered" },
           { value: "1,000", label: "flyers, your first test run" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
@@ -162,11 +162,14 @@ export default function Dentists() {
       </Section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
-        <Callout title="Quantities">
+        <Callout title="Dental clinics across Melbourne">
           <p className="m-0">
-            Every drop is exclusive, from 1,000 flyers. See the{" "}
-            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or our{" "}
-            <TextLink href="/industries/healthcare">healthcare</TextLink> page for GPs, physios and other practices.
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. Family suburbs like{" "}
+            <TextLink href="/melbourne/flyer-distribution-bentleigh">Bentleigh</TextLink>,{" "}
+            <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink> and{" "}
+            <TextLink href="/melbourne/flyer-distribution-mount-waverley">Mount Waverley</TextLink> mean regular
+            check-ups. Get a price on the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or
+            see <TextLink href="/industries/healthcare">healthcare</TextLink> for GPs and physios.
           </p>
         </Callout>
       </div>

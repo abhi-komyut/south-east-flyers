@@ -32,7 +32,7 @@ const faqs = [
   {
     question: "Do letterbox drops work for vet clinics?",
     answer:
-      "Yes, because pet owners choose a vet close to home. Nobody wants a long drive with a sick dog or an anxious cat. A flyer reaches every household in your catchment, including new arrivals who haven't picked a clinic yet.",
+      "Yes, because pet owners choose a vet close to home. A flyer reaches every household in your catchment, including new arrivals who haven't picked a clinic yet.",
   },
   {
     question: "What should a vet flyer focus on?",
@@ -80,14 +80,14 @@ export default function Vets() {
           { name: "Vets" },
         ]}
         h1="Letterbox Marketing for Vet Clinics"
-        lead="Vet marketing that reaches the pet owners on your doorstep. Your flyer goes into each letterbox on its own, and every route is GPS-tracked."
+        lead="Get your vet flyers into letterboxes around your clinic with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/walker-street.jpg", alt: "A walker checking flyers beside a brick letterbox on a leafy street" }}
       />
 
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "40+", label: "suburbs covered" },
+          { value: "56", label: "suburbs covered" },
           { value: "1,000", label: "flyers, your first test run" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
@@ -158,11 +158,14 @@ export default function Vets() {
       </Section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
-        <Callout title="Quantities">
+        <Callout title="Vet clinics across Melbourne">
           <p className="m-0">
-            Every drop is exclusive, from 1,000 flyers. See the{" "}
-            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or our{" "}
-            <TextLink href="/industries/healthcare">healthcare</TextLink> page for other clinics.
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. Backyard suburbs like{" "}
+            <TextLink href="/melbourne/flyer-distribution-mount-waverley">Mount Waverley</TextLink>,{" "}
+            <TextLink href="/melbourne/flyer-distribution-sandringham">Sandringham</TextLink> and{" "}
+            <TextLink href="/melbourne/flyer-distribution-bentleigh">Bentleigh</TextLink> hold the most dogs. Get a price
+            on the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or see{" "}
+            <TextLink href="/industries/pet-groomers">dog groomers</TextLink> for another pet business.
           </p>
         </Callout>
       </div>

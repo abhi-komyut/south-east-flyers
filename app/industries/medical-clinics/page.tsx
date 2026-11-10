@@ -42,7 +42,7 @@ const faqs = [
   {
     question: "Should a GP flyer mention bulk billing?",
     answer:
-      "Yes, if it's accurate. Billing is one of the first things families check when choosing a GP. State exactly who is bulk billed, such as children, concession card holders or all patients, so there are no surprises at the desk.",
+      "Yes, if it's accurate. Billing is one of the first things families check, so state exactly who is bulk billed.",
   },
   {
     question: "When should a new medical centre drop flyers?",
@@ -80,14 +80,14 @@ export default function MedicalClinics() {
           { name: "GP & Medical Clinics" },
         ]}
         h1="Letterbox Marketing for GP & Medical Clinics"
-        lead="Medical clinic flyers delivered on their own to the households around your practice, so local families know who is taking new patients. Every route is GPS-tracked."
+        lead="Get your medical clinic flyers into letterboxes around your practice with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/walker-foot.jpg", alt: "A South East Flyers walker posting a flyer into a letterbox on a sunny Melbourne street" }}
       />
 
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "40+", label: "suburbs covered" },
+          { value: "56", label: "suburbs covered" },
           { value: "1,000", label: "flyers, your first test run" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
@@ -99,12 +99,8 @@ export default function MedicalClinics() {
           drive to easily. That makes the streets within a couple of kilometres the clinic&rsquo;s real market.
         </p>
         <p>
-          GP clinic marketing online mostly reaches people already searching. A flyer reaches the ones who
-          aren&rsquo;t yet: new arrivals, young families and patients whose GP is about to retire.
-        </p>
-        <p>
-          Many households only look for a new GP when theirs retires, closes its books or moves. A flyer already in
-          the kitchen drawer at that moment gives them a clinic to call.
+          GP clinic marketing online mostly reaches people already searching. A flyer reaches the ones who aren&rsquo;t
+          yet, and sits in the drawer until their own GP retires or closes its books.
         </p>
       </Section>
 
@@ -149,12 +145,15 @@ export default function MedicalClinics() {
       </Section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
-        <Callout title="Quantities">
+        <Callout title="Medical clinics across Melbourne">
           <p className="m-0">
-            Every drop is exclusive, from 1,000 flyers. See the{" "}
-            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, our{" "}
-            <TextLink href="/industries/healthcare">healthcare</TextLink> page, or the{" "}
-            <TextLink href="/industries/dentists">dental clinic</TextLink> page.
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. Family suburbs like{" "}
+            <TextLink href="/melbourne/flyer-distribution-bentleigh">Bentleigh</TextLink>,{" "}
+            <TextLink href="/melbourne/flyer-distribution-mount-waverley">Mount Waverley</TextLink> and{" "}
+            <TextLink href="/melbourne/flyer-distribution-box-hill">Box Hill</TextLink> suit clinics taking new patients.
+            Get a price on the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or see{" "}
+            <TextLink href="/industries/dentists">dental clinics</TextLink> and{" "}
+            <TextLink href="/industries/healthcare">healthcare</TextLink>.
           </p>
         </Callout>
       </div>
