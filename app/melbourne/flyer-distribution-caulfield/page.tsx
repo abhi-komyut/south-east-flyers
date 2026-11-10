@@ -36,27 +36,27 @@ const faqs = [
   {
     question: "How many letterboxes are there in Caulfield?",
     answer:
-      "Caulfield itself is one of the smaller suburbs we cover, with about 2,400 homes. A full-suburb drop is affordable, and most businesses can realistically cover all of it in one run.",
+      "About 2,400, one of the smaller suburbs we cover. A full-suburb drop is affordable, and most businesses can cover all of it in a single run.",
   },
   {
-    question: "How much of Caulfield can a letterbox drop cover?",
+    question: "Can a letterbox drop cover all of Caulfield at once?",
     answer:
-      "All of it in one run for most businesses, since the suburb has roughly 2,400 homes. That is small enough that many businesses skip testing and go straight to full coverage.",
+      "Yes. At roughly 2,400 homes it is small enough that many businesses skip testing a pocket and go straight to full coverage.",
   },
   {
     question: "Do you also cover Caulfield North and Caulfield South?",
     answer:
-      "Yes, both are separate suburbs in our service area. If your customers span all three, tell us and we will quote them together with one GPS report.",
+      "Yes, both are separate suburbs in our service area. If your customers span all three, tell us and we'll quote them together with one GPS report.",
   },
   {
     question: "Is Caulfield good for flyers aimed at Monash students?",
     answer:
-      "Yes, around the Monash Caulfield campus and the station, where rental turnover is higher than in the surrounding family streets. A drop timed to the start of semester tends to perform best for that audience.",
+      "Yes, around the Monash Caulfield campus and the station, where rental turnover runs higher than the family streets. A drop timed to the start of semester tends to perform best for that audience.",
   },
   {
     question: "Can you target just the streets near Glen Huntly Road?",
     answer:
-      "Yes. Give us your shop address and we will quote for the surrounding streets rather than the whole suburb, though given how small Caulfield is, full coverage is often not much more.",
+      "Yes. Send your shop address and we'll quote the surrounding streets, though given how small Caulfield is, full coverage is often not much more.",
   },
 ];
 
@@ -99,26 +99,23 @@ export default function Caulfield() {
         ]}
       />
 
-      <Section title="Caulfield at a glance" first>
+      <Section title="Flyer distribution around Glen Huntly Road" first>
         <p>
-          Caulfield itself is a tightly bounded suburb in the City of Glen Eira, best known for Caulfield
-          Racecourse, Monash University&rsquo;s Caulfield campus and Caulfield station, a major interchange
-          where the Frankston line meets the Dandenong corridor. Glen Huntly Road carries the local shops.
-        </p>
-        <p>
-          For a letterbox drop that means about 2,400 homes, a mix of houses, townhouses and apartments. It is
-          one of the smaller suburbs we cover, so a full-suburb run is within reach for most budgets.
+          Caulfield is a tightly bounded suburb in the City of Glen Eira, best known for Caulfield Racecourse, Monash
+          University&rsquo;s Caulfield campus and Caulfield station, a major interchange where the Frankston line meets
+          the Dandenong corridor. Glen Huntly Road carries the local shops. A full Caulfield campaign reaches up to
+          2,400 homes, within reach for most budgets.
         </p>
       </Section>
 
-      <Section title="A small suburb, but a big catchment passes through">
+      <Section title="A small suburb with a big catchment passing through">
         <p>
-          Caulfield station brings a lot of people through who do not live in the suburb itself, heading to
-          Monash, the Alfred and Cabrini health precincts, or the races. Letterbox drops reach the households
-          who live there, while a visible shopfront on Glen Huntly Road picks up that passing traffic too.
+          Caulfield station brings a lot of people through who do not live in the suburb: commuters heading to Monash,
+          the Alfred and Cabrini health precincts, or the races. A letterbox drop reaches the households who live here,
+          while a shopfront on Glen Huntly Road picks up that passing traffic.
         </p>
         <p>
-          That combination suits businesses that want both: a flyer in the homes nearby, plus signage for the
+          That combination suits a business that wants both at once: a flyer in the homes nearby, and a sign for the
           commuters, students and hospital staff passing through daily.
         </p>
       </Section>
@@ -126,28 +123,28 @@ export default function Caulfield() {
       <Section title="Houses, townhouses and some apartments">
         <p>
           Caulfield&rsquo;s housing is a fairly even mix of separate houses, townhouses and apartments, with
-          heritage-style homes on some streets and newer infill near Glen Huntly Road and the station. Coverage
-          is good across most of the suburb, with the usual exception of locked apartment mail rooms.
+          heritage-style homes on some streets and newer infill near Glen Huntly Road and the station. Coverage runs
+          well across most of the suburb, with the usual exception of locked apartment mailrooms.
         </p>
         <p>
-          Because the suburb is small, many businesses skip testing a pocket and go straight to a full-suburb
-          drop rather than splitting the run into stages.
+          Because the suburb is small, many businesses skip the staged approach and go straight to a full-suburb drop
+          in one run.
         </p>
       </Section>
 
       <Section title="Racecourse and university timing">
         <p>
-          Caulfield Racecourse hosts major race meetings through spring, which lifts demand for nearby
-          hospitality and parking-adjacent businesses in the weeks around each event. Monash&rsquo;s academic
-          calendar drives a second, separate pattern of demand around semester starts.
+          Caulfield Racecourse hosts major meetings through spring, which lifts demand for nearby hospitality in the
+          weeks around each event. Monash&rsquo;s academic calendar drives a second, separate pattern of demand around
+          semester starts.
         </p>
         <p>
-          Businesses that serve either audience can time a drop to land just before race day or just before
-          semester begins, rather than running on a flat year-round schedule.
+          A business serving either audience can time a drop to land just before race day or just before semester
+          begins, rather than running on a flat year-round schedule.
         </p>
       </Section>
 
-      <Section title="Who letterbox drops in Caulfield suit">
+      <Section title="Who uses letterbox drops in Caulfield">
         <Bullets
           items={[
             <>Hospitality and retail on Glen Huntly Road</>,
@@ -163,16 +160,14 @@ export default function Caulfield() {
       </Section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
-        <Callout
-          title="Letterbox drop quantities in Caulfield"
-        >
+        <Callout title="Caulfield and nearby suburbs">
           <p className="m-0">
-            Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>. Our flyer
-            distribution across Glen Eira also reaches Caulfield North, Caulfield South and Bentleigh. See the{" "}
-            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
-            <TextLink href="/melbourne/flyer-distribution-bentleigh">Bentleigh</TextLink>,{" "}
-            <TextLink href="/melbourne/flyer-distribution-malvern">Malvern</TextLink> and the rest of our{" "}
-            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
+            A Caulfield drop is delivered on its own, with <strong className="text-ink">no other business sharing the run</strong>. We also
+            cover Caulfield North, Caulfield South and{" "}
+            <TextLink href="/melbourne/flyer-distribution-bentleigh">Bentleigh</TextLink> across Glen Eira, with{" "}
+            <TextLink href="/melbourne/flyer-distribution-malvern">Malvern</TextLink> close by. What each quantity costs
+            is on the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, and the rest of our
+            suburbs on the <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
           </p>
         </Callout>
       </div>
@@ -180,8 +175,8 @@ export default function Caulfield() {
       <HowItWorks />
 
       <QuickQuoteForm
-        heading="Ready to reach Caulfield letterboxes?"
-        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count, with a quick turnaround."
+        heading="Get a quote for your Caulfield drop"
+        lead="Tell us the streets near Glen Huntly Road or all of Caulfield, and we'll send back the letterbox count and a price."
         suburbHint="e.g. Caulfield, Caulfield North, Bentleigh"
       />
 

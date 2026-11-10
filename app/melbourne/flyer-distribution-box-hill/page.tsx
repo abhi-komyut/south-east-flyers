@@ -48,9 +48,9 @@ const faqs = [
       "Yes. Many Box Hill businesses print English on one side and Chinese on the other, and we deliver them the same way as any flyer. We distribute only, so the printing and translation stay with you.",
   },
   {
-    question: "Can one campaign cover Box Hill, Blackburn and Burwood?",
+    question: "Do you also deliver in Blackburn and Burwood?",
     answer:
-      "Yes. All three are in our Whitehorse service area, along with Box Hill North, Box Hill South and Nunawading, and we can quote them together with a single GPS report.",
+      "Yes. Both sit near Box Hill in the City of Whitehorse, with Box Hill North, Box Hill South and Nunawading close by, so one campaign can take in several suburbs under a single GPS report.",
   },
   {
     question: "Do you deliver to the house streets south of Whitehorse Road?",
@@ -98,16 +98,16 @@ export default function BoxHill() {
         ]}
       />
 
-      <Section title="7,800 homes, with more apartments than most" first>
+      <Section title="Flyer distribution around Box Hill Central" first>
         <p>
           Box Hill is the main centre of the City of Whitehorse. Box Hill Central sits on top of the train station and
           bus interchange, Whitehorse Road and Station Street carry most of the shops, and Box Hill Hospital, Epworth
-          Eastern and Box Hill Institute bring thousands of people in each day.
+          Eastern and Box Hill Institute bring thousands of people in each day. A campaign across Box Hill reaches up to
+          7,800 homes, with the reachable count set per street.
         </p>
         <p>
-          For a letterbox drop that means about 7,800 homes, and the mix matters more here than in most suburbs.
-          Towers line Whitehorse Road and the streets around the station, while the blocks towards Surrey Hills and
-          Box Hill South are still mostly houses.
+          The mix matters more here than in most suburbs. Towers line Whitehorse Road and the streets around the
+          station, while the blocks towards Surrey Hills and Box Hill South are still mostly houses.
         </p>
       </Section>
 
@@ -152,7 +152,7 @@ export default function BoxHill() {
         </p>
       </Section>
 
-      <Section title="Health practices, agents and food-strip trades in Box Hill">
+      <Section title="Who uses letterbox drops in Box Hill">
         <Bullets
           items={[
             <>Restaurants, grocers and takeaway in the Market Street and Station Street precinct</>,
@@ -168,16 +168,14 @@ export default function BoxHill() {
       </Section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
-        <Callout
-          title="Covering Box Hill's reachable homes"
-        >
+        <Callout title="Box Hill and nearby suburbs">
           <p className="m-0">
-            Every Box Hill drop goes out on its own, with <strong className="text-ink">no other advertisers&rsquo; flyers in the run</strong>.
-            Our flyer distribution across Whitehorse also reaches Blackburn, Burwood and Nunawading.
-            See the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, our{" "}
+            Your Box Hill flyer is delivered by itself, with <strong className="text-ink">no other advertiser&rsquo;s offer in the same run</strong>. We
+            also cover Blackburn, Burwood and Nunawading across Whitehorse, with{" "}
+            <TextLink href="/melbourne/flyer-distribution-mount-waverley">Mount Waverley</TextLink> to the south. The{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page has the quantity pricing, and our{" "}
             <TextLink href="/melbourne/flyer-distribution-south-east-melbourne">south-east and eastern Melbourne</TextLink>{" "}
-            suburb list, or{" "}
-            <TextLink href="/melbourne/flyer-distribution-mount-waverley">Mount Waverley</TextLink> to the south.
+            list covers the rest.
           </p>
         </Callout>
       </div>
@@ -186,7 +184,7 @@ export default function BoxHill() {
 
       <QuickQuoteForm
         heading="Get a quote for your Box Hill drop"
-        lead="Send us your venue or streets, and we'll come back with the reachable letterbox count and a quote, quickly."
+        lead="Point us at your venue or the house streets, and we'll send back the reachable letterbox count and a price."
         suburbHint="e.g. Box Hill, Blackburn, Burwood"
       />
 
