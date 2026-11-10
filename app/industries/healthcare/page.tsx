@@ -7,6 +7,7 @@ import {
   PageHero,
   FactsStrip,
   Section,
+  Callout,
   TextLink,
   JsonLd,
   HowItWorks,
@@ -96,7 +97,7 @@ export default function Healthcare() {
           { name: "Healthcare" },
         ]}
         h1="Flyer distribution for healthcare"
-        lead="Build awareness for your practice, clinic or service among the local households closest to you, across Melbourne's south-east and eastern suburbs, with GPS-tracked distribution."
+        lead="Get your healthcare flyers into letterboxes around your practice with GPS-tracked flyer distribution."
         tagline="You provide the flyers. We handle the distribution."
         image={{ src: "/images/redesign/ind-health.jpg", alt: "A dentist in her clinic" }}
       />
@@ -104,7 +105,7 @@ export default function Healthcare() {
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "40+", label: "suburbs covered" },
+          { value: "56", label: "suburbs covered" },
           { value: "GPS map", label: "proof of delivery, every run" },
           { value: "1,000", label: "flyers, your first test run" },
         ]}
@@ -139,6 +140,25 @@ export default function Healthcare() {
         </Reveal>
       </div>
 
+      <Section title="Clinics we deliver for">
+        <p>
+          We run drops for <TextLink href="/industries/dentists">dental clinics</TextLink>,{" "}
+          <TextLink href="/industries/medical-clinics">GP and medical centres</TextLink> and{" "}
+          <TextLink href="/industries/vets">vet clinics</TextLink>. Each reaches the households closest to the practice.
+        </p>
+        <p>
+          Family suburbs like <TextLink href="/melbourne/flyer-distribution-bentleigh">Bentleigh</TextLink>,{" "}
+          <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink> and{" "}
+          <TextLink href="/melbourne/flyer-distribution-mount-waverley">Mount Waverley</TextLink> suit clinics taking new
+          patients, since school-age families mean steady local demand.
+        </p>
+        <p>
+          Around <TextLink href="/melbourne/flyer-distribution-box-hill">Box Hill</TextLink> and Glen Waverley, a clinic
+          with Mandarin- or Cantonese-speaking staff can say so on the flyer, and many print one side in Chinese. A
+          single new patient who stays for years makes a local drop one of the better-value ways a practice can grow.
+        </p>
+      </Section>
+
       <Section title="Where this fits">
         <p>
           Campaigns run through our <TextLink href="/services/letterbox-distribution">letterbox distribution</TextLink>{" "}
@@ -147,6 +167,17 @@ export default function Healthcare() {
           our <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne</TextLink> page.
         </p>
       </Section>
+
+      <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
+        <Callout title="Healthcare across Melbourne">
+          <p className="m-0">
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. Get a price on the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or see how{" "}
+            <TextLink href="/industries/dentists">dental</TextLink> and{" "}
+            <TextLink href="/industries/medical-clinics">medical clinics</TextLink> plan a drop.
+          </p>
+        </Callout>
+      </div>
 
       <HowItWorks />
 
