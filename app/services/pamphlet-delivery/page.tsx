@@ -32,7 +32,7 @@ const faqs = [
   {
     question: "What is the difference between a pamphlet, a brochure and a flyer?",
     answer:
-      "A flyer is usually a single sheet. A pamphlet or brochure is folded, often a DL or A4 tri-fold, with more room for detail. We deliver all three the same way: each one on its own, into every accepting letterbox on the route.",
+      "A flyer is usually a single sheet; a pamphlet or brochure is folded, with more room for detail. We deliver all three the same way, each on its own.",
   },
   {
     question: "How much does pamphlet delivery cost?",
@@ -78,14 +78,14 @@ export default function PamphletDelivery() {
           { name: "Pamphlet Delivery" },
         ]}
         h1="Pamphlet and Brochure Distribution in Melbourne"
-        lead="Pamphlet distribution for messages that need more room than a flyer. Each pamphlet or brochure goes into the letterbox on its own, and every route is GPS-tracked."
+        lead="Get your pamphlets and brochures into letterboxes across Melbourne's south-east with GPS-tracked distribution, each delivered on its own."
         image={{ src: "/images/redesign/letterbox-hand.jpg", alt: "A hand posting a flyer into a steel letterbox" }}
       />
 
       <FactsStrip
         stats={[
           { value: "Exclusive", label: "never bundled with other ads" },
-          { value: "40+", label: "suburbs covered" },
+          { value: "56", label: "suburbs covered" },
           { value: "1,000", label: "pamphlets, your first run" },
           { value: "GPS map", label: "proof of delivery, every run" },
         ]}
@@ -152,9 +152,9 @@ export default function PamphletDelivery() {
       </Section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
-        <Callout title="Pamphlet delivery">
+        <Callout title="Pamphlets across Melbourne's south-east">
           <p className="m-0">
-            Standard pamphlets and folded brochures are delivered exclusively, from 1,000. See the{" "}
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run, from 1,000 pamphlets. See the{" "}
             <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, our{" "}
             <TextLink href="/services/catalogue-delivery">catalogue delivery</TextLink> page for retail catalogues, or the{" "}
             <TextLink href="/melbourne/flyer-distribution-south-east-melbourne">suburbs we cover</TextLink>.

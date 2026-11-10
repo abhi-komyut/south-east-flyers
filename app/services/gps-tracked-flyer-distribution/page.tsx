@@ -101,7 +101,7 @@ export default function GpsTrackedFlyerDistribution() {
       <PageHero
         crumbs={[{ name: "Home", href: "/" }, { name: "GPS-tracked flyer distribution" }]}
         h1="GPS-tracked flyer distribution"
-        lead="Every distribution run is GPS-tracked using the Strava app, so you can see the routes and streets your campaign covered, not just an invoice at the end."
+        lead="Get your flyers into letterboxes with GPS-tracked flyer distribution, and a Strava report of every street covered."
         tagline="You provide the flyers. We handle the distribution, and show you where it went."
         image={{ src: "/images/redesign/gps-strava.jpg", alt: "Three phone screens showing Strava route maps recorded during a South East Flyers letterbox run" }}
       />
@@ -117,6 +117,10 @@ export default function GpsTrackedFlyerDistribution() {
           streets they covered. It gives you real visibility and accountability over where your campaign went. We
           don&rsquo;t claim it proves that every individual letterbox received a flyer, but you get a genuine,
           mapped record of the distribution rather than taking it on trust.
+        </p>
+        <p>
+          The finished report is a simple summary and route map you can forward straight to a client or vendor, which
+          is why agents use it in their vendor reports.
         </p>
       </Section>
 
@@ -151,17 +155,13 @@ export default function GpsTrackedFlyerDistribution() {
       </section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pb-[clamp(80px,9vw,128px)]">
-        <Callout title="Why GPS tracking matters">
+        <Callout title="Proof with every drop">
           <p className="m-0">
-            Flyer distribution has a reputation problem: not every operator actually delivers what they&rsquo;re
-            paid for. GPS tracking is how we keep ourselves accountable. You aren&rsquo;t just trusting that the
-            work was done, you can see the routes it took.
-          </p>
-          <p className="m-0">
-            GPS tracking applies across our <TextLink href="/services/flyer-distribution">flyer distribution</TextLink>{" "}
-            and <TextLink href="/services/letterbox-distribution">letterbox distribution</TextLink> campaigns across{" "}
-            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne</TextLink>&rsquo;s south-east and
-            eastern suburbs.
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run, and GPS-tracked so you see the
+            routes it took, not just an invoice. It applies across our{" "}
+            <TextLink href="/services/flyer-distribution">flyer distribution</TextLink> and{" "}
+            <TextLink href="/services/letterbox-distribution">letterbox distribution</TextLink> campaigns. Get a price on
+            the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page.
           </p>
         </Callout>
       </div>

@@ -78,7 +78,7 @@ export default function CatalogueDelivery() {
           { name: "Catalogue Delivery" },
         ]}
         h1="Catalogue Delivery Across Melbourne"
-        lead="Catalogue distribution for retailers who want their catalogue read, not lost in a pile. Each one goes into the letterbox on its own, and every route is GPS-tracked."
+        lead="Get your catalogues into letterboxes across Melbourne's south-east with GPS-tracked distribution, delivered on their own."
         image={{ src: "/images/redesign/delivery-real.jpg", alt: "A South East Flyers walker delivering to a Melbourne letterbox" }}
       />
 
@@ -155,12 +155,13 @@ export default function CatalogueDelivery() {
       </Section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
-        <Callout title="Catalogue distribution across Melbourne's south-east">
+        <Callout title="Catalogues across Melbourne's south-east">
           <p className="m-0">
-            Catalogues are quoted on size and weight; single-sheet flyer pricing is on the{" "}
+            Every drop is exclusive, with no other advertisers&rsquo; catalogues in the run. Catalogues are quoted on
+            size and weight; single-sheet flyer pricing is on the{" "}
             <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page. We cover the suburbs on our{" "}
-            <TextLink href="/melbourne/flyer-distribution-south-east-melbourne">south-east Melbourne</TextLink> page.
-            For brochures and folded leaflets, see{" "}
+            <TextLink href="/melbourne/flyer-distribution-south-east-melbourne">south-east Melbourne</TextLink> page, and
+            for folded leaflets see{" "}
             <TextLink href="/services/pamphlet-delivery">pamphlet and brochure distribution</TextLink>.
           </p>
         </Callout>

@@ -63,7 +63,7 @@ const faqs = [
   {
     question: "Do letterbox drops actually work?",
     answer:
-      "For local marketing, yes: a flyer in the letterbox reaches nearby households directly and doesn't get lost in a crowded online feed. It works best when the offer is genuinely local and relevant and the distribution is targeted to the right suburbs, which is exactly what we help with.",
+      "For local marketing, yes: a flyer in the letterbox reaches nearby households directly and doesn't get lost online. It works best with a genuinely local offer targeted to the right suburbs.",
   },
   {
     question: "How many households will 1,000 flyers reach?",
@@ -102,7 +102,7 @@ export default function LetterboxDistribution() {
       <PageHero
         crumbs={[{ name: "Home", href: "/" }, { name: "Letterbox distribution" }]}
         h1="Letterbox distribution"
-        lead="Suburb-by-suburb letterbox drops across Melbourne's south-east and eastern suburbs, no junk mail compliant, GPS-tracked and fully reported."
+        lead="Get your flyers into letterboxes on their own with GPS-tracked letterbox distribution, never bundled with other advertisers."
         tagline="You provide the flyers. We handle the distribution."
         image={{ src: "/images/redesign/walker-street.jpg", alt: "A walker checking flyers beside a brick letterbox on a leafy street" }}
       />
@@ -119,6 +119,18 @@ export default function LetterboxDistribution() {
           flyers, scaling up for larger runs across{" "}
           <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne</TextLink>&rsquo;s south-east and
           eastern suburbs.
+        </p>
+      </Section>
+
+      <Section title="Exclusive drops, not shared bundles">
+        <p>
+          Most letterbox services run shared drops: your flyer is collated with other advertisers&rsquo; material and
+          delivered as one bundle. It is cheaper per home because several businesses split the walk.
+        </p>
+        <p>
+          Every South East Flyers drop is exclusive. A walker carries only your flyer on the route, so it lands on its
+          own instead of inside a pile of catalogues. It costs a little more and gets read far more, which matters most
+          when you need the phone to ring.
         </p>
       </Section>
 
@@ -163,12 +175,12 @@ export default function LetterboxDistribution() {
       </section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pb-[clamp(80px,9vw,128px)]">
-        <Callout title="Related services">
+        <Callout title="Exclusive by default">
           <p className="m-0">
-            Letterbox distribution pairs naturally with{" "}
-            <TextLink href="/services/flyer-distribution">flyer distribution</TextLink> and suburb-level campaigns
-            across <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne</TextLink>. Tell us your
-            target area and we&rsquo;ll recommend the most practical approach.
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. It pairs with{" "}
+            <TextLink href="/services/flyer-distribution">flyer distribution</TextLink> and{" "}
+            <TextLink href="/services/targeted-flyer-distribution">targeted distribution</TextLink>. Get a price on the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page.
           </p>
         </Callout>
       </div>

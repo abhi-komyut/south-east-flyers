@@ -96,7 +96,7 @@ export default function TargetedFlyerDistribution() {
       <PageHero
         crumbs={[{ name: "Home", href: "/" }, { name: "Targeted flyer distribution" }]}
         h1="Targeted flyer distribution"
-        lead="Choose exactly where your flyers go. We help you define a practical distribution area, by suburb, postcode or a defined pocket, so your material reaches the areas that matter to your business."
+        lead="Get your flyers into the exact suburbs and streets that matter with GPS-tracked targeted flyer distribution."
         tagline="You provide the flyers. We handle the distribution."
         image={{ src: "/images/redesign/walker-ebike.jpg", alt: "An e-bike distributor delivering flyers on a residential street" }}
       />
@@ -145,14 +145,26 @@ export default function TargetedFlyerDistribution() {
         </Reveal>
       </section>
 
-      <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pb-[clamp(80px,9vw,128px)]">
-        <Callout title="Related services">
+      <Section title="Start with the streets that matter">
+        <p>
+          Most campaigns begin with the 1,000 to 2,500 homes closest to your shop, listing or base, then widen into the
+          suburbs that respond. A cafe might cover the streets around its strip; an agent farms the blocks near a
+          listing.
+        </p>
+        <p>
+          Name a suburb like <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink> or a radius
+          from your door, and we map the streets most likely to reach your customers. See the full{" "}
+          <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> for every suburb.
+        </p>
+      </Section>
+
+      <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14 pb-[clamp(80px,9vw,128px)]">
+        <Callout title="Targeting across Melbourne">
           <p className="m-0">
-            Targeted campaigns run through our <TextLink href="/services/flyer-distribution">flyer distribution</TextLink>{" "}
-            and <TextLink href="/services/letterbox-distribution">letterbox distribution</TextLink> services, are
-            tracked with <TextLink href="/services/gps-tracked-flyer-distribution">GPS tracking</TextLink>, and cover
-            the suburbs listed on our <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne</TextLink>{" "}
-            page.
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run, within the exact area you
+            choose. It runs through our <TextLink href="/services/flyer-distribution">flyer distribution</TextLink> and{" "}
+            <TextLink href="/services/gps-tracked-flyer-distribution">GPS-tracked</TextLink> services. Get a price on the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page.
           </p>
         </Callout>
       </div>
