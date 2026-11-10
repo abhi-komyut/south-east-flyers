@@ -34,27 +34,27 @@ const faqs = [
   {
     question: "How many letterboxes are there in Hawthorn?",
     answer:
-      "Hawthorn 3122 has about 11,900 homes, a mix of houses and apartment blocks. Your quote gives the reachable count for the streets you choose, since some apartment blocks have shared mail rooms.",
-  },
-  {
-    question: "How much of Hawthorn can a letterbox drop cover?",
-    answer:
-      "Up to all 11,900 homes across the suburb, though many Hawthorn businesses start with 1,000 to 2,500 flyers around Glenferrie Road or Swinburne before covering more of the suburb.",
+      "About 11,900, a mix of houses and apartment blocks. Your quote gives the reachable count for the streets you choose, since some blocks have shared mailrooms.",
   },
   {
     question: "Does Hawthorn suit flyers aimed at students?",
     answer:
-      "Yes, around Swinburne University and the Glenferrie Road and station end of the suburb, where share houses and apartments are concentrated. Further from the station, the audience is more family homeowners.",
+      "Yes, around Swinburne University and the Glenferrie Road and station end, where share houses and apartments cluster. Further from the station the audience shifts to family homeowners.",
+  },
+  {
+    question: "How much of Hawthorn can a letterbox drop cover?",
+    answer:
+      "Up to all 11,900 homes, though many Hawthorn businesses start with 1,000 to 2,500 flyers around Glenferrie Road or Swinburne before widening out.",
   },
   {
     question: "Can you target just the streets near Glenferrie Road?",
     answer:
-      "Yes. Give us your shop address and we will quote for the surrounding streets rather than the whole suburb. That's the usual starting point for cafes and shops that draw from foot traffic on the strip itself.",
+      "Yes. Send your shop address and we'll quote the surrounding streets rather than the whole suburb. That is the usual starting point for cafes and shops living on foot traffic.",
   },
   {
-    question: "Do you deliver in Camberwell and Kew too?",
+    question: "Do you also deliver in Camberwell and Kew?",
     answer:
-      "Yes. Both border Hawthorn and are in our service area, so one campaign can cover all three with a single GPS report, which is useful if your customers don't stop neatly at a suburb boundary.",
+      "Yes. Both border Hawthorn in the City of Boroondara, so one campaign can cover all three under a single GPS report when your customers cross suburb lines.",
   },
 ];
 
@@ -97,56 +97,52 @@ export default function Hawthorn() {
         ]}
       />
 
-      <Section title="Hawthorn at a glance" first>
+      <Section title="Flyer distribution around Glenferrie Road" first>
         <p>
-          Hawthorn is an established inner-east suburb in the City of Boroondara, with Glenferrie Road as its
-          main strip of shops, cafes and banks. Hawthorn and Glenferrie stations sit on the Belgrave, Lilydale
-          and Alamein lines, and trams 16 and 109 run through as well.
-        </p>
-        <p>
-          For a letterbox drop that means about 11,900 homes, a mix of period houses on the quieter streets and
-          apartment blocks closer to the station and Swinburne University.
+          Hawthorn is an established inner-east suburb in the City of Boroondara, with Glenferrie Road as its main strip
+          of shops, cafes and banks. Hawthorn and Glenferrie stations sit on the Belgrave, Lilydale and Alamein lines,
+          and trams 16 and 109 run through as well. A full Hawthorn campaign reaches up to 11,900 homes.
         </p>
       </Section>
 
       <Section title="Two audiences on the same streets">
         <p>
-          Swinburne University&rsquo;s main campus sits in Hawthorn, so the blocks near the station and Glenferrie
-          Road have a large student and share-house population. A few streets further out, the audience shifts
-          to long-term family owners in houses.
+          Swinburne University&rsquo;s main campus sits in Hawthorn, so the blocks near the station and Glenferrie Road
+          hold a large student and share-house population. A few streets out, the audience shifts to long-term family
+          owners in houses.
         </p>
         <p>
-          That split matters for targeting. A flyer aimed at students does better close to the campus and
-          station; a flyer aimed at homeowners does better in the residential streets further from Glenferrie
-          Road. Tell us which audience you want and we will plan the route around it.
+          That split shapes the targeting. A flyer aimed at students does better close to the campus and station; a
+          flyer aimed at homeowners does better in the residential streets further from Glenferrie Road. Tell us which
+          audience you want and we plan the route around it.
         </p>
       </Section>
 
       <Section title="Apartments near the station, houses further out">
         <p>
-          Blocks close to Glenferrie Road and the stations are mostly flats, some with shared mail rooms that
-          limit how many letterboxes a route can reach. The quieter streets toward Hawthorn East and Kew are
-          mostly houses with a letterbox at the front gate, so coverage there is close to complete.
+          Blocks close to Glenferrie Road and the stations are mostly flats, some with shared mailrooms that limit how
+          many letterboxes a route can reach. The quieter streets toward Hawthorn East and Kew are mostly houses with a
+          letterbox at the front gate, so coverage there is close to complete.
         </p>
         <p>
-          We plan each route around this. If your offer suits students, we focus on the station end; if it
-          suits homeowners, we focus on the house streets.
+          Our walkers plan each route around this. If your offer suits students, we work the station end; if it suits
+          homeowners, we work the house streets.
         </p>
       </Section>
 
       <Section title="Glenferrie Road trade and Scotch College">
         <p>
-          Glenferrie Road carries steady foot traffic from Swinburne, Scotch College families and local
-          residents, so shops and cafes there benefit from a flyer that reaches the surrounding blocks directly
-          rather than competing for attention on the strip itself.
+          Glenferrie Road carries steady foot traffic from Swinburne, Scotch College families and local residents, so
+          a shop or cafe there does better with a flyer that reaches the surrounding blocks directly than with one more
+          sign competing on the strip.
         </p>
         <p>
-          A typical first run is 1,000 to 2,500 flyers in the streets behind the strip, repeated each term as
-          the student population turns over.
+          A typical first run is 1,000 to 2,500 flyers in the streets behind the strip, repeated each term as the
+          student population turns over.
         </p>
       </Section>
 
-      <Section title="Who letterbox drops in Hawthorn suit">
+      <Section title="Who uses letterbox drops in Hawthorn">
         <Bullets
           items={[
             <>Cafes, cheap eats and services aimed at students near Swinburne</>,
@@ -162,15 +158,13 @@ export default function Hawthorn() {
       </Section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
-        <Callout
-          title="Letterbox drop quantities in Hawthorn"
-        >
+        <Callout title="Hawthorn and nearby suburbs">
           <p className="m-0">
-            Every drop is <strong className="text-ink">delivered exclusively, never bundled</strong>. Our flyer
-            distribution across Boroondara also reaches Kew and Camberwell. See the{" "}
-            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
-            <TextLink href="/melbourne/flyer-distribution-kew">Kew</TextLink>,{" "}
-            <TextLink href="/melbourne/flyer-distribution-camberwell">Camberwell</TextLink> and the rest of our{" "}
+            Every Hawthorn run carries your flyer alone, <strong className="text-ink">never shared with another advertiser</strong>. We also
+            deliver in <TextLink href="/melbourne/flyer-distribution-kew">Kew</TextLink> and{" "}
+            <TextLink href="/melbourne/flyer-distribution-camberwell">Camberwell</TextLink> next door, so a Boroondara
+            campaign can span a few suburbs at once. Quantity pricing is set out on the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, with the full list on our{" "}
             <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
           </p>
         </Callout>
@@ -179,8 +173,8 @@ export default function Hawthorn() {
       <HowItWorks />
 
       <QuickQuoteForm
-        heading="Ready to reach Hawthorn letterboxes?"
-        lead="Tell us your streets and quantity, and we'll send a quote with the letterbox count, with a quick turnaround."
+        heading="Get a quote for your Hawthorn drop"
+        lead="Say whether you want the student end or the house streets, and we'll send back the letterbox count and a price."
         suburbHint="e.g. Hawthorn, Hawthorn East, Kew"
       />
 
