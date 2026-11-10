@@ -62,12 +62,16 @@ export default function Home() {
 
       <FactsStrip
         stats={[
-          { value: "$180", label: "per 1,000 flyers, to start" },
+          { value: "From $180", label: "per 1,000 flyers*" },
           { value: "100%", label: "GPS-tracked delivery routes" },
           { value: "Never", label: "bundled with other advertisers" },
           { value: "40+", label: "suburbs across the south-east" },
         ]}
       />
+
+      <p className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-5 text-[13px] leading-snug text-muted">
+        *Starting price for 1,000 flyers. Your quote depends on the suburbs and quantity you choose.
+      </p>
 
       <LogoWall />
 
@@ -159,8 +163,8 @@ export default function Home() {
               Proof it still works.
             </h2>
             <p className="m-0 text-[17px] leading-[1.7] text-body">
-              Letterbox marketing isn&rsquo;t coasting on habit. The response data, the household behaviour and the
-              biggest advertisers in the country all point the same way.
+              Letterbox marketing still earns its place. The response data, how households treat their mail, and where
+              big retailers spend all point the same way.
             </p>
           </Reveal>
           <div className="flex flex-wrap gap-10 gap-x-14">
@@ -168,17 +172,17 @@ export default function Home() {
               {
                 value: "1 to 3%",
                 title: "Response rates have held steady for years.",
-                body: "Research from Australia Post and direct marketing agencies puts letterbox response rates at 1 to 3%. For tightly targeted local campaigns, that figure has crept up as digital fatigue sets in.",
+                body: "Australia Post and direct marketing research puts letterbox response at 1 to 3%, and tight local targeting pushes it higher.",
               },
               {
                 value: "81%",
                 title: "of Australians check their mail the same day.",
-                body: "Most households receive fewer than two unaddressed items a week, so a flyer in the letterbox faces far less competition than an ad in a Facebook or Instagram feed.",
+                body: "Households get fewer than two unaddressed items a week, so your flyer faces far less competition than a social feed.",
               },
               {
                 value: "Millions",
                 title: "spent every year by major Australian retailers.",
-                body: "The country's biggest catalogue advertisers keep allocating budget to letterbox drops because the return on investment keeps proving itself, year after year.",
+                body: "The biggest catalogue advertisers keep funding letterbox drops because the return keeps proving itself.",
               },
             ].map((item, i) => (
               <Reveal key={item.value} delay={i * 80} className="flex-[1_1_300px] flex flex-col gap-3 pt-6 border-t border-line">

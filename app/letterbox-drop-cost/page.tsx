@@ -7,6 +7,7 @@ import {
   SITE_URL,
   PageHero,
   Section,
+  Callout,
   Bullets,
   TextLink,
   JsonLd,
@@ -43,7 +44,7 @@ const faqs = [
   {
     question: "Is printing included in the price?",
     answer:
-      "No. We distribute flyers; we don't print them. You can use any printer and have the flyers sent to us — delivery and the GPS report are covered in your quote.",
+      "No. We distribute flyers, we don't print them. Use any printer and have the flyers sent to us. Delivery and the GPS report are covered in your quote.",
   },
   {
     question: "How many flyers do I need?",
@@ -151,9 +152,8 @@ export default function LetterboxDropCost() {
           share the walk.
         </p>
         <p>
-          The trade-off is attention. In a bundle, your flyer competes with catalogues and other offers before the
-          household even sees it. With exclusive delivery it arrives on its own, which matters most for businesses
-          that need a phone call, such as a plumber, a real estate agent or a local clinic.
+          The trade-off is attention. In a bundle your flyer competes with other offers before it is seen. On its own
+          it arrives first, which matters most when you need the phone to ring, like a plumber, an agent or a clinic.
         </p>
       </Section>
 
@@ -189,6 +189,17 @@ export default function LetterboxDropCost() {
           across our <TextLink href="/melbourne/flyer-distribution-south-east-melbourne">south-east Melbourne</TextLink> suburbs.
         </p>
       </Section>
+
+      <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
+        <Callout title="What your quote covers">
+          <p className="m-0">
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. Send your quantity and suburbs
+            for a price, see where we deliver on the{" "}
+            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>, or start with a
+            single suburb like <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink>.
+          </p>
+        </Callout>
+      </div>
 
       <QuickQuoteForm
         heading="Get an exact price for your area"
