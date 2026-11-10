@@ -36,27 +36,27 @@ const faqs = [
   {
     question: "How many letterboxes are there in Bentleigh?",
     answer:
-      "Bentleigh 3204 has about 7,500 homes, mostly separate houses with street letterboxes. That gives a route high coverage across most of the suburb.",
+      "About 7,500. Bentleigh is mostly separate houses, so nearly every home has a street letterbox a walker can reach.",
   },
   {
-    question: "When should I drop flyers in Bentleigh?",
+    question: "When is the best time for a drop in Bentleigh?",
     answer:
-      "For family services, late January and the fortnight before each school term tend to land when parents are deciding on tutoring and activities. A first run of 1,000 flyers around Centre Road is a sensible way to start.",
+      "Family services do best around late January and the start of each school term, when parents are choosing activities.",
   },
   {
-    question: "Is Bentleigh a good suburb for family-focused flyers?",
+    question: "Why is Bentleigh strong for family-focused flyers?",
     answer:
-      "Yes. Many buyers choose Bentleigh for nearby government secondary school zoning, so flyers for tutoring, kids' activities and family services tend to do well here.",
+      "Families buy here for the government secondary school zones and tend to stay, so school and family services get repeat local demand.",
   },
   {
     question: "Can I target just the streets around Centre Road?",
     answer:
-      "Yes. Give us your shop address and we will quote for the surrounding streets rather than the whole suburb, which is the usual starting point for shops and cafes along the strip.",
+      "Yes. Point us to your shop and the nearby streets, and we'll quote that block.",
   },
   {
-    question: "Are Bentleigh and Patterson train stations both inside the drop area?",
+    question: "Do you also deliver in Bentleigh East and Caulfield?",
     answer:
-      "Yes, both sit on the Frankston line within Bentleigh, and we can plan a route around either or both depending on where your customers are.",
+      "Yes. Both sit beside Bentleigh in the City of Glen Eira, so one run can cover a couple of them together.",
   },
 ];
 
@@ -99,39 +99,32 @@ export default function Bentleigh() {
         ]}
       />
 
-      <Section title="7,500 homes, mostly separate houses" first>
+      <Section title="Flyer distribution around Centre Road" first>
         <p>
-          Bentleigh is a family suburb in the City of Glen Eira, with Centre Road as its main strip of more
-          than 250 shops, cafes and services. Bentleigh and Patterson stations both sit on the Frankston line
-          within the suburb.
-        </p>
-        <p>
-          For a letterbox drop that means about 7,500 homes, most of them separate houses, with a smaller mix
-          of townhouses and apartments closer to Centre Road and the stations.
+          Centre Road is Bentleigh&rsquo;s shopping strip, and Bentleigh and Patterson stations sit on the Frankston
+          line within the suburb. A suburb-wide run reaches up to 7,500 Bentleigh homes.
         </p>
       </Section>
 
-      <Section title="A suburb chosen for its school zoning">
+      <Section title="Bentleigh's school zones draw families">
         <p>
-          A lot of Bentleigh&rsquo;s buyer demand comes from families chasing well-regarded government
-          secondary school zones nearby. That keeps the suburb full of school-age families, which supports
-          steady demand for tutoring, kids&rsquo; activities and family services through the school year.
+          Buyers pick Bentleigh for its government secondary school zones, and families who move in tend to stay. That
+          keeps steady demand for tutors, kids&rsquo; activities and family services.
         </p>
         <p>
-          Flyers timed to late January and the fortnight before each school term tend to land when parents are
-          actually deciding on activities and services for their kids.
+          Those businesses do best dropping around late January and the fortnight before each term, when parents are
+          deciding what their kids will do.
         </p>
       </Section>
 
-      <Section title="A route reaches most of Bentleigh's streets">
+      <Section title="A suburb of separate houses">
         <p>
-          Houses make up most of Bentleigh&rsquo;s homes, with letterboxes on the street rather than shared
-          mail rooms, so a route reaches a high share of the suburb. Townhouses and apartments near Centre Road
-          and the stations fill in the rest.
+          Bentleigh is mostly separate houses, with townhouses and a few apartments near the stations. Houses line most
+          streets, so a walker works down a whole street without skipping doors.
         </p>
         <p>
-          Shops along Centre Road draw from the blocks within walking distance, so a 1,000 to 2,500 flyer drop
-          around the strip is a sensible first test before covering more of the suburb.
+          Most shops open with 1,000 to 2,500 flyers in the streets closest to the door, then push further out once the
+          GPS map shows which blocks responded.
         </p>
       </Section>
 
@@ -145,27 +138,31 @@ export default function Bentleigh() {
             className="w-full h-full object-cover object-[50%_45%]"
           />
         </div>
-        <figcaption className="text-sm text-muted">Most Bentleigh homes have letterboxes right on the street.</figcaption>
+        <figcaption className="text-sm text-muted">A walker on a Bentleigh street.</figcaption>
       </Reveal>
 
-      <Section title="Centre Road trade and the family market">
+      <Section title="Centre Road shops and the family market">
         <p>
-          Centre Road&rsquo;s long run of shops competes for the same local households, so a flyer delivered on
-          its own, rather than folded into a stack of other offers, is more likely to get read on the kitchen
-          bench.
+          The Centre Road strip competes for the same local households, so a flyer delivered on its own, not folded
+          into a stack of offers, is the one that gets read on the bench.
         </p>
         <p>
-          Because Bentleigh skews family rather than high-turnover rental, a flyer that stays in the house for a
-          few weeks has more chances to be acted on than in a suburb with faster tenant churn.
+          Centre Road itself is one of the south-east&rsquo;s busier eating strips, with a long run of cafes, bakeries
+          and restaurants between Bentleigh and Patterson stations. A new menu or opening offer dropped into the streets
+          either side of the strip reaches the households who walk to it, rather than drivers passing through.
+        </p>
+        <p>
+          Because Bentleigh skews family rather than short-stay rental, a flyer that sits in the house for a few weeks
+          has more chances to be acted on than in a suburb with faster turnover.
         </p>
       </Section>
 
-      <Section title="Tutors, agents and Centre Road trades in Bentleigh">
+      <Section title="Who uses letterbox drops in Bentleigh">
         <Bullets
           items={[
             <>Tutors, music schools and kids&rsquo; activity programs</>,
             <><TextLink href="/industries/real-estate">Real estate agents</TextLink> working family homes near the school zones</>,
-            <><TextLink href="/industries/home-services">Home services</TextLink> such as <TextLink href="/industries/plumbers">plumbers</TextLink> and <TextLink href="/industries/electricians">electricians</TextLink></>,
+            <>Plumbers, electricians and other <TextLink href="/industries/home-services">home services</TextLink></>,
             <><TextLink href="/industries/healthcare">Dentists, GPs and physios</TextLink> along Centre Road</>,
             <>Cafes and shops on Centre Road</>,
           ]}
@@ -177,15 +174,16 @@ export default function Bentleigh() {
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout
-          title="Covering Bentleigh's 7,500 homes"
+          title="Bentleigh and nearby suburbs"
         >
           <p className="m-0">
-            Every Bentleigh drop goes out on its own, with <strong className="text-ink">no other advertisers&rsquo; flyers in the run</strong>. Our flyer
-            distribution across Glen Eira also reaches Caulfield and{" "}
-            <TextLink href="/melbourne/flyer-distribution-bentleigh-east">Bentleigh East</TextLink>. See the{" "}
-            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or compare with{" "}
-            <TextLink href="/melbourne/flyer-distribution-caulfield">Caulfield</TextLink> and the rest of our{" "}
-            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
+            In Bentleigh your flyer is delivered on its own, <strong className="text-ink">never stacked with another advertiser&rsquo;s</strong>. We
+            also cover <TextLink href="/melbourne/flyer-distribution-bentleigh-east">Bentleigh East</TextLink> and{" "}
+            <TextLink href="/melbourne/flyer-distribution-caulfield">Caulfield</TextLink> next door, so a Glen Eira
+            campaign can take in a few suburbs together. Quantities and pricing sit on the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, and the{" "}
+            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> shows where else
+            we deliver.
           </p>
         </Callout>
       </div>
@@ -194,7 +192,7 @@ export default function Bentleigh() {
 
       <QuickQuoteForm
         heading="Get a quote for your Bentleigh drop"
-        lead="Send us your streets and flyer count, and we'll come back with the letterbox number and a quote, quickly."
+        lead="Point us to your streets or a block around your shop, and we'll send back the letterbox count and a price."
         suburbHint="e.g. Bentleigh, Bentleigh East, Caulfield"
       />
 
