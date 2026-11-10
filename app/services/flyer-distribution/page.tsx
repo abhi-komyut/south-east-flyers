@@ -58,7 +58,7 @@ const faqs = [
   {
     question: "What's the difference between flyer distribution and letterbox distribution?",
     answer:
-      "In practice they're the same thing: physically delivering your printed material into residential letterboxes. “Letterbox distribution” just emphasises the letterbox drop itself. We handle both, and most campaigns use the two terms interchangeably.",
+      "In practice they're the same: delivering printed material into residential letterboxes. We handle both, and most campaigns use the terms interchangeably.",
   },
   {
     question: "Do you print the flyers?",
@@ -73,7 +73,7 @@ const faqs = [
   {
     question: "Are my flyers delivered individually or bundled with other ads?",
     answer:
-      "Individually. We have a strict anti-bundling policy, so your flyer is delivered on its own into each letterbox rather than stuffed in with a stack of other advertising, which means it actually gets noticed.",
+      "Individually. Your flyer is delivered on its own into each letterbox, never stuffed in with other advertising, so it gets noticed.",
   },
   {
     question: "How is the delivery tracked?",
@@ -102,7 +102,7 @@ export default function FlyerDistribution() {
       <PageHero
         crumbs={[{ name: "Home", href: "/" }, { name: "Flyer distribution" }]}
         h1="Professional flyer distribution"
-        lead="Residential flyer and leaflet distribution across Melbourne's south-east and eastern suburbs, with GPS tracking and full campaign reporting."
+        lead="Get your flyers into letterboxes across Melbourne's south-east with GPS-tracked flyer distribution, planned and reported end to end."
         tagline="You provide the flyers. We handle the distribution."
         image={{ src: "/images/redesign/letterbox-hand.jpg", alt: "A hand posting a flyer into a steel letterbox" }}
       />
@@ -166,15 +166,16 @@ export default function FlyerDistribution() {
       </section>
 
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pb-[clamp(80px,9vw,128px)]">
-        <Callout title="What you need to provide">
+        <Callout title="Starting a flyer run">
           <p className="m-0">
-            You provide the printed flyers and let us know which suburbs you want to reach, roughly how many flyers
-            you have and when you&rsquo;d like the campaign to run. If you&rsquo;re not sure how far your quantity
-            will stretch, we&rsquo;ll help you work out a practical distribution area.
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. You provide the printed flyers
+            and your target suburbs; we plan the routes and report back. Not sure how far your quantity stretches?
+            We&rsquo;ll map a practical area.
           </p>
           <p className="m-0">
-            Related services include <TextLink href="/services/letterbox-distribution">letterbox distribution</TextLink>{" "}
-            and targeted suburb campaigns across <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne</TextLink>.
+            See <TextLink href="/services/letterbox-distribution">letterbox distribution</TextLink>, get a price on the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or browse the{" "}
+            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
           </p>
         </Callout>
       </div>
