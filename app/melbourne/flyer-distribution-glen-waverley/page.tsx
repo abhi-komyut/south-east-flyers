@@ -36,7 +36,7 @@ const faqs = [
   {
     question: "How many letterboxes are there in Glen Waverley?",
     answer:
-      "About 16,500, mostly houses with a street letterbox, so our walkers reach nearly every door.",
+      "About 16,500, almost all separate houses, so a route misses very few homes across the suburb.",
   },
   {
     question: "Should my Glen Waverley flyer be bilingual?",
@@ -46,17 +46,17 @@ const faqs = [
   {
     question: "Can I target the streets around the Kingsway or The Glen?",
     answer:
-      "Yes. Send us your address and we'll quote for those streets, not the whole suburb.",
+      "Yes. Name a radius from your shop or The Glen, and we'll price that area, not the whole suburb.",
   },
   {
     question: "When is the best time for a drop in Glen Waverley?",
     answer:
-      "Restaurants do well any time; tutors and family services should drop at the start of each school term.",
+      "Restaurants pull custom any week; family services land best as a new school term begins.",
   },
   {
     question: "Do you also deliver in Mount Waverley and Wheelers Hill?",
     answer:
-      "Yes. Both border Glen Waverley and are in our service area, so one campaign can cover all three with one GPS report.",
+      "Yes. Both border Glen Waverley in the City of Monash, so a single run can cover all three.",
   },
 ];
 
@@ -102,7 +102,7 @@ export default function GlenWaverley() {
       <Section title="Flyer distribution around the Kingsway" first>
         <p>
           The Kingsway is Glen Waverley&rsquo;s restaurant and cafe strip, with The Glen shopping centre and the station
-          nearby. A targeted letterbox campaign across Glen Waverley can reach up to 16,500 homes.
+          close by. At full coverage a campaign reaches up to 16,500 Glen Waverley homes.
         </p>
       </Section>
 
@@ -115,10 +115,14 @@ export default function GlenWaverley() {
         </p>
       </Section>
 
-      <Section title="Houses everywhere, so near-full coverage">
+      <Section title="A suburb of houses, so routes miss little">
         <p>
-          Apartments are the exception here, so almost every letterbox sits on the street and our walkers reach nearly
-          every door. The suburb is large, so most businesses start with the streets nearest their shop, then expand.
+          Apartments are rare here, so almost every letterbox sits at a front gate and a route misses very few homes.
+          That keeps the cost per home low on a full-suburb campaign.
+        </p>
+        <p>
+          Glen Waverley is large, so most businesses split it into two or three drops a few weeks apart, starting with
+          the streets nearest their shop and widening as the GPS maps come back.
         </p>
       </Section>
 
@@ -132,13 +136,17 @@ export default function GlenWaverley() {
             className="w-full h-full object-cover object-[50%_45%]"
           />
         </div>
-        <figcaption className="text-sm text-muted">Almost every Glen Waverley home has a letterbox right on the street.</figcaption>
+        <figcaption className="text-sm text-muted">Almost every Glen Waverley home has a letterbox at the front gate.</figcaption>
       </Reveal>
 
       <Section title="Bilingual flyers reach more homes">
         <p>
-          Glen Waverley has a large Mandarin- and Cantonese-speaking community. An English flyer with a line or two in
-          Chinese often gets more attention, and we deliver whatever you print.
+          Glen Waverley has large Mandarin- and Cantonese-speaking communities, and a sizeable Sri Lankan one. An
+          English flyer with a line or two in Chinese often gets more attention, and we deliver whatever you print.
+        </p>
+        <p>
+          The GPS map lets you run a bilingual flyer on some streets and an English one on others, then compare which
+          pulled more calls.
         </p>
       </Section>
 
@@ -161,12 +169,12 @@ export default function GlenWaverley() {
           title="Glen Waverley and nearby suburbs"
         >
           <p className="m-0">
-            Every drop is exclusive, with <strong className="text-ink">no other advertisers&rsquo; flyers in the run</strong>. We also cover{" "}
-            <TextLink href="/melbourne/flyer-distribution-mount-waverley">Mount Waverley</TextLink> and Wheelers Hill, so
-            campaigns can be spread across different suburbs. See the{" "}
-            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page or the rest of our{" "}
-            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> to see how we can
-            help you.
+            Each Glen Waverley drop carries <strong className="text-ink">only your flyer, never a bundle</strong>. We also deliver in{" "}
+            <TextLink href="/melbourne/flyer-distribution-mount-waverley">Mount Waverley</TextLink> and Wheelers Hill
+            next door, so a Monash campaign can run across a few suburbs. The{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page lays out quantities, and the{" "}
+            <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> covers the other
+            suburbs we reach.
           </p>
         </Callout>
       </div>
@@ -175,7 +183,7 @@ export default function GlenWaverley() {
 
       <QuickQuoteForm
         heading="Get a quote for your Glen Waverley drop"
-        lead="Send us your streets and flyer count, and we'll come back with the letterbox number and a quote, quickly."
+        lead="Name your streets or a radius from your shop, and we'll send back the letterbox count and a price."
         suburbHint="e.g. Glen Waverley, Mount Waverley, Wheelers Hill"
       />
 
