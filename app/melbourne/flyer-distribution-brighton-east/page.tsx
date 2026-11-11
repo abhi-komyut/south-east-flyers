@@ -102,7 +102,7 @@ export default function BrightonEast() {
         <p>
           Brighton East sits east of the Nepean Highway, between Brighton and Bentleigh, with Hawthorn Road carrying its
           main shops and Dendy Park and the public golf course nearby. A targeted letterbox campaign across Brighton
-          East can reach up to 6,400 homes. Flyer distribution in Brighton East runs across the 3187 postcode.
+          East can reach up to 6,400 homes. Our flyer distribution in Brighton East works the house streets around Hawthorn Road and Dendy Park.
         </p>
       </Section>
 

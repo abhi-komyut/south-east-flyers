@@ -102,7 +102,7 @@ export default function BentleighEast() {
         <p>
           Bentleigh East is one of the largest suburbs in the City of Glen Eira. It has no train station, so daily life
           runs on the Centre Road and East Boundary Road strips. A targeted letterbox campaign across Bentleigh East can
-          reach up to 12,000 homes, usually planned in stages. Flyer distribution in Bentleigh East runs across the 3165 postcode.
+          reach up to 12,000 homes, usually planned in stages. Flyer distribution in Bentleigh East spreads from Centre Road to East Boundary Road and the parades between.
         </p>
       </Section>
 

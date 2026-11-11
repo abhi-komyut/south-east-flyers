@@ -33,9 +33,9 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: "How many letterboxes are there in Hampton?",
+    question: "How many homes can a letterbox drop in Hampton reach?",
     answer:
-      "About 7,900, mostly houses and townhouses, with some apartments near the station. A letterbox drop in Hampton starts from 1,000 flyers.",
+      "About 7,900, mostly houses and townhouses, with some apartments near the station.",
   },
   {
     question: "Is Hampton the same as Hampton East?",
@@ -101,7 +101,7 @@ export default function Hampton() {
       <Section title="Flyer distribution around Hampton Street" first>
         <p>
           Hampton Street runs from the station down towards the beach and carries most of the suburb&rsquo;s shops,
-          cafes and clinics. A targeted letterbox campaign across Hampton can reach up to 7,900 homes. Flyer distribution in Hampton runs across the 3188 postcode.
+          cafes and clinics. A targeted letterbox campaign across Hampton can reach up to 7,900 homes. Flyer distribution in Hampton follows the street from the station down to the beach.
         </p>
       </Section>
 

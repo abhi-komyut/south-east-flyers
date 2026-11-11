@@ -33,9 +33,9 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: "How many letterboxes are there in Mount Waverley?",
+    question: "How many homes does a letterbox drop in Mount Waverley cover?",
     answer:
-      "About 13,900, mostly houses with a letterbox at the front gate. It is one of the larger suburbs we cover. A letterbox drop in Mount Waverley starts from 1,000 flyers.",
+      "About 13,900, mostly houses with a letterbox at the front gate. It is one of the larger suburbs we cover.",
   },
   {
     question: "How much of Mount Waverley can a drop cover?",
@@ -102,7 +102,7 @@ export default function MountWaverley() {
         <p>
           Mount Waverley is a family suburb in the City of Monash, with two stations on the Glen Waverley line, a
           village strip by the station and another around Pinewood. A targeted letterbox campaign across Mount Waverley
-          can reach up to 13,900 homes, usually planned in stages. Flyer distribution in Mount Waverley runs across the 3149 postcode. Our flyer distribution reaches Monash suburbs from Glen Waverley to Chadstone.
+          can reach up to 13,900 homes, usually planned in stages. Flyer distribution in Mount Waverley reaches both village strips and the school-zone streets between.
         </p>
       </Section>
 
@@ -141,7 +141,7 @@ export default function MountWaverley() {
           <p className="m-0">
             Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. We also cover{" "}
             <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink>, Wheelers Hill and
-            Oakleigh, so campaigns can be spread across different suburbs. See the{" "}
+            Oakleigh, so flyer distribution across Monash can run over several suburbs. See the{" "}
             <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page or the rest of our{" "}
             <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> to see how we can
             help you.

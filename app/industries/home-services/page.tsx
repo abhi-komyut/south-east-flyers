@@ -107,8 +107,7 @@ export default function HomeServices() {
         </p>
         <p>
           Exclusive delivery matters more for trades than most businesses. A plumber&rsquo;s flyer tucked inside a
-          supermarket catalogue is easy to miss; one that arrives on its own gets looked at. Home services marketing
-          works best when it stays this local.
+          supermarket catalogue is easy to miss; one that arrives on its own gets looked at.
         </p>
       </Section>
 
@@ -129,8 +128,8 @@ export default function HomeServices() {
 
       <Section title="Timing your drops through the year">
         <p>
-          Home service demand in Melbourne follows the weather. Dropping two to four weeks before the busy season puts
-          your flyer in the house before the problem does.
+          Home services marketing in Melbourne works to the weather: demand rises season by season, so dropping two to
+          four weeks before the busy period puts your flyer in the house before the problem does.
         </p>
         <div className="overflow-x-auto">
           <table className="w-full text-left border border-line rounded-card overflow-hidden">
