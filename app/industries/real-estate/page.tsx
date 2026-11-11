@@ -118,7 +118,8 @@ export default function RealEstate() {
         </p>
         <p>
           It also shows vendors the marketing is happening. A GPS map of every street covered beats an impression count
-          in a vendor report. It is real estate marketing Melbourne agencies have used for decades, now with GPS proof.
+          in a vendor report. Real estate flyer distribution has worked for Melbourne agencies for decades, now with
+          GPS proof.
         </p>
       </Section>
 

@@ -36,7 +36,7 @@ const faqs = [
   {
     question: "How many letterboxes are there in Glen Waverley?",
     answer:
-      "About 16,500, almost all separate houses, so a route misses very few homes.",
+      "About 16,500, almost all separate houses, so a route misses very few homes. A letterbox drop in Glen Waverley starts from 1,000 flyers.",
   },
   {
     question: "Should my Glen Waverley flyer be bilingual?",
@@ -99,10 +99,10 @@ export default function GlenWaverley() {
         ]}
       />
 
-      <Section title="Flyer distribution around the Kingsway" first>
+      <Section title="Flyer distribution around the Kingsway, Glen Waverley" first>
         <p>
           The Kingsway is Glen Waverley&rsquo;s restaurant and cafe strip, with The Glen shopping centre and the station
-          close by. A targeted letterbox campaign across Glen Waverley can reach up to 16,500 homes.
+          close by. A targeted letterbox campaign across Glen Waverley can reach up to 16,500 homes. Flyer distribution in Glen Waverley runs across the 3150 postcode.
         </p>
       </Section>
 

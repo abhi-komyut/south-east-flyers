@@ -35,7 +35,7 @@ const faqs = [
   {
     question: "How many letterboxes are there in Glen Iris?",
     answer:
-      "About 11,300. Just over half are houses, the rest townhouses and apartments. Your quote gives the reachable count for your streets.",
+      "About 11,300. Just over half are houses, the rest townhouses and apartments. Your quote gives the reachable count for your streets. A letterbox drop in Glen Iris starts from 1,000 flyers.",
   },
   {
     question: "Glen Iris is in two councils. Does that matter for a drop?",
@@ -98,11 +98,11 @@ export default function GlenIris() {
         ]}
       />
 
-      <Section title="Flyer distribution along Gardiners Creek" first>
+      <Section title="Flyer distribution along Gardiners Creek, Glen Iris" first>
         <p>
           Glen Iris follows Gardiners Creek between Malvern and Camberwell, split between Stonnington in the west and
           Boroondara in the east, with Gardiner and Glen Iris stations in the middle. A targeted letterbox campaign
-          across Glen Iris can reach up to 11,300 homes. Our walkers skip locked mailrooms, and your GPS report shows
+          across Glen Iris can reach up to 11,300 homes. Flyer distribution in Glen Iris runs across the 3146 postcode. Our walkers skip locked mailrooms, and your GPS report shows
           every block covered.
         </p>
       </Section>

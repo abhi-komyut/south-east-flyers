@@ -98,11 +98,11 @@ export default function Malvern() {
         ]}
       />
 
-      <Section title="Flyer distribution around Glenferrie Road" first>
+      <Section title="Flyer distribution around Glenferrie Road, Malvern" first>
         <p>
           Malvern sits in the City of Stonnington, its shops along Glenferrie Road and the High Street boutiques it
           shares with Armadale, with trams on Glenferrie, Wattletree and High Street. A targeted letterbox campaign
-          across Malvern can reach up to 4,800 homes.
+          across Malvern can reach up to 4,800 homes. Flyer distribution in Malvern runs across the 3144 postcode.
         </p>
       </Section>
 

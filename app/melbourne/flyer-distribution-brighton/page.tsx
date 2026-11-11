@@ -99,7 +99,7 @@ export default function Brighton() {
         ]}
       />
 
-      <Section title="Flyer distribution around Church Street" first>
+      <Section title="Flyer distribution around Church Street, Brighton" first>
         <p>
           Church Street and Bay Street are Brighton&rsquo;s shopping strips, with the Sandringham line running between
           them. A targeted letterbox campaign across Brighton can reach up to 10,500 homes.

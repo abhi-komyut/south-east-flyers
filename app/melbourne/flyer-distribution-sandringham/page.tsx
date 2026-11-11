@@ -102,7 +102,7 @@ export default function Sandringham() {
         <p>
           Sandringham village wraps around the station at the end of the Sandringham line, a short walk from the
           foreshore, the harbour and the yacht club. A targeted letterbox campaign across Sandringham can reach up to
-          4,900 homes.
+          4,900 homes. Flyer distribution in Sandringham runs across the 3191 postcode.
         </p>
       </Section>
 

@@ -35,7 +35,7 @@ const faqs = [
   {
     question: "How many letterboxes are there in Mount Waverley?",
     answer:
-      "About 13,900, mostly houses with a letterbox at the front gate. It is one of the larger suburbs we cover.",
+      "About 13,900, mostly houses with a letterbox at the front gate. It is one of the larger suburbs we cover. A letterbox drop in Mount Waverley starts from 1,000 flyers.",
   },
   {
     question: "How much of Mount Waverley can a drop cover?",
@@ -102,7 +102,7 @@ export default function MountWaverley() {
         <p>
           Mount Waverley is a family suburb in the City of Monash, with two stations on the Glen Waverley line, a
           village strip by the station and another around Pinewood. A targeted letterbox campaign across Mount Waverley
-          can reach up to 13,900 homes, usually planned in stages.
+          can reach up to 13,900 homes, usually planned in stages. Flyer distribution in Mount Waverley runs across the 3149 postcode. Our flyer distribution reaches Monash suburbs from Glen Waverley to Chadstone.
         </p>
       </Section>
 

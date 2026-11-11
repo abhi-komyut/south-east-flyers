@@ -120,8 +120,8 @@ export default function CatalogueDelivery() {
       <Section title="Planning a catalogue run">
         <p>
           Start with the streets around each store. For a supermarket or grocer, that is usually the homes within two
-          or three kilometres. For destination stores such as furniture or bedding, the catchment is wider, and a few
-          suburbs may be worth covering.
+          or three kilometres. For destination stores such as furniture or bedding, the catchment is wider, and
+          catalogue distribution across Melbourne can take in a few suburbs.
         </p>
         <p>
           Retail catalogue letterbox drops work best on a regular cycle, the same as our{" "}

@@ -107,7 +107,8 @@ export default function HomeServices() {
         </p>
         <p>
           Exclusive delivery matters more for trades than most businesses. A plumber&rsquo;s flyer tucked inside a
-          supermarket catalogue is easy to miss; one that arrives on its own gets looked at.
+          supermarket catalogue is easy to miss; one that arrives on its own gets looked at. Home services marketing
+          works best when it stays this local.
         </p>
       </Section>
 
@@ -155,7 +156,7 @@ export default function HomeServices() {
         <p>
           The best streets depend on the work. Older brick and weatherboard homes need more plumbing, roofing and
           electrical upgrades, which is also where handyman flyers tend to do best. Streets with big gardens suit
-          landscapers, decking and pest control flyers. Areas with lots of townhouses and units suit cleaners, and
+          landscaping flyers, decking and pest control. Areas with lots of townhouses and units suit cleaners, and
           suburbs with ageing homes on large blocks are where builders find knockdown rebuilds and painter flyers
           get the most calls.
         </p>
@@ -173,7 +174,7 @@ export default function HomeServices() {
         </p>
         <p>
           Builders and renovators also use neighbour drops to let residents know about work hours and contact details
-          before a project starts, which helps keep the street on side. It is a small piece of tradie marketing
+          before a project starts, which helps keep the street on side. It is a small piece of home services marketing
           that costs nothing beyond the flyers themselves.
         </p>
       </Section>

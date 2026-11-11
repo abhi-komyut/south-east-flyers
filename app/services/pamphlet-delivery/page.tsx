@@ -95,7 +95,7 @@ export default function PamphletDelivery() {
         <p>
           Some messages need more than one page. An open day needs a map and a timetable; a new childcare centre needs
           its hours, rooms and fees; a services business needs to explain what it does. A folded pamphlet gives that
-          room.
+          room, and pamphlet distribution puts the whole story in the letterbox.
         </p>
         <p>
           Pamphlet delivery works the same way as our{" "}

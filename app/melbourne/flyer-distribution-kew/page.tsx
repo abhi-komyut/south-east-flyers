@@ -34,7 +34,7 @@ const faqs = [
   {
     question: "How many letterboxes are there in Kew?",
     answer:
-      "About 10,600, with more apartments than most suburbs we cover. Your quote gives the reachable count for your streets.",
+      "About 10,600, with more apartments than most suburbs we cover. Your quote gives the reachable count for your streets. A letterbox drop in Kew starts from 1,000 flyers.",
   },
   {
     question: "Which schools make Kew good for family flyers?",
@@ -100,7 +100,7 @@ export default function Kew() {
       <Section title="Flyer distribution around Kew Junction" first>
         <p>
           Kew Junction, where High Street meets Cotham Road, is the suburb&rsquo;s shopping and dining hub, with the
-          streets running down to the Yarra. A targeted letterbox campaign across Kew can reach up to 10,600 homes. Our
+          streets running down to the Yarra. A targeted letterbox campaign across Kew can reach up to 10,600 homes. Flyer distribution in Kew runs across the 3101 postcode. Our
           walkers skip locked mailrooms, and your GPS report shows every block covered.
         </p>
       </Section>

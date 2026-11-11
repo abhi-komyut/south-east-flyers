@@ -114,7 +114,7 @@ export default function FlyerDistribution() {
         </p>
         <p>
           It puts your offer in front of local households in the specific suburbs you choose, without competing for
-          attention in a crowded digital feed.
+          attention in a crowded digital feed. Leaflet distribution and pamphlet drops run the same way.
         </p>
         <p>
           South East Flyers handles the distribution end to end. You supply the flyers; we plan the routes, deliver

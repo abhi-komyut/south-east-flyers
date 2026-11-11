@@ -147,7 +147,7 @@ export default function PetGroomers() {
       <Section title="Dog grooming marketing that brings clients back">
         <p>
           The first groom is the hard part. Once a dog owner has tried you, the rebooking card you hand over at pickup
-          does most of the work. A flyer&rsquo;s job is to get that first visit.
+          does most of the work, so dog grooming marketing is really about winning that first visit.
         </p>
         <p>
           Put a first-visit code on each drop and note the suburb of every new client. Within a few months you will

@@ -102,7 +102,7 @@ export default function BoxHill() {
         <p>
           Box Hill is the main centre of the City of Whitehorse. Box Hill Central sits on the station and bus
           interchange, with the shops along Whitehorse Road and Station Street and the hospital precinct close by. A
-          targeted letterbox campaign across Box Hill can reach up to 7,800 homes. Our walkers skip locked mailrooms,
+          targeted letterbox campaign across Box Hill can reach up to 7,800 homes. Flyer distribution in Box Hill runs across the 3128 postcode. Our flyer distribution reaches Whitehorse suburbs from Blackburn to Nunawading. Our walkers skip locked mailrooms,
           and your GPS report shows every block covered.
         </p>
       </Section>

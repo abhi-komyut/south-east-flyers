@@ -34,7 +34,7 @@ const faqs = [
   {
     question: "How many letterboxes are there in Hawthorn?",
     answer:
-      "About 11,900, a mix of houses and apartments. Your quote gives the reachable count for your streets.",
+      "About 11,900, a mix of houses and apartments. Your quote gives the reachable count for your streets. A letterbox drop in Hawthorn starts from 1,000 flyers.",
   },
   {
     question: "Does Hawthorn suit flyers aimed at students?",
@@ -97,11 +97,11 @@ export default function Hawthorn() {
         ]}
       />
 
-      <Section title="Flyer distribution around Glenferrie Road" first>
+      <Section title="Flyer distribution around Glenferrie Road, Hawthorn" first>
         <p>
           Hawthorn is an inner-east suburb in the City of Boroondara, with Glenferrie Road as its main strip and
           Hawthorn and Glenferrie stations on the Belgrave, Lilydale and Alamein lines. A targeted letterbox campaign
-          across Hawthorn can reach up to 11,900 homes. Our walkers skip locked mailrooms, and your GPS report shows
+          across Hawthorn can reach up to 11,900 homes. Flyer distribution in Hawthorn runs across the 3122 postcode. Our walkers skip locked mailrooms, and your GPS report shows
           every block covered.
         </p>
       </Section>
