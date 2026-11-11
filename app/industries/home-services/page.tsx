@@ -173,8 +173,8 @@ export default function HomeServices() {
         </p>
         <p>
           Builders and renovators also use neighbour drops to let residents know about work hours and contact details
-          before a project starts, which helps keep the street on side. It is a small piece of home services marketing
-          that costs nothing beyond the flyers themselves.
+          before a project starts, which helps keep the street on side. It is a small, low-cost piece of home services
+          marketing.
         </p>
       </Section>
 
