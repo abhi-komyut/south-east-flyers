@@ -102,7 +102,7 @@ export default function MountWaverley() {
         <p>
           Mount Waverley is a family suburb in the City of Monash, with two stations on the Glen Waverley line, a
           village strip by the station and another around Pinewood. A targeted letterbox campaign across Mount Waverley
-          can reach up to 13,900 homes, usually planned in stages. Flyer distribution in Mount Waverley reaches both village strips and the school-zone streets between.
+          can reach up to 13,900 homes, best planned in stages. Flyer distribution in Mount Waverley reaches both village strips and the school-zone streets between.
         </p>
       </Section>
 

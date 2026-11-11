@@ -168,8 +168,8 @@ export default function LocalBusinesses() {
 
       <Section title="Local flyer distribution, street by street">
         <p>
-          This is local business marketing Melbourne shops and clinics have used for decades, just with GPS
-          proof added on top. We cover Melbourne&rsquo;s south-east and eastern suburbs on foot and by e-bike.
+          This is local business marketing Melbourne shops and clinics already know, with GPS proof
+          added on top. We cover Melbourne&rsquo;s south-east and eastern suburbs on foot and by e-bike.
           Tell us your address and how far your customers travel, and we will suggest the streets to start
           with. See{" "}
           <TextLink href="/melbourne/flyer-distribution-brighton">flyer distribution in Brighton</TextLink> for an example
