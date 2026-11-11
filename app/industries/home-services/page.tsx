@@ -128,8 +128,8 @@ export default function HomeServices() {
 
       <Section title="Timing your drops through the year">
         <p>
-          Home service demand in Melbourne follows the weather. Dropping two to four weeks before the busy season puts
-          your flyer in the house before the problem does.
+          Home services marketing in Melbourne works to the weather: demand rises season by season, so dropping two to
+          four weeks before the busy period puts your flyer in the house before the problem does.
         </p>
         <div className="overflow-x-auto">
           <table className="w-full text-left border border-line rounded-card overflow-hidden">
@@ -155,7 +155,7 @@ export default function HomeServices() {
         <p>
           The best streets depend on the work. Older brick and weatherboard homes need more plumbing, roofing and
           electrical upgrades, which is also where handyman flyers tend to do best. Streets with big gardens suit
-          landscapers, decking and pest control flyers. Areas with lots of townhouses and units suit cleaners, and
+          landscaping flyers, decking and pest control. Areas with lots of townhouses and units suit cleaners, and
           suburbs with ageing homes on large blocks are where builders find knockdown rebuilds and painter flyers
           get the most calls.
         </p>
@@ -173,7 +173,7 @@ export default function HomeServices() {
         </p>
         <p>
           Builders and renovators also use neighbour drops to let residents know about work hours and contact details
-          before a project starts, which helps keep the street on side. It is a small piece of tradie marketing
+          before a project starts, which helps keep the street on side. It is a small piece of home services marketing
           that costs nothing beyond the flyers themselves.
         </p>
       </Section>

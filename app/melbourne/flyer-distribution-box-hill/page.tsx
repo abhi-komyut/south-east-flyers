@@ -103,7 +103,7 @@ export default function BoxHill() {
           Box Hill is the main centre of the City of Whitehorse. Box Hill Central sits on the station and bus
           interchange, with the shops along Whitehorse Road and Station Street and the hospital precinct close by. A
           targeted letterbox campaign across Box Hill can reach up to 7,800 homes. Our walkers skip locked mailrooms,
-          and your GPS report shows every block covered.
+          and your GPS report shows every block covered. Our flyer distribution in Box Hill reaches the towers by the station and the houses toward Surrey Hills.
         </p>
       </Section>
 
@@ -141,7 +141,7 @@ export default function BoxHill() {
         <Callout title="Box Hill and nearby suburbs">
           <p className="m-0">
             Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. We also cover Blackburn,
-            Burwood and Nunawading, so campaigns can be spread across different suburbs. See the{" "}
+            Burwood and Nunawading, so flyer distribution across Whitehorse can run over several suburbs. See the{" "}
             <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page or the rest of our{" "}
             <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink> to see how we can
             help you.

@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: "How many letterboxes are there in Glen Waverley?",
+    question: "How many homes does a letterbox drop in Glen Waverley cover?",
     answer:
       "About 16,500, almost all separate houses, so a route misses very few homes.",
   },
@@ -99,10 +99,10 @@ export default function GlenWaverley() {
         ]}
       />
 
-      <Section title="Flyer distribution around the Kingsway" first>
+      <Section title="Flyer distribution around the Kingsway, Glen Waverley" first>
         <p>
           The Kingsway is Glen Waverley&rsquo;s restaurant and cafe strip, with The Glen shopping centre and the station
-          close by. A targeted letterbox campaign across Glen Waverley can reach up to 16,500 homes.
+          close by. A targeted letterbox campaign across Glen Waverley can reach up to 16,500 homes. Flyer distribution in Glen Waverley fans out from the Kingsway and The Glen across the house streets.
         </p>
       </Section>
 

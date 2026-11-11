@@ -103,7 +103,7 @@ export default function Camberwell() {
         <p>
           Camberwell Junction, where Burke, Camberwell and Riversdale roads meet, is the suburb&rsquo;s main
           shopping hub, with the station and the Sunday market a short walk away. A targeted letterbox campaign
-          across Camberwell can reach up to 9,000 homes.
+          across Camberwell can reach up to 9,000 homes. Flyer distribution in Camberwell covers the streets off Burke and Riversdale roads by the Junction.
         </p>
       </Section>
 

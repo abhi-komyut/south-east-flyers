@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: "How many letterboxes are there in St Kilda?",
+    question: "How many homes can a letterbox drop in St Kilda reach?",
     answer:
       "About 14,100, almost all apartments. Your quote gives the reachable count for your streets.",
   },
@@ -97,12 +97,12 @@ export default function StKilda() {
         ]}
       />
 
-      <Section title="Flyer distribution around Fitzroy and Acland Streets" first>
+      <Section title="Flyer distribution in St Kilda, around Fitzroy and Acland Streets" first>
         <p>
           St Kilda is Melbourne&rsquo;s beachside entertainment suburb. Luna Park, the Palais Theatre and St Kilda Pier
           sit near Fitzroy Street&rsquo;s bars and Acland Street&rsquo;s cafes, with the Route 96 tram running both
           strips. A targeted letterbox campaign across St Kilda can reach up to 14,100 homes. Our walkers skip locked
-          mailrooms, and your GPS report shows every block covered.
+          mailrooms, and your GPS report shows every block covered. A flyer distribution run in St Kilda works the blocks behind Fitzroy and Acland Streets, mailrooms permitting.
         </p>
       </Section>
 

@@ -161,8 +161,9 @@ export default function SouthEastMelbourne() {
           the area our walkers and e-bike riders cover every week.
         </p>
         <p>
-          You can cover one suburb, a few streets around your shop, or a mix of suburbs across council lines. Every
-          flyer is delivered on its own, wherever the homes are, with a GPS report for every run.
+          You can cover one suburb, a few streets around your shop, or a mix of suburbs across council lines. Our flyer
+          distribution across south-east Melbourne runs council by council, and every flyer is delivered on its own,
+          wherever the homes are, with a GPS report for every run.
         </p>
       </Section>
 

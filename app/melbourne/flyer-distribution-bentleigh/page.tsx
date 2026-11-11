@@ -99,7 +99,7 @@ export default function Bentleigh() {
         ]}
       />
 
-      <Section title="Flyer distribution around Centre Road" first>
+      <Section title="Flyer distribution around Centre Road, Bentleigh" first>
         <p>
           Centre Road is Bentleigh&rsquo;s shopping strip, with Bentleigh and Patterson stations on the Frankston line
           in the suburb. A targeted letterbox campaign across Bentleigh can reach up to 7,500 homes.

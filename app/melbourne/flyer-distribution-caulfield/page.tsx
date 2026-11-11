@@ -99,11 +99,11 @@ export default function Caulfield() {
         ]}
       />
 
-      <Section title="Flyer distribution around Glen Huntly Road" first>
+      <Section title="Flyer distribution in Caulfield, around Glen Huntly Road" first>
         <p>
           Caulfield is a tightly bounded suburb in the City of Glen Eira, known for the racecourse, Monash
           University&rsquo;s Caulfield campus and the station interchange. Glen Huntly Road carries the local shops. A
-          targeted letterbox campaign across Caulfield can reach up to 2,400 homes.
+          targeted letterbox campaign across Caulfield can reach up to 2,400 homes. Flyer distribution in Caulfield covers the streets around Glen Huntly Road and the racecourse.
         </p>
       </Section>
 

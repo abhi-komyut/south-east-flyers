@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: "How many letterboxes are there in Kew?",
+    question: "How many homes can a letterbox drop in Kew reach?",
     answer:
       "About 10,600, with more apartments than most suburbs we cover. Your quote gives the reachable count for your streets.",
   },
@@ -101,7 +101,7 @@ export default function Kew() {
         <p>
           Kew Junction, where High Street meets Cotham Road, is the suburb&rsquo;s shopping and dining hub, with the
           streets running down to the Yarra. A targeted letterbox campaign across Kew can reach up to 10,600 homes. Our
-          walkers skip locked mailrooms, and your GPS report shows every block covered.
+          walkers skip locked mailrooms, and your GPS report shows every block covered. Our flyer distribution in Kew covers the streets from the Junction down to the Yarra.
         </p>
       </Section>
 

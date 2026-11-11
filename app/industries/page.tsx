@@ -168,8 +168,8 @@ export default function Industries() {
 
       <Section title="Real estate, healthcare and local business">
         <p>
-          Agents, clinics and local shops use letterbox drops to reach the streets around a listing, a practice or a
-          storefront.
+          Agents, clinics and local shops use letterbox distribution to reach the streets around a listing, a practice
+          or a storefront.
         </p>
         <IndustryGrid items={local} />
       </Section>

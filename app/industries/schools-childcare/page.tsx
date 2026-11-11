@@ -144,8 +144,8 @@ export default function SchoolsChildcare() {
           families in the area for years.
         </p>
         <p>
-          Childcare flyers work best repeated. Families with a baby may keep your flyer for months before they enrol,
-          and a second drop reminds them your centre is still nearby. Each run comes with a GPS report.
+          Childcare marketing works best repeated. Families with a baby may keep your flyer for months before they
+          enrol, and a second drop reminds them your centre is still nearby. Each run comes with a GPS report.
         </p>
       </Section>
 
