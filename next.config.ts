@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  images: {
+    // Serve AVIF (then WebP) so the LCP hero and gallery images ship far fewer
+    // bytes on mobile.
+    formats: ["image/avif", "image/webp"],
+  },
   async redirects() {
     return [
       // Trades & Services was replaced by the Home Services hub (SEO batch 1).
