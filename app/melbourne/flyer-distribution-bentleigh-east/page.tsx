@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -18,18 +19,12 @@ const PAGE_PATH = "/melbourne/flyer-distribution-bentleigh-east";
 // About 12,000 homes in Bentleigh East 3165 (household count used only to
 // describe how much of the suburb a drop covers).
 
-export const metadata: Metadata = {
-  title: { absolute: "Flyer Distribution Bentleigh East 3165 | South East Flyers" },
-  description:
-    "Flyer distribution in Bentleigh East 3165, around Centre Road and East Boundary Road. GPS-tracked letterbox drops to the door. Get a free quote.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
+export const metadata: Metadata = buildMeta({
     title: "Flyer Distribution Bentleigh East 3165 | South East Flyers",
-    description: "GPS-tracked letterbox drops across Bentleigh East 3165, around Centre Road. Get a free quote.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+    description: "Flyer distribution in Bentleigh East 3165, around Centre Road and East Boundary Road. GPS-tracked letterbox drops to the door. Get a free quote.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 const faqs = [
   {

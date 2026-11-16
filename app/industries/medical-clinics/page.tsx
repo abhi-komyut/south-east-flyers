@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -15,18 +16,12 @@ import {
 
 const PAGE_PATH = "/industries/medical-clinics";
 
-export const metadata: Metadata = {
-  title: { absolute: "Medical Clinic Flyers Melbourne | South East Flyers" },
-  description:
-    "Medical clinic flyers for GPs and medical centres, delivered on their own to the homes around your clinic in Melbourne's south-east. Exclusive, GPS-tracked.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
-    title: "GP & Medical Clinic Letterbox Drops Melbourne | South East Flyers",
-    description: "Exclusive, GPS-tracked letterbox drops for GP clinics and medical centres across Melbourne's south-east.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+export const metadata: Metadata = buildMeta({
+    title: "Medical Clinic Flyers Melbourne | South East Flyers",
+    description: "Medical clinic flyers for GPs and medical centres, delivered on their own to the homes around your clinic in Melbourne's south-east. Exclusive, GPS-tracked.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 const faqs = [
   {

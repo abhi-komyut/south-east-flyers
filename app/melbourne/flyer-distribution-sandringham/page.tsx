@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -18,18 +19,12 @@ const PAGE_PATH = "/melbourne/flyer-distribution-sandringham";
 // About 4,900 homes in Sandringham 3191 (household count used only for the
 // full-coverage cost estimate).
 
-export const metadata: Metadata = {
-  title: { absolute: "Flyer Distribution Sandringham VIC 3191 | South East Flyers" },
-  description:
-    "Flyer distribution in Sandringham 3191, around the village and the beach. Cover the whole compact suburb in one GPS-tracked run. Get a free quote.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
+export const metadata: Metadata = buildMeta({
     title: "Flyer Distribution Sandringham VIC 3191 | South East Flyers",
-    description: "GPS-tracked letterbox drops across Sandringham 3191, around the village. Get a free quote.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+    description: "Flyer distribution in Sandringham 3191, around the village and the beach. Cover the whole compact suburb in one GPS-tracked run. Get a free quote.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 const faqs = [
   {

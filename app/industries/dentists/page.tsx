@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -15,18 +16,12 @@ import {
 
 const PAGE_PATH = "/industries/dentists";
 
-export const metadata: Metadata = {
-  title: { absolute: "Dental Flyers Melbourne | South East Flyers" },
-  description:
-    "Dental flyers for new and growing clinics, delivered on their own to the homes around your practice in Melbourne's south-east. Exclusive, GPS-tracked.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
-    title: "Dental Flyers & Letterbox Drops Melbourne | South East Flyers",
-    description: "Exclusive, GPS-tracked letterbox drops for dental clinics across Melbourne's south-east and east.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+export const metadata: Metadata = buildMeta({
+    title: "Dental Flyers Melbourne | South East Flyers",
+    description: "Dental flyers for new and growing clinics, delivered on their own to the homes around your practice in Melbourne's south-east. Exclusive, GPS-tracked.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 const faqs = [
   {

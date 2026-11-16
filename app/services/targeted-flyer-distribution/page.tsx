@@ -4,6 +4,7 @@ import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import Reveal from "../../components/Reveal";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   Section,
@@ -14,21 +15,11 @@ import {
 
 const PAGE_PATH = "/services/targeted-flyer-distribution";
 
-export const metadata: Metadata = {
-  title: "Targeted Flyer Distribution",
-  description:
-    "Targeted flyer distribution in Melbourne's south-east and east. Choose suburbs, postcodes or streets. Exclusive, GPS-tracked, never bundled. Free quote.",
-  alternates: {
-    canonical: `${SITE_URL}${PAGE_PATH}`,
-  },
-  openGraph: {
-    title: "Targeted Flyer Distribution | South East Flyers",
-    description:
-      "Choose exactly where your flyers go, by suburb, postcode or defined area, across Melbourne's south-east and eastern suburbs. GPS-tracked delivery with campaign reporting.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+export const metadata: Metadata = buildMeta({
+    title: "Targeted Flyer Distribution",
+    description: "Targeted flyer distribution in Melbourne's south-east and east. Choose suburbs, postcodes or streets. Exclusive, GPS-tracked, never bundled. Free quote.",
+    path: PAGE_PATH,
+});
 
 const targeting: { title: string; body: string; icon: React.ReactNode }[] = [
   {

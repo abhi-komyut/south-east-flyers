@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -15,18 +16,12 @@ import {
 
 const PAGE_PATH = "/industries/restaurants";
 
-export const metadata: Metadata = {
-  title: { absolute: "Restaurant Flyers Melbourne | South East Flyers" },
-  description:
-    "Restaurant flyers and takeaway menus delivered on their own to the streets around your venue in Melbourne's south-east. GPS-tracked, exclusive delivery.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
-    title: "Restaurant & Cafe Flyer Distribution Melbourne | South East Flyers",
-    description: "Exclusive, GPS-tracked menu and flyer drops for restaurants and cafes across Melbourne's south-east.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+export const metadata: Metadata = buildMeta({
+    title: "Restaurant Flyers Melbourne | South East Flyers",
+    description: "Restaurant flyers and takeaway menus delivered on their own to the streets around your venue in Melbourne's south-east. GPS-tracked, exclusive delivery.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 const faqs = [
   {

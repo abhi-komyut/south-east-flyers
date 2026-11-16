@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -15,18 +16,12 @@ import {
 
 const PAGE_PATH = "/industries/builders";
 
-export const metadata: Metadata = {
-  title: { absolute: "Construction & Builder Flyers Melbourne | South East Flyers" },
-  description:
-    "Construction flyers delivered on their own to the streets around your sites and the suburbs you build in. GPS-tracked, exclusive delivery, from 1,000 flyers.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
+export const metadata: Metadata = buildMeta({
     title: "Construction & Builder Flyers Melbourne | South East Flyers",
-    description: "Exclusive, GPS-tracked letterbox drops for builders across Melbourne's south-east and east.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+    description: "Construction flyers delivered on their own to the streets around your sites and the suburbs you build in. GPS-tracked, exclusive delivery, from 1,000 flyers.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 const faqs = [
   {

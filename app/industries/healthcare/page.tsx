@@ -3,6 +3,7 @@ import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import Reveal from "../../components/Reveal";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -15,21 +16,11 @@ import {
 
 const PAGE_PATH = "/industries/healthcare";
 
-export const metadata: Metadata = {
-  title: "Flyer Distribution for Healthcare",
-  description:
-    "Flyer and letterbox distribution for healthcare businesses across Melbourne's south-east and eastern suburbs. Build local awareness for new practices, clinics and services. GPS-tracked. Get a free quote.",
-  alternates: {
-    canonical: `${SITE_URL}${PAGE_PATH}`,
-  },
-  openGraph: {
-    title: "Flyer Distribution for Healthcare | South East Flyers",
-    description:
-      "Local-area awareness for healthcare practices and clinics across Melbourne's south-east and eastern suburbs through targeted, GPS-tracked letterbox distribution.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+export const metadata: Metadata = buildMeta({
+    title: "Flyer Distribution for Healthcare",
+    description: "Flyer and letterbox distribution for healthcare businesses across Melbourne's south-east and eastern suburbs. Build local awareness for new practices, clinics and services. GPS-tracked. Get a free quote.",
+    path: PAGE_PATH,
+});
 
 const useCases: { title: string; body: string }[] = [
   {

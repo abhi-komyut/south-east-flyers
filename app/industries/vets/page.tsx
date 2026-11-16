@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -15,18 +16,12 @@ import {
 
 const PAGE_PATH = "/industries/vets";
 
-export const metadata: Metadata = {
-  title: { absolute: "Vet Marketing Melbourne | South East Flyers" },
-  description:
-    "Vet marketing with letterbox drops: reach pet owners around your clinic in Melbourne's south-east. Exclusive, GPS-tracked delivery, from 1,000 flyers.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
-    title: "Vet Clinic Flyers & Letterbox Drops Melbourne | South East Flyers",
-    description: "Exclusive, GPS-tracked letterbox drops for vet clinics across Melbourne's south-east and east.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+export const metadata: Metadata = buildMeta({
+    title: "Vet Marketing Melbourne | South East Flyers",
+    description: "Vet marketing with letterbox drops: reach pet owners around your clinic in Melbourne's south-east. Exclusive, GPS-tracked delivery, from 1,000 flyers.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 const faqs = [
   {

@@ -4,6 +4,7 @@ import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import Reveal from "../../components/Reveal";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -19,18 +20,12 @@ const PAGE_PATH = "/melbourne/flyer-distribution-camberwell";
 
 // About 9,000 homes (household count used only for the full-coverage cost estimate).
 
-export const metadata: Metadata = {
-  title: { absolute: "Flyer Distribution Camberwell VIC 3124 | South East Flyers" },
-  description:
-    "Flyer distribution in Camberwell 3124, from Camberwell Junction to the surrounding streets. Exclusive, GPS-tracked, never bundled, from 1,000 flyers.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
+export const metadata: Metadata = buildMeta({
     title: "Flyer Distribution Camberwell VIC 3124 | South East Flyers",
-    description: "Exclusive, GPS-tracked letterbox drops across Camberwell 3124. From 1,000 flyers.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+    description: "Flyer distribution in Camberwell 3124, from Camberwell Junction to the surrounding streets. Exclusive, GPS-tracked, never bundled, from 1,000 flyers.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 const faqs = [
   {

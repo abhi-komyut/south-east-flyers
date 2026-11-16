@@ -4,6 +4,7 @@ import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import Reveal from "../../components/Reveal";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -19,19 +20,12 @@ import {
 
 const PAGE_PATH = "/industries/real-estate";
 
-export const metadata: Metadata = {
-  title: { absolute: "Real Estate Letterbox Drops Melbourne | South East Flyers" },
-  description:
-    "Real estate letterbox drops for Just Listed, Open Home, Auction and Sold campaigns. Exclusive, GPS-tracked proof for vendors, from 1,000 flyers.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
+export const metadata: Metadata = buildMeta({
     title: "Real Estate Letterbox Drops Melbourne | South East Flyers",
-    description:
-      "Just Listed, Open Home, Auction and Sold letterbox campaigns around your listings, GPS-tracked, across Melbourne's south-east and eastern suburbs.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+    description: "Real estate letterbox drops for Just Listed, Open Home, Auction and Sold campaigns. Exclusive, GPS-tracked proof for vendors, from 1,000 flyers.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 const useCases: { title: string; body: string }[] = [
   { title: "Just Listed", body: "Tell the surrounding streets a property is on the market, and invite neighbours thinking of selling to call." },

@@ -4,6 +4,7 @@ import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import Reveal from "../../components/Reveal";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -19,18 +20,12 @@ const PAGE_PATH = "/melbourne/flyer-distribution-glen-waverley";
 
 // About 16,500 homes (household count used only for the full-coverage cost estimate).
 
-export const metadata: Metadata = {
-  title: { absolute: "Flyer Distribution Glen Waverley 3150 | South East Flyers" },
-  description:
-    "Flyer distribution in Glen Waverley 3150, around the Kingsway and The Glen. GPS-tracked letterbox drops, bilingual flyers welcome. Get a free quote.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
+export const metadata: Metadata = buildMeta({
     title: "Flyer Distribution Glen Waverley 3150 | South East Flyers",
-    description: "GPS-tracked letterbox drops across Glen Waverley 3150, around the Kingsway. Get a free quote.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+    description: "Flyer distribution in Glen Waverley 3150, around the Kingsway and The Glen. GPS-tracked letterbox drops, bilingual flyers welcome. Get a free quote.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 const faqs = [
   {

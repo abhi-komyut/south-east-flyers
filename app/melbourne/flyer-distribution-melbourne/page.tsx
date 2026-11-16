@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -15,21 +16,11 @@ import {
 
 const PAGE_PATH = "/melbourne/flyer-distribution-melbourne";
 
-export const metadata: Metadata = {
-  title: "Flyer Distribution Melbourne",
-  description:
-    "Flyer distribution Melbourne: exclusive, GPS-tracked letterbox drops across our service suburbs, from 1,000 flyers. Free quote today.",
-  alternates: {
-    canonical: `${SITE_URL}${PAGE_PATH}`,
-  },
-  openGraph: {
-    title: "Flyer Distribution Melbourne | South East Flyers",
-    description:
-      "GPS-tracked flyer and letterbox distribution across Melbourne's confirmed service areas. No junk mail compliant, suburb-level targeting, full campaign reporting.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+export const metadata: Metadata = buildMeta({
+    title: "Flyer Distribution Melbourne",
+    description: "Flyer distribution Melbourne: exclusive, GPS-tracked letterbox drops across our service suburbs, from 1,000 flyers. Free quote today.",
+    path: PAGE_PATH,
+});
 
 // Suburbs that have their own landing page. Add each new suburb page here so
 // it is linked from the coverage list.

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -15,18 +16,12 @@ import {
 
 const PAGE_PATH = "/industries/pet-groomers";
 
-export const metadata: Metadata = {
-  title: { absolute: "Dog Grooming Marketing Melbourne | South East Flyers" },
-  description:
-    "Dog grooming marketing with letterbox drops for salons, mobile groomers and dog washes in Melbourne's south-east. Exclusive, GPS-tracked, from 1,000 flyers.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
-    title: "Letterbox Drops for Dog Groomers & Dog Washes | South East Flyers",
-    description: "Exclusive, GPS-tracked letterbox drops for dog groomers and dog washes across Melbourne's south-east.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+export const metadata: Metadata = buildMeta({
+    title: "Dog Grooming Marketing Melbourne | South East Flyers",
+    description: "Dog grooming marketing with letterbox drops for salons, mobile groomers and dog washes in Melbourne's south-east. Exclusive, GPS-tracked, from 1,000 flyers.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 const faqs = [
   {

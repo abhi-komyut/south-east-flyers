@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -18,18 +19,12 @@ const PAGE_PATH = "/melbourne/flyer-distribution-hampton";
 // About 7,900 homes in Hampton 3188 (household count used only to describe
 // how much of the suburb a drop covers; Hampton East is a separate suburb).
 
-export const metadata: Metadata = {
-  title: { absolute: "Flyer Distribution Hampton VIC 3188 | South East Flyers" },
-  description:
-    "Flyer distribution in Hampton 3188, along Hampton Street to the beach. GPS-tracked letterbox drops for agents, builders and cafes. Get a free quote.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
+export const metadata: Metadata = buildMeta({
     title: "Flyer Distribution Hampton VIC 3188 | South East Flyers",
-    description: "GPS-tracked letterbox drops across Hampton 3188, around Hampton Street. Get a free quote.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+    description: "Flyer distribution in Hampton 3188, along Hampton Street to the beach. GPS-tracked letterbox drops for agents, builders and cafes. Get a free quote.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 const faqs = [
   {

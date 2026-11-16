@@ -4,6 +4,7 @@ import QuickQuoteForm from "../components/QuickQuoteForm";
 import FAQSection from "../components/FAQSection";
 import Reveal from "../components/Reveal";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -16,19 +17,12 @@ import {
 
 const PAGE_PATH = "/industries";
 
-export const metadata: Metadata = {
-  title: { absolute: "Industries We Work With | South East Flyers" },
-  description:
-    "Flyer and letterbox distribution for local businesses, home services trades, real estate and healthcare across Melbourne's south-east and eastern suburbs.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
+export const metadata: Metadata = buildMeta({
     title: "Industries We Work With | South East Flyers",
-    description:
-      "Flyer and letterbox distribution for local businesses, home services trades, real estate and healthcare across Melbourne's south-east and eastern suburbs.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+    description: "Flyer and letterbox distribution for local businesses, home services trades, real estate and healthcare across Melbourne's south-east and eastern suburbs.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 function Icon({ path }: { path: string }) {
   return (

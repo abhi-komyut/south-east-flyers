@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Fragment } from "react";
 import {
+  buildMeta,
   PageHero,
   FactsStrip,
   LogoWall,
@@ -14,31 +15,14 @@ import QuickQuoteForm from "./components/QuickQuoteForm";
 import FAQSection from "./components/FAQSection";
 import Reveal from "./components/Reveal";
 
-export const metadata: Metadata = {
-  title: {
-    absolute:
-      "Local Flyer Distribution | South East Flyers, Letterbox Distribution Melbourne",
-  },
+export const metadata: Metadata = buildMeta({
+  title:
+    "Local Flyer Distribution | South East Flyers, Letterbox Distribution Melbourne",
   description:
     "Local flyer distribution in Melbourne's south-east and east. Exclusive, GPS-tracked letterbox drops, never bundled. From $180 per 1,000 flyers. Free quote.",
-  alternates: {
-    canonical: "https://www.southeastflyers.com.au/",
-  },
-  openGraph: {
-    title:
-      "Local Flyer Distribution | South East Flyers, Letterbox Distribution Melbourne",
-    description:
-      "Local flyer distribution in Melbourne's south-east and east. Exclusive, GPS-tracked letterbox drops, never bundled. From $180 per 1,000 flyers. Free quote.",
-    url: "https://www.southeastflyers.com.au/",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title:
-      "Local Flyer Distribution | South East Flyers, Letterbox Distribution Melbourne",
-    description:
-      "Local flyer distribution in Melbourne's south-east and east. Exclusive, GPS-tracked letterbox drops, never bundled. From $180 per 1,000 flyers. Free quote.",
-  },
-};
+  path: "/",
+  absoluteTitle: true,
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

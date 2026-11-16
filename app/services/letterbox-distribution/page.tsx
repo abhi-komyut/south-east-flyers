@@ -4,6 +4,7 @@ import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import Reveal from "../../components/Reveal";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   Section,
@@ -15,21 +16,11 @@ import {
 
 const PAGE_PATH = "/services/letterbox-distribution";
 
-export const metadata: Metadata = {
-  title: "Letterbox Drop Melbourne",
-  description:
-    "Letterbox drops in Melbourne's south-east and east. Exclusive, GPS-tracked, never bundled. You supply the flyers, we deliver. From $180 per 1,000. Free quote.",
-  alternates: {
-    canonical: `${SITE_URL}${PAGE_PATH}`,
-  },
-  openGraph: {
-    title: "Letterbox Distribution | South East Flyers",
-    description:
-      "Suburb-by-suburb letterbox drops across Melbourne's south-east and eastern suburbs. No junk mail compliant, GPS-tracked, delivered individually with full campaign reporting.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+export const metadata: Metadata = buildMeta({
+    title: "Letterbox Drop Melbourne",
+    description: "Letterbox drops in Melbourne's south-east and east. Exclusive, GPS-tracked, never bundled. You supply the flyers, we deliver. From $180 per 1,000. Free quote.",
+    path: PAGE_PATH,
+});
 
 const features: { title: string; body: string; icon: React.ReactNode }[] = [
   {

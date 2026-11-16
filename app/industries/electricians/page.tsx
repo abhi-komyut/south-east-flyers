@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -15,18 +16,12 @@ import {
 
 const PAGE_PATH = "/industries/electricians";
 
-export const metadata: Metadata = {
-  title: { absolute: "Electrician Flyers Melbourne | South East Flyers" },
-  description:
-    "Electrician flyers for switchboard, safety switch, solar and EV charger work, delivered on their own across Melbourne's south-east. Exclusive delivery, from 1,000 flyers.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
+export const metadata: Metadata = buildMeta({
     title: "Electrician Flyers Melbourne | South East Flyers",
-    description: "Exclusive, GPS-tracked letterbox drops for electricians across Melbourne's south-east. From 1,000 flyers.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+    description: "Electrician flyers for switchboard, safety switch, solar and EV charger work, delivered on their own across Melbourne's south-east. Exclusive delivery, from 1,000 flyers.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 const faqs = [
   {

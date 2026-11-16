@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -15,18 +16,12 @@ import {
 
 const PAGE_PATH = "/industries/carpenters";
 
-export const metadata: Metadata = {
-  title: { absolute: "Carpentry Flyers Melbourne | South East Flyers" },
-  description:
-    "Carpentry flyers for decks, pergolas, built-ins and repairs, delivered on their own to homes in Melbourne's south-east. GPS-tracked, from 1,000 flyers.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
-    title: "Carpentry Flyers & Letterbox Drops Melbourne | South East Flyers",
-    description: "Exclusive, GPS-tracked letterbox drops for carpenters across Melbourne's south-east and east.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+export const metadata: Metadata = buildMeta({
+    title: "Carpentry Flyers Melbourne | South East Flyers",
+    description: "Carpentry flyers for decks, pergolas, built-ins and repairs, delivered on their own to homes in Melbourne's south-east. GPS-tracked, from 1,000 flyers.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 const faqs = [
   {

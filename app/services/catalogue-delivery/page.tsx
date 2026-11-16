@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -15,18 +16,12 @@ import {
 
 const PAGE_PATH = "/services/catalogue-delivery";
 
-export const metadata: Metadata = {
-  title: { absolute: "Catalogue Delivery Melbourne | South East Flyers" },
-  description:
-    "Catalogue delivery across Melbourne's south-east and east. Your catalogue delivered on its own, never bundled, GPS-tracked. From 1,000 catalogues. Free quote.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
-    title: "Catalogue Delivery Across Melbourne | South East Flyers",
-    description: "Exclusive, GPS-tracked catalogue delivery across Melbourne's south-east and east.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+export const metadata: Metadata = buildMeta({
+    title: "Catalogue Delivery Melbourne | South East Flyers",
+    description: "Catalogue delivery across Melbourne's south-east and east. Your catalogue delivered on its own, never bundled, GPS-tracked. From 1,000 catalogues. Free quote.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 const faqs = [
   {
