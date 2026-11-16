@@ -20,9 +20,9 @@ const PAGE_PATH = "/melbourne/flyer-distribution-brighton";
 // About 10,500 homes (household count used only for the full-coverage cost estimate).
 
 export const metadata: Metadata = {
-  title: { absolute: "Flyer Distribution Brighton VIC 3186 | South East Flyers" },
+  title: { absolute: "Bayside Letterbox Drop Brighton | South East Flyers" },
   description:
-    "Flyer distribution in Brighton 3186, around Church Street and Bay Street. GPS-tracked letterbox drops for agents, trades and cafes. Get a free quote.",
+    "Bayside letterbox drops in Brighton 3186, around Church Street and Bay Street. Exclusive, GPS-tracked delivery for agents, trades and cafes. Free quote.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Flyer Distribution Brighton VIC 3186 | South East Flyers",
@@ -85,7 +85,7 @@ export default function Brighton() {
           { name: "Melbourne", href: "/melbourne/flyer-distribution-melbourne" },
           { name: "Brighton" },
         ]}
-        h1="Flyer Distribution & Letterbox Drops in Brighton"
+        h1="Bayside letterbox drops in Brighton"
         lead="Get your flyers into letterboxes around Church Street and across 3186 with GPS-tracked flyer distribution."
         image={{ src: "/images/redesign/suburb-map.jpg", alt: "Map of Melbourne's suburbs showing the areas South East Flyers covers" }}
       />
@@ -103,6 +103,19 @@ export default function Brighton() {
         <p>
           Church Street and Bay Street are Brighton&rsquo;s shopping strips, with the Sandringham line running between
           them. A targeted letterbox campaign across Brighton can reach up to 10,500 homes.
+        </p>
+      </Section>
+
+      <Section title="A Bayside letterbox drop, starting in Brighton">
+        <p>
+          Brighton sits in the City of Bayside. A Bayside letterbox drop can start here around Church Street and Bay
+          Street, and can also take in nearby{" "}
+          <TextLink href="/melbourne/flyer-distribution-brighton-east">Brighton East</TextLink>, Hampton and Sandringham
+          when you want a wider run. We already have pages for{" "}
+          <TextLink href="/melbourne/flyer-distribution-hampton">Hampton</TextLink>,{" "}
+          <TextLink href="/melbourne/flyer-distribution-sandringham">Sandringham</TextLink> and{" "}
+          <TextLink href="/melbourne/flyer-distribution-st-kilda">St Kilda</TextLink>, use those if the job is centred
+          there. Every run is exclusive and GPS-tracked.
         </p>
       </Section>
 
