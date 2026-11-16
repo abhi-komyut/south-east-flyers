@@ -16,9 +16,9 @@ import {
 const PAGE_PATH = "/services/catalogue-delivery";
 
 export const metadata: Metadata = {
-  title: { absolute: "Catalogue Distribution Melbourne | South East Flyers" },
+  title: { absolute: "Catalogue Delivery Melbourne | South East Flyers" },
   description:
-    "Catalogue distribution across Melbourne's south-east: your catalogue delivered on its own, never bundled with others. GPS-tracked letterbox delivery.",
+    "Catalogue delivery across Melbourne's south-east and east. Your catalogue delivered on its own, never bundled, GPS-tracked. From 1,000 catalogues. Free quote.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Catalogue Delivery Across Melbourne | South East Flyers",
