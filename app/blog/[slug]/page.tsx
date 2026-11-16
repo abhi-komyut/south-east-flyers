@@ -19,11 +19,28 @@ export async function generateMetadata({
   const post = getPostBySlug(slug);
   if (!post) return {};
 
+  const metaTitle = post.metaTitle ?? post.title;
+  const metaDescription = post.metaDescription ?? post.excerpt;
+  const url = `${SITE_URL}/blog/${post.slug}`;
+
   return {
-    title: post.title,
-    description: post.excerpt,
+    title: metaTitle,
+    description: metaDescription,
     alternates: {
-      canonical: `${SITE_URL}/blog/${post.slug}`,
+      canonical: url,
+    },
+    openGraph: {
+      title: `${metaTitle} | South East Flyers`,
+      description: metaDescription,
+      url,
+      type: "article",
+      images: [{ url: `${SITE_URL}/og-logo.jpg`, width: 1200, height: 630, alt: "South East Flyers & Marketing Solutions" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${metaTitle} | South East Flyers`,
+      description: metaDescription,
+      images: [`${SITE_URL}/og-logo.jpg`],
     },
   };
 }

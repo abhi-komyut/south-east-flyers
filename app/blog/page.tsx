@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import QuickQuoteForm from "../components/QuickQuoteForm";
 import { posts } from "./posts";
-import { PageHero, Section, TextLink } from "../components/landing";
+import { SITE_URL, PageHero, Section, TextLink } from "../components/landing";
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Letterbox and Flyer Tips",
   description:
-    "Expert insights on letterbox distribution, flyer marketing, and leaflet delivery across Melbourne's south-east and eastern suburbs. Tips, strategies, and industry news from South East Flyers.",
+    "Tips on letterbox drops and flyer distribution in Melbourne's south-east and east, from South East Flyers.",
   keywords: [
     "letterbox distribution blog",
     "flyer marketing tips",
@@ -15,6 +15,24 @@ export const metadata: Metadata = {
     "flyer distribution Melbourne",
     "leaflet distribution Australia",
   ],
+  alternates: {
+    canonical: `${SITE_URL}/blog`,
+  },
+  openGraph: {
+    title: "Letterbox and Flyer Tips | South East Flyers",
+    description:
+      "Tips on letterbox drops and flyer distribution in Melbourne's south-east and east, from South East Flyers.",
+    url: `${SITE_URL}/blog`,
+    type: "website",
+    images: [{ url: "/og-logo.jpg", width: 1200, height: 630, alt: "South East Flyers & Marketing Solutions" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Letterbox and Flyer Tips | South East Flyers",
+    description:
+      "Tips on letterbox drops and flyer distribution in Melbourne's south-east and east, from South East Flyers.",
+    images: ["/og-logo.jpg"],
+  },
 };
 
 export default function BlogPage() {
@@ -22,7 +40,7 @@ export default function BlogPage() {
     <>
       <PageHero
         crumbs={[{ name: "Home", href: "/" }, { name: "Blog" }]}
-        h1="Blog"
+        h1="Letterbox and flyer tips"
         lead="Insights, tips and news about letterbox distribution and flyer marketing across Melbourne's south-east and eastern suburbs."
       />
 
