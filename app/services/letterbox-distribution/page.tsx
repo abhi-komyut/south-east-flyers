@@ -113,14 +113,12 @@ export default function LetterboxDistribution() {
         crumbs={[{ name: "Home", href: "/" }, { name: "Letterbox distribution" }]}
         h1="Letterbox drops in Melbourne's south-east and east"
         lead="A letterbox drop puts your flyer in residential letterboxes on its own, not in a shared bundle with other advertisers. South East Flyers plans letterbox drops across Melbourne's south-east and east, tracks every run by GPS, and sends you a map of the streets covered. You supply the printed flyers; we do not print. Letterbox distribution, including letterbox flyer distribution, starts at $180 per 1,000 flyers."
-        tagline="You provide the flyers. We handle the distribution."
         image={{ src: "/images/redesign/walker-street.jpg", alt: "A walker checking flyers beside a brick letterbox on a leafy street" }}
       />
 
       <Section title="How letterbox distribution works" first>
         <p className="text-lg text-ink">
-          A letterbox drop delivers your printed material straight to residential letterboxes across the suburbs
-          you select. It&rsquo;s one of the most direct ways to reach local households: your flyer is in their hands
+          It&rsquo;s one of the most direct ways to reach local households: your flyer is in their hands
           the moment they check the mail.
         </p>
         <p>
