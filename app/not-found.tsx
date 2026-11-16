@@ -1,4 +1,25 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import { headers } from "next/headers";
+
+const SITE_URL = "https://www.southeastflyers.com.au";
+const TITLE = "Page not found | South East Flyers";
+const DESCRIPTION =
+  "That page isn't on South East Flyers. Go to the homepage or contact us for a letterbox drop quote.";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const pathname = (await headers()).get("x-pathname") ?? "";
+  return {
+    title: { absolute: TITLE },
+    description: DESCRIPTION,
+    alternates: { canonical: null },
+    robots: null,
+    openGraph: {
+      title: TITLE,
+      url: `${SITE_URL}${pathname}`,
+    },
+  };
+}
 
 export default function NotFound() {
   return (
