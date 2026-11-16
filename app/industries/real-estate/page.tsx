@@ -123,6 +123,15 @@ export default function RealEstate() {
         </p>
       </Section>
 
+      <Section title="Letterbox drop real estate campaigns we run">
+        <p>
+          A letterbox drop for real estate is usually built around one listing or one office area: Just Listed, Open
+          Home, Auction or Sold. We deliver those flyers on their own, never bundled with other advertisers, and we send
+          a GPS map you can show a vendor. Clients already named on this site include Ray White, McGrath and Belle
+          Property. Tell us the streets around the listing and we will quote from 1,000 flyers.
+        </p>
+      </Section>
+
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Reveal as="section" className="bg-cream rounded-card p-9 sm:p-16 flex flex-col gap-9">
           <h2 className="m-0 font-display font-medium text-[clamp(28px,2.8vw,38px)] leading-[1.15]">

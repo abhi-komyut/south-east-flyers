@@ -18,7 +18,7 @@ const PAGE_PATH = "/letterbox-drop-cost";
 export const metadata: Metadata = {
   title: { absolute: "Letterbox Drop Cost Melbourne 2026 | South East Flyers" },
   description:
-    "Letterbox drop cost in Melbourne depends on your flyer quantity and target suburbs. Exclusive, GPS-tracked, never bundled. Free, no-obligation quote with a quick turnaround.",
+    "Letterbox drop costs in Melbourne start at $180 per 1,000 flyers. The total depends on quantity and suburbs. Exclusive, GPS-tracked, never bundled. Free quote.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Letterbox Drop Cost Melbourne | South East Flyers",
@@ -193,8 +193,9 @@ export default function LetterboxDropCost() {
       <div className="max-w-[1144px] mx-auto px-[clamp(20px,4vw,48px)] pt-14">
         <Callout title="What your quote covers">
           <p className="m-0">
-            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. Send your quantity and suburbs
-            for a price, see where we deliver on the{" "}
+            Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. See how a{" "}
+            <TextLink href="/services/letterbox-distribution">letterbox drop</TextLink> works, send your quantity and
+            suburbs for a price, see where we deliver on the{" "}
             <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>, or start with a
             single suburb like <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink>.
           </p>
