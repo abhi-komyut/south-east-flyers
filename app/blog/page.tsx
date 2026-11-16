@@ -2,12 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import QuickQuoteForm from "../components/QuickQuoteForm";
 import { posts } from "./posts";
-import { SITE_URL, PageHero, Section, TextLink } from "../components/landing";
+import { buildMeta, PageHero, Section, TextLink } from "../components/landing";
 
 export const metadata: Metadata = {
-  title: "Letterbox and Flyer Tips",
-  description:
-    "Tips on letterbox drops and flyer distribution in Melbourne's south-east and east, from South East Flyers.",
+  ...buildMeta({
+    title: "Letterbox and Flyer Tips",
+    description:
+      "Tips on letterbox drops and flyer distribution in Melbourne's south-east and east, from South East Flyers.",
+    path: "/blog",
+  }),
   keywords: [
     "letterbox distribution blog",
     "flyer marketing tips",
@@ -15,24 +18,6 @@ export const metadata: Metadata = {
     "flyer distribution Melbourne",
     "leaflet distribution Australia",
   ],
-  alternates: {
-    canonical: `${SITE_URL}/blog`,
-  },
-  openGraph: {
-    title: "Letterbox and Flyer Tips | South East Flyers",
-    description:
-      "Tips on letterbox drops and flyer distribution in Melbourne's south-east and east, from South East Flyers.",
-    url: `${SITE_URL}/blog`,
-    type: "website",
-    images: [{ url: "/og-logo.jpg", width: 1200, height: 630, alt: "South East Flyers & Marketing Solutions" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Letterbox and Flyer Tips | South East Flyers",
-    description:
-      "Tips on letterbox drops and flyer distribution in Melbourne's south-east and east, from South East Flyers.",
-    images: ["/og-logo.jpg"],
-  },
 };
 
 export default function BlogPage() {

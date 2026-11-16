@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -18,18 +19,12 @@ const PAGE_PATH = "/melbourne/flyer-distribution-brighton-east";
 // About 6,400 homes in Brighton East 3187 (household count used only to
 // describe how much of the suburb a drop covers).
 
-export const metadata: Metadata = {
-  title: { absolute: "Flyer Distribution Brighton East 3187 | South East Flyers" },
-  description:
-    "Flyer distribution in Brighton East 3187, around Hawthorn Road and Dendy Park. GPS-tracked letterbox drops straight to the door. Get a free quote.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
+export const metadata: Metadata = buildMeta({
     title: "Flyer Distribution Brighton East 3187 | South East Flyers",
-    description: "GPS-tracked letterbox drops across Brighton East 3187, around Hawthorn Road. Get a free quote.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+    description: "Flyer distribution in Brighton East 3187, around Hawthorn Road and Dendy Park. GPS-tracked letterbox drops straight to the door. Get a free quote.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 const faqs = [
   {

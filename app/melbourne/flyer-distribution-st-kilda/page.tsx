@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -17,18 +18,12 @@ const PAGE_PATH = "/melbourne/flyer-distribution-st-kilda";
 
 // About 14,100 homes (household count used only for the full-coverage cost estimate).
 
-export const metadata: Metadata = {
-  title: { absolute: "Flyer Distribution St Kilda VIC 3182 | South East Flyers" },
-  description:
-    "Flyer distribution in St Kilda 3182, around Fitzroy and Acland Streets. GPS-tracked letterbox drops you can check block by block. Get a free quote.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
+export const metadata: Metadata = buildMeta({
     title: "Flyer Distribution St Kilda VIC 3182 | South East Flyers",
-    description: "GPS-tracked letterbox drops across St Kilda 3182, around Fitzroy and Acland Streets. Get a free quote.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+    description: "Flyer distribution in St Kilda 3182, around Fitzroy and Acland Streets. GPS-tracked letterbox drops you can check block by block. Get a free quote.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 const faqs = [
   {

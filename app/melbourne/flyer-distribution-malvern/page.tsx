@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -18,18 +19,12 @@ const PAGE_PATH = "/melbourne/flyer-distribution-malvern";
 // About 4,800 homes in Malvern 3144 (household count used only for the
 // full-coverage cost estimate; Malvern East is a separate suburb).
 
-export const metadata: Metadata = {
-  title: { absolute: "Flyer Distribution Malvern VIC 3144 | South East Flyers" },
-  description:
-    "Flyer distribution in Malvern 3144, around Glenferrie Road and High Street. GPS-tracked letterbox drops for trades and shops. Get a free quote.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
+export const metadata: Metadata = buildMeta({
     title: "Flyer Distribution Malvern VIC 3144 | South East Flyers",
-    description: "GPS-tracked letterbox drops across Malvern 3144, around Glenferrie Road. Get a free quote.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+    description: "Flyer distribution in Malvern 3144, around Glenferrie Road and High Street. GPS-tracked letterbox drops for trades and shops. Get a free quote.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 const faqs = [
   {

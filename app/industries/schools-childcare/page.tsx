@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -15,18 +16,12 @@ import {
 
 const PAGE_PATH = "/industries/schools-childcare";
 
-export const metadata: Metadata = {
-  title: { absolute: "Childcare Marketing Melbourne | South East Flyers" },
-  description:
-    "Childcare marketing and school enrolment letterbox drops across Melbourne's south-east. Reach local families before enrolment season. Exclusive, GPS-tracked.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
-    title: "Enrolment Letterbox Drops for Schools & Childcare | South East Flyers",
-    description: "Exclusive, GPS-tracked letterbox drops for childcare centres, kindergartens and schools across Melbourne's south-east.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+export const metadata: Metadata = buildMeta({
+    title: "Childcare Marketing Melbourne | South East Flyers",
+    description: "Childcare marketing and school enrolment letterbox drops across Melbourne's south-east. Reach local families before enrolment season. Exclusive, GPS-tracked.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 const faqs = [
   {

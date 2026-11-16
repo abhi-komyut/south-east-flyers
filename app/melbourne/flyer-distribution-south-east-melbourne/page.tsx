@@ -3,6 +3,7 @@ import Link from "next/link";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -15,18 +16,12 @@ import {
 
 const PAGE_PATH = "/melbourne/flyer-distribution-south-east-melbourne";
 
-export const metadata: Metadata = {
-  title: { absolute: "Flyer Distribution South East Melbourne | South East Flyers" },
-  description:
-    "Flyer distribution across south east and eastern Melbourne, council by council. Exclusive, GPS-tracked letterbox drops, never bundled, from 1,000 flyers.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
-    title: "Letterbox Drops Across South East & Eastern Melbourne | South East Flyers",
-    description: "Exclusive, GPS-tracked letterbox drops across eight councils in Melbourne's south-east and east.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+export const metadata: Metadata = buildMeta({
+    title: "Flyer Distribution South East Melbourne | South East Flyers",
+    description: "Flyer distribution across south east and eastern Melbourne, council by council. Exclusive, GPS-tracked letterbox drops, never bundled, from 1,000 flyers.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 // Suburb pages that exist today. Add each new suburb page here when it publishes.
 const suburbPages: Record<string, string> = {

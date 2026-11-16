@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -18,18 +19,12 @@ const PAGE_PATH = "/melbourne/flyer-distribution-glen-iris";
 // About 11,300 homes in Glen Iris 3146 (household count used only to
 // describe how much of the suburb a drop covers).
 
-export const metadata: Metadata = {
-  title: { absolute: "Flyer Distribution Glen Iris VIC 3146 | South East Flyers" },
-  description:
-    "Flyer distribution in Glen Iris 3146, from High Street to Burke Road. GPS-tracked letterbox drops checked block by block. Get a fast free quote.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
+export const metadata: Metadata = buildMeta({
     title: "Flyer Distribution Glen Iris VIC 3146 | South East Flyers",
-    description: "GPS-tracked letterbox drops across Glen Iris 3146, along Gardiners Creek. Get a free quote.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+    description: "Flyer distribution in Glen Iris 3146, from High Street to Burke Road. GPS-tracked letterbox drops checked block by block. Get a fast free quote.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 const faqs = [
   {

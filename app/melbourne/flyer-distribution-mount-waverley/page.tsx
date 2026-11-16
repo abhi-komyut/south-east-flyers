@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -18,18 +19,12 @@ const PAGE_PATH = "/melbourne/flyer-distribution-mount-waverley";
 // About 13,900 homes in Mount Waverley 3149 (household count used only for the
 // full-coverage cost estimate).
 
-export const metadata: Metadata = {
-  title: { absolute: "Flyer Distribution Mount Waverley 3149 | South East Flyers" },
-  description:
-    "Flyer distribution in Mount Waverley 3149, around the village and Pinewood. GPS-tracked letterbox drops for builders, schools and shops. Free quote.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
+export const metadata: Metadata = buildMeta({
     title: "Flyer Distribution Mount Waverley 3149 | South East Flyers",
-    description: "GPS-tracked letterbox drops across Mount Waverley 3149, around the village. Get a free quote.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+    description: "Flyer distribution in Mount Waverley 3149, around the village and Pinewood. GPS-tracked letterbox drops for builders, schools and shops. Free quote.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 const faqs = [
   {

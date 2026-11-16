@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -18,18 +19,12 @@ const PAGE_PATH = "/melbourne/flyer-distribution-box-hill";
 // About 7,800 homes in Box Hill 3128 (household count used only for the
 // full-coverage cost estimate; Box Hill North and Box Hill South are separate).
 
-export const metadata: Metadata = {
-  title: { absolute: "Flyer Distribution Box Hill VIC 3128 | South East Flyers" },
-  description:
-    "Flyer distribution in Box Hill 3128, around Box Hill Central and the house streets. GPS-tracked drops checked block by block. Get a free quote.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
+export const metadata: Metadata = buildMeta({
     title: "Flyer Distribution Box Hill VIC 3128 | South East Flyers",
-    description: "GPS-tracked letterbox drops across Box Hill 3128, around Box Hill Central. Get a free quote.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+    description: "Flyer distribution in Box Hill 3128, around Box Hill Central and the house streets. GPS-tracked drops checked block by block. Get a free quote.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 const faqs = [
   {

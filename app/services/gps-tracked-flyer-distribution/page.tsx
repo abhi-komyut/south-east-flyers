@@ -4,6 +4,7 @@ import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import Reveal from "../../components/Reveal";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   Section,
@@ -14,21 +15,11 @@ import {
 
 const PAGE_PATH = "/services/gps-tracked-flyer-distribution";
 
-export const metadata: Metadata = {
-  title: "GPS-Tracked Flyer Distribution",
-  description:
-    "GPS-tracked flyer distribution in Melbourne's south-east and east. Every run is recorded in Strava, and you get a map of the streets covered. Free quote.",
-  alternates: {
-    canonical: `${SITE_URL}${PAGE_PATH}`,
-  },
-  openGraph: {
-    title: "GPS-Tracked Flyer Distribution | South East Flyers",
-    description:
-      "Every distribution run is GPS-tracked via the Strava app. See the routes and streets your campaign covered, with a report provided once it's complete.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+export const metadata: Metadata = buildMeta({
+    title: "GPS-Tracked Flyer Distribution",
+    description: "GPS-tracked flyer distribution in Melbourne's south-east and east. Every run is recorded in Strava, and you get a map of the streets covered. Free quote.",
+    path: PAGE_PATH,
+});
 
 const tracked: { title: string; body: string; icon: React.ReactNode }[] = [
   {

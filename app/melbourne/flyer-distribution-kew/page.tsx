@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -17,18 +18,12 @@ const PAGE_PATH = "/melbourne/flyer-distribution-kew";
 
 // About 10,600 homes (household count used only for the full-coverage cost estimate).
 
-export const metadata: Metadata = {
-  title: { absolute: "Flyer Distribution Kew VIC 3101 | South East Flyers" },
-  description:
-    "Flyer distribution in Kew 3101, around Kew Junction and the school streets. GPS-tracked letterbox drops checked block by block. Get a free quote.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
+export const metadata: Metadata = buildMeta({
     title: "Flyer Distribution Kew VIC 3101 | South East Flyers",
-    description: "GPS-tracked letterbox drops across Kew 3101, around Kew Junction. Get a free quote.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+    description: "Flyer distribution in Kew 3101, around Kew Junction and the school streets. GPS-tracked letterbox drops checked block by block. Get a free quote.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 const faqs = [
   {

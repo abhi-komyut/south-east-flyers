@@ -4,6 +4,7 @@ import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import Reveal from "../../components/Reveal";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -19,18 +20,12 @@ const PAGE_PATH = "/melbourne/flyer-distribution-brighton";
 
 // About 10,500 homes (household count used only for the full-coverage cost estimate).
 
-export const metadata: Metadata = {
-  title: { absolute: "Bayside Letterbox Drop Brighton | South East Flyers" },
-  description:
-    "Bayside letterbox drops in Brighton 3186, around Church Street and Bay Street. Exclusive, GPS-tracked delivery for agents, trades and cafes. Free quote.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
-    title: "Flyer Distribution Brighton VIC 3186 | South East Flyers",
-    description: "GPS-tracked letterbox drops across Brighton 3186, around Church Street and Bay Street. Get a free quote.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+export const metadata: Metadata = buildMeta({
+    title: "Bayside Letterbox Drop Brighton | South East Flyers",
+    description: "Bayside letterbox drops in Brighton 3186, around Church Street and Bay Street. Exclusive, GPS-tracked delivery for agents, trades and cafes. Free quote.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 const faqs = [
   {

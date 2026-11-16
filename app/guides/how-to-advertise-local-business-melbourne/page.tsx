@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   Section,
@@ -14,18 +15,13 @@ import {
 const PAGE_PATH = "/guides/how-to-advertise-local-business-melbourne";
 const TITLE = "How to Advertise a Local Business in Melbourne (2026)";
 
-export const metadata: Metadata = {
-  title: { absolute: TITLE },
+export const metadata: Metadata = buildMeta({
+  title: TITLE,
   description:
     "How to advertise a local business in Melbourne: Google Business Profile, local Facebook groups, signage, Google Ads and letterbox drops compared honestly.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
-    title: TITLE,
-    description: "An honest comparison of five local advertising channels for Melbourne businesses.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "article",
-  },
-};
+  path: PAGE_PATH,
+  absoluteTitle: true,
+});
 
 const faqs = [
   {

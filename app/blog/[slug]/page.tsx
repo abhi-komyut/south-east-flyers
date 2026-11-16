@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { posts, getPostBySlug } from "../posts";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
-import { SITE_URL, PageHero, TextLink, JsonLd } from "../../components/landing";
+import { SITE_URL, buildMeta, PageHero, TextLink, JsonLd } from "../../components/landing";
 
 export function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
@@ -19,30 +19,12 @@ export async function generateMetadata({
   const post = getPostBySlug(slug);
   if (!post) return {};
 
-  const metaTitle = post.metaTitle ?? post.title;
-  const metaDescription = post.metaDescription ?? post.excerpt;
-  const url = `${SITE_URL}/blog/${post.slug}`;
-
-  return {
-    title: metaTitle,
-    description: metaDescription,
-    alternates: {
-      canonical: url,
-    },
-    openGraph: {
-      title: `${metaTitle} | South East Flyers`,
-      description: metaDescription,
-      url,
-      type: "article",
-      images: [{ url: `${SITE_URL}/og-logo.jpg`, width: 1200, height: 630, alt: "South East Flyers & Marketing Solutions" }],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: `${metaTitle} | South East Flyers`,
-      description: metaDescription,
-      images: [`${SITE_URL}/og-logo.jpg`],
-    },
-  };
+  return buildMeta({
+    title: post.metaTitle ?? post.title,
+    description: post.metaDescription ?? post.excerpt,
+    path: `/blog/${post.slug}`,
+    type: "article",
+  });
 }
 
 export default async function BlogPostPage({

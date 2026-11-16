@@ -4,6 +4,7 @@ import FAQSection from "../components/FAQSection";
 import PricingCalculator from "../components/PricingCalculator";
 import Reveal from "../components/Reveal";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   Section,
@@ -15,18 +16,12 @@ import {
 
 const PAGE_PATH = "/letterbox-drop-cost";
 
-export const metadata: Metadata = {
-  title: { absolute: "Letterbox Drop Cost Melbourne 2026 | South East Flyers" },
-  description:
-    "Letterbox drop costs in Melbourne start at $180 per 1,000 flyers. The total depends on quantity and suburbs. Exclusive, GPS-tracked, never bundled. Free quote.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
-    title: "Letterbox Drop Cost Melbourne | South East Flyers",
-    description: "Exclusive, GPS-tracked letterbox drops across Melbourne's south-east. Tell us your quantity and suburbs for a free quote.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+export const metadata: Metadata = buildMeta({
+    title: "Letterbox Drop Cost Melbourne 2026 | South East Flyers",
+    description: "Letterbox drop costs in Melbourne start at $180 per 1,000 flyers. The total depends on quantity and suburbs. Exclusive, GPS-tracked, never bundled. Free quote.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 const quantities = [1000, 2500, 5000, 10000, 20000];
 

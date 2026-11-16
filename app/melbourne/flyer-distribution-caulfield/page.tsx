@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -19,18 +20,12 @@ const PAGE_PATH = "/melbourne/flyer-distribution-caulfield";
 // used only for the full-coverage cost estimate; Caulfield North and
 // Caulfield South are separate suburbs we also cover).
 
-export const metadata: Metadata = {
-  title: { absolute: "Flyer Distribution Caulfield VIC 3162 | South East Flyers" },
-  description:
-    "Flyer distribution in Caulfield 3162, around Glen Huntly Road and the racecourse. Cover the whole suburb in one GPS-tracked run. Get a free quote.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
+export const metadata: Metadata = buildMeta({
     title: "Flyer Distribution Caulfield VIC 3162 | South East Flyers",
-    description: "GPS-tracked letterbox drops across Caulfield 3162, around Glen Huntly Road and the racecourse. Get a free quote.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+    description: "Flyer distribution in Caulfield 3162, around Glen Huntly Road and the racecourse. Cover the whole suburb in one GPS-tracked run. Get a free quote.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 const faqs = [
   {

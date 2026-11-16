@@ -1,29 +1,13 @@
 import type { Metadata } from "next";
 import PortfolioContent from "./PortfolioContent";
+import { buildMeta } from "../components/landing";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMeta({
   title: "Our Clients",
   description:
     "Clients include Ray White, McGrath and Belle Property. Exclusive, GPS-tracked letterbox drops across Melbourne's south-east and east.",
-  alternates: {
-    canonical: "https://www.southeastflyers.com.au/portfolio",
-  },
-  openGraph: {
-    title: "Our Clients | South East Flyers",
-    description:
-      "Clients include Ray White, McGrath and Belle Property. Exclusive, GPS-tracked letterbox drops across Melbourne's south-east and east.",
-    url: "https://www.southeastflyers.com.au/portfolio",
-    type: "website",
-    images: [{ url: "/og-logo.jpg", width: 1200, height: 630, alt: "South East Flyers & Marketing Solutions" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Our Clients | South East Flyers",
-    description:
-      "Clients include Ray White, McGrath and Belle Property. Exclusive, GPS-tracked letterbox drops across Melbourne's south-east and east.",
-    images: ["/og-logo.jpg"],
-  },
-};
+  path: "/portfolio",
+});
 
 export default function Portfolio() {
   return <PortfolioContent />;

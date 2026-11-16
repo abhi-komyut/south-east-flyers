@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -15,18 +16,12 @@ import {
 
 const PAGE_PATH = "/industries/home-services";
 
-export const metadata: Metadata = {
-  title: { absolute: "Home Services Marketing Melbourne | South East Flyers" },
-  description:
-    "Home services marketing for plumbers, electricians, roofers and cleaners in Melbourne. Exclusive, GPS-tracked letterbox drops, from 1,000 flyers.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
-    title: "Letterbox Drops for Home Services Melbourne | South East Flyers",
-    description: "Exclusive, GPS-tracked flyer distribution for trades and home services across Melbourne's south-east.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+export const metadata: Metadata = buildMeta({
+    title: "Home Services Marketing Melbourne | South East Flyers",
+    description: "Home services marketing for plumbers, electricians, roofers and cleaners in Melbourne. Exclusive, GPS-tracked letterbox drops, from 1,000 flyers.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 const seasons: { months: string; demand: string }[] = [
   { months: "March to May", demand: "Heater servicing, gutter cleaning before winter rain, roof inspections, blocked drains from autumn leaves" },

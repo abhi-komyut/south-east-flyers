@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Breadcrumbs, { type Crumb } from "./Breadcrumbs";
@@ -14,6 +15,58 @@ import Reveal from "./Reveal";
 export const SITE_URL = "https://www.southeastflyers.com.au";
 export const PHONE_DISPLAY = "0402 824 070";
 export const PHONE_TEL = "tel:+61402824070";
+
+const SITE_NAME = "South East Flyers & Marketing Solutions";
+const OG_IMAGE = {
+  url: `${SITE_URL}/og-logo.jpg`,
+  width: 1200,
+  height: 630,
+  alt: SITE_NAME,
+};
+
+/**
+ * Build a page's full metadata so Open Graph and Twitter always match the
+ * page's own title, description and canonical URL, with a consistent site
+ * name, locale, image and card type. Pass `absoluteTitle` when `title` is
+ * already the complete title (otherwise " | South East Flyers" is appended
+ * via the root template, and the full brandable title is used for OG/Twitter).
+ */
+export function buildMeta({
+  title,
+  description,
+  path,
+  absoluteTitle = false,
+  type = "website",
+}: {
+  title: string;
+  description: string;
+  path: string;
+  absoluteTitle?: boolean;
+  type?: "website" | "article";
+}): Metadata {
+  const url = `${SITE_URL}${path}`;
+  const fullTitle = absoluteTitle ? title : `${title} | South East Flyers`;
+  return {
+    title: absoluteTitle ? { absolute: title } : title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title: fullTitle,
+      description,
+      url,
+      siteName: SITE_NAME,
+      locale: "en_AU",
+      type,
+      images: [OG_IMAGE],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: fullTitle,
+      description,
+      images: [`${SITE_URL}/og-logo.jpg`],
+    },
+  };
+}
 
 const linkClass = "text-navy underline underline-offset-2 hover:text-teal-deep";
 

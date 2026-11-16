@@ -3,6 +3,7 @@ import QuickQuoteForm from "../../components/QuickQuoteForm";
 import FAQSection from "../../components/FAQSection";
 import Reveal from "../../components/Reveal";
 import {
+  buildMeta,
   SITE_URL,
   PageHero,
   FactsStrip,
@@ -16,18 +17,12 @@ import {
 
 const PAGE_PATH = "/industries/local-businesses";
 
-export const metadata: Metadata = {
-  title: { absolute: "Local Business Flyers Melbourne | South East Flyers" },
-  description:
-    "Local business flyers delivered on their own to the streets around you, GPS-tracked. Exclusive delivery, from 1,000 flyers, across Melbourne's south-east.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
-    title: "Local Business Flyers & Letterbox Drops Melbourne | South East Flyers",
-    description: "Exclusive, GPS-tracked letterbox drops for local businesses across Melbourne's south-east. From 1,000 flyers.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    type: "website",
-  },
-};
+export const metadata: Metadata = buildMeta({
+    title: "Local Business Flyers Melbourne | South East Flyers",
+    description: "Local business flyers delivered on their own to the streets around you, GPS-tracked. Exclusive delivery, from 1,000 flyers, across Melbourne's south-east.",
+    path: PAGE_PATH,
+    absoluteTitle: true,
+});
 
 const businesses: { name: string; href?: string; note: string }[] = [
   { name: "Real estate agents", href: "/industries/real-estate", note: "Just listed, just sold and appraisal drops around each property" },
