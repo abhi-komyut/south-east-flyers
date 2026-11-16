@@ -186,7 +186,8 @@ export default function LetterboxDistribution() {
         <Callout title="Exclusive by default">
           <p className="m-0">
             Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. It pairs with{" "}
-            <TextLink href="/services/flyer-distribution">flyer distribution</TextLink> and{" "}
+            <TextLink href="/services/flyer-distribution">flyer distribution</TextLink>,{" "}
+            <TextLink href="/services/pamphlet-delivery">pamphlet delivery</TextLink> and{" "}
             <TextLink href="/services/targeted-flyer-distribution">targeted distribution</TextLink>. Get a price on the{" "}
             <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page.
           </p>
