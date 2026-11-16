@@ -53,6 +53,21 @@ const faqs = [
     answer:
       "Ask every new customer how they found you, and give each channel its own offer code or phone number. Compare the cost of each channel against the customers it brought, then put more money into the ones that pay.",
   },
+  {
+    question: "What is letterbox drop advertising?",
+    answer:
+      "It is advertising by delivering your own flyer or pamphlet to residential letterboxes in a chosen area. At South East Flyers the drop is exclusive, never bundled with other advertisers, and the run is GPS-tracked.",
+  },
+  {
+    question: "Is letterbox marketing the same as a letterbox drop?",
+    answer:
+      "Yes. People also search for letterbox advertising. On this site they all refer to the same kind of work: your material, your streets, a report at the end.",
+  },
+  {
+    question: "When is a letterbox drop the wrong choice?",
+    answer:
+      "When you need to reach people outside Melbourne's south-east and east, or when you only need an online listing. We do not present letterbox drops as a fix for every brief, which is why this guide also covers Google Business Profile, local Facebook groups, signage and Google Ads.",
+  },
 ];
 
 const articleLd = {
@@ -185,6 +200,33 @@ export default function LocalAdvertisingGuide() {
           <TextLink href="/industries/restaurants">restaurants and cafes</TextLink> and{" "}
           <TextLink href="/industries/real-estate">real estate agents</TextLink>, or the{" "}
           <TextLink href="/industries/local-businesses">local business flyers</TextLink> hub.
+        </p>
+      </Section>
+
+      <Section title="Letterbox drop advertising, compared with the other options">
+        <p>
+          Letterbox drop advertising is one of the five local channels this guide compares. It is not a social post and
+          it is not a printed ad on someone else&rsquo;s flyer. Your flyer goes in the letterbox on its own. That is
+          what we mean by exclusive delivery.
+        </p>
+        <p>
+          Letterbox marketing, or letterbox advertising, is worth considering when your customers live in a defined set
+          of streets, a suburb, a radius around a shop, or the area around a listing. It will not replace a Google
+          Business Profile, and it will not help if you need to reach another city. If you decide a drop is the right
+          channel, use the <TextLink href="/services/letterbox-distribution">letterbox drop page</TextLink> to book, and
+          the <TextLink href="/letterbox-drop-cost">letterbox drop cost page</TextLink> for starting prices ($180 per
+          1,000 flyers).
+        </p>
+      </Section>
+
+      <Section title="How to distribute flyers in a neighbourhood">
+        <p>
+          If you already have printed flyers, a letterbox drop is how we get them to the homes you choose in
+          Melbourne&rsquo;s south-east and east. You supply the flyers. We plan the streets, deliver each flyer on its
+          own (never bundled), and send a GPS report of the run. Starting prices are on the{" "}
+          <TextLink href="/letterbox-drop-cost">letterbox drop cost page</TextLink> ($180 per 1,000 flyers). To book,
+          use the <TextLink href="/services/flyer-distribution">flyer distribution</TextLink> or{" "}
+          <TextLink href="/services/letterbox-distribution">letterbox drop page</TextLink>.
         </p>
       </Section>
 
