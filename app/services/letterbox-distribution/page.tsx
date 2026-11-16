@@ -16,9 +16,9 @@ import {
 const PAGE_PATH = "/services/letterbox-distribution";
 
 export const metadata: Metadata = {
-  title: "Letterbox Distribution",
+  title: "Letterbox Drop Melbourne",
   description:
-    "Letterbox distribution and letterbox drops across Melbourne's south-east and eastern suburbs. Suburb-level targeting, no junk mail compliant, GPS tracking and campaign reporting. Get a free quote.",
+    "Letterbox drops in Melbourne's south-east and east. Exclusive, GPS-tracked, never bundled. You supply the flyers, we deliver. From $180 per 1,000. Free quote.",
   alternates: {
     canonical: `${SITE_URL}${PAGE_PATH}`,
   },
@@ -80,6 +80,16 @@ const faqs = [
     answer:
       "It depends on your offer: seasonal promotions, a new opening or a local event all have natural timing. Tell us what you're promoting and we'll help you plan a schedule that lines up with it.",
   },
+  {
+    question: "Do you do letterbox drops in Melbourne's south-east only?",
+    answer:
+      "Yes. We cover south-east and eastern Melbourne, described on the site as Port Melbourne to Box Hill, including suburbs such as St Kilda, Brighton, Caulfield, Bentleigh, Glen Waverley, Kew and Camberwell. We do not treat this as a Sydney or national service.",
+  },
+  {
+    question: "What is the difference between a letterbox drop and letterbox distribution?",
+    answer:
+      "They are the same service on this page. “Letterbox drop” is the phrase most people search. We plan the area, deliver your flyers only (never bundled), and send a GPS report of the run.",
+  },
 ];
 
 const serviceLd = {
@@ -101,8 +111,8 @@ export default function LetterboxDistribution() {
 
       <PageHero
         crumbs={[{ name: "Home", href: "/" }, { name: "Letterbox distribution" }]}
-        h1="Letterbox distribution"
-        lead="Get your flyers into letterboxes on their own with GPS-tracked letterbox distribution, never bundled with other advertisers."
+        h1="Letterbox drops in Melbourne's south-east and east"
+        lead="A letterbox drop puts your flyer in residential letterboxes on its own, not in a shared bundle with other advertisers. South East Flyers plans letterbox drops across Melbourne's south-east and east, tracks every run by GPS, and sends you a map of the streets covered. You supply the printed flyers; we do not print. Letterbox distribution, including letterbox flyer distribution, starts at $180 per 1,000 flyers."
         tagline="You provide the flyers. We handle the distribution."
         image={{ src: "/images/redesign/walker-street.jpg", alt: "A walker checking flyers beside a brick letterbox on a leafy street" }}
       />
@@ -189,6 +199,17 @@ export default function LetterboxDistribution() {
         heading="Planning a letterbox drop?"
         lead="Tell us which suburbs you want to reach and how many flyers you have. We'll put together a free, no-obligation quote."
       />
+
+      <div className="pt-14">
+        <Section title="Letterbox drops in Melbourne, priced clearly" first>
+          <p>
+            If you are comparing letterbox drop advertising or asking what a letterbox drop costs, start with our{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost page</TextLink>. The starting price is $180 per
+            1,000 flyers, and the total depends on the quantity and the suburbs you want. We will quote the streets, not
+            a bundled &ldquo;share of letterbox&rdquo; you cannot see.
+          </p>
+        </Section>
+      </div>
 
       <FAQSection
         items={faqs}

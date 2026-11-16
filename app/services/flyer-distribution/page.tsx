@@ -173,7 +173,7 @@ export default function FlyerDistribution() {
             We&rsquo;ll map a practical area.
           </p>
           <p className="m-0">
-            See <TextLink href="/services/letterbox-distribution">letterbox distribution</TextLink>, get a price on the{" "}
+            See <TextLink href="/services/letterbox-distribution">letterbox drop</TextLink>, get a price on the{" "}
             <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, or browse the{" "}
             <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne service area</TextLink>.
           </p>
