@@ -17,7 +17,7 @@ import Reveal from "./components/Reveal";
 export const metadata: Metadata = {
   title: {
     absolute:
-      "Local Flyer Distribution | South East Flyers – Letterbox Distribution Melbourne",
+      "Local Flyer Distribution | South East Flyers, Letterbox Distribution Melbourne",
   },
   description:
     "Local flyer distribution in Melbourne's south-east and east. Exclusive, GPS-tracked letterbox drops, never bundled. From $180 per 1,000 flyers. Free quote.",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Local Flyer Distribution | South East Flyers – Letterbox Distribution Melbourne",
+      "Local Flyer Distribution | South East Flyers, Letterbox Distribution Melbourne",
     description:
       "Local flyer distribution in Melbourne's south-east and east. Exclusive, GPS-tracked letterbox drops, never bundled. From $180 per 1,000 flyers. Free quote.",
     url: "https://www.southeastflyers.com.au/",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Local Flyer Distribution | South East Flyers – Letterbox Distribution Melbourne",
+      "Local Flyer Distribution | South East Flyers, Letterbox Distribution Melbourne",
     description:
       "Local flyer distribution in Melbourne's south-east and east. Exclusive, GPS-tracked letterbox drops, never bundled. From $180 per 1,000 flyers. Free quote.",
   },
@@ -95,7 +95,7 @@ export default function Home() {
 
       <PageHero
         h1="South East Flyers: local flyer distribution for Melbourne's south-east and east"
-        lead="South East Flyers is a local flyer distribution service for businesses in Melbourne's south-east and eastern suburbs, from Port Melbourne to Box Hill. We deliver your flyers exclusively – never bundled with other advertisers – and every run is GPS-tracked, with a map of the streets covered. You supply the printed flyers; we do not print. Local flyer delivery starts at $180 per 1,000 flyers. Call 0402 824 070 or request a free quote."
+        lead="South East Flyers is a local flyer distribution service for businesses in Melbourne's south-east and eastern suburbs, from Port Melbourne to Box Hill. We deliver your flyers exclusively, never bundled with other advertisers, and every run is GPS-tracked, with a map of the streets covered. You supply the printed flyers; we do not print. Local flyer delivery starts at $180 per 1,000 flyers. Call 0402 824 070 or request a free quote."
         image={{ src: "/images/redesign/walker-foot.jpg", alt: "A South East Flyers walker posting a flyer into a letterbox on a sunny Melbourne street" }}
       />
 
