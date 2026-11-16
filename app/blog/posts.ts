@@ -5,6 +5,11 @@ export interface BlogPost {
   content: string;
   date: string;
   image: string;
+  // Optional SEO overrides. When set, metaTitle drives the <title>/OG title
+  // (while `title` stays the on-page H1) and metaDescription drives the meta
+  // description (while `excerpt` stays the on-page lead and listing summary).
+  metaTitle?: string;
+  metaDescription?: string;
 }
 
 export const posts: BlogPost[] = [
@@ -50,13 +55,18 @@ export const posts: BlogPost[] = [
 `,
   },
   {
-    title: "How GPS Tracking is Changing Flyer Distribution in Melbourne",
+    title: "What a GPS flyer-drop report shows",
+    metaTitle: "What a GPS Flyer-Drop Report Shows",
+    metaDescription:
+      "What you receive after a GPS-tracked letterbox run, and how to read the street map. For bookings, use the GPS-tracked flyer distribution service page.",
     slug: "gps-tracking-flyer-distribution-melbourne",
     excerpt:
       "GPS-tracked flyer distribution is transforming the letterbox marketing industry. Learn how real-time tracking ensures every flyer reaches its intended destination across Melbourne.",
     date: "2026-04-15",
     image: "/blog/gps-tracking.jpg",
     content: `
+<p>This article explains what you see in a GPS report after a letterbox run. To book the service, use our <a href="/services/gps-tracked-flyer-distribution">GPS-tracked flyer distribution</a> page.</p>
+
 <p>Accountability has always been the biggest challenge in the flyer distribution industry. How do you know your flyers actually made it into letterboxes? GPS tracking technology has fundamentally changed the game, giving businesses in Melbourne complete visibility over their distribution campaigns.</p>
 
 <h2>The Problem With Traditional Flyer Distribution</h2>
