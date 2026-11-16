@@ -367,7 +367,8 @@ export default function FlyerDistributionMelbourne() {
         <Callout title="Flyer distribution across Melbourne">
           <p className="m-0">
             Every drop is exclusive, with no other advertisers&rsquo; flyers in the run. Get a price on the{" "}
-            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, browse the{" "}
+            <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page, see our{" "}
+            <TextLink href="/services/pamphlet-delivery">pamphlet delivery</TextLink> page, browse the{" "}
             <TextLink href="/melbourne/flyer-distribution-south-east-melbourne">south-east Melbourne</TextLink> suburbs,
             or see the <TextLink href="/industries">industries we work with</TextLink>.
           </p>

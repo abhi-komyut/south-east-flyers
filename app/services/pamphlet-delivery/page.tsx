@@ -16,9 +16,9 @@ import {
 const PAGE_PATH = "/services/pamphlet-delivery";
 
 export const metadata: Metadata = {
-  title: { absolute: "Pamphlet Distribution Melbourne | South East Flyers" },
+  title: { absolute: "Pamphlet Delivery Melbourne | South East Flyers" },
   description:
-    "Pamphlet distribution and brochure delivery across Melbourne's south-east. Each one delivered on its own, GPS-tracked, from 1,000 pamphlets.",
+    "Pamphlet delivery across Melbourne's south-east and east. Each pamphlet delivered on its own, GPS-tracked, never bundled. From 1,000 pamphlets. Free quote.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: "Pamphlet & Brochure Distribution Melbourne | South East Flyers",
@@ -77,7 +77,7 @@ export default function PamphletDelivery() {
           { name: "Flyer Distribution", href: "/services/flyer-distribution" },
           { name: "Pamphlet Delivery" },
         ]}
-        h1="Pamphlet and Brochure Distribution in Melbourne"
+        h1="Pamphlet delivery in Melbourne's south-east and east"
         lead="Get your pamphlets and brochures into letterboxes across Melbourne's south-east with GPS-tracked distribution, each delivered on its own."
         image={{ src: "/images/redesign/letterbox-hand.jpg", alt: "A hand posting a flyer into a steel letterbox" }}
       />
@@ -93,14 +93,16 @@ export default function PamphletDelivery() {
 
       <Section title="When a flyer isn't enough" first>
         <p>
-          Some messages need more than one page. An open day needs a map and a timetable; a new childcare centre needs
-          its hours, rooms and fees; a services business needs to explain what it does. A folded pamphlet gives that
-          room, and pamphlet distribution puts the whole story in the letterbox.
+          Pamphlet delivery, sometimes called pamphlet distribution, is how we get your pamphlets and brochures into
+          letterboxes on their own, not in a shared bundle. Some messages need more than one page. An open day needs a
+          map and a timetable; a new childcare centre needs its hours, rooms and fees; a services business needs to
+          explain what it does. A folded pamphlet gives that room, and pamphlet distribution puts the whole story in the
+          letterbox.
         </p>
         <p>
           Pamphlet delivery works the same way as our{" "}
-          <TextLink href="/services/flyer-distribution">flyer distribution</TextLink> drops. You choose the streets, we
-          deliver each pamphlet on its own, and the GPS report shows exactly where it went.
+          <TextLink href="/services/flyer-distribution">flyer distribution</TextLink> drops. You choose the streets, and
+          the GPS report shows exactly where it went.
         </p>
       </Section>
 
