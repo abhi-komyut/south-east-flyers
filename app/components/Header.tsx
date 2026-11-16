@@ -2,10 +2,18 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useRef, useState } from "react";
+
+const serviceLinks = [
+  { href: "/services/flyer-distribution", label: "Flyer distribution" },
+  { href: "/services/letterbox-distribution", label: "Letterbox drop" },
+  { href: "/services/targeted-flyer-distribution", label: "Targeted distribution" },
+  { href: "/services/gps-tracked-flyer-distribution", label: "GPS-tracked delivery" },
+  { href: "/services/catalogue-delivery", label: "Catalogue delivery" },
+  { href: "/services/pamphlet-delivery", label: "Pamphlet delivery" },
+];
 
 const navLinks = [
-  { href: "/services/flyer-distribution", label: "Services" },
   { href: "/melbourne/flyer-distribution-melbourne", label: "Suburbs" },
   { href: "/industries", label: "Industries" },
   { href: "/letterbox-drop-cost", label: "Pricing" },
@@ -15,6 +23,14 @@ const navLinks = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const servicesButtonRef = useRef<HTMLButtonElement>(null);
+
+  const closeMobile = () => {
+    setOpen(false);
+    setMobileServicesOpen(false);
+  };
 
   return (
     <header className="relative z-30 bg-white border-b border-line font-sans text-ink">
@@ -31,6 +47,63 @@ export default function Header() {
         </Link>
 
         <nav aria-label="Main" className="lg:flex hidden items-center gap-6 font-heading text-sm font-semibold ml-3">
+          <div
+            className="relative"
+            onMouseEnter={() => setServicesOpen(true)}
+            onMouseLeave={() => setServicesOpen(false)}
+            onBlur={(e) => {
+              if (!e.currentTarget.contains(e.relatedTarget as Node)) setServicesOpen(false);
+            }}
+            onKeyDown={(e) => {
+              if (e.key === "Escape") {
+                setServicesOpen(false);
+                servicesButtonRef.current?.focus();
+              }
+            }}
+          >
+            <button
+              ref={servicesButtonRef}
+              type="button"
+              aria-haspopup="true"
+              aria-expanded={servicesOpen}
+              onClick={() => setServicesOpen((v) => !v)}
+              className="flex items-center gap-1 text-ink no-underline hover:text-navy transition-colors"
+            >
+              Services
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2.2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+                className={`transition-transform ${servicesOpen ? "rotate-180" : ""}`}
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            {servicesOpen && (
+              <div className="absolute left-0 top-full pt-2 min-w-[244px] z-40">
+                <ul className="list-none m-0 p-2 bg-white rounded-card border border-line shadow-[0_24px_48px_-28px_rgba(4,60,60,0.45)]">
+                  {serviceLinks.map((s) => (
+                    <li key={s.href}>
+                      <Link
+                        href={s.href}
+                        onClick={() => setServicesOpen(false)}
+                        className="block px-3.5 py-2.5 rounded-[10px] text-ink no-underline hover:bg-cream hover:text-navy transition-colors"
+                      >
+                        {s.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+
           {navLinks.map((l) => (
             <Link key={l.href} href={l.href} className="text-ink no-underline hover:text-navy transition-colors">
               {l.label}
@@ -76,12 +149,50 @@ export default function Header() {
       >
         <div className="overflow-hidden">
           <nav id="mobile-nav" aria-label="Main" className="flex flex-col font-heading text-[17px] font-semibold px-[clamp(20px,4vw,48px)] pt-2 pb-5">
+            <button
+              type="button"
+              aria-expanded={mobileServicesOpen}
+              aria-controls="mobile-services"
+              onClick={() => setMobileServicesOpen((v) => !v)}
+              className="flex items-center justify-between w-full text-ink no-underline py-3 min-h-11"
+            >
+              Services
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2.2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+                className={`transition-transform ${mobileServicesOpen ? "rotate-180" : ""}`}
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            {mobileServicesOpen && (
+              <ul id="mobile-services" className="list-none m-0 pl-3 flex flex-col border-l border-line ml-1 mb-1">
+                {serviceLinks.map((s) => (
+                  <li key={s.href}>
+                    <Link
+                      href={s.href}
+                      onClick={closeMobile}
+                      className="block text-ink no-underline py-2.5 min-h-11 text-[15px] font-semibold"
+                    >
+                      {s.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
             {navLinks.map((l) => (
-              <Link key={l.href} href={l.href} onClick={() => setOpen(false)} className="text-ink no-underline py-3 min-h-11">
+              <Link key={l.href} href={l.href} onClick={closeMobile} className="text-ink no-underline py-3 min-h-11">
                 {l.label}
               </Link>
             ))}
-            <a href="tel:0402824070" onClick={() => setOpen(false)} className="text-navy no-underline py-3 min-h-11 [font-variant-numeric:tabular-nums]">
+            <a href="tel:0402824070" onClick={closeMobile} className="text-navy no-underline py-3 min-h-11 [font-variant-numeric:tabular-nums]">
               Call 0402 824 070
             </a>
           </nav>

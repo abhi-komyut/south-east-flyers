@@ -101,8 +101,8 @@ export default function PamphletDelivery() {
         </p>
         <p>
           Pamphlet delivery works the same way as our{" "}
-          <TextLink href="/services/flyer-distribution">flyer distribution</TextLink> drops. You choose the streets, we
-          deliver each pamphlet on its own, and the GPS report shows exactly where it went.
+          <TextLink href="/services/flyer-distribution">flyer distribution</TextLink> drops. You choose the streets, and
+          the GPS report shows exactly where it went.
         </p>
       </Section>
 
