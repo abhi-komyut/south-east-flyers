@@ -16,9 +16,9 @@ import {
 const PAGE_PATH = "/services/flyer-distribution";
 
 export const metadata: Metadata = {
-  title: "Flyer Distribution",
+  title: "Flyer Distribution & Delivery",
   description:
-    "Professional flyer distribution across Melbourne's south-east and eastern suburbs. Residential delivery, suburb-level targeting, GPS tracking and campaign reporting. You provide the flyers, we handle the distribution. Get a free quote.",
+    "Flyer distribution and flyer delivery across Melbourne's south-east and east, including leaflet distribution. Exclusive, GPS-tracked, never bundled. Free quote.",
   alternates: {
     canonical: `${SITE_URL}${PAGE_PATH}`,
   },
@@ -101,7 +101,7 @@ export default function FlyerDistribution() {
 
       <PageHero
         crumbs={[{ name: "Home", href: "/" }, { name: "Flyer distribution" }]}
-        h1="Professional flyer distribution"
+        h1="Flyer distribution and flyer delivery in Melbourne"
         lead="Get your flyers into letterboxes across Melbourne's south-east with GPS-tracked flyer distribution, planned and reported end to end."
         tagline="You provide the flyers. We handle the distribution."
         image={{ src: "/images/redesign/letterbox-hand.jpg", alt: "A hand posting a flyer into a steel letterbox" }}
@@ -122,6 +122,9 @@ export default function FlyerDistribution() {
           run to metro-wide pushes across{" "}
           <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne</TextLink>&rsquo;s south-east and eastern
           suburbs.
+        </p>
+        <p>
+          This is also the page for leaflet distribution and for flyer delivery if you already have the print ready.
         </p>
       </Section>
 
@@ -184,6 +187,16 @@ export default function FlyerDistribution() {
         heading="Ready to distribute your flyers?"
         lead="Tell us your target suburbs and flyer quantity for a free, no-obligation quote."
       />
+
+      <div className="pt-14">
+        <Section title="Flyer delivery and leaflet distribution" first>
+          <p>
+            Flyer delivery, flyer distribution and leaflet distribution are the same operational service here: you
+            supply the printed material, we deliver it to the letterboxes you choose in Melbourne&rsquo;s south-east and
+            east, and we send a GPS report of the run. We do not print the flyers.
+          </p>
+        </Section>
+      </div>
 
       <FAQSection
         items={faqs}
