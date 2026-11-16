@@ -289,6 +289,18 @@ export default function FlyerDistributionMelbourne() {
           Each run is tracked in Strava, so you get a clear report once the campaign is done. That&rsquo;s leaflet
           distribution Melbourne businesses can rely on, from a small test run up to a metro-wide push.
         </p>
+        <p>
+          Looking for flyer delivery in Melbourne, not just a generic run? We plan the suburbs, walk the streets, and
+          send you a GPS map of the letterboxes covered. You supply the flyers; we do not print.
+        </p>
+      </Section>
+
+      <Section title="Flyer delivery Melbourne businesses can track">
+        <p>
+          Flyer delivery in Melbourne works best when you can see where the run went. Every South East Flyers drop is
+          exclusive, never bundled with other advertisers, and recorded so you get a street-by-street report. If you
+          only need a few Bayside or eastern suburbs, we will target those streets rather than the whole city.
+        </p>
       </Section>
 
       <Section title="Why Melbourne businesses use flyer distribution">
