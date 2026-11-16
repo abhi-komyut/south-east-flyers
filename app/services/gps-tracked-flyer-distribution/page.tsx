@@ -17,7 +17,7 @@ const PAGE_PATH = "/services/gps-tracked-flyer-distribution";
 export const metadata: Metadata = {
   title: "GPS-Tracked Flyer Distribution",
   description:
-    "GPS-tracked flyer distribution across Melbourne's south-east and eastern suburbs. Every distribution run is tracked via the Strava app, so you get a report of the routes and streets covered. Get a free quote.",
+    "GPS-tracked flyer distribution in Melbourne's south-east and east. Every run is recorded in Strava, and you get a map of the streets covered. Free quote.",
   alternates: {
     canonical: `${SITE_URL}${PAGE_PATH}`,
   },
@@ -121,6 +121,11 @@ export default function GpsTrackedFlyerDistribution() {
         <p>
           The finished report is a simple summary and route map you can forward straight to a client or vendor, which
           is why agents use it in their vendor reports.
+        </p>
+        <p>
+          If you arrived from an{" "}
+          <TextLink href="/blog/gps-tracking-flyer-distribution-melbourne">article about GPS tracking</TextLink>, this
+          is the service page to book from. The blog post explains the idea; this page is where the work is done.
         </p>
       </Section>
 
