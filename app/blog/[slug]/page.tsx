@@ -67,7 +67,7 @@ export default async function BlogPostPage({
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
-    description: post.excerpt,
+    description: post.metaDescription ?? post.excerpt,
     datePublished: post.date,
     dateModified: post.date,
     image: `${SITE_URL}${post.image}`,

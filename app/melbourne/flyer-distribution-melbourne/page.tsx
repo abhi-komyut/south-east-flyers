@@ -144,8 +144,6 @@ const coverageGroups: { region: string; suburbs: string[] }[] = [
   },
 ];
 
-const totalSuburbs = coverageGroups.reduce((n, g) => n + g.suburbs.length, 0);
-
 const whyUseIt: { title: string; body: string }[] = [
   {
     title: "Reach local households directly",
@@ -270,7 +268,7 @@ export default function FlyerDistributionMelbourne() {
 
       <FactsStrip
         stats={[
-          { value: String(totalSuburbs), label: "suburbs across our service area" },
+          { value: "56", label: "suburbs across our service area" },
           { value: "GPS map", label: "proof of delivery, every run" },
           { value: "Never", label: "bundled with other advertisers" },
           { value: "Quick", label: "turnaround on your quote" },

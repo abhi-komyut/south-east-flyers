@@ -62,7 +62,7 @@ export default function QuickQuoteForm({
           </h2>
           <p className="m-0 text-[17px] leading-[1.7] text-white/85 max-w-[460px]">{lead}</p>
           <ul className="list-none m-0 p-0 flex flex-col gap-3">
-            {["Coverage across 40+ suburbs", "High-conversion letterbox marketing", "Helps you acquire new customers"].map((item) => (
+            {["Coverage across 56 suburbs", "High-conversion letterbox marketing", "Helps you acquire new customers"].map((item) => (
               <li key={item} className="flex gap-3 items-center text-base">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-cta-on-dark shrink-0" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M5 12.5l4.5 4.5L19 7.5" />
