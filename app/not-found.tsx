@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: { absolute: TITLE },
     description: DESCRIPTION,
     alternates: { canonical: null },
-    robots: null,
+    robots: { index: false, follow: true },
     openGraph: {
       title: TITLE,
       url: `${SITE_URL}${pathname}`,
