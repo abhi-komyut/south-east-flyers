@@ -125,7 +125,7 @@ export default function Home() {
               Bundled drops put your flyer inside a pack of other advertisers&rsquo; catalogues. Ours go in by themselves, so the household sees your offer first and only.
             </p>
             <Link href="/services/letterbox-distribution" className="inline-flex items-center gap-2 font-heading font-semibold text-[15px] text-navy no-underline min-h-11">
-              How our letterbox distribution works
+              How our letterbox drops work
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>

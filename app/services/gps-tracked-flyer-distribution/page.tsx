@@ -160,7 +160,7 @@ export default function GpsTrackedFlyerDistribution() {
             Every drop is exclusive, with no other advertisers&rsquo; flyers in the run, and GPS-tracked so you see the
             routes it took, not just an invoice. It applies across our{" "}
             <TextLink href="/services/flyer-distribution">flyer distribution</TextLink> and{" "}
-            <TextLink href="/services/letterbox-distribution">letterbox distribution</TextLink> campaigns. Get a price on
+            <TextLink href="/services/letterbox-distribution">letterbox drop</TextLink> campaigns. Get a price on
             the <TextLink href="/letterbox-drop-cost">letterbox drop cost</TextLink> page.
           </p>
         </Callout>

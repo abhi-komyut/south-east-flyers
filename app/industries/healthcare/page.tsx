@@ -161,7 +161,7 @@ export default function Healthcare() {
 
       <Section title="Where this fits">
         <p>
-          Campaigns run through our <TextLink href="/services/letterbox-distribution">letterbox distribution</TextLink>{" "}
+          Campaigns run through our <TextLink href="/services/letterbox-distribution">letterbox drop</TextLink>{" "}
           and <TextLink href="/services/targeted-flyer-distribution">targeted distribution</TextLink> services, are{" "}
           <TextLink href="/services/gps-tracked-flyer-distribution">GPS-tracked</TextLink>, and cover the suburbs on
           our <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne</TextLink> page.
