@@ -100,7 +100,7 @@ const organizationLd = {
     "@type": "ContactPoint",
     telephone: "+61402824070",
     contactType: "sales",
-    areaServed: "AU",
+    areaServed: "South-east and eastern Melbourne",
     availableLanguage: "English",
   },
 };

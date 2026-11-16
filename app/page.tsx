@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { Fragment } from "react";
@@ -6,10 +7,38 @@ import {
   FactsStrip,
   LogoWall,
   StepsBand,
+  Section,
+  TextLink,
 } from "./components/landing";
 import QuickQuoteForm from "./components/QuickQuoteForm";
 import FAQSection from "./components/FAQSection";
 import Reveal from "./components/Reveal";
+
+export const metadata: Metadata = {
+  title: {
+    absolute:
+      "Local Flyer Distribution | South East Flyers, Letterbox Distribution Melbourne",
+  },
+  description:
+    "Local flyer distribution in Melbourne's south-east and east. Exclusive, GPS-tracked letterbox drops, never bundled. From $180 per 1,000 flyers. Free quote.",
+  alternates: {
+    canonical: "https://www.southeastflyers.com.au/",
+  },
+  openGraph: {
+    title:
+      "Local Flyer Distribution | South East Flyers, Letterbox Distribution Melbourne",
+    description:
+      "Local flyer distribution in Melbourne's south-east and east. Exclusive, GPS-tracked letterbox drops, never bundled. From $180 per 1,000 flyers. Free quote.",
+    url: "https://www.southeastflyers.com.au/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Local Flyer Distribution | South East Flyers, Letterbox Distribution Melbourne",
+    description:
+      "Local flyer distribution in Melbourne's south-east and east. Exclusive, GPS-tracked letterbox drops, never bundled. From $180 per 1,000 flyers. Free quote.",
+  },
+};
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -18,11 +47,21 @@ const jsonLd = {
   name: "South East Flyers & Marketing Solutions",
   description:
     "Exclusive, GPS-tracked flyer distribution and letterbox drops across Melbourne's south-east and eastern suburbs. Never bundled.",
-  url: "https://www.southeastflyers.com.au",
+  url: "https://www.southeastflyers.com.au/",
   telephone: "+61402824070",
   image: "https://www.southeastflyers.com.au/og-logo.jpg",
   logo: "https://www.southeastflyers.com.au/logo.png",
-  areaServed: [{ "@type": "City", name: "Melbourne", addressCountry: "AU" }],
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    opens: "08:00",
+    closes: "18:00",
+  },
+  areaServed: {
+    "@type": "Place",
+    name: "South-east and eastern Melbourne",
+    containedInPlace: { "@type": "City", name: "Melbourne", addressCountry: "AU" },
+  },
   serviceType: [
     "Flyer Distribution",
     "Letterbox Drops",
@@ -55,8 +94,8 @@ export default function Home() {
       />
 
       <PageHero
-        h1="Flyer distribution in Melbourne that actually gets read."
-        lead="Get your flyers into letterboxes across Melbourne's south-east with GPS-tracked flyer distribution."
+        h1="South East Flyers: local flyer distribution for Melbourne's south-east and east"
+        lead="South East Flyers is a local flyer distribution service for businesses in Melbourne's south-east and eastern suburbs, from Port Melbourne to Box Hill. We deliver your flyers exclusively, never bundled with other advertisers, and every run is GPS-tracked, with a map of the streets covered. You supply the printed flyers; we do not print. Local flyer delivery starts at $180 per 1,000 flyers. Call 0402 824 070 or request a free quote."
         image={{ src: "/images/redesign/walker-foot.jpg", alt: "A South East Flyers walker posting a flyer into a letterbox on a sunny Melbourne street" }}
       />
 
@@ -302,6 +341,14 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <div className="pt-14">
+        <Section title="Local flyer delivery, planned around your suburbs" first>
+          <p>
+            If you need local flyer delivery rather than a city-wide run, tell us the suburbs or streets that matter. We plan the walk, deliver to those letterboxes only, and send you the GPS report afterwards. For suburbs we already cover in detail, start with the <TextLink href="/melbourne/flyer-distribution-melbourne">Melbourne page</TextLink>, or jump to <TextLink href="/melbourne/flyer-distribution-brighton">Brighton</TextLink>, <TextLink href="/melbourne/flyer-distribution-kew">Kew</TextLink>, <TextLink href="/melbourne/flyer-distribution-glen-waverley">Glen Waverley</TextLink> or <TextLink href="/melbourne/flyer-distribution-box-hill">Box Hill</TextLink>.
+          </p>
+        </Section>
+      </div>
 
       <QuickQuoteForm
         heading="Get a quote with a quick turnaround"
