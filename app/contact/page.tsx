@@ -52,7 +52,9 @@ export default function Contact() {
             Contact us
           </h1>
           <p className="m-0 text-[clamp(17px,1.4vw,19px)] leading-relaxed text-white/85 max-w-[560px]">
-            Get a free, no-obligation quote for your letterbox campaign across Melbourne&rsquo;s south-east. Call 0402 824 070 or use the form.
+            Call 0402 824 070, email abhiram@southeastflyers.com.au, or use the form. We quote letterbox drops and flyer
+            distribution across Melbourne&rsquo;s south-east and eastern suburbs. Calls are taken Monday to Friday, 8am
+            to 6pm AEST, and we respond within 1 business day.
           </p>
         </div>
       </section>
