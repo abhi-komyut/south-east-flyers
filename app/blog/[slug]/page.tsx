@@ -83,11 +83,7 @@ export default async function BlogPostPage({
       <PageHero
         crumbs={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: post.title }]}
         h1={post.title}
-        lead={
-          <>
-            {formattedDate}. {post.excerpt}
-          </>
-        }
+        lead={post.metaDescription ? formattedDate : <>{formattedDate}. {post.excerpt}</>}
       />
 
       <section className="px-[clamp(20px,4vw,48px)] py-[clamp(56px,7vw,96px)]">
