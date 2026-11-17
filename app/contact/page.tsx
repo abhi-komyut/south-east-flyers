@@ -66,68 +66,68 @@ export default function Contact() {
               Whether you need a one-off campaign or ongoing distribution, we&rsquo;re here to help plan your next
               letterbox drop.
             </p>
-            <dl className="m-0 flex flex-col gap-[22px]">
+            <div className="m-0 flex flex-col gap-[22px]">
               <div className="flex gap-4 items-start">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-navy shrink-0 mt-0.5" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z" />
                 </svg>
-                <div>
+                <dl className="m-0">
                   <dt className="font-heading font-semibold text-sm text-muted">Phone</dt>
                   <dd className="mt-1 mb-0">
                     <a href="tel:+61402824070" className="font-display text-[26px] text-ink no-underline [font-variant-numeric:tabular-nums]">
                       0402 824 070
                     </a>
                   </dd>
-                </div>
+                </dl>
               </div>
               <div className="flex gap-4 items-start">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-navy shrink-0 mt-0.5" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.6-5.4A8.5 8.5 0 1 1 21 11.5z" />
                 </svg>
-                <div>
+                <dl className="m-0">
                   <dt className="font-heading font-semibold text-sm text-muted">WhatsApp</dt>
                   <dd className="mt-1 mb-0 text-base">
                     <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer" className="text-navy">
                       Message us directly
                     </a>
                   </dd>
-                </div>
+                </dl>
               </div>
               <div className="flex gap-4 items-start">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-navy shrink-0 mt-0.5" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <rect x="3" y="5" width="18" height="14" rx="2" />
                   <path d="M3 7.5l9 6 9-6" />
                 </svg>
-                <div>
+                <dl className="m-0">
                   <dt className="font-heading font-semibold text-sm text-muted">Email</dt>
                   <dd className="mt-1 mb-0 text-base">
                     <a href="mailto:abhiram@southeastflyers.com.au" className="text-navy break-all">
                       abhiram@southeastflyers.com.au
                     </a>
                   </dd>
-                </div>
+                </dl>
               </div>
               <div className="flex gap-4 items-start">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-navy shrink-0 mt-0.5" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" />
                   <circle cx="12" cy="9.5" r="2.5" />
                 </svg>
-                <div>
+                <dl className="m-0">
                   <dt className="font-heading font-semibold text-sm text-muted">Service areas</dt>
                   <dd className="mt-1 mb-0 text-base text-ink">Melbourne&rsquo;s south-east and eastern suburbs</dd>
-                </div>
+                </dl>
               </div>
               <div className="flex gap-4 items-start">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-navy shrink-0 mt-0.5" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <circle cx="12" cy="12" r="9" />
                   <path d="M12 7.5V12l3 3" />
                 </svg>
-                <div>
+                <dl className="m-0">
                   <dt className="font-heading font-semibold text-sm text-muted">Response time</dt>
                   <dd className="mt-1 mb-0 text-base text-ink">Within 1 business day. Calls Monday to Friday, 8am to 6pm AEST.</dd>
-                </div>
+                </dl>
               </div>
-            </dl>
+            </div>
             <div className="rounded-card overflow-hidden h-[300px]">
               <Image
                 src="/images/redesign/delivery-real.jpg"

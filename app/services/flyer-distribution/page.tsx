@@ -143,19 +143,19 @@ export default function FlyerDistribution() {
           <h2 id="get-title" className="m-0 font-display font-medium text-[clamp(32px,3.4vw,46px)] leading-[1.1] tracking-[-0.015em]">
             What you get
           </h2>
-          <dl className="m-0 flex flex-col gap-7">
+          <div className="m-0 flex flex-col gap-7">
             {features.map((f) => (
               <div key={f.title} className="flex gap-[18px]">
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" className="text-navy shrink-0 mt-0.5" stroke="currentColor" strokeWidth={1.7} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   {f.icon}
                 </svg>
-                <div>
+                <dl className="m-0">
                   <dt className="font-heading font-semibold text-lg mb-1.5">{f.title}</dt>
                   <dd className="m-0 text-base leading-relaxed text-body">{f.body}</dd>
-                </div>
+                </dl>
               </div>
             ))}
-          </dl>
+          </div>
         </Reveal>
       </section>
 

@@ -114,7 +114,7 @@ export default function LetterboxDropCost() {
           <h2 className="m-0 font-display font-medium text-[clamp(28px,2.8vw,38px)] leading-[1.15]">
             What&rsquo;s included
           </h2>
-          <dl className="m-0 flex flex-wrap gap-7 gap-x-14">
+          <div className="m-0 flex flex-wrap gap-7 gap-x-14">
             {[
               { title: "Exclusive delivery", body: "A walker or e-bike rider carries only your flyer on the route." },
               { title: "GPS tracking", body: "Every run is recorded in Strava, and you receive the route map and a drop summary." },
@@ -125,13 +125,13 @@ export default function LetterboxDropCost() {
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" className="text-navy shrink-0 mt-0.5" stroke="currentColor" strokeWidth={1.7} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M5 12.5l4.5 4.5L19 7.5" />
                 </svg>
-                <div>
+                <dl className="m-0">
                   <dt className="font-heading font-semibold text-lg mb-1.5">{f.title}</dt>
                   <dd className="m-0 text-base leading-relaxed text-body">{f.body}</dd>
-                </div>
+                </dl>
               </div>
             ))}
-          </dl>
+          </div>
           <p className="m-0 pt-6 border-t border-[rgba(16,48,47,0.16)] text-base leading-relaxed text-body max-w-[820px]">
             Printing is not included. We distribute but don&rsquo;t print, so you can use any print shop and have the
             flyers sent to us. A leaflet distribution price quote always separates the two, so you know exactly
