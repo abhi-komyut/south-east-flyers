@@ -92,6 +92,7 @@ function IndustryCard({ href, src, alt, label }: { href: string; src: string; al
         src={src}
         alt={alt}
         fill
+        sizes="(min-width: 640px) 33vw, 100vw"
         className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />

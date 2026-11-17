@@ -63,7 +63,7 @@ export const posts: BlogPost[] = [
     excerpt:
       "GPS-tracked flyer distribution is transforming the letterbox marketing industry. Learn how real-time tracking ensures every flyer reaches its intended destination across Melbourne.",
     date: "2026-04-15",
-    image: "/blog/gps-tracking.jpg",
+    image: "/images/redesign/gps-strava.jpg",
     content: `
 <p>This article explains what you see in a GPS report after a letterbox run. To book the service, use our <a href="/services/gps-tracked-flyer-distribution">GPS-tracked flyer distribution</a> page.</p>
 

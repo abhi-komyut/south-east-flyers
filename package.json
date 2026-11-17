@@ -2,6 +2,13 @@
   "name": "south-east-flyers",
   "version": "0.1.0",
   "private": true,
+  "browserslist": [
+    "Chrome >= 108",
+    "Edge >= 108",
+    "Firefox >= 108",
+    "Safari >= 16.1",
+    "iOS >= 16.1"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build --webpack",

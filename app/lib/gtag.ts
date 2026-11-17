@@ -6,7 +6,7 @@
 // no script loads and every trackEvent() call is a no-op — zero effect
 // on the live site.
 
-export const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+export const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? "G-4CJ2RTKGGT";
 
 type GtagParams = Record<string, unknown>;
 
